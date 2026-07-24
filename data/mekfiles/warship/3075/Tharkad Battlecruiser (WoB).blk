@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-edf4-79ca-b89f-d3c1393a020b
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Tharkad Battlecruiser
 3060
 </year>
 
-<originalBuildYear>
-3060
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,17 +53,17 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:36.0:6:1
-smallcraftbay:8.0:2:2
+asfbay:36.0:6:1::-1:0
+smallcraftbay:8.0:2:2::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-1stclassquarters:620.0:0
-crewquarters:2100.0:0
-cargobay:44975.5:1:11
+1stclassquarters:620.0:0:-1::-1:0
+crewquarters:2100.0:0:-1::-1:0
+cargobay:44975.5:1:11::-1:0
 </transporters>
 
 <SafeThrust>
@@ -99,9 +90,13 @@ cargobay:44975.5:1:11
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 145
@@ -300,32 +295,46 @@ IS Ammo LRM-10:120
 </structural_integrity>
 
 <capabilities>
-The Tharkad-class battlecruiser excelled in terms of its capabilities, surpassing many of its contemporaries. Its design prioritized speed, enabling it to outrun or overtake most older Star League cruisers while maintaining superior firepower. The battlecruiser boasted a wide array of weapons, including powerful guns, and was accompanied by six squadrons of fighters. Additionally, it featured DropShip docking collars, enabling it to bring its own fire support when needed. The Tharkad-class battlecruisers were renowned for their combination of speed, armor, firepower, and fighter support, making them a formidable force in combat.
+<p>Displacing 900,000 tons across 975 meters of hull, the Tharkad carries a diverse and formidable weapons suite across all arcs. The nose mounts three NL55 naval lasers, three Medium Naval PPCs, two NAC/25 naval autocannons, six Killer Whale capital missile launchers, and a screen of conventional lasers. Each forward quarter adds three more Medium NPPCs and two NAC/25s alongside two Heavy Naval Gauss Rifles, a rare and devastating weapon system. The broadsides carry four NL55 naval lasers, three Heavy Naval PPCs, and a mix of NAC/35 and NAC/30 naval autocannons supplemented by extensive LRM batteries. The aft quarters mount NL35 naval lasers, Medium NPPCs, NAC/20s, and additional LRM and conventional laser batteries, while the direct aft arc carries four NL45 naval lasers, two Heavy NPPCs, and two NAC/20s. Seven thousand single heat sinks manage the vessel's enormous thermal output. Ferro-carbide armor provides robust protection across nearly 984 tons of plating. Six docking collars, two gravity decks, and bays for thirty-six fighters and eight small craft round out the vessel's capabilities. The Word of Blake refit added a lithium-fusion battery for rapid successive jumps, reducing cargo capacity from approximately 53,900 to 45,000 tons to accommodate the new system.</p>
 </capabilities>
 
 <overview>
-The Tharkad-class battlecruiser, designed in 2685 to bolster the Lyran Commonwealth's naval fleet, was hailed as the pride of the Lyran navy. Built at the Bolson-Tamar Shipyards, these battlecruisers were renowned for their superior acceleration, armor, and firepower. They outmatched many older Star League vessels and set the stage for an arms race with the Terran Hegemony. Equipped with a formidable arsenal, fighter squadrons, and DropShip docking collars, the Tharkad-class battlecruisers were formidable warships.
+<p>The Tharkad-class battlecruiser was the Lyran Commonwealth's most ambitious indigenous WarShip program, designed at Bolson-Tamar Shipyards beginning in 2685 to reduce Lyran dependence on Hegemony-built hulls. When the first-of-class LCS Tharkad slipped its moors at Tamar in 2690, the vessel proved capable of outrunning and outgunning every common fleet cruiser in known space, a performance profile surpassed only by the far larger Texas and McKenna-class battleships. Classified as a battlecruiser, the design combined the firepower of a much heavier vessel with the speed to dictate engagements on its own terms, making it the most powerful combatant in the Lyran fleet. The class earned a fearsome reputation as the cornerstone of Commonwealth naval power and one of the most capable WarShip designs produced outside the Terran Hegemony.</p>
 </overview>
 
+<deployment>
+<p>The Word of Blake discovered the LCS Invincible at the Ruins of Gabriel, a secret shipyard facility originally constructed by the SLDF near the gas giant Odessa IV and later inherited by ComStar. The facility had harbored other vessels as well; coalition forces that raided the base years later found at least one additional WarShip undergoing restoration, raising questions about what else the hidden installation had sheltered over the centuries. How the Invincible traveled from its misjump point to that remote anchorage, and who recovered the derelict, remained an enduring mystery.</p><p>The Word refurbished the battlecruiser with advanced jump technology and intended it as a gift to the Lyran Alliance, a token of gratitude for the Lyran vote supporting Word of Blake membership in the Second Star League. When the Fourth Star League Conference on Tharkad dissolved the body in late 3067, the confused and disappointed Blakist force attempted military threats to force reconsideration. The Invincible burned at full thrust toward the capital, cutting recklessly through busy orbital traffic. Lyran traffic controllers, in a much-replayed recording, expressed shock at the massive WarShip's sudden appearance in crowded orbits, though the Lyrans had known of the vessel's presence in the system. As the situation spun out of control, the Invincible bombarded Tharkad from orbit. A stray shot struck Tharkad City's decrepit LosTech nuclear reactor, triggering an explosion that scattered radioactive fallout and fueled inaccurate claims that the Word had deployed a nuclear warhead against a Successor State capital.</p><p>In January 3072, the Archon ordered an assault to liberate Tharkad. The Invincible faced a task force of Lyran WarShips, fighters, and assault shuttles. Over two hundred Lyran space marines stormed the battlecruiser in brutal deck-by-deck fighting that cost three-quarters of the boarding force, returning the vessel to Lyran ownership for the first time in over two centuries. The Invincible then joined the coalition fleet for the liberation of Terra in 3078, and the coalition broadcast its attack order from the battlecruiser's bridge on 17 August. Arriving back at Tharkad on 28 May 3078, the vessel suffered extensive jump core damage that left it stranded without an overhaul no surviving shipyard could perform. By late 3079, the Invincible remained a commissioned vessel in name, but the sheer age and accumulated damage meant it was fit only as a training ship. Senior Lyran officials quietly suggested that the Commonwealth might be better served reverting the vessel to a museum once more.</p>
+</deployment>
+
 <history>
-The Tharkad-class battlecruisers were introduced as new warships for the Lyran Commonwealth during the Star League era. Between 2685 and the beginning of the First Succession War, 28 battlecruisers were produced at the Bolson-Tamar Shipyards. They quickly became a symbol of Lyran military might, enforcing Lyran will across the nation. However, the destruction of the shipyards marked a significant setback for the production of Tharkad-class battlecruisers. Only one Tharkad-class battlecruiser, the LCS Invincible, survived the conflicts that erupted after the fall of the Star League. Despite suffering significant damage in a fierce engagement over Moore, the Invincible was brought back into service in 2853 during a desperate Lyran attempt to break a Kurita siege on Hesperus II. The battlecruiser played a pivotal role in turning the tide of the conflict, but was presumably destroyed due to a jump drive failure during its return flight to Tharkad. In a surprising turn of events, the LCS Invincible reappeared over Tharkad in 3067 under the control of a Word of Blake crew, sporting a complete refurbishment and retrofitted with a lithium-fusion battery. The vessel, capable of making two rapid jumps, demonstrated the extent and expense of the retrofit. The Tharkad-class battlecruiser regained its original functionality during the liberation of Tharkad in January 3072, capturing the attention of allied forces who were astounded by the vessel's transformation and the commander's decision not to employ the advanced system to escape during the battle. Despite the limited number of Tharkad-class battlecruisers produced and the destruction of the shipyards, these warships left a lasting impact on Lyran military history. They represented a pinnacle of Lyran naval technology during the Star League era and played crucial roles in significant engagements. The reemergence of the LCS Invincible as a refurbished vessel under different control added another chapter to the battlecruiser's storied history.
+<p>The Tharkad-class battlecruiser originated from the Lyran Commonwealth's desire to build a capital WarShip free of Hegemony supply chains. Design work began at Bolson-Tamar Shipyards in 2685, and the first-of-class LCS Tharkad entered service at the Tamar orbital yards in 2690. The new battlecruiser could outrun and outgun every common fleet cruiser in known space, a capability gap so alarming that it triggered a naval arms race and spurred development of the Black Lion class as a direct counter. Bolson Shipyards, the parent company, also operated yards at New Kyoto producing the Mako corvette, making the firm one of the Commonwealth's most important naval contractors.</p><p>Twenty-eight keels were laid down before the Draconis Combine destroyed the Tamar shipyards in late 2790, ending production permanently. By 2765, eleven Tharkads remained in active LCAF service, each forming the heart of a patrol squadron or static defense fleet. The standard escort pattern paired each Tharkad with one or more Commonwealth-class light cruisers and Mako corvettes for screening and reconnaissance, giving the battlecruiser a layered defensive screen that maximized its heavy firepower. Static fleets anchored by Tharkads guarded the capital at Tharkad and each state capital, while patrol squadrons ranged across the Commonwealth's borders with the Combine and Free Worlds League.</p><p>The Succession Wars consumed the class at an appalling rate. The First Succession War alone claimed multiple vessels in devastating fleet actions at Skondia, Dieron, and other systems, reducing Lyran naval strength to a fraction of its pre-war levels. The destruction of the Tamar yards meant every loss was irreplaceable, and the Commonwealth lacked the institutional knowledge and industrial capacity to construct new capital WarShips. The fleet that had once projected Lyran power across an entire nation was burning away in a conflict that consumed warships faster than any faction could replace them. The Second Succession War inflicted further attrition during strategic offensives like Operation SPIDERWEB, and combat damage over Moore left the last surviving vessel barely functional. By the mid-twenty-ninth century, the sole remaining Tharkad had been reduced to an orbital museum above the Commonwealth capital, its repair costs deemed unfeasible.</p><p>The vessel's dramatic reactivation for combat in 2853, when the Draconis Combine threatened Hesperus II, produced the last orbital bombardment the Inner Sphere would see for nearly two centuries. The battlecruiser's disappearance on its return jump, and its crew's addition to the Commonwealth's List of Honored Missing, secured the class a permanent place in Lyran naval legend. The vessel's story inspired ballads, holovid productions, and live theatrical adaptations that kept its memory alive across the Commonwealth for generations.</p><p>Centuries later, the Word of Blake recovered the lost vessel at a hidden shipyard facility in the Odessa system, a secret installation originally constructed by the SLDF and inherited by ComStar. How the battlecruiser traveled from its misjump point to that remote base, and when it arrived, remained an unsolved mystery. The Word refurbished the vessel with advanced jump technology and deployed it over Tharkad in December 3067, where its reappearance sparked devastation. Recaptured by Lyran forces in a costly boarding action in January 3072, the battlecruiser served in the coalition assault on Terra in 3078 before suffering irreparable jump core damage. With no shipyard capable of building replacements and the vessel itself beyond meaningful repair, the Tharkad class passed from active service after nearly four centuries of Lyran naval history.</p>
 </history>
 
 <manufacturer>
-Bolson-Tamar Shipyards
+Field Refit
 </manufacturer>
 
 <primaryFactory>
-Tamar
+Various
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Bolson-Tamar Shipyards
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Tharkad
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Battlecruiser

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Romita
-sucsId: 2171
+sucsId: 2172
 xcood: -354.154
 ycood: -252.093
 spectralType: K8V
@@ -54,6 +54,12 @@ planet:
       - name: Armería
       - name: Tetlatlahuca Nueva
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2722-02-18'
         faction:
           source: canon
@@ -69,6 +75,12 @@ planet:
         population: 416734.0
       - date: '2750-01-01'
         population: 1110497.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 2460835.0
       - date: '2769-07-08'
@@ -147,6 +159,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 87853141.0
       - date: '3097-01-01'
@@ -163,15 +181,25 @@ planet:
           value:
             - RCM
         population: 90239439.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RCM
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
         population: 90637367.0
       - date: '3145-01-01'
         population: 91164591.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Gómez's Rock

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a879-73bb-9d6b-18361954ab60
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,10 @@ IS Level 2
 None
 </role>
 
+<quirks>
+imp_com
+</quirks>
+
 <motion_type>
 Leg
 </motion_type>
@@ -71,13 +70,67 @@ Leg
 
 <Squad Equipment>
 BASearchlight:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 BABasicManipulatorMineClearance:LA
 BABasicManipulatorMineClearance:RA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<capabilities>
+<p>The Mine Clearance configuration equips the Groundhog with specialized detection and disposal gear designed for clearing minefields and unexploded ordnance. The modular adaptors mount mine clearance equipment on both arms, allowing operators to locate, identify, and neutralize explosive devices while protected by the suit's one hundred kilograms of standard armor. At four hundred kilograms and thirty kilometers per hour ground speed, the Groundhog provides mine clearance teams with protection well beyond what conventional disposal equipment offers, though the armor remains insufficient against anything heavier than small arms fire.</p><p>The suit lacks jump capability, requiring operators to traverse mined areas on foot. The searchlight aids in visual identification of surface-laid devices, while the mission equipment storage bay can carry additional detection instruments or disposal charges. Mine clearance is inherently slow and deliberate work, and the Groundhog's modest speed is rarely a limitation. The configuration sacrifices all combat capability, leaving operators unable to conduct anti-BattleMech attacks or carry infantry weapons.</p>
+</capabilities>
+
+<overview>
+<p>The CEX-205 Groundhog is a combat engineering exoskeleton produced by Blue Shot Weapons on Solaris VII. Introduced in 3062, the Groundhog was designed as a field-ready engineering platform capable of supporting military and mercenary operations through a modular manipulator system that allows rapid reconfiguration for different tasks. The suit's interchangeable tool mounts accept a wide range of equipment, from armored gloves suitable for light combat duties to specialized industrial tools for heavy labor, mine clearance, and salvage work. An integrated searchlight and onboard mission equipment storage further extend the Groundhog's operational utility. Heavily armored for an exoskeleton, the Groundhog earned a reputation as one of the first truly battlefield-ready engineering exoskeletons available on the open market.</p>
+</overview>
+
+<deployment>
+<p>ComStar and Word of Blake Level I formations fielded Mine Clearance Groundhogs for route clearance and security operations. The Word of Blake made extensive use of mines and booby traps during the Jihad, and their own mine clearance formations proved essential for maintaining supply routes through contested territory. Six-trooper Level Is provided thorough area coverage during systematic clearance operations.</p>
+</deployment>
+
+<history>
+<p>Blue Shot Weapons had long served a niche market on Solaris VII, producing industrial exo-suits primarily sold to arena management companies for routine maintenance and emergency MechWarrior extractions. The CEX-205 Groundhog, introduced in 3062, marked a deliberate shift in the company's ambitions. Drawing on advances in Inner Sphere battle armor technology, Blue Shot designed the Groundhog as their first truly field-ready combat engineering exoskeleton, offering military and mercenary units a rugged, modular platform far beyond their earlier commercial-grade offerings.</p><p>Blue Shot marketed the full line of manipulator configurations in paired sets, emphasizing the suit's adaptability for diverse field operations. Arena operators on Solaris VII also adopted the Groundhog for "tunnel rat" operations during the FedCom Civil War, using the suit's improved communications equipment and searchlight for underground engagements.</p><p>The Word of Blake invasion of Solaris VII in 3068 dealt a severe blow to Blue Shot Weapons. The company's production facilities suffered catastrophic damage during the fighting, with capacity reportedly falling below ten percent. By 3071, the damage proved insurmountable, and the Groundhog was officially discontinued. Persistent rumors of a jump-capable variant designated the CEX-250 Leapfrog had circulated for some time, but with the Blue Shot plant in ruins, the design never reached production.</p>
+</history>
+
+<manufacturer>
+Blue Shot Weapons
+</manufacturer>
+
+<primaryFactory>
+Solaris VII
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:VAr
@@ -106,41 +159,4 @@ true
 <weightclass>
 0
 </weightclass>
-
-<overview>
-The CEX-205 Groundhog was a Solaris VII produced exoskeleton designed for combat in arenas and on the battlefield in a support role.
-</overview>
-
-<capabilities>
-While equipped with Basic Manipulators and Armored Glove modules, the suit can conduct anti-'Mech swarm and leg attacks. The suit may use standard infantry weaponry and equipment only when using the Basic Manipulators. The Groundhog is equipped with a pair of Modular Adapter type "hands".
-</capabilities>
-
-<deployment>
-The Modular Adapters have two slots to accept a wide range of tools including: Armored Gloves, Basic Manipulators, Cargo Lifters, Industrial Drills, Mine Clearance, and Salvage Arm. The Cargo Lifter gives the Exoskeleton 1 ton lifting capacity. It features a Searchlight and Mission Equipment Storage unit with a capacity of 145 kilograms
-</deployment>
-
-<history>
-First developed in 3062 by Blue Shot Weapons, modular adapters added to the exoskeleton's manipulators allow it to switch to multiple roles. It was unclear if the Groundhog continued in production after the Blake Invasion of Solaris VII of 3068. Later intelligence discovered that the Groundhog was discontinued in 3071 due to heavy damage to the Blue Shot Weapons factory. There were persistent rumors that Blue Shot Weapons was experimenting with a Groundhog variant that mounted jump jets, but with their plant nearly destroyed, this "Leapfrog" suit never entered production.
-</history>
-
-<manufacturer>
-Blue Shot Weapons
-</manufacturer>
-
-<primaryFactory>
-Solaris VII
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<quirks>
-imp_com
-</quirks>
 

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,41 +15,45 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d36a-7eb8-b2b5-bea543072cda
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Wendigo-VP
 model:(Prime)
 mul id:6408
 
-Config:Biped Omnimech
-TechBase:Clan
-Era:3134
-Source:TR:3145:DC
-Rules Level:4
+Config:Biped OmniMek
+techbase:Clan
+era:3134
+source:TR:3145:DC,TR:DA
+published:RS:DA
+rules level:4
 role:Skirmisher
 
-Mass:50
-Engine:250 XL (Clan) Engine(IS)
-Structure:Clan Endo Steel
-Myomer:Standard
-Cockpit:Torso-Mounted Cockpit
-Gyro:Standard Gyro
 
-Heat Sinks:10 Double
-Base Chassis Heat Sinks:10
-Walk MP:5
-Jump MP:4
+mass:50
+engine:250 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
+cockpit:Torso-Mounted Cockpit
+gyro:Standard Gyro
 
-Armor:Reflective(Clan)
-LA Armor:16
-RA Armor:16
-LT Armor:16
-RT Armor:16
-CT Armor:22
-HD Armor:8
-LL Armor:20
-RL Armor:20
-RTL Armor:5
-RTR Armor:5
-RTC Armor:8
+heat sinks:10 Clan Double
+base chassis heat sinks:10
+walk mp:5
+jump mp:4
+
+armor:Reflective(Clan)
+LA armor:16
+RA armor:16
+LT armor:16
+RT armor:16
+CT armor:22
+HD armor:8
+LL armor:20
+RL armor:20
+RTL armor:5
+RTR armor:5
+RTC armor:8
 
 Weapons:5
 LB 10-X AC, Left Arm
@@ -61,13 +65,13 @@ ER Small Laser, Head
 Left Arm:
 Shoulder
 Upper Arm Actuator
-CLLBXAC10 (omnipod)
-CLLBXAC10 (omnipod)
-CLLBXAC10 (omnipod)
-CLLBXAC10 (omnipod)
-CLLBXAC10 (omnipod)
-Clan LB 10-X AC Ammo (omnipod)
-Clan LB 10-X Cluster Ammo (omnipod)
+CLLBXAC10 (OMNIPOD)
+CLLBXAC10 (OMNIPOD)
+CLLBXAC10 (OMNIPOD)
+CLLBXAC10 (OMNIPOD)
+CLLBXAC10 (OMNIPOD)
+Clan LB 10-X AC Ammo (OMNIPOD)
+Clan LB 10-X Cluster Ammo (OMNIPOD)
 Clan Reflective
 Clan Reflective
 Clan Reflective
@@ -75,10 +79,10 @@ Clan Reflective
 Right Arm:
 Shoulder
 Upper Arm Actuator
-CLERPPC (omnipod)
-CLERPPC (omnipod)
-CLMediumPulseLaser (omnipod)
-CLMediumPulseLaser (omnipod)
+CLERPPC (OMNIPOD)
+CLERPPC (OMNIPOD)
+CLMediumPulseLaser (OMNIPOD)
+CLMediumPulseLaser (OMNIPOD)
 Clan Endo Steel
 Clan Endo Steel
 Clan Endo Steel
@@ -87,11 +91,11 @@ Clan Endo Steel
 -Empty-
 
 Left Torso:
-Fusion Engine
-Fusion Engine
 Life Support
-Jump Jet (omnipod)
-Jump Jet (omnipod)
+Fusion Engine
+Fusion Engine
+Jump Jet (OMNIPOD)
+Jump Jet (OMNIPOD)
 Clan Endo Steel
 Clan Endo Steel
 Clan Reflective
@@ -101,11 +105,11 @@ Clan Reflective
 -Empty-
 
 Right Torso:
-Fusion Engine
-Fusion Engine
 Life Support
-Jump Jet (omnipod)
-Jump Jet (omnipod)
+Fusion Engine
+Fusion Engine
+Jump Jet (OMNIPOD)
+Jump Jet (OMNIPOD)
 Clan Endo Steel
 Clan Endo Steel
 Clan Reflective
@@ -131,7 +135,7 @@ Sensors
 Head:
 Sensors
 Sensors
-CLERSmallLaser (omnipod)
+CLERSmallLaser (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -170,4 +174,27 @@ Foot Actuator
 -Empty-
 -Empty-
 
+overview:<p>The Wendigo-VP is the pre-production prototype of the Wendigo OmniMech, fielded in limited numbers by Clan Nova Cat during the Draconis Combine's initial invasion of the Republic of the Sphere beginning in 3134. Produced at the Avon Alpha facility, the prototype employed a smaller 250-rated XL engine that sacrificed speed for greater pod capacity, an approach that prioritized raw firepower over the mobility that Clan warriors demanded.</p><p>Though the Wendigo-VP demonstrated considerable weapons-carrying ability, the prototype was plagued by technical glitches and reliability issues that hampered its combat effectiveness. The warrior caste's dissatisfaction with the design's sluggish performance led to its rapid discontinuation in favor of the faster production Wendigo, which traded pod space for a larger engine and superior speed. The surviving VP chassis were largely relegated to storage, though some would later find new purpose as the basis for Clan Sea Fox's experimental Wendigo-XR program.</p>
 
+capabilities:<p>The Wendigo-VP shares the same Mynx Type Medium Endo Steel chassis and Gamma Special Reflective armor as its production successor, but mounts a smaller 250-rated XL engine that limits the prototype to a top speed of approximately 80 kph. While significantly slower than the production Wendigo's 97 kph, this trade-off freed additional tonnage for weapons and equipment, giving the VP a larger pod space allocation and allowing for heavier combat configurations. Ten double heat sinks manage thermal output, two fewer than the production model.</p><p>The reduced speed proved to be the prototype's fatal flaw. Clan Nova Cat warriors, accustomed to aggressive engagement doctrines that relied on rapid maneuvering and closing to preferred ranges, found the VP too slow to execute their preferred tactics. Technical glitches compounded the speed deficiency, and the design was quickly superseded by the production Wendigo. The VP's greater payload capacity, while impressive on paper, could not compensate for the tactical limitations imposed by its reduced mobility in the fast-paced combat of the Republic invasion.</p>
+
+deployment:<p>The Prototype Primary configuration mounted an ER PPC as its primary long-range weapon, complemented by an LB 10-X autocannon for flexible direct fire with both standard and cluster ammunition options. A pair of Medium Pulse Lasers provided accurate short-range firepower, while a single ER Small Laser served as a backup weapon. This loadout reflected the Nova Cat preference for decisive striking power, though the prototype's reduced speed often prevented pilots from dictating engagement ranges as effectively as they wished.</p>
+
+history:<p>The Wendigo-VP emerged as the first tangible result of Clan Nova Cat's effort to replace the disappointing Avalanche OmniMech. Produced at the Avon Alpha facility in 3134, the prototype represented a conservative design philosophy that emphasized firepower over speed, reflecting the resource constraints facing Clan Nova Cat after the devastation of the Second Combine-Dominion War. The VP was among the first units deployed during the Combine's invasion of the Republic of the Sphere, where it saw combat alongside more established designs.</p><p>Combat experience quickly exposed the prototype's shortcomings. While its weapons loadouts were formidable, the 250-rated engine could not deliver the speed that Clan warriors demanded for their preferred engagement doctrines. Persistent technical glitches further undermined confidence in the design. The Clan's scientists ultimately acknowledged that sacrificing pod capacity for a larger engine was the correct approach, and the Wendigo-VP was rapidly discontinued in favor of the 300-rated production model. Most surviving VP chassis were placed in storage.</p><p>The Wendigo-VP gained an unexpected second life following the destruction of Clan Nova Cat in 3143. When Clan Sea Fox acquired Nova Cat assets through Trials of Possession and trade agreements with the Draconis Combine, several VP chassis were among the equipment obtained. Sea Fox scientists recognized the slower but structurally identical VP chassis as ideal test platforms for experimental technology programs, particularly the integration of recovered RISC systems from the fallen Republic of the Sphere.</p>
+
+manufacturer:Avon Alpha
+
+primaryfactory:Avon
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Mynx Type Medium Endo Steel
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:250 XL
+systemmanufacturer:ARMOR:Kallon
+systemmode:ARMOR:Gamma Special Reflective
+systemmanufacturer:COMMUNICATIONS:Sipher
+systemmode:COMMUNICATIONS:Sipher CommCon SCU-9
+systemmanufacturer:TARGETING:Unknown
+systemmode:TARGETING:Build 5 CAT TTS

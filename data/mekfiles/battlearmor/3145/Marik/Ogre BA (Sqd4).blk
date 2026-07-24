@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a690-7d8f-bc36-6fe7f56fb63f
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Ogre Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd4)
 </Model>
 
@@ -54,7 +49,7 @@ Juggernaut
 </role>
 
 <motion_type>
-Jump
+Leg
 </motion_type>
 
 <cruiseMP>
@@ -91,9 +86,57 @@ BA-SRM2 Ammo:Body:Shots1#
 <Trooper 4 Equipment>
 </Trooper 4 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Ogre carries paired Heavy Battle Claws as its primary melee weapons, capable of inflicting serious damage to vehicle armor at close range. An SRM-2 launcher with thirteen volleys of ammunition provides the suit's ranged striking power, giving operators enough firepower for sustained engagements. Nearly a full ton of standard armor provides considerable protection, allowing the Ogre to absorb fire from all but the heaviest vehicle-mounted weapons.</p><p>At 1,500 kilograms, the Ogre is classified as a heavy battle armor suit. Its ground speed of 22 kilometers per hour and complete lack of jump capability limit tactical mobility, making the suit dependent on transport or supporting units to close with targets. Despite its imposing size, the suit lacks anti-personnel weapons, leaving it poorly matched against conventional infantry.</p>
+</capabilities>
+
+<overview>
+<p>Tvastar Enterprises' first entry into the battle armor market, the Ogre was designed to supplement slower vehicle platoons and fill gaps in Regulan planetary militias. Introduced in 3091, this heavy Inner Sphere suit was built on Regulus during a period of increasing reliance on non-BattleMech forces across the former Free Worlds League. The Ogre's unusually wide frame and paired melee weapons give it an intimidating battlefield presence that belies its intended support role. Though ill-suited to anti-infantry work, the suit earned a fearsome, if exaggerated, combat reputation through its effectiveness against armored vehicles.</p>
+</overview>
+
+<deployment>
+<p>Regulan planetary militias organized their Ogre troopers into four-member squads following Inner Sphere infantry doctrine. These squads typically operated alongside vehicle platoons, leveraging the suit's anti-armor capability to compensate for gaps in militia BattleMech strength. The four-trooper formation became the standard organizational template for all Inner Sphere Ogre operators.</p>
+</deployment>
+
+<history>
+<p>Tvastar Enterprises developed the Ogre in the years following the Jihad, capitalizing on a growing market for non-BattleMech combat units across the former Free Worlds League. The suit performed far better than anticipated, and Tvastar soon secured export contracts with the Duchy of Andurien and the Lyran Commonwealth.</p><p>The Ogre's tank-shredding reputation traces to a 3095 engagement on the Oriente Protectorate world of Emris IV. The Tenth Regulan Hussars deployed their Ogre troopers during an exploratory raid that escalated into contact with Steel Guard forces. Three Ogre squads ambushed by Vedette tanks in a narrow defile used their suits' heavy claws to disable and tear open the immobilized vehicles. BattleROM footage of the aftermath gave birth to the myth that Ogres could literally rip tanks in half, and the ritual destruction of disabled vehicles became a tradition among Ogre operators.</p><p>A small number of Ogres eventually reached the Rasalhague Dominion through merchant channels, finding an unexpected second market among Clan warriors who valued the suit's physical presence on the battlefield.</p>
+</history>
+
+<manufacturer>
+Tvastar Enterprises
+</manufacturer>
+
+<primaryFactory>
+Regulus
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-TR:3145:FWL
+TR:3145:FWL,TR:3145
 </source>
+
+<published>
+RS:3145
+</published>
 
 <chassis>
 biped
@@ -115,35 +158,3 @@ biped
 3
 </weightclass>
 
-<overview>
-Ogre battle armor was intended to fill gaps in the various planetary militia forces within the Principality of Regulus and to supplement slower combat vehicle platoons.
-</overview>
-
-<capabilities>
-The Ogre also had almost a ton of standard armor across its frame, providing considerable battlefield survivability.
-</capabilities>
-
-<deployment>
-The standard-pattern Ogre suit married a pair of Heavy Battle Claws with an SRM 2, for which the Ogre carries enough missiles to allow for thirteen volleys;
-</deployment>
-
-<history>
-It was the first attempt to enter the battle armor market by Tvastar Enterprises of Regulus, and was introduced to the market at a time when the use of non-BattleMech units in wars and conflicts was on the increase, allowing the Ogre to perform better than Tvastar had anticipated. The Ogre had a physically intimidating appearance, largely due to the twin Heavy Battle Claws used as weapons and Tvastar's choice to use an unusually wide frame for the suit. Despite that appearance, the Ogre wasn't well-suited to fighting conventional infantry, but the heavy armor and weapons mounted on the Ogre allowed it to attack enemy armor, and actions in certain early battles saw the Ogre gain a reputation for tearing tanks in half - a reputation that was rather fanciful, but did serve to enhance the Ogre's reputation. The Ogre went on to be exported outside the Regulan Fiefs by Tvastar, with the Duchy of Andurien and the Lyran Commonwealth both ordering large production runs.
-</history>
-
-<manufacturer>
-Tvastar Enterprises
-</manufacturer>
-
-<primaryFactory>
-Regulus
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

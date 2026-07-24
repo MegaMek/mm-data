@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e12a-7f43-bdf8-6c3dcf343835
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Z
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 Clan Level 4
 </type>
@@ -60,9 +51,6 @@ Striker
 <motion_type>
 Biped
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 6
@@ -80,6 +68,22 @@ false
 0
 </engine_type>
 
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
+
 <internal_type>
 -1
 </internal_type>
@@ -94,12 +98,13 @@ false
 
 <Body Equipment>
 Clan Ammo SRM-1 (10)
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -120,43 +125,56 @@ CLSRM1
 <Legs Equipment>
 </Legs Equipment>
 
+<capabilities>
+<p>The base Procyon combines good mobility with an energy weapon payload designed for maximum operational endurance. A forty-five-rated fusion engine drives the five-ton frame at sixty-four kilometers per hour cruising speed, and twin ER Small Lasers mounted in the arms provide reliable firepower without ammunition dependency. Four heat sinks manage the thermal load from sustained laser fire, allowing a Procyon Point to maintain continuous engagement without overheating concerns. Twenty points of armor provide adequate protection, comparable to many first-generation designs of similar mass.</p><p>The Procyon's all-energy weapons configuration gives it virtually unlimited combat endurance, a significant advantage during extended operations where resupply is uncertain. A Point of five Procyons puts ten ER Small Lasers on target, sufficient to threaten light Meks and overwhelm battle armor formations. The design lacks jump jets in its base configuration, limiting terrain flexibility, but several variants address this deficiency. Commanders typically deploy Procyon Points alongside heavier Mek formations, where the ProtoMeks provide flanking fire and clean up damaged targets while the main force absorbs enemy attention.</p>
+</capabilities>
+
+<overview>
+<p>The Procyon is a five-ton second-generation ProtoMek designed by Clan Coyote, among the first Clans to stage Trials on Huntress for ProtoMek technology after the Smoke Jaguar Annihilation. Originally conceived as a quadruped design in the Coyotes' effort to reclaim their former reputation as the innovator Clan, practical limitations with both the technology and pilot adaptation forced Coyote engineers to re-envision their debut machine with a conventional humanoid configuration. The Procyon entered full-scale production after three years of testing, emerging as a versatile energy-weapon platform built to support heavier BattleMek and Elemental formations with maximum field endurance.</p>
+</overview>
+
+<deployment>
+<p>The Procyon Z was developed by the Society at an undisclosed facility, incorporating a Magnetic Clamp System for OmniMek transport alongside six jump jets providing one hundred eighty meters of leaping distance. Armed with a right-arm ER Small Laser and a left-arm SRM-1 with ten rounds, the Procyon Z is designed for rapid insertion tactics, riding an OmniMek into the engagement zone before deploying to exploit its exceptional jump capability. Twenty points of armor match the base model. The Magnetic Clamp System reflects the Society's asymmetric warfare doctrine, using ProtoMeks as deployable weapons platforms rather than independent combat assets. Following the destruction of the Society during the Wars of Reaving, surviving Procyon Z units were absorbed into various Clan formations.</p>
+</deployment>
+
+<history>
+<p>The Procyon's development history reflects the Coyotes' ambition to push ProtoMek technology beyond the boundaries established by the Smoke Jaguars. After winning Trials of Possession for ProtoMek production data on Huntress, Coyote scientists immediately launched several development projects. Their first concept was an innovative quadruped chassis that would have given the design superior stability and ground speed, but pilot adaptation issues and manufacturing limitations forced a retreat to conventional humanoid configuration. The resulting Procyon, while less revolutionary than intended, proved to be a solid and reliable design that validated the Coyotes' ProtoMek ambitions.</p><p>ProtoMek Stars in the Coyotes' Alpha and Epsilon Galaxies fielded brand-new Procyons in Point-sized formations within a year of the design's introduction. The Procyon also appeared in the Hell's Horses touman by 3066, suggesting collaboration between the two Clans at some stage of development. The Coyotes' shared their ProtoMek expertise in exchange for the Horses' extensive experience with combined-arms integration, a partnership that benefited both Clans' ProtoMek programs.</p><p>The Coyotes subsequently experienced a surge in ProtoMek development that produced multiple Procyon variants in rapid succession. The Procyon 2 traded the energy weapons for twin LRM-4 launchers and additional armor, creating a dedicated fire support variant. The Procyon 3 mounted a Heavy Small Laser alongside an LRM-3, combining close-range punch with indirect fire capability. The Procyon 4 used a Streak SRM-3 and machine gun combination for efficient close combat, while the Procyon 5 incorporated five jump jets alongside an ER Small Laser and SRM-2 for maximum tactical flexibility.</p><p>The quadruped concept was eventually realized by Clan Hell's Horses, who applied Coyote innovation to produce the Procyon Quad variant on Csesztreg. This six-ton design fulfilled the original vision of a four-legged ProtoMek, mounting AP Gauss Rifles and an SRM-2 launcher on a chassis that offered twenty percent more speed and fifty percent more armor than the bipedal original. The Wars of Reaving produced one final variant when the Society developed the Procyon Z, a jump-capable design equipped with a Magnetic Clamp System for OmniMek transport. Following the destruction of the Society, the surviving Procyon production lines continued operating under their respective Clan owners, and the design remains in active service across the Homeworld Clans.</p>
+</history>
+
+<manufacturer>
+Beta Plant 3F
+</manufacturer>
+
+<primaryFactory>
+Tamaron
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Build 2083
+TARGETING:Proto-Enhanced
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Standard C5P
+ENGINE:45 Fusion
+ARMOR:Standard
+COMMUNICATIONS:Micro
+TARGETING:Model 4
+</systemModels>
+
 <source>
-WoR
+WoR,TR:3075,WoRS
 </source>
+
+<published>
+WoR,TR:3075,WoRS
+</published>
 
 <tonnage>
 5.0
 </tonnage>
 
-<capabilities>
-Initially conceived as a quadruped design (in the Coyotes' efforts to restore their past glory as the "innovator Clan"), practical restrictions with both the technology and the pilots quickly pushed Coyote engineers to re-imagine their first machine with a humanoid layout.
-</capabilities>
-
-<overview>
-The Procyon was designed as a support unit for bigger BattleMech and Elemental formations, combining outstanding mobility with an energy weapon payload for optimum field endurance.
-</overview>
-
-<deployment>
-Developed by The Society this version is equipped with a Magnetic Clamp system. It's armed with a single ER Small Laser and an SRM-1 with ten reloads.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:ProtoMech Standard C5P
-ENGINE:45 Fusion
-ARMOR:ProtoMech Standard
-JUMPJET:Unspecified
-COMMUNICATIONS:Build 2083 Micro
-TARGETING:Proto-Enhanced, Model 4
-</systemManufacturers>

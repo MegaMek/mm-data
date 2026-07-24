@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,58 +15,59 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-de6f-78c4-909a-a96530efc3d5
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Kodiak
 model:(Cale)
 mul id:1804
 
 Config:Biped
-TechBase:Mixed (Clan Chassis)
-Era:3068
+techbase:Mixed (Clan Chassis)
+era:3068
 source:JTP:Dieron
-Rules Level:4
+published:JTP:Dieron
+rules level:4
 role:Juggernaut
 
 quirk:battle_fists_la
 quirk:battle_fists_ra
 quirk:distracting
 
+mass:100
+engine:300 Fusion (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:100
-Engine:300 Fusion Engine (Clan)
-Structure:Endo-Steel
-Myomer:Standard
+heat sinks:15 Clan Double
+walk mp:3
+jump mp:0
 
-Heat Sinks:15 Double (Clan)
-Walk MP:3
-Jump MP:0
+armor:Standard(Inner Sphere)
+LA armor:34
+RA armor:34
+LT armor:32
+RT armor:32
+CT armor:47
+HD armor:9
+LL armor:42
+RL armor:42
+RTL armor:10
+RTR armor:10
+RTC armor:15
 
-Armor:Standard Armor (Clan)
-LA Armor:34
-RA Armor:34
-LT Armor:32
-RT Armor:32
-CT Armor:47
-HD Armor:9
-LL Armor:42
-RL Armor:42
-RTL Armor:10
-RTR Armor:10
-RTC Armor:15
-
-Weapons:13
-1 ISHeavyPPC, Right Arm
-1 ISERMediumLaser, Left Arm
-1 ISERMediumLaser, Left Arm
-1 ISMediumLaser, Head
-1 CLERMediumLaser, Left Arm
-1 CLERMediumLaser, Left Arm
-1 CLERMediumLaser, Left Arm
-1 ISAC10, Right Torso, Ammo:20
-1 ISBeagleActiveProbe, Right Torso
-1 ISC3MasterComputer, Left Torso
-1 CLStreakSRM6, Left Torso, Ammo:30
-1 CLStreakSRM6, Left Torso
-1 ISMediumLaser, Left Arm
+Weapons:12
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+Medium Laser, Left Arm
+Heavy PPC, Right Arm
+Streak SRM 6, Left Torso
+Streak SRM 6, Left Torso
+C3 Computer (Master), Left Torso
+AC/10, Right Torso
+Medium Laser, Head
 
 Left Arm:
 Shoulder
@@ -78,22 +79,22 @@ CLERMediumLaser
 CLERMediumLaser
 ISERMediumLaser
 ISERMediumLaser
-ISMediumLaser
-Endo-Steel
+Medium Laser
+Clan Endo Steel
 -Empty-
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-CLDouble Heat Sink
-CLDouble Heat Sink
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
-Endo-Steel
-Endo-Steel
+CLDoubleHeatSink
+CLDoubleHeatSink
+Heavy PPC
+Heavy PPC
+Heavy PPC
+Heavy PPC
+Clan Endo Steel
+Clan Endo Steel
 -Empty-
 
 Left Torso:
@@ -101,77 +102,103 @@ CLStreakSRM6
 CLStreakSRM6
 CLStreakSRM6
 CLStreakSRM6
-CLStreakSRM6 Ammo
-CLStreakSRM6 Ammo
-ISC3MasterComputer
-ISC3MasterComputer
-ISC3MasterComputer
-ISC3MasterComputer
-ISC3MasterComputer
-Endo-Steel
+Clan Streak SRM 6 Ammo
+Clan Streak SRM 6 Ammo
+ISC3MasterUnit
+ISC3MasterUnit
+ISC3MasterUnit
+ISC3MasterUnit
+ISC3MasterUnit
+Clan Endo Steel
 
 Right Torso:
-ISAC10
-ISAC10
-ISAC10
-ISAC10
-ISAC10
-ISAC10
-ISAC10
-ISAC10 Ammo
-ISAC10 Ammo
-ISBeagleActiveProbe
-ISBeagleActiveProbe
-Endo-Steel
+Autocannon/10
+Autocannon/10
+Autocannon/10
+Autocannon/10
+Autocannon/10
+Autocannon/10
+Autocannon/10
+IS Ammo AC/10
+IS Ammo AC/10
+BeagleActiveProbe
+BeagleActiveProbe
+Clan Endo Steel
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
 Gyro
 Gyro
-Engine
-Engine
-Engine
-Endo-Steel
-Endo-Steel
+Fusion Engine
+Fusion Engine
+Fusion Engine
+Clan Endo Steel
+Clan Endo Steel
 
 Head:
 Life Support
 Sensors
 Cockpit
-ISMediumLaser
+Medium Laser
 Sensors
 Life Support
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-CLDouble Heat Sink
-CLDouble Heat Sink
+CLDoubleHeatSink
+CLDoubleHeatSink
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-CLDouble Heat Sink
-CLDouble Heat Sink
+CLDoubleHeatSink
+CLDoubleHeatSink
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-capabilities:Though not taken to the same extreme as other Clan Totem 'Mechs, the Kodiak does epitomize the Ghost Bears' method of warfare, combining an impressive defensive platform with surprising amounts of speed and firepower. Its massive 400-rated XL Engine propels the Kodiak to a maximum speed of 64.8 km/h, while seventeen and a half tons of Compound 12A2 gives it impressive armor protection. Though it mounts an incredible amount of firepower, even the use of twenty double heat sinks cannot prevent overheating problems when they are all fired simultaneously, though most MechWarriors learn to use their weapons sparingly and love the 'Mech's ability to deliver a massive knockout punch. The Kodiak incorporates the Garret L20 as its communications system, and uses the RCA Instatrac Mark IX for targeting, however the "claws" mounted on both of its arms are purely aesthetic.
+overview:<p>The Kodiak is a hundred-ton assault BattleMech designed by Clan Ghost Bear as a second-line counterpart to the Executioner. Introduced in 3001, the Kodiak serves as the totem 'Mech of the Ghost Bear Clan, embodying their philosophy of combining heavy defense with surprising speed and devastating firepower. Originally developed alongside the Executioner, the two designs were initially conceived as a single project to create an Omni-Totem 'Mech, but early prototypes proved the Kodiak chassis was incompatible with MASC, forcing the Ghost Bears to split development into separate programs. The result was a purpose-built assault platform that prioritized raw combat power over flexibility, becoming one of the most feared second-line designs in the Clan toumans. Produced primarily at Bergan Industries on Alshain with additional production on Bearclaw, the Kodiak has seen widespread service throughout the Ghost Bear Dominion and later the Rasalhague Dominion, with smaller numbers finding their way into several other Clan toumans.</p>
 
-deployment:The Mech of the 2nd Dieron Regulars' commander, Tai-sa Cale Schultz-Tanaka, the Kodiak Cale was recovered from a battlefield on Dieron and re-equipped with Inner Sphere and Clan technologies. Keeping the standard Clan Endo-Steel chassis and double heat sinks, techs replaced the XL engine with a standard unit. This reduced the 'Mech's top speed to 54 km/h, but increased survivability. Most of the Clan weaponry was also removed: Only a trio of Clan ER Medium Lasers in the left arm and a pair of Streak SRM 6 launchers in the left torso remain. The Kodiak Cale uses an Autocannon/10 and Heavy PPC for its main hitting power. These are backed up by the Clan weapons and a pair of Inner Sphere ER Medium Lasers and a pair of Inner Sphere Medium Lasers. The most important addition to the Cale version is the electronics suite: A Beagle Active Probe in the right torso spots enemy forces, while a C3 Master computer in the left torso allows the Kodiak Cale to feed targeting data to supporting units. 
+capabilities:<p>The Kodiak's defining feature is its mammoth 400-rated extra-light engine, which propels the hundred-ton assault 'Mech to speeds of sixty-four kilometers per hour, exceptional mobility for a design of its mass. This speed allows Ghost Bear MechWarriors to close rapidly with their targets, where the Kodiak's devastating close-range arsenal can be brought to bear. The primary armament centers on a Series II Ultra-class autocannon/20 occupying the entire right torso, capable of delivering punishing salvos that can cripple most opponents in a single engagement. Twin Type XII Streak SRM-6 launchers complement the autocannon, ensuring every missile fired finds its mark.</p><p>Eight Series 2a extended-range medium lasers, arrayed in distinctive claw-like mounts on each arm, provide substantial firepower at medium ranges and serve as the primary weapons once ammunition is expended. A single Series 7k extended-range large laser mounted beneath the engine provides the Kodiak's only true long-range capability, allowing pilots to soften targets during their approach. Seventeen and a half tons of Compound 12A2 armor provide impressive protection, though the design's greatest weakness is its prodigious heat generation, firing all weapons simultaneously overwhelms the twenty double heat sinks, forcing MechWarriors to exercise careful fire discipline. While the 'Mech appears to mount claws on each hand, these are purely aesthetic, a nod toward the Totem 'Mech aesthetic rather than functional melee weapons.</p>
 
-history:The vast majority of Kodiaks are used by the Ghost Bears, and indeed was exclusive to them in the first years since its introduction. Of those which are found in other toumans, Clan Snow Raven has the largest share, payment for their help in relocating to the Inner Sphere, followed by Clan Goliath Scorpion and Clan Cloud Cobra. Among the Crusader Clans though, only Clan Ice Hellion fields a handful of these 'Mechs. As a interesting note, and proof of the expansion of the Kodiak, at least two of these mechs were found in a Smoke Jaguar unit on planet Asgard, during Operation Bulldog.
+deployment:<p>This custom variant is a Kodiak recovered from a battlefield on Dieron and refitted with a mix of Inner Sphere and Clan technologies. The original extra-light engine was replaced with a standard fusion engine, reducing top speed to fifty-four kilometers per hour but dramatically improving the 'Mech's ability to survive torso damage. Primary armament consists of an autocannon/10 and heavy PPC, supported by a trio of Clan extended-range medium lasers, a pair each of Inner Sphere ER medium and standard medium lasers, and dual Streak SRM-6 launchers. The most significant addition is the electronics suite: a Beagle active probe spots hidden threats while a C3 master computer feeds targeting data to supporting units, making this variant a capable command platform for combined-arms operations.</p>
 
-manufacturer:Field Refit
-primaryfactory:Field Refit
-systemmanufacturer:CHASSIS:Bergan Version 12.6 Endo Steel
-systemmanufacturer:ENGINE:400
-systemmanufacturer:ARMOR:Compound 12A2
-systemmanufacturer:COMMUNICATIONS:Garret L20
-systemmanufacturer:TARGETING:RCA Instatrac Mark IX
+history:<p>The Kodiak traces its origins to an ambitious Ghost Bear project begun during the Golden Century to create an assault-weight Totem 'Mech incorporating OmniMech technology. After acquiring design schematics for the Executioner through a Trial with Clan Burrock, Ghost Bear scientists attempted to splice the two programs together into a single fast assault OmniMech that would also serve as the Clan's totem. Late in the redesign process, however, prototypes revealed the Kodiak chassis was fundamentally incompatible with MASC, and the project was split in 3001 into two separate designs: the Executioner OmniMech and the Kodiak, a purpose-built second-line assault BattleMech. Though it never received the flexibility of an OmniMech, the Kodiak's raw combination of speed, armor, and devastating close-range firepower made it one of the most feared assault platforms in any Clan touman.</p><p>For decades following its introduction, the Kodiak remained exclusive to Clan Ghost Bear, produced at Bergan Industries on Alshain and a secondary facility designated Ghost Bear Facility Beta-1 on Bearclaw. The design was closely guarded as befitting a Totem 'Mech, but the realities of inter-Clan politics gradually saw small numbers enter other toumans. Clan Snow Raven obtained the largest share outside the Ghost Bears, reportedly as partial payment for their critical assistance during the Ghost Bear relocation to the Inner Sphere. Clans Cloud Cobra and Goliath Scorpion also acquired limited numbers through various exchanges, while among the Crusader Clans, only Clan Ice Hellion managed to field a handful of these prestigious machines.</p><p>The Kodiak first drew significant Inner Sphere attention during the Clan Invasion, where Ghost Bear assault Stars drove drives across multiple worlds with devastating effect. The design's fearsome reputation grew as Inner Sphere forces learned to respect its combination of assault-class firepower and heavy-medium speed. During Operation Bulldog, the discovery of at least two Kodiaks within a Smoke Jaguar unit on Asgard demonstrated the design's proliferation well beyond its original touman, raising questions about how the Jaguars had obtained them.</p><p>The Dominion-Combine War of 3062 proved a watershed moment for the Kodiak program. The newly developed Kodiak 2 received its baptism of fire on Richmond, where its enhanced mobility from jump jets proved decisive in the close urban fighting that characterized that campaign. Clan Hell's Horses subsequently obtained at least a Trinary of Kodiaks from the Ghost Bears through Trials of Possession, further expanding the design's operational footprint. Meanwhile, Clan Snow Raven's innate aerospace bias led their scientists to develop the radical Kodiak 3 anti-aircraft variant in the mid-3060s, leveraging dual LB 20-X autocannons and an advanced targeting computer to create a ground-based platform specifically tailored to counter aerospace threats. This variant entered refit production at facilities on Dante, initially aboard the orbital Eden Rose Potemkin-class facility before transitioning to the surface-based Snow Raven Industrial Complex Alpha around 3076.</p><p>The transition from the Ghost Bear Dominion to the Rasalhague Dominion brought both upheaval and renewal to Kodiak production. The Alshain facility (operating under various names across the centuries from Bergan Industries to Alshain Weapons) remained the primary production center, while the Bearclaw facility passed through Snow Raven and Star Lion control before its later fate became uncertain. Gorton, Kingsley, and Thorpe Enterprises on Satalice began producing the Kodiak 6 variant in 3131, expanding the manufacturing base and introducing GK&T's own refinements to the venerable design. A recovered Kodiak on Dieron was refitted with mixed Inner Sphere and Clan technology, serving as a capable command platform for Draconis Combine forces, evidence of how far the once-exclusive Totem 'Mech had spread across the Inner Sphere.</p><p>The Kodiak 4 variant, with its hybrid missile and ballistic loadout, proved so successful that it directly inspired the development of the Kodiak II command 'Mech in 3095, ensuring the Kodiak lineage would continue shaping Dominion military doctrine well into the thirty-second century. More than a century and a half after its introduction, the Kodiak remains a symbol of Ghost Bear martial tradition and a reminder that even without OmniMech flexibility, a well-designed BattleMech can endure across eras of warfare.</p>
+
+manufacturer:Bergan Industries - Alshain Weapons(formerly GK&T owned)|Ghost Bear Facility Beta-1
+
+primaryfactory:Alshain|Bearclaw
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Bergan
+systemmode:CHASSIS:Version 12.6 Endo Steel
+systemmanufacturer:ENGINE:Type 225
+systemmode:ENGINE:Standard Fusion
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

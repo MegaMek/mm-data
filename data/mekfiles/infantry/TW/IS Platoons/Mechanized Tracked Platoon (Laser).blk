@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c018-743f-abd4-0ed583140939
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,11 +52,19 @@ Ambusher
 Tracked
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Mechanized tracked platoons move their infantry in armored personnel carriers fitted with tracks for reliable all-terrain performance. Tracked APCs handle mud, snow, rubble, and rough ground better than any wheeled or hover alternative, making these platoons the preferred mechanized infantry for operations where terrain is uncertain or hostile. They sacrifice road speed compared to wheeled formations but gain the ability to keep pace with armored vehicles across broken ground. The APCs provide meaningful ballistic protection during transit, though troops must still dismount to fight effectively.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -76,6 +79,3 @@ TW
 Laser Rifle
 </Primary>
 
-<armorKit>
-GenericKit
-</armorKit>

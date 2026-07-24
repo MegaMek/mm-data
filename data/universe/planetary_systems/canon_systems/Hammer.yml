@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Hammer
-sucsId: 1048
+sucsId: 1049
 xcood: -369.912
 ycood: -142.769
 spectralType: K7V
@@ -52,6 +52,12 @@ planet:
       - name: Rossen's Mistake
         capital: Vega
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2607-08-10'
         faction:
           source: canon
@@ -97,6 +103,15 @@ planet:
         population: 1148220921.0
       - date: '2750-01-01'
         population: 1167708995.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Abbey District
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 1187958275.0
       - date: '2766-08-20'
@@ -177,6 +192,12 @@ planet:
           source: canon
           value:
             - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DTA
       - date: '3080-01-01'
         population: 1029427273.0
       - date: '3090-05-23'
@@ -194,9 +215,13 @@ planet:
         population: 1101422583.0
       - date: '3145-01-01'
         population: 1105173794.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: K0G-2

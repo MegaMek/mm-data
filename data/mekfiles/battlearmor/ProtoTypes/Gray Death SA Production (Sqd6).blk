@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a7ef-72da-91a7-a5b2198d65e3
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -32,7 +28,7 @@ BattleArmor
 Gray Death Strike Suit
 </Name>
 
-<model>
+<Model>
 (Sqd6)
 </Model>
 
@@ -40,25 +36,29 @@ Gray Death Strike Suit
 8990
 </mul id:>
 
-<chassis>
-biped
-</chassis>
+<year>
+3080
+</year>
 
-<weightclass>
-2
-</weightclass>
+<type>
+IS Level 2
+</type>
 
-<Trooper Count>
-6
-</Trooper Count>
+<role>
+Ambusher
+</role>
+
+<quirks>
+distracting
+</quirks>
+
+<motion_type>
+Leg
+</motion_type>
 
 <cruiseMP>
 3
 </cruiseMP>
-
-<Armor>
-9
-</Armor>
 
 <armor_type>
 28
@@ -71,45 +71,43 @@ biped
 <Squad Equipment>
 ISBASRM3:Body
 BA-SRM3 Ammo:Body:Shots2#
-ISBALightTAG:RA
+CLBALightTAG:RA
 BABasicManipulator:LA
 BABasicManipulator:RA
 </Squad Equipment>
 
-<type>
-IS Level 2
-</type>
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
 
-<role>
-Ambusher
-</role>
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
 
-<year>
-3080
-</year>
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
 
-<motion_type>
-Leg
-</motion_type>
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
 
-<source>
-TR:Proto
-</source>
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
 
-<overview>
-Gray Death Strike battle armor is a production version of the prototype.
-</overview>
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
 
 <capabilities>
-Defiance Industries wasn't able to secure a consistent source of the Clan technologies used in the prototype and made the decision to move to more accessible Inner Sphere technologies.
+<p>The production Gray Death Strike Suit mounts a detachable SRM-3 launcher with two reloads as its primary armament, paired with a Light TAG system for designating targets for friendly artillery and semi-guided munitions. Basic Manipulators replace the prototype's Battle Claws, and an Anti-Personnel Weapon Mount handles infantry-scale threats. The launcher can be jettisoned after expenditure, slightly improving the suit's ground speed and allowing the trooper to continue contributing as a forward observer through the TAG system.</p><p>At 1,000 kilograms with 450 kilograms of standard armor, the Strike Suit is a well-protected medium platform. It lacks jump capability entirely, relying on a powerful ground movement system that reaches 32 km/h over open terrain. The absence of jump jets limits the suit's tactical flexibility in rough terrain but simplifies maintenance and reduces the training burden on new troopers. The Strike operates best in a fire support role, softening targets with missiles before heavier forces close the distance.</p>
 </capabilities>
 
+<overview>
+<p>The Gray Death Strike Suit is a medium battle armor design developed by Gray Death Technologies in the early 3070s. Created to give the Lyran Commonwealth a dedicated fire support battle armor platform, the Strike combined missile armament with target designation capability in a well-armored package that could soften enemy positions before heavier forces closed the distance. The production model entered service in 3080 after a protracted development process that began with a Clan-technology prototype.</p>
+</overview>
+
 <deployment>
-As a result, Defiance used a single SRM-3 with two reloads. To make room for this the Gray Death Strike Suit replaced the Battle Claws of the prototype with Basic Manipulators. The launcher can be jettisoned as well, allowing the unit to move slightly more quickly. The Light TAG system mounted in the arm allows armor that has jettisoned the SRM launcher to remain useful on the battlefield, designating enemy units for artillery and missile strikes.
+<p>Six-trooper Level I formations of the production Strike Suit concentrated enough missile firepower to threaten light vehicles and exposed BattleMech components in coordinated salvos. Com Guard successors deployed these formations in prepared defensive positions where the suit's ground-only movement was less of a liability. The additional troopers ensured that even after some had expended their ordnance, the formation retained enough designators to maintain fire support coordination.</p>
 </deployment>
 
 <history>
-The Jihad stopped production at the Gray Death Technologies plants, and then Defiance Industries took over production. Defiance then moved production of the battle armor to Furillo, which slowed production even more. After the Gray Death Technology plant was destroyed in 3074, it would be six years before Defiance produced a new Gray Death Strike suit.
+<p>The Gray Death Strike Suit was born from desperation. In the early days of the Jihad, Word of Blake forces sacked the Gray Death Technologies factory on Glengarry in 3068, causing widespread damage and killing the Brewer's Legion defenders. The attack did not completely shut down production, and GDT devoted its remaining resources to developing more potent battle armor to fight the Word of Blake. The result was a hybrid design combining Inner Sphere and Clan technology, built under the supervision of technician Brian Kinnison.</p><p>The prototype removed the Standard Suit's improved sensors and modular weapon mount. In their place, Kinnison's team mounted a Clan-specification Advanced SRM-3 launcher and a Light TAG system for designating targets for artillery and guided munitions. Both arms retained Battle Claws, and the anti-personnel weapon mount was preserved. The reliance on Clan components proved to be the prototype's greatest weakness. Defiance Industries attempted to secure a steady supply of the advanced launchers from the Diamond Sharks and other Inner Sphere-friendly Clans, but none were willing to provide enough to justify mass production.</p><p>Precentor Berith's second assault on Glengarry in 3074 destroyed the GDT factory entirely. Defiance Industries absorbed the company and relocated manufacturing to Furillo, but production of any Gray Death battle armor stalled for years during the transition. When the Strike Suit finally entered production in late 3080, Defiance had redesigned it around Inner Sphere components. The Clan advanced launcher gave way to an Inner Sphere equivalent with two reloads, and the Battle Claws were replaced with lighter Basic Manipulators to accommodate the heavier weapon system. The Light TAG system was retained, giving troopers who jettisoned their spent missile pack continued usefulness as forward observers.</p><p>Sale of the production Strike Suit was restricted to the Lyran Commonwealth, helping the LCAF rebuild its battle armor strength after Jihad losses. The suits saw action primarily in raids against remnants of the Free Worlds League. Defiance Industries also maintained a small stock for its own security forces, rumored to be the original Clan-tech prototypes rather than the production model. The HarJel variant, introduced in 3107, incorporated self-sealing technology and upgraded to advanced armor, broadening the suit's operational envelope for hostile environment operations.</p>
 </history>
 
 <manufacturer>
@@ -124,12 +122,39 @@ Furillo
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
 
-<quirks>
-distracting
-</quirks>
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:Proto
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+9
+</armor>
+
+<Trooper Count>
+6
+</Trooper Count>
+
+<weightclass>
+2
+</weightclass>
 

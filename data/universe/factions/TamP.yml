@@ -17,6 +17,12 @@
 
 key: TamP
 name: Tamar Pact
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: LCAF
+sucsCodes:
+  - TamP
 capital: Tamar
 capitalChanges:
   3151: Arcturus

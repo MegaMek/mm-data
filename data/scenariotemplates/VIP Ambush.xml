@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -27,12 +27,16 @@ Expect the enemy to stall for time, deploying fast-moving elements or defensive 
 The enemy will control the battlefield at the end of the engagement, meaning there will be no chance for recovery or salvage. This is a surgical strike—neutralize the target and withdraw before the enemy locks down the area.]]></detailedBriefing>
     <battlefieldControl>ENEMY</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Urban</allowedTerrainType>
+            <allowedTerrainType>ColdUrban</allowedTerrainType>
+            <allowedTerrainType>HotUrban</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -130,10 +134,6 @@ The enemy will control the battlefield at the end of the engagement, meaning the
                 <syncDeploymentType>OppositeEdge</syncDeploymentType>
                 <syncedForceName>Player</syncedForceName>
                 <useArtillery>false</useArtillery>
-                <roleChoices>
-                    <forceRole>COMMAND</forceRole>
-                    <forceRole>APC</forceRole>
-                </roleChoices>
             </value>
         </entry>
     </scenarioForces>

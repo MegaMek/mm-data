@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c062-7d11-a407-a9a7710dbd42
+</UUID>
 
 <UnitType>
 Infantry
@@ -45,10 +40,6 @@ Foot Platoon (Taurian)
 2370
 </year>
 
-<originalBuildYear>
-2370
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -57,14 +48,18 @@ IS Level 2
 Leg
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Every Concordat world maintains infantry formations as the first line of planetary defense, drawn from a population whose fierce independence and hatred of foreign aggression run deep. Foot platoons form the garrison backbone of the TDF's infantry arm, cheap to equip and maintain on worlds where the Concordat's limited resources must stretch across dozens of systems. Since infantry regiments rarely rotate offworld, many battalions train as specialists in local terrain, and anti-BattleMech training is standard for all formations at battalion strength or greater.</p><p>Support troops carry man-portable flamers that project streams of burning chemicals over several hundred square meters, providing devastating area-effect capability against infantry and structures at the cost of short range and the vulnerability of the operator's fuel tank.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -86,8 +81,4 @@ InfantryAssaultRifle
 <Secondary>
 Flamer (Man-Portable)
 </Secondary>
-
-<antimek>
-8
-</antimek>
 

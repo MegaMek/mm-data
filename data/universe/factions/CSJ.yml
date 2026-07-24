@@ -17,6 +17,11 @@
 
 key: CSJ
 name: Clan Smoke Jaguar
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CSJ
 capital: Huntress
 capitalChanges:
   3052: Luzerne
@@ -93,3 +98,5 @@ factionLeaders:
     gender: "MALE"
     startYear: 3052
     endYear: 3060
+usesMercenaries:
+  2500: false

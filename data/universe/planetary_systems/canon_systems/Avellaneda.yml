@@ -60,7 +60,7 @@ planet:
         faction:
           source: canon
           value:
-            - MCM
+            - MRep
         population: 53737.0
         socioIndustrial: D-D-C-D-F
       - date: '2250-01-01'
@@ -74,6 +74,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '2280-01-01'
         population: 4047328.0
       - date: '2290-01-01'
@@ -82,6 +88,15 @@ planet:
         population: 17472504.0
       - date: '2310-01-01'
         population: 31459697.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Marik Commonwealth
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 52429232.0
       - date: '2330-01-01'
@@ -254,6 +269,12 @@ planet:
           source: canon
           value:
             - MSC
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '3080-01-01'
         population: 1186875139.0
       - date: '3082-04-10'
@@ -261,6 +282,9 @@ planet:
           source: canon
           value:
             - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture VII
       - date: '3090-09-30'
         population: 1192108896.0
         socioIndustrial: A-A-C-A-D
@@ -293,15 +317,15 @@ planet:
         population: 1228168358.0
       - date: '3145-01-01'
         population: 1236053842.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Clan Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
-      - date: '3152-06-01'
-        faction:
-          source: sucs
-          value:
             - CP
   - name: Bera
     type: ICE_GIANT

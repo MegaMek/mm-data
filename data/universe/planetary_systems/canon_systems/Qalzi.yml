@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Qalzi
-sucsId: 2083
+sucsId: 2084
 xcood: 161.826
 ycood: -436.823
 spectralType: F3V
@@ -83,6 +83,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2621-06-02'
         faction:
           source: canon
@@ -120,6 +126,15 @@ planet:
         socioIndustrial: C-D-B-C-D
       - date: '2750-01-01'
         population: 30622544.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Brinton Union
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2760-01-01'
         population: 30861896.0
       - date: '2770-01-01'
@@ -164,17 +179,24 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
           value:
             - ARC
-      - date: '3151-01-01'
+      - date: '3030-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: Cantón Guayaquil

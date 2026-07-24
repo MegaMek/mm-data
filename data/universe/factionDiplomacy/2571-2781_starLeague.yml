@@ -1,0 +1,93 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# The first Star League (2571-2781): member alliance and SLDF presence within the
+# member and territorial states.
+
+alliances:
+  - name: Star League
+    start: 2571-07-09
+    end: 2781-08-12
+    parties:
+      - factions: [SL, TH]
+      - factions: [SL, CC]
+      - factions: [SL, DC]
+      - factions: [SL, FS]
+      - factions: [SL, FWL]
+      - factions: [SL, LA]
+      - factions: [SL, OA]
+        start: 2597-03-21
+        end: 2765-01-01
+      - factions: [SL, TC]
+        start: 2597-03-21
+        end: 2765-01-01
+      - factions: [SL, MOC]
+        start: 2597-03-21
+        end: 2765-01-01
+      - factions: [SL, RWR]
+        start: 2597-03-21
+        end: 2765-01-01
+containedFactions:
+  - host: TH
+    contained: SL
+    start: 2572-08-22
+    end: 2781-08-12
+  - host: CC
+    contained: SL
+    start: 2572-10-07
+    end: 2781-08-12
+    fraction: 0.4
+  - host: DC
+    contained: SL
+    start: 2572-10-07
+    end: 2781-08-12
+    fraction: 0.4
+  - host: FS
+    contained: SL
+    start: 2572-10-07
+    end: 2781-08-12
+    fraction: 0.4
+  - host: FWL
+    contained: SL
+    start: 2572-10-07
+    end: 2781-08-12
+    fraction: 0.4
+  - host: LA
+    contained: SL
+    start: 2572-10-07
+    end: 2781-08-12
+    fraction: 0.4
+  - host: TC
+    contained: SL
+    start: 2597-03-21
+    end: 2765-01-01
+    fraction: 0.4
+  - host: OA
+    contained: SL
+    start: 2597-03-21
+    end: 2765-01-01
+    fraction: 0.4
+  - host: MOC
+    contained: SL
+    start: 2597-03-21
+    end: 2765-01-01
+    fraction: 0.4
+  - host: RWR
+    contained: SL
+    start: 2597-03-21
+    end: 2765-01-01
+    fraction: 0.4

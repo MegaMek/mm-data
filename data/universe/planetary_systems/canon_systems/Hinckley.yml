@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Hinckley
-sucsId: 1113
+sucsId: 1114
 xcood: -452.377
 ycood: 98.703
 spectralType: M5V
@@ -57,6 +57,12 @@ planet:
         size: large
         icon: rock6
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2671-08-28'
         faction:
           source: canon
@@ -88,6 +94,15 @@ planet:
         population: 153433369.0
       - date: '2750-01-01'
         population: 161332367.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Timbuktu Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 165477394.0
       - date: '2770-01-01'
@@ -99,6 +114,16 @@ planet:
             - LA
       - date: '2780-01-01'
         population: 168452523.0
+      - date: '2783-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2790-01-01'
         population: 168286894.0
       - date: '2800-01-01'
@@ -162,6 +187,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Periphery March
+        #   - Venaria Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3046-01-01'
         socioIndustrial: A-B-C-B-A
       - date: '3050-01-01'
@@ -171,12 +207,25 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
+        #   - Timbuktu Theater
       - date: '3060-01-01'
         population: 140772209.0
       - date: '3070-01-01'
         population: 142243879.0
       - date: '3080-01-01'
         population: 143989883.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Timbuktu Theater
       - date: '3090-01-01'
         population: 145117396.0
       - date: '3100-01-01'
@@ -200,9 +249,10 @@ planet:
           source: canon
           value:
             - TiC
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - TiC
   - name: Aslacton Belt 1

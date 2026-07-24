@@ -1,4 +1,25 @@
-#Saved from version 0.50.11 on 2025-12-28
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b686-74c4-bded-aab637e36624
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
@@ -19,10 +40,6 @@ Manei Domini Attack Squad
 3065
 </year>
 
-<originalBuildYear>
-3065
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -36,69 +53,24 @@ Leg
 </motion_type>
 
 <Troopers Equipment>
-Word of Blake Infantry Kit
 AntiMekGear
+Word of Blake Infantry Kit
 </Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
-<capabilities>
-<div style="max-width: 900px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.5;">
-
-  <p><strong>Notes:</strong> Cybernetically enhanced infantry with the following features:</p>
-
-  <ul>
-    <li>
-      <strong>Pain Shunt:</strong>
-      Reduces damage from fire and fire-based attacks by half (round down).
-    </li>
-
-    <li>
-      <strong>Enhanced Prosthetic Arms:</strong>
-      Improved prosthetics equipped with TK Enforcer and Magnet accessories.
-      <ul>
-        <li>TK Enforcers add +0.02 damage per trooper at Range 0.</li>
-        <li>Magnets provide a –2 Target Number modifier for Anti-’Mech Swarm and Leg Attacks.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Multi-Modal Cybernetic Eyes:</strong>
-      IR and Laser Targeting systems.
-      <ul>
-        <li>IR provides Active Probe capabilities at a 2-hex range.</li>
-        <li>Laser Targeting provides a –1 to-hit modifier.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Full-Body Dermal Armor &amp; Triple-Strength Myomer Implants:</strong>
-      Combined effects include:
-      <ul>
-        <li>+1 Damage Divisor.</li>
-        <li>No double-damage effects when attacked in open terrain.</li>
-        <li>All Burst-Fire damage reduced by 1D6 (minimum of 1 point).</li>
-        <li>+0.14 damage per trooper versus other conventional infantry at Range 0.</li>
-        <li>+2 maximum Support Weapons per squad.</li>
-        <li>–2 crew required per Support Weapon (minimum of 1).</li>
-        <li>Movement Points are not reduced by Support Weapons.</li>
-        <li>Support Weapons are not considered Encumbering.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Suicide Implants:</strong>
-      Delivers 0.57 damage per trooper killed by combat damage to all hostile units in the same hex.
-    </li>
-  </ul>
-
-</div>
-</capabilities>
+<overview>
+<p>The Manei Domini's Tau Zombie attack squads were among the most terrifying infantry formations fielded during the Jihad. Deployed in six-trooper squads rather than full platoons, each Zombie carried an extensive array of cybernetic enhancements: myomer-augmented muscles, prosthetic arms mounting built-in TK Enforcer weapons and magnetic grapples, multi-modal cybernetic eyes with infrared and laser targeting, full-body dermal armor reinforced by triple-strength myomer implants, and pain shunts that blocked all but the most catastrophic injuries. Armed with Mauser 1200 LSS laser rifles and heavy support lasers, Zombies fought with a mechanical relentlessness that unnerved even veteran soldiers. They never surrendered and never fled, continuing to fight through wounds that would incapacitate ordinary infantry. Surgically implanted suicide charges ensured that even a fallen Zombie remained dangerous, detonating when killed to inflict casualties on anyone nearby.</p>
+</overview>
 
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 6
@@ -145,5 +117,4 @@ Grappler
 <prostheticEnhancement2Count>
 2
 </prostheticEnhancement2Count>
-
 

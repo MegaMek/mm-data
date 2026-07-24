@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Sun Prairie
-sucsId: 2437
+sucsId: 2438
 xcood: 325.182
 ycood: 28.904
 spectralType: F6V
@@ -106,6 +106,12 @@ planet:
       - name: Cross II
       - name: Cross III
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2275-02-14'
         faction:
           source: canon
@@ -121,6 +127,12 @@ planet:
         population: 802953.0
       - date: '2310-01-01'
         population: 1855100.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 3808537.0
       - date: '2330-01-01'
@@ -137,6 +149,12 @@ planet:
         population: 28442458.0
       - date: '2365-01-01'
         socioIndustrial: D-D-A-D-D
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 40032727.0
       - date: '2380-01-01'
@@ -179,6 +197,17 @@ planet:
         population: 286379055.0
       - date: '2570-01-01'
         population: 289100727.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Fairfax Operational Area
+        #   - Region 2
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2580-01-01'
         population: 292800191.0
       - date: '2590-01-01'
@@ -233,6 +262,11 @@ planet:
         population: 368402177.0
       - date: '2820-01-01'
         population: 368214881.0
+      - date: '2821-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Region 2
       - date: '2830-01-01'
         population: 368911033.0
       - date: '2840-01-01'
@@ -277,16 +311,27 @@ planet:
         population: 311306793.0
       - date: '3020-01-01'
         population: 307977617.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Bremond PDZ
       - date: '3030-01-01'
         population: 307856347.0
       - date: '3031-01-01'
         socioIndustrial: D-C-B-C-D
-      - date: '3040-06-20'
-        population: 311199215.0
-        socioIndustrial: C-C-A-C-C
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-06-20'
+        population: 311199215.0
+        socioIndustrial: C-C-A-C-C
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -298,10 +343,21 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3070-01-01'
         population: 322767829.0
       - date: '3080-01-01'
         population: 324645322.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Milligan PDZ
       - date: '3090-01-01'
         population: 327318358.0
       - date: '3100-07-21'
@@ -313,12 +369,24 @@ planet:
         population: 331601276.0
       - date: '3130-01-01'
         population: 332664099.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Robinson Operational Area
+        #   - Dahar PDZ
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
         population: 334131046.0
       - date: '3145-01-01'
         population: 335269025.0
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
+            - FS
   - name: Martin
     type: TERRESTRIAL
     orbitalDist: 2.08

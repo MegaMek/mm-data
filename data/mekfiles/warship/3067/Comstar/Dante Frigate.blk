@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed88-7441-ac1e-582bb08f9229
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Dante Frigate
 2941
 </year>
 
-<originalBuildYear>
-2941
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -64,11 +55,11 @@ Aerodyne
 <transporters>
 dockingcollar
 dockingcollar
-crewquarters:1267.0:0
-1stclassquarters:590.0:0
-asfbay:12.0:4:5
-cargobay:15550.5:1:6
-cargobay:15550.5:1:7
+crewquarters:1267.0:0:-1::-1:0
+1stclassquarters:590.0:0:-1::-1:0
+asfbay:12.0:4:5::-1:0
+cargobay:15550.5:1:6::-1:0
+cargobay:15550.5:1:7::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ cargobay:15550.5:1:7
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 100
@@ -334,15 +329,19 @@ Ammo NAC/35:50
 </structural_integrity>
 
 <capabilities>
-Despite being smaller than some destroyers, the Dante-class frigates were highly regarded for their combination of speed, firepower, and armor. Their primary role was to serve as command and escort vessels for DropShip flotillas. While the Dante-class design was also capable of raiding tactics, its limited cargo bays and fuel capacity restricted its ability to operate independently.
+<p>Despite massing six hundred ten thousand tons, the Dante achieves frigate-grade speed with a thrust profile of five points safe and eight maximum, making it one of the fastest capital ships in its weight class. The vessel's primary armament centers on naval autocannons, with NAC/30 batteries distributed across the nose, forward quarter, broadside, and aft quarter arcs, supplemented by paired NAC/35 batteries in both broadside arcs for concentrated close-range firepower. Conventional defense is remarkably extensive for a vessel of frigate designation, with each arc mounting four LRM-20 racks, four Large Pulse Lasers, six Small Pulse Lasers, and three Anti-Missile Systems, creating overlapping fields of anti-fighter and anti-missile coverage that make the Dante exceptionally difficult to approach with small craft or missile salvos.</p><p>A lithium-fusion battery system enables rapid redeployment between star systems, while an onboard Mobile HPG provides independent interstellar communications capability critical to ComStar's operational requirements. Twelve aerospace fighter cubicles and two DropShip collars provide reasonable force projection for escort and raiding missions, though the design's limited cargo capacity and fuel bunkerage restrict extended independent operations. Six hundred tons of Ferro-Carbide armor provide substantial protection for the hull.</p>
 </capabilities>
 
 <overview>
-The Dante-class vessels, built by ComStar between 2935 and 2949, were a response to the increased militarism within the organization and the need for a more efficient and automated WarShip. These frigates were intended to support the ComStar Guards and Militia while other vessels were refurbished and new crews trained.
+<p>The Dante-class frigate was the first WarShip designed and constructed under ComStar's secretive military buildup, conceived as a heavily automated stopgap vessel while the order's considerable stockpile of mothballed Star League-era WarShips were refurbished and qualified crews trained to operate them. Commissioned at the Titan Yards in the Sol system, the class drew upon the facility's established shipbuilding expertise to produce a warfighting vessel capable of meaningful naval operations with a fraction of the crew complement required by comparable designs of similar displacement. Armed with a potent mix of capital and conventional weaponry, the Dante earned a reputation as a capable and surprisingly fast combatant for its tonnage, and its heavy automation made it particularly well suited to an organization that possessed far more hulls than trained naval personnel to crew them.</p>
 </overview>
 
+<deployment>
+<p>The first Dante, CSV Narbonne, entered service in 2941, followed by the CSV Bordeaux in 2944 and the CSV Montpellier in 2948. The spiraling costs of renovating the remainder of ComStar's mothballed fleet, combined with the difficulty of concealing both the vessels and their large naval crews, led to the program being frozen in 2949. All three vessels served with ComStar's nascent naval forces for decades before the Jihad consumed them. The Narbonne was destroyed during the Word of Blake's Case White assault on ComStar in 3068, and the Montpellier was lost at Columbus. The Bordeaux mounted a particularly distinguished resistance, running the Blakist blockade at Tukayyid in August 3068 to rescue Primus Sharilar Mori and senior ComStar leadership, then defending Orestes against a Blakist attack before participating in the liberation of Chara. The Bordeaux was ultimately destroyed at the Luyten system by Word of Blake forces.</p><p>Following their seizure of the Sol system shipyards, the Word of Blake constructed two additional Dantes: the WoBS Perdition, which participated in the invasion of St. Ives in September 3070 and helped destroy the Capellan WarShip CCS Elias Jung, and the WoBS Salvation. Both were destroyed during the defense of Sol against Devlin Stone's coalition during Operation SCOUR in 3078. In a final chapter, the Republic of the Sphere secretly salvaged and restored the wreck of the Bordeaux at Luyten, renaming it RSS Flatus. The vessel served until Clan Wolf's invasion, when its crew activated the self-destruct at Dubhe rather than allow the ship to be captured.</p>
+</deployment>
+
 <history>
-The first Dante-class vessel, the Narbonne, entered service in 2941, followed by the Bordeaux in 2944 and the Montpellier in 2948. The renovation of the remaining fleet and the challenges of concealing both the vessels and the sizable naval personnel led to the program being frozen in 2949. Although the design proved successful, further units in the class were not commissioned due to the escalating costs and other priorities within ComStar. The Blakist invasion of 3058 further disrupted any plans for expanding the Dante-class fleet. Despite its limitations, the Dante-class frigates continued to play a vital role in command and escort duties for ComStar's DropShip flotillas, serving as a symbol of ComStar's military presence and capabilities.
+<p>The Dante-class emerged from ComStar's growing recognition that its fleet of mothballed Star League-era WarShips could not be rapidly reactivated without sufficient qualified crews to operate them. Primus Hollings York championed the creation of a heavily automated design that could serve as both an escort for DropShip flotillas and a command vessel for the nascent Com Guards naval arm. Construction began at the renovated Titan Yards facility in the Sol system, where the venerable O'Neil shipbuilding infrastructure provided the foundation for ComStar's first new-build naval program since the fall of the Star League.</p><p>Three hulls were completed between 2941 and 2948 before fiscal pressures and security concerns halted further construction. The cost of simultaneously renovating the larger mothballed vessels while building Dantes proved unsustainable, and the increasing number of naval personnel required threatened to expose ComStar's military capabilities to outside observers. The program was formally frozen in 2949, and the death of Primus York shortly after removed its most prominent advocate. Despite plans by the Precentor Martial to commission additional units, the Word of Blake schism and the subsequent Blakist invasion of Terra permanently ended ComStar's expansion of the class.</p><p>The Dante's combat record proved the soundness of its design despite the small class size. All three ComStar vessels served capably through decades of clandestine operations before being drawn into the catastrophic fighting of the Jihad. The Word of Blake, recognizing the design's value, constructed two additional hulls at the captured Titan Yards to supplement their own growing naval forces during the conflict. The class thus served on both sides of the war, with ComStar and later Republic vessels fighting against Blakist-built sisters. The last surviving hull was ultimately lost during Clan Wolf's drive toward Terra, ending a class history that spanned over a century of continuous service across four different operators.</p>
 </history>
 
 <manufacturer>
@@ -357,9 +356,19 @@ Terra
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Frigate

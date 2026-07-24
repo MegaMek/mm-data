@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,40 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-ddc4-7756-8958-cab8ac90a1f1
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:StrongArm
 model:SC CVI ConstructionMech
 mul id:7859
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3094
+techbase:Inner Sphere
+era:3094
 source:TR:I
-Rules Level:2
+published:TR:I
+rules level:2
 role:None
 
-Mass:35
-Engine:140 ICE Engine(IS)
-Structure:IS Industrial
-Myomer:Standard
-Cockpit:Industrial Cockpit
-Gyro:Standard Gyro
 
-Heat Sinks:0 Single
-Walk MP:4
-Jump MP:0
+mass:35
+engine:140 ICE Engine
+structure:IS Industrial
+myomer:Standard
+cockpit:Industrial Cockpit
+gyro:Standard Gyro
 
-Armor:Industrial (Inner Sphere)
-LA Armor:6
-RA Armor:6
-LT Armor:7
-RT Armor:7
-CT Armor:10
-HD Armor:9
-LL Armor:8
-RL Armor:9
-RTL Armor:2
-RTR Armor:2
-RTC Armor:3
+heat sinks:0 Single
+walk mp:4
+jump mp:0
+
+armor:Industrial(Inner Sphere)
+LA armor:6
+RA armor:6
+LT armor:7
+RT armor:7
+CT armor:10
+HD armor:9
+LL armor:8
+RL armor:9
+RTL armor:2
+RTR armor:2
+RTC armor:3
 
 Weapons:0
 
@@ -56,9 +60,9 @@ Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-Lift Hoist
-Lift Hoist
-Lift Hoist
+Lift Hoist/Arresting Hoist
+Lift Hoist/Arresting Hoist
+Lift Hoist/Arresting Hoist
 -Empty-
 -Empty-
 -Empty-
@@ -119,7 +123,7 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-Cargo (0.5 tons)
+Cargo:SIZE:0.5
 -Empty-
 
 Head:
@@ -164,14 +168,25 @@ Foot Actuator
 -Empty-
 -Empty-
 
-overview:The StrongArm MOD should serve as a cautionary example of the worst possible modification one can perform on an IndustrialMech. All MODs tend to be shoddy, yet generally at least minimally combat-worthy, but the StrongArm MOD features no upgrade to its armor, lacks gunsights and a proper cooling system, and has a flamer that is as dangerous to itself as it is to the enemy. Even the user’s manual—aptly named Brainless Guide to Piloting® the StrongArm MOD—yields no better guidance than to roughly point the weapon at the enemy and hope for the best.
-capabilities:The original StrongArm ConstructionMech is a high-quality product of the Sitwell Corporation, heavily based on their established Powerman. The modification comes with all the drawbacks of similarly militarized IndustrialMechs, in that the right arm heavy flamer installation is open and improvised, but its workmanship is even poorer than on most other documented chassis. Its single retrofitted heat sink does not come close to dissipating the hellish temperature of the ’Mech-class weapon when fired, it lacks any targeting system, and the heavy armor is not upgraded, thereby limiting the pilot’s protection in combat situations. Though it is purchased by everyone and their grandmother, the StrongArm MOD is a deluded man’s ride and it speaks volumes that its producer would stay anonymous, selling refit kits via third parties.
-deployment:Given how widespread the StrongArm has become throughout the Republic, it is no surprise that nearly every RAF unit has at least one story of meeting an overconfident and sometimes even delusional StrongArm MOD pilot on the field. The cheapness of the base model and the ease with which it can be modded more than offset the severe lack of effectiveness the design provides, making it one of the more common militarized IndustrialMechs seen in the wild. Perhaps the most infamous incident occurred in 3126 on Caselton, when the workers of Caselton Consolidated Construction Professionals staged a two-week work stoppage on the site of Battlement’s new opera house. Though Governor Lafontaine Avendout favored waiting out the striking workers, Legate Dumaka Odoh pushed for a more aggressive solution. When, as part of their demands, the workers were supplied with several kegs of Wolf Cola and meals from local favorite Krüpe Meats, Legate Odoh ordered the food and drink drugged, ostensibly in the hopes of incapacitating the workers. However, as later revealed in court testimony, the actual drugs made the workers paranoid and violent and they burst forth from their barricades in their ConstructionMechs, over half of which were StrongArm MODs. The possession of military-scale weaponry by the workers, even weaponry as ridiculously ineffectual as that of the StrongArm, took local militia forces by surprise and in the ensuing confusion three militia soldiers and all twenty-eight construction workers were killed, along with millions of stones of damage to surrounding buildings within the capital. The official investigation of the incident uncovered the Legate’s plan to use the strike to get an increase in his budget and the backchannel deals he set up to supply the striking workers with MOD kits for their ConstructionMechs in order to make them a more effective threat. Governor Avendout resigned in the wake of the scandal, despite no evidence of wrongdoing on his part, and Legate Odoh was sentenced to life imprisonment in a mining colony in the Bordon system.
+overview:<p>The StrongArm ConstructionMech is a 35-ton IndustrialMech produced by Sitwell Corporation on Saiph, introduced in 3094. Built on the foundation of Sitwell's successful Powerman HaulerMech, the StrongArm was designed as an affordable construction platform that complemented rather than competed with Bluth Corporation's widely used Carbine ConstructionMech. Where the Carbine employs a backhoe for digging and earthmoving, the StrongArm carries lift hoists and salvage arms suited to complementary tasks, allowing operators to run both models in tandem without redundancy.</p><p>The design's low price point and modular construction made it popular throughout the Republic of the Sphere, where demand for construction equipment surged during the post-Jihad rebuilding era. However, the StrongArm's ease of modification proved a double-edged sword, earning the chassis a second, far less respectable reputation as one of the most commonly militarized IndustrialMechs in the Inner Sphere.</p>
+
+capabilities:<p>The StrongArm is powered by a Skobel 140 ICE, giving the 35-ton IndustrialMech a top speed of 64 kph, adequate for construction site operations. The PowerBuild CCV chassis, derived from the proven Powerman platform, benefits from an enlarged canopy and extended torso twist that improve operator visibility and working range. Hughes IndusWeave industrial armor provides basic protection against workplace hazards, though it offers little defense in a genuine combat scenario.</p><p>The base SC CV model carries two heavy-duty GripperTech lift hoists, enabling it to move structural materials, prefabricated components, and heavy equipment with efficiency. The design lacks any weapons, targeting systems, or combat-oriented electronics, relying solely on a SineWave 5000 communications system for site coordination. This simplicity is by design, as Sitwell Corporation intended the StrongArm as a purely civilian workhorse.</p><p>The militarized SC CV-M MOD adds a single Zippo heavy flamer with only one heat sink to manage its output. The weapon installation is open and improvised, with poor workmanship that leaves the weapon linkage exposed to incoming fire. The absence of any targeting or tracking system means the operator can do little more than point the weapon in the general direction of a target, making the MOD as dangerous to its operator as to any adversary.</p>
+
+deployment:<p>The SC CVI variant offers a more versatile configuration than the base SC CV, replacing one of the two lift hoists with a salvage arm derived from the Powerman XVI. This combination allows operators to perform both lifting operations and salvage recovery tasks with a single machine, making it particularly popular with operators working demolition or battlefield cleanup contracts. Like the SC CV, the CVI carries space for a half-ton of cargo and was introduced in 3094 as part of the original StrongArm product line.</p>
+
+history:<p>The StrongArm's origins trace back to Sitwell Corporation, a company built on rivalry. Founded in the late Star League era by a disgruntled former employee of Bluth Corporation, Sitwell carved out a niche in the IndustrialMech market with its Powerman HaulerMech, a design that eventually toppled Bluth's dominance in the cargo handling sector. After a legal battle spanning the entirety of the First Succession War, Sitwell emerged victorious, and Bluth Corporation was reduced to a shadow of its former self.</p><p>When the Republic of the Sphere's massive reconstruction efforts created unprecedented demand for construction equipment in the early thirty-second century, Sitwell saw an opportunity to expand beyond hauling into the construction market. Learning from the legal conflicts that had defined the company's early history, Sitwell designed the StrongArm to work alongside the Carbine rather than against it. Introduced in 3094, the StrongArm quickly found a receptive market among Republic contractors.</p><p>The StrongArm's notoriety stems largely from its unauthorized military conversion. An anonymous producer began distributing weaponized refit kits that transformed the civilian StrongArm into a crude but readily available combat platform. The SC CV-M MOD spread rapidly across the Republic, becoming one of the most common militarized IndustrialMechs despite being among the least effective. Nearly every Republic Armed Forces unit could recount encounters with overconfident MOD operators.</p><p>The most infamous incident involving the StrongArm MOD occurred on Caselton in 3126, when a labor dispute at a construction site escalated into violence. Workers armed with StrongArm MODs and other militarized ConstructionMechs clashed with local militia after a political scheme to exploit the strike went badly wrong. The incident resulted in dozens of casualties and millions of stones in property damage, exposing both the dangers of widely available IndustrialMech modifications and the corruption underlying the dispute.</p><p>Sitwell Corporation has repeatedly distanced itself from the MOD, issuing public statements denying responsibility for any military modification of their products and voiding all warranties on weaponized StrongArms. Despite these disclaimers, the ease with which the StrongArm can be converted continues to drive demand for both the civilian original and its improvised military counterpart.</p>
 
 manufacturer:Sitwell Corporation
-primaryfactory:Saiph
-systemmanufacturer:CHASSIS:PowerBuild CCV
-systemmanufacturer:ENGINE:Skobel 140 ICE
-systemmanufacturer:ARMOR:Hughes IndusWeave
-systemmanufacturer:COMMUNICATIONS:SineWave 5000
 
+primaryfactory:Saiph
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:PowerBuild
+systemmode:CHASSIS:CCV
+systemmanufacturer:ENGINE:Skobel
+systemmode:ENGINE:140 ICE
+systemmanufacturer:ARMOR:Hughes
+systemmode:ARMOR:IndusWeave
+systemmanufacturer:COMMUNICATIONS:SineWave
+systemmode:COMMUNICATIONS:5000

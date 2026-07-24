@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e46f-7133-9881-038b5f8648c9
+</UUID>
 
 <UnitType>
 Tank
@@ -45,10 +40,6 @@ SRM Carrier
 3054
 </year>
 
-<originalBuildYear>
-3054
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Tracked
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -76,9 +64,13 @@ Tracked
 1
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 14
@@ -117,19 +109,19 @@ ISNarcBeacon
 </Rear Equipment>
 
 <capabilities>
-The chassis for missile carriers, but they are all essentially military transport vehicles, tracked being the most common, adapted to carry the huge missile launchers and loading equipment. Those adaptations generally consist of reinforcing the suspension systems and armoring the crew and critical components areas enough to survive the back blast from so many missiles. With an average top speed of 54 km/h and armor unable to survive counterbattery fire, if forced to engage in direct combat a carrier's life expectancy is measured in seconds.
+<p>The 3054 upgrade incorporated Lexington Ltd. High Grade ferro-fibrous armor, nearly doubling the vehicle's survivability. One Holly SRM-6 launcher was removed to make room for a Doering Electronics Glowworm Narc Missile Beacon. The Narc system was intended to mark targets for follow-on missile strikes with improved accuracy, but many crews complained about the need to close to beacon range before their advanced munitions could make any difference.</p><p>The InterComBust 180 engine and basic chassis remain unchanged from the standard model, preserving the carrier's familiar handling characteristics. Six rounds of Narc ammunition provide limited beacon deployment capacity. The remaining nine SRM-6 launchers retain the ability to accept multiple ammunition types for tactical flexibility.</p>
 </capabilities>
 
 <overview>
-Ever since the development of the first rocket centuries ago, military units have used mobile missile systems to provide cheap and effective fire support. Along with its LRM counterpart, the SRM Carrier serves in every military action across the Inner Sphere in a variety of shapes and forms.
+<p>The SRM Carrier is a sixty-ton tracked combat vehicle built to deliver devastating short-range missile barrages at minimal cost. Developed by the Quikscell Company as a close-range counterpart to the LRM Carrier, the modern production model entered service around 2470, though its primitive ancestors date back to the Age of War in the 2440s. Manufactured by virtually every major military supplier across the Inner Sphere, the SRM Carrier provides cheap, expendable close-range fire support capable of crippling even assault-weight targets in a single volley. Its reputation as a disposable asset masks the genuine tactical threat posed by massed SRM carriers operating in coordinated ambush positions.</p>
 </overview>
 
 <deployment>
-An even more radical upgrade produced by the Word of Blake, it utilizes a Light Fusion Engine to boost the speed and armor of the carrier, while still retaining enough weight to add a C3i unit, TAG, a Guardian ECM suite and a switch to Streak SRM-4 launchers.
+<p>The 3054 upgrade was distributed among Federated Commonwealth regimental combat teams, with Oliver serving as the primary production site. The Narc variant's unpopularity led to limited adoption, with most units preferring the subsequent C3 revision. Sales opened to the broader Inner Sphere after the fall of Oliver to the Free Worlds League during Operation Guerrero.</p>
 </deployment>
 
 <history>
-Manufactured by almost every major military supplier, the modern SRM Carrier is derived from those developed in the Age of War by Quik Products Inc, the future Quikscell Company. In many cases derived a little too closely; during the Succession Wars era many manufacturers were producing little more than shoddy direct copies that fell below even Quikscell's low quality standards. After the end of the Fourth Succession War Quikscell lodged lawsuits against those manufacturing clones of Quik based carriers, resulting the closure of many smaller manufacturers and larger manufacturers ending production. While those who produced their own designs were not affected, Quikscell's elimination of much of its competitors and its offer to exchange any missile carrier not produced by them for legitimate Quikscell versions and parts made it the number one player of the missile carrier market.
+<p>The SRM Carrier shares its origins with the LRM Carrier, both tracing their lineage to the Age of War when Quik Products Inc developed the first standardized tracked platforms for massed missile delivery. The primitive designs established the basic formula of maximum firepower on a minimal chassis. As Quik Products evolved into the Quikscell Company, the original carriers were refined into the modern designs that entered widespread service by the twenty-fifth century. Like its long-range sibling, the SRM Carrier suffered from widespread unauthorized copying during the Succession Wars, and Quikscell's post-Fourth Succession War legal campaign shut down many clone manufacturers.</p><p>The SRM Carrier matched its LRM sibling in production volume, with Quikscell facilities on Ares, Kalidasa, Layover, Oliver, Pandora, Broken Wheel, and Richvale forming the backbone of manufacturing. Joint Equipment Systems on Alshain, Aldis Industries on Terra, Hadrian Mechanized Industries on Pompey, Amaris Armored Vehicles on Timbuktu, Caliphate Airfield Alpha on Granada, and Maxwell Planetary Defense Consortium on Maxwell broadened the production base across multiple states and Periphery powers.</p><p>Quikscell introduced the first major upgrade in 3054 for the Federated Commonwealth, incorporating ferro-fibrous armor and adding a Narc Missile Beacon to improve follow-on missile accuracy. The Narc variant proved relatively unpopular due to the carrier's slow speed making it difficult to close to effective beacon range. A more successful revision replaced the beacon with a C3 slave unit and Guardian ECM Suite, offering improved networked targeting and electronic warfare protection.</p><p>The Word of Blake developed a radical upgrade during the Jihad, utilizing an extralight fusion engine to increase speed and armor while adding a C3i computer, TAG designator, and Guardian ECM suite. The original Holly launchers were replaced with Streak SRM-4 systems for improved ammunition efficiency. Aldis Industries on Terra handled production throughout the Blakist occupation.</p><p>Joint Equipment Systems produced the SRM Carrier C for the Rasalhague Dominion during the Dark Age, mounting the standard armament in a partial-traverse turret with hardened armor and an upgraded engine for improved speed. The SRM Carrier has proven itself the ultimate expression of expendable firepower across more than six centuries of continuous service.</p>
 </history>
 
 <manufacturer>
@@ -141,15 +133,25 @@ Oliver
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:InterComBust 180 ICE
-ARMOR:Lexington Ltd. High Grade FF
+ENGINE:InterComBust
+ARMOR:Lexington Ltd.
 COMMUNICATIONS:Communicator
-TARGETING:FireScan with IndirecTrack
+TARGETING:FireScan
 </systemManufacturers>
+
+<systemModels>
+ENGINE:180 ICE
+ARMOR:High Grade
+TARGETING:with IndirecTrack
+</systemModels>
 
 <source>
 TR:3058U
 </source>
+
+<published>
+RS:3058Uu-I,RSFP:Battlefield
+</published>
 
 <tonnage>
 60.0

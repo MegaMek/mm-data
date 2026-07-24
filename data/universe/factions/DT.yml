@@ -17,7 +17,16 @@
 
 key: DT
 name: Duchy of Tamarind
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: LCAF
+sucsCodes:
+  - DT
 capital: Tamarind
+yearsActive:
+  - start: 3071
+    end: 3078
 successor: DTA
 tags:
   - MINOR

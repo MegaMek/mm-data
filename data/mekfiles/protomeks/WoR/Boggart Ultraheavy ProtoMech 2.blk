@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e11f-79b1-9b91-e4e636ae65cb
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Boggart Ultraheavy ProtoMech
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 Clan Level 3
 </type>
@@ -60,9 +51,6 @@ Striker
 <motion_type>
 Quad
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 5
@@ -79,6 +67,22 @@ false
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -101,6 +105,7 @@ ExtendedJumpJetSystem
 ExtendedJumpJetSystem
 ExtendedJumpJetSystem
 ExtendedJumpJetSystem
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -122,28 +127,20 @@ ExtendedJumpJetSystem
 CLMediumPulseLaser
 </Main Gun Equipment>
 
-<source>
-WoR
-</source>
-
-<tonnage>
-13.0
-</tonnage>
-
 <capabilities>
-The Boggart was the first attempt to build a production-worthy quad ProtoMech. It is able to intercept communications signals from other units and determine where the targeted unit is placing most of its attention. This allows the Boggart's pilot to target those units that aren't expecting an attack, making the assault even more effective. The Boggart's relatively high ground speed is coupled with a 150 meter jumping capability to allow it to quickly engage multiple foes.
+<p>The Boggart's Plasma Cannon is its defining feature, a weapon system that inflicts both physical damage and extreme heat buildup on targets. Each plasma bolt delivers ten points of damage while generating significant heat in the target, making the Boggart uniquely dangerous to Meks that rely on tight heat management for weapons cycling. Ten rounds of plasma ammunition provide adequate engagement endurance for most combat scenarios. Five body-mounted jump jets give the thirteen-ton design one hundred fifty meters of leaping distance, remarkable mobility for a machine this heavy.</p><p>Thirty-nine points of armor provide reasonable protection, though this is modest for a design of this tonnage, reflecting the mass demands of the Plasma Cannon and jump jet systems. The quad chassis delivers fifty-four kilometers per hour cruising speed, and the combination of ground speed and jump capability allows the Boggart to maneuver effectively despite its bulk. The design lacks secondary weapons, making it entirely dependent on the Plasma Cannon for offensive capability. Commanders deploy Boggart Points as heavy fire support elements, using the plasma weapons' combined damage and heat effects to soften targets for lighter, faster assets to finish.</p>
 </capabilities>
 
 <overview>
-The Boggart ultraheavy ProtoMech was developed by The Society as a flanker and harasser unit.
+<p>The Boggart is a thirteen-ton ultraheavy quadruped ProtoMek developed during the Wars of Reaving, mounting one of the most devastating weapons ever fitted to a ProtoMek chassis: a Clan Plasma Cannon. At nearly three times the mass of most standard ProtoMeks, the Boggart represents the extreme end of ProtoMek design philosophy, blurring the line between ProtoMek and light BattleMek. The four-legged chassis provides the stability needed to absorb the Plasma Cannon's recoil while maintaining the mobility to reposition between shots, and five jump jets give the massive design terrain-crossing capability unusual for its weight class.</p>
 </overview>
 
 <deployment>
-The single Plasma Cannon mounted on the Boggart is particularly effective against overheating 'Mechs. Conventional infantry and vehicles are also quickly damaged by the weapon. As a result, the Boggart is one of the Society's most effective ProtoMechs. Unfortunately, the limited amount of ammunition storage forces the Boggart to carefully select its targets or risk running out of ammunition.
+<p>The Boggart 2 replaces the Plasma Cannon with a Medium Pulse Laser in the main gun position, eliminating ammunition dependency for unlimited engagement endurance. Seven extended jump jets replace the standard five, dramatically increasing leaping distance to two hundred ten meters, the greatest jump capability of any known ProtoMek design. Armor increases substantially to fifty-six points, making the Boggart 2 one of the most heavily armored ProtoMeks in active service. The combination of exceptional jump capability, heavy armor, and reliable energy weaponry makes the Boggart 2 ideal for extended independent operations and deep raiding missions where resupply is impossible.</p>
 </deployment>
 
 <history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
+<p>The Boggart emerged from the accelerated weapons development programs that characterized the Wars of Reaving, when the escalating violence in the Homeworlds drove Clan scientists to push ProtoMek technology well beyond its original design parameters. The ultraheavy quadruped chassis allowed engineers to mount weapons systems previously considered too large for ProtoMek platforms, with the Plasma Cannon representing the most ambitious weapons integration attempted on a design below BattleMek scale.</p><p>The quad chassis was chosen specifically for its stability characteristics when firing the Plasma Cannon, as the weapon's substantial recoil would have made accurate fire from a bipedal platform extremely difficult. Jump jets were incorporated to prevent the heavy design from becoming a static weapons platform, and the resulting combination of heavy firepower and tactical mobility made the Boggart a feared opponent in the close-quarters fighting that dominated the Reaving campaigns.</p><p>A second variant, the Boggart 2, was developed to address different tactical requirements. Replacing the Plasma Cannon with a Medium Pulse Laser and upgrading the jump jets to seven extended jump jets providing two hundred ten meters of leaping distance, the Boggart 2 trades the base model's devastating but ammunition-limited firepower for unlimited energy weapon endurance and dramatically enhanced mobility. Armor increases substantially to fifty-six points, making the Boggart 2 one of the most heavily protected ProtoMeks in service. This variant excels in extended operations where ammunition resupply is unavailable.</p>
 </history>
 
 <manufacturer>
@@ -155,10 +152,29 @@ Unknown
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:BGR13
-ENGINE:45 Fusion
-ARMOR:Proto-Standard B
-JUMPJET:MegaTan Lifters-E
-COMMUNICATIONS:Proto-Type A
-TARGETING:SAT-PM1
+CHASSIS:Unknown
+ENGINE:Bairn
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Ultraheavy Quad
+ENGINE:75
+ARMOR:Standard
+</systemModels>
+
+<source>
+WoR,WoRS
+</source>
+
+<published>
+WoR,WoRS
+</published>
+
+<tonnage>
+13.0
+</tonnage>
+

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Vantaa
-sucsId: 2660
+sucsId: 2661
 xcood: -72.637
 ycood: 351.506
 spectralType: F5V
@@ -271,7 +271,7 @@ planet:
             - CJF
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - ABN
   - name:
@@ -301,6 +301,12 @@ planet:
         size: medium
         icon: oddmoon1
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2450-03-20'
         faction:
           source: canon
@@ -337,6 +343,16 @@ planet:
       - date: '2571-09-23'
         faction:
           source: canon
+          value:
+            - LA
+      - date: '2571-12-31'
+        # administration:
+        #   - Tamar Pact
+        #   - Trellshire
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - LA
       - date: '2580-01-01'
@@ -451,6 +467,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Tamar March
+        #   - Blackjack Operational Area
+        #   - Region 3
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3047-01-01'
         socioIndustrial: B-C-C-B-A
       - date: '3050-01-01'
@@ -460,11 +487,23 @@ planet:
           source: canon
           value:
             - CW
+      - date: '3050-09-30'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CW
       - date: '3060-01-01'
         population: 321454806.0
       - date: '3066-03-30'
         faction:
           source: canon
+          value:
+            - CJF
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CJF
       - date: '3070-01-01'
@@ -487,9 +526,10 @@ planet:
           source: canon
           value:
             - CJF
-      - date: '3151-01-01'
+      - date: '3075-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: Mextli

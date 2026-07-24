@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,57 +15,59 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d44c-737d-a963-529f161365d4
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Mad Cat Mk II
 model:6
 mul id:6848
 
 Config:Biped
-TechBase:Clan
-Era:3139
-Source:RS:3145-NTNU
-Rules Level:3
+techbase:Clan
+era:3139
+source:TR:3145
+published:RS:3145-NTNU,RS:3145
+rules level:3
 role:Sniper
 
 quirk:imp_target_med
 
+mass:90
+engine:360 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:90
-Engine:360 XL (Clan) Engine(IS)
-Structure:Clan Endo Steel
-Myomer:Standard
+heat sinks:14 Clan Double
+walk mp:4
+jump mp:4
 
-Heat Sinks:14 Double
-Walk MP:4
-Jump MP:4
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:27
-RA Armor:27
-LT Armor:26
-RT Armor:26
-CT Armor:38
-HD Armor:9
-LL Armor:34
-RL Armor:34
-RTL Armor:8
-RTR Armor:8
-RTC Armor:12
+armor:Ferro-Fibrous(Clan)
+LA armor:27
+RA armor:27
+LT armor:26
+RT armor:26
+CT armor:38
+HD armor:9
+LL armor:34
+RL armor:34
+RTL armor:8
+RTR armor:8
+RTC armor:12
 
 Weapons:6
-ER Medium Laser, Right Torso
-ER Medium Laser, Right Torso
-ER Medium Laser, Left Torso
-ER Medium Laser, Left Torso
-ER PPC, Right Arm
 ER PPC, Left Arm
+ER PPC, Right Arm
+ER Medium Laser, Left Torso
+ER Medium Laser, Left Torso
+ER Medium Laser, Right Torso
+ER Medium Laser, Right Torso
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 CLERPPC
 CLERPPC
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 Clan Endo Steel
 Clan Endo Steel
 Clan Ferro-Fibrous
@@ -78,8 +80,8 @@ Shoulder
 Upper Arm Actuator
 CLERPPC
 CLERPPC
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 Clan Endo Steel
 Clan Ferro-Fibrous
 -Empty-
@@ -94,8 +96,8 @@ Jump Jet
 Jump Jet
 CLERMediumLaser
 CLERMediumLaser
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 Clan Endo Steel
 Clan Endo Steel
 Clan Ferro-Fibrous
@@ -108,8 +110,8 @@ Jump Jet
 Jump Jet
 CLERMediumLaser
 CLERMediumLaser
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 Clan Endo Steel
 Clan Endo Steel
 Clan Ferro-Fibrous
@@ -126,8 +128,8 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 
 Head:
 Life Support
@@ -148,8 +150,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 -Empty-
 -Empty-
 -Empty-
@@ -162,8 +164,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-HarJel III Self-Repair System
-HarJel III Self-Repair System
+HarJel Repair Systems (HarJel III)
+HarJel Repair Systems (HarJel III)
 -Empty-
 -Empty-
 -Empty-
@@ -171,20 +173,26 @@ HarJel III Self-Repair System
 -Empty-
 -Empty-
 
-overview:Designed to be sold to fellow Clans, this rebuild of the Timber Wolf carries thirteen tons of ferro-fibrous armor while being one of most nimble BattleMechs of its class, yet still packing serious weaponry.
+overview:<p>The Mad Cat Mk II is a ninety-ton Clan assault BattleMech developed by Clan Diamond Shark beginning in the early 3060s. Designed explicitly as a commercial venture to bolster Diamond Shark profits following the costly Clan Invasion of the Inner Sphere, the design drew heavily upon the legendary Timber Wolf OmniMech as its foundation. Diamond Shark engineers based the new chassis on an existing BattleMech design to dramatically reduce development time, bringing the Mad Cat Mk II from concept to full-scale production in less than fifteen months. Unlike its OmniMech predecessor, the Mad Cat Mk II is a standard BattleMech, purpose-built for export to other Clans and, eventually, Inner Sphere buyers. The deliberate use of the Inner Sphere reporting name "Mad Cat" rather than "Timber Wolf" signaled Diamond Shark willingness to market directly to non-Clan customers, representing a significant shift in Clan mercantile philosophy.</p>
 
-capabilities:This version carries an ER PPC in each arm, backed up by a pair of ER Medium Lasers in each side torso. Each arm, leg, and torso location is equipped with a Harjel III repair system.
+capabilities:<p>Though bearing a remarkable outward resemblance to the Timber Wolf, the Mad Cat Mk II is an entirely new and powerful creation. Thirteen tons of ferro-fibrous armor mounted on a DSAM Endo 4 chassis provide exceptional protection for an assault-class design, while a Type 79 360-rated XL fusion engine drives the ninety-ton frame to a fast 64 kph. Grandthrust Mk. 5 jump jets grant the 'Mech a ninety-meter jump capability, making it remarkably agile for its weight class and able to traverse all but the most impassable terrain.</p><p>The primary armament consists of a pair of arm-mounted EMRG "Galaxy" Series Gauss rifles supported by torso-mounted Type X "Short Bow" LRM-10 launchers, giving the Mad Cat Mk II devastating firepower at range and indirect fire capability. Four Series 2b extended-range medium lasers in the torsos provide effective close-range defense. While the design can engage targets at extreme distances, it performs best within 450 meters where all weapons can be brought to bear simultaneously, delivering a steady volume of fire without risking redlining or reactor shutdown. Interestingly, the Diamond Shark technicians equipped the chassis with weapons drawn from their oldest Brian Caches, necessitating structural adjustments such as additional venting ports above the Gauss rifle mounts.</p>
 
-deployment:Despite this, Mk II's most notable potential buyers, Clan Wolf and Clan Jade Falcon, did not purchase even a single unit, though they won some numbers in Trials. Significant numbers of Mad Cat Mk II were sold to Clan Nova Cat, and the Mech served also in Clan Ice Hellion, Clan Jade Falcon, Clan Wolf-in-Exile in addition to Diamond Shark itself. On a limited basis, Clan Diamond Shark sold unmodified Mad Cat Mk IIs to Inner Sphere factions, most notably the Draconis Combine and Federated Commonwealth, and also the Lyran Alliance bought an unknown amount of Mad Cat Mark IIs.
+deployment:<p>Exclusive to Clan Sea Fox officers, this variant mounts an extended-range PPC in each arm backed by paired extended-range medium lasers in each side torso, providing a potent all-energy weapons loadout that eliminates ammunition dependency entirely. The defining feature is the installation of HarJel III breach repair systems in every arm, leg, and torso location, providing universal hull-breach protection that allows the 'Mech to continue fighting even after sustaining critical structural damage in hostile environments. This combination of energy weapons independence and comprehensive self-repair capability makes the variant ideally suited for extended independent operations far from supply lines.</p>
 
-history:The Mad Cat Mk II was in development for fifteen months by the time production began in 3061. The sole rationale for the Mad Cat Mk II was to increase profits for Clan Diamond Shark after war with the Inner Sphere in the 3050s.
+history:<p>The Mad Cat Mk II entered production in 3061 at Manufacturing Plant DSF-94 on Vinton in the Clan Homeworlds. Clan Diamond Shark conceived the design purely as a profit-generating venture after the Clan Invasion of the 3050s left even the home Clans reeling from the consequences of war. Taking inspiration from their successful Ha Otoko line, Diamond Shark leadership directed engineers to create a standard BattleMech that could be sold to fellow Clans seeking to rebuild their toumans.</p><p>Despite the design's considerable capabilities, its most obvious potential customers proved reluctant buyers. Clan Wolf and Clan Jade Falcon (once the strongest and most feared of the invading Clans) purchased none, though both acquired examples through Trials of Possession. Clan Ice Hellion and Clan Steel Viper also obtained small numbers through similar means. Only Clan Nova Cat purchased the Mad Cat Mk II in significant quantities, fielding them in considerable numbers during the tumultuous years surrounding the Jihad.</p><p>Diamond Shark sales strategy proved more successful with Inner Sphere customers. On a limited basis, unmodified Mad Cat Mk IIs were sold to the Draconis Combine and the former Federated Commonwealth states, with the Lyran Alliance also purchasing an unknown number. The decision to use the Inner Sphere "Mad Cat" designation rather than the Clan "Timber Wolf" name lent credence to the theory that Diamond Shark was willing to sell unmodified Clan equipment to the Inner Sphere, representing a significant shift in Clan attitudes toward commerce with the successor states.</p><p>During the Jihad, production at the Vinton facility ceased and the line was relocated to Manufacturing Plant DSF-IT1 on Itabaiana around 3071, where Clan Diamond Shark (later renamed Clan Sea Fox) continued to expand the line. The Mad Cat Mk II Enhanced entered production in the mid-3080s as a modernized variant designed to recapture declining sales, and proved to be one of Diamond Shark's bestselling products, competing only with the new Mad Cat III for commercial dominance. Subsequent variants including the "Super Mad Cat" and other specialized configurations were initially proprietary before being released to the open market, ensuring the Mad Cat Mk II family remained a cornerstone of Clan Sea Fox's commercial military offerings well into the thirty-second century.</p>
 
-manufacturer:Manufacturing Plant DSF-94
-systemmanufacturer:CHASSIS:DSAM Endo 4
-systemmanufacturer:ENGINE:Type 79 360 XL Fusion
-systemmanufacturer:ARMOR:Forging ZM15 Ferro Fibrous
-systemmanufacturer:JUMP_JET:Grandthrust Mk. 5
-systemmanufacturer:COMMUNICATIONS:MegaBand System 21
-systemmanufacturer:TARGETING:Dtrac Suite 4
+manufacturer:Manufacturing Plant DSF-IT1
 
+primaryfactory:Itabaiana
 
+fluffdate:2026-02-21 18:24:59
+
+systemmanufacturer:CHASSIS:DSAM
+systemmode:CHASSIS:Endo 4
+systemmanufacturer:ENGINE:Type 79
+systemmode:ENGINE:360 XL Fusion
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:COMMUNICATIONS:MegaBand
+systemmode:COMMUNICATIONS:System 21
+systemmanufacturer:TARGETING:Dtrac
+systemmode:TARGETING:Suite 4

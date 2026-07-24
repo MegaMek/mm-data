@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,10 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.49.18-SNAPSHOT on 2024-01-07
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ec6d-7c44-80e3-9ba79d237c76
+</UUID>
 
 <UnitType>
 Tank
@@ -39,10 +39,6 @@ Padilla Anti-Missile Tank
 <year>
 3134
 </year>
-
-<originalBuildYear>
-3134
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -68,9 +64,13 @@ Wheeled
 22
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 28
@@ -108,8 +108,24 @@ ISAPDS
 ISAPDS
 </Turret Equipment>
 
+<capabilities>
+<p>The Padilla Anti-Missile Tank's defining systems are its pair of McArthur III Advanced Point Defense mounts, manufactured by Blankenburg and positioned to provide overlapping coverage against incoming missiles. The APDS mounts represent a vehicle-scale implementation of technology previously limited to Aegis battle armor, offering a substantially wider protective envelope than the single-mount anti-missile systems common on other vehicles. Testing confirmed that APDS-equipped vehicles in formation could significantly degrade incoming Arrow and LRM barrages, making the Anti-Missile Tank a force multiplier for any combined-arms formation facing heavy missile opposition.</p><p>Complementing the defensive systems is an M-7 Gauss rifle in a fully traversing turret, providing substantial direct fire capability against armored targets at range. The light fusion engine delivers reasonable performance for a wheeled fifty-five-ton vehicle intended to operate within a formation rather than independently. Seven and a half tons of stealth armor powered by the integrated Guardian ECM system replaces the standard armor of the base Padilla Tube chassis. While the stealth system meaningfully reduces the vehicle's sensor signature against precision-guided munitions, it does not increase physical armor protection compared to the base Tube variant, a trade-off accepted in return for improved survivability against advanced targeting systems. The light fusion engine provides the power margin needed to run both the stealth armor and APDS mounts simultaneously without taxing the power plant.</p>
+</capabilities>
+
+<overview>
+<p>The Padilla Anti-Missile Tank represents the most technologically sophisticated member of the Padilla vehicle family, entering production in 3136 as a joint development between the Republic Armed Forces and Aldis Industries of Terra. Born from the proven effectiveness of the Advanced Point Defense System on the Aegis battle armor suit, the Anti-Missile Tank was designed to bring vehicle-scale point defense capability to combined-arms formations where it could protect an entire lance rather than a single trooper. Using the Padilla Tube Artillery Tank chassis as its foundation, the Anti-Missile Tank pairs two Advanced Point Defense mounts with an M-7 Gauss rifle for direct fire support, while stealth armor and an integrated ECM suite protect the vehicle from counter-targeting. Principes Guard armor companies adopted the type following its 3136 introduction, fielding it in fire support lances alongside conventional Padilla artillery tanks and JES III Missile Carriers.</p>
+</overview>
+
+<deployment>
+<p>Assigned exclusively to Principes Guard armor formations following production approval in 3136. Standard deployment doctrine pairs Anti-Missile Tanks in fire support lances alongside two conventional Padilla Tube Artillery Tanks and a JES III Missile Carrier, creating a formation where point defense coverage protects the artillery vehicles from missile saturation while the Gauss rifle addresses armored threats at direct fire range. The stealth armor and integrated ECM suite favor deployment in forward positions where the vehicle's reduced sensor signature provides additional survivability against precision-guided munitions targeting systems.</p>
+</deployment>
+
+<history>
+<p>The Padilla Anti-Missile Tank's development history begins with the Aegis battle armor and the Advanced Point Defense System that distinguished it from competing Republic designs. Following the APDS's proven combat effectiveness on the Aegis suit in Republic service, RAF High Command initiated a program through RISC to develop a vehicle-scale implementation that could extend point defense capability to the formation level. The program benefited substantially from detailed performance data collected from APDS-equipped Aegis suits in field operations, accelerating development of the vehicle-scale system beyond what laboratory work alone could have achieved.</p><p>Aldis Industries on Terra received the production contract, building on its existing experience with the Padilla Tube Artillery Tank chassis. Initial development focused on replacing the tube artillery system with the McArthur III APDS mounts, a conceptually straightforward conversion. The more consequential design decision came when a member of the Aldis engineering team noted that the Betelgeuse design bureau had successfully integrated stealth armor and ECM into the Regulator II heavy tank. Aldis engineers adopted the same approach, replacing the standard Padilla armor with stealth material and adding the Guardian ECM suite to power it. The change shifted the vehicle's survivability philosophy from raw armor protection to sensor evasion and formation defense. The original tube artillery piece was replaced with an M-7 Gauss rifle to provide meaningful direct fire capability alongside the point defense role.</p><p>Field testing began in 3134, with the vehicle operating in false flag evaluations concealing its advanced systems from observers. Performance proved sufficient for RAF approval of full production in 3136. Principes Guard armor companies that received first deliveries incorporated the Anti-Missile Tank into fire support lances alongside conventional Padilla Tube Artillery Tanks and JES III Missile Carriers, a formation doctrine leveraging point defense coverage to protect the more vulnerable artillery vehicles from missile saturation while the Gauss rifle engaged armored threats at direct fire range.</p>
+</history>
+
 <manufacturer>
-Leopard Armor
+Aldis Industries
 </manufacturer>
 
 <primaryFactory>
@@ -118,15 +134,27 @@ Terra
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:145 Ragusson Light Fusion
-ARMOR:Krupp Stealth
-COMMUNICATIONS:Teldon 19
-TARGETING:Scope 30 RDNST
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:145 Light Fusion
+ARMOR:Stealth (120 AF)
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 XTR:RotS 3
 </source>
+
+<published>
+XTR:RotS 3
+</published>
 
 <tonnage>
 55.0

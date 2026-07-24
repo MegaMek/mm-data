@@ -17,6 +17,12 @@
 
 key: AB
 name: Azami Brotherhood
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: DCMS
+sucsCodes:
+  - AB
 capital: Algedi
 yearsActive:
   - start: 2450

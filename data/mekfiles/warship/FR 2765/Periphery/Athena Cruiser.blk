@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee28-7ce7-8c77-510c01c47468
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Athena Cruiser
 2569
 </year>
 
-<originalBuildYear>
-2569
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,11 +53,11 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:22.0:5:1
-infantrybay:4.0:1:2:Motorized
-crewquarters:1680.0:0
-1stclassquarters:3500.0:0
-cargobay:11937.0:1:5
+smallcraftbay:22.0:5:1::-1:0
+infantrybay:4.0:1:2:Motorized:-1:0
+crewquarters:1680.0:0:-1::-1:0
+1stclassquarters:3500.0:0:-1::-1:0
+cargobay:11937.0:1:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ cargobay:11937.0:1:5
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 70
@@ -259,15 +254,19 @@ Naval Laser 55
 </structural_integrity>
 
 <capabilities>
-The Athena-class cruiser, born from brainstorming and simulations rather than practical deep space warfare experience, was designed for space-to-space nuclear warfare and support for Alliance troops. It featured heavy capital missile batteries, potent laser batteries for anti-fighter and anti-shipping roles, and supplementary autocannons for high-speed engagements. The stern-heavy weaponry reflected its bombardment platform role, while the lack of docking collars indicated its original design to house large drop shuttles and smaller shuttles. The redesigned docking bays of the Magistracy version could accommodate aerospace fighters and shuttles, providing a moderate fighter screen and independent transport capability.
+<p>Displacing five hundred thousand tons, the Athena carried a weapons suite dominated by naval laser batteries distributed across all firing arcs, with the heaviest concentration mounted aft. This stern-heavy arrangement reflected the vessel's original design concept as a bombardment platform, oriented with its nose directed away from a target world while delivering sustained fire from its aft batteries. Capital-grade autocannon complemented the laser armament in the fore and aft arcs, while substantial missile batteries provided additional striking power at range. Nearly nine hundred tons of standard armor protected the hull, distributed with a slight bias toward the nose and stern to complement the vessel's preferred engagement orientation.</p><p>The Athena lacked docking collars entirely, a consequence of its origins predating the development of standardized docking boom technology. Instead, the vessel carried twenty-two small craft, typically configured as eighteen aerospace fighters and four shuttles, deploying through five bay doors to provide screening coverage and independent transport capability. Over twenty-six thousand tons of cargo capacity supplemented the vessel's transport role. Two large counter-rotating gravity decks measuring over two hundred meters in diameter provided comfortable one-gravity environments for the entire crew, with especially spacious quarters afforded to all personnel rather than officers alone, making the class a popular flagship assignment. The vessel's acceleration was considered modest by the standards of contemporary cruisers, a recognized trade-off for the design's emphasis on firepower and habitability over raw speed.</p>
 </capabilities>
 
 <overview>
-The Athena-class cruiser, considered an outgrowth of James McKenna's naval construction programs, shares its roots with the Aegis-class. However, the concept of the Athena was actually conceived nearly a century before McKenna's time, during the Terran Alliance era. Originally designed as a combat JumpShip, the Athena evolved into an iconic heavy cruiser for the Terrans and later underwent modifications by the Magistracy of Canopus, resulting in a version that closely adhered to the original blueprints.
+<p>The Athena-class cruiser was the first WarShip designed and constructed domestically by the Magistracy of Canopus, entering service in 2569. Built by Carmen Shipwrights in partnership with the Athena Corporation at their Harminous shipyard facilities, the class provided the Magistracy with a capital combatant produced entirely within its own borders. This achievement carried enormous political and military significance for the Periphery state, marking its emergence as a spacefaring naval power capable of building and maintaining its own capital vessels.</p><p>The Athena carried an unconventional profile among both Periphery and Inner Sphere fleets, distinguished from contemporary WarShips by several design choices that reflected the Magistracy's independent engineering traditions rather than adherence to mainstream naval architecture. Despite these eccentricities, the class earned a reputation as a capable and durable cruiser well-suited to flagship duty, and service aboard an Athena was considered a prestigious assignment within the Canopian navy.</p>
 </overview>
 
+<deployment>
+<p>The MCS Athena, first of her class, launched in 2569 and served as the cornerstone of the Canopian fleet during the critical years surrounding the Reunification War. As the first WarShip constructed entirely within the Magistracy, the vessel served as both a warfighting asset and a potent symbol of Canopian sovereignty during the turbulent years that followed.</p><p>The second vessel of the class, MCS Kossandra Centrella, bore the name of the founding Magestrix of the Magistracy, emphasizing the political importance attached to the Athena program. Following the completion of the Diamond Garter Fleet Yards in 2725, a newly constructed vessel was also christened MCS Kossandra Centrella, continuing the tradition of honoring the Magistracy's most revered historical figure. This vessel served as the flagship for the ranking officer of the Canopian navy, a prestigious assignment that reflected the high regard in which the class was held throughout the Magistracy's military establishment.</p>
+</deployment>
+
 <history>
-The Athena-class cruiser originated from the Terran Alliance's fear of separatists establishing their own colonies or engaging in nuclear terrorism. James McKenna discovered the dormant plans for the Athena during his time at Annapolis Academy and developed an infatuation with the concept. As other interstellar powers began developing armed JumpShips, the Hegemony revised the Athena's blueprints, leading to the creation of the Aegis-class. The original Athena concept remained a footnote until the Magistracy of Canopus implemented a more faithful version, aligning closely with the original blueprints and incorporating local component availability. The Athenas served as flagships, offering spacious quarters and gravity decks for personnel and passengers.
+<p>The conceptual origins of the Athena-class reached back to the 2170s, when the Terran Alliance government commissioned naval studies to address the threat of separatist colonization and potential nuclear terrorism in the newly accessible interstellar frontier. Defense industries across Terra's leading nation-states developed their designs through simulations and theoretical analysis rather than operational precedent, producing a concept that envisioned a vessel capable of supporting planetary invasion operations and conducting space-to-space engagements with emphasis on sustained bombardment capability. The design never entered Alliance service, but its blueprints survived in the archives of Annapolis Academy, where James McKenna later discovered them and incorporated their core principles into his own naval development programs for the nascent Terran Hegemony.</p><p>The Hegemony drew upon the Athena concept to develop a modernized heavy cruiser that became one of the most prolific WarShip designs in human history. The original blueprints, however, remained available to those willing to pursue a more faithful implementation. In the twenty-sixth century, the Magistracy of Canopus established the Athena Corporation as a dedicated think tank and engineering enterprise, constructing facilities on Harminous in partnership with Carmen Shipwrights to design and build the first purely Canopian WarShip. Working from the ancient Alliance specifications, the Corporation produced a vessel that retained archaic features absent from contemporary designs, adapting the concept only where local component availability demanded substitution. Two vessels were completed before the Reunification War, giving the Magistracy a modest but symbolically important capital ship capability.</p><p>The Reunification War proved catastrophic for the Athena program. The shipyards at Harminous were crippled during the conflict, eliminating the Magistracy's capacity to construct additional vessels or perform major refits for generations. The surviving vessels served as irreplaceable pillars of the Canopian fleet without replacement or expansion for over a century and a half. The completion of the Diamond Garter Fleet Yards in 2725 finally restored Canopian shipbuilding capacity, and a new vessel of the class was launched shortly thereafter, the first Athena constructed since before the Reunification War. The Canopian fleet roster continued to list the class as operational into the late twenty-eighth century, proof of the design's inherent durability and the Magistracy's unwavering commitment to maintaining its limited but cherished naval assets across centuries of service.</p>
 </history>
 
 <manufacturer>
@@ -282,9 +281,19 @@ Harminous
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Cruiser

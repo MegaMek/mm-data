@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cb55-7c7c-bc98-6ab8f4b4c2be
+generator:MegaMek Suite 0.51.01 on 2026-07-20
 chassis:Turkina
 model:D
 mul id:3329
 
-Config:Biped Omnimech
-TechBase:Clan
-Era:3061
+Config:Biped OmniMek
+techbase:Clan
+era:3061
 source:TR:CI
-Rules Level:2
+published:RS:CI
+rules level:2
 role:Juggernaut
 
 quirk:easy_pilot
 
+mass:95
+engine:285 XL (Clan) Engine
+structure:Clan Standard
+myomer:Standard
 
-Mass:95
-Engine:285 XL (Clan) Engine(IS)
-Structure:IS Standard
-Myomer:Standard
+heat sinks:17 Clan Double
+base chassis heat sinks:11
+walk mp:3
+jump mp:3
 
-Heat Sinks:17 Double
-Base Chassis Heat Sinks:11
-Walk MP:3
-Jump MP:3
-
-Armor:Standard(Clan)
-LA Armor:32
-RA Armor:32
-LT Armor:30
-RT Armor:30
-CT Armor:45
-HD Armor:9
-LL Armor:40
-RL Armor:40
-RTL Armor:10
-RTR Armor:10
-RTC Armor:10
+armor:Standard(Clan)
+LA armor:32
+RA armor:32
+LT armor:30
+RT armor:30
+CT armor:45
+HD armor:9
+LL armor:40
+RL armor:40
+RTL armor:10
+RTR armor:10
+RTC armor:10
 
 Weapons:6
 ATM 12, Left Arm
@@ -63,30 +65,30 @@ ER Medium Laser, Head
 Left Arm:
 Shoulder
 Upper Arm Actuator
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
-CLATM12 (omnipod)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
+CLATM12 (OMNIPOD)
 
 Left Torso:
 Fusion Engine
@@ -96,11 +98,11 @@ CLDoubleHeatSink
 CLDoubleHeatSink
 CLDoubleHeatSink
 Jump Jet
-Clan Ammo ATM-12 (omnipod)
-Clan Ammo ATM-12 (omnipod)
-Clan Ammo ATM-12 ER (omnipod)
-Clan Ammo ATM-12 ER (omnipod)
-Clan Ammo ATM-12 HE (omnipod)
+Clan Ammo ATM-12 (OMNIPOD)
+Clan Ammo ATM-12 (OMNIPOD)
+Clan Ammo ATM-12 ER (OMNIPOD)
+Clan Ammo ATM-12 ER (OMNIPOD)
+Clan Ammo ATM-12 HE (OMNIPOD)
 
 Right Torso:
 Fusion Engine
@@ -110,11 +112,11 @@ CLDoubleHeatSink
 CLDoubleHeatSink
 CLDoubleHeatSink
 Jump Jet
-Clan Ammo ATM-12 (omnipod)
-Clan Ammo ATM-12 (omnipod)
-Clan Ammo ATM-12 ER (omnipod)
-Clan Ammo ATM-12 HE (omnipod)
-Clan Ammo ATM-12 HE (omnipod)
+Clan Ammo ATM-12 (OMNIPOD)
+Clan Ammo ATM-12 (OMNIPOD)
+Clan Ammo ATM-12 ER (OMNIPOD)
+Clan Ammo ATM-12 HE (OMNIPOD)
+Clan Ammo ATM-12 HE (OMNIPOD)
 
 Center Torso:
 Fusion Engine
@@ -128,13 +130,13 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 Jump Jet
-CLERMediumLaser (omnipod)
+CLERMediumLaser (OMNIPOD)
 
 Head:
 Life Support
 Sensors
 Cockpit
-CLERMediumLaser (omnipod)
+CLERMediumLaser (OMNIPOD)
 Sensors
 Life Support
 -Empty-
@@ -149,8 +151,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-CLDoubleHeatSink (omnipod)
-CLDoubleHeatSink (omnipod)
+CLDoubleHeatSink (OMNIPOD)
+CLDoubleHeatSink (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -163,8 +165,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-CLDoubleHeatSink (omnipod)
-CLDoubleHeatSink (omnipod)
+CLDoubleHeatSink (OMNIPOD)
+CLDoubleHeatSink (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -172,15 +174,29 @@ CLDoubleHeatSink (omnipod)
 -Empty-
 -Empty-
 
-overview:The Turkina is a powerful OmniMech that was first seen in the Turkina Keshik at the Battle of Tukayyid, and entered general service with Clan Jade Falcon following the end of the Refusal War. In a design oddity, the Turkina mounts enough jump jets to vault 90 meters hardwired onto the frame, rather than using them in modular pods. While this simplified repair, it also uses tonnage that could be devoted to other systems when a mission does not call for jumping. Designers also included fifteen double heat sinks, four more than could be fit into the engine, so they are fixed in the torso. The Turkina has 42 tons available for modular pods.
+overview:<p>The Turkina is a 95-ton Clan assault OmniMech introduced in 3052 by Clan Jade Falcon, named for the legendary jade falcon that inspired the Clan's founders. First deployed by the Turkina Keshik during the Battle of Tukayyid, the design entered general service following the conclusion of the Refusal War. Built to fill the heavy assault role, the Turkina quickly established itself as the Jade Falcons' principal assault OmniMech, occupying the same niche as the Dire Wolf but largely superseding that design within the Falcon touman. Manufactured at Complex Beta on Ironhold and Olivetti Weaponry on Sudeten, the Turkina was initially a closely guarded Jade Falcon asset, though slow dissemination through trade, conquest, and Trials of Possession has spread the design to several other Clans including the Cloud Cobras, Coyotes, Fire Mandrills, and Nova Cats. The chassis carries the notable design quirk of being exceptionally easy to pilot for its considerable mass.</p>
 
-capabilities:This variant uses two pairs of ATM 12s. Ten tons of ammunition allow it to make use of the flexibility of Advanced Tactical Missile technology. A pair of ER Medium Lasers provide backup.
+capabilities:<p>In an unusual design decision, the Turkina mounts six integral jump jets hardwired to the chassis frame rather than utilizing modular pod space for this capability. This allows the 95-ton assault 'Mech to vault up to ninety meters at a bound, offsetting the poor ground maneuverability inherent in its wide, squat design profile. While this consumes tonnage that could otherwise be devoted to weapons when jump capability is unnecessary, the standardization simplified field logistics across the Jade Falcon touman at a time when Clan resources were stretched thin following the invasion of the Inner Sphere.</p><p>Built with a standard internal structure and standard armor to maximize available pod space, the Turkina carries a generous forty-two tons of modular payload capacity. Fifteen double heat sinks (four more than the 285-rated extralight engine can accommodate internally) are fixed in the torso sections, providing a substantial heat management baseline for any configuration. The Prime configuration exemplifies the design's versatility, pairing extended-range PPCs and LB 5-X autocannons with LRM-15 launchers for effective engagement across all combat ranges. The Turkina's massive armor coverage allows it to absorb punishment that would cripple lighter designs, while its varied configurations reflect roles ranging from long-range fire support and urban combat to ammunition-independent energy warfare. This combination of resilience, flexibility, and integral jump capability gives the Turkina a significant tactical advantage over competing assault OmniMechs such as the Shrike.</p>
 
-history:The Turkina is named after Turkina, the first Jade Falcon to be tamed, who inspired the leaders of Clan Jade Falcon in its early days. The name of the Turkina Keshik is also derived from this bird.
-manufacturer:Complex Beta, Olivetti Weapons
-primaryfactory:Ironhold, Sudeten
-systemmanufacturer:CHASSIS:JF Standard
-systemmanufacturer:ENGINE:285 JF Extralight
-systemmanufacturer:ARMOR:JF Standard
-systemmanufacturer:COMMUNICATIONS:JF Integrated
-systemmanufacturer:TARGETING:Series JFIX/Olivetti Pinpoint Advanced
+deployment:<p>Alternate Configuration D leverages the flexibility of advanced tactical missile technology by mounting four ATM-12 launchers fed by ten tons of ammunition. This allows the MechWarrior to select between high-explosive, standard, and extended-range munitions as tactical conditions demand, making the D configuration effective across all engagement ranges. A pair of extended-range medium lasers provides backup firepower, and two additional heat sinks manage the thermal load.</p>
+
+history:<p>Named for the first jade falcon tamed by Elizabeth Hazen, the founder of Clan Jade Falcon, the Turkina carries deep symbolic weight within the Clan. The design first saw limited service during the Battle of Tukayyid in 3052, where elements of the Turkina Keshik fielded the chassis against the Com Guard defenders. Following the conclusion of the Refusal War, the Turkina entered full production at two facilities, Complex Beta on Ironhold in the Clan Homeworlds and Olivetti Weaponry on Sudeten in the Inner Sphere Occupation Zone.</p><p>The Jade Falcons initially attempted to maintain exclusive control over Turkina production and deployment, but the demands of inter-Clan politics gradually eroded this monopoly. Clan Smoke Jaguar acquired a handful of the OmniMechs, which passed to the Star League Defense Force and subsequently the Nova Cats following the destruction of the Jaguar Clan. Other Clans including the Cloud Cobras, Coyotes, and Fire Mandrills obtained Turkinas through trade with the Falcons or seized them as spoils of war during the escalating Homeworld conflicts. A notable cultural division emerged between the two production lines, with a prejudice arising among Falcon trueborns against Sudeten-built models, which they considered inferior to Ironhold-manufactured chassis despite the two being functionally identical.</p><p>The Jihad and Wars of Reaving struck devastating blows to Turkina production. The loss of Ironhold eliminated Complex Beta entirely, while damage to Olivetti Weaponry's Sudeten facilities temporarily halted production there as well. The resulting manufacturing lull reduced the Turkina's numbers sufficiently for the similarly massed Shrike to gain popularity within the Falcon touman. Following Galaxy Commander Malvina Hazen's conquest of Skye in 3134, the Shrike became the de facto symbol of her brutal, total-warfare philosophy, while the Turkina remained a shining emblem of Khan Jana Pryde's traditionalist faction until her death in 3136.</p><p>With the eventual rebuilding of the Sudeten facility, Turkina production resumed in the Dark Age era. However, pilots in pro-Malvina Clusters who field the Turkina continue to suffer from the political stigma associated with the design's traditionalist symbolism, a reflection of how deeply the rivalry between Falcon factions has been woven into the identity of their assault OmniMechs.</p>
+
+manufacturer:Complex Beta|Olivetti Weaponry
+
+primaryfactory:Ironhold|Sudeten
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:JF Standard
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:285 JF Extralight
+systemmanufacturer:ARMOR:Olivetti Weaponry
+systemmode:ARMOR:JF Standard
+systemmanufacturer:JUMP_JET:Unknown
+systemmode:JUMP_JET:JF Standard
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmode:COMMUNICATIONS:JF Integrated
+systemmanufacturer:TARGETING:Unknown, Olivetti
+systemmode:TARGETING:Series JFIX, Olivetti Pinpoint Advanced

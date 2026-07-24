@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Maritgues
-sucsId: 1612
+sucsId: 1613
 xcood: -95.919
 ycood: -213.338
 spectralType: M3V
@@ -52,6 +52,12 @@ planet:
       - name: New Fārsān
       - name: Spears
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2745-06-22'
         faction:
           source: canon
@@ -62,6 +68,15 @@ planet:
         socioIndustrial: C-D-A-D-B
       - date: '2750-01-01'
         population: 121300.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Federation of Oriente
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 630346.0
       - date: '2770-04-20'
@@ -118,6 +133,9 @@ planet:
         population: 375204540.0
       - date: '3020-01-01'
         population: 379796916.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Oriente
       - date: '3030-01-01'
         population: 383439193.0
       - date: '3040-01-01'
@@ -135,8 +153,20 @@ planet:
           source: canon
           value:
             - DO
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 391317543.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DO
       - date: '3086-09-03'
         faction:
           source: canon
@@ -144,6 +174,12 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 397390475.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - OP
       - date: '3100-01-01'
         population: 402993068.0
       - date: '3110-01-01'
@@ -159,9 +195,13 @@ planet:
         population: 424672957.0
       - date: '3145-01-01'
         population: 426801639.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Oriente Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Carldwen

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Able's Glory
-sucsId: 3126
+sucsId: 3089
 xcood: -539.23
 ycood: 124.7
 spectralType: F5V
@@ -98,6 +98,12 @@ planet:
       - name: New Nashwauk
       - name: Peva
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '3130-12-03'
         faction:
           source: canon
@@ -105,15 +111,22 @@ planet:
             - RIM
         population: 50000.0
         socioIndustrial: D-D-A-D-C
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RIM
       - date: '3140-01-01'
         population: 119346.0
       - date: '3143-01-22'
         hpg: X
       - date: '3145-01-01'
         population: 131568.0
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - TiC
   - name: Canto's Glory

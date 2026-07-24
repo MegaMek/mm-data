@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,54 +15,54 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c9b2-7eb1-8482-79470382749a
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Devastator
 model:DVS-1D
 mul id:893
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3036
-Source:TR:3058U
-Rules Level:1
+techbase:Inner Sphere
+era:3036
+source:TR:3058U,TR:SW
+published:RS:SW
+rules level:1
 role:Juggernaut
 
-
-
-quirk:hyper_actuator
 quirk:searchlight
+quirk:hyper_actuator
 
+mass:100
+engine:300 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:100
-Engine:300 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:15 Single
+walk mp:3
+jump mp:0
 
-Heat Sinks:15 Single
-Walk MP:3
-Jump MP:0
-
-Armor:Standard((Unknown Technology Base))
-LA Armor:32
-RA Armor:32
-LT Armor:30
-RT Armor:30
-CT Armor:47
-HD Armor:9
-LL Armor:39
-RL Armor:39
-RTL Armor:9
-RTR Armor:9
-RTC Armor:12
+armor:Standard(Inner Sphere)
+LA armor:32
+RA armor:32
+LT armor:30
+RT armor:30
+CT armor:47
+HD armor:9
+LL armor:39
+RL armor:39
+RTL armor:9
+RTR armor:9
+RTC armor:12
 
 Weapons:8
+AC/10, Left Arm
+AC/10, Right Arm
 Large Laser, Left Torso
-Large Laser, Right Torso
-Medium Laser, Head
-Medium Laser, Center Torso
 Medium Laser, Left Torso
+Large Laser, Right Torso
 Medium Laser, Right Torso
-Autocannon/10, Left Arm
-Autocannon/10, Right Arm
+Medium Laser, Center Torso
+Medium Laser, Head
 
 Left Arm:
 Shoulder
@@ -176,18 +176,27 @@ Heat Sink
 -Empty-
 -Empty-
 
-overview:Designed by General Kerensky himself right before the start of the Amaris Civil War, development of the Devastator ended abruptly when Stefan the Usurper took control of the Terran Hegemony.
+overview:<p>The Devastator was designed by General Aleksandr Kerensky himself to correct perceived flaws in the prototype Titan assault 'Mech. Development halted abruptly when Stefan Amaris seized control of the Terran Hegemony, and resources were redirected to the war effort. The design team remained so dedicated that when Kerensky launched the invasion of Terra, they delivered six prototypes at their own expense for evaluation. None of the Devastator's combat records from that conflict survived, leaving the design lost to the Inner Sphere for over two centuries.</p><p>In 3023, Federated Suns troops discovered the original blueprints in a Star League-era facility on Hoff, sparking a decades-long effort to resurrect the design. A low-tech version entered limited production in the mid-3030s, but it was not until 3048 that Norse-Storm BattleMechs produced a fully realized version incorporating the intended Star League technologies. The Devastator has since earned a fearsome reputation as one of the most devastating long-range assault platforms in service, with production eventually expanding to multiple manufacturers across the Federated Suns and Lyran state.</p>
 
-capabilities:In order to overcome its poor speed, long-range power was designed. Although the Devastator is capable of holding its own in close quarters battle, its capacity to control heat is its most striking trait. Pilots are able to move with the utmost speed and fire all of the heavy weaponry without fear thanks to fourteen double heat sinks. A Devastator pilot just needs to slightly scale back his movements to prevent the design from overheating, even when doused in inferno gel or subjected to several engine strikes.
+capabilities:<p>Designed for long-range dominance to compensate for its slow speed, the Devastator mounts two Poland Main Model A Gauss rifles as its primary armament, supplemented by a pair of Donal particle projection cannons in the torsos. This combination delivers punishing firepower at extended ranges, allowing the Devastator to engage and destroy targets well before they can close to effective distance. Conventional wisdom would dictate placing the main guns in the more protected torso locations, but Norse-Storm deliberately mounted the Gauss rifles in the arms. Should a lucky hit cause a rifle to explode, the resulting detonation would not threaten the vulnerable extra-light engine housed in the torso, extending the 'Mech's life expectancy in sustained combat.</p><p>Four Intek medium lasers provide close-range defense, with one rear-mounted in the center torso to discourage infantry from approaching the 'Mech's blind spot. The Devastator's heat management is among its most impressive features. Fourteen double heat sinks allow the pilot to move at maximum speed while firing all primary weapons without concern for overheating. Even when doused in inferno gel or suffering multiple engine hits, the pilot need only marginally reduce fire to maintain operational temperatures. Eighteen and a half tons of Durallex Heavy armor provide excellent protection, though the extra-light engine remains a critical vulnerability should torso armor be breached.</p>
 
-deployment:The low-tech version of the Devastator introduced in 3036, the 1D used a standard engine, so components had to be downgraded. The Gauss Rifles became Autocannon/10s and the PPCs were replaced with Large Lasers. One ton of armor was removed, while fifteen single heat sinks strained to keep the 'Mech's heat under control. The vast majority of these that were produced were upgraded by the late 3060s, leaving most 1Ds in the hands of the Taurian Concordat.
+deployment:<p>This variant represents the first attempt to recreate the Devastator using technology available in the mid-3030s. Lacking access to advanced components such as double heat sinks and Gauss rifles, the design substitutes autocannon/10s for the Gauss rifles and large lasers for the particle projection cannons. A standard fusion engine replaces the extra-light powerplant, and fifteen single heat sinks struggle to manage the 'Mech's heat output. Half a ton of armor was sacrificed to accommodate additional cooling capacity. Only a few dozen DVS-1Ds were produced before the DVS-2 entered service, and a subsequent recall attempted to upgrade existing machines to the full specification. By the late 3060s, the vast majority had been upgraded, with most remaining DVS-1Ds finding their way into the hands of the Taurian Concordat. It is estimated that only several dozen still exist in their original low-tech configuration.</p>
 
-history:Although funds were diverted to the war effort, the design team remained so committed to the project that, just before General Kerensky launched the invasion of Terra, they submitted six prototypes for testing, with team expenses covered out of pocket. As no battle logs for the Devastator have ever been discovered, historians are unable to assess how one of the final original Star League Defense Force designs performed or even if any of the prototypes survived. The blueprints were recovered in 3023 on Hoff by a team looking into a recently found Star League facility, but the first engineers to look at the blueprints were unable to replicate any of the new technology that went into the original. The NAIS didn't build a Devastator prototype utilizing available technologies until 3033. A few years later, moderate production started, and until early 3048, when the Federated Commonwealth was able to start producing a fully equipped version, the low tech DVS-1D was given to elite units.
+history:<p>The Devastator's origins trace to the final years of the Star League, when General Aleksandr Kerensky personally drafted specifications for a new hundred-ton assault 'Mech to address shortcomings he perceived in the prototype Titan. When Stefan Amaris seized the Terran Hegemony, development stalled as resources were consumed by the war effort. The design team persevered, however, and when Kerensky launched the invasion of Terra in 2777, they delivered six prototypes funded from their own pockets. Only one engagement is recorded in surviving documents, a battle on the Alberta plains where the prototypes acquitted themselves well, but no comprehensive combat records survived the fall of the Star League.</p><p>The Devastator remained lost to the Inner Sphere for over two centuries until 3023, when Federated Suns troops uncovered the original blueprints in a Star League facility on Hoff. Initial attempts to reproduce the design proved impossible given the degraded state of Inner Sphere technology. The NAIS constructed a low-tech prototype in 3033, resulting in the downgraded DVS-1D that entered moderate production a few years later. This stopgap variant served until 3048, when Norse-Storm BattleMechs on Loxley began producing the fully realized DVS-2 incorporating the intended Star League technologies. The design was distributed primarily to elite Federated Commonwealth units during the early years of production.</p><p>The Devastator saw extensive service during the Clan Invasion and subsequent conflicts, its long-range firepower proving particularly effective against Clan opponents. Many commanders adopted it as a personal bodyguard 'Mech, using batteries of PPCs and Gauss rifles to deter headhunter teams. When the Lyran Alliance seceded in 3057, Archon Katherine stopped all Devastator shipments to the Federated Suns until 3061, when deliveries resumed to loyalist units. The design saw heavy combat throughout the FedCom Civil War, with Norse-Storm's Loxley facility untouched during the fighting and maintaining maximum output to meet the Archon's demands.</p><p>In the immediate aftermath of the Civil War, Archon Peter Steiner-Davion placed a massive order for BattleMechs from Norse-Storm. Unlike the Thunder Hawk, the Devastator was cleared for export, and the Armed Forces of the Federated Suns purchased significant numbers to replace assault 'Mechs lost in the fighting. During the Jihad, Norse-Storm became one of the most critical BattleMech industries in the Lyran Alliance, as many competing factories fell under Word of Blake occupation. Corean Enterprises on Augusta later joined production, eventually developing the DVS-10 and DVS-11 variants for Dark Age and ilClan-era service.</p><p>Separately from the Inner Sphere's rediscovery, Clan technicians hand-built several Devastators before Operation Klondike using the best available technology. These Early Clan variants were later overhauled with enhanced weapons systems. In a notable legal episode, General Motors attempted to claim ownership of the Devastator design and extract royalties from Norse-Storm. Both Lyran and Federated courts ruled the design had entered the public domain, clearing the way for its widespread production across multiple manufacturers.</p>
 
-manufacturer:Norse-Storm BattleMechs, Inc.
-primaryfactory:Loxley
-systemmanufacturer:CHASSIS:Star League XT
-systemmanufacturer:ENGINE:Vlar 300
-systemmanufacturer:ARMOR:Durallex Heavy
-systemmanufacturer:COMMUNICATIONS:Johnston Wide Band
-systemmanufacturer:TARGETING:Randar Pinpoint-HY
+manufacturer:NAIS
+
+primaryfactory:New Avalon
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Star League
+systemmode:CHASSIS:XT
+systemmanufacturer:ENGINE:Vlar
+systemmode:ENGINE:300
+systemmanufacturer:ARMOR:Durallex
+systemmode:ARMOR:Heavy
+systemmanufacturer:COMMUNICATIONS:Johnston
+systemmode:COMMUNICATIONS:Wide Band
+systemmanufacturer:TARGETING:Randar
+systemmode:TARGETING:Pinpoint-HY

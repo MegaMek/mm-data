@@ -1,0 +1,47 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# Clan Goliath Scorpion's exile state: the Escorpion Imperio (start date is a guess
+# based on conquest beginning late January 3080) and its expansion into the Scorpion
+# Empire after the Hanseatic Crusade.
+
+alliances:
+  - name: Escorpión Imperio
+    start: 3080-04-01
+    parties:
+      - factions: [CGS, NC, UC]
+  - name: Scorpion Empire
+    start: 3141-03-03
+    parties:
+      - factions: [CGS, NC, UC, HL]
+containedFactions:
+  - host: CEI
+    contained: CGS
+    start: 3080-01-01
+    fraction: 1.0
+  - host: CEI
+    contained: NC
+    start: 3080-01-01
+    fraction: 0.3
+  - host: CEI
+    contained: UC
+    start: 3080-01-01
+    fraction: 0.3
+  - host: CEI
+    contained: HL
+    start: 3141-01-01
+    fraction: 0.5

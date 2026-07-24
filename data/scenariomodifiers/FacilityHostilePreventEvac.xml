@@ -1,5 +1,5 @@
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -49,8 +49,12 @@
         <useArtillery>false</useArtillery>
         <roleChoices>
             <forceRole>CIVILIAN</forceRole>
-            <forceRole>CARGO</forceRole>
             <forceRole>SUPPORT</forceRole>
+            <forceRole>SUPPORT</forceRole>
+            <forceRole>CARGO</forceRole>
+            <forceRole>CARGO</forceRole>
+            <forceRole>CARGO</forceRole>
+            <forceRole>APC</forceRole>
             <forceRole>APC</forceRole>
         </roleChoices>
     </forceDefinition>
@@ -66,11 +70,6 @@
                     <effectScaling>Fixed</effectScaling>
                     <howMuch>1</howMuch>
                 </successEffect>
-                <failureEffect>
-                    <effectType>FacilityRemoved</effectType>
-                    <effectScaling>Fixed</effectScaling>
-                    <howMuch>1</howMuch>
-                </failureEffect>
             </successEffects>
             <failureEffects>
                 <failureEffect>
@@ -78,15 +77,10 @@
                     <effectScaling>Fixed</effectScaling>
                     <howMuch>1</howMuch>
                 </failureEffect>
-                <failureEffect>
-                    <effectType>FacilityRemoved</effectType>
-                    <effectScaling>Fixed</effectScaling>
-                    <howMuch>1</howMuch>
-                </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Prevent 75% the following enemy unit(s) and force(s) from escaping:</description>
-            <destinationEdge>NONE</destinationEdge>
+            <description>Prevent 75% the following enemy unit(s) and force(s) from escaping. +1 SVP if succeeded, -1 SVP if failed:</description>
+            <destinationEdge>SOUTH</destinationEdge>
             <objectiveCriterion>PreventReachMapEdge</objectiveCriterion>
             <percentage>75</percentage>
             <timeLimitAtMost>false</timeLimitAtMost>

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ballalaba
-sucsId: 2861
+sucsId: 2862
 xcood: -401.666
 ycood: -352.79
 spectralType: F4V
@@ -93,6 +93,12 @@ planet:
       - name: Crocker
         capital: New Folker
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2900-12-27'
         faction:
           source: canon
@@ -130,6 +136,12 @@ planet:
         population: 9149525.0
       - date: '3020-01-01'
         population: 9297441.0
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
       - date: '3030-01-01'
         population: 9332103.0
       - date: '3040-01-01'
@@ -165,10 +177,18 @@ planet:
           source: canon
           value:
             - MOC
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
+            - MOC
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
             - MOC
   - name: Baba Yaga Belt
     type: ASTEROID_BELT

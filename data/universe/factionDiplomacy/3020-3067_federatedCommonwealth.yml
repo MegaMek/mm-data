@@ -1,0 +1,41 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# FedCom-era standing relationships: the alliance of the two realms, the brief
+# Tikonov Free Republic alignment, and the member states contained within the
+# combined Federated Commonwealth.
+
+alliances:
+  - start: 3020-01-01
+    end: 3057-12-31
+    parties:
+      - factions: [FS, LA, FC]
+  - start: 3029-03-03
+    end: 3031-09-01
+    parties:
+      - factions: [FS, FC, LA, TFR]
+containedFactions:
+  - host: FC
+    contained: FS
+    start: 3028-08-20
+    end: 3067-04-16
+    fraction: 0.5
+  - host: FC
+    contained: LA
+    start: 3028-08-20
+    end: 3067-04-16
+    fraction: 0.5

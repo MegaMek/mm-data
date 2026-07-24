@@ -17,6 +17,12 @@
 
 key: CGB
 name: Clan Ghost Bear
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CGB
+  - GBD
 nameChanges:
   3060: Ghost Bear Dominion
 capital: Arcadia (Clan)
@@ -102,3 +108,5 @@ factionLeaders:
     surname: "Bekker"
     gender: "FEMALE"
     startYear: 3126
+usesMercenaries:
+  2500: false

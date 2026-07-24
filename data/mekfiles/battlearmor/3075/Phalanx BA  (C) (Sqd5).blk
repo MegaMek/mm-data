@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a44a-74c2-9d56-dcdf03a2a8ca
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -40,38 +36,9 @@ Phalanx Battle Armor
 8657
 </mul id:>
 
-<chassis>
-biped
-</chassis>
-
-<weightclass>
-3
-</weightclass>
-
-<Trooper Count>
-5
-</Trooper Count>
-
-<cruiseMP>
-2
-</cruiseMP>
-
-<Armor>
-7
-</Armor>
-
-<Squad Equipment>
-ISBAHeavyMortar:Body
-ISBAMagshotGR:RA
-BABattleClaw:LA
-BAArmoredGlove:RA
-InfantryAssaultRifle:RA:APM
-IS BA Stealth (Improved):Body
-IS BA Stealth (Improved):Body
-IS BA Stealth (Improved):LA
-IS BA Stealth (Improved):LA
-IS BA Stealth (Improved):LA
-</Squad Equipment>
+<year>
+3071
+</year>
 
 <type>
 IS Level 2
@@ -81,17 +48,13 @@ IS Level 2
 Ambusher
 </role>
 
-<year>
-3071
-</year>
-
 <motion_type>
 Leg
 </motion_type>
 
-<source>
-TR:3075
-</source>
+<cruiseMP>
+2
+</cruiseMP>
 
 <armor_type>
 33
@@ -101,35 +64,95 @@ TR:3075
 3
 </armor_tech>
 
-<overview>
-The Phalanx is a battle armor design created and produced by Irian Technologies in the Free Worlds League. This design is the FWLM's answer to larger, harder-hitting battle armor such as the Kanazuchi and Gnome.
-</overview>
+<Squad Equipment>
+CLBAHeavyMortar:Body
+ISBAMagshotGaussRifle:RA
+BABattleClaw:LA
+BAArmoredGlove:RA
+InfantryAssaultRifle:APM:RA
+IS BA Stealth (Improved):Body
+IS BA Stealth (Improved):Body
+IS BA Stealth (Improved):LA
+IS BA Stealth (Improved):LA
+IS BA Stealth (Improved):LA
+</Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
 
 <capabilities>
-The Phalanx has decent speed for heavy battle armor, capable of moving on the ground at a clip up to 22 km/h. It skimps on armor protection, however, as a Large Laser is enough to completely destroy the suit and kill the trooper inside. This armor is, however, improved stealth, which means that the Phalanx is much more difficult to target than most other battle armor.
+<p>The Phalanx C configuration shifts the suit into an indirect fire support role, mounting a heavy mortar alongside a copy of the Magshot gauss rifle. The mortar allows troopers to deliver fire from behind cover and over obstacles, a capability few battle armor designs can match. The Magshot provides direct-fire backup with respectable accuracy at medium range.</p><p>This loadout transforms the suit from a frontline skirmisher into a fire support platform, though the mortar’s minimum range and relatively low rate of fire demand careful positioning. Mobility and defensive characteristics remain unchanged from the base chassis: 22 km/h ground movement, improved stealth armor for reduced sensor visibility, and the standard battle claw and armored glove combination for OmniMech transport and infantry weapon handling. The configuration lacks anti-BattleMech capability, relying instead on standoff distance and its stealth profile for survivability.</p>
 </capabilities>
 
+<overview>
+<p>The Phalanx is a heavy battle armor suit developed by Irian Technologies for the Free Worlds League Military. Entering production in 3065, the design filled a gap in the FWLM’s battle armor roster for a heavier platform capable of delivering sustained ranged firepower. Weighing 1,500 kilograms, the suit trades jump capability for ground speed and mounting flexibility, allowing troopers to ride OmniMechs into combat while retaining the ability to handle infantry-scale weapons. Advanced stealth protection makes the suit considerably harder to detect and engage than most contemporary heavy designs, though this comes at the cost of reduced overall durability.</p>
+</overview>
+
 <deployment>
-The latest variation on the Phalanx to see action, the C has been deployed by the Word of Blake during its Jihad. It has a Heavy Mortar for indirect fire support and a clone of the powerful Magshot Gauss Rifle.
+<p>Five-trooper formations operating the mortar-equipped Phalanx gained additional tactical flexibility through the extra team member, who could serve as a forward observer or security element while the remaining troopers focused on delivering indirect fire. The larger team also improved ammunition management during sustained bombardment operations.</p>
 </deployment>
 
 <history>
-Since the Word helped the FWLM create the Phalanx, they have created their own variant. Though they use the original as well, the Blakist Phalanx carries a 'Mech Taser Rifle instead of the "King David" rifle. The one-shot weapon enables Phalanx troopers to disable a vehicle or 'Mech, though it also suffers feedback and, potentially, an explosion. This version of the Phalanx uses Advanced Technology.
+<p>The Free Worlds League Military began development of a heavy battle armor suit in 3059, seeking a domestic counter to designs like the Kanazuchi and Gnome. Irian Technologies led the effort, but persistent technical failures stalled the program for over two years. Processor malfunctions and myomer musculature breakdowns proved particularly resistant to resolution. The FWLM eventually permitted Word of Blake technical teams to join the project, and the Blakist scientists resolved the remaining issues with striking efficiency.</p><p>Production commenced in 3065 at Irian Technologies’ facilities on Irian, with the Word of Blake receiving purchasing rights as payment for their assistance. Free Worlds Defense Industries on Gibson began manufacturing shortly afterward, producing both the original configuration and a dedicated Blakist variant. During the Jihad, the Word of Blake expanded its use of the suit as a heavy fire support complement to lighter Purifier and Nighthawk designs. Alys Rousset-Marik’s resistance movement also acquired significant numbers of the original configuration, using them to provide fire support against protectorate militias.</p><p>Post-Jihad production continued under new political oversight. A second Irian BattleMechs Unlimited facility on Washburn came online around 3078, and the design remained in active service through the Dark Age. A modernized configuration appeared around 3132, proving popular with garrison and patrol commands across multiple successor states.</p>
 </history>
 
 <manufacturer>
-Free Worlds Defence Industries
+Free Worlds Defence Industries|Irian BattleMechs Unlimited
 </manufacturer>
 
 <primaryFactory>
-Gibson
+Gibson|Washburn
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+7
+</armor>
+
+<Trooper Count>
+5
+</Trooper Count>
+
+<weightclass>
+3
+</weightclass>
+

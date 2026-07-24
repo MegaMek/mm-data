@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c075-7dfb-8809-ba1b69ab90a6
+</UUID>
 
 <UnitType>
 Infantry
@@ -37,13 +32,13 @@ Jump Platoon (Taurian)
 (LRM)
 </Model>
 
+<mul id:>
+9276
+</mul id:>
+
 <year>
 3057
 </year>
-
-<originalBuildYear>
-3057
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -53,14 +48,20 @@ IS Level 2
 Jump
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Every Concordat world maintains infantry formations as the first line of planetary defense, drawn from a population whose fierce independence and hatred of foreign aggression run deep. Jump platoons provide the vertical mobility that Taurian garrison commanders prize for defending the rough terrain and broken ground found on many Concordat border worlds. Their ability to bypass obstacles and seize elevated positions gives them a tactical advantage over standard foot infantry.</p><p>Support troops operate man-portable long-range missile launchers capable of engaging targets at distances well beyond personal weapon range, providing the platoon with indirect fire capability against vehicles and fortified positions.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -83,14 +84,3 @@ InfantryAssaultRifle
 InfantryLRM
 </Secondary>
 
-<antimek>
-6
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
-
-<mul id:>
-9276
-</mul id:>

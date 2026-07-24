@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,27 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-abe9-7289-b1a5-f3a09fee6da4
+</UUID>
 
 <UnitType>
 Dropship
 </UnitType>
 
 <Name>
-Aesir Assault Dropship
+Aesir Assault DropShip
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 3676
@@ -44,10 +39,6 @@ Aesir Assault Dropship
 <year>
 3077
 </year>
-
-<originalBuildYear>
-3077
-</originalBuildYear>
 
 <type>
 Clan Level 3
@@ -62,13 +53,13 @@ Spheroid
 </motion_type>
 
 <transporters>
-asfbay:30.0:5:2
-smallcraftbay:3.0:1:3
-2ndclassquarters:0.0:0
-1stclassquarters:90.0:0
-steeragequarters:125.0:0
-crewquarters:259.0:0
-cargobay:1529.0:2:7
+asfbay:30.0:5:2::-1:0
+smallcraftbay:3.0:1:3::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+1stclassquarters:90.0:0:-1::-1:0
+steeragequarters:125.0:0:-1::-1:0
+crewquarters:259.0:0:-1::-1:0
+cargobay:1529.0:2:7::-1:0
 </transporters>
 
 <SafeThrust>
@@ -91,13 +82,21 @@ cargobay:1529.0:2:7
 1
 </engine_type>
 
+<clan_engine>
+false
+</clan_engine>
+
 <armor_type>
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 6
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 536
@@ -246,6 +245,62 @@ ISSmallNavalCommScannerSuite
 25
 </structural_integrity>
 
+<capabilities>
+<p>The Aesir is an 18,000-ton military spheroid optimized for fighter deployment operations. Its primary combat contribution comes from its extensive aerospace fighter bays, allowing the vessel to serve as a mobile launch platform for strike missions and defensive screens. The hull mounts a comprehensive weapons suite including sub-capital missile launchers, HAG 40 batteries, ATM 12 racks, ER PPCs, and Large Pulse Lasers, providing layered defensive fire while its fighter complement engages hostile vessels. Ninety tons of Ferro-Aluminum armor concentrated on the nose and flanks gives the Aesir substantial survivability against incoming fire, though its aft arc remains comparatively vulnerable. The drive system provides adequate acceleration to maintain formation with most military convoys while retaining enough agility to reposition during fleet actions. As a carrier design, the Aesir deliberately trades direct engagement firepower for force multiplication, relying on its embarked fighter wings to project offensive power at range while the mothership maintains a defensive posture behind its escort screen. Anti-missile systems provide point defense against incoming ordnance.</p>
+</capabilities>
+
+<overview>
+<p>The Aesir is an assault DropShip developed by Clan Ghost Bear during the Jihad as one half of a matched escort pair alongside its sister design, the Vanir. Produced at multiple Clan naval installations, the Aesir entered service in the late 3070s as a dedicated aerospace fighter carrier. Where the Vanir focused on fleet missile defense, the Aesir was designed to project offensive aerospace power, providing combat air patrols and strike capability for convoys and the diminished Ghost Bear WarShip fleet. The class has remained in limited production as a cornerstone of the Rasalhague Dominion's naval doctrine.</p>
+</overview>
+
+<deployment>
+<p>The standard Aesir serves as the primary aerospace fighter carrier for the Ghost Bear touman's naval forces, pairing with the missile defense-oriented Vanir to form a complementary escort package. Together, the two classes provide both offensive aerospace strike capability and defensive missile screening for high-value convoys and surviving WarShip assets.</p>
+</deployment>
+
+<history>
+<p>The Aesir was born from necessity during the Jihad, when Word of Blake space forces inflicted severe losses on Clan Ghost Bear's naval assets. Ghost Bear naval planners recognized that replacing their lost WarShips was impractical in the near term and instead developed the Aesir and Vanir as a cost-effective escort solution that could be produced in greater numbers. The two designs shared common hull elements and systems to simplify logistics, while specializing in complementary roles.</p><p>Production commenced at two shipyards, with Alshain Naval Yards handling the primary production run while Gorton, Kingsley and Thorpe Enterprises on Rasalhague provided additional capacity. The Aesir saw its first combat deployments escorting supply convoys through contested space lanes during the final years of the Jihad, where its fighter wings proved effective at deterring Blakist raiding forces.</p><p>Following the establishment of the Rasalhague Dominion, the Aesir remained in limited production to maintain the Dominion's naval capabilities. The class saw action during the Second Combine-Dominion War beginning in 3100, where its fighter wings provided aerospace superiority during planetary assault operations. While never produced in large numbers, the Aesir has proven a reliable and effective fleet asset, with active examples serving primarily in the Dominion's frontline naval formations.</p>
+</history>
+
+<manufacturer>
+Alshain Naval Yards (Military)|Gorton, Kingsley and Thorpe Enterprises
+</manufacturer>
+
+<primaryFactory>
+Alshain|Rasalhague
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<use>
+Escort Fighter Carrier
+</use>
+
+<length>
+110 meters
+</length>
+
+<width>
+100 meters
+</width>
+
+<height>
+150 meters
+</height>
+
 <source>
 TR:3085
 </source>
@@ -293,48 +348,4 @@ TR:3085
 <escape_pod>
 10
 </escape_pod>
-
-<capabilities>
-The ship was designed to carry ninety tons of Ferro-Aluminum armor to give it a sizable amount of protection from both standard and some capital grade weaponry. As part of its enhanced escort capacities, the ship was equipped with a small Naval Comm-Scanner Suite, which allowed the ship to detect enemy forces better than conventional ships' sensors. The Vanir is designed with a wide array of standard and some sub-capital weaponry.
-</capabilities>
-
-<overview>
-Designed as a Fighter Carrier, the Aesir Assault DropShip was first developed by Clan Ghost Bear during the early years of the Jihad. The ship was designed to serve as an escort vessel for the Clan's Leviathan Class Heavy Battleships.
-</overview>
-
-<history>
-The Clan lost an entire fleet of escort WarShips to Clan Nova Cat when they conducted a Trial of Possession for one of its incomplete Leviathan WarShips in 3067. The Aesir was developed at the same time as its near-sister Class, the Vanir. The ship was first produced from 3077 until 3081 at the Clan's shipyards located at Alshain and Rasalhague. This first production run produced upwards to 5 Stars worth of ships which were employed in the war with Word of Blake. During the liberation of Terra in 3078, Devlin Stone convinced the Bears to "gift" a mixed binary of ships consisting of the Aesir and Vanir designs to Clan Nova Cat for the liberation. These Nova Cats ships were taken from Leviathan Heavy Battleship Great Bear's escort force. The WarShip's loss of its escort force was a suspected reason the ship was destroyed during the liberation. After the Jihad, the ship's productions lines continue produce the ship but in limited numbers.
-</history>
-
-<manufacturer>
-Alshain Naval Yards (Military), Gorton, Kingsley and Thorpe
-</manufacturer>
-
-<primaryFactory>
-Alshain,Rasalhague
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<use>
-Escort Fighter Carrier
-</use>
-
-<length>
-110 meters
-</length>
-
-<width>
-100 meters
-</width>
-
-<height>
-150 meters
-</height>
 

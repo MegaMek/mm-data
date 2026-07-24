@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8cf-7c27-b0c7-b3c22c44e45a
+</UUID>
 
 <UnitType>
 SupportTank
@@ -33,9 +28,9 @@ SupportTank
 HoverPod
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 9221
@@ -44,10 +39,6 @@ HoverPod
 <year>
 2500
 </year>
-
-<originalBuildYear>
-2500
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -62,8 +53,8 @@ Hover
 </motion_type>
 
 <transporters>
-cargobay:0.04:1:1
-standardseats:1.0:0
+cargobay:0.04:1:1::-1:0
+standardseats:1.0:0:-1::-1:0
 </transporters>
 
 <cruiseMP>
@@ -73,6 +64,18 @@ standardseats:1.0:0
 <engine_type>
 11
 </engine_type>
+
+<armor_type>
+43
+</armor_type>
+
+<armor_tech_rating>
+2
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 0
@@ -109,13 +112,33 @@ MonocycleChassisMod
 2
 </engine_tech_rating>
 
-<armor_tech_rating>
-2
-</armor_tech_rating>
+<overview>
+<p>The tiny and relatively slow HoverPod is a very common tool for motorized and mechanized infantry units. These vehicles are very small and can easily be transported by most APCs. They award a high measure of individual mobility to troopers, but are in no way actual combat units, as their use requires a level of dexterity that precludes the deployment of support weaponry.</p>
+</overview>
 
-<history>
-These units have no weights in AToW. The weights are estimates. The units are considered unofficial until weights are given.
-</history>
+<manufacturer>
+Unknown
+</manufacturer>
+
+<primaryFactory>
+Unknown
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 AToW Companion
@@ -128,3 +151,4 @@ AToW Companion
 <fuel>
 0.052
 </fuel>
+

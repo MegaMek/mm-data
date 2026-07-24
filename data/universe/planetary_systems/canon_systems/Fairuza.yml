@@ -1,0 +1,170 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Fairuza
+sucsId: 3122
+xcood: 145.345
+ycood: -485.8
+spectralType: G2V
+planet:
+  - name: Fairuza
+    type: TERRESTRIAL
+    orbitalDist: 0.04
+    sysPos: 1
+    icon: green8
+    pressure: Low
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.77
+    diameter: 13500
+    density: 4
+    dayLength: 23
+    yearLength: 0.3
+    temperature: 31
+    water: 57
+    lifeForm: INSECT
+    smallMoons: 1
+    event:
+      - date: '2900-01-01'
+        population: 50151.0
+        socioIndustrial: B-D-A-D-C
+      - date: '2910-01-01'
+        population: 257235.0
+      - date: '2920-01-01'
+        population: 761241.0
+      - date: '2930-01-01'
+        population: 1555110.0
+      - date: '2940-01-01'
+        population: 2491894.0
+      - date: '2950-01-01'
+        population: 3398191.0
+      - date: '2960-01-01'
+        population: 4168515.0
+      - date: '2970-01-01'
+        population: 4768591.0
+      - date: '2980-01-01'
+        population: 5208658.0
+      - date: '2990-01-01'
+        population: 5566563.0
+      - date: '3000-01-01'
+        population: 3872193.0
+      - date: '3010-01-01'
+        population: 871220.0
+      - date: '3020-01-01'
+        population: 169557.0
+      - date: '3021-01-01'
+        socioIndustrial: B-D-A-C-B
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Fairuza II
+    type: ICE_GIANT
+    orbitalDist: 0.07
+    sysPos: 2
+    icon: iceg11
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.6
+    diameter: 30000
+    density: 1.4
+    dayLength: 13
+    yearLength: 0.3
+    smallMoons: 6
+    satellite:
+      - name: 2-L1
+        size: large
+        icon: rock1
+  - name: Fairuza III
+    type: GAS_GIANT
+    orbitalDist: 0.1
+    sysPos: 3
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.77
+    diameter: 130000
+    density: 1.5
+    dayLength: 9
+    yearLength: 0.3
+    ring: true
+    smallMoons: 17
+    satellite:
+      - name: 3-L1
+        size: large
+        icon: rock1
+      - name: 3-L2
+        size: large
+        icon: rock2
+      - name: 3-L3
+        size: large
+        icon: rock3
+  - name: Fairuza IV
+    type: ASTEROID_BELT
+    orbitalDist: 0.16
+    sysPos: 4
+    icon: asteroid2
+    yearLength: 0.3
+    temperature: -104
+  - name: Fairuza V
+    type: GAS_GIANT
+    orbitalDist: 0.28
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.85
+    diameter: 130000
+    density: 1
+    dayLength: 19
+    yearLength: 0.3
+    ring: true
+    smallMoons: 16
+    satellite:
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-L2
+        size: large
+        icon: rock2
+  - name: Fairuza VI
+    type: GAS_GIANT
+    orbitalDist: 0.52
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.13
+    diameter: 100000
+    density: 1.5
+    dayLength: 20
+    yearLength: 0.5
+    smallMoons: 19
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+primarySlot: 1

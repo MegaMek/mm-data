@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Landfall
-sucsId: 1452
+sucsId: 1453
 xcood: -403.313
 ycood: -201.644
 spectralType: K1V
@@ -66,6 +66,12 @@ planet:
       - name: O4
       - name: O5
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2693-11-01'
         faction:
           source: canon
@@ -91,6 +97,12 @@ planet:
         socioIndustrial: A-D-A-C-A
       - date: '2750-01-01'
         population: 138190854.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 144688696.0
       - date: '2770-01-01'
@@ -177,8 +189,20 @@ planet:
           source: canon
           value:
             - MH
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 129757781.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
       - date: '3090-01-01'
         population: 132061733.0
       - date: '3093-01-01'
@@ -202,9 +226,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Blair

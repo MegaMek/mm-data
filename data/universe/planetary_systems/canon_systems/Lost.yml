@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Lost
-sucsId: 1519
+sucsId: 1520
 xcood: -415.294
 ycood: 252.444
 spectralType: G6V
@@ -84,6 +84,12 @@ planet:
       - name: Old Chipperfield
       - name: Clapham
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2680-03-24'
         faction:
           source: canon
@@ -111,6 +117,15 @@ planet:
         population: 101707761.0
       - date: '2750-01-01'
         population: 106993366.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Finmark Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 109062112.0
       - date: '2770-01-01'
@@ -122,6 +137,16 @@ planet:
             - LA
       - date: '2780-01-01'
         population: 109043809.0
+      - date: '2783-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Coventry Province
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2790-01-01'
         population: 107867161.0
       - date: '2800-01-01'
@@ -183,6 +208,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Periphery March
+        #   - Tsarahavana Operational Area
+        #   - Region 3
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3048-01-01'
         socioIndustrial: C-C-B-C-C
       - date: '3050-01-01'
@@ -192,6 +228,16 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Coventry Province
+        #   - Melissia Theater
       - date: '3060-01-01'
         population: 79937053.0
       - date: '3070-01-01'
@@ -212,10 +258,17 @@ planet:
         population: 82925241.0
       - date: '3132-08-07'
         hpg: X
+      - date: '3135-12-31'
+        # administration:
+        #   - Bucklands Theater
       - date: '3140-01-01'
         population: 82908658.0
       - date: '3145-01-01'
         population: 82858927.0
+      - date: '3152-12-31'
+        # administration:
+        #   - Lost Theater
+        # capitalType: Region Capital
   - name: Blevio
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

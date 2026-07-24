@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>Space Blockade Run</name>
     <shortBriefing>Break enemy blockade, escort DropShip.</shortBriefing>
-    <detailedBriefing><![CDATA[An allied DropShip must bypass an enemy space blockade, and you are its only chance at breaking through. Your mission is to escort the DropShip safely to the far edge of the engagement area, ensuring it can escape enemy interdiction. If a direct escort proves too difficult, an alternative objective is available—destroy at least 50% of the enemy forces to weaken their blockade and force them to disengage.
+    <detailedBriefing><![CDATA[An allied DropShip must bypass an enemy space blockade, and you are its only chance at breaking through. Your mission is to escort the DropShip safely to the far edge of the engagement area, ensuring it can escape enemy interdiction. If a direct escort proves too difficult, an alternative objective is available—destroy at least 33% of the enemy forces to weaken their blockade and force them to disengage.
 
 The enemy will attempt to intercept, disable, or destroy the DropShip before it can escape. Expect interdiction fighters and AeroSpace superiority craft. Protect the DropShip at all costs—keep the enemy occupied, disrupt their formations, and eliminate high-threat targets before they can close in.
 
@@ -28,6 +28,7 @@ The enemy will control the battlefield at the end of the engagement, meaning the
     <battlefieldControl>ENEMY</battlefieldControl>
     <isHostileFacility>false</isHostileFacility>
     <isAlliedFacility>false</isAlliedFacility>
+    <isSuitedForAmbushes>true</isSuitedForAmbushes>
     <mapParameters>
         <allowedTerrainTypes />
         <allowRotation>false</allowRotation>
@@ -200,10 +201,10 @@ The enemy will control the battlefield at the end of the engagement, meaning the
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

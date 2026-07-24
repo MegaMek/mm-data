@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,10 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.49.18-SNAPSHOT on 2024-01-07
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e407-72c4-ba12-eab0502958ee
+</UUID>
 
 <UnitType>
 Tank
@@ -39,10 +39,6 @@ Goblin Infantry Support Vehicle
 <year>
 3053
 </year>
-
-<originalBuildYear>
-3053
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -72,9 +68,13 @@ troopspace:3.0
 1
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 40
@@ -111,40 +111,52 @@ SRM 6
 </Turret Equipment>
 
 <capabilities>
-Goblin Infantry Support Vehicle is designed to provide close-range infantry support. Its primary weapon is a turret-mounted large Sutel pulse laser, which offers accuracy and firepower, making it effective against hostile power-armored troops. The Harpoon-6 missile system and two Johnston Miniguns further enhance its ability to combat conventional infantry. The tank boasts nearly ten tons of Durallex Light ferro-fibrous armor, making it highly durable for its weight class, and it features the MainFire anti-missile system to increase survivability. However, its major weakness lies in the lack of long-range weaponry, limiting its engagement range. Additionally, the Goblin's relatively low speed necessitates coordination with other units to provide the long-range firepower it lacks, making it vulnerable to fast-moving threats in open terrain.
+<p>The Goblin ISV's weapons suite is purpose-built for combined-arms close-range combat. The Sutel Precision Line large pulse laser forms the primary weapon, combining pulse accuracy with energy weapon endurance, and is especially effective against power-armored targets. The Harpoon-6 SRM 6 adds short-range punch capable of threatening BattleMechs and heavy vehicles, while two Johnston Miniguns handle conventional infantry. The MainFire Point-Defense anti-missile system increases survivability against missile-heavy opponents, though its limited ammunition restricts its effectiveness to the first several volleys of an engagement.</p><p>The Fireheart 180 fusion engine enables expansion of the infantry bay to full platoon capacity. Nearly ten tons of Durallex Light ferro-fibrous armor make the Goblin ISV among the most heavily protected vehicles of its weight class, a significant upgrade from the original Goblin's standard protection.</p><p>The design's primary weakness is its lack of long-range firepower. Commanders must pair Goblin ISVs with indirect fire assets to shape engagements before the vehicle can close effectively. The vehicle's modest speed also makes it dependent on other units to control terrain in advance of its approach, and experienced opponents learn to force engagements beyond short range where the ISV cannot contribute fully.</p>
 </capabilities>
 
 <overview>
-The Goblin tank series, originating from an obscure 20th-century concept, features a unique design among Inner Sphere battle tanks, characterized by an onboard infantry support compartment. These versatile vehicles, manufactured by Johnston Industries, found their niche as infantry support platforms. The original Goblin, dating back to the Age of War or early Star League era, laid the foundation for subsequent iterations. Designed to transport and support infantry units, it featured a BlazeFire Systems Large Laser as its primary weapon, delivering close-range firepower without the need for ammunition.
+<p>The Goblin Infantry Support Vehicle is Johnston Industries' comprehensive redesign of the Goblin for the Clan Invasion era. Federated Commonwealth commanders facing power-armored Elemental infantry for the first time found the original Goblin's large laser and conventional infantry bay dangerously inadequate. Johnston redesigned the vehicle from the ground up, replacing the aging ICE powerplant with a fusion engine, upgrading the weapons suite for anti-battle-armor work, and expanding the infantry bay to carry a full platoon.</p><p>The result, entering production in 3053, redefined the Goblin from a medium tank with infantry capacity to a dedicated infantry fighting vehicle. Johnston classified it separately from its predecessor, reflecting the depth of the redesign and the shift in intended role.</p>
 </overview>
 
 <deployment>
-Goblin Infantry Support Vehicle boasts an expanded infantry bay for troop transport and improved anti-armor capabilities with a Large Pulse Laser and SRM 6. Nevertheless, it sacrifices some long-range firepower compared to the original Goblin, faces increased heat load, and slower maneuverability due to added weight.
+<p>The Goblin ISV serves as a primary IFV throughout Federated Suns mechanized infantry formations. It is particularly common in the Ceti Hussar regiments and other AFFS units with strong conventional infantry components. The vehicle is most effective in urban and close terrain, where its short-range weapons profile and platoon-capacity infantry bay enable combined-arms operations. Commanders routinely attach Goblin ISV platoons to infantry-heavy task forces and assault formations expecting close-quarters fighting.</p>
 </deployment>
 
 <history>
-The Goblin Infantry Support Vehicle's history traces its origin to a unique concept from the Succession Wars era. Originally, this vehicle featured an infantry support unit, setting it apart from typical Inner Sphere battle tanks. Johnston Industries took over its production toward the end of the First Succession War.<p>However, the Goblin had limitations, mainly its lack of long-range weaponry and relatively low speed. This made it dependent on coordination with other units for covering fire during advances and vulnerable in open terrain.</p><p>The vehicle's combat debut in 3057 on Hsien showcased its suitability for urban warfare, as it excelled in close-quarters engagements. Throughout the FedCom Civil War, Goblins were commonly deployed, particularly in urban scenarios, highlighting their value.</p><p>In the post-Jihad era, the Goblin evolved to become a true infantry fighting vehicle (IFV). Johnston Industries introduced the Goblin III, featuring a large re-engineered laser and improved mobility. This variant marked a significant advancement in the Goblin's design and production.</p><p>The Goblin's enduring legacy in the Inner Sphere's military history lies in its role as an infantry support vehicle tailored for close-range combat, making it a valuable asset in urban warfare.</p>
+<p>Johnston Industries began redesigning the Goblin shortly after the initial Clan advance, responding to urgent requests from AFFC commanders who had encountered Elemental battle armor for the first time. The new design replaced the aging ICE powerplant with a Fireheart 180 fusion engine, enabling expansion of the infantry bay to full platoon capacity, and replaced the large laser with a pulse laser system and SRM rack better suited to anti-battle-armor work. Production of the Goblin ISV began in 3053, with some prototypes seeing action during the final months of the initial Clan Invasion.</p><p>The Goblin ISV's first major operational test came in 3057 on Hsien in the Sarna March. After Marik forces destroyed the Second Federated Commonwealth RCT's aerospace assets, McCarron's Armored Cavalry dropped onto the planet and assaulted the RCT's ground forces. The Second FedCom RCT's commander committed the Goblin ISV battalion to the battle for Chengde, where close-quarters urban fighting played to the vehicle's strengths. The Goblins inflicted significant losses on the Capellan mercenary forces before attrition reduced the battalion to only seven operational vehicles. The engagement demonstrated both the ISV's combat effectiveness in urban terrain and its vulnerability in sustained attritional fighting without adequate resupply.</p><p>During the FedCom Civil War, Goblin ISVs fought in virtually every major engagement, serving as the backbone of conventional regiments from Federated Suns forces. Heavy urban fighting on Tikograd and New Moskau on Tikonov demonstrated the ISV's suitability for close-quarters combined-arms operations. The battle for New Syrtis brought Goblin ISVs into particularly desperate action, with vehicles rolling directly from Johnston Industries' assembly lines into defensive positions around the capital.</p><p>The Jihad era tested the New Syrtis facility severely. A Capellan counterattack was repelled through the efforts of the Fourth Donegal Guards and Johnston's own security forces, but subsequent Taurian strikes contaminated the production site with radiation. The government declared the facility too hazardous for workers, halting production at the primary line and forcing Johnston to shift manufacturing to its Benet III component factory to maintain continuity. Cleanup efforts continued into the early 3080s. The Goblin ISV nonetheless remained a common vehicle in Federated Suns service throughout this period, with surviving units continuing to operate and field-modified examples supplementing production shortfalls.</p>
 </history>
 
 <manufacturer>
-Johnston Industries, Field Refit
+Johnston Industries
 </manufacturer>
 
 <primaryFactory>
-New Syrtis,Various
+New Syrtis
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:Fireheart 180 Fusion
-ARMOR:Durallex Light Ferro-Fibrous
-COMMUNICATIONS:CommuTech XL
-TARGETING:BlazeFire Tracker with Range Check
+ENGINE:Fireheart
+ARMOR:Durallex
+COMMUNICATIONS:CommuTech
+TARGETING:BlazeFire Systems
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:180
+ARMOR:Light Ferro-Fibrous
+COMMUNICATIONS:XL
+TARGETING:Tracker with Range Check
+</systemModels>
 
 <source>
 TR:3058U
 </source>
+
+<published>
+RS:3058Uu-I
+</published>
 
 <tonnage>
 45.0

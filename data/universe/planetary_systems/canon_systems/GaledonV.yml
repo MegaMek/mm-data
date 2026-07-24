@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Galedon V
-sucsId: 920
+sucsId: 921
 xcood: 331.999
 ycood: 173.891
 spectralType:
@@ -181,6 +181,12 @@ planet:
             - IND
         population: 56109.0
         socioIndustrial: D-D-A-D-B
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2280-01-01'
         population: 248250.0
       - date: '2290-01-01'
@@ -194,11 +200,23 @@ planet:
             - AG
       - date: '2310-01-01'
         population: 6914339.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - AG
       - date: '2319-03-09'
         faction:
           source: canon
           value:
             - DC
+      - date: '2319-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - AG
       - date: '2320-01-01'
         population: 15679368.0
       - date: '2330-01-01'
@@ -210,6 +228,12 @@ planet:
       - date: '2341-09-05'
         faction:
           source: canon
+          value:
+            - DC
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DC
       - date: '2350-01-01'
@@ -260,6 +284,11 @@ planet:
         population: 2360042858.0
       - date: '2570-01-01'
         population: 2419599800.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Galedon Military District
+        #   - New Samarkand Prefecture
+        # capitalType: District Capital
       - date: '2580-01-01'
         population: 2471857035.0
       - date: '2590-01-01'
@@ -390,16 +419,12 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3069-06-28'
+      - date: '3068-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
-            - ABN
-        hpg:
-          source: canon
-          value: X
-        population: 0.0
-        socioIndustrial: X-X-X-X-X
+            - DC
       - date: '3069-04-04'
         faction:
           source: canon
@@ -417,9 +442,20 @@ planet:
           value:
             - DC
             - CSR
-      - date: '3151-01-01'
+      - date: '3069-06-28'
         faction:
-          source: sucs
+          source: canon
+          value:
+            - ABN
+        hpg:
+          source: canon
+          value: X
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: Galedon VI

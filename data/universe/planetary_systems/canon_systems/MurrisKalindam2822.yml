@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Murris (Kalindam 2822+)
-sucsId: 1777
+sucsId: 1778
 xcood: 52.218
 ycood: -379.328
 spectralType: K5V
@@ -61,6 +61,14 @@ planet:
       - name: Korçë
       - name: Tepelenë i Ri
     event:
+      - date: '2108-12-05'
+        name: Murris
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2660-04-30'
         faction:
           source: canon
@@ -92,6 +100,16 @@ planet:
         population: 275494620.0
       - date: '2750-01-01'
         population: 286050430.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 9
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 290142292.0
       - date: '2770-01-01'
@@ -106,6 +124,9 @@ planet:
         population: 283876585.0
       - date: '2820-01-01'
         population: 282822792.0
+      - date: '2822-01-01'
+        name: Kalindam
+        message: Murris renamed to Kalindam
       - date: '2830-01-01'
         population: 167396676.0
       - date: '2840-01-01'
@@ -122,11 +143,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Murris
-      - date: '2822-01-01'
-        name: Kalindam
-        message: Murris renamed to Kalindam
+      - date: '2864-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Mishaxhi's Belt
     type: ASTEROID_BELT
     orbitalDist: 0.49

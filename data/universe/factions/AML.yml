@@ -17,6 +17,11 @@
 
 key: AML
 name: Alyina Mercantile League
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - AML
 capital: Alyina
 yearsActive:
   - start: 3151
@@ -40,3 +45,5 @@ factionLeaders:
     surname: ""
     gender: "FEMALE"
     startYear: 3151
+usesMercenaries:
+  2500: true

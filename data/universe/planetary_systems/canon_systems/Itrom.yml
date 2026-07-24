@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Itrom
-sucsId: 1221
+sucsId: 1222
 xcood: 92.459
 ycood: -442.683
 spectralType:
@@ -131,6 +131,12 @@ planet:
       - name: New Mašťov
       - name: Cerro Azul
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2679-09-10'
         faction:
           source: canon
@@ -158,6 +164,16 @@ planet:
         population: 126590542.0
       - date: '2750-01-01'
         population: 135058069.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 14
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 139518327.0
       - date: '2770-01-01'
@@ -178,6 +194,16 @@ planet:
             - IND
       - date: '2820-01-01'
         population: 140891313.0
+      - date: '2822-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 15
+      - date: '2822-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2830-01-01'
         population: 141023866.0
       - date: '2840-01-01'
@@ -186,6 +212,12 @@ planet:
         socioIndustrial: D-C-B-D-B
       - date: '2850-01-01'
         population: 78785381.0
+      - date: '2864-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2910-01-01'
         faction:
           source: canon
@@ -193,7 +225,7 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
       - date: '3025-05-01'
@@ -207,6 +239,12 @@ planet:
           source: assumption
           value:
             - ARC
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
@@ -218,11 +256,18 @@ planet:
         socioIndustrial:
           source: canon
           value: C-C-B-B-B
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
   - name: Betoafo
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.08

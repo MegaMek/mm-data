@@ -26,19 +26,21 @@ tasks.withType(Checkstyle::class.java).configureEach {
     maxHeapSize = "4g"
     maxWarnings = 0  // Fail on any warning
     maxErrors = 0    // Fail on any error
-    source(project.sourceSets.main.get().allSource)
+    source(project.sourceSets.main.get().allSource.matching {
+        exclude("**/*.psd", "**/*.PSD")
+    })
     configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
 }
 
 var stagingFolder = File(project.layout.buildDirectory.get().toString(), "staging")
 
 dependencies {
-    implementation("com.puppycrawl.tools:checkstyle:12.3.1")
+    implementation("com.puppycrawl.tools:checkstyle:13.4.0")
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -113,6 +115,7 @@ tasks.register<Copy>("stageMMFiles") {
         include("sounds/**/*.*")
         include("sourcebooks/*.*")
         include("universe/eras.xml")
+        include("universe/ranks.xml")
         include("universe/commands/**/*.*")
         include("universe/factions/**/*.*")
     }
@@ -152,6 +155,7 @@ tasks.register<Copy>("stageMMLFiles") {
         include("universe/commands/**/*.*")
         include("universe/factions/**/*.*")
         include("universe/eras.xml")
+        include("universe/ranks.xml")
     }
 
     from(stagingFolder) {
@@ -195,6 +199,14 @@ tasks.register<Copy>("stageFiles") {
         exclude("mekfiles/*.cache")
         include("rat/**/*.*")
         include("universe/**/*.*")
+    }
+
+    // Mirror faction logos into images/force/Units so MekHQ's force-icon code
+    // can resolve them under data/images/force/ without duplicating the files
+    // in the source tree. The original images/universe/factions/ is preserved
+    // by the include("**/*.*") block above.
+    from("data/images/universe/factions") {
+        into("images/force/Units")
     }
 
     into("${stagingFolder}/all")

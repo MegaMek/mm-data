@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Last Chance
-sucsId: 1461
+sucsId: 1462
 xcood: -159.788
 ycood: 477.135
 spectralType: G9V
@@ -198,7 +198,7 @@ planet:
         population: 35240459.0
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - RU
   - name:
@@ -228,6 +228,12 @@ planet:
       - name: New Port Orchard
       - name: New Prompton
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2722-08-15'
         faction:
           source: canon
@@ -243,6 +249,15 @@ planet:
         population: 437775.0
       - date: '2750-01-01'
         population: 1044383.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Apollo Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 2109383.0
       - date: '2770-01-01'
@@ -254,6 +269,12 @@ planet:
             - IND
       - date: '2780-01-01'
         population: 5925055.0
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2790-01-01'
         population: 8648974.0
       - date: '2800-01-01'
@@ -314,6 +335,12 @@ planet:
           source: canon
           value:
             - MV
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MV
       - date: '3028-04-23'
         faction:
           source: canon
@@ -321,6 +348,12 @@ planet:
             - GV
       - date: '3030-01-01'
         population: 43427169.0
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - GV
       - date: '3040-01-01'
         population: 43560892.0
       - date: '3046-01-01'
@@ -328,6 +361,12 @@ planet:
       - date: '3049-09-05'
         faction:
           source: canon
+          value:
+            - CJF
+      - date: '3049-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CJF
       - date: '3050-01-01'
@@ -348,8 +387,20 @@ planet:
           source: canon
           value:
             - CHH
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CHH
       - date: '3080-01-01'
         population: 45051723.0
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RU
       - date: '3090-01-01'
         population: 45169010.0
       - date: '3100-01-01'
@@ -365,17 +416,18 @@ planet:
         population: 45586483.0
       - date: '3130-01-01'
         population: 45723447.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RU
       - date: '3139-01-01'
         socioIndustrial: C-C-B-B-A
       - date: '3140-01-01'
         population: 45769194.0
       - date: '3145-01-01'
         population: 45769194.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - RU
   - name: Nandini
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.28

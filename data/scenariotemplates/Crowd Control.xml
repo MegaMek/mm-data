@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -30,20 +30,21 @@ The victor will control the battlefield; ensure order is reestablished.]]></deta
     <isAlliedFacility>false</isAlliedFacility>
     <mapParameters>
         <allowedTerrainTypes>
+            <allowedTerrainType>Urban</allowedTerrainType>
             <allowedTerrainType>ColdUrban</allowedTerrainType>
             <allowedTerrainType>HotUrban</allowedTerrainType>
-            <allowedTerrainType>Urban</allowedTerrainType>
         </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
         <widthScalingIncrement>5</widthScalingIncrement>
     </mapParameters>
+    <scenarioModifiers>Rookies.xml</scenarioModifiers>
     <scenarioForces>
         <entry>
             <key>Player</key>

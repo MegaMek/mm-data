@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Galax
-sucsId: 919
+sucsId: 920
 xcood: 283.632
 ycood: -124.547
 spectralType:
@@ -128,6 +128,12 @@ planet:
         size: large
         icon: rock9
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2302-05-24'
         faction:
           source: canon
@@ -137,6 +143,12 @@ planet:
         socioIndustrial: D-D-A-F-F
       - date: '2310-01-01'
         population: 187990.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2320-01-01'
         population: 669693.0
       - date: '2330-01-01'
@@ -195,6 +207,11 @@ planet:
         population: 976987089.0
       - date: '2570-01-01'
         population: 993334232.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 3
       - date: '2580-01-01'
         population: 1008682268.0
       - date: '2590-01-01'
@@ -295,18 +312,29 @@ planet:
         population: 1017474885.0
       - date: '3020-01-01'
         population: 1015900164.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - New Avalon Combat Region
       - date: '3030-01-01'
         population: 1019333644.0
       - date: '3035-01-01'
         socioIndustrial: B-B-B-B-F
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-08-20'
         population: 1025160436.0
         socioIndustrial:
           source: canon
           value: A-A-A-A-F
-      - date: '3040-01-19'
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -322,8 +350,20 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3070-01-01'
         population: 1050797209.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '3080-01-01'
         population: 1051848532.0
       - date: '3083-01-01'
@@ -348,11 +388,6 @@ planet:
         population: 1067318174.0
       - date: '3145-01-01'
         population: 1069027250.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - ABN
   - name: Leslie
     type: TERRESTRIAL
     orbitalDist: 2.24

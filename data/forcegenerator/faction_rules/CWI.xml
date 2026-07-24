@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<!--
+    Clan Widowmaker (2807-2834): an original Clan, aggressive and ruthless (Khan Jason
+    Karrige's nuclear false-flag against Clan Wolverine). Absorbed by Clan Wolf in 2834
+    after Khan Cal Jorgensson killed ilKhan Nicholas Kerensky. The whole era predates
+    OmniMechs (2854) and Elementals (2868), so this is a pure early-Clan force: SLDF-derived
+    BattleMechs, aerospace, vehicles, infantry. Structure inherits CLAN via parent="CLAN".
+
+    This file overrides the touman only to (a) shape the small 2-galaxy Widowmaker structure
+    and (b) attach the naval reserve, which the CLAN base does not do. No weight target: the
+    2807-2834 unit pool is naturally medium-light and a target cannot pull weights that do
+    not yet exist in the era.
+
+    Doctrine note (NOT yet modeled): Widowmaker fielded "oversized, combined-arms Stars with
+    integral aerospace" - front-line Stars of 5 Meks + 2 fighters, second-line of 4 Meks +
+    2 fighters + 2 vehicles. Named clusters: 3rd Battle, 4th Fang, 194th Crusader (Alpha),
+    1st Spinner (Beta), 5th Provisional Garrison. These are a possible later polish pass.
+
+    Naval (Clan Widowmaker Naval Forces): equipment passed to Clan Wolf at the 2834
+    absorption (later Wolf's Dragoons, Bristol Cache).
+-->
+<ruleset faction="CWI" parent="CLAN" ratingSystem="CLAN"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <defaults>
+        <echelon>%CLUSTER%</echelon>
+        <rankSystem>%RANK_CLAN%</rankSystem>
+        <rating>FL</rating>
+    </defaults>
+
+    <toc>
+        <unitType>
+            <option>null,Mek,Tank,VTOL,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+        </unitType>
+
+        <echelon>
+            <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
+            <option>%TRINARY%,%BINARY%,%STAR%</option>
+        </echelon>
+
+        <rating>
+            <option ifUnitType="Tank|VTOL">SL:Second Line,PG:Garrison,Sol:Solahma</option>
+            <option ifUnitType="Infantry">PG:Garrison,Sol:Solahma</option>
+            <option ifEschelon="%TOUMAN%"></option>
+            <option ifEschelon="%GALAXY%">FL:Front Line,SL:Second Line</option>
+            <option>Keshik,FL:Front Line,SL:Second Line,PG:Garrison,Sol:Solahma</option>
+        </rating>
+    </toc>
+
+    <force echelon="%TOUMAN%" eschName="Touman">
+        <co>%KHAN%</co>
+        <xo>%SAKHAN%</xo>
+
+        <subforces>
+            <subforce name="Alpha Galaxy" rating="FL"
+                      role="command">%GALAXY%
+            </subforce>
+            <subforce name="Beta Galaxy" rating="SL">%GALAXY%</subforce>
+        </subforces>
+
+        <attachedForces>
+            <subforce unitType="Warship">%CLUSTER%</subforce>
+        </attachedForces>
+    </force>
+
+    <!-- Naval reserve. MUST come before the generic ground-cluster node below: the attached
+    Warship %CLUSTER% matches force nodes in document order, so this ifUnitType="Warship" node
+    has to precede the unguarded cluster node or the warships are mis-handled as a ground
+    cluster (symptom: a "Light Warship Cluster"). Black Venom was lost to point-blank JumpShip
+    K-F field attacks during Operation KLONDIKE (~2821). The remaining hulls passed to Clan Wolf
+    at the 2834 absorption. Athena (the heaviest hull) leads. -->
+
+    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+        <name>Naval Reserve</name>
+        <co>%GALAXY_CMDR%</co>
+
+        <subforces>
+            <subforce role="command" fluffName="CWS Athena"
+                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Alexander"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Beowulf"
+                      chassis="Congress Frigate">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Darius"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Nelson"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Mars"
+                      chassis="Vincent Corvette">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Egg Sac"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CWS Black Venom" ifDateBetween=",2821"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+        </subforces>
+    </force>
+
+    <!-- Widowmaker cluster: command Mek trinary + 2-3 Mek trinaries. There is NO separate
+    aerospace or vehicle trinary - Widowmaker's distinctive "oversized, combined-arms Stars
+    with integral aerospace" put the fighters (and second-line vehicles) inside each Mek Star
+    (see the Star override below), so the cluster is Mek-only. No Battle Armor (pre-2868). -->
+
+    <force echelon="%CLUSTER%" eschName="Cluster">
+        <name ifRating="PG">Provisional Garrison Cluster</name>
+        <name ifRating="FL|Keshik" ifWeightClass="H|A">Crusader Cluster</name>
+        <name ifRating="FL|Keshik" ifWeightClass="M">Battle Cluster</name>
+        <name ifRating="FL|Keshik" ifWeightClass="L">Striker Cluster</name>
+        <name>Garrison Cluster</name>
+        <co>%STAR_COL%</co>
+
+        <!-- Widowmaker leans heavy: their RAT lets a player re-roll a Light weight-class
+        result, suppressing Light and shifting toward Heavy/Assault. Modeled as a Light-poor,
+        heavy-leaning Mek weightTarget. In the 2807-2834 pool assault hulls are scarce, so the
+        target pulls Heavy hard and the era caps how much true Assault lands. -->
+        <weightTarget ifWeightClass="H|A" unitType="Mek" spread="8">A:12,H:48,M:34,L:6</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:5,H:40,M:46,L:9</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:0,H:28,M:50,L:22</weightTarget>
+
+        <weightClass>
+            <option weight="3">H</option>
+            <option weight="2">M</option>
+            <option weight="1">L</option>
+        </weightClass>
+
+        <subforces>
+            <subforce unitType="Mek" role="command" flags="+testTrinary">%TRINARY%</subforce>
+            <subforce unitType="Mek" num="2" flags="+testTrinary">%TRINARY%</subforce>
+            <subforceOption>
+                <option unitType="Mek" flags="+testTrinary">%TRINARY%</option>
+                <option />
+            </subforceOption>
+        </subforces>
+    </force>
+
+    <!-- The combined-arms Star: Widowmaker's signature. Front-line Stars field 5 Meks + 2
+    integral aerospace fighters; second-line Stars field 4 Meks + 2 fighters + 2 vehicles.
+    The Mek composition is branched by rating (5 vs 4); the aero group is added to every Star;
+    the vehicle group is added only to second-line Stars. Mirrors the keshik Star's two-group
+    Mek+aero pattern. Pre-Omni era, so only the un-augmented Mek Star is needed. -->
+
+    <force echelon="%STAR%" eschName="Star" ifAugmented="0" ifUnitType="Mek">
+        <name>{phonetic} {name:parent} Star</name>
+        <co>%STAR_CMDR%</co>
+
+        <weightClass>
+            <option weight="1">A</option>
+            <option weight="3">H</option>
+            <option weight="2">M</option>
+            <option weight="1">L</option>
+            <option ifRole="command" weight="1">A</option>
+            <option ifRole="command" weight="1">H</option>
+        </weightClass>
+
+        <ruleGroup>
+            <formation ifIndex="0">
+                <option weight="30" ifWeightClass="H|A">Battle</option>
+                <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
+                <option weight="12" ifWeightClass="H|A">Assault</option>
+                <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
+                <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
+                <option weight="4" ifWeightClass="L">Light Striker/Cavalry</option>
+                <option weight="1" ifWeightClass="L|M|H">Pursuit</option>
+                <option weight="1" role="+urban">Urban</option>
+            </formation>
+
+            <formation ifIndex="!0">
+                <option weight="20">Fire</option>
+                <option weight="3">Fire Support</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
+                <option weight="2" ifWeightClass="L|M">Light Fire</option>
+                <option weight="1" role="+anti_aircraft">Anti-Air</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
+                <option weight="6" ifIndex="0,1">Battle</option>
+                <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
+                <option weight="6" ifWeightClass="H|A">Assault</option>
+                <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
+                <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
+                <option weight="2" ifWeightClass="L">Light Striker/Cavalry</option>
+                <option weight="1" ifWeightClass="L|M|H">Pursuit</option>
+                <option weight="1" ifWeightClass="L|M|H">Ranger</option>
+                <option weight="1" ifWeightClass="L|M|H">Probe</option>
+                <option weight="1" ifWeightClass="L|M|H">Sweep</option>
+                <option weight="1" role="+urban">Urban</option>
+                <option weight="24" ifWeightClass="L|M" role="+recon">Recon</option>
+                <option weight="8" ifWeightClass="H" role="+recon">Heavy Recon</option>
+                <option weight="6" ifWeightClass="L" role="+recon">Light Recon</option>
+            </formation>
+        </ruleGroup>
+
+        <!-- Front-line: 5 Meks. -->
+        <subforces generate="group" ifUnitType="Mek" ifRating="FL|Keshik">
+            <subforceOption ifWeightClass="A">
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
+                <option weightClass="A,A,H,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,H,H,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,A,H,H,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="H">
+                <option weightClass="H,H,H,M,M">%ELEMENT%</option>
+                <option weightClass="H,H,H,H,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,H,H,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option weightClass="M,M,M,M,L">%ELEMENT%</option>
+                <option weightClass="M,M,M,M,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,M,M,M,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option weightClass="L,L,L,L,L">%ELEMENT%</option>
+                <option weightClass="M,L,L,L,L" weight="2">%ELEMENT%</option>
+                <option weightClass="M,M,L,L,L" weight="2">%ELEMENT%</option>
+                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <!-- Second-line: 4 Meks (with 2 integral vehicles below). -->
+        <subforces generate="group" ifUnitType="Mek" ifRating="SL|PG|Sol">
+            <subforceOption ifWeightClass="A">
+                <option weightClass="A,A,A,H">%ELEMENT%</option>
+                <option weightClass="A,A,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,H,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,A,H,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="H">
+                <option weightClass="H,H,M,M">%ELEMENT%</option>
+                <option weightClass="H,H,H,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,H,H,H" weight="2">%ELEMENT%</option>
+                <option weightClass="A,H,H,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option weightClass="M,M,M,L">%ELEMENT%</option>
+                <option weightClass="M,M,M,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,M,M,M" weight="2">%ELEMENT%</option>
+                <option weightClass="H,H,M,M">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option weightClass="L,L,L,L">%ELEMENT%</option>
+                <option weightClass="M,L,L,L" weight="2">%ELEMENT%</option>
+                <option weightClass="M,M,L,L" weight="2">%ELEMENT%</option>
+                <option weightClass="H,M,L,L">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <!-- Integral aerospace: 2 fighters in every Widowmaker Star (capped at Heavy - no
+        assault aerospace exists). -->
+        <subforces generate="group">
+            <subforceOption ifWeightClass="A|H">
+                <option unitType="AeroSpaceFighter" weightClass="H,H" weight="3">%ELEMENT%</option>
+                <option unitType="AeroSpaceFighter" weightClass="M,M" weight="2">%ELEMENT%</option>
+                <option unitType="AeroSpaceFighter" weightClass="L,L" weight="1">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option unitType="AeroSpaceFighter" weightClass="H,H" weight="2">%ELEMENT%</option>
+                <option unitType="AeroSpaceFighter" weightClass="M,M" weight="3">%ELEMENT%</option>
+                <option unitType="AeroSpaceFighter" weightClass="L,L" weight="2">%ELEMENT%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option unitType="AeroSpaceFighter" weightClass="M,M" weight="2">%ELEMENT%</option>
+                <option unitType="AeroSpaceFighter" weightClass="L,L" weight="3">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <!-- Integral vehicles: 2 combat vehicles in every second-line Star. -->
+        <subforces generate="group" ifRating="SL|PG|Sol">
+            <subforce unitType="Tank" num="2">%ELEMENT%</subforce>
+        </subforces>
+    </force>
+</ruleset>

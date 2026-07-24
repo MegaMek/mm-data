@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-edb8-7ac5-a05c-d1049fe101e1
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Thera Carrier
 3060
 </year>
 
-<originalBuildYear>
-3060
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,18 +53,18 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:108.0:4:1
-smallcraftbay:4.0:1:4
+asfbay:108.0:4:1::-1:0
+smallcraftbay:4.0:1:4::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-asfbay:108.0:4:7
-smallcraftbay:4.0:1:8
-crewquarters:8400.0:0
-1stclassquarters:4640.0:0
-2ndclassquarters:2268.0:0
-cargobay:61699.0:1:12
+asfbay:108.0:4:7::-1:0
+smallcraftbay:4.0:1:8::-1:0
+crewquarters:8400.0:0:-1::-1:0
+1stclassquarters:4640.0:0:-1::-1:0
+2ndclassquarters:2268.0:0:-1::-1:0
+cargobay:61699.0:1:12::-1:0
 </transporters>
 
 <SafeThrust>
@@ -100,9 +91,13 @@ cargobay:61699.0:1:12
 12
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 300
@@ -619,19 +614,23 @@ ISAMS Ammo:300
 </structural_integrity>
 
 <capabilities>
-The Thera-class super-carriers are designed to establish total aerospace fighter superiority for the Free Worlds League Military (FWLM). With the ability to carry four regiments of fighters, each consisting of 54 fighters, these super-carriers can dominate a solar system and overwhelm opponents. Their cargo capacity surpasses that of both the Star League and Clan navies, enabling them to accommodate four full aerospace regiments and eight small craft. The Thera-class vessels also provide luxurious accommodations for their 2,100-member crew, including personal staterooms for officers and double-occupancy cabins for the rest of the crew. The super-carriers feature multiple docking points for DropShips and are assigned a dedicated escort of attack DropShips.
+<p>Displacing 960,000 tons across 1,130 meters of hull, the Thera was built around its enormous fighter capacity rather than ship-to-ship firepower. Two massive bays each housed 108 aerospace fighters organized into four regiments of fifty-four, with eight additional small craft providing utility transport. One hundred battle armor marines served as the final line of anti-boarding defense, while three gravity decks and personal staterooms for all officers provided crew comfort on extended deployments.</p><p>Every arc carried an identical conventional weapons battery of eight ER large lasers, eight large pulse lasers, eight medium pulse lasers, eight small pulse lasers, four anti-missile systems, paired LRM-20 and SRM-6 launchers with Artemis IV guidance, and two LB 10-X autocannons, providing layered anti-fighter and anti-DropShip defense. Capital weapons varied by arc: the broadsides were heaviest with two NAC/40s, two NAC/30s, and a Heavy Naval Gauss Rifle alongside NL35 and NL55 naval lasers. Forward and aft quarters mounted NAC/25s and Barracuda missile launchers.</p><p>Nearly 1,700 tons of lamellor ferro-carbide armor and 5,633 double heat sinks protected the vessel. A lithium-fusion battery enabled rapid successive jumps, while a mobile HPG provided independent communications. For all its strengths, the Thera paid for its fighter capacity with relatively modest capital armament compared to dedicated battlecruisers of similar tonnage, leaving it dependent on its escorts and fighter wings to engage peer-class combatants.</p>
 </capabilities>
 
 <overview>
-The Thera-class super-carriers are the most powerful WarShips in the Free Worlds League fleet. Known for their impressive armament and armor, these slow but formidable vessels entered service in 3060. Currently, four Thera super-carriers, namely FWLS Santorini, Sardis, Corinth, and Delphi, are operational, with two more, Delos and Thessaly, scheduled to join the fleet in 3068 and 3070 respectively. These super-carriers have exceptional carrying capacity, luxurious accommodations for their crew, and are accompanied by a dedicated escort of attack DropShips.
+<p>The Thera-class super-carrier is the most powerful WarShip ever produced by the Free Worlds League, designed from the ground up to establish total aerospace fighter superiority over any star system it enters. Constructed at the Illium Naval Yard above Ionus by Illium Naval Engineering, the vessel carried an unmatched fighter complement that dwarfed every other carrier design of the modern era. Commissioned in 3060, the Thera gave the League a capital ship capability that no Successor State had fielded since the fall of the Star League. Its sheer scale forced neighboring powers to reassess their own naval strategies, and the carrier quickly earned a reputation as the centerpiece of Free Worlds League naval doctrine. Few WarShip classes have inspired as much strategic anxiety among rival nations as the Thera, a vessel whose presence in a system could tip the balance of an entire campaign.</p>
 </overview>
 
+<deployment>
+<p>The Free Worlds League organized its Thera carriers into battle groups, each escorted by two Eagle-class frigates and flotillas of Hamilcar, Achilles, and Merlin-class attack DropShips. The FWLS Santorini, first of class, was stationed at Oriente with escorts Galahad and Lancelot. The FWLS Sardis, the first Thera to see combat, deployed to Arcadia in 3063 to rescue survivors of Kristen's Krushers, achieving aerospace superiority with minimal losses. The FWLS Corinth guarded Atreus with escorts Gawain and Mordred, while the FWLS Delphi covered Andurien with Bors and Kay.</p><p>The Jihad devastated the fleet. The Delphi was destroyed outright. The Corinth and its escort Mordred sided with the Word of Blake during the naval battle at Atreus in October 3068, while the Sardis defected from Tamarind shortly after, firing on colleagues as it fled. Loyalist forces scuttled the unfinished Thessaly in dock to prevent its capture. Only the Santorini remained loyal, successfully defending Oriente against a Regulan invasion in April 3071. A Word of Blake raid in March 3079 crippled the Santorini's jump drive, leaving the carrier stranded in orbit around Oriente as a permanent system defense platform.</p><p>The Sardis was captured by Clan Snow Raven at the Battle of Dieron in 3077 and renamed SRS Raven's Nest, serving in the Conqueror Naval Star through the 3140s. The Corinth continued operating under Blakist control, last confirmed at Jouques in 3079, and was likely the vessel that destroyed an Interstellar Expeditions group near McEvedy's Folly in 3095. The fifth hull, FWLS Delos, escaped Blakist capture and fell under Regulan control; as RPS Delos it led the task force responsible for the cobalt nuclear destruction of Poulsbo and Circinus before vanishing with the entire Regulan fleet.</p>
+</deployment>
+
 <history>
-To date, only one Thera-class super-carrier, the Sardis, has seen action. It was deployed to Arcadia by "rogue" Marshal of Tamarind, Jeremy Brett, in a cross-border incursion to rescue the survivors of Kristen's Krushers. The Thera's aerospace complement played a crucial role in achieving local aerospace superiority, allowing the FWLM forces to overwhelm the Lyran opposition with minimal losses. Despite their significant capabilities, the Thera-class carriers have remained relatively untested in combat due to limited engagements. While the Thera-class super-carriers excel in providing fighter support and maintaining crew comfort during long deployments, they have a notable weakness in their low speed. Engineers faced challenges fitting larger engines into the ship without compromising the size of the aerospace fighter bays, which were prioritized to maximize fighter support. As a result, larger engines were omitted from the design. Each Thera-class ship is equipped with an onboard hyperpulse generator, which was operated by Word of Blake personnel before the Jihad. The Thera-class super-carriers represent a significant advancement in the Free Worlds League's naval capabilities and serve as a force multiplier in achieving aerospace superiority. With their impressive carrying capacity, luxurious accommodations, and dedicated escort, they play a crucial role in the FWLM's military operations.
+<p>The Thera-class super-carrier traced its origins to the 3040s, when the Free Worlds League Military and SAFE created a covert shell corporation called Illium Naval Engineering to develop a secret shipyard at the L1 point of the Ionus system. Though legally independent, the firm was owned almost entirely by the Free Worlds government, its corporate structure designed to circumvent Parliamentary budgetary oversight. Word of Blake technical assistance proved instrumental in accelerating the program, and Ionus hosted the largest Blakist population in the League outside Gibson. The yard began by renovating recovered Star League WarShips in 3054 before turning to original construction.</p><p>Six hulls were planned, and the first five reached various stages of completion. The FWLS Santorini entered service in 3060 as the first of class, followed by the Sardis in 3062, the Corinth in 3063, and the Delphi around 3067. The Delos and Thessaly were still under construction when the Jihad erupted. Each carrier was organized into a battle group with two Eagle-class frigate escorts and a flotilla of attack DropShips, giving the Free Worlds League a power projection capability unmatched among the Successor States.</p><p>The Word of Blake's intimate involvement with the Ionus shipyard proved catastrophic when the Jihad began. Two carriers defected to the Blakists, one was destroyed outright, and loyalist forces scuttled one unfinished hull to prevent its capture. Only a single vessel remained under loyal Free Worlds control, while the fifth escaped to fall under Regulan authority. The class that had promised the League naval supremacy instead scattered across multiple successor factions and rogue states, each vessel following its own divergent path through the chaos of the Jihad and its aftermath.</p><p>By the mid-thirty-second century, at least three Theras survived in various states of operational capability, proof of both the soundness of the design and the fractured state of the former Free Worlds League. The Ionus shipyard itself continued to operate at a fraction of its former capacity, remaining one of the few Successor State facilities still capable of WarShip-scale work.</p>
 </history>
 
 <manufacturer>
-Illium Naval Engineering - Illium Yard
+Illium Naval Engineering
 </manufacturer>
 
 <primaryFactory>
@@ -639,12 +638,22 @@ Ionus
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Illium Naval Engineering
 ENGINE:Unknown
-ARMOR:Unknown
+ARMOR:Valiant
+JUMP_JET:Mycenae
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Thera
+ENGINE:Unknown
+ARMOR:Lamellor Ferro-Carbide
+JUMP_JET:44000
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Carrier
@@ -659,7 +668,7 @@ Carrier
 </height>
 
 <source>
-TR:3067
+TR:3067,JTP:AtreusBC
 </source>
 
 <tonnage>

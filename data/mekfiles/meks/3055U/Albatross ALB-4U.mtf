@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c730-73f1-a8f6-33264aa8e533
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Albatross
 model:ALB-4U
 mul id:29
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3063
-Source:TR:3055U
-Rules Level:2
+techbase:Inner Sphere
+era:3063
+source:TR:3055U,TR:CI
+published:RS:CI
+rules level:2
 role:Brawler
 
-
-
-quirk:easy_maintain
 quirk:imp_target_long
+quirk:easy_maintain
 
+mass:95
+engine:380 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:95
-Engine:380 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:14 IS Double
+walk mp:4
+jump mp:0
 
-Heat Sinks:14 Double
-Walk MP:4
-Jump MP:0
-
-Armor:Ferro-Fibrous(Inner Sphere)
-LA Armor:32
-RA Armor:32
-LT Armor:28
-RT Armor:28
-CT Armor:48
-HD Armor:9
-LL Armor:40
-RL Armor:40
-RTL Armor:12
-RTR Armor:12
-RTC Armor:12
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:32
+RA armor:32
+LT armor:28
+RT armor:28
+CT armor:48
+HD armor:9
+LL armor:40
+RL armor:40
+RTL armor:12
+RTR armor:12
+RTC armor:12
 
 Weapons:7
 Light Gauss Rifle, Left Arm
@@ -72,8 +72,8 @@ ISLightGaussRifle
 ISLightGaussRifle
 ISLightGaussRifle
 ISLightGaussRifle
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -85,9 +85,9 @@ ISLargePulseLaser
 ISLargePulseLaser
 ISERMediumLaser
 ISERMediumLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -101,9 +101,9 @@ IS Ammo LRM-15
 IS Ammo LRM-15
 IS Streak SRM 6 Ammo
 ISCASE
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
 Fusion Engine
@@ -114,10 +114,10 @@ LRM 15
 LRM 15
 ISStreakSRM6
 ISStreakSRM6
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -130,8 +130,8 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Head:
 Life Support
@@ -175,18 +175,27 @@ Foot Actuator
 -Empty-
 -Empty-
 
-overview:The Albatross, designed by the Free Worlds League in 3053 in anticipation of a potential conflict with the advancing Clans, is a versatile workhorse 'Mech that does not specialize in one specific role.
+overview:<p>The Albatross was born from Project Omega, a Free Worlds League Military initiative launched in late 3052 to develop an assault 'Mech capable of confronting Clan OmniMechs. Irian BattleMechs Unlimited delivered the design after a remarkably swift development cycle, and at 95 tons, the Albatross filled the role of a generalist assault 'Mech intended to engage threats at all ranges. The initial production run was reserved for the Knights of the Inner Sphere, cementing the design's early reputation as a prestige platform rather than a frontline workhorse. Despite a troubled legacy following the Jihad, the Albatross has endured across multiple eras, serving the Free Worlds League, the Marik-Stewart Commonwealth, and eventually the Wolf Empire in successive incarnations.</p>
 
-capabilities:Weighing 95 tons, it is one of House Marik's heaviest 'Mechs and utilizes a GM 380 XL engine, enabling speeds of up to 65 kph. To prioritize weapon capacity, the designers opted against incorporating an endo steel chassis or ferro-fibrous armor. The Albatross boasts impressive weaponry designed for various engagement ranges. It features an LRM rack and extended-range lasers for potent long-range firepower, while a combination of an autocannon and lasers effectively engages foes at closer distances. For opponents closing in, MechWarriors can employ the SRMs. With thirteen tons of armor, the Albatross offers enhanced battlefield survivability, though it is prone to overheating. Additionally, the 'Mech incorporates CASE technology for safeguarding against ammunition explosions.
+capabilities:<p>The Albatross employs a GM 380 XL engine to achieve a top speed of 65 kph, making it one of the faster assault 'Mechs in the Inner Sphere's inventory, though this speed comes at a significant cost in structural resilience. The extralight engine's vulnerability to side torso damage has earned the design a reputation for fragility unusual among 95-ton platforms, a perception reinforced by the relatively modest thirteen tons of StarSlab/3 armor protecting the original chassis. CASE protection for the ammunition bays mitigates the risk of catastrophic explosion but does little to address the fundamental survivability concern.</p><p>The weapon loadout reflects a deliberate generalist philosophy, eschewing specialization in favor of versatility. An Oriente Model O LB 10-X autocannon and Diverse Optics Sunbeam extended-range large laser anchor the long-range engagement envelope, supported by an Irian Weapons Works V7 LRM-15 rack for indirect fire capability. A Tronel PPL-20 large pulse laser bridges the gap to medium range, while an Irian Weapons Works 60mm SRM-6 launcher and twin Super 6 medium lasers provide close-range firepower. Fourteen double heat sinks manage the thermal load, though sustained fire across all weapon systems quickly overwhelms the cooling capacity and forces MechWarriors to exercise strict fire discipline.</p>
 
-deployment:The 4U variant of the Albatross represents a basic upgrade to the design. This variant replaces the original medium lasers with a pair of ER medium lasers. The LB 10-X Autocannon is swapped for a Light Gauss Rifle, and the SRM-6 is upgraded to a Streak SRM-6 launcher. The ER large laser is removed, making way for an ER small laser. Additionally, the armor is reinforced by over three tons and upgraded to ferro-fibrous material, enhancing the 'Mech's overall protection and durability.
+deployment:<p>This variant entered production at Irian in 3063 as a straightforward upgrade of the original design. The LB 10-X autocannon is replaced by a Light Gauss Rifle, the SRM-6 gives way to a more accurate Streak SRM-6, and the medium lasers receive extended-range upgrades. Most particularly, the ER large laser is downgraded to an ER small laser, freeing tonnage for over three additional tons of ferro-fibrous armor. While the shift to a Light Gauss Rifle reduces the 'Mech's close-range ballistic punch, the improved armor protection addresses the most persistent criticism of the original chassis.</p>
 
-history:Following its commissioning, the first Albatross 'Mech rolled off the production line in 3053, becoming the signature 'Mech of the Knights of the Inner Sphere rather than being distributed among regular line units. As Operation Guerrero and the counterassault against the Clans unfolded, the Albatross saw increased deployment. While primarily limited to prestigious Free Worlds League Military (FWLM) units, a small number were exported to close League allies. Initially, the Albatross symbolized a bright future as the distinguished BattleMech of the noble Knights of the Inner Sphere. However, with the fall of the Knights and their ideals early in the Jihad, the Albatross became associated with the shame and fracture of the Free Worlds League rather than a symbol of renewal. Despite this tarnished reputation, the Albatross remained a formidable presence on the battlefield, with Irian BattleMechs producing various variants for the Army of the Marik-Stewart Commonwealth (AMSC), although export sales were limited. The Albatross demonstrated mobility and power, albeit with a reputation for being temperamental. Its solid performance during the doomed AMSC campaign against Operation Hammerfall helped restore some of its standing just as the re-formed Free Worlds League had to relinquish the factory to the emerging Wolf Empire.
+history:<p>Project Omega represented a turning point in Free Worlds League military doctrine. While the League had profited handsomely from selling arms to the other Great Houses during the Clan Invasion, League strategists recognized that this advantage was temporary. If the Clans defeated the Federated Commonwealth, the Free Worlds League would be next. The urgency of this realization drove Irian BattleMechs Unlimited to compress what would normally be a years-long development program into mere months, delivering the first Albatross in 3053.</p><p>The first Albatrosses never reached FWLM line units. Captain-General Thomas Marik directed the entire initial production run to his Knights of the Inner Sphere, the neo-chivalric order he had established to embody League ideals. For nearly a decade, the Albatross remained the exclusive province of these elite formations. Only after Operations Guerrero and Bulldog demonstrated the 'Mech's combat effectiveness did the design begin filtering to other prestige FWLM commands, with limited exports to the League's closest allies.</p><p>The Jihad shattered both the Knights and the Albatross's reputation. The idealism that the Knights represented died in the carnage of the Word of Blake's campaign, and the Albatross became inextricably linked with the shame of the united Free Worlds League's collapse. The Word of Blake's seizure of the Irian production facility and development of the radical ALB-5W variant only deepened the stain on the design's legacy.</p><p>Post-Jihad, the Albatross found new purpose at Irian BattleMechs Unlimited's Washburn facility, where a succession of variants entered production for the Army of the Marik-Stewart Commonwealth. The ALB-6U became the signature assault 'Mech of the AMSC, seeing its first major combat during the Commonwealth Secession Crisis of 3119 when Albatrosses fought on both sides of the clashes on Midkiff. Operation Hammerfall landed squarely on the Thirteenth Atrean Dragoons during the Battle of Uhuru, where the Albatross's solid performance in the AMSC's doomed defense helped rehabilitate the design's reputation.</p><p>The re-formed Free Worlds League's forced cession of the Washburn factory to the Wolf Empire opened the final chapter in the Albatross's history. Clan Wolf's desperate need for a replacement for the lost Night Wolf led to a crash retooling of the production line with Clan technology. The resulting Albatross C, derisively dubbed the "Sooty Albatross" by Wolf warriors, was considered a pale imitation of the Night Wolf. Plans to mass-produce the design were shelved until Star Colonel Othar's desperate rearmament program forced the issue, and even then, assignment to the Sooty Albatross was thought to be an ill omen within the Wolf Empire's touman.</p>
 
 manufacturer:Irian BattleMechs Unlimited
+
 primaryfactory:Irian
-systemmanufacturer:CHASSIS:Albat-50
-systemmanufacturer:ENGINE:GM 380 XL
-systemmanufacturer:ARMOR:Jolassa-328 ferro-fibrous with CASE
-systemmanufacturer:COMMUNICATIONS:Irian Technologies HMR-35s
-systemmanufacturer:TARGETING:Omicron TrackerKeeper
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Albat-50
+systemmanufacturer:ENGINE:General Motors
+systemmode:ENGINE:380 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:COMMUNICATIONS:Irian Technologies
+systemmode:COMMUNICATIONS:HMR-35s
+systemmanufacturer:TARGETING:Omicron
+systemmode:TARGETING:TrackerKeeper

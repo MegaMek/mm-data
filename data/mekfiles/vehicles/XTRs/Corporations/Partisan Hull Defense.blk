@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ebd1-7719-9704-2ce249702d41
+</UUID>
 
 <UnitType>
 Tank
@@ -45,10 +40,6 @@ Partisan Hull Defense
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -57,12 +48,13 @@ IS Level 4
 Juggernaut
 </role>
 
+<quirks>
+anti_air
+</quirks>
+
 <motion_type>
 Tracked
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 2
@@ -76,9 +68,13 @@ Tracked
 3
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 47
@@ -111,58 +107,55 @@ ISLargeXPulseLaser
 ISC3BoostedSystemSlaveUnit
 </Turret Equipment>
 
-<source>
-XTR:Corps
-</source>
-
-<tonnage>
-80.0
-</tonnage>
-
 <capabilities>
-The Partisan Heavy Tank variants are specialized for anti-aircraft defense, each equipped with a sophisticated targeting system for engaging airborne targets. Primary armaments include long-range autocannons, effective against air threats, complemented by machine guns for close-range anti-infantry defense. These tanks are designed as support units with moderate armor, suitable for stationary or slow-moving roles rather than direct front-line combat.<p>Key across all variants is the balance between firepower and mobility. While capable of robust air defense, they rely on proximity to ammunition resupply points due to high consumption rates during operations. Despite variations in armaments and specific capabilities, all Partisan models maintain their primary function of providing air support and defense, utilizing a mix of advanced targeting systems, autocannons, and machine guns to achieve this objective effectively.<p>
+<p>The Hull Defense variant departs radically from the standard Partisan's design philosophy. Environmentally sealed to operate in vacuum, the vehicle can drive across a WarShip's hull to replace destroyed turrets or reinforce threatened sectors, functioning as a mobile weapon emplacement. A Blue Shield Particle Field Dampener and Compound RX-5 laser-reflective armor provide exceptional defense against the energy weapons typical of aerospace fighter armaments, significantly reducing damage from laser and PPC strikes. This specialized protection comes at a cost, as the reflective armor remains vulnerable to ballistic weapons. A single Gauss slug can penetrate the vehicle in all locations except the turret and front glacis.</p><p>The offensive armament consists of two Large X-Pulse Lasers, chosen for their effectiveness against fast-moving aerospace targets without requiring ammunition supply in vacuum operations. A Boosted C3 Slave allows coordination with other hull defense units and the host WarShip's fire control network. The engine was reduced to a GM 160 fusion plant, significantly cutting the vehicle's ground speed. This trade-off is acceptable for a platform that primarily operates at walking pace across a ship's hull rather than traversing planetary terrain.</p>
 </capabilities>
 
 <overview>
-The Partisan Heavy Tank, designed by Kallon Industries, represents an evolution in anti-aircraft warfare. Its inception dates back to the age of airplanes, constantly adapting to counter more powerful aircraft. With the decline in BattleMech production during the Succession Wars, the Partisan emerged as a solution for ground forces to counter aerial threats effectively. During the Clan Invasion, the AFFC's need for an effective anti-air defense system against Clan OmniFighters led to the Partisan being chosen for significant upgrades, including the integration of the Draconis-invented C3 networking computer.
+<p>The Partisan Hull Defense is an experimental prototype developed by Kallon Industries at its Nanking facility in 3072, designed to operate on the exterior hull of a WarShip as a mobile anti-fighter turret. Conceived during the Jihad when WarShip engagements intensified and existing point defense systems proved inadequate against determined fighter attacks, the design represents an unconventional application of the Partisan platform to the vacuum combat environment. Only a small number of prototypes were constructed, and the concept remained experimental rather than entering mass production.</p>
 </overview>
 
 <deployment>
-This experimental Partisan model is uniquely designed for operation on the surface of a WarShip, functioning as a mobile turret in space. It features environmental sealing for vacuum conditions. The tank is equipped with Particle Field Dampeners and laser reflective armor, offering exceptional defense against energy weapons commonly used by aerospace fighters, though this leaves it more vulnerable to ballistic attacks. Its offensive capabilities include two Large X-Pulse Lasers, tailored to effectively counter incoming fighters. For unit coordination, it carries a C3 boosted slave. To accommodate these modifications, the engine has been downsized to a GM 160, optimizing it for its specialized role in space-based operations.
+<p>The Partisan Hull Defense exists only as a small number of experimental prototypes produced at Nanking before the Word of Blake occupation disrupted further development. No mass production or widespread deployment has occurred. The concept of mobile hull-mounted anti-fighter vehicles remains an intriguing but unproven tactical innovation.</p>
 </deployment>
 
 <history>
-The Partisan Heavy Tank, primarily deployed in the Federated Suns and Free Worlds League, has a storied history in major military operations, with its roots tracing back to the age of the airplane. Originally designed to counter the increasing power of aircraft, Kallon Industries pivoted from their renowned BattleMech designs to the Partisan during the Succession Wars, addressing the urgent need for effective anti-aircraft solutions on the ground. The Clan Invasion further catalyzed the development of the Partisan, as AFFC forces faced overwhelming aerial assaults from Clan OmniFighters. Kallon's response was to enhance the Partisan with advanced anti-air systems, including the integration of the Draconis-invented C3 networking computer.<p>The Partisan's role became increasingly critical, as demonstrated during the attack on Dobson against Kurita forces. The lack of Davion aerospace assets led to the Partisan's deployment in a defensive fortification around Dobbiville. Its effectiveness was highlighted when a company of Partisans successfully engaged and destroyed multiple Kurita fighters, altering the tactics of the opposing forces and ultimately contributing to the defense of the city. This engagement showcased the Partisan's capabilities not just in shooting down enemy aircraft but also in shaping the broader tactics of ground engagements.</p><p>In the aftermath of Operation Guerrero, the Partisan's role expanded beyond traditional anti-aircraft duties, proving its utility in both land and air confrontations. On New Avalon, Partisan units played a pivotal role in repelling Blakist forces, particularly in coordination with BattleMech forces through their C3 networking capability. Despite intense bombardment from Blakist WarShips, the Partisans' effectiveness in anti-air defense was crucial in preserving several key strongholds on the capital planet of House Davion.</p><p>Today, Partisan companies continue to operate on key battlefronts, providing indispensable anti-air defense. Recent reports highlight their ongoing relevance, with a group of Partisans notably crippling a low-flying Assault Triumph in support of a Blakist offensive. The tank's enduring presence and adaptability in various combat scenarios underscore its significance in modern warfare, offering a blend of technological advancement and strategic versatility.</p>
+<p>The concept of mounting ground vehicles on WarShip hulls as mobile anti-fighter turrets emerged during the Jihad, when the sudden proliferation of naval engagements exposed critical vulnerabilities in existing point defense systems. As WarShips on all sides suffered crippling fighter attacks that overwhelmed their fixed weapon emplacements, Kallon Industries' Nanking facility undertook an ambitious experiment: adapting the proven Partisan chassis for vacuum combat operations.</p><p>The project, supervised by technician Clarice Hemmingway, began in 3072 with the goal of creating a vehicle that could drive across a WarShip's hull to replace destroyed turrets or reinforce threatened sectors. The engineering challenges were formidable. Environmental sealing for vacuum operations added considerable mass, requiring a reduction from the standard GM 240 to a smaller GM 160 fusion plant. This cut ground speed significantly, though the trade-off was acceptable for a platform intended to traverse ship hulls rather than planetary terrain.</p><p>The choice of laser-reflective armor was driven by the threat profile. Aerospace fighters, the Hull Defense's primary targets, overwhelmingly employed energy weapons. The reflective plating dramatically reduced damage from laser and PPC strikes, while a Blue Shield Particle Field Dampener provided additional protection against incoming fire. Offensively, two Large X-Pulse Lasers were selected for their effectiveness against fast-moving targets without requiring ammunition resupply in vacuum, a critical logistics consideration for a vehicle operating far from conventional supply lines.</p><p>A Boosted C3 Slave allowed the Hull Defense to coordinate with other units and the host WarShip's fire control network, extending the networked air defense doctrine that had made the Partisan Air Defense Tank so effective in atmospheric operations. In theory, a company of Hull Defense vehicles stationed aboard a WarShip could provide a flexible, self-repairing point defense layer that fixed turrets could not match. Destroyed turret coverage could be restored simply by driving a Hull Defense vehicle to the gap.</p><p>The concept had significant limitations. The reflective armor that protected so well against energy weapons left the vehicle dangerously vulnerable to ballistic threats. A single Gauss slug could penetrate the vehicle in all locations except the turret and front glacis. As Gauss weaponry proliferated among both Inner Sphere and Clan forces, this vulnerability represented a growing tactical liability. The reduced speed also meant the Hull Defense could not rapidly reposition across a WarShip's hull during a fast-moving engagement, limiting its ability to respond to shifting attack vectors.</p><p>Only a small number of prototypes were constructed before the Word of Blake's seizure of Nanking terminated the project. The occupation scattered Kallon's engineering teams and destroyed development records, and the design was never resumed after the planet's liberation. The Hull Defense remains an experimental curiosity, a footnote in the broader Partisan family's history rather than a production success.</p><p>Even so, the Hull Defense represents an important moment in mobile air defense thinking. Where the original Partisan Heavy Tank had brought anti-aircraft capability to planetary battlefields, and the Air Defense Tank had elevated it through networking, the Hull Defense attempted to extend the same doctrine into space. That the attempt was made at all, during the chaos of the Jihad when resources were desperately scarce, speaks to how deeply the Partisan's air defense philosophy had embedded itself in military planning across the Inner Sphere.</p>
 </history>
 
 <manufacturer>
-Kallon Weapon Industries (Refit)
+Refit - Kallon Weapon Industries
 </manufacturer>
 
 <primaryFactory>
 Nanking
-</primaryFactory
+</primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:GM Super 160 Fusion
-ARMOR:ArcShield Reflective
-COMMUNICATIONS:JKallon Secure Net with C3
-TARGETING:AntiAir Flak Systems-1
+ENGINE:GM
+ARMOR:Unknown
+COMMUNICATIONS:Kallon
+TARGETING:Kallon
 </systemManufacturers>
 
+<systemModels>
+CHASSIS:Unknown
+ENGINE:160
+ARMOR:Compound RX-5 Laser-Reflective
+COMMUNICATIONS:Secure Net with C3
+TARGETING:Sure-Shot
+</systemModels>
+
 <source>
-TR:3039
+XTR:Corps
 </source>
+
+<published>
+XTR:Corps
+</published>
 
 <tonnage>
 80.0
 </tonnage>
 
-<fuelType>
-PETROCHEMICALS
-</fuelType>
-
-<quirks>
-anti_air
-</quirks>

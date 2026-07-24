@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Fletcher (FWL)
-sucsId: 882
+sucsId: 883
 xcood: -67.732
 ycood: -209.973
 spectralType:
@@ -126,7 +126,7 @@ planet:
         faction:
           source: canon
           value:
-            - DO
+            - FoO
         population: 50709.0
         socioIndustrial: D-F-C-D-F
       - date: '2250-01-01'
@@ -142,6 +142,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FoO
       - date: '2280-01-01'
         population: 5610938.0
       - date: '2290-01-01'
@@ -150,6 +156,15 @@ planet:
         population: 27285545.0
       - date: '2310-01-01'
         population: 51767223.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Federation of Oriente
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 90682255.0
       - date: '2330-01-01'
@@ -310,6 +325,9 @@ planet:
         population:
           source: canon
           value: 2371000000.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Oriente
       - date: '3028-01-01'
         socioIndustrial: C-C-D-B-D
       - date: '3030-01-01'
@@ -335,8 +353,20 @@ planet:
           source: canon
           value:
             - DO
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 554195924.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DO
       - date: '3086-07-03'
         faction:
           source: canon
@@ -344,6 +374,12 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 557419600.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DO
       - date: '3100-01-01'
         population: 565165313.0
       - date: '3110-01-01'
@@ -354,6 +390,12 @@ planet:
         population: 579472541.0
       - date: '3130-01-01'
         population: 584243751.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -362,11 +404,6 @@ planet:
         population: 587054863.0
       - date: '3145-01-01'
         population: 587054863.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - ABN
   - name: Sweeney's Rock
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.0

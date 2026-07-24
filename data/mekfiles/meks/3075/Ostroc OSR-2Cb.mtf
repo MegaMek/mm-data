@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,50 +15,50 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-ceee-7db3-ab73-ccbc03951da2
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Ostroc
 model:OSR-2Cb
 mul id:2350
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2729
+techbase:Inner Sphere
+era:2729
 source:TR:3075
-Rules Level:2
+published:RS:3075u-AW
+rules level:2
 role:Skirmisher
-
-
 
 quirk:low_profile
 
+mass:60
+engine:300 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:60
-Engine:300 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:14 IS Double
+walk mp:5
+jump mp:0
 
-Heat Sinks:14 Double
-Walk MP:5
-Jump MP:0
-
-Armor:Ferro-Fibrous(Inner Sphere)
-LA Armor:10
-RA Armor:10
-LT Armor:24
-RT Armor:24
-CT Armor:24
-HD Armor:9
-LL Armor:23
-RL Armor:23
-RTL Armor:4
-RTR Armor:4
-RTC Armor:6
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:10
+RA armor:10
+LT armor:24
+RT armor:24
+CT armor:24
+HD armor:9
+LL armor:23
+RL armor:23
+RTL armor:4
+RTR armor:4
+RTC armor:6
 
 Weapons:6
-Medium Laser, Left Torso
-Medium Laser, Right Torso
 ER Large Laser, Left Torso
-ER Large Laser, Right Torso
+Medium Laser, Left Torso
 Streak SRM 2, Left Torso
+ER Large Laser, Right Torso
+Medium Laser, Right Torso
 Streak SRM 2, Right Torso
 
 Left Arm:
@@ -97,11 +97,11 @@ ISERLargeLaser
 ISERLargeLaser
 Medium Laser
 ISStreakSRM2
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
 ISDoubleHeatSink
@@ -111,11 +111,11 @@ ISERLargeLaser
 ISERLargeLaser
 Medium Laser
 ISStreakSRM2
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -150,8 +150,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -164,8 +164,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -173,19 +173,27 @@ Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:The Ostroc is a heavy 'Mech, weighing in at the lower end of its weight class, originally designed to act as an urban combatant during the Age of War.
+overview:<p>The Ostroc was designed in 2511 by Ostmann Industries as a dedicated urban combat platform for the Terran Hegemony's garrison forces. Distinguished by its low-slung walker-pod profile that would later inspire designs like the Stalker and Marauder, the Ostroc combined a silhouette comparable to the diminutive UrbanMech with the firepower expected of a heavy 'Mech. This unique combination made the design exceptionally difficult to target among the towers and debris of contested cityscapes.</p><p>Ostmann Industries' limited production capacity meant the Ostroc remained relatively rare throughout its service life, though the design's reputation for reliability and its interchangeable components with other Ost-series 'Mechs ensured its continued use across the Succession Wars and beyond. Multiple manufacturers eventually took up production, keeping the Ostroc relevant on battlefields well into the thirty-second century.</p>
 
-capabilities:Its unique walker/pod profile, later seen in the Stalker and Marauder, combined with a low silhouette similar to the UrbanMech makes the Ostroc difficult to spot in an urban environment. Fast for its size, well-armored and boasting good medium- and short-range firepower, the Ostroc was also capable when fighting outside a cityscape, particularly as a heavy scout/raider.
+capabilities:<p>The Ostroc's primary armament centers on twin Fuersturm-C large lasers mounted in the side torsos, providing effective medium-to-long range firepower without ammunition dependency. Secondary weapons include paired Fuersturm-b medium lasers and a single Totschlagen SRM-4 launcher, giving the design respectable close-range punch. This weapons mix allows the Ostroc to operate effectively as a guerrilla fighter, largely independent of supply lines that might be disrupted in urban combat zones.</p><p>The nineteen-ton Vlar 300 fusion engine propels the Ostroc to speeds of 86 kilometers per hour, making it fast for its weight class and capable of dictating engagement ranges against heavier opponents. Fifteen standard heat sinks provide adequate thermal management for sustained combat. Nine tons of Riese-475 armor offer reasonable protection, though the design's distinctive short arms receive minimal plating and are frequently lost in combat.</p><p>This weak arm protection represents the Ostroc's primary tactical liability. The shocks of physical combat can easily damage the torso-mounted Fuersturm weapon systems, and the loss of one or both arms significantly compromises the 'Mech's ability to brace itself during close-quarters engagements. Experienced pilots learn to leverage their speed advantage to avoid such situations entirely.</p>
 
-deployment:This upgrade of the 2C was used by the SLDF Royals starting in 2729. The large lasers are upgraded to ER Large Lasers, and the SRM-4 is replaced with a pair of Streak SRM-2s. Fourteen double heat sinks keep this 'Mech cool, while Ferro-Fibrous armor gives it additional protection.
+deployment:<p>This variant represented the pinnacle of Star League-era Ostroc development, produced exclusively for Royal SLDF regiments. Upgraded with ferro-fibrous armor for improved protection without weight penalties, the Royal variant also incorporated fourteen double heat sinks that dramatically improved thermal management. The weapons package saw significant enhancement: extended-range large lasers replaced the standard Fuersturm models for improved reach, while twin Streak SRM-2 launchers replaced the original SRM-4, trading raw damage potential for near-guaranteed hits. The lostech required for this variant meant production ceased with the fall of the Star League, and surviving examples became prized salvage during the Succession Wars.</p>
 
-history:The best-known of Ostmann Industries' Ost Class of 'Mechs, the Ostroc debuted in 2511 and proved so successful in this role production continued for approximately 200 years. While a quality 'Mech, the low production capacity of Ostmann Industries made the Ostroc a rarity; indeed the company licensed their other Ost 'Mechs out to Kong Interstellar just to maintain their rate of production, and the majority of those produced were assigned garrison duties within the Terran Hegemony. Still, the 'Mech saw action in every major conflict of the Star League, especially towards the end in the civil war and subsequent First Succession War. The destruction of Ostmann Industries meant an end to any new Ostrocs, although all sides of the Succession Wars continued to field these 'Mechs in combat, particularly the Draconis Combine. It was because of the small number and wide dispersal of surviving Ostrocs that the design was largely passed over while others were being updated after the Helm Memory Core discovery. A major revitalization of the design took place within the Capellan Confederation after the Clan Invasion. Having largely rebuilt their forces after the previous decades' setbacks, the Strategios wanted to update the ancient 'Mech, but rather than reverse-engineering the original they ordered all Capellan 'Mech manufacturers to submit bids for a replacement. Ceres Metals was the only one to send in a proposal which matched exactly what they wanted and won the contract, completing the first production run in January 3067. Versions of these new Ostrocs also started showing up in the Taurian Concordat and Circinus Federation, a result of espionage according to Capellan charges.
+history:<p>The Ostroc served as the flagship design of Ostmann Industries throughout the Star League era, seeing action in every major conflict from its introduction through the Amaris Civil War. Although primarily assigned to garrison duties within the Terran Hegemony, the 'Mech earned a reputation for reliability that kept it in service long after original production ceased. Ostmann licensed its other Ost-series designs to Kong Interstellar simply to maintain adequate output across its product range. Urban legend holds that ComStar founder Jerome Blake himself piloted an Ostroc during the seizure of Terra, though historical records remain inconclusive.</p><p>The destruction of Ostmann Industries' Terra facility during the Amaris Civil War ended production of new Ostrocs, but the design's simple construction and parts compatibility with other Ost-series 'Mechs allowed surviving examples to soldier on. The Draconis Combine became particularly adept at maintaining these aging warriors, and Ostrocs remained common sights in Combine formations throughout the Succession Wars. The wide dispersal of surviving units actually worked against the design when lostech recovery began after the Helm Memory Core discovery, as no concentration of Ostrocs existed to justify dedicated upgrade programs.</p><p>Revival came from an unexpected quarter. The Capellan Confederation's Strategios, having rebuilt their forces after decades of setbacks, ordered all manufacturers to submit bids for a modernized Ostroc replacement. Ceres Metals won the contract with a complete redesign that retained only the name and general profile, entering production in January 3067. The Taurian Concordat and Circinus Federation soon fielded suspiciously similar variants, leading to espionage accusations that further strained Trinity Alliance relations.</p><p>Kong Interstellar, the original licensee of other Ost-series designs, finally returned to Ostroc production in 3139 with Clan Sea Fox assistance. Their new OSR-6R variant incorporated Clan-grade weapons and advanced materials, though its reliance on components shipped through contested space makes continued production uncertain. Meanwhile, Ronin Incorporated on Wallis has produced modest numbers of the OSR-3M, drawing heavily on locally-sourced Ostwar components to maintain Regulan self-sufficiency during the ongoing conflicts fragmenting the former Free Worlds League.</p>
 
-manufacturer:Ostmann Industries,Field Refits
-primaryfactory:Terra,Various
-systemmanufacturer:CHASSIS:Ost II
-systemmanufacturer:ENGINE:Vlar 300
-systemmanufacturer:ARMOR:Riese 475 Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:Ostmann-L
-systemmanufacturer:TARGETING:Ferdinand-a
+manufacturer:Ostmann Industries
 
+primaryfactory:Terra
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Ostmann Industries
+systemmode:CHASSIS:Ost-II
+systemmanufacturer:ENGINE:Vlar
+systemmode:ENGINE:300
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:COMMUNICATIONS:Ostmann
+systemmode:COMMUNICATIONS:Ostmann-L
+systemmanufacturer:TARGETING:Ostmann
+systemmode:TARGETING:Ferdinand-a

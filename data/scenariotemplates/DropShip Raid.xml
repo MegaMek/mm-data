@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>DropShip Raid</name>
     <shortBriefing>Destroy or cripple DropShip.</shortBriefing>
-    <detailedBriefing><![CDATA[An enemy DropShip has become stranded in contested territory, presenting us with an opportunity to eliminate a critical asset before they can recover or evacuate. Your mission is to destroy or cripple the DropShip while also eliminating at least 50% of its escort forces. We cannot allow the enemy to extract personnel, equipment, or intelligence—this DropShip must not leave the battlefield intact.
+    <detailedBriefing><![CDATA[An enemy DropShip has become stranded in contested territory, presenting us with an opportunity to eliminate a critical asset before they can recover or evacuate. Your mission is to destroy or cripple the DropShip while also eliminating at least 33% of its escort forces. We cannot allow the enemy to extract personnel, equipment, or intelligence—this DropShip must not leave the battlefield intact.
 
 Expect organized resistance. The enemy will fight to defend their stranded vessel, and their escort forces will attempt to buy time for emergency repairs or reinforcement. You must strike decisively, breaking their formation and overwhelming their defenses before they can rally.
 
@@ -29,12 +29,14 @@ Victory in this engagement will determine control of the battlefield. If we succ
     <isHostileFacility>false</isHostileFacility>
     <isAlliedFacility>false</isAlliedFacility>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>DropZone</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>10</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -193,10 +195,10 @@ Victory in this engagement will determine control of the battlefield. If we succ
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

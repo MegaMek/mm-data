@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d2aa-794a-ac65-b395b1ccb21d
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Warhammer IIC
 model:9
 mul id:3508
 
 Config:Biped
-TechBase:Clan
-Era:3086
-Source:RS:3085u-PP
-Rules Level:4
+techbase:Clan
+era:3086
+source:TR:3085
+published:RS:3085u-PP
+rules level:4
 role:Skirmisher
 
-quirk:searchlight
 quirk:stable
+quirk:searchlight
 
+mass:80
+engine:400 XXL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:80
-Engine:400 XXL (Clan) Engine(IS)
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:16 Clan Double
+walk mp:5
+jump mp:0
 
-Heat Sinks:16 Double
-Walk MP:5
-Jump MP:0
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:24
-RA Armor:24
-LT Armor:24
-RT Armor:24
-CT Armor:30
-HD Armor:9
-LL Armor:30
-RL Armor:30
-RTL Armor:10
-RTR Armor:10
-RTC Armor:15
+armor:Ferro-Fibrous(Clan)
+LA armor:24
+RA armor:24
+LT armor:24
+RT armor:24
+CT armor:30
+HD armor:9
+LL armor:30
+RL armor:30
+RTL armor:10
+RTR armor:10
+RTC armor:15
 
 Weapons:7
 Rotary AC/5, Left Arm
@@ -72,8 +74,8 @@ CLRotaryAC5
 CLRotaryAC5
 CLRotaryAC5
 CLRotaryAC5
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 
 Right Arm:
 Shoulder
@@ -86,8 +88,8 @@ CLRotaryAC5
 CLRotaryAC5
 CLRotaryAC5
 CLRotaryAC5
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 
 Left Torso:
 Fusion Engine
@@ -100,8 +102,8 @@ CLRotaryAC5 Ammo
 CLRotaryAC5 Ammo
 CLRotaryAC5 Ammo
 CLRotaryAC5 Ammo
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 
 Right Torso:
 Fusion Engine
@@ -114,8 +116,8 @@ CLLRM10
 Clan Ammo LRM-10
 CLRotaryAC5 Ammo
 CLRotaryAC5 Ammo
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -128,8 +130,8 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 
 Head:
 Life Support
@@ -150,8 +152,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -164,8 +166,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -173,18 +175,25 @@ Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:The Clan's interpretation on the classic Warhammer has never been subtle. The BattleMech's hyper-advanced technology only emphasized and improved its duty as a frontline brawler; boosting its mass by 10 tons (with equivalent increases in armor protection) made it even more powerful.
+overview:<p>The Warhammer IIC represents the Clan interpretation of one of the most iconic BattleMech designs in history. Developed during the Golden Century as Clan engineers sought to improve upon the Star League-era designs carried on the Exodus, the Warhammer IIC took the proven concept of paired energy weapons on a stable heavy chassis and elevated it with Clan technology. The result was an eighty-ton assault-class 'Mech that accentuated the original's role as a frontline brawler while dramatically increasing its firepower and protection through weight increases of ten tons over the Inner Sphere original and corresponding improvements in armor coverage.</p><p>Long one of the most prominent non-OmniMech designs in Clan toumans, the Warhammer IIC is almost as popular among the militaries of the Inner Sphere as it is within the Clans themselves. Clan Diamond Shark, later Sea Fox, drove much of this proliferation through aggressive marketing and trade deals following the Annihilation of Clan Smoke Jaguar and the Grand Refusal, reworking the venerable second-line design with significant upgrades that effectively produced altogether new BattleMechs. The Raven Alliance has since increased production at Industrial Complex Alpha on Dante, with output now rivaling that of Clan Sea Fox as the premier supplier of the design.</p>
 
-capabilities:Thanks to their technological expertise, they were able to add ten tons with the same speed and firepower and nearly double the armor of the original. The Warhammer IIC is built on an Endo Steel frame and is protected by tons of ferro-fibrous armor. The result is a dangerous 'Mech, able to hold its own in any battle against the Inner Sphere. Also note that the armor was the primary concern when designing the IIC version rivaling even 100 ton assault 'Mechs in durability and protection.
+capabilities:<p>Engineers have paid particular attention to including the best electronics and mechanical sub-systems available in each incarnation of the Warhammer IIC. The tried-and-true loadout of paired extended-range PPCs, five medium pulse lasers, and an SRM-6 launcher remains the most popular configuration and forms the bedrock of production. The ER PPCs provide devastating long-range firepower while the pulse laser array and missile system create a withering close-range defense that punishes any opponent attempting to exploit minimum PPC range. This combination of weapons gives the Warhammer IIC a versatility that belies its classification as a second-line design.</p><p>The Clan version of the classic Warhammer has never been subtle. Its hyper-advanced technology accentuated and improved the BattleMech's role as a frontline brawler, and increases in mass to eighty tons with corresponding improvements in armor protection made it even more powerful than its Inner Sphere progenitor. With its well-armored chassis and formidable array of weaponry, the 'Mech functions equally well as a brawler and as a commander's unit. The Ravens are not above experimenting with differing designs, however, whether derived from those deployed by other Clans or their own homegrown variants, ensuring the Warhammer IIC continues to evolve with each generation of Clan technology.</p>
 
-deployment:This version drops the ER PPCs and replaces them with experimental Rotary AC/5s. An XXL fusion engine provides enough power for a top speed of 86 km/h. The RACs are backed up by a pair of ER Medium Lasers and ER Small Lasers, and the missile launcher is now an LRM-10. In addition to the ferro-fibrous armor, an ECM Suite in the head disrupts enemy electronics. 
+deployment:<p>An experimental variant introduced around 3086, the IIC 9 replaced the traditional ER PPCs with a pair of rotary autocannon/5s, transforming the Warhammer IIC into a high-volume ballistic platform. A massive XXL fusion engine pushed top speed to eighty-six kilometers per hour, while the weight savings accommodated two ER medium lasers, two ER small lasers, an LRM-10 launcher, and an ECM suite. The ECM capability was unusual for a Warhammer variant and gave the IIC 9 a significant electronic warfare dimension, allowing it to disrupt enemy targeting networks while closing to effective autocannon range. Ferro-fibrous armor provided solid protection, though the XXL engine's vulnerability to critical hits represented a significant trade-off for the increased speed and firepower. Trellshire Heavy Industries on Twycross handled production of this unconventional variant.</p>
 
-history:The Warhammer IIC is now the most common Clan BattleMech in the Inner Sphere. These remarkable machines are fielded by every major Inner Sphere force, Clan, and many large mercenary groups. It is only found on the periphery, where its equally outstanding price tag is simply too high for these countries to justify.
+history:<p>The Warhammer IIC's journey from second-line garrison duty to widespread Inner Sphere deployment is inextricably linked to the commercial ambitions of Clan Diamond Shark. At the beginning of the 3060s, the Diamond Shark Khans directed their Merchants to find new ways to better market their Clan within Kerensky's Cluster. In response to the heavy round of internecine fighting following the Annihilation of Clan Smoke Jaguar and the Grand Refusal, they made the decision to rework a number of old second-line BattleMech designs in an attempt to make them more palatable to their fellow Clans. In doing so, they gave those 'Mechs significant face-lifts, effectively producing altogether new BattleMechs. The Diamond Shark technicians devoted no less energy to the Warhammer IIC's offensive systems, stripping out the decades-old Mk. XVII PPCs and mounting the much-newer Kingston models that had debuted only a few years earlier by Clan Cloud Cobra.</p><p>The Diamond Sharks received a massive marketing boost from Clan Star Adder, who made significant use of the new Warhammer IIC in their assaults on York against the Blood Spirits. Galaxy Commander Stanislov N'Buta purposely equipped entire Clusters with second-line 'Mechs such as the Warhammer IIC as a deliberate insult to the Blood Spirit warriors he was fighting. The Clan homeworlds were filled with images of Stars led by the Warhammer IIC destroying the best OmniMechs the Blood Spirits had to offer. While the Adders lost more in men and materiel than they gained on York, every victory the Spirits claimed was tempered by the knowledge that they had defeated mere second-line machines that were slowly becoming sought-after commodities.</p><p>The new Warhammer IIC made its appearance within the Inner Sphere as well, taking part in the liberation of Twycross in particular. The 'Mech has since been seen in service with the Nova Cats, the Ghost Bears, Khan Phelan Kell's Wolves, and Star Adder forces known to be operating in the Periphery. In one of the earliest major actions after the Blackout, Katana Tormark's Dragon's Fury assaulted Dieron in September 3132, where Warhammer IICs served on both sides of the engagement between Republic and Clan forces.</p><p>The Warhammer IIC 8 became the most widely distributed Clan BattleMech in the Inner Sphere, with every major power, Clan, and many mercenary groups fielding the impressive machines. During the closing days of the Jihad, the model served with particular success as a Manei Domini hunter-killer, especially when paired with 'Mechs mounting ECM suites. Clan Ghost Bear fielded Warhammer IIC 8s alongside their own Marauder IIC 7s in combined Stars that proved devastatingly effective. The Diamond Sharks and Snow Ravens fielded less well-received variants earlier in the Jihad built around large-bore hyper-assault Gauss rifles, though these saw more limited deployment. Clan Snow Raven introduced their own model in 3079 designed for vacuum combat operations, carrying fuel tanks for sustained space operations alongside a weapons array reminiscent of the original WHM-6R.</p><p>In recent years, the Raven Alliance has increased production of the Warhammer IIC at its Industrial Complex Alpha on Dante, with output now rivaling that of Clan Sea Fox, formerly Diamond Shark, as the premier supplier of the design. The tried-and-true loadout of paired ER PPCs and medium pulse lasers remains the bedrock of Snow Raven production, though the Ravens have shown a willingness to experiment with new configurations that keeps the venerable design relevant in an ever-evolving battlefield.</p>
 
 manufacturer:Trellshire Heavy Industries
+
 primaryfactory:Twycross
-systemmanufacturer:CHASSIS:SFX-80 Endo
-systemmanufacturer:ENGINE:Type 79 400 XL
-systemmanufacturer:ARMOR:Forging ZM15 Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:TDWS-37 Mk 2.2
-systemmanufacturer:TARGETING:“Hephaestus” CT-44
+
+fluffdate:2026-02-21 18:24:59
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Unknown (Endo Steel)
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:Unknown (320 XXL)
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Unknown (Ferro-Fibrous)
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

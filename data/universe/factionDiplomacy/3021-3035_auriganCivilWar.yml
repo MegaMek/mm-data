@@ -1,0 +1,44 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# Setting for HBS' BattleTech game. The dates are very roughly estimated based on
+# descriptions in game and in the sourcebook, then adjusted to match the planetary
+# control dates in MHQ to help contract generation. The MOC containment covers the
+# Arano government-in-exile; the alliance end is a guess (we don't have a clean end
+# to when the MOC stopped overtly supporting ARC, so a decade was used).
+
+wars:
+  - name: Aurigan Civil War
+    start: 3025-01-25
+    end: 3025-12-30
+    parties:
+      - factions: [ARC, ARD]
+      - factions: [ARC, TC]
+        start: 3025-05-09
+        end: 3025-08-15
+alliances:
+  - start: 3021-01-01
+    end: 3035-12-30
+    parties:
+      - factions: [ARC, MOC]
+      - factions: [ARD, TC]
+containedFactions:
+  - host: MOC
+    contained: ARC
+    start: 3022-02-01
+    end: 3025-09-01
+    opponents: [ARD]

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0ad-7073-a9d8-447f925c1b97
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Gorgon
 3071
 </year>
 
-<originalBuildYear>
-3071
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Brawler
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 4
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 3
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -92,9 +100,10 @@ Biped
 <Body Equipment>
 CLAPGaussRifle Ammo (10)
 Clan Ammo SRM-6 (10)
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -117,43 +126,52 @@ CLAPGaussRifle
 CLSRM6
 </Main Gun Equipment>
 
+<capabilities>
+<p>The Gorgon defining feature is its LRM-10 launcher, a weapon system that would be respectable on a medium BattleMek and is extraordinary on an eight-ton ProtoMek. The ten-missile salvo can deliver withering fire at ranges exceeding six hundred meters, allowing the Gorgon to engage targets that cannot effectively return fire against the small ProtoMek profile at that distance. An ER Micro Laser in the main gun mount provides minimal close-range backup. The fifty-rated fusion engine delivers forty-three kilometers per hour cruising speed with no jump capability, adequate for keeping pace with heavier formations but insufficient for rapid repositioning.</p><p>The Gorgon most critical vulnerability is ammunition dependency. The LRM-10 carries only twelve salvos of ammunition, exhausting in less than three minutes of sustained fire. Once the missiles are depleted, the Gorgon is reduced to its ER Micro Laser, a weapon so small that it poses no meaningful threat to anything larger than conventional infantry. Thirty-four points of armor provide decent protection, but the Gorgon lack of speed or jump capability means it cannot easily disengage when its ammunition runs dry. Prudent commanders maintain strict fire discipline in Gorgon Points, parceling out salvos to extend engagement time and planning withdrawal routes before the first missile is launched.</p>
+</capabilities>
+
+<overview>
+<p>The Gorgon is an eight-ton first-generation ProtoMek developed by Clan Smoke Jaguar as a heavy fire support platform within the original ProtoMek program on Huntress. Anchoring the heavier end of the ProtoMek weight spectrum alongside the nine-ton Minotaur, the Gorgon is built around a ten-tube LRM launcher that gives it bombardment capability unprecedented for a unit of its size. The LRM-10 is so large relative to the ProtoMek chassis that Jaguar scientists developed the main gun mount specifically to accommodate it, creating a hand-supported weapon system anchored to the torso that became standard on several subsequent ProtoMek designs. The Gorgon served as the long-range anchor of mixed ProtoMek formations, delivering indirect fire support that could suppress or destroy targets well beyond the engagement range of lighter designs.</p>
+</overview>
+
+<deployment>
+<p>The Gorgon 4 combines an AP Gauss Rifle with an SRM-6 launcher and three jump jets providing ninety meters of jumping distance. This multi-weapon configuration gives the variant effective capability against both armored and unarmored targets at close range. Forty-one points of armor, among the highest of any Gorgon variant, allow the design to absorb significant punishment. The jump jets provide tactical flexibility that the ground-bound base model lacks. The Gorgon 4 is one of the more popular variants, its balanced loadout making it suitable for a wide range of mission profiles.</p>
+</deployment>
+
+<history>
+<p>The Gorgon was designed to give ProtoMek formations organic long-range fire support, a capability that the lighter designs in the Smoke Jaguar program could not provide. Jaguar scientists recognized that ProtoMek Points operating without indirect fire support would be forced to close with enemies at ranges where the small machines thin armor became a critical liability. The Gorgon LRM-10 allowed a mixed Point to engage targets at distance, softening them before the lighter ProtoMeks closed to deliver finishing blows. The development of the main gun mount to accommodate the oversized launcher was a significant engineering achievement that influenced all subsequent heavy ProtoMek designs.</p><p>At the Battle of Huntress in 3060, Gorgon Points proved devastating against Task Force Serpent forces in several engagements. Operating from concealed positions in the Huntress highlands, Gorgon ProtoMeks delivered LRM fire into Inner Sphere formations that struggled to locate the small launchers at long range. The combination of ProtoMek-sized targets and BattleMek-scale missile fire created tactical problems that Serpent commanders had never trained to address, and several advances were stalled by Gorgon bombardment until the ProtoMeks exhausted their ammunition.</p><p>Following the Jaguar Annihilation, the Gorgon attracted particular interest from Clan Snow Raven, which established a production line at the Snow Raven Industrial Complex Alpha on Dante. The Ravens valued the Gorgon long-range fire support capability for defending their scattered naval installations against ground assault. Clan Goliath Scorpion maintained production at the Abysmal Manufacturing Complex on Huntress, while several other Clans acquired limited production capability.</p><p>Variant development has explored alternatives to the ammunition-dependent LRM configuration. The Gorgon 2 mounts a Medium Pulse Laser with four jump jets, converting the design from fire support to mobile direct combat. The Gorgon 3 carries dual SRM-4 launchers with an upgraded engine for close-range saturation fire. The Gorgon 4 combines an AP Gauss Rifle with an SRM-6 and jump jets for a versatile multi-role configuration. The Gorgon 5 mounts a Streak LRM-5 and Magnetic Clamp System, while the Gorgon 6 carries an AP Gauss Rifle, Angel ECM Suite, and Myomer Booster for electronic warfare operations.</p><p>The Wars of Reaving disrupted Gorgon production at several facilities, but the design broad manufacturing base ensured continuity. The Gorgon remains a critical component of Homeworld Clan ProtoMek formations, its long-range fire support capability proving difficult to replicate in lighter designs. Newer variants have expanded the chassis into roles far beyond its original fire support mandate, demonstrating the fundamental soundness of the eight-ton platform.</p>
+</history>
+
+<manufacturer>
+Complex 18
+</manufacturer>
+
+<primaryFactory>
+Albion (Junction City)
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:50 Fusion
+</systemModels>
+
 <source>
 TR:3060
 </source>
+
+<published>
+RS:3060u
+</published>
 
 <tonnage>
 8.0
 </tonnage>
 
-<capabilities>
-The Gorgon is also responsible for the practice of ProtoMechs carrying a "main gun" externally mounted to the torso and supported by the arms, a necessity devised by Clan Smoke Jaguar engineers given the size of its primary weapon. Initially only Clan Star Adder adopted the Gorgon after the fall of the Smoke Jaguars, though they were soon joined by the Jade Falcons, Nova Cats and Snow Ravens. The 65-rated fusion engine propels the ProtoMech to a cruising speed of 43 km/h and the Gorgon carries sufficient armoring to survive a full volley from an SRM-6 to the chest.
-</capabilities>
-
-<overview>
-The Gorgon is a heavy fire support unit that often anchors ProtoMech Points.
-</overview>
-
-<deployment>
-A Jihad era variant, this model utilized a torso-mounted AP Gauss Rifle with two tons of ammunition. Its torso was also fitted with an SRM-6 Launcher with one ton of reloads. It was given a half-set of jump jets and a rearrangement of its protection.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
-</history>
-
-<manufacturer>
-Snow Raven Industrial Complex Alpha, Unknown Clan Smoke Jaguar Facility
-</manufacturer>
-
-<primaryFactory>
-Dante,Unknown,
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:Unspecified
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
-</systemManufacturers>

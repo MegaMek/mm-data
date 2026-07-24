@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Furillo
-sucsId: 909
+sucsId: 910
 xcood: -137.266
 ycood: 78.255
 spectralType:
@@ -102,6 +102,12 @@ planet:
         socioIndustrial: D-D-B-D-D
       - date: '2270-01-01'
         population: 70610.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 268247.0
       - date: '2290-01-01'
@@ -125,6 +131,12 @@ planet:
         population: 59808716.0
       - date: '2360-01-01'
         population: 91041209.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 131273852.0
       - date: '2380-01-01'
@@ -171,6 +183,17 @@ planet:
         population: 1029444874.0
       - date: '2570-01-01'
         population: 1051741168.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Furillo Province
+        # capitalType: Region Capital
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2580-01-01'
         population: 1080801373.0
       - date: '2590-01-01'
@@ -271,16 +294,31 @@ planet:
         population: 1124715654.0
       - date: '3020-01-01'
         population: 1122092276.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Bolan Province
       - date: '3030-01-01'
         population: 1125741202.0
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-03-13'
         population: 1137965097.0
         socioIndustrial:
           source: canon
           value: B-B-B-B-D
-      - date: '3040-01-19'
+      - date: '3040-12-31'
+        # administration:
+        #   - Tamarind March
+        #   - Soilihull Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3046-01-01'
@@ -294,6 +332,15 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Bolan Province
       - date: '3060-01-01'
         population: 1160605283.0
       - date: '3064-07-01'
@@ -305,6 +352,12 @@ planet:
       - date: '3064-07-17'
         faction:
           source: canon
+          value:
+            - LA
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - LA
       - date: '3070-01-01'
@@ -331,6 +384,9 @@ planet:
         population: 1250872947.0
       - date: '3145-01-01'
         population: 1261929205.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Donegal Province
   - name: Tsuru-shi
     type: TERRESTRIAL
     orbitalDist: 0.7

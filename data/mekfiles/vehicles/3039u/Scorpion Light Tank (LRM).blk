@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e309-7290-90f4-f7de22d1ed89
+</UUID>
 
 <UnitType>
 Tank
@@ -36,12 +31,6 @@ Scorpion Light Tank
 <Model>
 (LRM)
 </Model>
-
-<quirks>
-ubiquitous_clan
-ubiquitous_is
-poor_work
-</quirks>
 
 <mul id:>
 2842
@@ -59,6 +48,12 @@ IS Level 1
 Missile Boat
 </role>
 
+<quirks>
+ubiquitous_clan
+ubiquitous_is
+poor_work
+</quirks>
+
 <motion_type>
 Tracked
 </motion_type>
@@ -70,6 +65,18 @@ Tracked
 <engine_type>
 1
 </engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 20
@@ -101,45 +108,61 @@ LRM 5
 LRM 10
 </Turret Equipment>
 
-<source>
-TR:3039
-</source>
-
-<tonnage>
-25.0
-</tonnage>
 <capabilities>
-The Scorpion Light Tank's performance is modest, especially against similar light armor units. Its main weapon, the Deleon Autocannon, delivers limited damage at long ranges but struggles with accuracy at closer distances. The 20mm Gatling gun, though reliable, falls short compared to the secondary armaments typically found on other light tanks. The tank's lack of speed and weak armor present significant tactical challenges.<p>Complicating its operational efficacy is Quikscell Company's notorious reputation for inconsistent quality control. Many new Scorpions come with minor defects that require time-consuming troubleshooting and repairs, affecting their readiness for immediate deployment.</p>
+<p>The Scorpion moves at a modest cruising speed limited by its internal combustion engine and in keeping with the cost-constrained design philosophy that defines the vehicle. Its primary armament is the Deleon 5 Autocannon, a weapon capable of inflicting meaningful damage at range but susceptible to tracking difficulties against targets closing to near contact. A secondary 20mm Gatling machine gun provides point defense against infantry and light vehicles. ProtecTech Light armor covers the hull and turret, offering minimal protection that leaves the vehicle vulnerable to moderate direct fire, particularly from above and to the rear.</p><p>The Scorpion's primary tactical limitation is its inability to engage targets effectively in isolation. Limited ground speed, thin armor, and an autocannon with documented close-range tracking problems mean that a single Scorpion is a modest threat to purpose-built combat vehicles. Quikscell Company's notorious quality control further reduces reliability, with many vehicles suffering persistent minor mechanical faults. Commanders address these weaknesses through mass deployment, compensating for individual inadequacy with weight of numbers. In that role the Scorpion performs adequately, and its widespread availability makes it a practical choice for defensive assignments where resupply is dependable.</p>
 </capabilities>
 
 <overview>
-The Scorpion Light Tank, originating from the Quikscell Company, is widely recognized as the "Budget Tank" for its affordability. This cost-effectiveness makes it a favored choice for less affluent worlds. Despite its cost advantages, the Scorpion is often utilized in large groups to offset its relative inferiority in power and defense compared to other vehicles in its class.
+<p>The Scorpion Light Tank is a 25-ton tracked combat vehicle produced by the Quikscell Company and a network of licensed manufacturers beginning in 2807. Built as an inexpensive and easily maintained alternative to more capable armored designs, the Scorpion filled the growing garrison and security demands of Inner Sphere successor states following the devastation of the First Succession War. Its low production cost and minimal maintenance requirements made it attractive to planetary militias, mercenary commands, and even organized bandit forces that valued accessibility over peak combat performance. The design's near-ubiquitous presence across the Inner Sphere earned it the informal nickname "Budget Tank," a label that captures both its affordability and its limitations. Multiple manufacturers produce the Scorpion on worlds across the major successor states, sustaining a production base broad enough to survive even the worst periods of industrial disruption and territorial change.</p>
 </overview>
 
 <deployment>
-Introduced in 2813, the Scorpion LRM variant alters the tank's armament by replacing the Deleon autocannon with an LRM-10 and LRM-5. This modification shifts its operational focus towards long-range missile warfare. In some configurations, the Gatling gun is removed to allow for additional armor, enhancing the tank's resilience in battle.
+<p>The LRM variant extends the Scorpion's effective engagement range by substituting dedicated missile launchers for the autocannon, permitting formations to engage at distances that reduce enemy return fire accuracy. Capellan Confederation and Free Worlds League commands integrated this version into militia light armor formations during the mid-Succession Wars, fielding it alongside standard Scorpions to provide layered fire coverage at varying engagement distances. The variant appears in scattered inventory across any theater where Quikscell production was historically active.</p>
 </deployment>
 
 <history>
-Since its inception in 2807, the Scorpion Light Tank has been a ubiquitous element in military engagements across the Inner Sphere. Renowned for its widespread manufacture and deployment, the Scorpion has served in numerous armies, planetary militias, mercenary commands, and even in the ranks of bandits and pirates. Its affordability and ease of production have made it a common choice, particularly on poorer worlds where more advanced or expensive vehicles are not feasible.
-<p>Despite its prevalence, the Scorpion's combat history is a mix of modest successes and notable shortcomings. In engagements like the "Scorpions Nest" on Santander V, the tank demonstrated its potential when deployed in large numbers. In this battle, a swarm of Scorpions ambushed a superior Kurita force, causing significant damage and highlighting the tank's capability in specific tactical scenarios.</p>
-<p>However, the Scorpion's fundamental design flaws were exposed in harsher combat realities. For example, during the defense of Ronel in 3133, the Scorpion's light armor and basic weaponry were inadequate against the Dragon's Fury, a more advanced and organized enemy. Similarly, on Willowick, DCMS forces easily overpowered defending Scorpions, with the tanks managing only minimal resistance against the Combine's hardened and ballistic-reinforced armor.</p>
-<p>The tank's extensive use over the centuries led to various modifications and upgrades, particularly in the early 32nd century, with the introduction of fuel cell engines. These enhancements somewhat improved its operational capabilities, but the Scorpion remained a low-tier combat vehicle. Even with occasional tactical successes, it continued to serve primarily as expendable cannon fodder in larger military operations.</p>
-<p>Despite its limitations, the Scorpion's role in the BattleTech universe is significant. It represents a class of vehicles crucial for less affluent forces and serves as a reminder of the diverse and complex nature of mechanized warfare, where even the most humble units can have a strategic impact in the right circumstances.</p>
+<p>The Scorpion Light Tank entered production at Quikscell facilities across multiple worlds in 2807, filling the urgent need for replaceable armor during the grinding attrition of the early Succession Wars. With more sophisticated designs becoming impossible to produce or sustain at scale, military planners across all major successor states accepted the vehicle's limitations in exchange for a steady supply of battlefield-ready light tanks. Production spread to additional manufacturers, including facilities in the Draconis Combine, Capellan Confederation, and Lyran Commonwealth, reflecting the deliberate redundancy that Succession War commanders demanded after watching single-source supply chains collapse around them.</p><p>The vehicle developed a particular association with both front-line desperation and rear-area security. Field commanders discovered that massed Scorpion formations could impose meaningful costs on enemies in close terrain, and this tactical lesson persisted across centuries. When the Free Rasalhague Republic inherited production facilities from the Draconis Combine, output continued largely uninterrupted, sustaining FRR light armor forces until Clan Ghost Bear overran the relevant worlds. An engagement during the Republic's final years, in which a Scorpion force ambushed enemy armored elements using a supply area as an improvised kill zone, became a widely referenced training example for managing light vehicle swarms in close terrain. The subsequent ronin raid at Radstadt further demonstrated the Scorpion's limitations against heavier armored opponents when anti-vehicle firepower was absent from a formation's inventory.</p><p>The Scorpion survived every major conflict that reshaped the Inner Sphere. When the HPG Blackout fragmented interstellar communication and degraded supply chains during the early Dark Age, locally produced and easily maintained Scorpions became more valuable to militia commanders rather than less. A confrontation at Lenor in 3133 demonstrated the design's continued relevance, as militia crews exploited urban infrastructure and maintenance tunnels to compensate for the vehicle's inherent limitations against a better-equipped opponent, inflicting meaningful casualties before being overcome. By the ilClan era the Scorpion's production record exceeded three centuries and showed no sign of ending, with new manufacturing sites continuing to emerge across successor state and Periphery territories alike.</p>
 </history>
 
 <manufacturer>
-Unknown
+Quikscell Company|Quikscell Company|Quikscell Company|Quikscell Company|Quikscell Company|Quikscell Company
 </manufacturer>
 
 <primaryFactory>
-Unknown
+Ares|Kalidasa|Layover|Oliver|Pandora|Willowick
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:N/A
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
 ENGINE:SitiCide 100 ICE
 ARMOR:ProtecTech Light
+JUMP_JET:N/A
 COMMUNICATIONS:Basix 200
 TARGETING:OptiSight-12
-</systemManufacturers>
+</systemModels>
+
+<source>
+TR:3039
+</source>
+
+<published>
+RS:3039u
+</published>
+
+<tonnage>
+25.0
+</tonnage>
+
+<fuelType>
+PETROCHEMICALS
+</fuelType>
+

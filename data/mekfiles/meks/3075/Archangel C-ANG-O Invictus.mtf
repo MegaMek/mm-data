@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,29 +15,28 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-ce1a-7cd6-8cdf-fbdfeb2efa15
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Archangel
 model:C-ANG-O Invictus
 mul id:65
 
-Config:Biped Omnimech
+Config:Biped OmniMek
 techbase:Inner Sphere
 era:3069
-source:TR:3075
+source:TR:3075,TR:J
+published:RS:J
 rules level:2
 role:Sniper
 
-
-
-
-quirk:command_mech
-quirk:imp_com
-quirk:imp_sensors
-quirk:bad_rep_clan
 quirk:bad_rep_is
-
+quirk:command_mech
+quirk:bad_rep_clan
+quirk:imp_sensors
+quirk:imp_com
 
 mass:100
-engine:300 Compact Engine(IS)
+engine:300 Compact Engine
 structure:IS Endo Steel
 myomer:Standard
 cockpit:Small Cockpit
@@ -177,17 +176,27 @@ IS Endo Steel
 -Empty-
 -Empty-
 
-overview:Debuting in 3069, the Celestial series of OmniMechs are engineered to be used by the elite Word of Blake Manei Domini troops.
- 
-capabilities:The Archangel is the largest of these. Designed to be an "anchor" for Word formations, the 'Mech is known as a "zombie" because of its ability to take extreme amounts of damage and continue operating. The Archangel features a compact fusion engine, compact gyro, a small cockpit, and nineteen and a half tons of standard armor, which frees up a large amount of internal space, while an Endo Steel frame opens up free tonnage, making heavier components possible. A C3i Computer helps direct and coordinate fire.
+overview:<p>The Archangel is the heaviest and rarest of the Word of Blake's Celestial series, a hundred-ton assault OmniMech designed to anchor Manei Domini formations. Its reputation as a "zombie" stems from the design's extraordinary ability to absorb punishment and continue fighting, a quality achieved through an unconventional combination of a compact fusion engine and compact gyro that sacrifice performance for raw survivability. Gibson Federated BattleMechs and Martinson Armaments handled production from 3069, though limited overall production numbers meant the Archangel was largely restricted to senior command positions within elite Shadow Division formations, and only a relative handful were ever produced.</p>
 
-history:The Invictus, or primary, version of the Archangel carries a Guardian ECM Suite to allow the 'Mech to disrupt enemy electronics and targeting systems. For ranged combat, the Archangel Invictus carries a Plasma Rifle and Heavy PPC, both of which are slaved to an advanced targeting computer. The Invictus also includes jump jets, allowing the 100-tonner to hop 90 meters. Finally, a Retractable Blade gives the design added defense in close combat situations.
+capabilities:<p>The Archangel's engineering prioritizes endurance over speed. A Celestial Series AA1E endo steel chassis houses an Immortus 300 compact fusion engine and compact gyro, both of which occupy less internal volume than standard equivalents at the cost of reduced efficiency. This approach, combined with a small cockpit, frees an extraordinary thirty-six tons of pod space for a hundred-ton OmniMech. Nineteen and a half tons of Durallex Heavy Gold standard armor provide maximum protection, and the fixed C3i computer enables the Archangel to serve as a formation coordination node.</p><p>The compact engine and gyro are the keys to the design's legendary toughness. Unlike XL-engined designs that can be destroyed by a side torso breach, the Archangel's compact components concentrate critical systems within the center torso, meaning the 'Mech can lose both side torsos and continue operating. The Invictus configuration exploits the generous pod space with a plasma rifle, heavy PPC, and targeting computer for precision strikes, backed by a Guardian ECM suite and retractable blade.</p>
 
-manufacturer:Gibson Federated BattleMechs, Martinson Armaments
-primaryfactory:Gibson (Gibson Federated), Terra (Martinson)
-systemmanufacturer:CHASSIS:Celestial Series AA1E
-systemmanufacturer:ENGINE:Immortus 300 Compact Fusion
-systemmanufacturer:ARMOR:Durallex Heavy Gold
-systemmanufacturer:COMMUNICATIONS:Master’s Voice Cel-Alpha
-systemmanufacturer:TARGETING:Master’s Sight 1-Omega
+deployment:<p>The Invictus configuration combines a plasma rifle and heavy PPC slaved to an advanced targeting computer for precision strikes at range. A Guardian ECM suite disrupts enemy electronics and targeting networks, while a retractable blade provides a devastating melee option. The configuration leverages the Archangel's legendary durability to advance under fire and deliver precision bombardment, with the compact engine ensuring that even severe torso damage cannot destroy the machine through side breaches.</p>
 
+history:<p>The Archangel was produced in smaller numbers than any other Celestial, and the story of its manufacturing is inseparable from the story of the three facilities that built the entire series. Doctor Devon Cortland developed all six Celestials at the secretive Sekkaris Mekwerks facility on Mars, where prototype development, specialized production, and custom configurations for elite operatives were handled throughout the Jihad. Gibson Federated BattleMechs operated the primary volume production line on Gibson, manufacturing the bulk of Celestial hulls. Martinson Armaments on Terra provided secondary production capacity. These three facilities, each serving a distinct role, formed the backbone of the Celestial manufacturing network.</p><p>Gibson fell first. Coalition forces liberated the Free Worlds League in a series of campaigns that stripped the Word of Blake of its most productive Celestial factory. The loss of Gibson Federated's lines had an immediate impact on replacement rates across the entire series, but the Archangel felt the effect most acutely. Its hundred-ton chassis demanded proportionally more advanced materials than its lighter siblings, including specialized compact engine and gyro assemblies that few manufacturers could produce, and Gibson had been the only facility tooled for volume Archangel production. Martinson Armaments on Terra and Sekkaris Mekwerks on Mars continued manufacturing, but output dropped sharply. The final Coalition assault on Terra between 3078 and 3081 destroyed the Martinson facilities and saw Republic forces seize Sekkaris Mekwerks, though the specialized equipment was largely dismantled during the post-war cleanup. The loss of all three facilities ended Celestial production permanently.</p><p>The Archangel's "zombie" reputation was earned through multiple documented engagements where the design absorbed catastrophic damage and continued fighting. Coalition after-action reports repeatedly noted the difficulty of putting an Archangel down, as the compact engine and gyro allowed the 'Mech to remain operational even after losing limbs and side torsos that would have destroyed any XL-engined design. This resilience, combined with the Manei Domini pilots' cybernetic enhancements and fanatical refusal to surrender, made Archangel encounters among the most harrowing experiences Coalition MechWarriors faced during the Jihad.</p><p>Specter Precentor Omicron Berith of the Opacus Venatori piloted one of the most notorious Archangels in service. Operating under an independent command authority, Berith's custom configuration was tailored for extended solo operations where the design's extreme survivability allowed it to operate without support for prolonged periods. Berith was believed responsible for several devastating raids on Coalition supply lines where a single Archangel engaged an entire lance, absorbing tremendous punishment while systematically destroying logistics targets.</p><p>After the fall of Terra, surviving Archangels became the rarest of all Celestial salvage. Their size made concealment difficult, and their massive logistical requirements strained even well-equipped remnant cells. Republic intelligence estimated that fewer than a dozen operational Archangels survived the end of the Jihad, and that number has dwindled further through attrition. Any confirmed Archangel sighting in the ilClan era would represent a major intelligence event, suggesting the existence of a substantial and well-supplied Blakist remnant facility. Dedicated hunter-killer teams were organized specifically to engage Archangels during the Jihad, combining massed firepower with coordinated flanking maneuvers designed to overwhelm the design's legendary durability, and those protocols remain in effect wherever successor state forces operate near suspected remnant holdouts.</p>
+
+manufacturer:Gibson Federated BattleMechs|Martinson Armaments
+
+primaryfactory:Gibson|Terra
+
+fluffdate:2026-02-21 20:14:52
+
+systemmanufacturer:CHASSIS:Celestial Series
+systemmode:CHASSIS:AA1E [Endo Steel]
+systemmanufacturer:ENGINE:Immortus
+systemmode:ENGINE:300 Compact Fusion
+systemmanufacturer:ARMOR:Durallex
+systemmode:ARMOR:Heavy Gold
+systemmanufacturer:COMMUNICATIONS:Master's Voice
+systemmode:COMMUNICATIONS:Cel-Alpha with C3i Computer
+systemmanufacturer:TARGETING:Master's Sight
+systemmode:TARGETING:1-Omega

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Lancaster (FWL)
-sucsId: 1449
+sucsId: 1450
 xcood: -115.774
 ycood: -88.191
 spectralType: F4V
@@ -118,7 +118,7 @@ planet:
         faction:
           source: canon
           value:
-            - MCM
+            - MRep
         population: 41900.0
         socioIndustrial: D-F-D-F-C
       - date: '2250-01-01'
@@ -132,6 +132,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '2280-01-01'
         population: 2594355.0
       - date: '2290-01-01'
@@ -140,6 +146,15 @@ planet:
         population: 10465657.0
       - date: '2310-01-01'
         population: 18420674.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Marik Commonwealth
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 30068785.0
       - date: '2330-01-01'
@@ -312,8 +327,20 @@ planet:
           source: canon
           value:
             - MSC
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '3080-01-01'
         population: 682995550.0
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MSC
       - date: '3090-01-01'
         population: 690688098.0
       - date: '3100-01-01'
@@ -340,6 +367,22 @@ planet:
         faction:
           source: canon
           value:
+            - CP
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CWE
+      - date: '3152-12-31'
+        # administration:
+        #   - Clan Protectorate
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
             - CP
   - name: Andrews's Land
     type: ICE_GIANT

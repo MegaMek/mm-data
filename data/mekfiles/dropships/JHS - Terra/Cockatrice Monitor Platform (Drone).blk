@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa7d-7097-bb05-82c4d834abd4
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Cockatrice Monitor Platform
 3062
 </year>
 
-<originalBuildYear>
-3062
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,10 +53,10 @@ Spheroid
 </motion_type>
 
 <transporters>
-1stclassquarters:20.0:0
-2ndclassquarters:0.0:0
-crewquarters:63.0:0
-cargobay:21.0:1:4
+1stclassquarters:20.0:0:-1::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+crewquarters:63.0:0:-1::-1:0
+cargobay:21.0:1:4::-1:0
 </transporters>
 
 <SafeThrust>
@@ -92,9 +83,13 @@ cargobay:21.0:1:4
 20
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 221
@@ -154,10 +149,48 @@ ImprovedCasparIIDroneControlSystem
 15
 </structural_integrity>
 
+<capabilities>
+<p>The Cockatrice mounts an impressive weapons array for its modest eight-hundred-ton displacement. The nose concentrates a sub-capital missile launcher loaded with Piranha missiles, two large pulse lasers, two LRM-20 racks with Artemis IV fire control, a light Gauss rifle, and a laser anti-missile system. Each side of the hull carries four large pulse lasers, a light Gauss rifle, and two laser anti-missile systems. The aft arc mounts an ER large laser and two large pulse lasers. Sixty-eight double heat sinks manage the substantial thermal output from this energy-heavy arsenal.</p><p>Protected by forty-one tons of heavy ferro-aluminum armor, the Cockatrice is remarkably resilient for a vessel of its size. The hull is derived from the K-1 class DropShuttle, providing basic maneuverability at one-G acceleration. The most critical system aboard is the Improved Advanced Smart Robotic Control System, which ties each Cockatrice into a broader SDS network. When coordinated through a command station, these drones operate with lethal efficiency, executing synchronized attacks that overwhelm individual targets through concentrated fire.</p>
+</capabilities>
+
+<overview>
+<p>The Cockatrice monitor platform is an automated defensive drone developed by the Word of Blake as the backbone of their fixed Space Defense System installations. Introduced in 3062, the eight-hundred-ton Spheroid vessel was designed to address critical vulnerabilities identified in earlier satellite-based defense concepts. Simulations had demonstrated that stationary satellite platforms were fragile targets, easily destroyed by determined attackers before they could inflict meaningful damage.</p><p>By building the platform around a DropShip hull rather than a satellite body, the Word of Blake created a defensive asset capable of limited maneuvering, serious offensive firepower, and sufficient armor protection to remain a factor in sustained engagements. The resulting design proved far more resilient than any static orbital defense, and swarms of these drones became a defining feature of Blakist-controlled space.</p>
+</overview>
+
+<deployment>
+<p>Cockatrice platforms were deployed exclusively by the Word of Blake across their controlled systems, forming the core of fixed orbital defense networks during the Jihad era. These drones operated in coordinated swarms linked to SDS command stations, providing layered defense over strategically vital worlds. Their automated nature eliminated crew casualties as a concern, allowing Blakist commanders to commit them to engagements that would be suicidal for crewed vessels.</p>
+</deployment>
+
+<history>
+<p>The Cockatrice was developed during the early 3060s as part of the Word of Blake's ambitious program to establish automated Space Defense Systems across their holdings. Early design work focused on satellite-based platforms, but extensive simulations revealed that fixed satellites were too vulnerable to serve as reliable defensive assets. Engineers shifted to a mobile platform concept, ultimately basing the design on an existing DropShuttle hull to provide the necessary combination of mobility, protection, and weapons capacity.</p><p>The Cockatrice entered service in 3062 and was rapidly deployed across key Word of Blake installations. When networked through command elements, swarms of these drone platforms proved devastatingly effective against attacking naval forces. The design demonstrated its lethality when a concentration of Cockatrice platforms destroyed a Clan WarShip during operations over a contested world, reinforcing the threat that massed automated defenses posed to even the most powerful conventional warships. The platform remained a cornerstone of Blakist defensive doctrine throughout the Jihad.</p>
+</history>
+
+<manufacturer>
+Boeing Interstellar
+</manufacturer>
+
+<primaryFactory>
+Terra
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <notes>
 Improved Caspar II Advanced Smart Robotic Control System
-(Gunnery 3, Piloting 4)
-Weapons:
 </notes>
 
 <source>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,19 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-
-<mul id:>
-1273
-</mul id:>
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a597-72d0-a534-ede6479f158a
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -37,39 +28,17 @@ BattleArmor
 Gray Death Heavy Suit
 </Name>
 
-<model>
+<Model>
 (Sqd4)
-</model>
+</Model>
 
-<chassis>
-biped
-</chassis>
+<mul id:>
+1273
+</mul id:>
 
-<weightclass>
-3
-</weightclass>
-
-<Trooper Count>
-4
-</Trooper Count>
-
-<cruiseMP>
-2
-</cruiseMP>
-
-<Armor>
-10
-</Armor>
-
-<Squad Equipment>
-ISBASupportPPC:LA
-BAAPMount:RA
-InfantryAssaultRifle:RA:APM
-ISBAImprovedSensors:RA
-ISBASRM4OS:Body
-ISBASRM4OS:Body
-BABasicManipulator:RA
-</Squad Equipment>
+<year>
+3083
+</year>
 
 <type>
 IS Level 2
@@ -79,17 +48,13 @@ IS Level 2
 Scout
 </role>
 
-<year>
-3083
-</year>
-
 <motion_type>
 Leg
 </motion_type>
 
-<source>
-TR:3085
-</source>
+<cruiseMP>
+2
+</cruiseMP>
 
 <armor_type>
 28
@@ -99,22 +64,43 @@ TR:3085
 3
 </armor_tech>
 
-<overview>
-A heavy trooper design, the Gray Death Heavy is a decent suit, with a formidable potential to deliver damage.
-</overview>
+<Squad Equipment>
+ISBASupportPPC:LA
+BAAPMount:RA
+InfantryAssaultRifle:APM:RA
+ISImprovedSensors:RA
+ISBASRM4OS:Body
+ISBASRM4OS:Body
+BABasicManipulator:RA
+</Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
 
 <capabilities>
-With a pair of one-shot SRM-4s, the Gray Death Heavy has a serious alpha strike, allowing a four-suit squad to inflict an average of twenty points of damage per launcher. With an Anti-Personnel Weapon Mount the natural choice for the right arm, continuing the Grey Death use of the mount on all but their Scout Suit design, plus a Basic Manipulator to match the small size of the manipulator on the right hand, that quickly filled in some of the blanks. Rounding out the armament, a Support PPC is perhaps the best of the light-to-mid-sized energy weapons available to the Inner Sphere. Following the pattern set by the Gray Death Standard, the GD Heavy isn't jump-capable, and although it moves at the maximum ground speed possible for Heavy suits without the use of advanced technology.
+<p>The Gray Death Heavy Suit is the largest and most heavily armed design in the Gray Death battle armor family. A built-in Support PPC provides sustained direct-fire capability against armored targets, while two detachable one-shot SRM-4 packs deliver a devastating opening salvo. A Basic Manipulator and Improved Sensors round out the equipment package. At 1,500 kilograms, the suit carries significantly more armor than its lighter siblings.</p><p>Ground speed tops out at 21 km/h, making the Heavy the slowest Gray Death design. The suit lacks jump capability entirely, limiting its tactical mobility in broken terrain. The trade-off is raw combat power: the Support PPC can threaten targets that lighter battle armor cannot meaningfully engage, and the twin SRM-4 packs allow a single trooper to deliver concentrated missile fire before closing to direct-fire range. Once the missile packs are expended and jettisoned, the trooper relies on the Support PPC alone.</p>
 </capabilities>
 
+<overview>
+<p>The Gray Death Heavy Suit is a heavy battle armor design produced by Defiance Industries on Furillo. Introduced in 3083, the suit was the first entirely new Gray Death design created after Defiance absorbed Gray Death Technologies. Built for direct assault operations where lighter suits lack the necessary firepower, the Heavy carries significantly heavier weaponry and armor than other designs in the Gray Death family, filling the heavy fire support role within Lyran battle armor formations.</p>
+</overview>
+
 <deployment>
-Introduced in the Jihad, this version of the Gorilla removes the standard equipment and replaces it with a Small Laser and two Heavy Battle Claws. The armor protection is doubled.
+<p>LCAF commanders deployed Gray Death Heavy Suits in four-trooper assault squads tasked with cracking hardened positions that lighter battle armor could not threaten. Each squad's combined missile volleys and sustained particle cannon fire could suppress or destroy fortified emplacements, light vehicles, and exposed BattleMech components. Heavy Suit squads typically advanced behind Standard or Scout screens, committing to the assault once reconnaissance elements had identified the primary targets.</p>
 </deployment>
 
 <history>
-The Gray Death Heavy was introduced in 3083, expanding upon the Jihad introduction era listed. The suit is being sold outside the Lyran Commonwealth, unlike the smaller GD Strike. Found in the ranks of the LCAF and Republic Armed Forces, as well as mercenary units such as the Kell Hounds and the remnants of the Wolf's Dragoons, the Gray Death Heavy is apparently a popular design and fills a sparsely populated niche in the Inner Sphere militaries.
+<p>The Gray Death Heavy Suit entered production at the Defiance Industries plant on Furillo in 3083, the first entirely new Gray Death design created after Defiance absorbed Gray Death Technologies. Where the Scout, Standard, and Strike Suits all traced their lineage to the original Gray Death Legion, the Heavy was a Defiance product from inception. Designed for direct assault rather than the combined-arms flexibility of earlier Gray Death armor, the 1,500-kilogram suit carried substantially heavier weaponry and protection than its predecessors.</p><p>Production began during the early Republic era as the Lyran Commonwealth rebuilt military capacity lost during the Jihad. The Heavy filled a gap in the LCAF's battle armor inventory, providing a platform capable of engaging hardened targets that lighter Gray Death suits could not threaten effectively. Defiance marketed the suit alongside the Standard and Scout as part of a complete Gray Death battle armor family, offering LCAF commanders complementary light, medium, and heavy options from a single manufacturer.</p>
 </history>
-
 
 <manufacturer>
 Defiance Industries
@@ -128,12 +114,47 @@ Furillo
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
 
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <notes>
 From this forum post. https://bg.battletech.com/forums/fan-articles/battle-armor-of-the-week-gray-death-heavy/
 </notes>
+
+<source>
+TR:3085
+</source>
+
+<published>
+RS:3085u-ONN
+</published>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+10
+</armor>
+
+<Trooper Count>
+4
+</Trooper Count>
+
+<weightclass>
+3
+</weightclass>
 

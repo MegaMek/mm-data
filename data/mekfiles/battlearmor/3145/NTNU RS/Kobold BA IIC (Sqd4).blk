@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a6d8-76ba-ad37-e8bb95c9f01f
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -80,20 +75,72 @@ Clan BA Stealth (Improved):Body
 Clan BA Stealth (Improved):RA
 BAArmoredGlove:LA
 BAArmoredGlove:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
-Infantry Auto Rifle:APM
+InfantryAssaultRifle:APM
 </Point Equipment>
 
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<slotless_equipment>
+BAVTOL
+</slotless_equipment>
+
+<capabilities>
+<p>The Kobold IIC abandons the original design’s ground-combat orientation in favor of aerial reconnaissance. A VTOL movement system replaces the jump jets of the base Kobold, granting sustained flight capability that dramatically expands the suit’s operational reach as a forward observer. Improved stealth armor and an integrated ECM suite make the IIC significantly harder to detect and track than its predecessor. A light TAG designator serves as the primary mission equipment, allowing troopers to paint targets for artillery and guided munitions from concealed positions. A light machine gun provides limited self-defense capability against soft targets, while HarJel systems give the suit resilience in hostile environments including vacuum and underwater operations. The trade-off is clear: the IIC carries minimal offensive armament and relies on stealth and speed rather than firepower to survive on the battlefield.</p>
+</capabilities>
+
+<overview>
+<p>The Kobold IIC is a Clan-tech redesign of the original Kobold battle armor, produced by Grumium Creations for the Rasalhague Dominion. Entering service in the early 3090s, the IIC was developed to extend the Kobold platform’s operational relevance with a fundamentally different mission profile. Reconfigured as a dedicated aerial reconnaissance platform, the IIC replaced the original’s ground-combat orientation with flight capability, enhanced stealth, and hostile-environment protection, filling a scouting niche that the Dominion’s heavier Clan battle armor could not.</p>
+</overview>
+
+<deployment>
+<p>Rasalhague Dominion garrison units organized along Inner Sphere infantry conventions employed the Kobold IIC in four-trooper squads for aerial scouting missions. Former FRR infantry traditions persisted in some Dominion formations, and these squads provided a VTOL-capable reconnaissance element that complemented heavier ground-based battle armor in mixed infantry platoons.</p>
+</deployment>
+
 <history>
-BA Harjel not coded. Unit included for completeness
+<p>The Kobold IIC emerged from a recognition within the Rasalhague Dominion that the original design had grown redundant alongside the far superior Elemental. Rather than retire the suit entirely, Grumium Creations was tasked with finding a new role that could justify continued production. The answer was to abandon the ground-based scout concept in favor of a dedicated aerial reconnaissance platform. Equipped with a VTOL movement system, improved stealth armor, and HarJel self-repair systems, the IIC traded the original’s ground-fighting orientation for unmatched flexibility as a spotter and forward observer. The redesign entered production and saw service with Dominion garrison clusters, where its ability to operate in hostile environments and avoid detection made it a valuable complement to heavier Clan battle armor in combined-arms formations.</p>
 </history>
 
+<manufacturer>
+Grumium Creations
+</manufacturer>
+
+<primaryFactory>
+Grumium
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-RS:3145-NTNU
+TR:3145
 </source>
+
+<published>
+RS:3145-NTNU,RS:3145
+</published>
 
 <chassis>
 biped
@@ -115,35 +162,3 @@ biped
 1
 </weightclass>
 
-<overview>
-The Kobold is a battle armor design that was collaborated on by the Free Rasalhague Republic, ComStar, and the second Star League.
-</overview>
-
-<capabilities>
-The Kobold can only jump up to ninety meters at a time, but it does boast enough armor to stop a medium laser. This armor is of the basic stealth variety, making it more difficult to target far away. The Kobold has the distinction of being a battle armor suit used by the Inner Sphere, ComStar, and the Clans.
-</capabilities>
-
-<deployment>
-This version of the Kobold is protected by Improved Stealth armor and carries an ECM Suite, Light TAG, and Light Machine Gun. It is also equipped with a VTOL movement system to increase its utility as a spotter.
-</deployment>
-
-<history>
-The idea for such a joint project was developed after the Republic's attempts to procure Kage suits from the Draconis Combine came to naught. So, in 3062, the three powers came together and began to design a battlesuit that could mimic the capabilities of the Kage. After this process began, the concept of the design shifted somewhat to a light armor that can still hold its own in battle. By the mid-3070s the Kobold was firmly a Rasalhague design since the Star League disbanded and the Republic severed ties with ComStar in favor of Clan Ghost Bear.
-</history>
-
-<manufacturer>
-Grumium Creations
-</manufacturer>
-
-<primaryFactory>
-Grumium
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

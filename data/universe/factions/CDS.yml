@@ -17,6 +17,12 @@
 
 key: CDS
 name: Clan Sea Fox
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CDS
+  - CSF
 nameChanges:
   2984: Clan Diamond Shark
   3100: Clan Sea Fox
@@ -27,7 +33,6 @@ yearsActive:
   - start: 2807
 tags:
   - PLAYABLE
-  - MINOR
   - CLAN
   - BATCHALL
 color:
@@ -110,3 +115,6 @@ factionLeaders:
     surname: "Hawker"
     gender: "FEMALE"
     startYear: 3113
+usesMercenaries:
+  2500: false
+  3133: true

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,22 +15,17 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee99-71c1-9264-326f38ec222d
+</UUID>
 
 <UnitType>
 Warship
 </UnitType>
 
 <Name>
-Conestoga Transport Jumpship
+Conestoga Transport JumpShip
 </Name>
 
 <Model>
@@ -45,10 +40,6 @@ Conestoga Transport Jumpship
 2310
 </year>
 
-<originalBuildYear>
-2310
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,16 +53,16 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:8.0:4:1
-dropshuttlebay:2.0:1:2:f0
-dropshuttlebay:2.0:1:3:f1
-dropshuttlebay:2.0:1:6:f2
-1stclassquarters:320.0:0
-2ndclassquarters:1400.0:0
-crewquarters:1141.0:0
-cargobay:47828.0:2:8
-cargobay:47827.0:2:9
-cargobay:47827.0:2:10
+smallcraftbay:8.0:4:1::-1:0
+dropshuttlebay:2.0:1:2::0:0
+dropshuttlebay:2.0:1:3::1:0
+dropshuttlebay:2.0:1:6::2:0
+1stclassquarters:320.0:0:-1::-1:0
+2ndclassquarters:1400.0:0:-1::-1:0
+crewquarters:1141.0:0:-1::-1:0
+cargobay:47828.0:2:8::-1:0
+cargobay:47827.0:2:9::-1:0
+cargobay:47827.0:2:10::-1:0
 </transporters>
 
 <SafeThrust>
@@ -98,9 +89,13 @@ cargobay:47827.0:2:10
 40
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -176,15 +171,19 @@ Medium Laser
 </structural_integrity>
 
 <capabilities>
-The Conestoga boasted expansive cargo bays that could accommodate different configurations, ranging from colonist transport to dedicated cargo vessels. It could transport up to 10,000 steerage-class passengers and over 90,000 tons of cargo simultaneously. The vessel featured four large grav decks to provide planetary gravity during short transports. For longer trips and colony startups, the cylindrical design allowed for easy spinning, creating artificial gravity in the cargo bays. Additionally, the Conestoga incorporated weaponry, including large and medium lasers, primarily for meteor defense and anti-boarding measures.
+<p>At 700,000 tons and 400 meters in length, the Conestoga was designed for reliability and cargo capacity rather than combat performance. Its primitive Kearny-Fuchida drive provided an extraordinary 20 light-year jump range, far exceeding the standard of later KF drives, though the system's massive size and maintenance requirements contributed heavily to the design's eventual obsolescence. The vessel generated only a single point of safe thrust, giving a glacial 0.5g acceleration that placed it among the slowest capital-scale vessels ever fielded.</p><p>The Conestoga's armament reflected its civilian purpose. Conventional large and medium lasers provided token self-defense across all arcs, with slightly heavier batteries forward and on the broadsides. No naval-grade weaponry was fitted. These light weapons offered sufficient deterrence against early-era pirates but no meaningful defense against military vessels.</p><p>The vessel's true value lay in its carrying capacity. Three DropShuttle bays accommodated up to six of the pre-docking collar transit craft that served as the ship-to-surface interface during this era, supplemented by eight small craft. Four 250-meter gravity decks, among the largest ever installed on any JumpShip, provided comfortable living space for the crew and up to 232 passengers. Over 143,000 tons of cargo capacity across three holds enabled the transport of an entire colonial expedition in a single voyage.</p>
 </capabilities>
 
 <overview>
-The Conestoga Transport JumpShip, launched by Boeing Interstellar in 2310, was a notable example of early interstellar transport vessels. Based on the Cruiser-class frame and engines, the Conestoga featured a simple design with vast cargo bays that could be easily reconfigured for various purposes. It was renowned for its ruggedness and versatility, capable of transporting large numbers of passengers and substantial amounts of cargo.
+<p>The Conestoga was one of humanity's earliest faster-than-light colonization vessels, predating the development of docking collars and the modern DropShip interface by centuries. Designed by Boeing Interstellar on Terra, the class entered service in 2310 during the first great wave of interstellar expansion. Built to carry entire colonial expeditions in a single voyage, the Conestoga sacrificed speed and combat capability in favor of enormous cargo capacity and comfortable passenger accommodations. The vessel's primitive drive systems, while providing exceptional range, demanded significant maintenance and consumed a disproportionate share of the hull's mass. Despite these limitations, the class earned a reputation as the definitive early colonization transport, a rugged if ungainly workhorse that opened dozens of new worlds to human settlement.</p>
 </overview>
 
+<deployment>
+<p>No individual Conestoga-class vessels are recorded by name in published sources. The class operated exclusively as civilian colonization transports, carrying settlers, equipment, and supplies to newly surveyed worlds during the earliest centuries of human interstellar expansion. Conestogas typically traveled in small convoys, their enormous cargo capacity allowing entire colonial outfitting to be carried aboard a single vessel or small flotilla. Operations centered on outbound voyages from Terra and other established worlds to frontier systems, with the vessels serving as mobile staging points during the initial phases of planetary settlement. The Terran Alliance and later the Terran Hegemony managed most Conestoga operations, though individual vessels occasionally operated under contract to corporate colonization ventures.</p>
+</deployment>
+
 <history>
-As a product of the early Age of War era, the Conestoga served as a representative example of primitive JumpShips built by the Terran Alliance, Terran Hegemony, and other factions. Despite its utility and success in various roles, advancements in production techniques and the introduction of the DropShip/JumpShip combination eventually rendered the Conestoga obsolete. The Reunification War marked the decline of such primitive vessels, as the Periphery states' attempts to employ upgraded versions against the powerful Star League navy proved unsuccessful. By 2600, these early relics of interstellar travel had become nearly extinct, with only occasional derelicts found in orbital junkyards or abandoned in distant Periphery stars. The last remaining Conestogas were scrapped from Nueva Castilian service in 2935, as modern replacements became more readily available.
+<p>The Conestoga emerged from Boeing Interstellar's shipyards on Terra in 2310, one of the earliest vessels purpose-built for interstellar colonization. The design was adapted from plans Boeing had developed for the Cruiser-class military vessel. Rather than naval weapons and heavy armor, Boeing's engineers fitted massive cargo holds, passenger accommodations, and internal DropShuttle bays, creating a transport optimized for moving colonial expeditions across the stars.</p><p>Boeing produced the class in limited numbers, as the expense of constructing such a large vessel with a primitive drive system was substantial even by the standards of the Terran Alliance. Each Conestoga represented an enormous investment, and losses to drive failures or misjumps were keenly felt. The class nevertheless proved reliable enough to earn a strong reputation among the colonization fleets of the Terran Alliance and later the Terran Hegemony.</p><p>During the first great wave of interstellar expansion, Conestogas served as the workhorses of settlement. The vessels departed Terra and other established worlds laden with agricultural equipment, prefabricated shelters, industrial machinery, and the specialists and settlers needed to establish viable colonies on newly surveyed worlds. The Conestoga's extraordinary jump range allowed expeditions to reach distant targets with fewer intermediate stops, a critical advantage when charted waypoints were scarce.</p><p>As JumpShip technology advanced through the twenty-fourth and twenty-fifth centuries, the Conestoga grew obsolete. Newer transports were faster, more efficient, and easier to maintain, while standard docking collars rendered the DropShuttle interface redundant. By approximately 2600, the last Conestogas had been retired from Inner Sphere service. The class endured longer in the Deep Periphery, where isolated colony worlds maintained their ancient vessels through generations of accumulated knowledge and improvised repairs. Some reportedly remained operational as late as the thirtieth century, relics of humanity's earliest steps among the stars.</p>
 </history>
 
 <manufacturer>
@@ -196,16 +195,20 @@ Terra
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Boeing Interstellar
 ENGINE:Unknown
 ARMOR:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
 
-<imagepath>
-.\data\images\fluff\Aero\Conestoga Transport Jumpship.png
-</imagepath>
+<systemModels>
+CHASSIS:Conestoga
+ENGINE:Primitive
+ARMOR:Primitive
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Transport

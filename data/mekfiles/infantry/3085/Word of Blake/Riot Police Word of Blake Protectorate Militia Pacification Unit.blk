@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b683-7326-9242-0ef71e846894
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,12 +52,24 @@ Ambusher
 Motorized
 </motion_type>
 
+<Troopers Equipment>
+Word of Blake Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Word of Blake Protectorate Militia pacification units were configured for civil disturbance management on conquered worlds where local populations resisted Blakist rule. Contrary to propaganda, not every government within the Protectorate accepted the Word's authority willingly, and riot control became a routine requirement on many occupied planets. These motorized platoons carried tranquilizer guns and stunsticks rather than lethal weapons, intended to subdue rather than kill, minimizing collateral damage and avoiding the kind of visible atrocities that would fuel further resistance. Operating in eighteen-trooper sub-platoons, pacification units could flank difficult crowds, sweep buildings for hidden insurgents, and break up organized protests. Their non-lethal armament meant they posed no threat to armored targets, limiting their effectiveness to population control operations.</p>
+</overview>
 
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 6
@@ -84,14 +91,3 @@ Tranq Gun
 Stunstick
 </Secondary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-WobKit
-</armorKit>
-
-<history>
-The full Level unit is 36 troopers but for play has to be divided into an 18 man squad. Which this unit represents.
-</history>

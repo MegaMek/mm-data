@@ -16,7 +16,8 @@
 # affiliated with Microsoft.
 
 id: Haddings
-sucsId: 1028
+sucsId: 1029
+# ComStar/Word of Blake hidden world - appears as ABN to players, requires special code handling
 xcood: -44.033
 ycood: 13.933
 spectralType: G4V
@@ -76,6 +77,12 @@ planet:
         capital: Seavington St. Mary
       - name: Fanner B
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2329-10-13'
         faction:
           source: canon
@@ -87,6 +94,12 @@ planet:
         population: 63378.0
       - date: '2340-01-01'
         population: 332178.0
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 1339528.0
       - date: '2360-01-01'
@@ -140,6 +153,15 @@ planet:
           source: canon
           value:
             - TH
+      - date: '2571-12-31'
+        # administration:
+        #   - Tyrfing Province
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TH
       - date: '2580-01-01'
         population: 1648153534.0
       - date: '2590-01-01'
@@ -186,6 +208,12 @@ planet:
           source: canon
           value:
             - RWR
+      - date: '2767-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - AE
       - date: '2770-01-01'
         population: 1853075994.0
       - date: '2779-08-10'
@@ -199,6 +227,15 @@ planet:
           value:
             - LA
         population: 1843819452.0
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TH
+      - date: '2786-12-31'
+        # administration:
+        #   - New Dallas Province
       - date: '2790-01-01'
         population: 1516027534.0
       - date: '2800-01-01'
@@ -207,6 +244,16 @@ planet:
         population: 358601892.0
       - date: '2820-01-01'
         population: 164046336.0
+      - date: '2821-12-31'
+        # administration:
+        #   - Federation of Skye
+        #   - Isle of Skye
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2830-01-01'
         population: 63937321.0
       - date: '2840-01-01'
@@ -237,6 +284,26 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CS
+        # Hidden world per The Five
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - WOB
+        # Hidden world per The Five
   - name: Ajomama Belt
     type: ASTEROID_BELT
     orbitalDist: 0.9

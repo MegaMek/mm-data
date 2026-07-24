@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bf13-7ab7-84e4-206b6aeb1431
+</UUID>
 
 <UnitType>
 Infantry
@@ -33,9 +28,9 @@ Infantry
 Field Gun Infantry Platoon (AC/10)
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 8410
@@ -44,10 +39,6 @@ Field Gun Infantry Platoon (AC/10)
 <year>
 2500
 </year>
-
-<originalBuildYear>
-2500
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -61,8 +52,9 @@ Ambusher
 Motorized
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
 
 <Field Guns Equipment>
 Autocannon/10
@@ -70,6 +62,14 @@ IS Ammo AC/10
 Autocannon/10
 IS Ammo AC/10
 </Field Guns Equipment>
+
+<overview>
+<p>Motorized field gun platoons towing AC/10 autocannon served with both Federated Commonwealth and Draconis Combine forces during the fighting on Vega in 3039. Vega was a bitterly contested world, and the campaign demanded every available asset from garrison infantry to front-line BattleMech regiments. Field gun platoons equipped with towed autocannon provided direct fire support to infantry and armor formations during prolonged engagements across the planet's varied terrain, from urban sieges to running battles through highland passes. Armed with auto rifles for self-defense and crewing a towed AC/10 capable of threatening light vehicles and BattleMechs at range, these platoons filled the critical gap between infantry small arms and dedicated armored vehicles. Their mobility allowed them to reposition between engagements, though they remained vulnerable during transit and required time to unlimber before firing.</p>
+</overview>
+
+<source>
+TP:39V
+</source>
 
 <squad_size>
 7
@@ -80,13 +80,6 @@ IS Ammo AC/10
 </squadn>
 
 <Primary>
-Auto-Rifle (Modern, Generic)
+InfantryAssaultRifle
 </Primary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>

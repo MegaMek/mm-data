@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,51 +15,53 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-generator:Mordel.Net Code Release 2.24.13.1 on 2-Oct-2024
+uuid:019f583e-dd43-758e-a8c9-39a6e115c607
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Dragon Fire
 model:DGR-9D
-source:Shrap19
 
 Config:Biped
-TechBase:Mixed (IS Chassis)
-Era:3150
-Rules Level:2
+techbase:Mixed (IS Chassis)
+era:3142
+source:Shrap19
+published:RSFP:BlackRemnant,ShrapRS
+rules level:2
 role:Brawler
 
 quirk:good_rep_1
 quirk:no_arms
 
-Mass:75
-Engine:225 XL Engine(IS)
-Structure:IS Endo-Composite
-Myomer:Standard
-Cockpit:Standard Cockpit
-Gyro:XL Gyro
+mass:75
+engine:225 XL Engine(IS)
+structure:IS Endo-Composite
+myomer:Standard
+cockpit:Standard Cockpit
+gyro:XL Gyro
 
-Heat Sinks:13 Double
-Walk MP:3
-Jump MP:0
+heat sinks:13 IS Double
+walk mp:3
+jump mp:0
 
-Armor:Standard (IS)
-LA Armor:24
-RA Armor:24
-LT Armor:26
-RT Armor:26
-CT Armor:38
-HD Armor:9
-LL Armor:32
-RL Armor:32
-RTL Armor:6
-RTR Armor:6
-RTC Armor:8
+armor:Standard(Inner Sphere)
+LA armor:24
+RA armor:24
+LT armor:26
+RT armor:26
+CT armor:38
+HD armor:9
+LL armor:32
+RL armor:32
+RTL armor:6
+RTR armor:6
+RTC armor:8
 
 Weapons:6
-ER Medium Laser, Head
-ER Large Laser, Right Torso
-Rotary AC/5, Right Torso
-ER Medium Laser, Left Torso
-ER PPC, Right Arm
 Gauss Rifle, Left Arm
+ER PPC, Right Arm
+ER Medium Laser, Left Torso
+Rotary AC/5, Right Torso
+ER Large Laser, Right Torso
+ER Medium Laser, Head
 
 Left Arm:
 Shoulder
@@ -86,8 +88,8 @@ ISDoubleHeatSink
 ISDoubleHeatSink
 CLERPPC
 CLERPPC
-Endo-Composite
-Endo-Composite
+IS Endo-Composite
+IS Endo-Composite
 
 Left Torso:
 Fusion Engine
@@ -114,7 +116,7 @@ ISRotaryAC5
 ISRotaryAC5
 ISRotaryAC5
 CLERLargeLaser
-Endo-Composite
+IS Endo-Composite
 -Empty-
 
 Center Torso:
@@ -150,8 +152,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Composite
-Endo-Composite
+IS Endo-Composite
+IS Endo-Composite
 -Empty-
 -Empty-
 -Empty-
@@ -164,8 +166,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Composite
-Endo-Composite
+IS Endo-Composite
+IS Endo-Composite
 -Empty-
 -Empty-
 -Empty-
@@ -173,32 +175,27 @@ Endo-Composite
 -Empty-
 -Empty-
 
-Center Leg:
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
--Empty-
+overview:<p>The Dragon Fire traces its origins to the twenty-eighth century, conceived as part of the same development project that produced the legendary Marauder. Despite promising specifications, the design never progressed beyond the drawing board during the Star League era, remaining a footnote in General Motors' archives for centuries. The rediscovery of lost Star League technical data in the mid-3050s breathed new life into the dormant blueprint, and General Motors licensed production to J.B. BattleMechs Incorporated rather than undertake the project themselves.</p><p>The first Dragon Fire rolled off JBBMI's production lines on Storfors in late 3058, and the seventy-five-ton heavy 'Mech quickly attracted attention from multiple Great Houses. The Dragon Fire established a reputation as a resilient and versatile fire support platform, though corporate upheaval and the Jihad dramatically altered the design's trajectory before new manufacturers eventually restored it to prominence across the Inner Sphere.</p>
 
-overview:The Dragon Fire is a resilient BattleMech designed to counter the Clan threat with versatile combat capabilities. First produced in 3058, it became notable for its use in Operation Bulldog and the Great Refusal, gaining popularity among the Draconis Combine and later the Word of Blake.
+capabilities:<p>The Dragon Fire delivers formidable firepower through a carefully balanced weapons array enabled by its Pitban 300 XL engine and Royalstar endo steel chassis. The Zeus Slingshot Gauss rifle serves as the primary weapon, delivering devastating kinetic impacts at extreme range without generating waste heat. A Mydron Excel LB 10-X autocannon complements the Gauss rifle with versatile ammunition options, capable of firing both standard slugs for concentrated damage and cluster rounds effective against vehicles and aerospace fighters. An ExoStar large laser provides reliable energy-based firepower independent of ammunition supplies, while twin Defiance B4M medium pulse lasers deliver accurate close-range fire.</p><p>Fourteen and a half tons of ArcShield Maxi II armor provide substantial protection for a heavy 'Mech, and CASE mitigates the risk posed by the design's considerable ammunition stores. The Guardian ECM suite disrupts enemy targeting and electronic warfare systems, a valuable capability that distinguishes the Dragon Fire from many of its contemporaries. The design's primary limitations stem from its reliance on an XL engine, which leaves it vulnerable to side torso damage, and its complete lack of jump jets, restricting maneuverability in rough terrain. The Dragon Fire also bears the dubious distinction of being considered one of the aesthetically least appealing BattleMechs in service, its unsightly weapon bulges and sensor arrays marring the Marauder family's otherwise sleek lines.</p>
 
-capabilities:<p>Based on the original design blueprints, the Dragon Fire was developed specifically to handle versatile fighting styles and control fast heat buildup. It incorporates an endo steel chassis and an XL engine, freeing up space to mount heavier LB autocannons and the rediscovered Gauss rifle system. CASE protects the pilot from catastrophic ammunition explosions, and double-strength heat sinks counter the high heat generated by the array of standard and pulse lasers.</p><p>The Dragon Fire's strengths lie in its robust firepower and defensive capabilities. Its ability to deliver significant damage at various ranges makes it effective in both long-range bombardment and close-quarters combat. The inclusion of advanced weaponry like the Gauss rifle enhances its lethality on the battlefield. However, the high heat output from its energy weapons requires careful management to avoid overheating, which could lead to temporary shutdowns or catastrophic failures. Its moderate speed, combined with its heavy armor, allows it to hold its ground under heavy fire, making it a durable and reliable unit in prolonged engagements.</p>
+deployment:<p>General Motors' complete reimagining of the Dragon Fire emerged during the Dark Age as a pocket assault 'Mech, trading the original's mobility for devastating firepower. The engine was downgraded to a Pitban 225 XL, reducing top speed to just fifty-four kilometers per hour, while GM MAD DF endo-composite internals and an XL gyroscope freed tonnage for an impressive weapons array. The retained Zeus Slingshot Gauss rifle is complemented by a Mydron Tornado rotary autocannon and a suite of ExoStar Pinnacle Clan-specification energy weapons including an ER PPC, ER large laser, and paired ER medium lasers. Valiant Lamellor standard armor provides maximum protection for the chassis weight, with CASE II guarding against ammunition explosions. Manufactured at Kathil, Quentin, and Storfors, the 9D has seen service primarily with the Federated Suns and Draconis Combine during the Dragon's Tongue campaigns.</p>
 
-deployment:A basic model featuring a combination of large laser and medium pulse lasers, making it a reliable choice for many combat scenarios.
+history:<p>The Dragon Fire's existence spans centuries of unrealized potential followed by decades of turbulent production history. Originally designed in the late twenty-eighth century alongside the Marauder, the Dragon Fire never achieved production during the Star League era, its blueprints languishing in General Motors' archives through the Succession Wars. The recovery of the Gray Death Memory Core in 3054 brought the design back into consideration, and GM licensed the project to J.B. BattleMechs Incorporated on Storfors for a token fee rather than diverting their own production resources.</p><p>The first Dragon Fires entered service in late 3058 and immediately proved their worth. The Draconis Combine became JBBMI's primary customer, and Lyran standing orders reflected unusual cross-faction demand driven by the shared Clan threat. The design's advanced arsenal offered a genuine answer to Clan technology advantages, and its performance during Operation Bulldog and the subsequent Great Refusal cemented its reputation among Inner Sphere militaries.</p><p>The mid-3060s brought a dramatic shift when JBBMI signed an exclusive subsidiary contract with the Word of Blake, redesigning the Dragon Fire with improved C-cubed technology. In 3068, a financial crisis saw the company change hands as Blakist-affiliated stockholders acquired controlling interest. Production facilities across the Alliance, Combine, and Federated Suns were shuttered, with new plants opening on Epsilon Eridani, Caph, and New Earth under the renamed J.B. BattleMechs of the Protectorate Ltd. The Dragon Fire became closely associated with the Word of Blake Militia, though a daring raid on the Myer facility on New Earth by Skye Ranger forces resulted in at least six machines being liberated.</p><p>The Jihad devastated JBBMI's reputation beyond recovery, and the Dragon Fire spent decades in obscurity following the conflict. The design's fortunes reversed during the Dark Age when General Motors finally took direct interest, producing the radically redesigned DGR-9D as a pocket assault 'Mech from their Kathil facilities. Independence Weaponry on Quentin leveraged their experience with the Fujin to produce the DGR-7K for the Draconis Combine. During the fighting over the Dragon's Tongue, Dragon Fires were fielded in strength by both Houses Davion and Kurita, marking the design's definitive return to frontline service.</p><p>The Dragon Fire's combat record includes notable engagements such as Operation Solar Flare, where Davion Assault Guards deployed their Dragon Fires against the mercenary unit Ravannion's Redemption off Euclid. The ensuing engagement saw Davion and Draconis-built Dragon Fires on opposite sides, with the mercenaries' ballistic-reinforced armor variants proving surprisingly effective against the Guards' superior firepower. Persistent rumors from the spinward Periphery describe a nightmarish machine resembling a warped Marauder, speculated to be a heavily modified Dragon Fire, though such reports remain unconfirmed.</p>
 
-history:The Dragon Fire walked off the JBBMI production lines in late 3058, with the first company going directly to the Draconis Combine. It proved itself in Operation Bulldog and the subsequent Great Refusal, which caused orders for the design to surge among units facing the Clan threat. A subsidiary contract with the Word of Blake in the mid-3060s incorporated the Word's improved C3 technology, helping JBBMI achieve solid profit goals. In early 3068, JBBMI encountered a financial crisis when three stockholders gained over sixty percent of the corporation, leading to the closure of most production facilities in the Alliance, the Combine, and the Suns, with massive layoffs. Unconfirmed reports suggest new production facilities have been opened on Epsilon Eridani, Caph, and New Earth.
+manufacturer:General Motors|Independence Weaponry|J.B. BattleMechs Inc.
 
-manufacturer:J.B. BattleMechs Inc
-primaryfactory:Storfors
-systemmanufacturer:CHASSIS:Royalstar ATE with Endo Steel
-systemmanufacturer:ENGINE:Pitban 300 XL
-systemmanufacturer:ARMOR:ArcShield Maxi II with CASE II
-systemmanufacturer:COMMUNICATIONS:CeresCom Model 21-Rs with Guardian ECM
-systemmanufacturer:TARGETING:FireScan with IndirecTrack
+primaryfactory:Kathil|Quentin|Storfors
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:GM
+systemmode:CHASSIS:MAD DF Endo-Composite
+systemmanufacturer:ENGINE:Pitban
+systemmode:ENGINE:225 XL
+systemmanufacturer:ARMOR:Valiant
+systemmode:ARMOR:Lamellor with CASE II
+systemmanufacturer:COMMUNICATIONS:Dalban
+systemmode:COMMUNICATIONS:Micronics
+systemmanufacturer:TARGETING:Dalban
+systemmode:TARGETING:HiRez III

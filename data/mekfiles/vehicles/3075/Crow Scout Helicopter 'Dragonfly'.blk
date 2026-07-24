@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e5d3-7461-b237-c4ce92a0f1d2
+</UUID>
 
 <UnitType>
 VTOL
@@ -45,10 +40,6 @@ Crow Scout Helicopter
 3070
 </year>
 
-<originalBuildYear>
-3070
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -61,9 +52,6 @@ Scout
 VTOL
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 13
 </cruiseMP>
@@ -71,6 +59,18 @@ VTOL
 <engine_type>
 0
 </engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+5
+</armor_tech_level>
 
 <armor>
 8
@@ -103,19 +103,19 @@ ISTAG
 </Rotor Equipment>
 
 <capabilities>
-The most obvious advantage of the Crow is its 216 km/h top speed. The incredibly fast vehicle can often get in and out of trouble spots before its enemies can effectively bring their weapons to bear. In order to fulfill its duties as a scout, the Crow carries a suite of advanced electronics, though the cost of those pushed the vehicle's price tag far above what Procurement officials expect out of a fifteen-ton VTOL. For scout duties, it has a Wunderland Beagle Active Probe, while a Forward-1 TAG allows the Crow to spot for indirect bombardments. An Apple-Churchill Guardian ECM Suite protects it from enemy spotting devices. The Crow's speed is its best armor. It mounts a meager one and a half tons of standard armor.
+<p>Dragonfly operates in the standard production Crow Scout Helicopter configuration, with no modifications from the production baseline. Speed, armor, and airframe construction are identical to other production aircraft. The Skyhunter IV targeting system with its Forward-1 TAG designator provides the aircraft's primary combat contribution through target designation for guided munitions, supported by the Wunderland Beagle Active Probe for target identification and tracking. The Scuti Dualcom communications system with its Apple-Churchill Guardian ECM suite provides electronic suppression capability. The Exostar extended-range small lasers provide backup direct engagement capability, though DCMS operational assessments consistently classify the Crow as a designation and reconnaissance platform rather than a primary combatant.</p>
 </capabilities>
 
 <overview>
-The Crow Scout VTOL is a military-grade, scout combat vehicle that is based upon the civilian Soar.
+<p>The aircraft designated Dragonfly was the first Crow Scout Helicopter assigned to the Genyosha, entering DCMS service in 3070 with one of the Draconis Combine's most prestigious combat regiments. As the initial Genyosha example, Dragonfly brought the Crow's electronic warfare and reconnaissance capabilities to a formation with an established history of operating the Combine's most advanced equipment. The aircraft operates in the standard reconnaissance configuration with full target designation, electronic suppression, and active probe capability. Its operational record within the Genyosha established an early positive precedent for the Crow's performance in elite Combine service.</p>
 </overview>
 
 <deployment>
-The Dragonfly variant carries no weapons. It is equipped with a Beagle Probe, Guardian ECM suite, C3 Slave, and a TAG unit to designate targets.
+<p>Dragonfly serves with the Genyosha in a forward reconnaissance and target designation role, operating in coordination with the regiment's BattleMech forces to provide electronic support and guided munitions designation. Its operational record within the Genyosha has contributed to broader DCMS confidence in the Crow as a high-value reconnaissance asset for elite formations.</p>
 </deployment>
 
 <history>
-Yan Manufacturing designed the Crow to replace the many scout BattleMechs the Draconis Combine lost during the Combine-Ghost Bear War. The Yan team kept many of the strengths of the search-and-rescue vehicle the Crow is descended from, though they improved it using military-grade technologies. Yan initially had trouble selling the Crow to the DCMS. Finally, Yan agreed to give the unit to them as long as the Combine supplied the electronics. In exchange, Yan is free to sell the unit to mercenary units.
+<p>Dragonfly entered service with the Genyosha in 3070 as the regiment's first assigned Crow Scout Helicopter. Operating the standard reconnaissance configuration, the aircraft's crew quickly demonstrated effective employment of the TAG designation capability, accumulating four confirmed kills through coordinated guided munitions strikes. The performance record established early confidence in the Crow's value as a forward targeting asset, affirming Yan Manufacturing's claims for the design's operational effectiveness in elite Combine service.</p><p>The crew has been active in lobbying Genyosha technical staff for authorization to replace the Exostar small lasers with a C3 slave module, arguing that the aircraft's limited direct combat effectiveness makes the laser armament redundant weight, while a C3 slave would meaningfully enhance the crew's contribution to the regiment's integrated fire control network. The request reflects a broader operational assessment within DCMS that network integration may represent a more valuable capability trade for experienced Crow operators than direct engagement potential.</p>
 </history>
 
 <manufacturer>
@@ -127,16 +127,30 @@ New Samarkand
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
-ENGINE:DAV 100 fusion
-ARMOR:Starslab/3
-COMMUNICATIONS:Scuti Dualcom with Apple-Churchill Guardian ECM Suite
-TARGETING:Skyhunter IV with Forward-1 TAG and Wunderland Beagle Active Probe
+CHASSIS:Yan Manufacturing
+ENGINE:Unknown
+ARMOR:Brooks, Inc.
+JUMP_JET:N/A
+COMMUNICATIONS:Scuti
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:DAV 100 Fusion
+ARMOR:StarSlab/3
+JUMP_JET:N/A
+COMMUNICATIONS:Dualcom w/ Apple-Churchill Guardian ECM
+TARGETING:Skyhunter IV w/ Forward-1 TAG and Wunderland Beagle Active Probe
+</systemModels>
 
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-CE
+</published>
 
 <tonnage>
 15.0

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8d6-7df9-8874-e3dab445ead1
+</UUID>
 
 <UnitType>
 SupportVTOL
@@ -33,9 +28,9 @@ SupportVTOL
 HTE Micro-Copter
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 9229
@@ -44,10 +39,6 @@ HTE Micro-Copter
 <year>
 3065
 </year>
-
-<originalBuildYear>
-3065
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -62,7 +53,7 @@ VTOL
 </motion_type>
 
 <transporters>
-pillionseats:1.0:0
+pillionseats:1.0:0:-1::-1:0
 </transporters>
 
 <cruiseMP>
@@ -72,6 +63,18 @@ pillionseats:1.0:0
 <engine_type>
 1
 </engine_type>
+
+<armor_type>
+43
+</armor_type>
+
+<armor_tech_rating>
+3
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -116,9 +119,33 @@ UltraLightChassisMod
 4
 </engine_tech_rating>
 
-<armor_tech_rating>
-3
-</armor_tech_rating>
+<overview>
+<p>The newest micro-copter from Hachiman Taro Enterprises is a marvel of high-quality construction. Unloaded and with an empty fuel tank, it weighs just shy of twenty kilograms, but is capable of carrying a grown person with heavy equipment. First used to equip HTE extraction teams during the Jihad, it is now available on the open market and becoming popular for recreational use as well.</p>
+</overview>
+
+<manufacturer>
+Hachiman-Taro Enterprises
+</manufacturer>
+
+<primaryFactory>
+Hachiman
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 AToW Companion
@@ -135,3 +162,4 @@ AToW Companion
 <fuelType>
 PETROCHEMICALS
 </fuelType>
+

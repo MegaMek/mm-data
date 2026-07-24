@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8d0-7cae-9e0c-25c7f6e835bf
+</UUID>
 
 <UnitType>
 SupportTank
@@ -33,9 +28,9 @@ SupportTank
 JI-002 HoverBike
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 9222
@@ -44,10 +39,6 @@ JI-002 HoverBike
 <year>
 3050
 </year>
-
-<originalBuildYear>
-3050
-</originalBuildYear>
 
 <type>
 IS Level 5
@@ -62,8 +53,8 @@ Hover
 </motion_type>
 
 <transporters>
-cargobay:0.02:1:1
-pillionseats:2.0:0
+cargobay:0.02:1:1::-1:0
+pillionseats:2.0:0:-1::-1:0
 </transporters>
 
 <cruiseMP>
@@ -73,6 +64,18 @@ pillionseats:2.0:0
 <engine_type>
 11
 </engine_type>
+
+<armor_type>
+49
+</armor_type>
+
+<armor_tech_rating>
+3
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 1
@@ -110,13 +113,33 @@ BicycleChassisMod
 3
 </engine_tech_rating>
 
-<armor_tech_rating>
-3
-</armor_tech_rating>
+<overview>
+<p>Johnston Industries' military hoverbike was initially manufactured for the company's own security force and for the AFFS, which utilizes it in its mechanized infantry elements. It differs from other hoverbikes only in its extremely sturdy, reinforced structure, which allows for the becoming popular use of higher-grade military armor, giving it durability unusual for a vehicle of its size.</p>
+</overview>
 
-<history>
-These units have no weights in AToW. The weights are estimates. The units are considered unofficial until weights are given.
-</history>
+<manufacturer>
+Johnston Industries
+</manufacturer>
+
+<primaryFactory>
+New Syrtis
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 AToW Companion
@@ -129,3 +152,4 @@ AToW Companion
 <fuel>
 0.03
 </fuel>
+

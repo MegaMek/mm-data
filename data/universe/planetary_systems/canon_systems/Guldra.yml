@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Guldra
-sucsId: 1017
+sucsId: 1018
 xcood: 114.417
 ycood: -461.156
 spectralType:
@@ -127,6 +127,12 @@ planet:
       - name: New Shuixi
       - name: Tompkins
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2628-01-06'
         faction:
           source: canon
@@ -168,6 +174,15 @@ planet:
         population: 113586588.0
       - date: '2750-01-01'
         population: 114515795.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Brinton Union
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2760-01-01'
         population: 114755557.0
       - date: '2770-01-01'
@@ -182,6 +197,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2910-01-01'
         faction:
           source: canon
@@ -189,7 +210,7 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
       - date: '3025-07-01'
@@ -198,6 +219,12 @@ planet:
           value:
             - ARC
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
@@ -209,11 +236,18 @@ planet:
         socioIndustrial:
           source: canon
           value: C-C-A-B-A
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
   - name: Morán
     type: GAS_GIANT
     orbitalDist: 7.28

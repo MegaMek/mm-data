@@ -17,6 +17,12 @@
 
 key: NCR
 name: New Colony Region
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: MAF
+sucsCodes:
+  - NCR
 capital: Fronc
 yearsActive:
   - start: 3060

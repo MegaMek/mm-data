@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Zaprudy
-sucsId: 2819
+sucsId: 2820
 xcood: -320.058
 ycood: 92.758
 spectralType: F7V
@@ -110,6 +110,12 @@ planet:
       - name: Akatyev
       - name: Adzhubei
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2677-05-04'
         faction:
           source: canon
@@ -140,6 +146,16 @@ planet:
         socioIndustrial: A-A-A-B-A
       - date: '2750-01-01'
         population: 2291869489.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 2366067856.0
       - date: '2770-01-01'
@@ -200,12 +216,23 @@ planet:
         population: 2278427085.0
       - date: '3030-01-01'
         population: 2287446876.0
-      - date: '3040-10-12'
-        population: 2313672975.0
-        socioIndustrial: B-B-C-B-C
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-10-12'
+        population: 2313672975.0
+        socioIndustrial: B-B-C-B-C
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Alarion Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3043-01-01'
@@ -217,12 +244,24 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
       - date: '3060-01-01'
         population: 2364428383.0
       - date: '3070-01-01'
         population: 2390341623.0
       - date: '3080-01-01'
         population: 2411469455.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Buena Province
       - date: '3090-01-01'
         population: 2427923327.0
       - date: '3100-01-01'
@@ -241,6 +280,9 @@ planet:
         population: 2611268958.0
       - date: '3145-01-01'
         population: 2635403481.0
+      - date: '3152-12-31'
+        # administration:
+        #   - Bolan Province
   - name: Parkkinen
     type: GIANT_TERRESTRIAL
     orbitalDist: 3.64

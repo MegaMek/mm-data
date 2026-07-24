@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a620-7fbb-bd38-dcee459e392e
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,10 @@ IS Level 3
 Juggernaut
 </role>
 
+<weaponQuirks>
+accurate:Squad:1:CLBALightMG
+</weaponQuirks>
+
 <motion_type>
 Jump
 </motion_type>
@@ -71,16 +70,16 @@ Jump
 
 <Squad Equipment>
 ISBAPlasmaRifle:RA
-ISBALightMachineGun:Body
+CLBALightMG:Body
 BAArmoredGlove:LA
-Infantry Auto Rifle:APM:LA
-IS BA Reflective:Body
-IS BA Reflective:LA
-IS BA Reflective:LA
-IS BA Reflective:Body
-IS BA Reflective:Body
-IS BA Reflective:Body
-IS BA Reflective:Body
+InfantryAssaultRifle:APM:LA
+IS BA Laser Reflective (Reflec/Glazed):Body
+IS BA Laser Reflective (Reflec/Glazed):LA
+IS BA Laser Reflective (Reflec/Glazed):LA
+IS BA Laser Reflective (Reflec/Glazed):Body
+IS BA Laser Reflective (Reflec/Glazed):Body
+IS BA Laser Reflective (Reflec/Glazed):Body
+IS BA Laser Reflective (Reflec/Glazed):Body
 </Squad Equipment>
 
 <Trooper 1 Equipment>
@@ -95,9 +94,59 @@ IS BA Reflective:Body
 <Trooper 4 Equipment>
 </Trooper 4 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The upgraded Fusilier trades the Magshot Gauss Rifle for a Man-Portable Plasma Rifle with twenty rounds of ammunition, giving the suit a significant increase in close-range thermal output at the cost of the Magshot's precision. The Jump Booster is downgraded to accommodate the heavier weapon system, reducing effective jump range from sixty meters to thirty. The body-mounted Light Machine Gun and left-arm Armored Glove carry over from the original design unchanged.</p><p>The most significant modification is the replacement of Basic Stealth armor with Reflective Armor. While reflective plating offers improved resistance against energy weapons, it proves considerably more fragile under physical impacts and ballistic threats. The trade-off sacrifices the original's sensor-masking capability and structural resilience for a specialized defense that only pays dividends against energy-heavy opponents, narrowing the suit's operational flexibility.</p>
+</capabilities>
+
+<overview>
+<p>The Fusilier is an assault-class battle armor suit manufactured by General Motors at their Salem facility for the Armed Forces of the Federated Suns. Introduced in the early 3120s, the design was intended to fill a frontline combat role alongside other heavy suits in AFFS battle armor battalions. Often described as the most unremarkable suit in AFFS service, the Fusilier earned a grudging respect for its consistent performance and solid construction in a role where dependability mattered more than distinction.</p>
+</overview>
+
+<deployment>
+<p>AFFS four-trooper squads received the upgraded Fusilier beginning in the mid-3130s. The revised armament gave squad-level engagements a thermal punch the original lacked, and teams operating against energy-weapon-heavy opponents appreciated the specialized armor protection. Squads deployed along the Capellan border found the reduced jump range a more significant limitation than the armor change, as rapid repositioning often proved critical during small-unit actions.</p>
+</deployment>
+
+<history>
+<p>General Motors began manufacturing the Fusilier at their Salem plant in the early 3120s, producing a suit that filled no particular gap in the AFFS order of battle. The Department of the Quartermaster still procured the design, and GM continued production for over a decade before introducing an upgraded variant after the Blackout. The Fusilier drew on design elements from both the Grenadier and the Sea Fox, producing a competent if unremarkable assault suit that earned a reputation for solid construction rather than any defining tactical specialty.</p><p>Capellan March Militia units developed a marked preference for the original model over the upgrade. A 3139 raid conducted by a New Syrtis CMM detachment on the training world of Nihal demonstrated the reason clearly: when both variants came under fire inside a collapsing structure, the upgraded suits crumpled under falling debris while the original models completed the mission and escaped. The incident reinforced a broader reluctance among frontline units to adopt the newer variant. Warrior House Ijori also acquired captured Fusiliers and employed them on raids across formerly Davion worlds, proving the suit capable even in Capellan hands.</p>
+</history>
+
+<manufacturer>
+General Motors
+</manufacturer>
+
+<primaryFactory>
+Salem
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-TR:3145:FS
+TR:3145:FS,TR:3150
 </source>
+
+<published>
+RS:3150
+</published>
 
 <chassis>
 biped
@@ -119,39 +168,3 @@ biped
 4
 </weightclass>
 
-<overview>
-A "solid" heavy combat suit used mostly by Mercenaries and the Federated Suns.
-</overview>
-
-<capabilities>
-Manufactured by GM in the 3130s, the upgraded version of the Fusilier downgraded the Jump Booster, reducing the effective jump distance of the suit to just thirty meters, and removed the Magshot; the capacity freed up by doing so allowed it to mount a Plasma Rifle and twenty rounds of ammunition. The armor package on the Fusilier was also reworked, replacing the Basic Stealth armor of the original with Reflective Armor.
-</capabilities>
-
-<deployment>
-As a heavy combat suit, the Fusilier combined aspects of the Grenadier and Sea Fox, and was designed to serve as a line unit alongside other similar suits. Because it was so slow-moving, the Fusilier mounted a Jump Booster to increase its mobility.
-</deployment>
-
-<history>
-General Motors began production of the Fusilier battle armor suit at their plant in Salem in the early 3120s while there was no particular demand for the suit; despite being both too heavy and too slow, the Armed Forces of the Federated Suns purchased supplies of the Fusilier for a decade before GM began producing an upgraded version, but the Fusilier would continue to remain an odd capability within AFFS units.
-</history>
-
-<manufacturer>
-General Motors
-</manufacturer>
-
-<primaryFactory>
-Salem
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<weaponQuirks>
-accurate:Squad:1:ISBALightMachineGun
-</weaponQuirks>

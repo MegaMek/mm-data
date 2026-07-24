@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Galisteo
-sucsId: 921
+sucsId: 922
 xcood: -355.928
 ycood: -71.907
 spectralType: F7V
@@ -83,6 +83,12 @@ planet:
       - name: Paiporta
       - name: Pozohondo
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2514-07-26'
         faction:
           source: canon
@@ -102,6 +108,12 @@ planet:
         population: 123262049.0
       - date: '2570-01-01'
         population: 254932639.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 440499248.0
       - date: '2590-01-01'
@@ -222,14 +234,24 @@ planet:
         population: 2029150335.0
       - date: '3070-01-01'
         population: 2050978818.0
+      - date: '3079-10-01'
+        faction:
+          source: canon
+          value:
+            - LA
       - date: '3079-10-30'
         faction:
           source: canon
           value:
             - DTA
-      - date: '3079-10-01'
+      - date: '3079-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Dixie Theater
+      - date: '3079-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - LA
       - date: '3080-01-01'
@@ -246,6 +268,10 @@ planet:
         population: 2220022101.0
       - date: '3130-01-01'
         population: 2263511009.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -256,9 +282,13 @@ planet:
           value:
             - DTA
         population: 2318028759.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Susano

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Mermentau
-sucsId: 1685
+sucsId: 1686
 xcood: 521.361
 ycood: -39.332
 spectralType: K2V
@@ -66,6 +66,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2603-08-10'
         faction:
           source: canon
@@ -107,6 +113,17 @@ planet:
         population: 127838230.0
       - date: '2750-01-01'
         population: 127927816.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Anjin Muerto Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 127496626.0
       - date: '2770-01-01'
@@ -169,12 +186,18 @@ planet:
         population: 75033315.0
       - date: '3032-01-01'
         socioIndustrial: D-F-B-F-F
-      - date: '3040-06-16'
-        population: 76129224.0
-        socioIndustrial: D-D-A-D-F
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-06-16'
+        population: 76129224.0
+        socioIndustrial: D-D-A-D-F
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -186,8 +209,19 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3070-01-01'
         population: 78951379.0
+      - date: '3079-12-31'
+        # administration:
+        #   - Periphery March
+        #   - Anjin Muerto Operational Area
+        #   - Anjin Muerto Combat Region
       - date: '3080-01-01'
         population: 79172753.0
       - date: '3090-01-01'

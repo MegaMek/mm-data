@@ -17,6 +17,11 @@
 
 key: RD
 name: Rasalhague Dominion
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - RD
 capital: Rasalhague
 yearsActive:
   - start: 3103
@@ -70,3 +75,5 @@ factionLeaders:
     surname: "Miraborg"
     gender: "MALE"
     startYear: 3129
+usesMercenaries:
+  2500: false

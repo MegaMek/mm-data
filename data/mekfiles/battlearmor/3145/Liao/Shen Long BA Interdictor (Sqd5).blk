@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a65b-7787-95b2-c78a9da8de13
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,11 @@ IS Level 2
 Scout
 </role>
 
+<weaponQuirks>
+mod_weapons:Squad:0:CLBAFlamer
+mod_weapons:Squad:1:CLBAFlamer
+</weaponQuirks>
+
 <motion_type>
 Leg
 </motion_type>
@@ -72,8 +72,63 @@ Leg
 <Squad Equipment>
 CLBAFlamer:TU
 CLBAFlamer:TU
-ECM Suite (Light):TU
+IS BA ECM:TU
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<capabilities>
+<p>Built on a quad chassis weighing 1,500 kilograms, the Shen Long achieves a ground speed of 43 kilometers per hour, placing it among the fastest heavy battlesuits fielded by Inner Sphere forces. Its mimetic armor coating, at 550 kilograms, provides both physical protection and active camouflage that bends light and sensor returns around the suit's profile. The modular turret mount accepts up to 400 kilograms of weapons or equipment.</p><p>The Interdictor configuration trades direct firepower for electronic warfare capability, mounting two flamers alongside a full ECM suite. The flamers serve as effective short-range deterrents against infantry and light vehicles, while the ECM package disrupts enemy targeting systems and communications within a significant radius. This makes the Interdictor invaluable during ambush operations, where it can mask allied forces from sensor detection. The configuration's limited offensive reach and reliance on close-range weapons restrict its effectiveness in open terrain.</p>
+</capabilities>
+
+<overview>
+<p>The Shen Long is a heavy battle armor suit produced by Hellespont Industrials for the Capellan Confederation Armed Forces and the Magistracy of Canopus. Introduced in 3092, the design employs a quad chassis that provides exceptional ground speed for its weight class, paired with advanced camouflage systems that allow troopers to approach targets undetected. A reconfigurable weapon platform enables rapid loadout changes between missions, giving field commanders flexibility to tailor formations for specific tactical situations. The suit earned its name, meaning "Divine Dragon" in Chinese, for the aggressive ambush doctrine that defines its primary employment.</p>
+</overview>
+
+<deployment>
+<p>Five-trooper Interdictor formations expand the ECM coverage available to a single tactical element. Allied forces operating alongside the Capellan Confederation have occasionally organized suits into larger formations, using the additional trooper to extend electronic disruption over wider frontages during offensive operations.</p>
+</deployment>
+
+<history>
+<p>Hellespont Industrials developed the Shen Long on Sian, introducing the suit in 3092 to fulfill a Capellan Confederation Armed Forces requirement for a heavy battle armor platform built around ambush and interdiction tactics. Hellespont drew on existing expertise in advanced armor and modular weapon systems to deliver a quad-chassis suit that sacrificed manipulators for raw speed and a turret-mounted weapon platform. The name, meaning "Divine Dragon" in Chinese, reflected the aggressive doctrine the design was intended to enable.</p><p>The suit first proved itself during the Victoria War, when Menke Home Guard units paired Shen Long squads with Fa Shih minelaying teams to ambush a Davion BattleMech lance. The combined force lured the overconfident MechWarriors into a prepared minefield, then used multiple configurations to overwhelm and deceive the disoriented enemy, capturing an assault BattleMech in the process. On Yuris in 3103, Shen Long troopers harassed a Davion task force during weeks of fighting, though ammunition shortages forced several teams to surrender when reinforcements closed in.</p><p>The Magistracy of Canopus adopted the design with enthusiasm. Magistracy Armed Forces commanders prize Shen Long assignments as a mark of distinction, though the honor carries high casualty rates and routine exposure to difficult engagements.</p>
+</history>
+
+<manufacturer>
+Hellespont Industrials
+</manufacturer>
+
+<primaryFactory>
+Sian
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3145:CC
@@ -103,40 +158,3 @@ Modular:4
 3
 </weightclass>
 
-<overview>
-The Shen Long is a Quad type Heavy Class Battle Armor which was produced in last years of the thirty-first century for both the Capellan Confederation and its close-allies in the Magistracy of Canopus.
-</overview>
-
-<capabilities>
-Designed with speed and firepower in mind, the Shen Long (Chinese name for Storm Dragon), employs its modular turret and stealth to outmaneuver and assist in ambushing of enemy combat units. The Shen Long uses 550 kilograms of Mimetic Armor to be able elude enemy sensors while they close in on it.
-</capabilities>
-
-<deployment>
-Fitted with a Modular Turret Mount, the Armor is able to handle upwards to 400 kg worth of weapons and equipment. Its primary modular setup is its David configuration, where its fits 4 David Light Gauss Rifles into the turret with 15 rounds of ammunition for these guns. Antipersonnel Configurations is armed with 4 standard Machine Guns with 50 rounds of ammunition and a Pop-Up Mine configuration which comes with 2 Heavy Grenade Launchers and a single Pop-Up Mine launcher. Anti-vehicular configurations includes 5-tubed Medium-Ranged Missile Launcher and a 4-Tubed Short-Range Missile Launcher, each with four rounds of ammo. Electronic Warfare configuration includes a Battle Armor scale ECM Suite with 2 Flamers for self-defense purposes.
-</deployment>
-
-<history>
-It would first see significant actions with Davion along Confederation border and during the Victoria War of 3105. During that conflict the Shen Long would be noted for its action on Menke. That world's Menke Home Guard would team the speedy armor with minelaying Fa Shih Battle Armor to lure Davion's 'Mech Lance into a valley and employ the Armor's various configurations to fool the Davion forces and convincing them to withdraw at the cost of an Assault 'Mech.
-</history>
-
-<manufacturer>
-Hellespont Industrials
-</manufacturer>
-
-<primaryFactory>
-Sian
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<weaponQuirks>
-mod_weapons:Squad:0:CLBAFlamer
-mod_weapons:Squad:1:CLBAFlamer
-</weaponQuirks>

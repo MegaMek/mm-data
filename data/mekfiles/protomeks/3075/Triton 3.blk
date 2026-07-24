@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e104-736a-958d-8118ab0a16d8
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Triton
 3069
 </year>
 
-<originalBuildYear>
-3069
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Brawler
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 4
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 4
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -90,10 +98,11 @@ Biped
 </armor>
 
 <Body Equipment>
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -115,28 +124,20 @@ ProtomechJumpJet
 CLHeavyMediumLaser
 </Main Gun Equipment>
 
-<source>
-TR:3075
-</source>
-
-<tonnage>
-8.0
-</tonnage>
-
 <capabilities>
-The basic hull of the Triton, protected by nearly two tons of armor, can keep up with most Scorpion Seeker MechWarriors with little additional aid, using considerable ground speed and complete jump capability.
+<p>The Triton's primary armament is a Streak SRM-4 launcher mounted in the main gun position, fed by ten volleys of ammunition. The Streak system ensures every missile hits its target, making the Triton one of the most ammunition-efficient missile platforms among ProtoMek designs. The system's lock-on-or-don't-fire logic means that each trigger pull either delivers a full four-missile salvo or conserves the ammunition entirely, a significant advantage during the extended independent operations the Seeker tradition demands. A torso-mounted ER Micro Laser provides backup firepower for the unlikely event the Streak magazines run dry.</p><p>Four jump jets provide one hundred twenty meters of leaping distance, giving the eight-ton design terrain mobility unusual for its weight class. Almost two tons of armor at thirty-eight points provide excellent protection, allowing the Triton to survive hits from heavy weapons that would destroy lighter ProtoMeks outright. The combination of heavy armor, efficient weapons, and jump capability makes the Triton one of the most self-sufficient ProtoMek designs in service, capable of sustained independent operations that mirror the Seeker tradition it was built to serve. Cruising speed of forty-three kilometers per hour is modest, but the jump jets compensate for the lack of ground speed in tactical situations.</p>
 </capabilities>
 
 <overview>
-A middleweight ProtoMech, the Triton was designed by Clan Goliath Scorpion for their Seekers.
+<p>The Triton is an eight-ton second-generation ProtoMek designed by Clan Goliath Scorpion to complement their Seeker tradition. After a string of humbling failures following the Great Refusal, the Scorpions leveraged resources acquired through overtures to the Snow Ravens to jump-start their faltering ProtoMek program. The resulting Triton was purpose-built to efficiently accompany the solitary warriors dedicated to carrying on the Seeker mandate, combining robust armor protection, full jump capability, and ammunition-efficient weaponry in a heavy ProtoMek frame optimized for independent extended operations.</p>
 </overview>
 
 <deployment>
-This variant replaces the Streak and ER Micro Laser of the standard model for a single Heavy Medium Laser.
+<p>The most radical Triton variant, the Triton 3 strips the entire weapons suite for a single Heavy Medium Laser mounted in the main gun position. While this dramatically reduces the design's tactical flexibility, the Heavy Medium Laser delivers devastating armor-piercing damage that can threaten targets far above the Triton's weight class. Complete ammunition independence makes the variant ideal for the longest-duration independent operations. Armor increases to forty-one points, the heaviest of any Triton configuration, allowing the design to close to optimal laser range under fire. Four jump jets are retained. This configuration appeared just before the HPG blackout, and limited intelligence suggests it was used sparingly by the most skilled ProtoMek pilots.</p>
 </deployment>
 
 <history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
+<p>The Triton emerged from the Goliath Scorpion's post-Great Refusal rebuilding effort. The Clan's overtures to the Snow Ravens netted them critical resources that allowed the creation of a new Galaxy dedicated to the Seeker tradition and the revitalization of their ProtoMek program. Named for the aquatic predator, the Triton was designed from the ground up to serve alongside Seeker warriors, emphasizing operational endurance and self-sufficiency over raw firepower or speed.</p><p>The Triton was included in the recently deployed Chi Galaxy, where it served alongside Seeker warriors without the friction that plagued other Scorpion ProtoMek deployments. In second-line units, however, the introduction of Tritons as replacements for Elemental units that had successfully tested out to frontline postings created significant resentment. ProtoMek pilots felt denigrated at being automatically placed below solahma warriors in the Clan's hierarchy, and several declared Trials of Refusal against battle armor units being promoted to frontline status.</p><p>These internal tensions did not prevent the development of multiple variants. The Triton 2 replaced the Streak launcher with an LRM-3, ER Small Laser, and additional Micro Lasers, creating a more versatile engagement profile suited to varied mission requirements. Two more specialized variants appeared just before the HPG blackout, both employing Heavy Laser technology. The Triton 3 stripped the entire weapons suite for a single Heavy Medium Laser, sacrificing versatility for devastating single-shot punch and complete ammunition independence. The Triton 4 mounted Heavy Small Lasers in each arm with an ER Micro Laser in the torso, distributing close-range heavy firepower across multiple locations.</p><p>The Eridani Light Horse captured a group of seven Triton ProtoMeks during initial Trials of Possession at Lootera, forming them into an augmented point dubbed the "Seven Deadly Sins." The group remained appreciative of the Light Horse's respectful treatment, reciprocating by zealously briefing and training the mercenaries in anti-ProtoMek tactics using both simulator and live-fire exercises. Their fate following the HPG blackout remains unknown alongside the rest of the Light Horse contingent in Clan space.</p>
 </history>
 
 <manufacturer>
@@ -148,10 +149,29 @@ Roche
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:50 Fusion
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Standard
+ENGINE:50
+ARMOR:Standard
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<published>
+RS:3075u-CE
+</published>
+
+<tonnage>
+8.0
+</tonnage>
+

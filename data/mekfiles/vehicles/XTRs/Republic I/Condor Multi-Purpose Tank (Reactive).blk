@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ec5d-7747-a261-2628cca25ea3
+</UUID>
 
 <UnitType>
 Tank
@@ -69,9 +64,13 @@ Tracked
 2
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 31
@@ -108,106 +107,57 @@ Machine Gun
 LRM 15
 </Turret Equipment>
 
+<capabilities>
+<p>A 300-rated XL fusion engine gives the Condor Multi-Purpose Tank a top speed of 96 kilometers per hour for a tracked vehicle of its class, substantially faster than the Vedette it was meant to replace. Six and a half tons of standard armor provides adequate protection for most engagement scenarios, though the design prioritizes mobility and firepower over sheer survivability. Front-line Republic Brigades commonly address this shortcoming by installing reactive armor sourced through Aldis, a field modification so widespread that the standard-armor Standing Guard version has become the exception rather than the rule in active combat formations.</p><p>The weapons suite pairs an LB 5-X autocannon with an LRM-15 launcher, giving the tank reach across multiple engagement ranges. Two machine guns handle anti-infantry threats at close quarters. The combination suits the vehicle's dual role as both a militia patrol asset and a front-line cavalry supplement, though LRM magazine capacity demands careful ammunition management in extended operations.</p>
+</capabilities>
+
+<overview>
+<p>The Condor Multi-Purpose Tank is a tracked combat vehicle derived from the famous Condor hover tank family, developed by Quikscell Company for Republic of the Sphere service beginning in 3083. Its origins lie in an unusual procurement competition: the Republic needed a domestic medium tracked tank following the destruction of the original Vedette production facility during the Jihad, and Quikscell proposed adapting the troubled Condor Trans-Track experimental prototype into a practical fixed-configuration vehicle. Despite an unconventional development history rooted in a design widely regarded as a failure, the Multi-Purpose Tank proved capable enough to become the primary medium tank of the Republic Standing Guard, serving in militia commands and front-line Brigades alike.</p>
+</overview>
+
+<deployment>
+<p>The reactive armor refit of the Condor MPT began informally as a field modification among front-line Republic Brigades, sourcing reactive plating through Aldis while simultaneously upgrading the Kinnol MBT with the same treatment. The modification's widespread adoption prompted the DR&amp;R to consider incorporating it into new production orders, effectively formalizing what had become a de facto standard configuration for combat-deployed MPTs. Operationally identical to the standard model beyond the improved protection, the Reactive variant has become the expected front-line configuration.</p>
+</deployment>
+
+<history>
+<p>The Multi-Purpose Tank's development began in the first years of the Republic of the Sphere, when military planners identified a gap left by the Jihad's destruction of the New Earth Technology Center that had produced the Vedette. A procurement competition called by the Department of the Republic and Reconstruction drew an unexpected bid from Quikscell, which proposed basing a new tracked tank on the failed Condor Trans-Track experimental prototype from the 3040s.</p><p>Supervising Technician Coinneach Tusk argued that the Trans-Track's retractable tread system, long recognized as the design's fatal flaw, could be eliminated entirely to produce a reliable fixed-track vehicle. The DR&amp;R accepted the proposal, and Quikscell established production at their Oliver facility, submitting to demanding quality protocols that significantly improved reliability beyond the company's typical product standards. The resulting tank carried a price tag near the premium Vedette V-G7X, but the size of the order justified the investment, and the MPT quickly became the backbone of Republic Standing Guard armored forces.</p><p>The vehicle served through the Fortress Republic period and into the Dark Age, maintaining a domestically sourced supply chain while interstellar trade collapsed across much of the Inner Sphere. As fighting intensified, reactive armor became nearly universal in front-line units, and the DR&amp;R began considering it the de facto production standard for combat-deployed MPTs.</p>
+</history>
+
+<manufacturer>
+Field Refit
+</manufacturer>
+
+<primaryFactory>
+Various
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Aldis
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:300 XL Fusion
+ARMOR:Reactive Armor
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 XTR:RotS 1
 </source>
+
+<published>
+XTR:RotS 1
+</published>
 
 <tonnage>
 50.0
 </tonnage>
 
-<capabilities>
-Although expensive to buy and to maintain, this immense hovercraft is capable of a flank speed of 129 km/h and a cruising speed of 86 km/h, making it one of the fastest vehicles in its weight class and as fast as the speediest 'Mechs and vehicles. Six tons of StarSlab/9.5 Mk II armor give the Condor considerable protection for its role, though the bulk is concentrated on the front and turret, notably weakening the sides. Unlike tracked or wheeled vehicles of the same weight, the Condor is intended to attack enemies "on the fly" at medium ranges.
-</capabilities>
-
-<overview>
-A heavy cavalry unit designed for rapid reaction to a shifting battle, the Condor is one of the few heavy hover tanks available.
-</overview>
-
-<deployment>
-This version of the Condor Multi-Purpose tank offers weapons and performance identical to the standard armor protection version. The only difference is that this variant serves in front-line Republic commands and is protected by six and a half tons of Reactive Armor.
-</deployment>
-
-<history>
-Introduced a few short years before the formation of the original Star League, the Condor remained one of Red Devil Industries main sellers for centuries and was widely distributed across the Inner Sphere, with the militaries of the Lyran Commonwealth, Federated Suns and Capellan Confederation fielding the majority during the Succession Wars. With the loss of Red Devil's factories with the capture of Pandora by Clan Jade Falcon in 3064, the design was secured by Quikscell Company, who developed an advanced new-tech refresh of the venerable and still highly popular design, even selling the unassembled components of the tank in kit form in effort to keep up with demand. Red Devil actually builds their own under license. Originally, Defiance Industries declined to allow the company to do so, which led to Red Devil offering a bounty for used or slightly damaged lasers taken in combat to recondition and install on new Condors. When Defiance noticed that some of its flagship BattleMech designs, such as the Zeus, attracted undue fire from foes attempting to cash in on the bounty, they quickly relented. Not nearly as notable, the reliable SureFire MiniGun, mounted on the body, is intended as an anti-personnel weapon.
-</history>
-
-<manufacturer>
-Field Refit
-</manufacturer>
-
-<primaryFactory>
-Various
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Core Tek 215 XL fusion engine
-ARMOR:StarSlab/9.5 Ferro-Fibrous Mk II 
-COMMUNICATIONS:TharHes KR-A P/Comm
-TARGETING:TharHes Mars 1 with TAG
-</systemManufacturers>
-
-<capabilities>
-Although expensive to buy and to maintain, this immense hovercraft is capable of a flank speed of 129 km/h and a cruising speed of 86 km/h, making it one of the fastest vehicles in its weight class and as fast as the speediest 'Mechs and vehicles. Six tons of StarSlab/9.5 Mk II armor give the Condor considerable protection for its role, though the bulk is concentrated on the front and turret, notably weakening the sides. Unlike tracked or wheeled vehicles of the same weight, the Condor is intended to attack enemies "on the fly" at medium ranges.
-</capabilities>
-
-<overview>
-A heavy cavalry unit designed for rapid reaction to a shifting battle, the Condor is one of the few heavy hover tanks available.
-</overview>
-
-<deployment>
-This version of the Condor Multi-Purpose tank offers weapons and performance identical to the standard armor protection version. The only difference is that this variant serves in front-line Republic commands and is protected by six and a half tons of Reactive Armor.
-</deployment>
-
-<history>
-Introduced a few short years before the formation of the original Star League, the Condor remained one of Red Devil Industries main sellers for centuries and was widely distributed across the Inner Sphere, with the militaries of the Lyran Commonwealth, Federated Suns and Capellan Confederation fielding the majority during the Succession Wars. With the loss of Red Devil's factories with the capture of Pandora by Clan Jade Falcon in 3064, the design was secured by Quikscell Company, who developed an advanced new-tech refresh of the venerable and still highly popular design, even selling the unassembled components of the tank in kit form in effort to keep up with demand. Red Devil actually builds their own under license. Originally, Defiance Industries declined to allow the company to do so, which led to Red Devil offering a bounty for used or slightly damaged lasers taken in combat to recondition and install on new Condors. When Defiance noticed that some of its flagship BattleMech designs, such as the Zeus, attracted undue fire from foes attempting to cash in on the bounty, they quickly relented. Not nearly as notable, the reliable SureFire MiniGun, mounted on the body, is intended as an anti-personnel weapon.
-</history>
-
-<manufacturer>
-Field Refit
-</manufacturer>
-
-<primaryFactory>
-Various
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Core Tek 215 XL fusion engine
-ARMOR:StarSlab/9.5 Ferro-Fibrous Mk II 
-COMMUNICATIONS:TharHes KR-A P/Comm
-TARGETING:TharHes Mars 1 with TAG
-</systemManufacturers>
-
-<capabilities>
-Although expensive to buy and to maintain, this immense hovercraft is capable of a flank speed of 129 km/h and a cruising speed of 86 km/h, making it one of the fastest vehicles in its weight class and as fast as the speediest 'Mechs and vehicles. Six tons of StarSlab/9.5 Mk II armor give the Condor considerable protection for its role, though the bulk is concentrated on the front and turret, notably weakening the sides. Unlike tracked or wheeled vehicles of the same weight, the Condor is intended to attack enemies "on the fly" at medium ranges.
-</capabilities>
-
-<overview>
-A heavy cavalry unit designed for rapid reaction to a shifting battle, the Condor is one of the few heavy hover tanks available.
-</overview>
-
-<deployment>
-This version of the Condor Multi-Purpose tank offers weapons and performance identical to the standard armor protection version. The only difference is that this variant serves in front-line Republic commands and is protected by six and a half tons of Reactive Armor.
-</deployment>
-
-<history>
-Introduced a few short years before the formation of the original Star League, the Condor remained one of Red Devil Industries main sellers for centuries and was widely distributed across the Inner Sphere, with the militaries of the Lyran Commonwealth, Federated Suns and Capellan Confederation fielding the majority during the Succession Wars. With the loss of Red Devil's factories with the capture of Pandora by Clan Jade Falcon in 3064, the design was secured by Quikscell Company, who developed an advanced new-tech refresh of the venerable and still highly popular design, even selling the unassembled components of the tank in kit form in effort to keep up with demand. Red Devil actually builds their own under license. Originally, Defiance Industries declined to allow the company to do so, which led to Red Devil offering a bounty for used or slightly damaged lasers taken in combat to recondition and install on new Condors. When Defiance noticed that some of its flagship BattleMech designs, such as the Zeus, attracted undue fire from foes attempting to cash in on the bounty, they quickly relented. Not nearly as notable, the reliable SureFire MiniGun, mounted on the body, is intended as an anti-personnel weapon.
-</history>
-
-<manufacturer>
-Field Refit
-</manufacturer>
-
-<primaryFactory>
-Various
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Core Tek 215 XL fusion engine
-ARMOR:StarSlab/9.5 Ferro-Fibrous Mk II 
-COMMUNICATIONS:TharHes KR-A P/Comm
-TARGETING:TharHes Mars 1 with TAG
-</systemManufacturers>

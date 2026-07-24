@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-eba9-7bf9-b7b3-851da4a512f7
+</UUID>
 
 <UnitType>
 Tank
@@ -65,6 +60,18 @@ Hover
 0
 </engine_type>
 
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
+
 <armor>
 8
 6
@@ -92,10 +99,51 @@ Hover
 PPC
 </Turret Equipment>
 
+<capabilities>
+<p>The Heavy Weapons Carrier mounts a single turret-mounted PPC as its sole armament, providing significant firepower for a twenty-ton platform. A fusion engine drives the hover chassis to one hundred thirty kilometers per hour, making it one of the fastest combat vehicles in service. The turret mount allows engagement in any direction without repositioning.</p><p>Three tons of standard armor provide minimal protection, making the vehicle extremely vulnerable to return fire. The design relies entirely on its exceptional speed and the PPC's long range to avoid sustained engagement. The fusion engine provides unlimited operational range, well-suited for the extended patrol and harassment missions the vehicle is designed to perform.</p>
+</capabilities>
+
+<overview>
+<p>The Heavy Weapons Carrier is a twenty-ton hover vehicle mounting a single turret-mounted PPC. Associated with the Gray Death Legion's operations on Glengarry, this fast reconnaissance and harassment platform trades the weapons carrier family's traditional tracked chassis for a hovercraft capable of one hundred thirty kilometers per hour. The fusion engine provides unlimited range, making it well-suited for extended patrol and raiding operations.</p>
+</overview>
+
+<deployment>
+<p>The Heavy Weapons Carrier is associated with the Gray Death Legion's operations on Glengarry in 3056. The vehicle's exceptional speed and PPC armament made it effective for reconnaissance-in-force and harassment missions against Clan Jade Falcon forces. No large-scale production or widespread adoption has been documented.</p>
+</deployment>
+
+<history>
+<p>The Heavy Weapons Carrier appeared in the Historical Turning Points: Glengarry scenario pack, associated with the Gray Death Legion's defense of Glengarry in 3056. The vehicle's design reflects the Legion's preference for fast, hard-hitting platforms capable of hit-and-run tactics against heavier forces. No manufacturer data is available, suggesting the vehicle may be a field modification or limited-production design rather than a mass-manufactured platform.</p><p>Sarna notes the vehicle is one ton underweight, suggesting a possible errata issue in the original publication. Despite this discrepancy, the design serves as an example of the diverse light combat vehicles fielded by mercenary commands during the Clan Invasion era.</p>
+</history>
+
+<manufacturer>
+Unknown
+</manufacturer>
+
+<primaryFactory>
+Unknown
+</primaryFactory>
+
+<systemManufacturers>
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:Fusion
+ARMOR:Standard
+</systemModels>
+
 <source>
 HTP:Glengarry
 </source>
 
+<published>
+HTP:Glengarry
+</published>
+
 <tonnage>
 20.0
 </tonnage>
+

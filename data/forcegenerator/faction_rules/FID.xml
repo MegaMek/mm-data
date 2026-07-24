@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<ruleset faction="FID" ratingSystem="IS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <!--
+    The Fidelis ("the faithful") are secret survivors of Clan Smoke Jaguar, reorganized on Wayside V
+    by Star Colonel Paul Moon (the first Custos) after the 3060 annihilation. They equipped themselves
+    from Goliath Scorpion isorla captured from the 35th Scorpion Cuirassiers (Rik Myers among the
+    bondsmen). They field a single elite combined-arms Century - two Battle Groups of three Umbras
+    each - with no Elementals and no aerospace (canon), plus one WarShip, the Flatus (a Dante-class
+    frigate, ex-CSV Bordeaux).
+
+    EQUIPMENT SOURCING BY ERA (faction= delegation; units come from the delegated faction's RAT):
+      - Founding era (,3081): Goliath Scorpion isorla -> faction="CGS" (the "large majority" of their
+        gear; CGS is available 2807-3080). CSJ is lore only - no RAT availability after its 3060
+        annihilation, so it cannot be a generation source. Clan-isorla Umbras delegate a Clan %STAR%.
+      - Republic-service era (3135+): re-equipped by the Republic of the Sphere -> faction="ROS" at
+        rating "SB" (Stone's Brigade = A-rated, elite). ROS is IS-structured, so these Umbras delegate
+        IS echelons (%LANCE%/%COMPANY%).
+
+    The force is a %TOUMAN% (the whole single Century) so the WarShip attaches the proven way (cf. CB).
+    -->
+
+    <defaults>
+        <unitType>Mek</unitType>
+        <echelon>%TOUMAN%</echelon>
+        <rankSystem>%RANK_CUSTOM%</rankSystem>
+        <rating>A</rating>
+    </defaults>
+
+    <toc>
+        <unitType>
+            <option>null,Mek,Tank,VTOL,Infantry,BattleArmor,Warship,Dropship,Jumpship</option>
+        </unitType>
+
+        <echelon>
+            <option ifUnitType="">%TOUMAN%,%TRINARY%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
+            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option>%TRINARY%,%STAR%,%COMPANY%,%LANCE%</option>
+        </echelon>
+
+        <rating>
+            <option>A</option>
+        </rating>
+    </toc>
+
+    <!-- The Century: the Fidelis' whole force - two Battle Groups plus the Flatus. Modeled as a
+         %TOUMAN% so the WarShip detachment attaches the same way it does for full Clan toumans. -->
+    <force echelon="%TOUMAN%" eschName="Century">
+        <co>%GALAXY_CMDR%</co>
+
+        <subforces>
+            <subforce num="2">%TRINARY%</subforce>
+        </subforces>
+
+        <attachedForces>
+            <!-- The Flatus (Dante frigate, ex-CSV Bordeaux), lost 3149 at Dubhe to Clan Wolf. Only
+                 present in the Republic-service era. -->
+            <subforce unitType="Warship" ifDateBetween="3083,3149">%CLUSTER%</subforce>
+        </attachedForces>
+    </force>
+
+    <!-- Battle Group: three combined-arms Umbras with armor and infantry support. Equipment is
+         Goliath Scorpion isorla (,3081, as Clan stars) then Republic of the Sphere (3135+, as IS
+         lances/companies at Stone's Brigade rating). -->
+    <force echelon="%TRINARY%" eschName="Battle Group">
+        <name>{ordinal} Battle Group</name>
+        <co>%STAR_COL%</co>
+
+        <weightClass>
+            <option weight="2">H</option>
+            <option weight="3">M</option>
+            <option weight="1">L</option>
+        </weightClass>
+
+        <subforces>
+            <!-- Founding era: Goliath Scorpion isorla (Clan front-line Mek stars). -->
+            <subforce ifDateBetween=",3081" faction="CGS" rating="FL"
+                      unitType="Mek" num="3" eschName="Umbra">%STAR%
+            </subforce>
+            <!-- Republic-service era: Republic of the Sphere, Stone's Brigade (A) rating. -->
+            <subforce ifDateBetween="3135," faction="ROS" rating="SB"
+                      unitType="Mek" num="3" eschName="Umbra">%LANCE%
+            </subforce>
+        </subforces>
+
+        <attachedForces>
+            <!-- Armor Umbra: era-sourced. -->
+            <subforce ifDateBetween=",3081" faction="CGS" rating="SL"
+                      unitType="Tank" name="Armor Umbra">%STAR%
+            </subforce>
+            <subforce ifDateBetween="3135," faction="ROS" rating="SB"
+                      unitType="Tank" name="Armor Umbra">%LANCE%
+            </subforce>
+            <!-- Infantry Umbra: the Fidelis cross-train as infantry, which can be conventional or
+                 Battle Armor. Founding era draws Scorpion conventional infantry; the Republic era
+                 fields either Republic conventional infantry or Battle Armor. -->
+            <subforce ifDateBetween=",3081" faction="CGS" rating="Sol"
+                      unitType="Infantry" name="Infantry Umbra">%STAR%
+            </subforce>
+            <subforceOption ifDateBetween="3135,">
+                <option faction="ROS" rating="SB" unitType="Infantry"
+                        name="Infantry Umbra">%COMPANY%
+                </option>
+                <option faction="ROS" rating="SB" unitType="BattleArmor"
+                        name="Battle Armor Umbra">%COMPANY%
+                </option>
+            </subforceOption>
+        </attachedForces>
+    </force>
+
+    <!-- The Flatus: the Fidelis' sole WarShip, in Republic service. A Warship %CLUSTER% Fleet
+         attached from the %TOUMAN% Century - the exact pattern CSA/CSJ use (verified to load). -->
+    <force echelon="%CLUSTER%" eschName="Naval Detachment" ifUnitType="Warship">
+        <name>Naval Detachment</name>
+        <co>%GALAXY_CMDR%</co>
+
+        <subforces>
+            <subforce fluffName="Fidelis Flatus"
+                      chassis="Dante Frigate">%ELEMENT%
+            </subforce>
+        </subforces>
+    </force>
+
+</ruleset>

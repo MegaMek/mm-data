@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Skyfog
-sucsId: 2073
+sucsId: 2074
 xcood: -59.979
 ycood: -541.794
 spectralType:
@@ -62,6 +62,12 @@ planet:
       - name: Matthews B
       - name: Matthews C
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2652-04-14'
         faction:
           source: canon
@@ -97,8 +103,23 @@ planet:
         population: 117041155.0
       - date: '2750-01-01'
         population: 117628128.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Luxen Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MOC
       - date: '2760-01-01'
         population: 117525149.0
+      - date: '2767-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SL
       - date: '2770-01-01'
         population: 116646571.0
       - date: '2780-01-01'
@@ -106,6 +127,15 @@ planet:
       - date: '2783-09-17'
         faction:
           source: canon
+          value:
+            - MOC
+      - date: '2783-12-31'
+        # administration:
+        #   - Luxen Province
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - MOC
       - date: '2790-01-01'
@@ -128,6 +158,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '2864-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MOC
       - date: '3025-10-01'
         faction:
           source: canon
@@ -135,6 +171,15 @@ planet:
             - IE
         population: 894.0
         socioIndustrial: B-X-X-X-X
+      - date: '2769-01-01'
+        name: Skyfog
+        message: SLSC M8V.8476 renamed to Skyfog
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IE
   - name: San Andreas
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.07

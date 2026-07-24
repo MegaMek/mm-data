@@ -1,0 +1,204 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Wheeler
+sucsId: 3128
+xcood: 196.373
+ycood: -497.192
+spectralType: G2V
+planet:
+  - name:
+      source: canon
+      value: Wheeler
+    type: TERRESTRIAL
+    sysPos: 1
+    event:
+      - date: '2750-01-01'
+        population: 54116.0
+        socioIndustrial: C-F-B-D-F
+      - date: '2760-01-01'
+        population: 199152.0
+      - date: '2770-01-01'
+        population: 158747.0
+      - date: '2780-01-01'
+        population: 29860.0
+      - date: '2786-01-01'
+        socioIndustrial: X-X-X-X-X
+      - date: '2822-01-01'
+        name: Perian
+        message: Wheeler renamed to Perian
+      - date: '3022-01-01'
+        name: Mystras
+        message: Perian renamed to Mystras
+    orbitalDist: 2.56
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.86
+    diameter: 12900
+    density: 4.6818
+    dayLength: 26
+    yearLength: 4.3
+    temperature: 37
+    water: 37
+    lifeForm: FISH
+    icon: green8
+  - name: Wheeler II
+    type: DWARF_TERRESTRIAL
+    orbitalDist: 1.12
+    sysPos: 2
+    icon: barren7
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.11
+    diameter: 1300
+    density: 6
+    dayLength: 25
+    yearLength: 1.7
+    temperature: 166
+    water: 0
+  - name: Wheeler IV
+    type: ICE_GIANT
+    orbitalDist: 4.48
+    sysPos: 4
+    icon: iceg3
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.68
+    diameter: 40000
+    density: 1.2
+    dayLength: 18
+    yearLength: 9.6
+    ring: true
+    smallMoons: 6
+    satellite:
+      - name: 4-M1
+        size: medium
+        icon: rock1
+      - name: 4-M2
+        size: medium
+        icon: rock2
+  - name: Wheeler V
+    type: GAS_GIANT
+    orbitalDist: 16
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.99
+    diameter: 100000
+    density: 1.4
+    dayLength: 12
+    yearLength: 64
+    smallMoons: 15
+    satellite:
+      - name: 5-G1
+        size: giant
+        icon: oddmoon1
+      - name: 5-G2
+        size: giant
+        icon: oddmoon2
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-L2
+        size: large
+        icon: rock2
+      - name: 5-L3
+        size: large
+        icon: rock3
+      - name: 5-L4
+        size: large
+        icon: rock4
+      - name: 5-L5
+        size: large
+        icon: rock5
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+  - name: Wheeler VI
+    type: GAS_GIANT
+    orbitalDist: 31.36
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.25
+    diameter: 110000
+    density: 0.8
+    dayLength: 9
+    yearLength: 175.6
+    smallMoons: 22
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-L2
+        size: large
+        icon: rock2
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+      - name: 6-M3
+        size: medium
+        icon: rock3
+      - name: 6-M4
+        size: medium
+        icon: rock4
+  - name: Wheeler VII
+    type: GAS_GIANT
+    orbitalDist: 62.08
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.39
+    diameter: 70000
+    density: 1.4
+    dayLength: 13
+    yearLength: 489.1
+    ring: true
+    smallMoons: 11
+    satellite:
+      - name: 7-L1
+        size: large
+        icon: rock1
+  - name: Wheeler VIII
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 123.52
+    sysPos: 8
+    icon: gasg25
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.99
+    diameter: 17500
+    density: 8
+    dayLength: 10
+    yearLength: 1372.8
+    smallMoons: 2
+primarySlot: 1

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed3b-72ba-952c-790331167a6f
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Tracker Surveillance
 2440
 </year>
 
-<originalBuildYear>
-2440
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,14 +53,14 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:4.0:1:1
-cargobay:23586.0:1:2
+smallcraftbay:4.0:1:1::-1:0
+cargobay:23586.0:1:2::-1:0
 dockingcollar
 dockingcollar
-steeragequarters:280.0:0
-1stclassquarters:150.0:0
-crewquarters:406.0:0
-2ndclassquarters:42.0:0
+steeragequarters:280.0:0:-1::-1:0
+1stclassquarters:150.0:0:-1::-1:0
+crewquarters:406.0:0:-1::-1:0
+2ndclassquarters:42.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -96,9 +87,13 @@ crewquarters:406.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 17
@@ -147,15 +142,19 @@ Ammo Barracuda:24
 </structural_integrity>
 
 <capabilities>
-The Tracker surveillance vessel was designed to mimic a commercial JumpShip's sensor readings. It had the capability to rapidly change its silhouette by attaching special panels to hard points on the hull. The vessel could also modify its transponder, using various aliases to operate covertly. This allowed the Tracker to navigate space lanes without arousing suspicion. With sufficient speed and firepower, including the ability to engage anything short of a capital ship, the Trackers were capable of defending themselves in case their cover was exposed. Additionally, these spy ships often carried innocent DropShips on their docking collars to maintain their cover.
+<p>At just 120,000 tons and 318 meters in length, the Tracker is among the smallest vessels to carry a Kearny-Fuchida drive, classified as a WarShip solely by virtue of its compact KF core. Armament is deliberately minimal: a single NL45 naval laser in the nose provides the only capital-scale weapon, supplemented by a PPC in each forward quarter for anti-fighter defense and two Barracuda missile launchers in the aft arc as a parting deterrent to pursuit. The broadsides carry no weapons at all. Against any determined assault the Tracker is severely outgunned, relying instead on its relatively brisk acceleration of two gravities to flee rather than fight. Only 86 tons of standard armor protect the hull, barely adequate against even light combatants.</p><p>The vessel's true strength lies in its deception and surveillance systems. Modular hull paneling mounted on specialized hardpoints allowed the Tracker to alter its physical profile and electronic signature, making it nearly indistinguishable from the civilian JumpShips that plied interstellar trade routes. Crews could assume multiple identities, slipping into commercial traffic patterns while monitoring in-system communications and logging military movements. Fifty-six marines provided a boarding capability for securing captured intelligence assets, while two docking collars, four small craft bays, and over 23,000 tons of cargo space gave the vessel logistical flexibility on extended surveillance patrols. A single 75-meter gravity deck supported a modest crew of approximately eighty personnel.</p>
 </capabilities>
 
 <overview>
-Director-General Judith Cameron, concerned about the escalating conflicts with neighboring states, ordered an increase in covert monitoring operations by the Hegemony Intelligence. To fulfill this need, the Tracker surveillance vessel was developed. The Tracker was designed to provide sensor readings similar to a commercial JumpShip and had the ability to quickly alter its silhouette using special panels. It could also change its transponder, operating under different aliases for covert operations. Equipped with speed and firepower, the Trackers could gather intelligence, monitor fleet movements, and defend themselves if their cover was compromised. Despite becoming obsolete over time, some Trackers remained in service until the end of the Reunification War, primarily engaging pirates and Taurian Concordat raiders as Q-Ships.
+<p>The Tracker-class surveillance vessel entered service with the Hegemony Armed Forces in 2407, one of the earliest purpose-built intelligence-gathering WarShips to ply the spacelanes. Constructed by Bowie Industries at Wasat during the volatile Age of War, the Tracker was designed not to fight but to observe. Its hull incorporated specialized features that allowed the vessel to operate covertly among civilian traffic, gathering signals intelligence and monitoring military movements across contested systems. Small, lightly armed, and built for discretion rather than confrontation, the Tracker filled a niche that no other Hegemony vessel could match in an era when information was often more valuable than firepower. The class earned a quiet reputation within Hegemony naval intelligence circles, its contributions measured not in tonnage destroyed but in conflicts averted and campaigns shaped by the intelligence its crews gathered.</p>
 </overview>
 
+<deployment>
+<p>The THS Marlow earned distinction in 2409 following the Capellan Confederation's invasion of the Hegemony world Terra Firma. Operating covertly within the system for several weeks, the Marlow tracked, monitored, and logged Capellan troop movements from concealment. When the Capellan garrison underwent a routine rotation with fresh troops unfamiliar with their posting, the Marlow coordinated with waiting HAF forces to strike immediately, resulting in a swift and decisive Hegemony victory.</p><p>The THS Krait, in service since 2415, was transferred to the Rim Worlds Republic in 2580 and secretly mothballed after the Reunification War rather than being decommissioned. Reactivated as the RWS Krait in 2764 to oppose Star League incursions, the vessel served the Republic through the Amaris crisis until Captain Marc Birch intercepted signals in 2769 revealing the true nature of Stefan Amaris's regime. Unable to support the usurper yet unwilling to betray his homeland, Birch commanded the Krait into the Deep Periphery with two attached DropShips, the Harper and the Pepperdyne, and was never seen again.</p>
+</deployment>
+
 <history>
-Director-General Judith Cameron directed Hegemony Intelligence to intensify covert monitoring operations due to concerns over the belligerence of the Terran Hegemony's neighbors. The Tracker surveillance vessel was developed as a result, specifically to keep a close watch on the neighboring states. The success of the Tracker's design, with its ability to alter its silhouette and transponder, led to the creation of the Nightwing vessel. During the capture of Terra Firma by the Capellan Confederation in 2409, the THS Marlow, a Tracker, played a crucial role by gathering data on Capellan troop movements. This information enabled the Hegemony Armed Forces to liberate Terra Firma later that year. While the Tracker became obsolete by the beginning of the 26th century, several vessels remained in service until the end of the Reunification War, serving as Q-Ships to combat pirates and Taurian Concordat raiders.
+<p>The Tracker-class was conceived in the early twenty-fifth century as the Terran Hegemony sought an asymmetric advantage in the increasingly violent Age of War. Rather than commissioning another conventional combatant, the Hegemony's military planners recognized that reliable intelligence on rival states' fleet movements and garrison dispositions could prove more decisive than additional hulls in the line of battle. Bowie Industries at Wasat received the contract, delivering a vessel purpose-built for covert observation rather than direct engagement.</p><p>The design entered service in 2407 and quickly proved its worth. Early operations validated the class's intelligence-gathering philosophy, with Tracker crews successfully infiltrating trade routes across contested systems and providing actionable reconnaissance that shaped Hegemony military planning. At least one vessel contributed to a decisive Hegemony counterattack during the Age of War by coordinating strikes based on weeks of covert surveillance. The Hegemony operated the class throughout the period, deploying Trackers along borders with the Capellan Confederation, the Free Worlds League, and other rival states where tensions ran highest.</p><p>By the early 2500s, however, the design's effectiveness began to erode. Advancing sensor technology made it increasingly difficult for the Tracker to maintain its civilian disguise, as navies learned to detect the telltale signatures of a compact KF drive aboard an apparently commercial vessel. The exposure of Tracker tactics through intelligence leaks and captured crews further compromised the class. The Tracker's final operational chapter came during the Reunification War, where surviving vessels were repurposed as anti-pirate Q-Ships along the Periphery frontier, particularly the Taurian front. Production at Bowie Industries had ceased well before this point, as the Hegemony shifted its intelligence-gathering doctrine toward newer methods and platforms.</p><p>Despite the class's obsolescence, individual vessels proved remarkably long-lived. At least one Tracker survived into the late Star League era after being transferred to a Periphery state, where it saw intermittent service across nearly two centuries before vanishing under extraordinary circumstances during the Amaris crisis. The Tracker's legacy endured less in the vessels themselves than in the doctrine they pioneered: the concept of a dedicated intelligence-gathering WarShip operating under cover among civilian traffic influenced Hegemony naval thinking for generations after the class itself passed from service.</p>
 </history>
 
 <manufacturer>
@@ -167,12 +166,22 @@ Wasat
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Bowie Industries
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Tracker
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Compact
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Surveillance

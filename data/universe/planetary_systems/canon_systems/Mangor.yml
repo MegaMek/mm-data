@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Mangor
-sucsId: 1587
+sucsId: 1588
 xcood: -153.199
 ycood: -370.687
 spectralType: G5V
@@ -90,6 +90,17 @@ planet:
       - name: Selomirah
       - name: Alisjahbana
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
+      - date: '2596-09-22'
+        faction:
+          source: canon
+          value:
+            - FWL
       - date: '2596-12-30'
         faction:
           source: canon
@@ -97,9 +108,13 @@ planet:
             - FWL
         population: 49275.0
         socioIndustrial: C-F-A-F-D
-      - date: '2596-09-22'
+      - date: '2596-12-31'
+        # administration:
+        #   - Duchy of Andurien
+      - date: '2596-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2600-09-27'
@@ -183,6 +198,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Aya
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.44

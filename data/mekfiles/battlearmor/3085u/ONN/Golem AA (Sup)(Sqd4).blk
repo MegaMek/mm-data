@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a591-7903-92b8-0d576120a9da
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -71,9 +66,9 @@ Leg
 
 <Point Equipment>
 BAAPMount:RA
+InfantryAssaultRifle:APM
 BAAPMount:LA
-Infantry Auto Rifle:APM
-Infantry Auto Rifle:APM
+InfantryAssaultRifle:APM
 CLAdvancedSRM6:Body
 BA-Advanced SRM-6 Ammo:Body:Shots4#
 BA-Advanced SRM-6 Ammo:Body:Shots2#
@@ -85,6 +80,58 @@ Clan BA Fire Resistant:LA
 Clan BA Fire Resistant:RA
 Clan BA Fire Resistant:RA
 </Point Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<capabilities>
+<p>The Support configuration refocuses the Golem chassis for sustained urban combat. The Bearhunter autocannons and Advanced SRM 5 of the standard model are replaced with an Advanced SRM 6 launcher carrying six reloads, giving the suit far greater staying power in prolonged engagements. Dual anti-personnel weapon mounts provide flexible close-range options against infantry and soft targets in built-up areas.</p><p>This loadout sacrifices the standard Golem's anti-armor punch in exchange for sustained volume of fire and area suppression capability. The suit retains the fire-resistant armor and ground mobility profile of the base design, making it well-suited to the close-range, high-intensity fighting typical of urban operations. The lack of heavy direct-fire weapons means the Support variant depends on its missile systems for all serious offensive work, leaving it less effective against heavily armored targets at range.</p>
+</capabilities>
+
+<overview>
+<p>The Golem is an assault-class battle armor developed by Clan Ghost Bear, first fielded in 3067. Designed to be the definitive assault battlesuit, the two-ton suit was built to deliver heavy firepower while providing exceptional protection for its troopers. Thick, specialized armor plating and powerful short-range armament earned the design a fearsome reputation among both Clan and Inner Sphere forces. Though the Golem sacrifices speed for protection, it remains one of the most formidable assault battlesuits in active service, with multiple configurations fielded across several Clan factions.</p>
+</overview>
+
+<deployment>
+<p>Rasalhague Dominion garrison forces organized Support Golems into four-trooper squads tailored for urban pacification missions. These squads provided sustained missile fire in support of larger combined-arms formations clearing built-up areas, where the suit's ammunition depth allowed prolonged operations without resupply.</p>
+</deployment>
+
+<history>
+<p>Clan Ghost Bear initiated development of the Golem in 3064, driven by encounters with Clan Hell's Horses' Gnome and the Draconis Combine's Kanazuchi during border conflicts in the early 3060s. The Bears wanted an assault battlesuit that could match or exceed both rival designs in protection and firepower. Development stretched over several years as the Ghost Bears prioritized BattleMech and aerospace recovery following the Combine and Horses invasions. The Golem finally entered production in September 3067, and despite initial competition from established Elemental designs for production resources, the suit gradually found its place among frontline formations and Elemental-heavy Clusters from 3070 onward.</p><p>Clan Hell's Horses produced their own variants beginning in 3072, building on captured Ghost Bear technology and new weapon mounting systems at facilities on Csesztreg and Nouveaux Paris. The Ghost Bears responded with a dedicated urban support configuration in 3076, produced at the Bergan Industries annex on Alshain. A separate design known as the Rogue Bear, intended for second-line duty, also used the Golem's basic chassis as a template.</p>
+</history>
+
+<manufacturer>
+Bergan Industries BA Annex
+</manufacturer>
+
+<primaryFactory>
+Alshain
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3085
@@ -110,36 +157,3 @@ biped
 4
 </weightclass>
 
-<overview>
-The Golem is a battle armor design that was created by Clan Ghost Bear.
-</overview>
-
-<capabilities>
-In addition, this armor is fire resistant, so it is unaffected by Flamers and Inferno rounds. Though it cannot jump, the Golem is still speedier than the other assault-class designs. While that does not make this battlesuit fast, it does give it the ability to bring its strong weapons to bear on a target, even as it can withstand the punishment meted out by an enemy.
-</capabilities>
-
-<deployment>
-This Ghost Bear variant replaced the standard equipment, with an Advanced SRM 6 and a dual Anti-Personnel Weapon Mount.
-</deployment>
-
-<history>
-Following their conflicts with first the Draconis Combine, then Clan Hell's Horses, the Bears decided they wanted something that could compete with the Kanazuchi and Gnome. The Golem is the result of that process and features enough armor to shrug off a Heavy Large Laser.
-</history>
-
-
-<manufacturer>
-Bergan Industries BA Annex
-</manufacturer>
-
-<primaryFactory>
-Alshain
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

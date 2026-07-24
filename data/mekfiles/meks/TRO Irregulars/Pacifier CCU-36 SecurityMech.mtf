@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,7 +15,8 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-generator:MegaMek Suite 0.50.1-SNAPSHOT on 2024-11-09
+uuid:019f583e-ddb9-7b25-8c7c-1179500549fd
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Pacifier
 model:CCU-36 SecurityMech
 mul id:4780
@@ -24,12 +25,13 @@ Config:Biped
 techbase:Inner Sphere
 era:3031
 source:TR:I
+published:TR:I
 rules level:2
 role:Ambusher
 
 
 mass:30
-engine:90 Fuel Cell Engine(IS)
+engine:90 Fuel Cell Engine
 structure:IS Industrial
 myomer:Standard
 
@@ -37,7 +39,7 @@ heat sinks:3 Single
 walk mp:3
 jump mp:0
 
-armor:Industrial (Inner Sphere)
+armor:Industrial(Inner Sphere)
 LA armor:6
 RA armor:6
 LT armor:7
@@ -168,14 +170,26 @@ Foot Actuator
 -Empty-
 -Empty-
 
-overview:Some ’Mechs gain undeserved reputations which haunt them for their entire, often short, production runs. Occasionally, events or exceptional circumstances can redeem their fortunes: the Pacifier is one of those lucky few that received a second chance.
-capabilities:Conceived as a multi-functional civilian tool, the 30-ton Pacifier entered service in 3038. Built for ease of piloting, Alshain Weapons cut corners with their quality, and the ’Mech soon acquired a bad reputation. Left to the dregs of the militia and castoffs from the DCMS, it was often used as a punishment posting, which further mired its standing. Although slow, its speed is adequate for the urban environments in which it is designed to operate. Twin arm-mounted sprayers make it equally at home in fire-fighting or riot control duties, while the missile launchers and machine guns normally make use of non-lethal loadouts. Twin fully-articulated hands enable the Pacifier to help with fire rescue and accident recovery duties. To further keep costs down Alshain used a fuel cell engine and industrial grade armor, and contracted with Nimakachi Fusion Products to supply them with actuators and other parts. Pilots often dourly joke that the Pacifier is the bastard offspring of a Panther and Spider, a joke that is further reinforced given the lack of an ejection seat.
-deployment:Deployed thinly across many worlds of the Combine, the Pacifier does yeoman work regardless of its lowly reputation. Its first steps to redemption occurred during the Clan Invasion where pilots stood up bravely, if futilely, trying to buy time for frontline military forces to arrive or re-group. In one notable engagement on Luthien, a Pacifier of the 1st Omega Regiment faced off against the marauding 4th Nova Cat Regulars Striker Trinary in defense of Imperial City. With the remaining Cats fleeing from a Dragoon airstrike, the pilot destroyed two OmniMechs and damaged another before being killed. Likewise during the Jihad, many pilots fought valiantly defending their cities from the Word of Blake, Black Dragons, and Davions alike, destroying many machines in the process but forcing a reevaluation of the unit and its MechWarriors. In the face of these losses, Alshain introduced an upgraded Pacifier in the 3080s. A solid defensive unit, one could suspect the Combine of trying to bolster its second line forces in the face of the MMRP, particularly given the increased production of recent years.
-manufacturer:Alshain Weapons
-primaryfactory:Tok Do
-systemmanufacturer:CHASSIS:Alshain Type 40-30L
-systemmanufacturer:ENGINE:Hermes 90 Fuel Cell
-systemmanufacturer:ARMOR:Maximillian 23 Heavy Industrial
-systemmanufacturer:COMMUNICATIONS:Sipher CommCon CSU-4
-systemmanufacturer:TARGETING:Cat’s Eyes 5
+overview:<p>The Pacifier is a 30-ton SecurityMech designed by Alshain Weapons for civilian law enforcement within the Draconis Combine. Introduced in 3038, the design was developed after the Combine had previously relied on imported quadrupedal Guard SecurityMechs of Capellan manufacture for its domestic policing needs. Alshain Weapons created the Pacifier as a domestically produced alternative that could serve both police and light combat roles, though the company's notorious lack of quality control earned the design an unfavorable reputation from the outset. Despite these shortcomings, the Pacifier proved its worth during the Clan Invasion and Jihad, where its pilots fought against far superior foes and forced a reassessment of the design's value. By the early thirty-first century, the Pacifier had become one of the most recognized SecurityMech designs in the Inner Sphere, mentioned in the same breath as the Copper, Guard, and Inquisitor.</p>
 
+capabilities:<p>The Pacifier is built on an Alshain Type 40-30L IndustrialMech chassis and powered by a Hermes 90 fuel cell engine, giving it a modest top speed of only 32 kph. This slow speed is the design's most significant tactical limitation, restricting it to static defense, checkpoint duty, and urban patrol where rapid redeployment is not required. Three single heat sinks manage the minimal heat load generated by its ballistic and missile weaponry, while standard industrial armor provides basic protection against small arms fire. The conspicuous absence of an ejection seat in the original model was a frequent point of criticism, leaving pilots trapped in a disabled machine.</p><p>Where the Pacifier distinguishes itself from lighter SecurityMechs is its unusually diverse weapons suite. A Thunderstroke-L LRM-5 in the left torso provides standoff engagement capability rare among SecurityMechs, while a Telos-2 SRM-2 in the right torso handles close-range work. Both launchers can fire tear gas rounds for crowd dispersal or standard munitions for genuine combat. Each arm mounts a Sperry Browning machine gun and a sprayer, the latter serving double duty for both riot suppression and firefighting operations. An advanced fire control system ties the entire weapons suite together, giving the Pacifier accuracy that compensates somewhat for its limited mobility. This combination of missile, ballistic, and utility systems makes the Pacifier one of the most versatile SecurityMech platforms available, capable of transitioning from firefighting to riot control to light combat without reconfiguration.</p>
+
+deployment:<p>The original production model, designed in 3038 for the Draconis Combine's civilian authorities. The CCU-36 mounts a Thunderstroke-L LRM-5, Telos-2 SRM-2, twin Sperry Browning machine guns, and twin sprayers, all guided by advanced fire control. Standard industrial armor and the absence of an ejection seat reflect both the design's budget-conscious origins and Alshain Weapons' poor quality standards. Despite its slow speed and questionable build quality, the CCU-36 saw extensive service across Combine worlds and proved surprisingly effective when pressed into combat during the Clan Invasion and Jihad, earning belated respect for a design that had long been dismissed as a militia cast-off.</p>
+
+history:<p>The Pacifier's origins lie in the Draconis Combine's dissatisfaction with relying on foreign-built SecurityMechs for domestic law enforcement. Prior to 3038, Combine civilian authorities had employed the Capellan-manufactured Guard, a cheap but crude quadrupedal design. Alshain Weapons was tasked with developing a domestically produced SecurityMech that could serve the Combine's police forces without depending on Capellan imports. The resulting CCU-36 Pacifier offered substantially more capability than the Guard, but Alshain Weapons' poor quality control immediately undermined the design's reputation.</p><p>The combination of shoddy manufacturing and the lack of an ejection seat made the Pacifier deeply unpopular with its intended operators. Most units were relegated to the lowest-priority planetary militia postings, where they served as little more than armed scarecrows for minor civil disturbances. This ignominious status persisted for decades, with the Pacifier regarded as a design nobody wanted to pilot and few commanders wanted in their formations.</p><p>The Clan Invasion of 3049 changed the Pacifier's fortunes dramatically. When the Clans struck the Combine's border worlds, every available armed machine was pressed into service, including scores of Pacifiers that their militia pilots had never expected to take into real combat. Against overwhelming Clan forces, Pacifier crews fought with a desperation and tenacity that surprised observers on both sides, and the design's diverse weapons suite proved more useful in irregular warfare than its critics had anticipated. The Jihad further reinforced this reassessment, as Pacifier units again found themselves in combat roles far beyond their design specifications. These experiences led to a fundamental reevaluation of the Pacifier's capabilities and ultimately drove the development of the upgraded CCU-40 model in the 3080s, which addressed the original's most glaring deficiencies while preserving its proven weapons flexibility.</p>
+
+manufacturer:Alshain Weapons
+
+primaryfactory:Tok Do
+
+fluffdate:2026-02-21 18:24:59
+
+systemmanufacturer:CHASSIS:Alshain
+systemmode:CHASSIS:Type 40-30L
+systemmanufacturer:ENGINE:Hermes
+systemmode:ENGINE:90 Fuel Cell
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Industrial
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown
+systemmode:TARGETING:Unknown (Advanced Fire Control)

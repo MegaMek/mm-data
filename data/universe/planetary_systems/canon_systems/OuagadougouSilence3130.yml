@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ouagadougou (Silence 3130+)
-sucsId: 1959
+sucsId: 1960
 xcood: 217.462
 ycood: 413.615
 spectralType: F6V
@@ -88,6 +88,14 @@ planet:
         size: large
         icon: rock15
     event:
+      - date: '2108-12-05'
+        name: Ouagadougou
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2341-06-29'
         faction:
           source: canon
@@ -95,6 +103,12 @@ planet:
             - DC
         population: 44634.0
         socioIndustrial: D-D-C-D-C
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 136179.0
       - date: '2360-01-01'
@@ -145,6 +159,16 @@ planet:
         population: 120283584.0
       - date: '2570-01-01'
         population: 123731621.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Bjarred Prefecture
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2580-01-01'
         population: 126218321.0
       - date: '2590-01-01'
@@ -231,16 +255,25 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '3025-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - DC
-      - date: '2108-12-05'
-        name: Ouagadougou
+            - ABN
       - date: '3130-01-01'
         name: Silence
         message: Ouagadougou renamed to Silence
+      - date: '3130-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Bjarred Prefecture
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
   - name: Philippon
     type: TERRESTRIAL
     orbitalDist: 3.64

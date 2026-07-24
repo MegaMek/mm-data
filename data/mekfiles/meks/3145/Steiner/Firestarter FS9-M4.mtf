@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,18 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d572-7524-bac4-9f69e409cc30
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Firestarter
 model:FS9-M4
 mul id:6611
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3109
-Source:TR:3145:LC
-Rules Level:2
+techbase:Inner Sphere
+era:3109
+source:TR:3145:LC,TR:3145
+published:RS:3145
+rules level:2
 role:Scout
-
-
 
 quirk:ubiquitous_clan
 quirk:ubiquitous_is
@@ -34,28 +35,27 @@ weaponquirk:exposed_linkage:RA:6:Flamer
 weaponquirk:exposed_linkage:RA:7:Flamer
 weaponquirk:exposed_linkage:RA:8:Flamer
 
+mass:35
+engine:210 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:35
-Engine:210 XL Engine(IS)
-Structure:IS Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:6
+jump mp:6
 
-Heat Sinks:10 Double
-Walk MP:6
-Jump MP:6
-
-Armor:Standard(Inner Sphere)
-LA Armor:12
-RA Armor:12
-LT Armor:12
-RT Armor:12
-CT Armor:16
-HD Armor:9
-LL Armor:16
-RL Armor:16
-RTL Armor:4
-RTR Armor:4
-RTC Armor:6
+armor:Standard(Inner Sphere)
+LA armor:12
+RA armor:12
+LT armor:12
+RT armor:12
+CT armor:16
+HD armor:9
+LL armor:16
+RL armor:16
+RTL armor:4
+RTR armor:4
+RTC armor:6
 
 Weapons:4
 Rotary AC/2, Left Arm
@@ -175,19 +175,29 @@ IS Endo Steel
 -Empty-
 -Empty-
 
-overview:Originally intended as a mobile incendiary ’Mech, the Firestarter evolved into a decent scouting and reconnaissance platform.
+overview:<p>The Firestarter was originally designed by Argile Technologies of Skye in 2550 as a specialized incendiary assault platform. The definitive FS9-H variant debuted in 2703 and quickly became the standard against which all incendiary 'Mechs were measured, with nearly three thousand units seeing active service by the onset of the Amaris Civil War in 2776. The design's popularity ensured continued production through the Succession Wars, with Argile maintaining manufacturing until the catastrophic destruction of their plant and headquarters during the Third Succession War. Coventry Metal Works assumed full production in 2895 when Argile declined to rebuild their facilities.</p><p>The Firestarter's specialized role as an indirect assault unit, combined with its robust parts availability, has made it a staple of reconnaissance and garrison forces across the Inner Sphere for centuries.</p>
 
-capabilities:Despite being shielded by five and a half tons of armor and capable of jumping 180 meters, the Firestarter was powerless against medium or heavyweight opponents. Instead, an entire strategy was built around its ability to cause wildfires, with strategically positioned blazes routing an opponent or covering a withdrawal and impeding any pursuit. Firestarter MechWarriors enjoyed setting fire to densely forested areas when enemy 'Mechs marched through them, as well as any buildings where the enemy was hiding. Other applications for the 'Mech included scorched earth tactics, though this grew less common as it became more important to capture rather than destroy the declining amount of precious resources, or leading units of Wasps and Stingers in deep penetration scouting and light raiding operations. This approach altered in the later Succession Wars when it was discovered that the Firestarter could not only set flames to prevent an enemy from following it, but also clear ambush spots for the advancing of friendly forces.
+capabilities:<p>The Firestarter was rarely attached to front-line lances, instead being assigned at the company or regimental level where commanders could deploy it to support attack groups or scout wooded terrain. While capable of threatening other light 'Mechs, the design's specified loadout of four Purity L-Series flamers, two Deprus RF machine guns, and two Magna Mk II medium lasers can do little against the formidable armor and weaponry of medium and heavy opponents.</p><p>The ability to set fires made the FS9 invaluable as a supporting 'Mech, as skillfully placed blazes could rout enemy forces, break lines, and corner 'Mechs, not to mention threaten even the biggest tanks with a fiery demise. An entire series of tactics was developed around creating and spreading wildfires, with Firestarter pilots particularly fond of setting dense woods afire while enemy 'Mechs advance through them, or igniting buildings sheltering enemy units.</p><p>Protected by five and a half tons of Livingston Ceramics armor and capable of jumping 180 meters with its six Luxor Load Lifters jump jets, the Firestarter could also create fire and smoke to cover a retreat and hamper pursuit. The design also works well as a scout, its speed and maneuverability providing decent field protection while clearing wooded areas that enemies might use for ambushes.</p>
 
-deployment:Another reworking of the -M2 variant debuting in 3109, the M4 strips out a double heat sink, the ER medium laser and the three flamers mounted in the left arm. The -M4 upgrades the engine to 210-rated XL engine and mounts a single RAC/2 in the left arm, supplied with one ton of ammunition stored in the left torso. The -M4 also adds another half ton of standard armor.
+deployment:<p>Another reworking of the FS9-M2 debuting in 3109, this variant removes the ER medium laser and three left-arm flamers to mount an XL engine and a rotary AC/2 with one ton of ammunition, trading incendiary capability for sustained ballistic firepower while adding a half-ton of additional armor protection. The rotary autocannon gives it a suppressive fire role uncommon among Firestarter variants.</p>
 
-history:Firestarters, both ancient and contemporary, can still be found in abundance among planetary militias and House troops. Even though Blakist forces have taken over CMW's principal plant on Coventry, spare parts are still accessible from other Firestarter producers (including LAW, Ceres Metals, Defiance, and Independence Weaponry). Loki field offices near the Circinus Federation frontier are concerned about reports of a new variety using endo steel technology on Federation-occupied worlds. With its particular load-out, this new variation appears to be designed to spread chaos and destruction. Firestarters have also been seen in Level II formations with Blakist soldiers in their Protectorate, most frequently at "police demonstrations" and guarding suspected prison sites. These versions are thought to be Coventry goods.
+history:<p>Since Firestarters were common in all 'Mech forces before the Succession Wars, none of the five Successor States suffered a shortage of these 'Mechs in the early conflicts. In the earliest days of the First Succession War, the Second Lyran Guard was assigned to garrison the planet of Port Moseby, a vitally important trade center. In August 2789, House Kurita's Second Arkab Legion attacked, landing elements near the capital city despite aerospace fighter opposition. The invaders advanced through heavily wooded country toward the capital, and defending Firestarters were sent to intercept.</p><p>An intense drought had left the forests tinder-dry, and the Firestarters quickly ringed the Kurita forces in flames. While the enemy 'Mechs struggled through the burning forest, the defenders brought their forces to the edge of the fire, engaging each 'Mech as it stumbled from the inferno. The Kurita forces were forced to retreat, having suffered significant losses. This engagement enhanced the prestige of the Firestarter and demonstrated the design's ability to transform entire battlefields into wastelands, prompting commanders to experiment with various deployment methods including dedicated incendiary lances.</p><p>Firestarters were also primarily responsible for scorched-earth missions carried out in the early days of the Succession Wars. On the modern battlefield, however, that tactic is extremely rare, used only when long-term victory is impossible or when a target is too valuable to fall into enemy hands. After the Fourth Succession War, many Firestarters were incorporated into light and even medium 'Mech lances to replace more costly units that had been destroyed or taken out of action.</p><p>The Federated Commonwealth unveiled the FS9-S in 3049, featuring recovered lostech to enhance scouting capabilities. This evolution continued with Luthien Armor Works' development of an OmniMech conversion, while both Coventry Metal Works and Defiance Industries have manufactured variants through the Dark Age era, ensuring the Firestarter's continued relevance on battlefields across the Inner Sphere.</p>
 
 manufacturer:Coventry Metal Works
+
 primaryfactory:Coventry
-systemmanufacturer:CHASSIS:Foundation Ultralight Endo Steel
-systemmanufacturer:ENGINE:GM 210 XL
-systemmanufacturer:ARMOR: Durallex Nova
-systemmanufacturer:JUMP_JET:Luxor Load Lifters
-systemmanufacturer:COMMUNICATIONS:Cyclops 14
-systemmanufacturer:TARGETING:Cyclops 9
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Foundation
+systemmode:CHASSIS:Ultralight Endo Steel
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:210 XL
+systemmanufacturer:ARMOR:Durallex
+systemmode:ARMOR:Nova
+systemmanufacturer:JUMP_JET:Luxor
+systemmode:JUMP_JET:Load Lifters
+systemmanufacturer:COMMUNICATIONS:Cyclops
+systemmode:COMMUNICATIONS:14
+systemmanufacturer:TARGETING:Cyclops
+systemmode:TARGETING:9

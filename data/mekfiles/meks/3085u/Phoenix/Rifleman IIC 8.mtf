@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,52 +15,54 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d23b-796e-9709-484aa4000e72
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Rifleman IIC
 model:8
 mul id:2717
 
 Config:Biped
-TechBase:Clan
-Era:3078
+techbase:Clan
+era:3078
 source:TR:3085
-Rules Level:2
+published:RS:3085u-PP
+rules level:2
 role:Skirmisher
 
 quirk:anti_air
 quirk:imp_com
 
+mass:65
+engine:325 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:65
-Engine:325 XL (Clan) Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:16 Clan Double
+walk mp:5
+jump mp:5
 
-Heat Sinks:16 Double
-Walk MP:5
-Jump MP:5
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:20
-RA Armor:20
-LT Armor:22
-RT Armor:22
-CT Armor:32
-HD Armor:9
-LL Armor:26
-RL Armor:26
-RTL Armor:7
-RTR Armor:7
-RTC Armor:10
+armor:Ferro-Fibrous(Clan)
+LA armor:20
+RA armor:20
+LT armor:22
+RT armor:22
+CT armor:32
+HD armor:9
+LL armor:26
+RL armor:26
+RTL armor:7
+RTR armor:7
+RTC armor:10
 
 Weapons:8
-ER Large Laser, Right Arm
 ER Large Laser, Left Arm
-Streak SRM 6, Right Torso
-AP Gauss Rifle, Right Arm
-AP Gauss Rifle, Right Arm
 AP Gauss Rifle, Left Arm
 AP Gauss Rifle, Left Arm
+ER Large Laser, Right Arm
+AP Gauss Rifle, Right Arm
+AP Gauss Rifle, Right Arm
 Streak SRM 6, Left Torso
+Streak SRM 6, Right Torso
 
 Left Arm:
 Shoulder
@@ -69,10 +71,10 @@ CLERLargeLaser
 CLAPGaussRifle
 CLAPGaussRifle
 CLAPGaussRifle Ammo
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Endo Steel
+Clan Endo Steel
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -85,10 +87,10 @@ CLERLargeLaser
 CLAPGaussRifle
 CLAPGaussRifle
 CLAPGaussRifle Ammo
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 
 Left Torso:
 Fusion Engine
@@ -98,9 +100,9 @@ CLDoubleHeatSink
 CLStreakSRM6
 CLStreakSRM6
 Clan Streak SRM 6 Ammo
-Endo Steel
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Endo Steel
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -112,9 +114,9 @@ CLDoubleHeatSink
 CLStreakSRM6
 CLStreakSRM6
 Clan Streak SRM 6 Ammo
-Endo Steel
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Endo Steel
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -174,19 +176,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Rifleman IIC is an upgrade of the venerable Rifleman BattleMech. Five tons heavier than the design it is based on, the Rifleman IIC is also slower. 
+overview:<p>The Rifleman IIC represents the culmination of nearly two centuries of Clan trial and error to perfect the venerable Rifleman chassis. Where the Inner Sphere design epitomized a "best compromise" of weapons and armor that never fully satisfied its critics, the Clans examined the problem from a fresh perspective and largely resolved the overheating and armor deficiencies inherent in the original. By adding five tons of mass and incorporating superior Clan technology, engineers created a platform that finally delivered on the Rifleman's anti-aircraft promise.</p><p>An ancient rebuild of an already ancient design, the Rifleman IIC has soldiered on throughout the centuries. The 'Mech serves with most Clans (a notable exception being Clan Wolf, which prefers the Glass Spider) and has found markets among several Inner Sphere powers. Mountain Wolf BattleMechs on Alpheratz recently began building the design for the Raven Alliance Military Corps, demonstrating the continued demand for this proven anti-aircraft platform. Its simplicity is matched only by its effectiveness, and new variants continue to debut as manufacturers explore different weapon configurations while maintaining the core air-denial mission.</p>
 
-capabilities:Five tons heavier than the design it is based on, the Rifleman IIC is also slower. This creates a great deal more room with which to mount other equipment. Further weight savings are found in the use of an Endo Steel frame. One of the first upgrades to the design was maxing out its protection, with eleven tons of Ferro-Fibrous armor. 
+capabilities:<p>Visually, the Clan Rifleman looks nothing like the traditional outline Inner Sphere MechWarriors recognize. Like its smaller brother, it mounts a large rotating radar array over its head, but the IIC variant's sensor package is mounted much higher, with twin box-like appendages fitted on either side of the central support pylon. Close analysis of battlefield scans revealed this unusual configuration operates as a phased array acting in tandem with the main array, though the full benefits of this arrangement warrant further study. The sophisticated GH D5j targeting system with integrated Active Probe can switch rapidly between ground engagements and the fluid realm of aerospace combat, providing protection against fighter strikes without compromising offensive capability.</p><p>The standard configuration mounts four Kolibri Delta Series Large Pulse Lasers, offering simple, accurate firepower that requires no ammunition supply. MechWarriors who have faced the Rifleman IIC report that it is impossible to close quickly enough with this 'Mech, as it will often strip an opponent's armor before they can reach close-combat range. A single Series 1b ER Small Laser serves as a backup weapon. Nineteen double heat sinks keep heat mostly in check, though pilots should employ volley fire during sustained engagements. Three "Highlifter" 44 jump jets propel the sixty-five-ton chassis up to ninety meters per leap, providing tactical mobility the original Rifleman never possessed. Eleven tons of Forging Z5 ferro-fibrous armor on a CCo-B Endo Steel frame maximizes protection, and many garrison MechWarriors appreciate the extra cockpit protection provided by the well-armored sensor package that forms the design's distinctive "helmet."</p>
 
-deployment:This version carries an ER Large Laser and pair of AP Gauss Rifles in each arm. These are supported by a Streak SRM-6 mounted in the left and right torsos. A head mounted ECM Suite can disrupt targeting networks, and five jump jets allow the IIC 8 to cover 150 meters at a time. The Endo Steel chassis allowed the engineers to install a Consolidated 325 XL engine, increasing ground speed to a maximum of 86 km/h.
+deployment:<p>The Rifleman IIC 8 represents the most radical reimagining of the chassis, mounting a Consolidated 325 XL engine that pushes top speed to eighty-six kilometers per hour. Each arm carries a Series 7K ER Large Laser paired with twin Series-9 AP Gauss Rifles for combined-arms engagement, while Type VI Streak SRM-6 launchers in each torso provide additional close-range firepower. A head-mounted ECM Suite disrupts enemy targeting networks, and five jump jets enable one hundred fifty meter leaps. This configuration transforms the traditional fire support platform into an aggressive skirmisher capable of rapid repositioning and precision strikes.</p>
 
-history:An ancient rebuild of an already ancient design, the Rifleman IIC has soldiered on throughout the centuries. The ’Mech can be found in service with most Clans (a notable exception is Clan Wolf, which prefers the Glass Spider) and several Inner Sphere powers. Its simplicity is matched only by its effectiveness, and new variants continue to debut.
+history:<p>The Rifleman IIC was first observed as part of Clan Nova Cat forces during the initial invasion, but has since been seen in all the Clans with which the Inner Sphere has come into contact. The 'Mech forms a common sight in Clan garrison units, serving as the first line of defense against air attack. The main variant on the Rifleman IIC appeared first with the Smoke Jaguar Clan and has since been spotted among other garrison forces. Designated the IIC 2, this version takes a more conservative approach to the anti-aircraft role, using a larger 260-rated engine to retain standard Rifleman performance while eliminating the ferro-fibrous armor in favor of two additional tons of standard plating. Four Ultra Autocannon/2s with 135 rounds of ammunition stored in CASE-fitted torso sections provide formidable sustained firepower.</p><p>Clan Cloud Cobra upgraded their aging Rifleman IICs following the surprise invasion of Huntress, introducing the IIC 3 variant in early 3062 with Heavy Large Lasers that deliver a nasty surprise to enemies expecting the standard pulse configuration. Mountain Wolf BattleMechs' newly refurbished factory on Alpheratz began building the base design for the Alliance Military Corps, giving second-line units access to Clan technologies against pirates and border threats. When bandits struck Prinis Prime using local collaborators to disable AMC aerospace contingents, a lance of new Rifleman IICs appeared and rendered the pirate command lance to slag in moments. Similar actions on Suianheer and Risin have sent clear signals to opportunists along the Alliance border.</p><p>The Diamond Sharks collaborated with Federated Suns interests to develop the IIC 8, whose ECM capabilities and 86 kph speed proved troublesome for Inner Sphere defenders on New Earth during the Jihad. An unusual action occurred on Ballalaba, where Marian Hegemony forces fought to stave off a Canopian counterattack. One century of IV Prima, under Centurion Wozniak's command, held off repeated charges by the Second Canopian Light Horse for several days using archaic Rifleman IICs that were nonetheless cutting-edge for the tech-limited Marian forces. Wozniak's Stand became a heavily propagandized bright spot during an otherwise bleak period for the Hegemony, and a daring nighttime raid later freed the centurion from Canopian captors.</p><p>Clan Nova Cat introduced the IIC 7 in 3078 with heavy lasers and plasma cannons linked to a targeting computer, while Star Adder's IIC 6 mounting twin HAG-30s reportedly remained in the Clan Homeworlds and may be apocryphal. The Raven Alliance's recent IIC 9 variant uses coolant pods to handle alpha strike heat with reflective armor providing protection against energy weapons, while their IIC 10 mounts ProtoMech autocannons in a curious short-range configuration that analysts consider a conceptual failure. Both the Draconis Combine and Duchy of Oriente have acquired various Rifleman IIC models in small numbers, ensuring this ancient Clan design continues finding new markets throughout the Inner Sphere.</p>
 
-manufacturer:Trellshire Heavy Industries (Refits)
+manufacturer:Trellshire Heavy Industries
+
 primaryfactory:Twycross
-systemmanufacturer:CHASSIS:CCo-B Endo
-systemmanufacturer:ENGINE:Consolidated 325 XL
-systemmanufacturer:ARMOR:Forging ZM15 Ferro-Fibrous
-systemmanufacturer:JUMP_JET:"Highlifter" 44
-systemmanufacturer:COMMUNICATIONS:Garret T11-A
-systemmanufacturer:TARGETING:GH D5j TTS with Active Probe
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:CCo-B
+systemmode:CHASSIS:Endo Steel
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:Consolidated 325 XL
+systemmanufacturer:ARMOR:Forging
+systemmode:ARMOR:ZM15 Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Highlifter
+systemmode:JUMP_JET:44 Improved
+systemmanufacturer:COMMUNICATIONS:Hector
+systemmode:COMMUNICATIONS:CC-22E with ECM Suite
+systemmanufacturer:TARGETING:Unknown
+systemmode:TARGETING:Mk. CXC-4

@@ -16,7 +16,8 @@
 # affiliated with Microsoft.
 
 id: Regis Roost
-sucsId: 2919
+sucsId: 2920
+# Hidden independent world - appears as ABN to players, requires special code handling
 xcood: 153.512
 ycood: -442.234
 spectralType: G0V
@@ -85,6 +86,12 @@ planet:
         size: large
         icon: rock13
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '3011-04-28'
         faction:
           source: canon
@@ -94,16 +101,29 @@ planet:
         socioIndustrial: D-F-B-D-B
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
         population: 25836.0
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
+        # Hidden world per The Five
       - date: '3026-01-01'
         faction:
           source: canon
           value:
             - ARC
         population: 30714.0
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3040-09-22'
         faction:
           source: canon
@@ -111,6 +131,15 @@ planet:
             - TC
         population: 50714.0
         socioIndustrial: B-C-B-C-A
+      - date: '3040-12-31'
+        # administration:
+        #   - Hyades Union
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '3050-01-01'
         population: 3924320.0
       - date: '3052-10-17'
@@ -123,6 +152,12 @@ planet:
         population: 5939255.0
       - date: '3090-01-01'
         population: 6015766.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3100-01-01'
         population: 6111570.0
       - date: '3110-01-01'

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac2d-7f64-a095-b6d50c22dbe6
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ III
 3094
 </year>
 
-<originalBuildYear>
-3094
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -58,10 +49,10 @@ Aerodyne
 </motion_type>
 
 <transporters>
-battlearmorbay:4.0:4:1
-cargobay:16.0:1:2
-2ndclassquarters:35.0:0
-crewquarters:14.0:0
+battlearmorbay:4.0:4:1::-1:0
+cargobay:16.0:1:2::-1:0
+2ndclassquarters:35.0:0:-1::-1:0
+crewquarters:14.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -88,9 +79,13 @@ crewquarters:14.0:0
 6
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 144
@@ -135,9 +130,69 @@ ISERMediumLaser
 11
 </structural_integrity>
 
+<capabilities>
+<p>The Vampire III returns to the original 400-ton displacement while incorporating modern battle armor delivery capability. Four Battle Armor bays and sixteen tons of cargo replace the original's jump infantry compartments. The weapons suite shifts to a missile and laser combination: the nose mounts two ER medium lasers and an Artemis-equipped SRM-6, each wing carries an Artemis-equipped LRM-20 and two ER medium lasers, and the aft arc mounts two ER medium lasers.</p><p>Protected by 460 points of heavy ferro-aluminum armor, the Vampire III trades the raw firepower of the Vampire II for restored speed, matching the original's safe thrust of six. Twenty-three double heat sinks easily handle the modest thermal output of the missile and laser armament. A crew of fifty-nine operates the vessel. The structural integrity of eleven matches the original design, maintaining the Vampire's characteristic resilience during high-speed combat insertions.</p>
+</capabilities>
+
+<overview>
+<p>The Vampire is one of the smallest DropShips ever to see combat, a tiny 400-ton Aerodyne so fast and well-armed that it is frequently mistaken for a heavy aerospace fighter. Conceived as the fastest jump infantry carrier in existence, the Vampire was designed to minimize the time its embarked troops were exposed to enemy interceptors by matching the performance of non-interceptor fighters it might encounter.</p><p>The vessel's distinctive combat profile involves high-speed, low-altitude passes over targets, during which jump infantry deploy through specialized ventral drop hatches. At long range, this gives the Vampire the appearance of a fighter on a bombing run, a deliberate deception that has proven highly effective at sowing confusion among defenders expecting ordnance rather than infantry. This combination of speed, firepower, and tactical surprise has made the Vampire a prized asset for special operations forces.</p>
+</overview>
+
+<deployment>
+<p>The Vampire III entered service in 3094 as a more affordable alternative to the heavier Vampire II, returning to the original's 400-ton displacement while retaining battle armor delivery capability. These vessels have seen service with AFFS special operations forces, continuing the Vampire lineage's tradition of high-speed covert insertion missions.</p>
+</deployment>
+
+<history>
+<p>The Vampire was developed by Markesan Astronautics for the Federated Suns, entering service in 2715 as a specialized jump infantry delivery platform. The design proved highly effective during the Border War between the Federated Suns and the Capellan Confederation, where defending troops were thrown into confusion when jump infantry began raining down from what they assumed were fighter bombing runs. Federated Suns Special Forces became particularly fond of the Vampire for its ability to achieve tactical surprise.</p><p>However, the Vampire's high performance came at a significant cost. Its powerful drive system had a relatively short operational lifespan and required maintenance far exceeding that of comparable DropShip engines. When Markesan Astronautics' manufacturing facilities were destroyed during the Draconis Combine's First Succession War thrust toward New Avalon, the several dozen surviving Vampires were gradually grounded and eventually scrapped as their engines failed without replacement parts available.</p><p>The design was considered lost until the recovery of the Hegemony Memory Core during the Jihad enabled Jalastar Aerospace to revive the Vampire. The company began producing updated versions for the AFFS's special forces, incorporating modern weapons technology while retaining the original design's core philosophy of speed and deception. Subsequent variants expanded the concept to include battle armor delivery alongside the traditional jump infantry role.</p>
+</history>
+
+<manufacturer>
+Jalastar Aerospace
+</manufacturer>
+
+<primaryFactory>
+Panpour
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Donovan XVIII
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<use>
+Troop Carrier
+</use>
+
+<length>
+42 m
+</length>
+
+<width>
+28 m
+</width>
+
+<height>
+8.5 m
+</height>
+
 <source>
-RS:3150
+TR:3150
 </source>
+
+<published>
+RS:3150
+</published>
 
 <tonnage>
 400.0
@@ -183,101 +238,3 @@ RS:3150
 0
 </escape_pod>
 
-<capabilities>
-<p>The Vampire’s main strength lies in its speed and deceptive appearance. It could blend into aerospace formations, often being mistaken for a fighter on a bombing run due to its weapons loadout and small size.</p>
-
-<p>The Vampire was equipped with a modest weapon array more akin to aerospace fighters. It carried two medium lasers and an SRM-6 in the nose, while each wing mounted a Large Laser and LRM-20. An additional pair of medium lasers protected the aft. This fighter-like armament allowed the Vampire to blend in with aerospace squadrons during combat missions. Despite its light weapons load, two tons of SRM reloads and three tons of LRM reloads provided ample endurance for its hit-and-run role.</p>
-</capabilities>
-
-<overview>
-The Vampire is one of the smallest DropShips ever to see combat, often mistaken for a heavy aerospace fighter due to its speed and armament. Designed by Markesan Aeronautics for rapid deployment of jump infantry, it was the fastest infantry carrier of its time. With the aim of minimizing exposure to enemy aerospace fighters, the Vampire was engineered to match the speed and agility of the fighters it might encounter. Though highly effective in its role, the Vampire's short fuel range and cramped infantry compartments made it unpopular for long missions. Despite its flaws, the Vampire played a key role in several Federated Suns operations.
-</overview>
-
-<deployment>
-<p>The Vampire's troop compartments were notoriously cramped, only capable of carrying three platoons of jump infantry. Because of this, infantry often preferred to travel on larger transports, only transferring to the Vampire for the final assault. The ship also featured a cargo bay with 14 tons of capacity for quick strike operations. Its ventral drop hatches enabled the rapid deployment of troops without landing, giving it a strategic edge in surprise operations.</p>
-</deployment>
-
-<history>
-<p> When approaching a target, the Vampire would perform high-speed, low-altitude passes, deploying up to three platoons of jump infantry via specialized drop hatches on its ventral surface. This tactic confused enemies, as seen during the brief "Border War" between the Federated Suns and the Capellan Confederation. The most famous example occurred at Redfield, where Liao troops mistook incoming Vampires for bombers, only to be caught off guard when infantry rained down instead of bombs.</p>
-</history>
-
-<manufacturer>
-Jalastar Aerospace
-</manufacturer>
-
-<primaryFactory>
-Panpour
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Donovan XVIII drive system
-ARMOR:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<use>
-Troop Carrier
-</use>
-
-<length>
-42 m
-</length>
-
-<width>
-28 m
-</width>
-
-<height>
-8.5 m
-</height>
-<capabilities>
-<p>The Vampire’s main strength lies in its speed and deceptive appearance. It could blend into aerospace formations, often being mistaken for a fighter on a bombing run due to its weapons loadout and small size.</p>
-
-<p>The Vampire was equipped with a modest weapon array more akin to aerospace fighters. It carried two medium lasers and an SRM-6 in the nose, while each wing mounted a Large Laser and LRM-20. An additional pair of medium lasers protected the aft. This fighter-like armament allowed the Vampire to blend in with aerospace squadrons during combat missions. Despite its light weapons load, two tons of SRM reloads and three tons of LRM reloads provided ample endurance for its hit-and-run role.</p>
-</capabilities>
-
-<overview>
-The Vampire is one of the smallest DropShips ever to see combat, often mistaken for a heavy aerospace fighter due to its speed and armament. Designed by Markesan Aeronautics for rapid deployment of jump infantry, it was the fastest infantry carrier of its time. With the aim of minimizing exposure to enemy aerospace fighters, the Vampire was engineered to match the speed and agility of the fighters it might encounter. Though highly effective in its role, the Vampire's short fuel range and cramped infantry compartments made it unpopular for long missions. Despite its flaws, the Vampire played a key role in several Federated Suns operations.
-</overview>
-
-<deployment>
-<p>The Vampire's troop compartments were notoriously cramped, only capable of carrying three platoons of jump infantry. Because of this, infantry often preferred to travel on larger transports, only transferring to the Vampire for the final assault. The ship also featured a cargo bay with 14 tons of capacity for quick strike operations. Its ventral drop hatches enabled the rapid deployment of troops without landing, giving it a strategic edge in surprise operations.</p>
-</deployment>
-
-<history>
-<p> When approaching a target, the Vampire would perform high-speed, low-altitude passes, deploying up to three platoons of jump infantry via specialized drop hatches on its ventral surface. This tactic confused enemies, as seen during the brief "Border War" between the Federated Suns and the Capellan Confederation. The most famous example occurred at Redfield, where Liao troops mistook incoming Vampires for bombers, only to be caught off guard when infantry rained down instead of bombs.</p>
-</history>
-
-<manufacturer>
-Jalastar Aerospace
-</manufacturer>
-
-<primaryFactory>
-Panpour
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Donovan XVIII drive system
-ARMOR:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<use>
-Troop Carrier
-</use>
-
-<length>
-42 m
-</length>
-
-<width>
-28 m
-</width>
-
-<height>
-8.5 m
-</height>

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Hazeldean
-sucsId: 1070
+sucsId: 1071
 xcood: -409.263
 ycood: -165.467
 spectralType: G9V
@@ -71,6 +71,12 @@ planet:
         capital: Goulburn Mulwaree
       - name: Maralinga Tjarutja
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2609-10-20'
         faction:
           source: canon
@@ -113,6 +119,12 @@ planet:
         population: 117332129.0
       - date: '2750-01-01'
         population: 119136958.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 119897948.0
       - date: '2770-01-01'
@@ -190,8 +202,20 @@ planet:
           source: canon
           value:
             - MH
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 129791899.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
       - date: '3090-01-01'
         population: 131070112.0
       - date: '3097-01-01'
@@ -213,9 +237,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Oreithyia
@@ -391,7 +419,7 @@ planet:
             - FWL
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - FWL
   - name: Hecatonchires

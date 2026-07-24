@@ -18,6 +18,13 @@
 # affiliated with Microsoft.
 -->
 <!--
+NOTE: This file is superseded by data/universe/factionDiplomacy/*.yml - the current format is
+documented in "Faction Diplomacy Readme.md" in the MekHQ docs folder. MekHQ loads the YAML
+directory when it is present and falls back to this file otherwise. Until the YAML loader
+ships in a stable MekHQ release, keep BOTH representations in sync when editing diplomacy
+data.
+-->
+<!--
 factionhints.xml
 written by Neoancient
 
@@ -245,6 +252,17 @@ forces).
     <war name="The Taurian-Canopian War" start="2813-07-01" end="2814-02-28">
         <parties>TC,MOC</parties>
     </war>
+    <!-- The Third Succession War was previously missing entirely, leaving a war desert between
+    2864 and 3014. Dates are the canonical span (declared over by ComStar in 3025); intensity was
+    lower than the first two Succession Wars but the House borders were in near-continuous
+    conflict. -->
+    <war name="Third Succession War" start="2866-01-01" end="3025-12-31">
+        <parties>CC,FS</parties>
+        <parties>CC,FWL</parties>
+        <parties>DC,FS</parties>
+        <parties>DC,LA</parties>
+        <parties>FWL,LA</parties>
+    </war>
     <war name="Marik Civil War" start="3014-05-22" end="3015-05-31">
         <parties>FWL,FWLR</parties>
     </war>
@@ -406,6 +424,36 @@ forces).
     <alliance start="3059-10-01">
         <parties>CS,CNC</parties>
     </alliance>
+    <!-- Second Star League, formed at the First Whitting Conference (November 3058; founding day
+    approximate) and dissolved at the Fourth Whitting Conference on 28 November 3067. Previously
+    only Operation Bulldog existed for this era, so the member states were treated as mutual
+    enemies for the League's whole existence. Pairs are ended early where a war between members
+    is recorded (Capellan-St. Ives War, FedCom Civil War). CC-FS and CC-FC pairs are deliberately
+    omitted: the Chaos March and Xin Sheng raiding kept that border hostile despite shared
+    membership. -->
+    <alliance name="Second Star League" start="3058-11-01" end="3067-11-28">
+        <parties>SL,CS,DC,FRR,FWL,CC</parties>
+        <parties>FC,SL,CS,FRR,FWL</parties>
+        <parties>FC,FS</parties>
+        <parties end="3062-11-15">FC,DC</parties>
+        <parties>FS,SL,CS,FRR,FWL</parties>
+        <parties end="3062-11-15">FS,DC</parties>
+        <parties>LA,SL,CS,DC,FRR,FWL</parties>
+        <parties end="3062-11-15">LA,FC</parties>
+        <parties end="3062-11-15">LA,FS</parties>
+        <parties>SIC,SL,CS,DC,FRR,FWL</parties>
+        <parties>SIC,LA</parties>
+        <parties>SIC,FC</parties>
+        <parties>SIC,FS</parties>
+        <parties end="3061-01-26">SIC,CC</parties>
+        <!-- Taurian Concordat and Magistracy of Canopus admitted around the Second Whitting
+        Conference; dates approximate -->
+        <parties start="3061-01-01">SL,MOC</parties>
+        <parties start="3061-01-01">SL,TC</parties>
+        <!-- The Nova Cats fought beside the SLDF in Operation Bulldog and were subsequently
+        granted membership -->
+        <parties start="3059-05-20">SL,CNC</parties>
+    </alliance>
     <war name="Operation Bulldog" start="3059-05-20" end="3059-08-13">
         <parties>SL,CSJ</parties>
         <parties>DC,CSJ</parties>
@@ -417,6 +465,14 @@ forces).
         <parties>FRR,CSJ</parties>
         <parties>SIC,CSJ</parties>
     </war>
+    <!-- The Second Star League itself operating in DC space during Operation Bulldog - the very
+    example cited in this file's header documentation, but previously missing an entry. -->
+    <location start="3059-05-20" end="3059-08-13">
+        <outer>DC</outer>
+        <inner>SL</inner>
+        <fraction>0.2</fraction>
+        <opponents>CSJ</opponents>
+    </location>
     <location start="3059-05-20" end="3059-08-13">
         <outer>DC</outer>
         <inner>CS</inner>
@@ -537,6 +593,12 @@ forces).
     <war name="Hell's Horses Stampede" start="3070-11-14" end="3072-01-31">
         <parties>CHH,CW</parties>
     </war>
+    <!-- The Ice Hellion invasion of the Jade Falcon occupation zone. The CHH-CIH alliance
+    already ends 3071-11-01, matching the Horses turning on the Hellions. Dates approximate. -->
+    <war name="Operation Ice Storm" start="3071-05-01" end="3072-04-30">
+        <parties>CIH,CJF</parties>
+        <parties start="3071-11-01">CIH,CHH</parties>
+    </war>
     <war name="Taurian-FedSuns War" start="3074-05-29" end="3080-07-02">
         <parties>TC,FS</parties>
     </war>
@@ -568,6 +630,10 @@ forces).
     <war name="Second Dominion-Combine War" start="3098-07-01" end="3101-06-30">
         <parties>CGB,DC</parties>
     </war>
+    <!-- The Victoria War was previously missing entirely. Dates approximate. -->
+    <war name="Victoria War" start="3103-06-01" end="3105-04-30">
+        <parties>CC,FS</parties>
+    </war>
     <war name="Capellan-Republic War" start="3110-07-01" end="3113-06-30">
         <parties>CC,ROS</parties>
     </war>
@@ -580,7 +646,7 @@ forces).
         <parties>CJF,ROS</parties>
     </war>
     <war name="Combine Invasion" start="3135-04-20" end="3138-12-31">
-        <parties>CC,ROS</parties>
+        <parties>DC,ROS</parties>
     </war>
     <war name="Draconis March Invasion" start="3139-03-01" end="3141-04-30">
         <parties>DC,FS</parties>
@@ -598,6 +664,12 @@ forces).
     </alliance>
     <war name="Oriente-Andurien War" start="3138-02-06" end="3138-08-05">
         <parties>DO,DA</parties>
+    </war>
+    <!-- Referenced by the Scorpion Empire alliance comment (the Hanseatic Crusade PDF states the
+    war started January 3rd of 3141 and lasted 15 months) but previously had no war entry. -->
+    <war name="Hanseatic Crusade" start="3141-01-03" end="3142-03-31">
+        <parties>CEI,HL</parties>
+        <parties>CGS,HL</parties>
     </war>
     <war name="Buena-Lyran War" start="3147-06-06" end="3148-01-30">
         <parties>BC,LA</parties>
@@ -622,21 +694,69 @@ forces).
         <parties>DC,FS</parties>
     </war>
     <war name="Capellan-FedSuns War" start="3144-11-11">
-        <parties>DC,FS</parties>
+        <parties>CC,FS</parties>
     </war>
+    <!--ilClan
+    Era (derived from the Sarna 3151/3152 year pages; dates approximate where only a month is
+    given). Note Clan Wolf uses code CW through 3142 and CWE (Wolf Empire) from 3143 on.-->
+    <war name="Battle of Terra" start="3151-01-01" end="3151-04-19">
+        <parties end="3151-04-14">CWE,ROS</parties>
+        <parties start="3151-01-21" end="3151-04-14">CJF,ROS</parties>
+        <!-- The ilClan Trial between the Wolves and the Falcons -->
+        <parties start="3151-04-16">CWE,CJF</parties>
+    </war>
+    <!-- Hell's Horses drive toward Terra and their claim to ilClanship -->
+    <war name="Operation Stampede" start="3151-02-01" end="3151-04-14">
+        <parties>CHH,ROS</parties>
+    </war>
+    <!-- Lyran counteroffensive into the collapsing Jade Falcon occupation zone, beginning with
+    Melissia; end date approximate -->
+    <war name="Liberation of the Falcon OZ" start="3151-01-30" end="3151-12-31">
+        <parties>LA,CJF</parties>
+    </war>
+    <war name="Bolan Front" start="3151-01-04" end="3151-06-16">
+        <parties>LA,FWL</parties>
+    </war>
+    <!-- Marian attacks on Atzenbrugg and Lepaterique; end date approximate -->
+    <war name="Marian Hegemony Incursion" start="3151-01-12" end="3151-06-30">
+        <parties>MH,FWL</parties>
+    </war>
+    <war name="Operation Persuasion" start="3151-12-05">
+        <parties>SL3,CC</parties>
+        <!-- Raven Alliance naval bombardment of Chang-an on Liao -->
+        <parties start="3152-06-20">RA,CC</parties>
+    </war>
+    <war name="Andurien-Capellan War" start="3152-01-06">
+        <parties>DA,CC</parties>
+    </war>
+    <!-- Destruction of the Turkina Ascendancy and the invasion of Sudeten; start approximate -->
+    <war name="Horses-Falcon War" start="3152-02-01" end="3152-03-09">
+        <parties>CHH,CJF</parties>
+    </war>
+    <!-- The Dominion's limited invasion of the Combine; start approximate -->
+    <war name="Third Dominion-Combine War" start="3152-06-01">
+        <parties>RD,DC</parties>
+    </war>
+    <!-- Raven Alliance seizure of Milligan; end date approximate -->
+    <war name="Raven-FedSuns Conflict" start="3152-06-03" end="3152-06-30">
+        <parties>RA,FS</parties>
+    </war>
+    <!-- Mercenary and Tamarind attacks on Wolf-held Dixie from February; the first full
+    invasion wave launched 28 June 3152 -->
+    <war name="League Invasion of the Wolf Empire" start="3152-02-01">
+        <parties>FWL,CWE</parties>
+    </war>
+    <!-- The loader only supports one inner faction per location, so CDS and CNC need separate entries. -->
     <location start="3138-07-27">
         <outer>CP</outer>
         <inner>CDS</inner>
+    </location>
+    <location start="3138-07-27">
+        <outer>CP</outer>
         <inner>CNC</inner>
     </location>
-    <alliance start="3140-01-15">
-        <parties>CJF,CHH</parties>
-    </alliance>
     <alliance start="3135-05-13">
         <parties>ROS,FS</parties>
-    </alliance>
-    <alliance start="3137-01-01">
-        <parties>LA,CW</parties>
     </alliance>
     <alliance>
         <parties>OC,EF</parties>
@@ -667,11 +787,13 @@ forces).
     <alliance start="3067-03-23">
         <parties>LA,CWIE,ARDC</parties>
     </alliance>
-    <location end="3067-03-22">
+    <!-- Wolf-in-Exile settled on Arc-Royal after the Refusal War; the ARDC itself formed in 3058. -->
+    <location start="3058-01-01" end="3067-03-22">
         <outer>ARDC</outer>
         <inner>CWIE</inner>
     </location>
-    <location start="3067-03-23">
+    <!-- Ends with Operation REUNION returning Wolf-in-Exile to the ranks of Clan Wolf -->
+    <location start="3067-03-23" end="3151-02-19">
         <outer>LA</outer>
         <inner>CWIE</inner>
         <fraction>0.15</fraction>
@@ -688,6 +810,17 @@ forces).
     </alliance>
     <alliance start="3064-02-18">
         <parties>CSR,OA,RA</parties>
+    </alliance>
+    <!-- The Third Star League, re-established under Clan Wolf on 25 May 3151 -->
+    <alliance start="3151-05-25">
+        <parties>SL3,CWE</parties>
+        <!-- The Raven Alliance fought for the new League in Operation Persuasion; start
+        approximate -->
+        <parties start="3151-12-05">SL3,RA</parties>
+    </alliance>
+    <!-- The Galatean League allied with and later merged into the Isle of Skye -->
+    <alliance start="3151-12-15">
+        <parties>IoS,GL</parties>
     </alliance>
     <!-- Clan Ghost Bear contained within Rasalhague Dominion after merger -->
     <location start="3103-01-01">
@@ -726,8 +859,8 @@ forces).
         <fraction>0.5</fraction>
     </location>
     <!-- Free Worlds League (Former FWL) contained within splinter states during 3079-3139 fragmentation -->
-    <!-- Duchy of Andurien controls Andurien region -->
-    <location start="3079-01-01">
+    <!-- Duchy of Andurien controls Andurien region; FWL presence ends with the 3139 re-formation of the League -->
+    <location start="3079-01-01" end="3139-01-01">
         <outer>DA</outer>
         <inner>FWL</inner>
         <fraction>0.15</fraction>
@@ -750,8 +883,8 @@ forces).
         <inner>FWL</inner>
         <fraction>0.15</fraction>
     </location>
-    <!-- Regulan Fiefs (3086+) -->
-    <location start="3086-01-01">
+    <!-- Regulan Fiefs (3086+); FWL presence ends with the 3139 re-formation of the League (the Fiefs stayed independent) -->
+    <location start="3086-01-01" end="3139-01-01">
         <outer>RF</outer>
         <inner>FWL</inner>
         <fraction>0.15</fraction>

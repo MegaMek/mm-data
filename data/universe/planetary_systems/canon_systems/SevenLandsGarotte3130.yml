@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Seven Lands (Garotte 3130+)
-sucsId: 2286
+sucsId: 2287
 xcood: -456.51
 ycood: 261.635
 spectralType: M5V
@@ -52,6 +52,14 @@ planet:
       - name: Lankin
       - name: Fairlawn
     event:
+      - date: '2108-12-05'
+        name: Seven Lands
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2605-01-10'
         faction:
           source: canon
@@ -97,6 +105,15 @@ planet:
         population: 38545919.0
       - date: '2750-01-01'
         population: 29349885.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Finmark Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 15775590.0
       - date: '2770-01-01'
@@ -108,6 +125,12 @@ planet:
             - IND
       - date: '2780-01-01'
         population: 3441162.0
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2790-01-01'
         population: 1334070.0
       - date: '2800-01-01'
@@ -136,6 +159,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '3087-05-14'
         faction:
           source: canon
@@ -146,6 +175,12 @@ planet:
       - date: '3090-04-28'
         hpg: X
         population: 66156.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RT
       - date: '3100-01-01'
         population: 117745.0
       - date: '3110-01-01'
@@ -154,15 +189,13 @@ planet:
         population: 161826.0
       - date: '3130-01-01'
         population: 191718.0
+      - date: '3130-01-01'
+        name: Garotte
+        message: Seven Lands renamed to Garotte
       - date: '3140-01-01'
         population: 229184.0
       - date: '3145-01-01'
         population: 252655.0
-      - date: '2108-12-05'
-        name: Seven Lands
-      - date: '3130-01-01'
-        name: Garotte
-        message: Seven Lands renamed to Garotte
   - name: QGZ-2
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.14

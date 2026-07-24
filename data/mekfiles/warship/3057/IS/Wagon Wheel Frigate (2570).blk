@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed47-7b5f-9c78-50ccefed2a71
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Wagon Wheel Frigate
 2570
 </year>
 
-<originalBuildYear>
-2570
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,15 +53,15 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:12.0:4:1
-smallcraftbay:4.0:2:2
-cargobay:92478.0:1:3
+asfbay:12.0:4:1::-1:0
+smallcraftbay:4.0:2:2::-1:0
+cargobay:92478.0:1:3::-1:0
 dockingcollar
 dockingcollar
-steeragequarters:250.0:0
-2ndclassquarters:280.0:0
-crewquarters:1295.0:0
-1stclassquarters:500.0:0
+steeragequarters:250.0:0:-1::-1:0
+2ndclassquarters:280.0:0:-1::-1:0
+crewquarters:1295.0:0:-1::-1:0
+1stclassquarters:500.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -97,9 +88,13 @@ crewquarters:1295.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 46
@@ -216,15 +211,19 @@ IS Ammo AC/10:120
 </structural_integrity>
 
 <capabilities>
-Originally intended as a heavy troop transport and carrier, the Wagon Wheel-class frigate underwent changes that transformed it into a fast attack ship. Its design featured three large grav decks and over a dozen docking collars for DropShips, emphasizing troop transport capabilities. However, due to various factors, including financial miscalculations and technical issues, the ship was modified to have only two docking collars while upgrading its engine thrust and firepower. The oversized grav decks, reminiscent of a wagon wheel, remained a distinctive feature of the vessel. However, they also posed limitations on maneuverability and were susceptible to damage during high-stress accelerations and evasive actions.
+<p>At 650,000 tons and 700 meters, the Wagon Wheel is a large frigate whose most distinctive structural feature is its three oversized gravity decks, two measuring 300 meters and one 200 meters in diameter, mounted on external pylons that resemble the spokes of an old Terran wagon wheel. These massive structures, while providing exceptional crew habitability during long deployments, imposed significant penalties on the vessel's combat performance. The grav deck pylons suffered damage from the inertia of sudden accelerations and evasive actions, limiting the frigate's ability to maneuver aggressively in fleet engagements.</p><p>The broadside armament is formidable, featuring four NAC/35 naval autocannons per side alongside batteries of conventional autocannons. The nose mounts three NL45 naval lasers and two medium naval PPCs for heavy forward firepower, while twelve White Shark capital missile launchers distributed across the forward and aft quarters provide long-range striking power. Two thousand single heat sinks manage the thermal output, and 609 tons of standard armor protect the hull. Two docking collars support attached DropShips, and the cargo hold carries nearly 93,000 tons of supplies. Twelve aerospace fighters and four small craft provide screening capability, and a company of fifty marines supports boarding operations.</p>
 </capabilities>
 
 <overview>
-The Wagon Wheel-class frigate was a significant achievement for the Taurian Concordat, representing both their efforts to enhance their space fleet and foster Periphery solidarity. Originally designed as a heavy troop transport and carrier with long-range capabilities, the ship underwent modifications due to technical challenges and financial constraints. Although it entered service as a fast attack ship rather than a heavy transport, it retained oversized grav decks, resembling spokes of an old Terran wagon wheel, which affected its maneuverability.
+<p>The Wagon Wheel-class frigate was commissioned by the Taurian Concordat and constructed at Liberty Naval Yards on Horsham, entering service in 2570 during the final decades before the Star League's formation. Designed to modernize the Concordat's aging naval forces, the class carried a powerful broadside-oriented weapons suite and extensive cargo capacity suited to extended independent patrols along the Periphery frontier. The vessel's most recognizable feature was its three oversized gravity decks mounted on external pylons, a distinctive silhouette that earned the class its evocative name.</p><p>Though the Wagon Wheel proved a capable combatant, the gravity deck arrangement imposed handling limitations that constrained tactical flexibility. The class holds a prominent, if bittersweet, place in Taurian naval history as both a symbol of Periphery ambition and a reflection of the Concordat's struggle to compete with the industrial might of the Inner Sphere's Great Houses.</p>
 </overview>
 
+<deployment>
+<p>The TCS Anaheim and TCS Cyrton were part of a Taurian Concordat flotilla that jumped into the Malagrotta system in 2573 with navigational problems. After proceeding to the mining moon Fortuna for repairs, a Federated Suns naval squadron arrived two days later and engaged the Taurian force. In a three-hour battle the Federated Suns destroyed or captured all but one Taurian vessel, losing only a single Leopard CV-class DropShip. The destruction of the Anaheim and Cyrton at this incident, known as the Malagrotta Affair, directly precipitated the Reunification War.</p><p>The TCS Gorgon met a more mysterious fate, discovered by the 126th Pursuit Squadron of the Star League Defense Force's Twelfth Fleet among a bandit flotilla at the edges of Outworlds Alliance space, its circumstances unknown.</p><p>The TCS Merope was the sole survivor of the class following the Reunification War. In April 2765 the Merope still served in the Taurian navy under the command of Space Master Roger Keith, one of thirty-one WarShips in the Concordat fleet. The vessel was destroyed during the Periphery Uprising of 2765-2766 when SLDF operations eliminated most Periphery WarShip fleets.</p>
+</deployment>
+
 <history>
-The Taurian Concordat produced only a small number of Wagon Wheel-class frigates before the Reunification War shifted military priorities. Ironically, the destruction of two Wagon Wheels by Davion WarShips in the Malagrotta Affair in 2573 played a significant role in sparking the Reunification War. This event further fueled the historical enmity between the Taurian Concordat and the Federated Suns, a rivalry that persists to this day. Despite its limited production and involvement in a critical historical event, the Wagon Wheel-class frigate symbolizes the Taurian Concordat's ambition to strengthen its space fleet and foster Periphery unity in the face of a resurgent Inner Sphere.
+<p>The Wagon Wheel-class frigate originated from the Taurian Concordat's desire to build a modern WarShip that could both reinforce its own aging fleet and serve as a symbol of Periphery solidarity against the resurgent Inner Sphere. Liberty Naval Yards on Horsham was tasked with producing a vessel that would complement the Concordat's existing naval forces and potentially attract export orders from other Periphery states such as the Outworlds Alliance.</p><p>The original design was far more ambitious than the vessel that ultimately entered service. Planned as a heavy troop transport and carrier with a very long operating range, the Wagon Wheel was to feature three large gravity decks for crew comfort during extended deployments and over a dozen docking collars for DropShips. Political wrangling between Concordat officials, financial miscalculations, and persistent technical issues forced engineers to abandon the transport concept. They eliminated all but two docking collars, increased engine thrust significantly, and upgraded the firepower to transform the design into a fast attack frigate. Legal obligations with various subcontractors, however, required the retention of the oversized gravity decks. These enormous structures gave the class its distinctive name, though they also compromised combat maneuverability.</p><p>The Taurian Concordat built only a handful of Wagon Wheels before the Reunification War forced a reprioritization of military spending. The class first saw combat in 2573 at the Malagrotta Affair, where two vessels were destroyed by a Federated Suns naval squadron. This incident intensified tensions between the Concordat and the Federated Suns, directly precipitating the Reunification War and cementing an enduring enmity between the two states. A third vessel was discovered under mysterious circumstances among a bandit flotilla near Outworlds Alliance space.</p><p>The sole surviving vessel endured past the Reunification War and continued to serve in the Taurian navy, part of a thirty-one WarShip fleet that constituted the Concordat's remaining naval strength. When the Periphery Uprising erupted in 2765-2766, SLDF operations systematically dismantled the Periphery WarShip fleets, and the last Wagon Wheel was among the casualties. With no surviving vessels and production long since ceased, the class passed into history, remembered as an ambitious design whose troubled development reflected both the ingenuity and the limitations of Periphery naval engineering.</p>
 </history>
 
 <manufacturer>
@@ -236,12 +235,22 @@ Horsham
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Liberty Naval Yards
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Wagon Wheel
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Compact
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Frigate

@@ -17,7 +17,16 @@
 
 key: LR
 name: Liao Republic
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes:
+  - LR
 capital: Terra
+yearsActive:
+  - start: 2189
+    end: 2315
 tags:
   - IS
 color:

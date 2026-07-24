@@ -16,7 +16,8 @@
 # affiliated with Microsoft.
 
 id: Tangerz (Mayadi 2822+)
-sucsId: 2478
+sucsId: 2479
+# ComStar/Word of Blake/Republic hidden world - appears as ABN to players, requires special code handling
 xcood: 158.383
 ycood: 106.747
 spectralType: K8V
@@ -53,6 +54,14 @@ planet:
       - name: Kampungbajo
       - name: Nitu
     event:
+      - date: '2108-12-05'
+        name: Tangerz
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2667-08-18'
         faction:
           source: canon
@@ -82,6 +91,16 @@ planet:
         population: 576773280.0
       - date: '2750-01-01'
         population: 596260804.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Benjamin Military District
+        #   - Irurzun Prefecture
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2760-01-01'
         population: 606565606.0
       - date: '2770-01-01'
@@ -101,8 +120,24 @@ planet:
           source: canon
           value:
             - CS
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
+      - date: '2822-01-01'
+        name: Mayadi
+        message: Tangerz renamed to Mayadi
       - date: '2830-01-01'
         population: 15349763.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CS
+        # Hidden world per The Five
       - date: '2840-01-01'
         population: 4683819.0
       - date: '2850-01-01'
@@ -135,11 +170,32 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Tangerz
-      - date: '2822-01-01'
-        name: Mayadi
-        message: Tangerz renamed to Mayadi
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - WOB
+        # Hidden world per The Five
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ROS
+        # Hidden world
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Pemphredo
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.42

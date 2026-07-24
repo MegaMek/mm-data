@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>Interception Defense</name>
     <shortBriefing>Stop enemy from reaching the edge.</shortBriefing>
-    <detailedBriefing><![CDATA[Enemy forces are on the move, heading toward an unknown objective, and we cannot allow them to reach their destination. Their intent remains unclear, but their movement suggests a high-value mission. Your objective is to intercept and engage the enemy, destroying at least 50% of their forces before they can escape via the opposite edge of the engagement zone.
+    <detailedBriefing><![CDATA[Enemy forces are on the move, heading toward an unknown objective, and we cannot allow them to reach their destination. Their intent remains unclear, but their movement suggests a high-value mission. Your objective is to intercept and engage the enemy, destroying at least 33% of their forces before they can escape via the opposite edge of the engagement zone.
 
 Expect the enemy to favor speed and mobility, avoiding prolonged engagements as they push toward their objective. Deny them their escape route, break their formation, and ensure they do not reach their goal intact. They may attempt to punch through with concentrated force or use diversionary tactics to slip past your defenses—anticipate their maneuvers and shut them down.
 
@@ -29,12 +29,17 @@ We will control the battlefield at the end of the engagement, securing any remai
     <isHostileFacility>false</isHostileFacility>
     <isAlliedFacility>false</isAlliedFacility>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Hills</allowedTerrainType>
+            <allowedTerrainType>ColdHills</allowedTerrainType>
+            <allowedTerrainType>HotHillsDry</allowedTerrainType>
+            <allowedTerrainType>HotHillsWet</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>50</baseHeight>
         <baseWidth>17</baseWidth>
         <heightScalingIncrement>0</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -125,10 +130,10 @@ We will control the battlefield at the end of the engagement, securing any remai
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy 50% of the following forces before they can reach the destination edge. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy 33% of the following forces before they can reach the destination edge. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>Destroy</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimit>0</timeLimit>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>

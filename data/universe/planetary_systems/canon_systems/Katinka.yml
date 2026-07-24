@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Katinka
-sucsId: 1303
+sucsId: 1304
 xcood: 151.694
 ycood: -451.193
 spectralType: K3V
@@ -71,6 +71,12 @@ planet:
       - name: Zdenka
       - name: Brabec
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2708-01-25'
         faction:
           source: canon
@@ -89,6 +95,15 @@ planet:
         population: 1616686.0
       - date: '2750-01-01'
         population: 3298962.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Brinton Union
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2760-01-01'
         population: 5873485.0
       - date: '2770-01-01'
@@ -108,6 +123,12 @@ planet:
             - IND
       - date: '2820-01-01'
         population: 3582007.0
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2830-01-01'
         population: 1856371.0
       - date: '2840-01-01'
@@ -127,17 +148,24 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
           value:
             - ARC
-      - date: '3151-01-01'
+      - date: '3030-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: 3IJ1 Belt

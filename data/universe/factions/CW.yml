@@ -17,6 +17,11 @@
 
 key: CW
 name: Clan Wolf
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CWF
 capital: Tranquil
 capitalChanges:
   3052: Tamar
@@ -120,8 +125,6 @@ factionLeaders:
     gender: "MALE"
     startYear: 3122
     endYear: 3143
-  - title: "Khan"
-    firstName: "Alaric"
-    surname: "Ward"
-    gender: "MALE"
-    startYear: 3143
+usesMercenaries:
+  2500: false
+  3151: true

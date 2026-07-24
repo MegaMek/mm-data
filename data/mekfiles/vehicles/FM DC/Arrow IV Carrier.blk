@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,7 +15,11 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.0-SNAPSHOT on 2024-07-23
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8eb-7ad0-bf3b-74766495e21c
+</UUID>
+
 <UnitType>
 Tank
 </UnitType>
@@ -35,10 +39,6 @@ Arrow IV Carrier
 <year>
 3058
 </year>
-
-<originalBuildYear>
-3058
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -69,9 +69,13 @@ Tracked
 0
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
 0
-</armor_tech>
+</armor_tech_rating>
+
+<armor_tech_level>
+0
+</armor_tech_level>
 
 <armor>
 12
@@ -102,35 +106,41 @@ ISArrowIV
 </Rear Equipment>
 
 <capabilities>
-The chassis for missile carriers, but they are all essentially military transport vehicles, tracked being the most common, adapted to carry the huge missile launchers and loading equipment. Those adaptations generally consist of reinforcing the suspension systems and armoring the crew and critical components areas enough to survive the back blast from so many missiles. With an average top speed of 54 km/h and armor unable to survive counterbattery fire, if forced to engage in direct combat a carrier's life expectancy is measured in seconds.
+<p>The Arrow IV Carrier mounts two forward-firing Arrow IV artillery launchers, providing both conventional area-effect bombardment and precision homing strikes when paired with TAG designators. An InterComBust 180 internal combustion engine maintains the standard fifty-four kilometer per hour top speed. Simple Armor Plate Standard provides the same minimal forty-eight point armor protection as other base-model carriers.</p><p>A Communicator system and FireScan with IndirecTrack targeting handle coordination and fire direction. The Arrow IV system's indirect fire capability allows the carrier to operate from defilade positions well behind the front line, reducing exposure to the direct combat that proves fatal to thinly armored carrier platforms.</p>
 </capabilities>
 
 <overview>
-Ever since the development of the first rocket centuries ago, military units have used mobile missile systems to provide cheap and effective fire support. Along with its LRM counterpart, the SRM Carrier serves in every military action across the Inner Sphere in a variety of shapes and forms.
+<p>The Arrow IV Carrier is a sixty-ton tracked combat vehicle mounting two Arrow IV artillery systems on the standard weapons carrier chassis. Produced by the Quikscell Company for the Draconis Combine beginning in 3058, the design provides cheap artillery fire support using the proven carrier platform. The Arrow IV system's homing capability gives the vehicle precision strike potential far exceeding conventional missile carriers.</p>
 </overview>
 
 <deployment>
-The Combine's Ryuken-yon fields SRM Carriers fitted with special weapon pods that accept Arrow IV launchers.
+<p>The Arrow IV Carrier was produced by Quikscell for the Draconis Combine beginning in 3058, with production at Ares, Kalidasa, Layover, and Oliver. The DCMS integrated the design into combined-arms formations requiring organic artillery support at the company level.</p>
 </deployment>
 
 <history>
-Manufactured by almost every major military supplier, the modern SRM Carrier is derived from those developed in the Age of War by Quik Products Inc, the future Quikscell Company. In many cases derived a little too closely; during the Succession Wars era many manufacturers were producing little more than shoddy direct copies that fell below even Quikscell's low quality standards. After the end of the Fourth Succession War Quikscell lodged lawsuits against those manufacturing clones of Quik based carriers, resulting the closure of many smaller manufacturers and larger manufacturers ending production. While those who produced their own designs were not affected, Quikscell's elimination of much of its competitors and its offer to exchange any missile carrier not produced by them for legitimate Quikscell versions and parts made it the number one player of the missile carrier market.
+<p>The Arrow IV Carrier was developed for the Draconis Combine beginning in 3058, utilizing the proven Quikscell carrier chassis to mount Arrow IV artillery systems. The design appeared in Field Manual: Draconis Combine, reflecting DCMS doctrine favoring artillery integration at the company level. Quikscell produced the vehicle at four plants: Ares, Kalidasa, Layover, and Oliver.</p><p>The Arrow IV system's ability to fire both standard and homing munitions provides the carrier with precision strike capability far beyond conventional missile platforms. The design proved adaptable enough that other Quikscell carrier facilities could produce it with minimal retooling, leveraging the shared chassis and engine configuration.</p>
 </history>
 
 <manufacturer>
-Joint Equipment Systems,Quikscell Company,Quikscell Company,Caliphate Airfield Alpha,Quikscell Company,Quikscell Company,Maxwell Planetary Defense Consortium,Quikscell Company,Quikscell Company,Hadrian Mechanized Industries,Quikscell Company,Aldis Industries,Amaris Armored Vehicles
+Quikscell Company|Quikscell Company|Quikscell Company|Quikscell Company
 </manufacturer>
 
 <primaryFactory>
-Alshain,Ares,Broken Wheel,Granada,Kalidasa,Layover,Maxwell,Oliver,Pandora,Pompey,Richvale,Terra,Timbuktu
+Ares|Kalidasa|Layover|Oliver
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:InterComBust 180 ICE
-ARMOR:Simple Armor Plate Standard
+ENGINE:InterComBust
+ARMOR:Simple Armor Plate
 COMMUNICATIONS:Communicator
-TARGETING:FireScan with IndirecTrack
+TARGETING:FireScan
 </systemManufacturers>
+
+<systemModels>
+ENGINE:180 ICE
+ARMOR:Standard
+TARGETING:with IndirecTrack
+</systemModels>
 
 <notes>
 Inspired by Dak
@@ -139,6 +149,10 @@ Inspired by Dak
 <source>
 FM:DC
 </source>
+
+<published>
+RSFP:Battlefield
+</published>
 
 <tonnage>
 60.0

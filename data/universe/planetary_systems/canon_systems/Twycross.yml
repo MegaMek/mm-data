@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Twycross
-sucsId: 2608
+sucsId: 2609
 xcood: -108.349
 ycood: 365.246
 spectralType:
@@ -131,6 +131,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2607-12-25'
         faction:
           source: canon
@@ -178,6 +184,10 @@ planet:
         population: 1267061141.0
       - date: '2750-01-01'
         population: 1273974764.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Tamar Pact
+        #   - Trellshire
       - date: '2760-01-01'
         population: 1270665216.0
       - date: '2770-01-01'
@@ -239,16 +249,21 @@ planet:
       - date: '3030-08-25'
         population: 1074885827.0
         socioIndustrial: C-C-C-C-D
-      - date: '3040-09-20'
-        population: 1088188566.0
-        socioIndustrial:
-          source: canon
-          value: B-B-C-C-D
       - date: '3040-01-19'
         faction:
           source: canon
           value:
             - FC
+      - date: '3040-09-20'
+        population: 1088188566.0
+        socioIndustrial:
+          source: canon
+          value: B-B-C-C-D
+      - date: '3040-12-31'
+        # administration:
+        #   - Tamar March
+        #   - Blackjack Operational Area
+        #   - Region 3
       - date: '3050-01-01'
         population: 1098575618.0
       - date: '3050-06-04'
@@ -283,6 +298,11 @@ planet:
           source: canon
           value:
             - CSV
+      - date: '3051-12-31'
+        # administration:
+        #   - Tamar March
+        #   - Blackjack Operational Area
+        #   - Region 3
       - date: '3060-01-01'
         population: 1110060422.0
       - date: '3062-07-20'
@@ -290,6 +310,23 @@ planet:
           source: canon
           value:
             - CJF
+      - date: '3065-04-01'
+        faction:
+          source: canon
+          value:
+            - CDS
+      - date: '3067-01-01'
+        faction:
+          source: canon
+          value:
+            - CJF
+            - CDS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CDS
       - date: '3070-01-01'
         population: 1123124404.0
       - date: '3080-01-01'
@@ -306,10 +343,26 @@ planet:
         population: 1152017149.0
       - date: '3130-01-01'
         population: 1161967220.0
+        faction:
+          source: canon
+          value:
+            - CDS
       - date: '3132-08-07'
         hpg:
           source: canon
           value: X
+      - date: '3135-01-01'
+        faction:
+          source: canon
+          value:
+            - CJF
+            - CDS
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CJF
       - date: '3140-01-01'
         population: 1165225287.0
       - date: '3145-01-01'

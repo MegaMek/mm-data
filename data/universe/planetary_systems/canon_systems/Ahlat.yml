@@ -1,0 +1,199 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Ahlat
+sucsId: 3121
+xcood: 207.051
+ycood: -508.185
+spectralType: G2V
+planet:
+  - name: Ahlat I
+    type: TERRESTRIAL
+    orbitalDist: 0.36
+    sysPos: 1
+    icon: greenhouse4
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen, plus trace amounts of Water Vapor
+    gravity: 0.96
+    diameter: 11500
+    density: 5.8437
+    dayLength: 24
+    yearLength: 1
+    temperature: 320
+    water: 0
+    smallMoons: 3
+    satellite:
+      - name: 1-M1
+        size: medium
+        icon: rock1
+      - name: 1-M2
+        size: medium
+        icon: rock2
+      - name: 1-M3
+        size: medium
+        icon: rock3
+  - name: Ahlat
+    type: TERRESTRIAL
+    orbitalDist: 0.63
+    sysPos: 2
+    icon: green15
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.07
+    diameter: 12900
+    density: 5.8284
+    dayLength: 24
+    yearLength: 1.1
+    temperature: 31
+    water: 40
+    lifeForm: FISH
+    smallMoons: 2
+    event:
+      - date: '2900-01-01'
+        population: 56162.0
+        socioIndustrial: C-D-A-D-F
+      - date: '2910-01-01'
+        population: 305696.0
+      - date: '2920-01-01'
+        population: 934003.0
+      - date: '2930-01-01'
+        population: 1951585.0
+      - date: '2940-01-01'
+        population: 3166207.0
+      - date: '2950-01-01'
+        population: 4343037.0
+      - date: '2960-01-01'
+        population: 5338404.0
+      - date: '2970-01-01'
+        population: 6099504.0
+      - date: '2980-01-01'
+        population: 6681036.0
+      - date: '2990-01-01'
+        population: 7094079.0
+      - date: '3000-01-01'
+        population: 5253080.0
+      - date: '3010-01-01'
+        population: 484520.0
+      - date: '3020-01-01'
+        population: 54509.0
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Ahlat III
+    type: ICE_GIANT
+    orbitalDist: 0.9
+    sysPos: 3
+    icon: iceg16
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.73
+    diameter: 30000
+    density: 1.7
+    dayLength: 16
+    yearLength: 1.3
+    smallMoons: 3
+  - name: Ahlat IV
+    type: ICE_GIANT
+    orbitalDist: 1.44
+    sysPos: 4
+    icon: iceg3
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.21
+    diameter: 50000
+    density: 1.7
+    dayLength: 14
+    yearLength: 2
+    ring: true
+    smallMoons: 5
+  - name: Ahlat V
+    type: GAS_GIANT
+    orbitalDist: 2.52
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.28
+    diameter: 160000
+    density: 1
+    dayLength: 17
+    yearLength: 4.1
+    ring: true
+    smallMoons: 17
+    satellite:
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-L2
+        size: large
+        icon: rock2
+  - name: Ahlat VI
+    type: GAS_GIANT
+    orbitalDist: 4.68
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.22
+    diameter: 120000
+    density: 1.3
+    dayLength: 18
+    yearLength: 10.2
+    ring: true
+    smallMoons: 19
+    satellite:
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+      - name: 6-M3
+        size: medium
+        icon: rock3
+  - name: Ahlat VII
+    type: GAS_GIANT
+    orbitalDist: 17.64
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.2
+    diameter: 120000
+    density: 0.7
+    dayLength: 18
+    yearLength: 74.1
+    ring: true
+    smallMoons: 17
+    satellite:
+      - name: 7-L1
+        size: large
+        icon: rock1
+      - name: 7-M1
+        size: medium
+        icon: rock1
+      - name: 7-M2
+        size: medium
+        icon: rock2
+primarySlot: 2

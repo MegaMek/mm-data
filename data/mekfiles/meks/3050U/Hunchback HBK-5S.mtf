@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,106 +15,106 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c559-7195-9622-181d8336962d
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Hunchback
 model:HBK-5S
 mul id:1564
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3058
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3058
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Juggernaut
-
-
 
 quirk:battle_fists_la
 quirk:battle_fists_ra
 
+mass:50
+engine:200 Light Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:50
-Engine:200 Light Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:4
+jump mp:4
 
-Heat Sinks:10 Double
-Walk MP:4
-Jump MP:4
-
-Armor:Standard Armor
-LA Armor:16
-RA Armor:16
-LT Armor:18
-RT Armor:18
-CT Armor:24
-HD Armor:9
-LL Armor:24
-RL Armor:24
-RTL Armor:6
-RTR Armor:6
-RTC Armor:8
+armor:Standard(Inner Sphere)
+LA armor:16
+RA armor:16
+LT armor:18
+RT armor:18
+CT armor:24
+HD armor:9
+LL armor:24
+RL armor:24
+RTL armor:6
+RTR armor:6
+RTC armor:8
 
 Weapons:4
-1 ISMediumPulseLaser, Right Arm
-1 ISMediumPulseLaser, Left Arm
-1 ISLBXAC20, Right Torso, Ammo:20
-1 ISSmallLaser, Head
+Medium Pulse Laser, Left Arm
+Medium Pulse Laser, Right Arm
+LB 20-X AC, Center Torso
+Small Laser, Head
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISMediumPulseLaser
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISMediumPulseLaser
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Left Torso:
 Fusion Engine
 Fusion Engine
-ISLBXAC20 CL Ammo
-ISLBXAC20 Ammo
-ISLBXAC20 CL Ammo
-ISLBXAC20 Ammo
+IS LB 20-X Cluster Ammo
+IS LB 20-X AC Ammo
+IS LB 20-X Cluster Ammo
+IS LB 20-X AC Ammo
 ISCASE
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
 Fusion Engine
 Fusion Engine
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
-Endo-Steel
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+ISLBXAC20
+IS Endo Steel
 
 Center Torso:
 Fusion Engine
@@ -127,14 +127,14 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISLBXAC20 (Split)
-ISLBXAC20 (Split)
+ISLBXAC20
+ISLBXAC20
 
 Head:
 Life Support
 Sensors
 Cockpit
-ISSmallLaser
+Small Laser
 Sensors
 Life Support
 -Empty-
@@ -172,18 +172,28 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Hunchback is a respected and feared Reunification War-era street fighter that has been in production since its introduction in 2572. 
+overview:<p>The Hunchback was introduced in 2572 by Komiyaba/Nissan General Industries as a dedicated urban combat BattleMech, earning immediate respect during the brutal street fighting of the Reunification War. Designed as a medium-weight brawler optimized for close-quarters engagements, the Hunchback built its fearsome reputation around a single devastating autocannon capable of crippling opponents in a single well-placed volley. The design's proven reliability and straightforward maintenance ensured its survival through centuries of conflict. Multiple manufacturers across the Inner Sphere have produced the Hunchback in enormous numbers, with every Great House and most Periphery nations fielding them in significant quantities throughout the Succession Wars and beyond.</p>
 
-capabilities:Built for urban combat and close range brawling, this BattleMech has the heavy armor and weaponry to stand up against any foe in the dense cover of a city environment. Its heavy armament does come at a cost: in terms of maneuverability and heat dissipation the Hunchback is merely average, while the lack of long-range weapons means the Hunchback is little more than a slow moving target in the open. In an attack the slow speed of the Hunchback forces it to participate as part of the second wave, exploiting any weaknesses in the enemy's armor after they've been softened up.
+capabilities:<p>The Hunchback's combat doctrine revolves around its chassis-defining autocannon, mounted prominently in the right torso. In the standard HBK-4G configuration, the Kali Yama Big Bore Autocannon/20 consumes nearly a third of the 'Mech's total mass, delivering firepower that causes even assault-class MechWarriors to think twice about closing distance. A pair of arm-mounted medium lasers and a head-mounted small laser provide secondary firepower at short to medium range, ensuring the Hunchback remains dangerous even when ammunition runs low.</p><p>Ten tons of Starshield armor provides protection comparable to many heavy 'Mechs, allowing the Hunchback to absorb significant punishment during the close-range confrontations it seeks. However, this protection has led many MechWarriors to overestimate the design's durability; once the armor is breached, a direct hit to the autocannon or its ammunition storage can prove catastrophic. The thirteen single heat sinks manage the considerable waste heat with difficulty, requiring disciplined fire management to avoid shutdown.</p><p>The Hunchback's greatest tactical weakness is its modest speed of sixty-four kilometers per hour, which relegates it to second-wave assault roles and leaves it vulnerable to faster 'Mechs that can maintain engagement range beyond its effective weapons envelope.</p>
 
-deployment:Originally a refit line converted to full production, the -5S is a complete overhaul of the Hunchback design developed by Norse-Storm BattleMechs in 3058. The structure has been modified to use Endo Steel construction techniques, the engine has been upgraded to a Light Fusion Engine, and four Jump Jets were added for increased mobility. The 'Mech carries, as its primary weapon, an LB-X Autocannon/20 with CASE-protected ammunition supported by two medium pulse lasers and a single small laser.
+deployment:<p>Developed by Norse-Storm BattleMechs in 3061, the 5S is a comprehensive redesign that began as a refit line before converting to full production within a year. An endo steel chassis and light fusion engine create weight savings allocated to four jump jets, dramatically improving the Hunchback's tactical mobility. The primary weapon is an LB 20-X autocannon with CASE-protected ammunition, supported by two medium pulse lasers and a small laser. This combination of jumping capability, cluster-munition flexibility, and improved survivability makes the 5S one of the most capable urban combat variants produced since the original design entered service.</p>
 
-history:The Hunchback was originally designed and produced by Komiyaba/Nissan General Industries and sold throughout the Inner Sphere and Periphery, often fielded as part of medium and assault lances. The company was destroyed in the Succession Wars, but the Hunchback continued to remain popular, especially in the arsenals of House Kurita and House Liao where it fit the dueling nature and all-or-nothing combat styles of the two Successor States. Eventually Kali Yama Weapons Industries bought the rights to the Hunchback and restarted production at their factory on Kalidasa to supply House Marik with large numbers of the 'Mech. Dwindling stockpiles of spare parts and personal preference led many owners to remove the Hunchbacks large signature autocannon and typically install smaller weapons in larger numbers in its stead, resulting in a variety of variants collectively known as "Swayback'" because of the significant change to the 'Mech's configuration and torso structure. The rediscovery of lost technology in the years prior to the Clan Invasion inspired a number of old designs to be upgraded, the Hunchback included. Under contract from the Free Worlds League Military, Kali Yama engineers designed a variant, the HBK-5M, which sought to improve upon the original while still maintaining the "soul" of the machine. While the new variant included several improvements, mostly involving extra protection against ammunition explosions and overheating, to the chagrin of many MechWarriors this came at the cost of reduced ammunition for the autocannon. Their objections ignored, production began in 3046. The new variant came into widespread use throughout the FWLM until Operation Guerrero, when this drawback was responsible for the failure of several advances. After this, Kali Yama finally produced a new variant–the HBK-6M–which addressed this concern. In the years since, Norse-Storm BattleMechs opened a refit line to produce new Hunchback variants and the 'Mech saw use on both sides in the Jihad.
+history:<p>The Hunchback's origins trace to 2572, when Komiyaba/Nissan General Industries introduced the design to meet growing demand for dedicated urban combat platforms. The Reunification War provided the proving ground where the Hunchback first demonstrated its devastating close-range effectiveness, and the design quickly earned a reputation as one of the most dangerous 'Mechs to encounter in city fighting. During the Star League era, Diplass Technologies began additional production on Winter, further expanding the Hunchback's availability across the Inner Sphere.</p><p>The destruction of Komiyaba/Nissan's facilities on Nirasaki during the Succession Wars disrupted production until KaliYama Weapons Industries acquired the rights and established manufacturing on Kalidasa. The Draconis Combine and Capellan Confederation particularly favored the design, whose all-or-nothing firepower suited their aggressive combat doctrines. The Free Worlds League emerged as the largest operator by the thirty-first century, benefiting directly from Kali Yama's domestic production. Throughout the Succession Wars, dwindling autocannon stocks forced technicians to develop the various Swayback configurations, replacing the AC/20 with whatever weapons were available.</p><p>The recovery of lostech in the 3040s prompted Kali Yama to develop the HBK-5M upgrade under Free Worlds League Military contract, introducing double heat sinks and CASE protection but controversially reducing ammunition capacity. This flaw was brutally exposed during Operation Guerrero, where multiple advances stalled due to ammunition exhaustion. The lessons learned drove development of improved variants with greater ammunition stores and alternative armaments. Norse-Storm BattleMechs entered Hunchback production during the Jihad era, opening a refit line on Yed Posterior that quickly expanded to full manufacturing, contributing several innovative new variants including designs with jump capability and electronic warfare suites.</p><p>During the War of 3039, the Ninth Ghost Regiment experimented with mounting prototype Gauss rifles on Hunchback chassis at Elidere IV, but persistent balance problems forced reversion to the standard autocannon after the conflict. This episode illustrated both the enduring appeal of the Hunchback platform and the difficulty of fundamentally altering its proven design philosophy.</p><p>By the Dark Age era, the Hunchback remained in widespread service across all major powers, with Coventry Metal Works and Colonial Tractors joining the list of manufacturers. The design's longevity stands as proof of the fundamental soundness of its original concept: a simple, rugged platform built around the biggest gun that could be fitted to a medium-weight chassis.</p>
 
-manufacturer:Coventry Metal Works,Norse-Storm Technologies, Inc
-primaryfactory:Coventry,Loxley
-systemmanufacturer:CHASSIS:Crucis Type V Endo-Steel
-systemmanufacturer:ENGINE:Nissan 200 Light
-systemmanufacturer:ARMOR:Durallex Tensile-4 with CASE
-systemmanufacturer:COMMUNICATIONS:Omicron 4002 Networking Channel
-systemmanufacturer:TARGETING:TRSS Eagle Eye
+manufacturer:Norse-Storm BattleMechs
+
+primaryfactory:Yed Posterior
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Endo Steel
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:200 Light
+systemmanufacturer:ARMOR:Starshield
+systemmode:ARMOR:Standard with CASE
+systemmanufacturer:JUMP_JET:Unknown
+systemmanufacturer:COMMUNICATIONS:Omicron
+systemmode:COMMUNICATIONS:4002 Networking Channel
+systemmanufacturer:TARGETING:TRSS
+systemmode:TARGETING:Eagle Eye

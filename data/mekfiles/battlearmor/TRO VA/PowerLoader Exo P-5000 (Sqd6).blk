@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a899-7697-a84f-54ef0378b59b
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -70,10 +65,68 @@ Leg
 </armor_tech>
 
 <Squad Equipment>
-BACargoLifter:LA:SIZE:2
-BACargoLifter:RA:SIZE:2
+BACargoLifter:LA:SIZE:2.0
+BACargoLifter:RA:SIZE:2.0
 BACuttingTorch:Body
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<capabilities>
+<p>The P-5000 trades some raw lifting capacity for improved mobility and operator safety. Its paired cargo lifter manipulators handle loads of up to two metric tons, and the suit moves at roughly double the walking speed of competing loader designs. Fifty kilograms of standard armor protect the operator from falling cargo, shifting loads, and other common workplace hazards that leave unarmored exoskeleton operators vulnerable. A cutting torch provides basic utility for opening containers and cutting through packing materials.</p><p>At 400 kilograms, the PowerLoader occupies the same weight class as its primary rival but distributes that mass differently, prioritizing the operator's speed and survivability over maximum payload. The lack of jump capability is typical for loader-class exoskeletons, where stability under load matters more than vertical mobility. The result is a loader well suited to fast-paced commercial docking facilities where both efficiency and safety standards are high.</p>
+</capabilities>
+
+<overview>
+<p>The P-5000 PowerLoader is an industrial exoskeleton produced by Waytani, Inc., a Free Worlds League corporation formed specifically to manufacture and market the design. Introduced in 3054, the 400-kilogram humanoid suit was built for cargo handling in commercial docking facilities and industrial warehouses. The PowerLoader distinguished itself from competing loader exoskeletons by offering both operator protection and greater mobility, appealing to buyers who valued worker safety alongside raw lifting capacity. The design earned a strong commercial reputation as one of the Inner Sphere's premier cargo loading platforms.</p>
+</overview>
+
+<deployment>
+<p>ComStar and Word of Blake organized PowerLoader operators into six-trooper Level I teams for large-scale logistics operations. The suit's combination of speed and armor protection suited the demanding conditions at major HPG compound supply hubs, where operators handled continuous cargo flows under tight schedules. Level I formations could sustain higher work tempos than smaller squads, reducing the need for frequent crew rotations.</p>
+</deployment>
+
+<history>
+<p>Waytani, Inc. was established in the Free Worlds League with one purpose: producing and selling the P-5000 PowerLoader. The company found immediate success in the League and Capellan Confederation, where the design's combination of mobility and operator protection appealed to industrial buyers willing to trade some lifting capacity for a more capable platform. Waytani's aggressive holovid advertising campaign during the mid-3050s proved remarkably effective, generating enough revenue to fund construction of a second manufacturing facility on Pollux in 3060.</p><p>The PowerLoader and General Motors' HeavyHauler became the two dominant loader exoskeletons on the commercial market. Both designs featured distinctive lifter arm configurations that drew numerous imitators, though court rulings across the Inner Sphere consistently upheld the original manufacturers' intellectual property. Following the Jihad, Waytani leveraged its exoskeleton expertise to develop the Exo HaulerMech, an ultralight IndustrialMech intended for the same heavy-lifting role in more demanding environments. The PowerLoader itself remained a fixture at commercial loading facilities across the Inner Sphere.</p>
+</history>
+
+<manufacturer>
+Waytani, Inc.|Waytani, Inc.
+</manufacturer>
+
+<primaryFactory>
+Marik|Pollux
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:VAr
@@ -103,35 +156,3 @@ true
 0
 </weightclass>
 
-<overview>
-The P-5000 PowerLoader is a cargo handling industrial Exoskeleton which is produced by the Free Worlds League corporation Waytani, Inc.
-</overview>
-
-<capabilities>
-The design is noted for its speed and armor protection which is greater than its nearest competitor, GM's HeavyHauler.
-</capabilities>
-
-<deployment>
-The PowerLoader is fitted with two Cargo Lifter manipulators, which when working together can lift up to 2 tons. The suit has also been given a minimum of 50 kilograms of armor to protect its user and features a searchlight and a torch cutter.
-</deployment>
-
-<history>
-Waytani was created solely to produce and bring the exoskeleton to market. The company's initial successful holovid advertising campaign was a boon for the company contributing to its success in both the League and the Capellan Confederation. Easily able to handle the most Alien of loads.
-</history>
-
-<manufacturer>
-Waytani, Inc,Waytani, Inc
-</manufacturer>
-
-<primaryFactory>
-Marik,Pollux
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

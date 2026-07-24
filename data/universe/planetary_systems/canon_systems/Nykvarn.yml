@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Nykvarn
-sucsId: 1915
+sucsId: 1916
 xcood: 123.295
 ycood: 388.723
 spectralType:
@@ -92,6 +92,12 @@ planet:
           source: canon
           value: Bothnia
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2322-03-24'
         faction:
           source: canon
@@ -103,6 +109,12 @@ planet:
         population: 139420.0
       - date: '2340-01-01'
         population: 401250.0
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 992241.0
       - date: '2360-01-01'
@@ -151,6 +163,16 @@ planet:
         population: 149669889.0
       - date: '2570-01-01'
         population: 152656604.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Rasalhague Military District
+        #   - Trondheim Prefecture
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2580-01-01'
         population: 154744854.0
       - date: '2590-01-01'
@@ -256,6 +278,10 @@ planet:
         population: 144785429.0
       - date: '3040-01-01'
         population: 146416141.0
+      - date: '3040-12-31'
+        # administration:
+        #   - Alshain Military District
+        #   - Garstedt Prefecture
       - date: '3043-01-01'
         socioIndustrial:
           source: canon
@@ -271,13 +297,33 @@ planet:
           source: canon
           value:
             - CSJ
+      - date: '3050-06-30'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CSJ
       - date: '3059-06-29'
         faction:
           source: canon
           value:
             - DC
+      - date: '3059-06-30'
+        # administration:
+        #   - Pesht Military District
+        #   - Lonaconing Prefecture
+      - date: '3059-06-30'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '3060-01-01'
         population: 149523392.0
+      - date: '3063-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Albiero Prefecture
       - date: '3070-01-01'
         population: 151449593.0
       - date: '3075-06-01'
@@ -303,11 +349,6 @@ planet:
         population: 158547281.0
       - date: '3145-01-01'
         population: 159437636.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - DC
   - name: Schmallenberg
     type: ICE_GIANT
     orbitalDist: 0.9

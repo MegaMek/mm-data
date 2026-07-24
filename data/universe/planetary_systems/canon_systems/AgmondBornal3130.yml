@@ -51,6 +51,14 @@ planet:
       - name: Nenagh
       - name: An
     event:
+      - date: '2108-12-05'
+        name: Agmond
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2730-07-23'
         faction:
           source: canon
@@ -63,6 +71,17 @@ planet:
         population: 171038.0
       - date: '2750-01-01'
         population: 539591.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Point Barrow Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 1362418.0
       - date: '2770-01-01'
@@ -101,16 +120,26 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '3025-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - FS
-      - date: '2108-12-05'
-        name: Agmond
+            - ABN
       - date: '3130-01-01'
         name: Bornal
         message: Agmond renamed to Bornal
+      - date: '3130-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Point Barrow Combat Region
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
   - name: Valea Iaşului
     type: TERRESTRIAL
     orbitalDist: 0.07

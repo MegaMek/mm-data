@@ -17,6 +17,11 @@
 
 key: CB
 name: Clan Burrock
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CBR
 capital: Terra
 yearsActive:
   - start: 2807
@@ -104,3 +109,5 @@ factionLeaders:
     gender: "FEMALE"
     startYear: 3048
     endYear: 3059
+usesMercenaries:
+  2500: false

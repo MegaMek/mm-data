@@ -1,0 +1,34 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# Clan Nova Cat's alignment with ComStar and the Draconis Combine, and their
+# presence in Combine space until the Nova Cat Rebellion.
+
+alliances:
+  - start: 3059-10-01
+    parties:
+      - factions: [CS, CNC]
+  - start: 3059-05-20
+    end: 3141-06-14
+    parties:
+      - factions: [DC, CNC]
+containedFactions:
+  - host: DC
+    contained: CNC
+    start: 3059-05-20
+    end: 3141-06-14
+    fraction: 0.4

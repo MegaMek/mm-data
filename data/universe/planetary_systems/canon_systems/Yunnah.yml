@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Yunnah
-sucsId: 2807
+sucsId: 2808
 xcood: 27.148
 ycood: -127.003
 spectralType:
@@ -147,6 +147,12 @@ planet:
           source: 'Objective Raids: Capellan Confederation'
           value: Yunnah Prime
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2733-12-24'
         faction:
           source: canon
@@ -162,6 +168,16 @@ planet:
         population: 77729.0
       - date: '2750-01-01'
         population: 125252.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 186721.0
       - date: '2770-01-01'
@@ -222,17 +238,38 @@ planet:
         population:
           source: canon
           value: 843000.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 3
       - date: '3030-01-19'
         faction:
           source: canon
           value:
             - FS
         population: 1100819.0
+      - date: '3030-12-31'
+        # administration:
+        #   - Sarna March
+        #   - Palos Operational Area
+        #   - Region 2
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '3040-01-01'
         population: 1103470.0
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3041-01-01'
@@ -246,8 +283,22 @@ planet:
           source: canon
           value:
             - CC
+      - date: '3057-12-31'
+        # administration:
+        #   - Capella Commonality
+        #   - Region 9
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3060-01-01'
         population: 1089566.0
+      - date: '3063-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 5
       - date: '3070-01-01'
         population: 1090799.0
       - date: '3079-01-01'
@@ -259,6 +310,15 @@ planet:
       - date: '3085-10-01'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture VI
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -278,10 +338,24 @@ planet:
           source: canon
           value:
             - CC
+      - date: '3135-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 3
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3140-01-01'
         population: 1153165.0
       - date: '3145-01-01'
         population: 1153857.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 3
   - name: Tanaka's Belt
     type: ASTEROID_BELT
     orbitalDist: 7.0

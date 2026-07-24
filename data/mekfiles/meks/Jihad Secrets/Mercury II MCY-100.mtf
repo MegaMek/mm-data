@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,54 +15,52 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d6ec-7601-9612-851ad18ccca6
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Mercury II
 model:MCY-100
 mul id:2173
-source:JSBD
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2823
-Rules Level:2
+techbase:Inner Sphere
+era:2823
+source:JSBD
+published:JSBD
+rules level:2
 role:Striker
-
-
-
 
 quirk:low_profile
 quirk:bad_rep_clan
 weaponquirk:stable_weapon:CT:10:Medium Laser
 
+mass:40
+engine:280 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:40
-Engine:280 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:7
+jump mp:7
 
-Heat Sinks:10 Double
-Walk MP:7
-Jump MP:7
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:12
+RA armor:12
+LT armor:15
+RT armor:15
+CT armor:16
+HD armor:9
+LL armor:20
+RL armor:20
+RTL armor:5
+RTR armor:5
+RTC armor:5
 
-Armor:Ferro-Fibrous
-LA Armor:12
-RA Armor:12
-LT Armor:15
-RT Armor:15
-CT Armor:16
-HD Armor:9
-LL Armor:20
-RL Armor:20
-RTL Armor:5
-RTR Armor:5
-RTC Armor:5
-
-Weapons:6
-1 ISMediumLaser, Right Arm
-1 ISERLargeLaser, Left Arm
-2 ISSmallLaser, Left Arm
-1 ISBeagleActiveProbe, Right Torso
-1 ISGuardianECM, Left Torso
-1 ISMediumLaser, Center Torso
+Weapons:5
+ER Large Laser, Left Arm
+Small Laser, Left Arm
+Small Laser, Left Arm
+Medium Laser, Right Arm
+Medium Laser, Center Torso
 
 Left Arm:
 Shoulder
@@ -70,11 +68,11 @@ Upper Arm Actuator
 Lower Arm Actuator
 ISERLargeLaser
 ISERLargeLaser
-ISSmallLaser
-ISSmallLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+Small Laser
+Small Laser
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -83,10 +81,10 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-ISMediumLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+Medium Laser
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -96,13 +94,13 @@ Left Torso:
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISGuardianECM
-ISGuardianECM
+ISGuardianECMSuite
+ISGuardianECMSuite
 Jump Jet
 Jump Jet
 Jump Jet
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -110,13 +108,13 @@ Right Torso:
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISBeagleActiveProbe
-ISBeagleActiveProbe
+BeagleActiveProbe
+BeagleActiveProbe
 Jump Jet
 Jump Jet
 Jump Jet
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -131,7 +129,7 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISMediumLaser
+Medium Laser
 Jump Jet
 
 Head:
@@ -153,8 +151,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -167,8 +165,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -176,18 +174,28 @@ Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:The Mercury II is a BattleMech designed by Clan Wolverine. The Not-Named-Clan designed the 'Mech in 2823 during the Clans' early years.
+overview:<p>The Mercury II was designed by Clan Wolverine in 2823 during the formative years of Clan society, representing one of the very first new BattleMech designs produced by the fledgling Clans. Built as an enlarged and extensively upgraded successor to the Star League-era Mercury, the Mercury II doubled the original's weight to forty tons while incorporating the most advanced technologies available to the self-exiled Star League Defense Force. The Wolverines spared no expense in its construction, utilizing an extra-light fusion engine, ferro-fibrous armor, and double-strength heat sinks to create a fast, well-protected scout with genuine combat capability.</p><p>The Mercury II's existence is known primarily through fragmentary records that survived the annihilation of Clan Wolverine. When the Not-Named Clan was destroyed, Clan Coyote claimed their battlefield losses had been acceptable because they captured at least one Mercury II in the process. This captured example is believed to have directly inspired the Coyotl, the first OmniMech, which shares a similar tonnage, engine rating, and visual profile with the Mercury II. The design thus occupies a critical link in the evolutionary chain from the original Mercury's modular weapon system to the full OmniMech technology that would transform warfare across the Kerensky Cluster and beyond.</p>
 
-capabilities:The Mercury II was an enlarged and updated design of the Mercury produced by Clan Wolverine. This 'Mech lacks its predecessor's unique modular repair system, being a standard post-SLDF/early Clan era BattleMech.
+capabilities:<p>The Mercury II serves as a comprehensive redesign rather than a simple upgrade of its lighter ancestor. Powered by a 280-rated XL engine, the forty-ton design achieves a top speed of 119 kilometers per hour, trading the original Mercury's raw sprint capability for greater mass and durability. Seven jump jets provide 210 meters of leaping distance, addressing one of the original Mercury's most criticized shortcomings and greatly enhancing the 'Mech's ability to navigate difficult terrain during reconnaissance operations. Seven and a half tons of ferro-fibrous armor offer superior protection for a medium scout, allowing the Mercury II to absorb significantly more punishment than its twenty-ton predecessor.</p><p>The Mercury II's weapon array balances long-range striking power with close-quarters lethality. An ER large laser serves as the primary armament, providing a credible ranged threat against targets well beyond typical scout engagement distances. Paired medium lasers and small lasers echo the original Mercury's all-energy philosophy, ensuring unlimited endurance on extended patrols. The inclusion of both a Beagle active probe and Guardian ECM suite makes the Mercury II an exceptionally capable electronic warfare platform, able to detect hidden enemy units while simultaneously disrupting opposing sensor networks. This combination of speed, electronics, and firepower made the Mercury II the ideal scout and hunter-killer for Clan Wolverine's forces during the early Clan period.</p>
 
-deployment:Though the Mercury II is designed to be a scout, it can hold its own in a fight. An ER Large Laser gives it a credible ranged threat, while paired Medium Lasers and Small Lasers make it an effective hunter-killer.
+deployment:<p>The sole known production model of the Mercury II, this variant was designed and manufactured by Clan Wolverine beginning in 2823. This variant represents the full expression of the Wolverines' design philosophy, pairing a 280-rated XL engine with seven jump jets for exceptional mobility in a forty-ton frame. The all-energy weapon array of an ER large laser, two medium lasers, and two small lasers ensures unlimited endurance during extended reconnaissance operations, while the combination of a Beagle active probe and Guardian ECM suite provides comprehensive electronic warfare capability. Built entirely with Star League-era technology rather than the distinctly Clan manufacturing processes that would develop later, the Mercury II reflects the transitional period of early Clan society. No factory variants of the Mercury II are known to have been produced before Clan Wolverine's destruction.</p>
 
-history:The fledgling society built this new design around the existing Mercury, but upgraded it to make it a more effective combatant at the cost of speed. Since the design was produced in the formative years of the Clans, it uses Star League technology. The Wolverines spared no expense in the production of the Mercury II, including seven and a half tons of Ferro-Fibrous armor, double heat sinks and an XL Engine. Despite this the medium 'Mech is still slower than its lighter antecedent, only managing 119 km/h, though it makes up for that with jump jets that enable it to leap up to 210 meters at a time. The inclusion of a Beagle Active Probe and Guardian ECM Suite make the 'Mech a capable scout. Clan Coyote claimed their losses on the battlefield during the Not-Named-Clan's annihilation had been acceptable due to capturing a Mercury II, and the design appears to have inspired in part the Coyotl, the very first OmniMech.
+history:<p>The Mercury II emerged from the intense arms race that characterized the early years of Clan society, as the newly formed Clans competed to develop superior military technology from the Star League-era equipment they had carried into exile. Clan Wolverine, drawing on their technical expertise and the SLDF's industrial legacy, produced the Mercury II as one of their first indigenous designs. Unlike the later Clan-produced equipment that would use distinctly Clan technology, the Mercury II was built entirely with Star League-grade components, reflecting the transitional period before uniquely Clan manufacturing processes had fully matured.</p><p>The Mercury II's operational history was cut brutally short by the annihilation of Clan Wolverine. When the combined might of the other Clans fell upon the Not-Named Clan, the Mercury II fought and died alongside its creators. Clan Coyote, which participated in the destruction of Clan Wolverine, specifically noted that their losses during the campaign had been justified by the capture of at least one intact Mercury II. This captured specimen would prove to have consequences far beyond its individual combat value, as Clan Coyote scientists studied its design extensively.</p><p>The Mercury II's influence on subsequent military technology cannot be overstated. The captured example provided Clan Coyote engineers with critical insights into advanced 'Mech construction, and the design's visual profile and general arrangement are believed to have directly inspired the Coyotl, the first OmniMech, which was fielded just thirty-one years later in 2854. Through this lineage, the Mercury II serves as a bridge between the original Mercury's pioneering modular systems and the revolutionary OmniMech technology that would reshape warfare for centuries to come. Despite its association with the reviled Not-Named Clan, the Mercury II's legacy lives on in every OmniMech that has ever walked a battlefield.</p>
 
-manufacturer:Unknown
+manufacturer:Clan Wolverine
+
 primaryfactory:Unknown
-systemmanufacturer:CHASSIS:Unknown 
-systemmanufacturer:ENGINE:Unknown 280 XL
-systemmanufacturer:ARMOR:Unknown Ferro-Fibrous
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Standard
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:280 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Unknown
 systemmanufacturer:COMMUNICATIONS:Unknown
-systemmanufacturer:TARGETING:Unknown
+systemmode:COMMUNICATIONS:Unknown with Guardian ECM Suite
+systemmanufacturer:TARGETING:Apple Churchill
+systemmode:TARGETING:Unknown with Beagle Active Probe

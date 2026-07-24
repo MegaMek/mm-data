@@ -37,7 +37,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -94,65 +94,75 @@
         </attachedForces>
     </force>
 
+    <!-- Smoke Jaguar maintained a strong fleet (Clan Smoke Jaguar Naval Forces, Sarna) as the
+         spearhead of Operation Revival, organized around galaxy assignments. The Clan was annihilated
+         in 3060 (Operation BULLDOG/SERPENT, fall of Huntress), so most hulls are date-gated ,3059.
+         Command Keshik holds the flagships - the Black Lion Streaking Mist and the Golden Century
+         McKenna Obsidian (lost in the 2868 Mongoose Absorption) - and the rest follow their Beta,
+         Delta, and Epsilon galaxy assignments plus a carrier squadron. JumpShips pad the formation
+         so a date-thinned star never collapses into a stray hull. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce role="command" fluffName="CSJ Obsidian"
-                      ifDateBetween=",2868"
+            <subforce flags="+navalFluff" name="Command Keshik">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Beta Naval Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Delta Naval Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Epsilon Naval Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Carrier Squadron">%STAR%</subforce>
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship dates from Clan Smoke Jaguar Naval Forces (Sarna). Largest hull commands each star
+         (tonnage sort). Most hulls end ,3059 (annihilation 3060). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <co>%STAR_CMDR%</co>
+
+        <!-- Command Keshik: the flagships. Obsidian (McKenna) is the Golden Century flagship lost in
+             the Mongoose Absorption (2868); Streaking Mist (Black Lion) is the Invasion-era command. -->
+        <subforces ifName="Command Keshik">
+            <subforce fluffName="CSJ Streaking Mist" role="command"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Obsidian" ifDateBetween=",2868"
                       chassis="McKenna Battleship">%ELEMENT%
             </subforce>
-            <subforce
-                    chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
-            </subforce>
-            <subforce chassis="Vincent Corvette">%ELEMENT%</subforce>
-            <subforce chassis="Vincent Corvette">%ELEMENT%</subforce>
-            <subforce fluffName="CSJ Queen Lynx" ifDateBetween="2950,3059"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
-            </subforce>
-            <subforce chassis="Congress Frigate">%ELEMENT%</subforce>
-            <subforce ifDateBetween="2965,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
-            </subforce>
-            <subforce ifDateBetween="2965,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
-            </subforce>
-
-            <subforce fluffName="CSJ Veiled Huntress" ifDateBetween=",3059"
-                      chassis="Texas Battleship">%ELEMENT%
-            </subforce>
+            <subforce chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%</subforce>
             <subforce fluffName="CSJ Sabre Cat"
                       chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSJ Korat"
-                      ifDateBetween=",3024"
-                      chassis="Avatar Heavy Cruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Korat"
-                      ifDateBetween="3025,"
-                      chassis="Liberator Cruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Griffin" ifDateBetween=",3059"
-                      chassis="Lola III Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Snow Leopard" ifDateBetween=",3059"
-                      chassis="Congress Frigate">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Storm Cat" ifDateBetween=",3059"
-                      chassis="Lola III Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Dark Claw" ifDateBetween=",3058"
-                      chassis="Essex II Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSJ Streaking Mist"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            <subforce chassis="Congress Frigate">%ELEMENT%</subforce>
+        </subforces>
+
+        <!-- Beta Galaxy: the Texas flagship Veiled Huntress and her escorts. -->
+        <subforces ifName="Beta Naval Star">
+            <subforce fluffName="CSJ Veiled Huntress" role="command" ifDateBetween=",3059"
+                      chassis="Texas Battleship">%ELEMENT%
             </subforce>
             <subforce fluffName="CSJ Firecrest" ifDateBetween=",3059"
                       chassis="Congress Frigate">%ELEMENT%
             </subforce>
             <subforce fluffName="CSJ The Iowa" ifDateBetween=",3059"
                       chassis="Essex II Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Dark Claw" ifDateBetween=",3058"
+                      chassis="Essex II Destroyer">%ELEMENT%
+            </subforce>
+            <subforce chassis="Whirlwind Destroyer">%ELEMENT%</subforce>
+        </subforces>
+
+        <!-- Delta Galaxy: the Korat (Avatar, then Liberator from 3025) and her corvette wing. -->
+        <subforces ifName="Delta Naval Star">
+            <subforce fluffName="CSJ Korat" role="command" ifDateBetween=",3024"
+                      chassis="Avatar Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Korat" role="command" ifDateBetween="3025,"
+                      chassis="Liberator Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Griffin" ifDateBetween=",3059"
+                      chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
             <subforce fluffName="CSJ Ripper" ifDateBetween=",3059"
                       chassis="Vincent Corvette">%ELEMENT%
@@ -163,20 +173,43 @@
             <subforce fluffName="CSJ Simas Osis"
                       chassis="Vincent Corvette">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSJ Osis&apos; Pride"
-                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+        </subforces>
+
+        <!-- Epsilon Galaxy: Snow Leopard (scuttled 3059), Storm Cat, and lighter escorts. -->
+        <subforces ifName="Epsilon Naval Star">
+            <subforce fluffName="CSJ Snow Leopard" role="command" ifDateBetween=",3059"
+                      chassis="Congress Frigate">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Storm Cat" ifDateBetween=",3059"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <subforce chassis="Vincent Corvette">%ELEMENT%</subforce>
+            <subforce chassis="Vincent Corvette">%ELEMENT%</subforce>
+            <subforce ifDateBetween="2965,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Carrier Squadron: the York destroyer-carriers, troop cruiser, and raiders. -->
+        <subforces ifName="Carrier Squadron">
+            <subforce fluffName="CSJ Queen Lynx" role="command" ifDateBetween="2950,3059"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
             </subforce>
             <subforce fluffName="CSJ Lioness" ifDateBetween=",3059"
                       chassis="York Destroyer-Carrier">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSJ Hunter&apos;s Pride"
-                      ifDateBetween="2950,3055"
+            <subforce fluffName="CSJ Osis&apos; Pride" ifDateBetween=",3060"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSJ Hunter&apos;s Pride" ifDateBetween="2950,3055"
                       chassis="Congress Frigate">%ELEMENT%
+            </subforce>
+            <subforce ifDateBetween="2965,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
             <subforce fluffName="CSJ Hell Fury" ifDateBetween="2965,3053"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce chassis="Whirlwind Destroyer">%ELEMENT%</subforce>
         </subforces>
     </force>
 
@@ -213,8 +246,21 @@
         <name ifRating="Sol">Solahma Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Smoke Jaguar (Clan Smoke Jaguar
+             Touman, Sarna) is the most aggressive, brutal Crusader Clan - overwhelming firepower and
+             no-subtlety shock assault as the spearhead of Operation Revival (annihilated 3060). Heavy/
+             assault Mek mix with a real assault core; heavy Elemental use is structural (BA binary per
+             cluster). Picker rolls assault clusters (A1/H3/M2/L1). -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:42,H:40,M:16,L:2</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:22,H:48,M:26,L:4</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:6,H:32,M:48,L:14</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:16,M:44,L:38</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:44,L:21</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:18,M:42,L:40</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">A</option>
+            <option weight="3">H</option>
             <option weight="2">M</option>
             <option weight="1">L</option>
         </weightClass>
@@ -1058,10 +1104,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1073,14 +1119,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1128,10 +1174,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1143,14 +1189,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1186,14 +1232,14 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="8">Artillery Fire</option>
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

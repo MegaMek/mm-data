@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e11d-7fc2-8424-befb1d5cc1d6
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -33,9 +28,9 @@ ProtoMek
 Basilisk ProtoMech (Quad)
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 3796
@@ -44,10 +39,6 @@ Basilisk ProtoMech (Quad)
 <year>
 3072
 </year>
-
-<originalBuildYear>
-3072
-</originalBuildYear>
 
 <type>
 Clan Level 4
@@ -60,9 +51,6 @@ Striker
 <motion_type>
 Quad
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 5
@@ -88,9 +76,13 @@ false
 18
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 8
-</armor_tech>
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -106,6 +98,7 @@ false
 
 <Body Equipment>
 Clan Ammo SRM-4 (10)
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -114,7 +107,7 @@ Clan Ammo SRM-4 (10)
 <Torso Equipment>
 CLSRM4
 ProtoQuadMeleeSystem
-CLEDPArmor
+Clan Electric Discharge ProtoMech
 </Torso Equipment>
 
 <Right Arm Equipment>
@@ -126,28 +119,20 @@ CLEDPArmor
 <Legs Equipment>
 </Legs Equipment>
 
-<source>
-WoR
-</source>
-
-<tonnage>
-7.0
-</tonnage>
-
 <capabilities>
-Unlike most second generation Protos, the Basilisk has a relatively low top speed. This allows it to keep pace with larger 'Mechs and move faster than standard battle armor units. The smaller engine also allows more weight for armor, which is good because the slow top speed means a Basilisk will spend more time under enemy guns as it closes the range.
+<p>The Basilisk Quad mounts an SRM-4 launcher in the torso with ten salvos of ammunition, providing the primary ranged firepower. However, the design's true combat power comes from its integrated melee weapons system and Electric Discharge ProtoMek armor. The quad chassis allows the Basilisk to physically engage targets, and the EDP armor adds a taser-like electrical discharge effect to melee attacks that can disrupt Mek systems. This combination makes the Basilisk Quad uniquely dangerous in close combat, capable of both physical and electrical disruption attacks that no other ProtoMek can replicate.</p><p>Thirty-two points of armor provide solid protection, and the quad chassis delivers fifty-four kilometers per hour cruising speed with a flank speed approaching eighty. Without jump jets, the design relies on its superior ground speed to close with targets and engage them in melee range. The quad configuration also provides inherently better stability than bipedal designs, reducing the risk of falling during physical combat maneuvers. Commanders deploy Basilisk Quad Points as shock assault elements, using their speed to close rapidly with enemy formations and engage in the close-range melee combat where their EDP armor provides maximum advantage.</p>
 </capabilities>
 
 <overview>
-The Basilisk ProtoMech was designed and built by Clan Cloud Cobra to support their Elemental and OmniMech forces. 
+<p>The Basilisk ProtoMek Quad is a seven-ton quadruped variant of the Cloud Cobra Basilisk, developed during the Wars of Reaving to provide a more mobile and stable weapons platform for close-range assault operations. The four-legged chassis trades the bipedal Basilisk's ranged firepower for enhanced ground speed and a built-in melee weapons system augmented by Electric Discharge ProtoMek armor, creating a design uniquely suited to aggressive close-quarters tactics. The quad configuration provides fifty-four kilometers per hour cruising speed, significantly faster than the bipedal variant's forty-three, while maintaining the Basilisk family's reputation for durability and reliability.</p>
 </overview>
 
 <deployment>
-The quadrupedal Basilisk was created by The Society. Completely different from the bipedal version, this variant had a higher top speed. A close-combat specialist, it's equipped with a single SRM-4 with ten reloads, and a set of claws, whipping tail, and head spikes. For protection it carries Electric Discharge ProtoMech Armor which can easily disrupt control systems in other battlefield units. Considering the source of the design, it is unlikely that any will be found in the Home Clans toumans once they have rebuilt.
+<p>The base Basilisk Quad mounts an SRM-4 launcher in the torso with ten salvos of ammunition, supplemented by a quad melee weapons system and Electric Discharge ProtoMek armor. The four-legged chassis provides fifty-four kilometers per hour cruising speed, significantly faster than the bipedal Basilisk. Thirty-two points of armor provide solid protection. The EDP armor adds a taser-like electrical discharge to melee attacks, capable of disrupting Mek systems in close combat. Without jump jets, the design relies on its superior ground speed to close with opponents. The combination of SRM firepower, melee weapons, and electrical disruption makes the base Basilisk Quad a formidable close-range assault platform.</p>
 </deployment>
 
 <history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
+<p>The Basilisk Quad emerged during the turbulent Wars of Reaving period, when the escalating violence in the Clan Homeworlds drove rapid innovation in ProtoMek design. Cloud Cobra engineers, building on their extensive experience with the bipedal Basilisk, recognized that a quadruped chassis could provide the speed and stability needed for the close-range assault role that the standard Basilisk's slow ground speed made difficult. The integration of Electric Discharge ProtoMek armor represented a significant technological advancement, giving the quad variant an anti-Mek capability unique among ProtoMek designs.</p><p>The Basilisk Quad saw service during some of the most intense fighting of the Reaving period, where its melee capability proved valuable in the close-quarters engagements that characterized combat in urban and industrial environments. The electrical discharge effect of the EDP armor could disrupt targeting systems and myomer actuators on Meks caught in physical combat, giving the relatively small ProtoMek a disproportionate impact against much larger opponents.</p><p>A more radical variant, the Basilisk B, was subsequently developed incorporating a myomer booster system that dramatically increases sprint speed while removing all conventional weaponry. The B variant retains the EDP armor and melee systems, relying entirely on its enhanced speed to close with targets and disable them through physical combat and electrical disruption. This stripped-down approach represents the extreme end of the close-assault philosophy, trading all ranged capability for maximum melee effectiveness. Both variants continue to serve in Cloud Cobra formations and have been acquired by several other Clans through Trials of Possession.</p>
 </history>
 
 <manufacturer>
@@ -155,14 +140,32 @@ Chiaroscuro Testing Site
 </manufacturer>
 
 <primaryFactory>
-Ironhold	
+Ironhold
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:Unspecified
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Standard Quad
+ENGINE:45
+ARMOR:EDP
+</systemModels>
+
+<source>
+WoR,WoRS
+</source>
+
+<published>
+WoR,WoRS
+</published>
+
+<tonnage>
+7.0
+</tonnage>
+

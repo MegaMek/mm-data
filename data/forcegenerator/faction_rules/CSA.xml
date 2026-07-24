@@ -34,7 +34,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -161,76 +161,101 @@
         </attachedForces>
     </force>
 
+    <!-- Star Adder maintains a substantial fleet (Clan Star Adder Naval Forces, Sarna), built around
+         two battleships - the McKenna Sovereign Right and the Nightlord Absolute Truth. Organized into
+         the Command Keshik (flagships + Command/Quasar Keshik cruisers), two Naval Reserves, the Exodus
+         York-carrier squadron, a patrol/raider squadron, and a transport star. Wars of Reaving losses
+         are date-gated out (Nygaard/Exodus Ranger/Divine Conquest gone 3075; most destroyers/cruisers
+         gone 3072). The Beta Naval Reserve and Transport star empty out by 3072, so their attaches are
+         gated ,3072 to drop rather than collapse into a stray hull; JumpShips pad the remainder. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce chassis="Sovetskii Soyuz Heavy Cruiser"
-                      ifDateBetween=",3075" role="command"
-                      fluffName="CSA Nygaard">%ELEMENT%
+            <subforce flags="+navalFluff" name="Command Keshik">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Alpha Naval Reserve">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Beta Naval Reserve"
+                      ifDateBetween=",3072">%STAR%
             </subforce>
-            <subforce chassis="Aegis Heavy Cruiser"
-                      fluffName="CSA Stellar Serpent">%ELEMENT%
+            <subforce flags="+navalFluff" name="Exodus Squadron">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Patrol Squadron">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Naval Transport Star"
+                      ifDateBetween=",3072">%STAR%
             </subforce>
-            <subforce chassis="McKenna Battleship"
-                      fluffName="CSA Sovereign Right">%ELEMENT%
-            </subforce>
-            <subforce chassis="Black Lion II Battlecruiser"
-                      fluffName="CSA Admiral William S. Preston"
-                      ifDateBetween=",3072">%ELEMENT%
-            </subforce>
-            <subforce chassis="Liberator Cruiser" ifDateBetween="3059,3068"
-                      fluffName="CSA Constantineau">%ELEMENT%
-            </subforce>
-            <subforce chassis="Aegis Heavy Cruiser"
-                      fluffName="CSA Ares&apos;s Might">%ELEMENT%
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship dates from Clan Star Adder Naval Forces (Sarna). Largest hull commands each star
+         (tonnage sort). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <co>%STAR_CMDR%</co>
+
+        <!-- Command Keshik: the battleship flagships plus the Command and Quasar Keshik cruisers. -->
+        <subforces ifName="Command Keshik">
+            <subforce fluffName="CSA Sovereign Right" role="command"
+                      chassis="McKenna Battleship">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Absolute Truth" ifDateBetween="2932,"
                       chassis="Nightlord Battleship">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Exodus Ranger"
-                      ifDateBetween="2950,3075"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
+            <subforce fluffName="CSA Nygaard" ifDateBetween=",3075"
+                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Hagar"
-                      chassis="Lola III Destroyer">%ELEMENT%
+            <subforce fluffName="CSA Stellar Serpent"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Vritra" ifDateBetween=",3067"
-                      chassis="Vincent Corvette">%ELEMENT%
+            <subforce fluffName="CSA Ares&apos;s Might"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Centaur"
-                      chassis="Vincent Corvette">%ELEMENT%
+        </subforces>
+
+        <!-- Alpha Naval Reserve: battlecruiser, cruisers, and heavy destroyers. -->
+        <subforces ifName="Alpha Naval Reserve">
+            <subforce fluffName="CSA Admiral William S. Preston" role="command" ifDateBetween=",3072"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Divine Conquest" ifDateBetween=",3075"
                       chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Star Fire" ifDateBetween="2950,3060"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
+            <subforce fluffName="CSA Constantineau" ifDateBetween="3059,3068"
+                      chassis="Liberator Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Eagle" ifDateBetween=",3072"
-                      chassis="Essex II Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSA Vicious Fang" ifDateBetween="2962,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSA Black Adder" ifDateBetween="2962,3072"
-                      chassis="Carrack Transport">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSA Exodus Sentinel" ifDateBetween="2950,"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
+            <subforce fluffName="CSA Hagar"
+                      chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Warlock"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Yodan" ifDateBetween=",3072"
-                      chassis="Lola III Destroyer">%ELEMENT%
+        </subforces>
+
+        <!-- Beta Naval Reserve: destroyers (all lost by 3072; attach gated ,3072). -->
+        <subforces ifName="Beta Naval Reserve">
+            <subforce fluffName="CSA Eagle" role="command" ifDateBetween=",3072"
+                      chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Tehuantepec" ifDateBetween=",3072"
                       chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
-            <subforce fluffName="CSA Arcadian Asp" ifDateBetween="2962,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            <subforce fluffName="CSA Yodan" ifDateBetween=",3072"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Cameron&apos; Flame" ifDateBetween=",3072"
+                      chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Star Fire" ifDateBetween="2950,3060"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Exodus Squadron: the York destroyer-carriers. -->
+        <subforces ifName="Exodus Squadron">
+            <subforce fluffName="CSA Exodus Ranger" role="command" ifDateBetween="2950,3075"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Exodus Sentinel" ifDateBetween="2950,"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Exodus Crusader" ifDateBetween="2950,"
                       chassis="York Destroyer-Carrier">%ELEMENT%
@@ -238,21 +263,40 @@
             <subforce fluffName="CSA Exodus Avenger" ifDateBetween="2950,"
                       chassis="York Destroyer-Carrier">%ELEMENT%
             </subforce>
+        </subforces>
+
+        <!-- Patrol Squadron: Fredasa raiders and Vincent corvettes (Arcadia/Albion patrols). -->
+        <subforces ifName="Patrol Squadron">
+            <subforce fluffName="CSA Vicious Fang" role="command" ifDateBetween="2962,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Arcadian Asp" ifDateBetween="2962,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Centaur"
+                      chassis="Vincent Corvette">%ELEMENT%
+            </subforce>
             <subforce fluffName="CSA Pegasus" ifDateBetween=",3088"
                       chassis="Vincent Corvette">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Vritra" ifDateBetween=",3067"
+                      chassis="Vincent Corvette">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Naval Transport Star: troop cruisers and transports (gone by 3072; attach gated ,3072). -->
+        <subforces ifName="Naval Transport Star">
+            <subforce fluffName="CSA Black Adder" role="command" ifDateBetween="2962,3072"
+                      chassis="Carrack Transport">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSA Renown" ifDateBetween=",3062"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Cho Polu" ifDateBetween=",3068"
                       chassis="Volga Transport">%ELEMENT%
             </subforce>
             <subforce fluffName="CSA Pompeii" ifDateBetween=",3072"
                       chassis="Volga Transport">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSA Renown" ifDateBetween=",3062"
-                      chassis="Potemkin Troop Cruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CSA Cameron&apos; Flame"
-                      ifDateBetween=",3072"
-                      chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
         </subforces>
     </force>
@@ -368,17 +412,34 @@
         <name ifRating="Sol">Gatekeeper Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Star Adder (Clan Star Adder
+             Touman, Sarna) is a Crusader shock-assault Clan: it favors heavy and assault OmniMeks
+             "configured to inflict maximum damage" and gives little thought to aero or Elementals.
+             One of the heaviest Clan profiles - strong assault core across the Adder cluster types
+             (assault/guards roll heavy, cavalry medium, hussar light). -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:42,H:40,M:16,L:2</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:24,H:48,M:24,L:4</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:8,H:34,M:46,L:12</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:18,M:44,L:36</weightTarget>
+        <!-- Aero and Elementals are minimized (sparse), not optimized - medium/older weight. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:30,M:45,L:25</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:18,M:42,L:40</weightTarget>
+
         <!--Distribution is taken from FM:U, after recovery from
         Burrock absorption. -->
 
         <flags ifRating="FL" ifFlags="!assault|cavalry|cavalier|dragoon|guards|hussar">
-            <option weight="5" weightClass="H"
+            <!-- Assault and Guards clusters are the Adder shock core - route them to ASSAULT weight
+                 (was H) so they use the A weightTarget and field genuine assault Meks. Star Adder
+                 favors assault "configured to inflict maximum damage"; H-weight assault clusters
+                 only delivered ~A8 (assault spilled into heavy). -->
+            <option weight="5" weightClass="A"
                     ifTopLevel="1">assault
             </option>
             <option weight="5" weightClass="M">cavalry</option>
             <option weight="4" role="cavalry">cavalier</option>
             <option weight="4">dragoon</option>
-            <option weight="3" weightClass="H">guards</option>
+            <option weight="3" weightClass="A">guards</option>
             <option weight="1" weightClass="L"
                     role="cavalry">hussar
             </option>
@@ -389,6 +450,7 @@
 
         <ruleGroup>
             <weightClass>
+                <option weight="1">A</option>
                 <option weight="3">H</option>
                 <option weight="2" ifRole="!command">M</option>
                 <option weight="1" ifRole="!command"
@@ -763,13 +825,13 @@
         <co>%STAR_CAPTAIN%</co>
 
         <changeEschelon ifFlags="testTrinary">
-            <option role="-testTrinary" weight="6">%TRINARY%</option>
-            <option role="-testTrinary" weight="3">%BINARY%</option>
-            <option role="-testTrinary"
+            <option flags="-testTrinary" weight="6">%TRINARY%</option>
+            <option flags="-testTrinary" weight="3">%BINARY%</option>
+            <option flags="-testTrinary"
                     ifRating="FL|Keshik" ifDateBetween="2870,"
                     augmented="1" weight="2">%TRINARY%
             </option>
-            <option role="-testTrinary"
+            <option flags="-testTrinary"
                     ifRating="FL|Keshik" ifDateBetween="2870,"
                     augmented="1">%BINARY%
             </option>
@@ -1039,11 +1101,11 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="16" ifWeightClass="H|A" ifFlags="!hussar">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
                 <option weight="4" ifWeightClass="M" ifDateBetween="3060,">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="1" ifWeightClass="L" ifDateBetween="3060,">Light Battle</option>
                 <option weight="16" ifWeightClass="H|A" ifFlags="!hussar">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -1058,15 +1120,15 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="15" ifWeightClass="H|A" ifFlags="!hussar">Heavy Battle</option>
-                <option weight="3" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
                 <option weight="3" ifWeightClass="M" ifDateBetween="3060,">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="1" ifWeightClass="L" ifDateBetween="3060,">Light Battle</option>
                 <option weight="8" ifWeightClass="H|A" ifFlags="!hussar">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -1091,7 +1153,7 @@
 
         <subforces generate="group" ifUnitType="Mek">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -1101,48 +1163,35 @@
                 <option weightClass="A,A,H,H,M">%ELEMENT%</option>
             </subforceOption>
             <subforceOption ifWeightClass="H">
-                <option weightClass="A,H,H,H,M"
-                        ifFlags="!hussar">%ELEMENT%
-                </option>
-                <option weightClass="A,A,H,M,M"
-                        ifFlags="!hussar">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,H" ifFlags="!hussar"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,M" ifFlags="!hussar"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="H,H,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L"
-                        ifFlags="hussar">%ELEMENT%
-                </option>
-            </subforceOption>
+
+                <option weightClass="H,H,H,H,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,H,H,H" weight="2">%ELEMENT%</option>
+
+                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="M">
-                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,M,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="M,M,M,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="L">
-                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,L,L,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,L,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="L,L,L,L,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,L,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="M,M,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
+</subforceOption>
         </subforces>
         <subforces ifUnitType="ProtoMek">
             <subforce num="5">%POINT%</subforce>
@@ -1176,11 +1225,11 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="16" ifWeightClass="H|A" ifFlags="!hussar">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
                 <option weight="4" ifWeightClass="M" ifDateBetween="3060,">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="1" ifWeightClass="L" ifDateBetween="3060,">Light Battle</option>
                 <option weight="16" ifWeightClass="H|A" ifFlags="!hussar">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -1195,15 +1244,15 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="15" ifWeightClass="H|A" ifFlags="!hussar">Heavy Battle</option>
-                <option weight="3" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
                 <option weight="3" ifWeightClass="M" ifDateBetween="3060,">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="1" ifWeightClass="L" ifDateBetween="3060,">Light Battle</option>
                 <option weight="8" ifWeightClass="H|A" ifFlags="!hussar">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -1228,7 +1277,7 @@
 
         <subforces generate="group">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>

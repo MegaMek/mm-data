@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,41 +15,43 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-deb5-78cc-85a3-906e67d060b3
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Vulcan
 model:VL-2T (Timms)
 mul id:7797
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3034
-Source:TP:39V
-Rules Level:1
+techbase:Inner Sphere
+era:3034
+source:TP:39V,TR:SW
+published:TP:39V,TR:SW
+rules level:1
 role:Scout
 
 quirk:low_profile
 
+mass:40
+engine:240 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:40
-Engine:240 Fusion Engine(IS)
-Structure:IS Standard
-Myomer:Standard
+heat sinks:10 Single
+walk mp:6
+jump mp:6
 
-Heat Sinks:10 Single
-Walk MP:6
-Jump MP:6
-
-Armor:Standard(Inner Sphere)
-LA Armor:6
-RA Armor:6
-LT Armor:8
-RT Armor:8
-CT Armor:10
-HD Armor:8
-LL Armor:10
-RL Armor:10
-RTL Armor:4
-RTR Armor:4
-RTC Armor:6
+armor:Standard(Inner Sphere)
+LA armor:6
+RA armor:6
+LT armor:8
+RT armor:8
+CT armor:10
+HD armor:8
+LL armor:10
+RL armor:10
+RTL armor:4
+RTR armor:4
+RTC armor:6
 
 Weapons:5
 Flamer, Left Arm
@@ -170,19 +172,29 @@ Foot Actuator
 -Empty-
 -Empty-
 
-overview:The Vulcan was designed as an anti-infantry 'Mech in 2775 during the closing years of the Amaris Civil War. 
+overview:<p>The Vulcan was designed in 2775 as a dedicated anti-infantry BattleMech during the final years of the Amaris Civil War. As Star League Defense Force troops fought Republican soldiers in the urban centers of the Terran Hegemony, conventional 'Mechs proved vulnerable to dug-in infantry formations. MatherTechno Incorporated of Northwind answered this tactical need by creating a 'Mech specifically equipped to eliminate infantry concentrations while maintaining exceptional mobility in confined city streets.</p><p>General Aleksandr Kerensky personally ordered MatherTechno's newly liberated production lines converted to manufacture the Vulcan, recognizing the urgent need for such a specialized platform. The design's distinctive narrow profile earned it the nickname "Scarecrow" among MechWarriors, a reflection of its ungainly but effective silhouette. Production continued at Northwind until the factory's destruction early in the First Succession War, after which the Lyran Commonwealth and Free Worlds League maintained limited manufacturing through Coventry Metal Works and Nimakachi Fusion Products respectively.</p>
 
-capabilities:The Vulcan is lightly armored at only five tons, though this is typically sufficient when facing infantry forces and its narrow profile makes it a harder target to hit. A cruising speed of 97.2 km/h is enhanced by six jump jets mounted in the rear of the Vulcan's torso, specially vented to reduce heat buildup, giving it a jumping range of 180 meters.
+capabilities:<p>The Vulcan carries an unusual weapons array optimized for anti-personnel operations rather than 'Mech-to-'Mech combat. Its primary armaments are a Firestorm flamer and Sperry Browning machine gun, both devastating against unarmored troops and capable of clearing buildings with brutal efficiency. The Armstrong Autocannon/2, while originally intended to provide anti-'Mech capability, proved more effective as an anti-building weapon given its limited stopping power against armored targets. A Randell medium laser serves as backup when the autocannon's ammunition runs dry.</p><p>The Vulcan's true strength lies in its exceptional mobility for urban operations. Six rear-mounted jump jets, specially vented to reduce heat buildup, provide 180 meters of jumping capability, allowing pilots to rapidly reposition across rooftops and obstacles. A top speed of 97 kilometers per hour complements this agility, making the Vulcan difficult to pin down in close terrain.</p><p>However, the design carries significant limitations. With only five tons of armor, the Vulcan cannot sustain prolonged engagements against heavier opponents and is rarely deployed without support from larger BattleMechs. The absence of manipulative hands further restricts close combat options, though this limitation proves minor given the 'Mech's intended role of infantry suppression rather than dueling.</p>
 
-deployment:Piloted by Richard Timms of the 3rd Davion Guards during the failed attack on Vega during the War of 3039. The machine guns, ammo and medium laser were replaced with two additional Flamers and a Small laser.
+deployment:<p>This field modification was employed during the failed Davion assault on Vega in the War of 3039. The pilot removed the machine guns, their ammunition, and the medium laser to mount two additional flamers and a small laser, creating a configuration optimized for maximum incendiary effect against infantry and structures. While the modification sacrificed anti-armor capability entirely, it proved devastatingly effective in its intended urban clearance role. The variant represents the type of field expedient commonly seen during extended campaigns where spare parts and tactical requirements drive creative solutions.</p>
 
-history:As the SLDF battled Republican troops in the streets and thoroughfares of the Terran Hegemony, many 'Mechs were destroyed by dug-in infantry during these urban battles. In response to this problem, MatherTechno Inc. designed the Vulcan to pack weaponry capable of taking out large numbers of enemy troops and capable of unparalleled mobility in an urban environment, though not intended to engage in all-out battles with larger 'Mechs. The Vulcan's distinct profile would eventually give rise to its nickname "Scarecrow." Production of the Vulcan began as soon as MatherTechno's factory on Northwind was liberated by the SLDF, with Aleksandr Kerensky himself specifically ordering their production lines converted to produce the Vulcan. The design's baptism of fire came during Operation Liberation, the final battle of the civil war to liberate Terra from Stefan Amaris, where it served as part of the Volunteer Regiments and earned its reputation as a tough city fighter. Each of the Great Houses had a sizable number of Vulcans at the start of the First Succession War when, just a few months into the conflict, MatherTechno's factory on Northwind was destroyed. Only the Lyran Commonwealth and Free Worlds League managed to acquire the design specifications for the Vulcan and keep it in limited production throughout the rest of the Succession Wars, with the League awarding the schematics to Nimakachi Fusion Products Limited and the Commonwealth giving theirs to Coventry Metal Works. Of the other Great Houses the Capellan Confederation had the fewest number of Vulcans as a result of the loss of Sappho, where the majority of their Vulcans were stationed, to House Marik during the Second Succession War. The Federated Suns kept their Vulcans going thanks to several spare part supply dumps located in their territory, and used the 'Mech extensively during the reconquest of Kentares IV. The majority of the Draconis Combine's Vulcan inventory was used during a raid on Dobson in 3020 where they decimated several key Davion aerospace fighter bases. Following the recovery of several lostech components Nimakachi was able to create a new variant, the VT-5M, and begin limited production in 3050, eventually increasing their lines to produce twenty a month. Coventry Metal Works produced their own upgraded variant around the same time, the VT-5S, which played a pivotal role during the FedCom Civil War as part of the Allied forces. The Word of Blake purchased a number of Vulcans in preparation for their seizure of Terra in 3058, codenamed Operation Odysseus. The Blakists would go on to seize more Vulcans after the start of the Jihad following their sacking of Nimakachi's Tematagi plant in 3069, with many transferred to the Protectorate Militia for policing duties.
+history:<p>The Vulcan's combat debut came during Operation Liberation, the SLDF's final campaign to free Terra from Stefan Amaris in 2779. Serving with the Volunteer Regiments, the design quickly established its reputation as a fearsome urban fighter, its flamers and machine guns proving devastatingly effective against Republican holdouts in Terra's cities. By the Star League's dissolution, every Great House had acquired a sizable inventory of Vulcans.</p><p>The First Succession War brought catastrophe when MatherTechno's Northwind facility was destroyed within months of the conflict's outbreak. The Lyran Commonwealth and Free Worlds League salvaged the design specifications, awarding production rights to Coventry Metal Works and Nimakachi Fusion Products Limited respectively. Other Houses maintained their Vulcans through salvage and careful husbandry of remaining spare parts. The Federated Suns especially employed their Vulcans during the reconquest of Kentares IV, where the 'Mechs' flamers devastated Kuritan infantry positions in the cities of Amishton and Davisbury. House Kurita's own Vulcan contingent achieved notoriety during a 3020 raid on Dobson that decimated key Davion aerospace fighter installations.</p><p>House Liao suffered the greatest losses, having concentrated most of their Vulcans on Sappho when that world fell to House Marik during the Second Succession War. The Capellan Confederation consequently fielded the fewest Vulcans of any Great House throughout the remaining Succession Wars era.</p><p>The recovery of Star League technology enabled Nimakachi to introduce the upgraded VT-5M in 3052, scaling production to twenty units monthly before the Word of Blake's destruction of their Tematagi plant in 3069. Coventry Metal Works developed their own modernized variant, the VT-5S, which saw extensive service during the FedCom Civil War as part of Victor Steiner-Davion's Allied forces. The Word of Blake acquired numerous Vulcans both through purchase and seizure, finding the design invaluable for policing Protectorate cities during the Jihad.</p><p>By the thirty-second century, collapsing sales prompted an unprecedented collaboration between Coventry and Nimakachi, resulting in the VT-7T variant that combined the strengths of both manufacturing traditions. This joint venture restored the Vulcan's market position, reaffirming its status as the premier urban combat 'Mech.</p>
 
 manufacturer:Field Refit
+
 primaryfactory:Various
-systemmanufacturer:CHASSIS:Mather Tech 500
-systemmanufacturer:ENGINE:Pitban 240
-systemmanufacturer:ARMOR:StarGuard I
-systemmanufacturer:JUMP_JET:Model 9 Pitban
-systemmanufacturer:COMMUNICATIONS:Hartford 200S
-systemmanufacturer:TARGETING:Hartford TA10
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Mather Tech
+systemmode:CHASSIS:500
+systemmanufacturer:ENGINE:Pitban
+systemmode:ENGINE:240
+systemmanufacturer:ARMOR:StarGuard
+systemmode:ARMOR:I
+systemmanufacturer:JUMP_JET:Pitban
+systemmode:JUMP_JET:Model 9
+systemmanufacturer:COMMUNICATIONS:Hartford
+systemmode:COMMUNICATIONS:200S
+systemmanufacturer:TARGETING:Hartford
+systemmode:TARGETING:TA10

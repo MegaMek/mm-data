@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b77d-7c50-a7d6-4b5e11178c8c
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Elephant)
 2230
 </year>
 
-<originalBuildYear>
-2230
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,17 @@ IS Level 3
 Beast:Elephant
 </motion_type>
 
+<Troopers Equipment>
+Clothing, Fatigues/Civilian/Non-Armored
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Terran elephants have been employed as beasts of war for millennia, and their role has continued on colonized worlds where their immense strength and carrying capacity offer tactical advantages no smaller mount can match. An elephant can carry multiple riders along with crew-served weapons, effectively creating a mobile firing platform that requires no fuel, spare parts, or technical support. Elephant-mounted infantry platoons field heavier weapons than any other beast-mounted formation, pairing personal arms with support weapons that would normally require a vehicle mount. The animals' thick hides provide modest protection against small arms fire, and their sheer mass can intimidate opponents and clear obstacles. These formations are slow compared to mechanized units but operate independently of supply chains, making them valuable on isolated worlds or in prolonged campaigns where logistics have broken down.</p>
+</overview>
 
 <squad_size>
 2
@@ -75,12 +75,4 @@ Laser Rifle
 <Secondary>
 InfantryMRR
 </Secondary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-Clothing, Fatigues/Civilian/Non-Armored
-</armorKit>
 

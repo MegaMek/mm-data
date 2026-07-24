@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Zhaomaon (Cluff's Stand 3130+)
-sucsId: 2836
+sucsId: 2837
 xcood: 1.344
 ycood: -428.929
 spectralType: K4V
@@ -50,6 +50,14 @@ planet:
         capital: Wall
       - name: Sakamoto's Rift
     event:
+      - date: '2108-12-05'
+        name: Zhaomaon
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2667-11-04'
         faction:
           source: canon
@@ -83,6 +91,16 @@ planet:
         socioIndustrial: D-D-A-D-D
       - date: '2750-01-01'
         population: 132517995.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 13
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 134412941.0
       - date: '2770-01-01'
@@ -119,16 +137,25 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '3025-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - CC
-      - date: '2108-12-05'
-        name: Zhaomaon
+            - ABN
       - date: '3130-01-01'
         name: Cluff's Stand
         message: Zhaomaon renamed to Cluff's Stand
+      - date: '3130-12-31'
+        # administration:
+        #   - Victoria Commonality
+        #   - Region 6
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
   - name: Nox Belt A
     type: ASTEROID_BELT
     orbitalDist: 0.49

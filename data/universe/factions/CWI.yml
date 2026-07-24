@@ -17,6 +17,11 @@
 
 key: CWI
 name: Clan Widowmaker
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CWM
 capital: Terra
 yearsActive:
   - start: 2807
@@ -42,3 +47,5 @@ ratingLevels:
   - Keshik
 fallBackFactions:
   - CLAN
+usesMercenaries:
+  2500: false

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Shadow
-sucsId: 2959
+sucsId: 2960
 xcood: -2.016
 ycood: 1749.942
 spectralType:
@@ -75,6 +75,12 @@ planet:
         size: medium
         icon: oddmoon1
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2802-12-01'
         faction:
           source: canon
@@ -93,6 +99,12 @@ planet:
       - date: '2821-12-10'
         faction:
           source: canon
+          value:
+            - CFM
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CFM
       - date: '2830-01-01'
@@ -154,6 +166,12 @@ planet:
             - CCO
       - date: '3070-01-01'
         population: 79199.0
+      - date: '3072-01-04'
+        faction:
+          source: canon
+          value:
+            - CCO
+            - SOC
       - date: '3072-02-25'
         faction:
           source: canon
@@ -162,12 +180,6 @@ planet:
             - CCO
             - CGS
             - CSV
-      - date: '3072-01-04'
-        faction:
-          source: canon
-          value:
-            - CCO
-            - SOC
       - date: '3073-05-09'
         faction:
           source: canon
@@ -175,6 +187,12 @@ planet:
             - ABN
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: St. John's
     type: TERRESTRIAL
     orbitalDist: 2.66

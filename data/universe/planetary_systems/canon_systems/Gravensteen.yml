@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Gravensteen
-sucsId: 997
+sucsId: 998
 xcood: 219.606
 ycood: -133.944
 spectralType: K4V
@@ -52,6 +52,12 @@ planet:
       - name: Ognenovic's Rift
         capital: Roux Town
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2693-08-31'
         faction:
           source: canon
@@ -77,6 +83,17 @@ planet:
         population: 207452940.0
       - date: '2750-01-01'
         population: 233446088.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 3
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 247418766.0
       - date: '2768-08-01'
@@ -124,6 +141,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: S1
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.49

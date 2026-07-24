@@ -33,15 +33,19 @@
     slightly heavier than the standard.-->
 
     <toc>
+        <!-- Jade Falcon fields no vehicles before 3055 (strict reading of the Clan's anti-vehicle
+             doctrine). Tank and VTOL only become available from 3055 on, when the reconciled
+             support/APC vehicle usage begins. Before then the touman is Mek/Elemental/aero only. -->
         <unitType>
             <option ifDateBetween="3060,3072">null,Mek,ProtoMek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
-            <option ifDateBetween="2870,">null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
-            <option ifDateBetween=",2869">null,Mek,Tank,VTOL,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween="3055,">null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween="2870,3054">null,Mek,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+            <option ifDateBetween=",2869">null,Mek,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
         </unitType>
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -137,32 +141,42 @@
         </attachedForces>
     </force>
 
+    <!-- The Jade Falcon naval reserve (circa 3058) is organized into two named WarShip Stars -
+         Emerald Talon (the front-line battle star around the Nightlord flagship) and Falcon Stoop
+         (a post-Revival convoy-escort star of Aegis cruisers) - plus a pooled command star (the
+         Cameron flagship, the Texas, and the Black Lion Aeries) and a support star of frigates,
+         destroyers, and transports. JumpShips pad the formation so a date-thinned star never
+         collapses into a stray hull. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce fluffName="CJF Turkina's Pride" role="command"
-                      chassis="Cameron Battlecruiser">%ELEMENT%
+            <subforce flags="+navalFluff" name="Emerald Talon Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Falcon Stoop Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Naval Reserve Command Star">%STAR%</subforce>
+            <subforce flags="+navalFluff" name="Naval Reserve Support Star">%STAR%</subforce>
+            <!-- Seven Snow Raven Aegis cruisers leased to the Falcons for Operation Revival
+                 (3050-3060), recalled to the Raven touman by 3061 (see CSR.xml). They keep their
+                 CSR registry names while in Falcon service. -->
+            <subforce flags="+navalFluff" name="Snow Raven Contract Star"
+                      ifDateBetween="3050,3060">%STAR%
             </subforce>
-            <subforce fluffName="CJF Emerald Talon"
-                      ifDateBetween="2860,3136"
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship dates from Clan Jade Falcon Naval Forces (Sarna). Largest hull commands each star
+         (tonnage sort). The two ex-Ice Hellion captures - Chaos Sailor (taken at Vantaa 3072) and
+         Swift Bait (taken 3071, renamed Jade Tornado after 3085) - join the Falcon Stoop escort
+         star (see CIH.xml). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <co>%STAR_CMDR%</co>
+
+        <!-- Emerald Talon Star: front-line battle star built around the Nightlord flagship. -->
+        <subforces ifName="Emerald Talon Star">
+            <subforce fluffName="CJF Emerald Talon" role="command" ifDateBetween="2860,3136"
                       chassis="Nightlord Battleship">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Falcon's Nest" ifDateBetween=",3073"
-                      chassis="Texas Battleship">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Jade Aerie"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Blue Aerie" ifDateBetween=",3073"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF White Aerie"
-                      chassis="Black Lion II Battlecruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Hawker" ifDateBetween=",3078"
-                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Jade Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
@@ -170,7 +184,18 @@
             <subforce fluffName="CJF Gold Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Red Talon"
+            <subforce fluffName="CJF Janice Hazen" ifDateBetween=",3072"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Frost Falcon" ifDateBetween=",3078"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Falcon Stoop Star: post-Revival convoy-escort star of Aegis cruisers, plus the two
+             ex-Ice Hellion captures. -->
+        <subforces ifName="Falcon Stoop Star">
+            <subforce fluffName="CJF Red Talon" role="command"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF White Talon" ifDateBetween=",3062"
@@ -182,37 +207,89 @@
             <subforce fluffName="CJF Blue Talon"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Janice Hazen" ifDateBetween=",3072"
-                      chassis="Aegis Heavy Cruiser">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Frost Falco" ifDateBetween=",3078"
-                      chassis="Aegis Heavy Cruiser">%ELEMENT%
-            </subforce>
             <subforce fluffName="CJF Hawk Eye" ifDateBetween=",3073"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Gauntlet" ifDateBetween="3024,3073"
-                      chassis="Liberator Cruiser">%ELEMENT%
+            <subforce fluffName="CJF Kerensky&apos;s Blues" ifDateBetween="2965,3055"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
+            <subforce fluffName="CJF Chaos Sailor" ifDateBetween="3072,3144"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Swift Bait" ifDateBetween="3072,3084"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Jade Tornado" ifDateBetween="3085,"
+                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Naval Reserve Command Star: the Cameron flagship, the Texas, and the Black Lion Aeries. -->
+        <subforces ifName="Naval Reserve Command Star">
+            <subforce fluffName="CJF Turkina&apos;s Pride" role="command"
+                      chassis="Cameron Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Falcon&apos;s Nest" ifDateBetween=",3073"
+                      chassis="Texas Battleship">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Jade Aerie"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Blue Aerie" ifDateBetween=",3070"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF White Aerie"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Naval Reserve Support Star: frigates, destroyers, corvettes, and transports. -->
+        <subforces ifName="Naval Reserve Support Star">
             <subforce fluffName="CJF Green Lantern" ifDateBetween=",3078"
                       chassis="Congress Frigate">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Kerensky&apos;s Pride"
                       chassis="Congress Frigate">%ELEMENT%
             </subforce>
+            <subforce fluffName="CJF Gauntlet" ifDateBetween="3024,3070"
+                      chassis="Liberator Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CJF Hawker" ifDateBetween=",3078"
+                      chassis="Sovetskii Soyuz Heavy Cruiser">%ELEMENT%
+            </subforce>
             <subforce fluffName="CJF Emerald Tornado"
                       chassis="Whirlwind Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CJF Kerensky&apos;s Blues"
-                      ifDateBetween="2965,"
-                      chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
             <subforce fluffName="CJF Lightning Strike" ifDateBetween=",3072"
                       chassis="Vincent Corvette">%ELEMENT%
             </subforce>
-            <subforce fluffName="CJF Ironhold Provider"
-                      ifDateBetween="2950,3070"
+            <subforce fluffName="CJF Ironhold Provider" ifDateBetween="2950,3070"
                       chassis="Carrack Transport">%ELEMENT%
+            </subforce>
+        </subforces>
+
+        <!-- Snow Raven Contract Star: seven leased Aegis cruisers, gated to the contract window. -->
+        <subforces ifName="Snow Raven Contract Star">
+            <subforce fluffName="CSR Scabbard" role="command" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Blue Lancer" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR White Terror" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Blue Quest" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Lord Death" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Black Justice" ifDateBetween="3050,3060"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CSR Morning Violence" ifDateBetween="3050,3055"
+                      chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
         </subforces>
     </force>
@@ -303,11 +380,33 @@
         <name ifWeightClass="L">Striker Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Jade Falcon doctrine
+             (Clan Jade Falcon Touman, Sarna) is aggressive and Crusader: front-line Galaxies
+             are OmniMek-heavy with a strong assault core (the Turkina Keshik especially),
+             while Beak (heavy-medium) and Eye (light-medium) Stars round out a full-spread but
+             heavy-leaning force. Talon clusters lead heavy/assault; Battle clusters heavy-medium;
+             Striker (Eye) clusters are light-medium but still Falcon-aggressive. Picker (A1/H3/M2/L1)
+             plus these targets land the faction blend ~L13/M35/H36/A16 - heavier than most Clans.
+             NOTE: Striker/Eye clusters DO appear (~14% by name, driven by the L picker roll). The
+             forcegen_weights.csv rolledWeight column logs each cluster's post-recalc AVERAGE class,
+             which never reaches Light for a combined-arms Clan (the Elemental + fighter + command
+             stars pull the average up), so "rolled=L = 0" there is expected and not a missing type. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:40,H:38,M:18,L:4</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:20,H:46,M:28,L:6</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:6,H:30,M:48,L:16</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:14,M:44,L:40</weightTarget>
+        <!-- Aerospace is a Falcon strength (heavy/medium fighters); no assault-class fighters exist. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:45,L:20</weightTarget>
+        <!-- Combat vehicles are rare and disdained (post-3055 only) - light/medium 2nd-line support. -->
+        <weightTarget unitType="Tank" spread="8">A:0,H:15,M:40,L:45</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">A</option>
+            <option weight="3">H</option>
             <option weight="2">M</option>
             <option weight="1">L</option>
             <option ifRole="command">H</option>
+            <option ifRating="Keshik">A</option>
             <option ifRating="Keshik">H</option>
         </weightClass>
 
@@ -789,13 +888,13 @@
 
         <attachedForces ifRating="PG|Sol">
             <subforceOption>
-                <option unitType="Tank" weight="1" name="Binary Artillery"
+                <option unitType="Tank" ifDateBetween="3055," weight="1" name="Binary Artillery"
                         role="artillery">%BINARY%
                 </option>
-                <option unitType="Tank" ifDateBetween="2950,"
+                <option unitType="Tank" ifDateBetween="3055,"
                         weight="2" name="Trinary Support">%TRINARY%
                 </option>
-                <option unitType="Tank" ifDateBetween="2950,"
+                <option unitType="Tank" ifDateBetween="3055,"
                         weight="2" name="Binary Support">%BINARY%
                 </option>
                 <option weight="2" />
@@ -829,12 +928,6 @@
                 <option weightClass="M" unitType="Mek"
                         weight="1">%STAR%
                 </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
             </subforceOption>
             <subforceOption ifWeightClass="M">
                 <option weightClass="H" unitType="Mek"
@@ -846,15 +939,6 @@
                 <option weightClass="L" unitType="Mek"
                         weight="1">%STAR%
                 </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
             </subforceOption>
             <subforceOption ifWeightClass="L">
                 <option weightClass="M" unitType="Mek"
@@ -862,12 +946,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",3000" weight="1">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",3000" weight="2">%STAR%
                 </option>
             </subforceOption>
 
@@ -877,12 +955,6 @@
                 </option>
                 <option weightClass="M" unitType="Mek"
                         weight="1">%STAR%
-                </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="H" weight="2">%STAR%
@@ -906,15 +978,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="1">%STAR%
-                </option>
-                <option weightClass="H" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="H" weight="1">%STAR%
@@ -941,12 +1004,6 @@
                 </option>
                 <option weightClass="L" unitType="Mek"
                         weight="2">%STAR%
-                </option>
-                <option weightClass="M" unitType="Tank"
-                        ifDateBetween=",2950" weight="1">%STAR%
-                </option>
-                <option weightClass="L" unitType="Tank"
-                        ifDateBetween=",2950" weight="2">%STAR%
                 </option>
                 <option unitType="Infantry"
                         weightClass="M" weight="2">%STAR%
@@ -1298,10 +1355,10 @@
                 <option unitType="Infantry"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
             </subforceOption>
@@ -1315,13 +1372,13 @@
                 <option unitType="Infantry"
                         weightClass="L" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L" weight="1">%STAR%
                 </option>
             </subforceOption>
@@ -1332,10 +1389,10 @@
                 <option unitType="Infantry"
                         weightClass="L">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L">%STAR%
                 </option>
             </subforceOption>
@@ -1564,10 +1621,10 @@
                 <option unitType="Infantry"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
             </subforceOption>
@@ -1581,13 +1638,13 @@
                 <option unitType="Infantry"
                         weightClass="L" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="H" weight="1">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M" weight="2">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L" weight="1">%STAR%
                 </option>
             </subforceOption>
@@ -1598,10 +1655,10 @@
                 <option unitType="Infantry"
                         weightClass="L">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="M">%STAR%
                 </option>
-                <option unitType="Tank" role="apc"
+                <option unitType="Tank" role="apc" ifDateBetween="3055,"
                         weightClass="L">%STAR%
                 </option>
             </subforceOption>
@@ -1817,10 +1874,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1832,14 +1889,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1857,7 +1914,7 @@
 
         <subforces generate="group" ifUnitType="Mek">
             <subforceOption ifWeightClass="H|A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -1934,10 +1991,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1949,14 +2006,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1974,7 +2031,7 @@
 
         <subforces generate="group">
             <subforceOption ifWeightClass="H|A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -2051,7 +2108,7 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="8">Artillery Fire</option>
@@ -2083,7 +2140,7 @@
 
         <subforces>
             <subforceOption ifWeightClass="H|A">
-                <option weightClass="A,A,A,H,H">%POINT%</option>
+                <option weightClass="A,A,A,A,H">%POINT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%POINT%
                 </option>
@@ -2215,10 +2272,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -2230,14 +2287,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a4e3-715e-a4ea-929808e1937d
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -71,12 +66,8 @@ Jump
 
 <Squad Equipment>
 ISBASmallLaser:LA
-ISBAJumpBooster:Body
+BAJumpBooster:Body
 BABasicManipulator:LA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 BAHeavyBattleClaw:RA
 IS BA Stealth (Improved):LA
 IS BA Stealth (Improved):Body
@@ -85,9 +76,71 @@ IS BA Stealth (Improved):RA
 IS BA Stealth (Improved):RA
 </Squad Equipment>
 
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Draconis Combine Admiralty configuration replaces the standard support PPC with a forearm-mounted small laser, paired with a heavy battle claw on the opposite arm. This combination prioritizes close-quarters lethality over ranged firepower, reflecting the tight confines of shipboard and station combat where the PPC's bulk is a liability. Most DCA marines supplement their laser with a right-hand assault rifle loaded with accelerated energy transfer rounds, minimizing damage to critical ship systems during boarding actions. The heavy battle claw makes the DCA variant particularly dangerous in cramped corridors and compartments, where troopers can engage both personnel and light barricades at arm's length. The suit retains the standard Void's improved stealth armor and jump capability, allowing marines to exploit zero-gravity environments and vertical shafts that conventional infantry cannot easily navigate. Reduced ranged capability remains the primary trade-off, leaving DCA troopers at a disadvantage in open-field engagements.</p>
+</capabilities>
+
+<overview>
+<p>The Void is a medium battle armor design produced by Ishikawajima-Harima Battle Armor Industries for the Draconis Combine Mustered Soldiery. Entering service in 3067, the suit was purpose-built as a scout and light assault platform capable of accommodating operators of varying physical sizes, including the larger frames of Clan Elemental warriors. Built on a heavily modified Kage chassis, the Void carries improved stealth armor that masks its signature from both visual detection and electronic sensors, granting it considerable infiltration capability. Jump boosters provide mobility comparable to lighter designs despite the Void's one-thousand-kilogram mass. The suit earned gradual acceptance within the DCMS after an initially lukewarm reception, becoming a valued component of Combine powered infantry doctrine.</p>
+</overview>
+
+<deployment>
+<p>Draconis Combine Admiralty marine squads employ the DCA configuration in four-trooper teams aboard WarShips, DropShips, and orbital installations. These squads specialize in boarding actions and shipboard security, exploiting the variant's close-quarters focus to control corridors and compartments during contested engagements.</p>
+</deployment>
+
+<history>
+<p>The Void emerged from a prolonged Draconis Combine battle armor development program. Following successes with the Kage, Raiden, and Kanazuchi, the DCMS committed to expanding powered infantry capability, but resistance to non-BattleMech units delayed progress. Operation Bulldog and the Combine-Ghost Bear War forced resource allocation, yet the first prototype did not appear until 3067, five years behind schedule.</p><p>Combine scientists built the Void on the Kage platform, modifying it so extensively the two designs bore little resemblance. Accommodation for Elemental-sized operators enabled partnership with Clan Nova Cat, and production authorization followed once the High Command recognized the tactical potential. Ishikawajima-Harima BAI manufactured the suit at Luthien, with additional plants on Agematsu and Loysville opening in 3066. Full production coincided with the December 3067 Black Dragon coup, during which the Otomo and First Genyosha deployed Voids across Imperial City.</p><p>The Word of Blake blockade complicated logistics, but outlying factories continued throughout the Jihad. The Luthien plant's dispersed layout on Shizuoka's coastal flats helped it survive the Blakist occupation, and it became the first battle armor factory to resume production after liberation, reaching full capacity by 3079. The Void became standard among DCMS elite commands but remained nearly exclusive to the Combine. The Procurement Department's decision to withhold Minelayer variants from Nova Cat enclaves reflected deteriorating relations with their Clan allies.</p>
+</history>
+
+<manufacturer>
+Ishikawajima-Harima BAI
+</manufacturer>
+
+<primaryFactory>
+Luthien
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-CE
+</published>
 
 <chassis>
 biped
@@ -109,35 +162,3 @@ biped
 2
 </weightclass>
 
-<overview>
-The Void is a battle armor design that is produced by the Draconis Combine.
-</overview>
-
-<capabilities>
-The Void is protected by enough improved stealth armor to stop a medium laser. The stealth armor makes it more difficult to target the trooper, while also making it all but invisible to enemy detection devices, such as Active Probes. Like the Kage, the Void can jump one hundred and twenty meters, though it achieves this through the use of a jump booster instead of the partial wing. The Void can mount and ride OmniMechs.
-</capabilities>
-
-<deployment>
-The bulky PPC is too unwieldy for use on naval vessels, so the Draconis Combine Admiralty version uses a Small Laser instead.
-</deployment>
-
-<history>
- The DCMS decided to push its battle armor development program to continue producing new designs following the surge of the 3050s. Though the Combine-Ghost Bear War set the timetable back, the Void debuted in 3067 to a lukewarm reception. It was only after the High Command and Procurement Department realized that part of the design process involved making the suit specifically adjustable to accommodate Elementals, and fully understood the possibilities for trade and partnership with Clan Nova Cat, that a battlesuit that so closely resembles the Kage it was based upon was approved for production.
-</history>
-
-<manufacturer>
-Ishikawajima-Harima BAI
-</manufacturer>
-
-<primaryFactory>
-Luthien
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

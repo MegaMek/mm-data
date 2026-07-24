@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cba5-70fe-8237-fca154342635
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Buccaneer
 model:BCN-5W
 mul id:437
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3069
-Source:TR:3060
-Rules Level:2
+techbase:Inner Sphere
+era:3069
+source:TR:3060,BattleCorps
+published:RS:3060u
+rules level:2
 role:Scout
 
-quirk:imp_target_short
 quirk:bad_rep_is
+quirk:imp_target_short
 
+mass:55
+engine:275 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:55
-Engine:275 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:5
+jump mp:7
 
-Heat Sinks:10 Double
-Walk MP:5
-Jump MP:7
-
-Armor:Light Ferro-Fibrous(Inner Sphere)
-LA Armor:17
-RA Armor:17
-LT Armor:18
-RT Armor:18
-CT Armor:24
-HD Armor:9
-LL Armor:23
-RL Armor:23
-RTL Armor:6
-RTR Armor:6
-RTC Armor:8
+armor:Light Ferro-Fibrous(Inner Sphere)
+LA armor:17
+RA armor:17
+LT armor:18
+RT armor:18
+CT armor:24
+HD armor:9
+LL armor:23
+RL armor:23
+RTL armor:6
+RTR armor:6
+RTC armor:8
 
 Weapons:5
 Plasma Rifle, Right Arm
@@ -68,8 +70,8 @@ Hatchet
 Hatchet
 Hatchet
 Hatchet
-Light Ferro-Fibrous
-Light Ferro-Fibrous
+IS Light Ferro-Fibrous
+IS Light Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -81,9 +83,9 @@ ISPlasmaRifle
 ISPlasmaRifle
 ISPlasmaRifleAmmo
 ISPlasmaRifleAmmo
-Light Ferro-Fibrous
-Light Ferro-Fibrous
-Light Ferro-Fibrous
+IS Light Ferro-Fibrous
+IS Light Ferro-Fibrous
+IS Light Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -97,8 +99,8 @@ Improved Jump Jet
 Improved Jump Jet
 ISC3iUnit
 ISC3iUnit
-Light Ferro-Fibrous
-Light Ferro-Fibrous
+IS Light Ferro-Fibrous
+IS Light Ferro-Fibrous
 -Empty-
 
 Right Torso:
@@ -171,4 +173,27 @@ Improved Jump Jet
 -Empty-
 -Empty-
 
+overview:<p>The Buccaneer emerged from the Word of Blake's urgent need for BattleMechs following its schism from ComStar in 3052. Originally a prototype ComStar design that had never entered production on Terra, the fifty-five-ton Buccaneer was swiftly adapted by Precentor Martial Trent Arian to use materials produced in the Free Worlds League, where the nascent order had established its base of operations. Gibson Federated BattleMechs, a division of Free Worlds Defense Industries, rushed the modified design through an accelerated trial program, and the Buccaneer entered production in late 3055.</p><p>Filling a medium-weight close combat role, the Buccaneer was purpose-built to close with opponents and overwhelm them at short range. This emphasis on melee engagement distinguished the design from most contemporary 'Mechs and earned it a fearsome reputation among opponents forced to face it within arm's reach.</p>
 
+capabilities:<p>Built around a compact VOX 330 XL engine, the Buccaneer achieves above-average maneuverability for its weight class, reaching speeds of ninety-seven kilometers per hour. Faced with weight restrictions that forced a choice between jump jets and additional weapons and armor, Gibson's engineers chose the latter approach, creating a sturdy opponent on the battlefield. The chassis mounts an impressive ten tons of Kallon FWL Special ferro-fibrous armor, the maximum the frame can carry, providing excellent protection for a medium 'Mech intended for close-quarters fighting.</p><p>The Buccaneer's most fearsome weapon is its four-ton hatchet, built around an ultra-dense core of depleted uranium that allows it to inflict devastating damage on opponents within arm's reach. Supporting this primary melee weapon at medium to close ranges are four Diverse Optics Type 18 medium lasers and a highly accurate Starflash medium pulse laser, while an Irian Weapon Works 60mm SRM-6 launcher equipped with an Artemis IV fire control system provides additional close-in firepower with enhanced missile accuracy. A single Diverse Optics Sunbeam extended-range large laser serves as the Buccaneer's only long-range striking capability, though its demanding heat output makes overheating a concern during prolonged engagements at speed.</p>
+
+deployment:<p>Introduced around 3069, this variant serves as a near-complete redesign of the Buccaneer, retaining only the signature hatchet and the XL engine concept from the original. Configured as a vicious urban combatant, this variant mounts a Ceres Arms Crusher plasma rifle capable of both damaging enemies and forcing dangerous heat buildup in opposing 'Mechs, complemented by three Ceres Arms Model 8 heavy machine guns linked through a Hellespont machine gun array for devastating anti-infantry capability. A C3i computer integrates this variant into the Word of Blake's networked combat doctrine. The engine was downgraded to a 275-rated VOX to accommodate these enhancements, reducing top speed to eighty-six kilometers per hour, but seven improved jump jets provide two hundred ten meters of jumping capability for urban maneuvering. Space constraints necessitated replacing the standard ferro-fibrous armor with lighter light ferro-fibrous protection.</p>
+
+history:<p>The Buccaneer's combat debut came during Operation Odysseus in 3058, when Word of Blake forces used the newly produced 'Mechs during the seizure of Nestor, the home base of the 21st Centauri Lancers. Blake Militia forces disguised as the Lancers deployed the Buccaneer in their first confirmed engagement, defeating the real Lancers in a campaign that marked the beginning of the Word of Blake's takeover of Terra. The design would see its most significant early testing during the subsequent Terra campaign, where several Buccaneers were deployed across multiple task forces during the intensive fighting that secured the Terran system for the Word of Blake.</p><p>Through the late 3050s and 3060s, the Buccaneer remained primarily a Word of Blake design, produced exclusively at Gibson Federated BattleMechs' facilities on Gibson. The Word of Blake also provided several Buccaneers to the Free Worlds League as part of ongoing technology exchanges, though the majority remained in Blakist service. Gibson Federated continued developing new variants as the Word of Blake's tactical doctrine evolved, introducing the radically redesigned BCN-5W around 3069 to serve as a dedicated urban combatant incorporating advanced Blakist networking technology.</p><p>The onset of the Jihad cemented the Buccaneer's association with the Word of Blake. As Blake forces spread across the Inner Sphere, captured or salvaged Buccaneers began appearing in the hands of opposing forces. Mercenary units working with salvaged Word of Blake chassis created their own field refits, most especially the BCN-6W missile boat variant that emerged around 3073, fundamentally reimagining the design for indirect fire support rather than the close-combat role it was originally intended for.</p><p>Following the destruction of the Word of Blake during the Coalition campaigns, production at Gibson ceased entirely. The Buccaneer survived in limited numbers with various successor state forces and mercenary commands who had acquired the design during the Jihad, with field refits continuing to appear in service well into the Dark Age. The chassis even found an unlikely second life on the Solaris VII arena circuit, where custom variants exploited the design's sturdy frame and inherent ruggedness for entertainment combat.</p>
+
+manufacturer:Gibson Federated BattleMechs (A Division of Free Worlds Defense Industries)
+
+primaryfactory:Gibson
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Standard
+systemmanufacturer:ENGINE:VOX
+systemmode:ENGINE:275 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Light Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Chilton
+systemmode:JUMP_JET:Improved
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

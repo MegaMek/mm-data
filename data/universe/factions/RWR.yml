@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,6 +17,12 @@
 
 key: RWR
 name: Rim Worlds Republic
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes:
+  - RW
 nameChanges:
   2767: Amaris Empire
 capital: Apollo
@@ -149,3 +155,6 @@ factionLeaders:
     gender: "MALE"
     startYear: 2770
     endYear: 2775
+aresConventionsSignatory:
+  2412: true
+  2786: false

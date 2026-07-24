@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Mechdur
-sucsId: 1650
+sucsId: 1651
 xcood: 112.42
 ycood: -423.345
 spectralType:
@@ -111,6 +111,12 @@ planet:
         size: small
         icon: rock7
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2605-12-24'
         faction:
           source: canon
@@ -156,6 +162,16 @@ planet:
         population: 207801258.0
       - date: '2750-01-01'
         population: 210750433.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 14
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 214097800.0
       - date: '2770-01-01'
@@ -171,6 +187,16 @@ planet:
           source: canon
           value:
             - IND
+      - date: '2822-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 15
+      - date: '2822-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2930-01-01'
         faction:
           source: canon
@@ -178,7 +204,7 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
       - date: '3025-01-25'
@@ -192,6 +218,12 @@ planet:
           source: assumption
           value:
             - ARC
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
@@ -203,11 +235,18 @@ planet:
         socioIndustrial:
           source: canon
           value: C-C-A-B-B
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
   - name: Viracocha
     type: TERRESTRIAL
     orbitalDist: 0.9

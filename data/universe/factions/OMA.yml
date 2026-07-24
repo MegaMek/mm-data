@@ -17,7 +17,16 @@
 
 key: OMA
 name: Ozawa Mercantile Association
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes:
+  - OMA
 capital: Terra
+yearsActive:
+  - start: 2200
+    end: 2303
 tags:
   - TRADER
 color:

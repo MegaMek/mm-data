@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a52d-729c-a7bc-d65db5c282be
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -41,25 +36,25 @@ Kopis Assault Battle Armor
 8924
 </mul id:>
 
-<chassis>
-biped
-</chassis>
+<year>
+3077
+</year>
 
-<weightclass>
-4
-</weightclass>
+<type>
+IS Level 2
+</type>
 
-<Trooper Count>
-6
-</Trooper Count>
+<role>
+Ambusher
+</role>
+
+<motion_type>
+Leg
+</motion_type>
 
 <cruiseMP>
 1
 </cruiseMP>
-
-<Armor>
-10
-</Armor>
 
 <armor_type>
 30
@@ -73,9 +68,9 @@ biped
 ISBAMediumLaser:Body
 ISBAMediumLaser:Body
 BAAPMount:RA
-InfantryAssaultRifle:RA:APM
+InfantryAssaultRifle:APM:RA
 BAAPMount:LA
-InfantryAssaultRifle:LA:APM
+InfantryAssaultRifle:APM:LA
 BAHeavyBattleClaw:RA
 BAHeavyBattleClaw:LA
 IS BA Advanced:LA
@@ -85,55 +80,85 @@ IS BA Advanced:RA
 IS BA Advanced:RA
 </Squad Equipment>
 
-<type>
-IS Level 2
-</type>
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
 
-<role>
-Ambusher
-</role>
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
 
-<year>
-3077
-</year>
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
 
-<motion_type>
-Leg
-</motion_type>
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
 
-<source>
-TR:3085
-</source>
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
 
-<overview>
-The Kopis battle armor was designed by StarCorps Industries as an assault unit.
-</overview>
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
 
 <capabilities>
-Slow but heavily armed, the Kopis can remain on the battlefield supporting friendly units for a long time. The advanced armor used by the Kopis designers allows it to stand up to most weaponry, shrugging off anything short of a PPC or AC/10 hit. The low top speed is mitigated through the use of VTOL transportation for offensive operations, while smart commanders use the Kopis as a defense unit for cities or other tight terrain. In those restricted environments the low top speed isn't a factor.
+<p>The Kopis prioritizes sustained firepower over raw destructive potential. Two modified Martell medium lasers mounted over the shoulders serve as the suit's primary armament, backed by power packs sufficient for thirty volleys. This energy weapon approach gives troopers the ability to engage targets repeatedly without concern for ammunition supply. Twin heavy battle claws provide formidable melee capability, while anti-personnel weapon mounts on each arm allow troopers to carry secondary weapons for close-quarters work.</p><p>Advanced armor provides protection equivalent to a Clan Elemental suit, though this comes at the cost of ground speed. The Kopis is one of the slowest assault suits in production, a trade-off its designers accepted to devote more than half the suit's mass to offensive systems. Commanders typically deploy Kopis troopers via VTOL transport for offensive operations or position them as defensive anchors in urban terrain, where restricted sightlines and tight corridors negate the suit's limited mobility.</p>
 </capabilities>
 
+<overview>
+<p>The Kopis is an assault-class battle armor suit developed by StarCorps Industries for the Free Worlds League. Entering service in 3077 during the final years of the Jihad, the suit was designed as a heavy urban combatant capable of sustained engagements without the ammunition constraints common to missile-armed assault suits. Built at StarCorps' Emris IV facility, the Kopis earned the nickname "The Dark Alley" for its lethality in confined urban terrain, where its heavy armament and thick armor protection more than compensated for limited ground speed. The design became a mainstay of Free Worlds League and Oriente Province battle armor formations.</p>
+</overview>
+
 <deployment>
-Carrying nearly as much firepower as a Succession Wars-era Stinger, the Kopis is equipped with a pair of Medium Lasers. Instead of mounting heavy missile racks that provide a few salvos of firepower, the Kopis' designers used energy weapons backed up by enough power packs to ensure that the armor would be useful on the battlefield for a long time. The power packs allow the Kopis to fire the lasers thirty times before running out of power. For anti-infantry work the Kopis mounts a Heavy Battle Claw and an Anti-Personnel Weapon Mount on each arm. These claws are fearsome melee combat weapons, and the AP Weapon mounts allow the trooper to carry smaller anti-infantry weapons without using the Medium Lasers.
+<p>Republic of the Sphere forces adopted six-trooper Level I formations for their Kopis suits, following the ComStar-derived organizational model. Republic commanders paired Kopis Level I formations with Federated Suns Grenadier squads to create mixed battle armor teams assigned to planetary militia garrisons, maximizing the concentrated firepower of the heavily armed suit.</p>
 </deployment>
 
 <history>
- The standard model was given the nickname of "The Dark Alley".
+<p>The Kopis emerged from a crisis in Free Worlds League battle armor production. When suspected Word of Blake operatives sabotaged Etna Foundries' Longinus factory on Oriente, Thomas Halas recognized the League's vulnerability and turned to StarCorps Industries on Emris IV. StarCorps had manufacturing infrastructure from its Gorilla industrial exoskeleton line but lacked military-grade powered armor expertise. Duchess Alys Rousset-Marik brokered a solution, leveraging her resistance network to recruit Dr. Hyram Sundahar, a scientist who had fled Blakist-controlled Irian BattleMechs. Armed with Blakist technical documents obtained through the resistance, Sundahar adapted an Irian assault suit prototype into what became the Kopis.</p><p>The first suits reached the field in late 3077, assigned to the Twelfth Atrean Dragoons under Rousset-Marik's command. They proved themselves during the liberation of Outreach, where eight Kopis suits ambushed a retreating Widowmaker company and destroyed eighty percent of the mercenary force at a cost of only three suits. The Kopis participated in the Liberation of Terra in significant numbers and became the backbone of Marik and Oriente battle armor formations in the postwar period. Oriente later leveraged its Kopis production as a diplomatic tool, trading suits to The Republic of the Sphere in exchange for access to Achileus and Phalanx designs.</p>
 </history>
 
 <manufacturer>
-Grumium Creations
+StarCorps Industries
 </manufacturer>
 
 <primaryFactory>
-Grumium
+Emris IV
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3085
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+10
+</armor>
+
+<Trooper Count>
+6
+</Trooper Count>
+
+<weightclass>
+4
+</weightclass>
+

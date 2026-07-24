@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa62-716b-9a48-8baeb11c97da
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Lee
 2756
 </year>
 
-<originalBuildYear>
-2756
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -62,11 +53,11 @@ Spheroid
 </motion_type>
 
 <transporters>
-steeragequarters:150.0:0
-1stclassquarters:80.0:0
-2ndclassquarters:140.0:0
-crewquarters:154.0:0
-cargobay:8257.5:1:1
+steeragequarters:150.0:0:-1::-1:0
+1stclassquarters:80.0:0:-1::-1:0
+2ndclassquarters:140.0:0:-1::-1:0
+crewquarters:154.0:0:-1::-1:0
+cargobay:8257.5:1:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ cargobay:8257.5:1:1
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 440
@@ -228,28 +223,44 @@ ISArtemisIV
 </structural_integrity>
 
 <capabilities>
-The design carries 90 tons of Ferro-Aluminum armor. It has been fitted out with 3 First-Class passenger quarters and 20 Second-Class Passenger quarters.
+<p>The Cargo Carrier variant is the most specialized and rarest configuration of the Lee class, with only three vessels ever completed. Stripping out all troop transport facilities, this variant devotes its entire internal volume to a massive 8,257.5-ton cargo hold, making it one of the fastest high-capacity military cargo runners ever built. The minimal crew of one hundred reflects the simplified internal configuration.</p><p>The Cargo Carrier retains the full armor protection, weapons array, and drive system of its combat-oriented sister variants, giving it the ability to defend itself and outrun most threats while carrying critical military supplies. Designed as a blockade runner, the combination of heavy armor, significant defensive firepower, and high acceleration made the Cargo Carrier capable of forcing its way through contested space to deliver vital supplies to besieged garrisons. Its extreme rarity reflected the SLDF's preference for the troop-carrying variants, but the three completed vessels proved their worth during the desperate fighting of the Liberation of Terra.</p>
 </capabilities>
 
 <overview>
-Produced a few decades before the Amaris Coup, the Lee-class DropShip was one of the last major military transports to be produced for the SLDF prior to its conquest by Stefan Amaris
+<p>The Lee class DropShip was one of the last major military transports produced for the Star League Defense Force before the fall of the Star League. Entering production in 2756, this massive 17,000-ton Spheroid was conceived as part of an ambitious effort to streamline the SLDF's military transport fleet by fielding a single heavily armed and armored vessel capable of delivering large formations faster than any existing design. At twice the size of the standard Overlord, the Lee represented a new generation of military transport that emphasized speed, protection, and payload capacity in equal measure.</p><p>The Lee was produced in four distinct configurations to serve different roles within SLDF combined-arms doctrine. Its primary design carried a reinforced battalion of BattleMechs supported by aerospace fighters, while alternate configurations served as dedicated fighter carriers, armored vehicle transports, and fast cargo runners. This versatility made the Lee a cornerstone of late Star League military logistics, though the class would prove tragically vulnerable to the automated defense systems that guarded the Terran Hegemony during its darkest hours.</p>
 </overview>
 
 <deployment>
-A short-lived design, which only saw three ships produced. This variant was designed as a blockade runner with 8,000 ton cargo capacity. Giving the SLDF the ability to run vital military cargo quickly to battlefields.
+<p>Only three Cargo Carrier variants were ever produced, and these rare vessels served exclusively as high-speed military supply runners during the final years of the Star League. Their primary mission was delivering critical supplies through contested space lanes, relying on their combination of heavy armor, defensive armament, and high acceleration to survive encounters with enemy forces. All three are believed to have been lost during the fighting on Terra or the subsequent Exodus and Pentagon Civil War.</p>
 </deployment>
 
 <history>
-Pitched by three major naval yards in the Terran Hegemony, the Lee proposal was presented to SLDF Commanding General Aleksandr Kerensky in 2749. The design was part of his vision to streamline the number of DropShip Military Classes. His effort were focused in the creation of a heavily armed and armored vessel that could carry a large payload of SLDF troops into battle quicker than any current design currently in service. Twice the size of the SLDF's standard Overlord, the Lee's primary design was configured to carry a reinforced battalion worth of BattleMechs, while supported by a single squadron of AeroSpace Fighters. Kerensky's efforts to get the Lee into production was not easy, due to various boondoggles and political entanglements associated with the creation and development of previous vessels, such as the Colossus Class DropShip. However, the unpopular Star Lord Richard Cameron's efforts to prevent the design from entering production proved to be beneficial in having it approved by his Star League Council. The Lee entered production in 2756. The Lee saw its first major action during the Periphery Uprising, where its ability to move large numbers of troops quickly proved to be a boon for the SLDF. However, the ship's large carry capacity became a liability during the invasion of the occupied Hegemony. Space Defense System's Casper fleet of drones effectively destroyed a large number of these ships, causing a number of troops to be lost. Shortly after, these ships would be left in the SLDF's reserves until the landings on Terra where they were deployed in large numbers. Few of these ships survived to join the Exodus Fleet to deep Periphery with General Kerensky and those remaining ships would be later lost in fighting during the Pentagon Civil War.
+<p>The Lee class DropShip originated from a proposal presented to SLDF Commanding General Aleksandr Kerensky in 2749 by a consortium of three major naval yards in the Terran Hegemony. Kerensky's vision was to reduce the proliferation of military DropShip classes by creating a single design capable of carrying large payloads of SLDF troops into battle faster than anything currently in service. The development process was far from smooth, as political entanglements and boondoggles similar to those that had plagued the earlier Colossus class DropShip threatened to derail the program entirely.</p><p>Ironically, Star Lord Richard Cameron's attempts to block the Lee's production proved counterproductive. His opposition galvanized support among the Star League Council members who were increasingly wary of Cameron's erratic governance, and their collective approval pushed the design into production in 2756. The SLDF quickly ordered all four configurations, though the cargo transport variant saw the most limited production run with only three vessels completed before the program's priorities shifted to combat variants.</p><p>The Lee first saw major combat during the Periphery Uprising, where its ability to rapidly move large troop formations proved invaluable to the SLDF's suppression campaigns. The class's generous payload capacity allowed commanders to concentrate forces quickly at trouble spots, and the Lee's heavy armament meant it could contribute directly to orbital combat rather than relying entirely on escorts. These early engagements validated Kerensky's original vision of a fast, versatile military transport.</p><p>The Amaris Coup and subsequent Liberation of Terra transformed the Lee's role from triumphant to tragic. When the SLDF fought to reclaim the Hegemony, the Space Defense System's Caspar drone fleets proved devastatingly effective against the large, relatively slow transports. The Lee's substantial carrying capacity, once its greatest asset, became a catastrophic liability as each vessel destroyed took an enormous number of troops with it. Losses mounted so rapidly that surviving Lee transports were held in reserve until the final landings on Terra itself, where they deployed in large numbers for the climactic assault.</p><p>Few Lee class vessels survived the Liberation of Terra in operational condition, and those that did joined Kerensky's Exodus Fleet on its journey to the deep Periphery. The remaining ships were subsequently lost during the fierce fighting of the Pentagon Civil War, and no examples of the class are known to have survived into the modern era. The Lee stands as both proof of late Star League engineering ambition and a cautionary example of how concentrated transport capacity can become a strategic vulnerability.</p>
 </history>
 
 <manufacturer>
-Mitchell Vehicles, Boeing Interstellar, Di Tron Heavy Industries
+Boeing Interstellar|Di Tron Heavy Industries|Mitchell Vehicles
 </manufacturer>
 
 <primaryFactory>
-Graham IV, New Earth, Terra
+New Earth|Terra|Graham IV
 </primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 His:LoT2

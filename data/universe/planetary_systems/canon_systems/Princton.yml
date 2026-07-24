@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Princton
-sucsId: 2069
+sucsId: 2070
 xcood: 413.314
 ycood: 26.321
 spectralType: G4V
@@ -86,6 +86,12 @@ planet:
         size: medium
         icon: oddmoon1
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2722-07-12'
         faction:
           source: canon
@@ -101,6 +107,17 @@ planet:
         population: 594796.0
       - date: '2750-01-01'
         population: 1648665.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 3752586.0
       - date: '2770-01-01'
@@ -115,6 +132,15 @@ planet:
         population: 38156400.0
       - date: '2820-01-01'
         population: 48548271.0
+      - date: '2821-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+      - date: '2822-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Region 5
       - date: '2830-01-01'
         population: 59082216.0
       - date: '2840-01-01'
@@ -157,14 +183,25 @@ planet:
         population: 130886429.0
       - date: '3020-01-01'
         population: 130218862.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Mayetta PDZ
       - date: '3030-01-01'
         population: 130617479.0
-      - date: '3040-03-18'
-        population: 130950603.0
-        socioIndustrial: B-B-A-C-B
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-03-18'
+        population: 130950603.0
+        socioIndustrial: B-B-A-C-B
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -174,6 +211,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3068-01-01'
@@ -193,12 +236,27 @@ planet:
         population: 133003704.0
       - date: '3130-01-01'
         population: 133110150.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Mayeatta PDZ
       - date: '3132-08-07'
         hpg: X
+      - date: '3135-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Milligan Operational Area
+        #   - Milligan PDZ
       - date: '3140-01-01'
         population: 132977106.0
       - date: '3145-01-01'
         population: 133083530.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Tancredi Operational Area
+        #   - Mayetta PDZ
   - name: Young
     type: TERRESTRIAL
     orbitalDist: 1.44

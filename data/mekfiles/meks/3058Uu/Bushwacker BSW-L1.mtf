@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c984-7ea9-b58c-9c1184aaf951
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Bushwacker
 model:BSW-L1
 mul id:447
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3063
-Source:TR:3058U
-Rules Level:2
+techbase:Inner Sphere
+era:3063
+source:TR:3058U,TR:CI
+published:RS:CI
+rules level:2
 role:Skirmisher
-
-
 
 quirk:low_profile
 weaponquirk:stable_weapon:CT:10:ISERLargeLaser
 
+mass:55
+engine:275 Light Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:55
-Engine:275 Light Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:5
+jump mp:0
 
-Heat Sinks:10 Double
-Walk MP:5
-Jump MP:0
-
-Armor:Standard(Inner Sphere)
-LA Armor:18
-RA Armor:18
-LT Armor:21
-RT Armor:21
-CT Armor:28
-HD Armor:9
-LL Armor:26
-RL Armor:26
-RTL Armor:5
-RTR Armor:5
-RTC Armor:7
+armor:Standard(Inner Sphere)
+LA armor:18
+RA armor:18
+LT armor:21
+RT armor:21
+CT armor:28
+HD armor:9
+LL armor:26
+RL armor:26
+RTL armor:5
+RTR armor:5
+RTC armor:7
 
 Weapons:2
 LB 20-X AC, Right Torso
@@ -61,8 +61,8 @@ ER Large Laser, Center Torso
 Left Arm:
 Shoulder
 Upper Arm Actuator
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -84,16 +84,16 @@ ISLBXAC20
 ISLBXAC20
 ISLBXAC20
 ISLBXAC20
-Endo Steel
+IS Endo Steel
 
 Left Torso:
 Fusion Engine
 Fusion Engine
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -109,10 +109,10 @@ IS LB 20-X AC Ammo
 IS LB 20-X Cluster Ammo
 IS LB 20-X Cluster Ammo
 ISCASE
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Center Torso:
 Fusion Engine
@@ -147,7 +147,7 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -161,7 +161,7 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -170,18 +170,26 @@ Endo Steel
 -Empty-
 -Empty-
 
-overview:Originally a failed BattleMech concept designed to have a smaller forward profile, the Bushwacker would ultimately become a popular Clan Invasion era BattleMech in use within both halves of the Federated Commonwealth.
+overview:<p>The Bushwacker is a fifty-five-ton medium BattleMech developed by TharHes Industries on Tharkad. Its designers pursued an ambitious goal: a 'Mech with a low-slung, narrow torso intended to present a minimal target profile. While the prototype's speed and firepower impressed evaluators, the cramped internal layout generated chronic electronic interference between the fusion engine and sensor systems that defied every attempted solution. The design appeared destined for cancellation until captured Clan technical data provided the breakthrough needed to resolve these problems.</p><p>Full-scale production began in 3053 following the Truce of Tukayyid, and the Bushwacker quickly established itself as a reliable long-range combat platform. Its distinctive narrow profile remains one of its most recognizable and tactically valuable features, and the design has been exported widely across the Inner Sphere.</p>
 
-capabilities:Under development on the cusp of the Clan Invasion, the ambitious and unorthodox design of the Bushwacker featured a low-slung and narrow upper torso to present minimal target profile to enemy units. Unfortunately this resulted in a complex and crowded internal layout, with the 'Mech's fusion engine's close proximity to the sensor and communication system resulting in electronic interference and system failures. Unable to overcome these issues, though the evaluators were impressed by the basic design and its capabilities, the 'Mech seemed destined for the scrap-heap. The Bushwacker has a top speed of 86.4 km/h and carries nine tons of armor. What the 'Mech lacks in protection it makes up for in range, using its speed to keep enemies at arm's length while using its slew of long range weaponry to slowly wear down enemies.
+capabilities:<p>The Bushwacker is first and foremost a long-range combat platform. Twin Federated 5-Shot LRM launchers provide indirect fire capability and the ability to deploy specialized munitions including minefields, while a BlazeFire Sweetshot ER large laser and Mydron Model B autocannon deliver punishing direct fire at extended ranges. A pair of Johnston MiniGuns mounted forward offer limited defense against infantry anti-'Mech teams, though they serve as the design's only close-range armament. This weapons configuration encourages pilots to maintain standoff distance, leveraging the Bushwacker's respectable top speed of eighty-six kilometers per hour to dictate engagement range.</p><p>Nine tons of Kallon Unity Weave ferro-fibrous armor with CASE provides adequate protection for sustained ranged engagements, though it falls short of what many medium 'Mech designs carry. The inclusion of CASE mitigates the risk of ammunition explosion, a meaningful consideration given the Hermes 275 XL engine's vulnerability to side torso damage. Standard tactical doctrine pairs three Bushwackers with a fast light 'Mech acting as a spotter, using cooperative tactics and terrain to maintain effective range while the lance's combined LRM fire wears down approaching enemies. The Bushwacker's distinctive narrow profile, a legacy of its troubled development history, remains one of its most valuable defensive assets on the battlefield.</p>
 
-deployment:The L1 variant of the Bushwacker is a configuration that changes the 'Mech to a close combat unit. The only long range weapon on the L1 variant is an ER Large Laser. For close combat, the L1 carries an LB-X Autocannon/20 that can fire either standard or cluster ammunition, adding versatility to the crippling firepower of this extremely deadly close combat weapon. Two and a half tons of additional armor was added to the BSW-L1, giving excellent armor protection. The L1 saw its engine upgraded to a Light Fusion Engine for increased survivability.
+deployment:<p>The most radical departure from the original design philosophy, the L1 transforms the Bushwacker into a devastating close-combat platform. An LB 20-X autocannon serves as the primary weapon, capable of firing both standard and cluster rounds with crippling effect at short range. Only an ER large laser provides any long-range capability. To support the heavier weapon loadout, the L1 replaces the XL engine with a Defiance 275 light fusion engine and upgrades the chassis to endo steel construction. The ferro-fibrous armor gives way to standard plate, but with an additional two and a half tons of material, the L1 offers improved survivability befitting its brawler role. The light engine's reduced side torso vulnerability compared to the standard XL further enhances durability in the close-quarters engagements this variant is designed to seek out.</p>
 
-history:The Bushwacker was ultimately saved by the Clan juggernaut following a successful Armed Forces of the Federated Commonwealth raid against a Clan Jade Falcon base on Twycross, FedCom forces securing a treasure trove of schematics and technical data on numerous Clan designs, including the Vulture. Though a more vertical design, the Clan OmniMech shared the same compressed volume issues, with the Clan engineers making several unusual decisions in its internal layout to alleviate the interference problem. With the TharHes engineers able to adapt the Clan solution to the Bushwacker, re-configuring its internal structure, the 'Mech was given a second lease on life. Full scale production of the corrected Bushwacker began in 3053 on Tharkad following the Truce of Tukayyid, though many FedCom units who served on the Clan frontlines received pre-production models during the initial invasion. This led to the 'Mech being most numerous on the Clan/Lyran Alliance border immediately following the succession, though by the conclusion of the FedCom Civil War the Bushwacker could be found in almost every first echelon unit in both halves of the Federated Commonwealth. For some unknown reason the Bushwacker has since become a favorite of MechWarriors in the Draconis and Capellan Marches of the Federated Suns. With TharHes Industries badly damaged during the Jihad and Word of Blake occupation of Tharkad, the company was forced to sell off the Bushwacker plans to raise much-needed capital to rebuild its production lines. Purchased by Coventry Metal Works, that company used the specs to create the Gauntlet OmniMech, with modern Bushwacker models sharing a similar frame and various other components with it, allowing both CMW and TI to reduce costs for both designs through economies of scale. Though the OmniMech was intended as an exclusively Lyran design, the Bushwacker is not so restricted and is exported outside the Commonwealth, remaining popular within the Armed Forces of the Federated Suns even during the Dark Age Era.
+history:<p>The Bushwacker's origins trace to a pre-Clan Invasion development program at TharHes Industries that sought to break with conventional BattleMech design philosophy. The resulting prototype featured a revolutionary low-slung torso but suffered crippling electronic interference between its fusion engine and sensor systems. It was only after the Armed Forces of the Federated Commonwealth captured Clan technical data during a raid on Twycross that TharHes engineers found their solution, adapting internal layout techniques from captured Vulture schematics to resolve the interference problems.</p><p>Full production began on Tharkad in 3053, though preproduction models had already reached FedCom units serving on the Clan frontlines during the initial invasion. This early distribution meant the Bushwacker was initially most numerous along the Clan border and within Lyran Alliance commands following the secession of the Federated Commonwealth. By the conclusion of the FedCom Civil War, however, the design had spread to nearly every first echelon unit in both successor states. The Bushwacker became an inexplicable favorite among MechWarriors serving in the Draconis and Capellan Marches of the Federated Suns, far from its Lyran origins.</p><p>The Jihad proved a turning point for the design's manufacturing history. Word of Blake forces occupied Tharkad and badly damaged TharHes Industries' production facilities. Desperate for capital to rebuild, TharHes sold the Bushwacker's plans to Coventry Metal Works, which used them as the foundation for the Gauntlet OmniMech. Rather than ending the Bushwacker's production run, this arrangement proved mutually beneficial: modern Bushwacker models share a similar frame and various components with the Gauntlet, allowing both manufacturers to reduce costs through economies of scale.</p><p>The Bushwacker also served as the basis for the Barghest, a seventy-ton quad BattleMech developed by TharHes at the direction of Archon Katrina Steiner-Davion. TharHes modified the Bushwacker's chassis by repositioning the legs forward and adding a second pair to the rear, increasing overall mass by fifteen tons. Unlike the Gauntlet, the Bushwacker is not restricted to Lyran service and continues to be exported throughout the Inner Sphere, maintaining a strong presence within the Armed Forces of the Federated Suns well into the Dark Age.</p>
 
 manufacturer:TharHes Industries
+
 primaryfactory:Tharkad
-systemmanufacturer:CHASSIS:Earthwerk GRF Endo
-systemmanufacturer:ENGINE:Defiance 275 Light Fusion
-systemmanufacturer:ARMOR:Kallon Royalstar
-systemmanufacturer:COMMUNICATIONS:TharHes Euterpe HM-14
-systemmanufacturer:TARGETING:TharHes Ares-8a
+
+fluffdate:2026-02-21 18:24:59
+
+systemmanufacturer:CHASSIS:Unknown
+systemmanufacturer:ENGINE:Defiance
+systemmode:ENGINE:275 Light
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Standard
+systemmanufacturer:COMMUNICATIONS:TharHes
+systemmode:COMMUNICATIONS:Euterpe HM-14
+systemmanufacturer:TARGETING:TharHes
+systemmode:TARGETING:Ares-8a

@@ -17,9 +17,15 @@
 
 key: TD
 name: Tortuga Dominions
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes:
+  - TD
 capital: Tortuga Prime
 yearsActive:
-  - start: 2785
+  - start: 2596
 tags:
   - PIRATE
   - PERIPHERY
@@ -95,12 +101,6 @@ factionLeaders:
   - title: "King"
     firstName: "Ravannion"
     surname: ""
-    gender: "MALE"
-    startYear: 3080
-    endYear: 3080
-  - title: "King"
-    firstName: "Kevin"
-    surname: "Langstrom"
     gender: "MALE"
     startYear: 3080
     endYear: 3080

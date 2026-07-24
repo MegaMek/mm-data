@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Schererville
-sucsId: 2258
+sucsId: 2259
 xcood: -339.386
 ycood: -87.414
 spectralType: K5V
@@ -48,6 +48,12 @@ planet:
       - name: Port Granly IV
       - name: Port Granly V
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2630-11-28'
         faction:
           source: canon
@@ -85,6 +91,12 @@ planet:
         population: 349948010.0
       - date: '2750-01-01'
         population: 356612117.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 358072228.0
       - date: '2770-01-01'
@@ -161,6 +173,12 @@ planet:
           source: canon
           value:
             - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DTA
       - date: '3080-01-01'
         population: 209987659.0
       - date: '3090-01-01'
@@ -180,9 +198,13 @@ planet:
         population: 232769516.0
       - date: '3145-01-01'
         population: 234826927.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Badger

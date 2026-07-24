@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfb1-7d06-9d6e-10cc582d4791
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,16 @@ Clan Level 2
 Hover
 </motion_type>
 
+<Troopers Equipment>
+Clan Armor Kit (All)
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Clan mechanized hover squads transport a squad-strength element in hovercraft for high-speed amphibious operations. Smaller than a full hover Point, these formations handle coastal surveillance, river patrol, and rapid flanking duties where their speed and water-crossing capability provide tactical advantage. The reduced troop count limits staying power, but for screening and reconnaissance on littoral garrison worlds, hover squads offer responsive coverage.</p>
+</overview>
 
 <source>
 TW
@@ -69,14 +72,10 @@ TW
 </secondn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
 <Secondary>
-SRM Launcher (Hvy, One-Shot)
+InfantryHeavySRM
 </Secondary>
-
-<armorKit>
-ClanKit
-</armorKit>
 

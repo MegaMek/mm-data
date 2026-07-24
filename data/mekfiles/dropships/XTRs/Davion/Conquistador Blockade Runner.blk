@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac3b-77db-b550-c14910e34478
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Conquistador
 3074
 </year>
 
-<originalBuildYear>
-3074
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,13 +53,13 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:20.0:4:1
-smallcraftbay:4.0:2:2
-battlearmorbay:20.0:1:3
-2ndclassquarters:0.0:0
-1stclassquarters:50.0:0
-crewquarters:161.0:0
-cargobay:509.5:1:7
+asfbay:20.0:4:1::-1:0
+smallcraftbay:4.0:2:2::-1:0
+battlearmorbay:20.0:1:3::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+1stclassquarters:50.0:0:-1::-1:0
+crewquarters:161.0:0:-1::-1:0
+cargobay:509.5:1:7::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ cargobay:509.5:1:7
 20
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 524
@@ -262,9 +257,53 @@ ISLaserAntiMissileSystem
 30
 </structural_integrity>
 
+<capabilities>
+<p>The Blockade Runner variant sacrifices all conventional weaponry for dramatically increased speed, achieving a safe thrust of five compared to the standard model's three. This configuration carries twenty aerospace fighters, four small craft, twenty Points of Battle Armor, and over five hundred tons of cargo. With 329 double heat sinks and 1,794 points of armor, the Blockade Runner is designed to survive high-speed transits through hostile aerospace environments.</p><p>The complete removal of ballistic and energy weapons in favor of speed and protection serves as a radical departure from the base design's philosophy. The Blockade Runner relies entirely on its embarked aerospace fighters and its own velocity to survive engagements, trusting that speed and armor will carry it through opposition that would overwhelm a slower vessel.</p>
+</capabilities>
+
+<overview>
+<p>The Conquistador class command DropShip was developed to provide the Armed Forces of the Federated Commonwealth with a next-generation command platform capable of directing planet-wide assault operations. At 17,400 tons, this massive Aerodyne was designed to replace aging command vessels that had become outmoded in the face of evolving battlefield requirements. Built by one of the Inner Sphere's most established aerospace manufacturers, the Conquistador combines enormous transport capacity with sophisticated command and control facilities.</p><p>The vessel's highly automated systems allow a relatively small crew to operate what is effectively a mobile military headquarters. Its advanced combination drive system is a significant engineering achievement, vectoring thrust differently for maneuvering versus interplanetary transit. The Conquistador's versatility extends beyond its primary command role, as its cargo bays and troop quarters can be rapidly converted into field hospitals after delivering their primary cargo.</p>
+</overview>
+
+<deployment>
+<p>The Blockade Runner emerged during the Jihad era, designed specifically to penetrate hostile aerospace cordons that conventional DropShips could not survive. Fielded by Federated Suns forces, these high-speed variants delivered critical reinforcements and supplies through Word of Blake blockades, relying on their exceptional speed and heavy armor to survive transit through contested space.</p>
+</deployment>
+
+<history>
+<p>For years, the Armed Forces of the Federated Commonwealth had sought a more capable class of command DropShip to assign to their key Regimental Combat Teams. While vessels such as the Fortress and Command Overlord had served admirably in previous decades, advances in technology and changes in battlefield doctrine had rendered them increasingly outdated. The AFFC turned to Federated-Boeing, a company that had supplied DropShips to the Federated Suns for centuries, to develop a replacement.</p><p>The resulting Conquistador entered service in 3063, immediately becoming one of the most capable command platforms in the Inner Sphere. The design incorporated the latest available technologies, including an innovative combination drive system and extensive automation. Its ability to carry an entire RCT command group while simultaneously serving as a planetary assault coordination center made it invaluable to Federated Commonwealth military planners.</p><p>The class saw several specialized configurations developed to meet specific operational requirements. A carrier variant optimized for aerospace operations was produced, while the chaos of the Jihad era prompted development of a high-speed configuration designed to punch through hostile blockades. These variants demonstrated the fundamental soundness of the Conquistador platform and its adaptability to diverse mission profiles.</p>
+</history>
+
+<manufacturer>
+Refit - Dynamico, Ltd.
+</manufacturer>
+
+<primaryFactory>
+Delavan
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 XTR:Davion
 </source>
+
+<published>
+XTR:Davion
+</published>
 
 <tonnage>
 17400.0
@@ -309,3 +348,4 @@ XTR:Davion
 <escape_pod>
 12
 </escape_pod>
+

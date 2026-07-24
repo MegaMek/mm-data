@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,20 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b66e-7dcc-93e2-0705c87229c5
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
+
 <Name>
 Motorized MG
 </Name>
+
 <Model>
 Galatean Support Wheels
 </Model>
@@ -36,21 +35,11 @@ Galatean Support Wheels
 <mul id:>
 2234
 </mul id:>
-<squad_size>
-7
-</squad_size>
-<squadn>
-4
-</squadn>
-<Primary>
-Auto Rifle
-</Primary>
-<Secondary>
-InfantryMG
-</Secondary>
-<secondn>
-2
-</secondn>
+
+<year>
+2500
+</year>
+
 <type>
 IS Level 2
 </type>
@@ -58,16 +47,47 @@ IS Level 2
 <role>
 Ambusher
 </role>
-<year>
-2500
-</year>
-<era>
-TRO: 3085
-</era>
+
 <motion_type>
 Motorized
 </motion_type>
 
-<armorKit>
-ISFlakStandard
-</armorKit>
+<Troopers Equipment>
+Flak, Standard
+</Troopers Equipment>
+
+<Field Guns Equipment>
+</Field Guns Equipment>
+
+<overview>
+<p>Galatea's dune buggies and cross-country bikes have long seen field modifications and use by mercenary forces passing through the Hiring Hall world. When a Combine-born motorized infantry regiment was assigned to Galatea after the founding of the Republic, its soldiers quickly adopted these highly flexible local vehicles, driving new standardized models from Galatean manufacturers. Armed with auto rifles supplemented by semi-portable machine guns, the Galatean Support Wheels combine the speed of motorized transport with enough organic firepower to hold ground against light opposition. The GSW are considered the best example of RAF motorized infantry, a formation born from practical adaptation rather than central procurement.</p>
+</overview>
+
+<source>
+TR:3085S
+</source>
+
+<published>
+RS:3085u-CE
+</published>
+
+<squad_size>
+7
+</squad_size>
+
+<squadn>
+4
+</squadn>
+
+<secondn>
+2
+</secondn>
+
+<Primary>
+InfantryAssaultRifle
+</Primary>
+
+<Secondary>
+Machine Gun (Portable)
+</Secondary>
+

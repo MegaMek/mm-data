@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Simpson Desert
-sucsId: 2342
+sucsId: 2343
 xcood: -271.591
 ycood: -99.305
 spectralType:
@@ -287,7 +287,7 @@ planet:
         population: 256560407.0
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - FWL
   - name: Woollahra
@@ -384,6 +384,12 @@ planet:
         population: 97979.0
       - date: '2270-01-01'
         population: 122731.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 151224.0
       - date: '2290-01-01'
@@ -407,6 +413,12 @@ planet:
             - FWL
       - date: '2360-01-01'
         population: 409054.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 443799.0
       - date: '2380-01-01'
@@ -451,6 +463,12 @@ planet:
         population: 788365.0
       - date: '2570-01-01'
         population: 801604.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 806320.0
       - date: '2590-01-01'
@@ -565,6 +583,12 @@ planet:
         population:
           source: canon
           value: 619000.0
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3030-01-01'
         population: 1479875.0
       - date: '3040-10-06'
@@ -579,6 +603,12 @@ planet:
       - date: '3079-02-14'
         faction:
           source: canon
+          value:
+            - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -603,11 +633,21 @@ planet:
         population: 754654405.0
       - date: '3145-01-01'
         population: 760563726.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CWE
   - name: Bythsea's Meridian
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.24

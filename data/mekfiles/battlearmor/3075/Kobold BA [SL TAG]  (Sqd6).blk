@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a410-722b-a7eb-5210f91e1d5d
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -72,17 +67,13 @@ Jump
 <Squad Equipment>
 BAArmoredGlove:LA
 BAArmoredGlove:RA
-Infantry Auto Rifle:APM:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
-IS BA Stealth:Body
-IS BA Stealth:Body
-IS BA Stealth:Body
-IS BA Stealth:Body
+InfantryAssaultRifle:APM:RA
+IS BA Stealth (Standard):Body
+IS BA Stealth (Standard):Body
+IS BA Stealth (Standard):Body
+IS BA Stealth (Standard):Body
 ISBASmallLaser:RA
-ISBALightTAG:SSWM:LA
+CLBALightTAG:SSWM:LA
 </Squad Equipment>
 
 <Trooper 1 Equipment>
@@ -103,9 +94,59 @@ ISBALightTAG:SSWM:LA
 <Trooper 6 Equipment>
 </Trooper 6 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>Pairing small lasers with a light TAG designator, this configuration balances self-defense capability with forward observation duties. The small lasers on each trooper’s modular mount give the squad credible engagement ability against light targets and battle armor, while the TAG unit allows the squad leader to designate targets for artillery and guided munitions. The combination makes this loadout effective for independent screening missions where the team may need to defend itself while performing its primary spotting role. Basic stealth armor rated against a medium laser hit and the suit’s low electromagnetic signature aid concealment during target acquisition. The Kobold’s ninety-meter jump range provides the mobility needed to reach advantageous observation positions, and armored gloves support both anti-BattleMech swarming attacks and mounted transport on OmniMechs.</p>
+</capabilities>
+
+<overview>
+<p>The Kobold is a light battle armor suit jointly developed by the Free Rasalhague Republic, ComStar, and the second Star League. Entering production in 3069 at Grumium Creations on Grumium, the design was born from the Republic’s desire for a stealth-capable scout suit after failed efforts to procure existing designs from other powers. A humanoid suit with jump capability and low-observable armor, the Kobold filled a gap in Republic and ComStar inventories for a light reconnaissance platform that could hold its own in direct combat while operating alongside heavier battle armor types.</p>
+</overview>
+
+<deployment>
+<p>ComStar’s Com Guards valued this configuration for its dual capability as both a combat and observation platform. Six-trooper Level Is equipped with small lasers and TAG were attached to combined-arms Level IIs, where they could contribute direct fire while maintaining their primary mission of designating targets for artillery and guided munitions.</p>
+</deployment>
+
+<history>
+<p>The Kobold traces its origins to 3062, when the infantry of the Free Rasalhague Republic’s Second Kavalleri sought to acquire Kage battle armor from the Draconis Combine. With tensions rising on all fronts, the Combine refused the request. Överste Jack Koslow, commander of the Second Kavalleri’s attached infantry regiments, continued lobbying his superiors until he received permission to approach ComStar and the second Star League with a proposal for a joint development program. The Republic would supply raw materials while ComStar and the SLDF provided technological expertise, with funding split equally among all three parties.</p><p>Research and development began on Grumium, where construction of a prototype manufacturing line was rushed to completion. The design team originally aimed to replicate the Kage’s capabilities but soon shifted focus toward creating a frontline combat suit that retained the Combine design’s reconnaissance strengths. Prototype testing began on schedule in 3065, with the Republic’s Second Kavalleri and ComStar’s 116th Division serving as evaluation units. The SLDF was forced to pull out of the project when ongoing conflicts among League member states cut into its funding. Early problems with the suit’s stealth systems under conditions of high humidity were identified and resolved during testing, and Grumium Creations began full-scale production in 3069.</p><p>The KungsArmé adopted the Kobold as the backbone of its battle armor battalions. The Third Drakøns, Second Freemen, Third Hussars, and Second and Fourth Kavalleri all received Kobold-equipped formations. The First Tyr was also reinforced with a battle armor regiment, though its emphasis on direct combat meant it received proportionally fewer Kobolds in favor of heavier suits. In action against Word of Blake forces, the design proved capable against Blakist Purifiers and Phalanxes, earning respect as a light suit that could hold its own in a contested battlespace.</p><p>ComStar took a different approach to Kobold deployment. Rather than concentrating the suits into large formations, individual Level Is of six troopers were distributed across Precentor Martial Davion’s reorganized armies. Elements of the First and Fourth Armies deployed on Coventry, Hesperus II, and Galatea grouped light OmniMechs with Kobold-equipped troopers into combined-arms Level IIs, using the suits as scouts and spotters for heavier assets. The deterioration of relations between ComStar and the Republic eventually severed the Com Guards’ access to Grumium’s production lines, limiting their ability to replace losses.</p><p>Improving ties between the Republic and Clan Ghost Bear provided limited access to Clan battle armor technology, though the conservative Bears remained suspicious of stealth systems and showed little interest in Inner Sphere equipment. By the mid-3070s, with the second Star League disbanded and the Republic having chosen its Ghost Bear alliance over its ComStar partnership, the Kobold had become firmly a Rasalhague design. The suit earned a rare distinction as one of the few battle armor types fielded by Inner Sphere powers, ComStar, and the Clans alike.</p>
+</history>
+
+<manufacturer>
+Grumium Creations
+</manufacturer>
+
+<primaryFactory>
+Grumium
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-CE
+</published>
 
 <chassis>
 biped
@@ -127,35 +168,3 @@ biped
 1
 </weightclass>
 
-<overview>
-The Kobold is a battle armor design that was collaborated on by the Free Rasalhague Republic, ComStar, and the second Star League.
-</overview>
-
-<capabilities>
-The Kobold can only jump up to ninety meters at a time, but it does boast enough armor to stop a medium laser. This armor is of the basic stealth variety, making it more difficult to target far away. The Kobold has the distinction of being a battle armor suit used by the Inner Sphere, ComStar, and the Clans.
-</capabilities>
-
-<deployment>
-The sacrifice in mobility resulted in the ability to add a modular weapon mount to the squad support weapon mount. The modular mount so far has two weapons: a Small Laser or a Micro Grenade Launcher. The support weapon carried by the squad leader can be a Light TAG, Flamer, or Small Pulse Laser. As a light-class battle armor, the Kobold can make anti-'Mech attacks and ride mounted on OmniMechs. This squad uses a Light TAG and Small Lasers for the rest of the squad.
-</deployment>
-
-<history>
-The idea for such a joint project was developed after the Republic's attempts to procure Kage suits from the Draconis Combine came to naught. So, in 3062, the three powers came together and began to design a battlesuit that could mimic the capabilities of the Kage. After this process began, the concept of the design shifted somewhat to a light armor that can still hold its own in battle. By the mid-3070s the Kobold was firmly a Rasalhague design since the Star League disbanded and the Republic severed ties with ComStar in favor of Clan Ghost Bear.
-</history>
-
-<manufacturer>
-Grumium Creations
-</manufacturer>
-
-<primaryFactory>
-Grumium
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

@@ -17,6 +17,11 @@
 
 key: CMG
 name: Clan Mongoose
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CMN
 capital: Terra
 yearsActive:
   - start: 2807
@@ -69,3 +74,5 @@ factionLeaders:
     # Unofficial: we don't have a canon startYear
     startYear: 2865
     endYear: 2868
+usesMercenaries:
+  2500: false

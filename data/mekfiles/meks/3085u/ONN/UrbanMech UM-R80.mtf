@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,51 +15,51 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d114-7297-b179-ebd4bae1254b
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:UrbanMech
 model:UM-R80
 mul id:3360
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3076
+techbase:Inner Sphere
+era:3076
 source:TR:3085
-Rules Level:2
+published:RSFP:Urbies
+rules level:2
 role:Ambusher
 
-
-
 quirk:ext_twist
-quirk:low_profile
 quirk:no_arms
+quirk:low_profile
 
+mass:30
+engine:60 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:30
-Engine:60 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:11 Single
+walk mp:2
+jump mp:3
 
-Heat Sinks:11 Single
-Walk MP:2
-Jump MP:3
-
-Armor:Standard(Inner Sphere)
-LA Armor:10
-RA Armor:10
-LT Armor:8
-RT Armor:8
-CT Armor:11
-HD Armor:9
-LL Armor:12
-RL Armor:12
-RTL Armor:4
-RTR Armor:4
-RTC Armor:8
+armor:Standard(Inner Sphere)
+LA armor:10
+RA armor:10
+LT armor:8
+RT armor:8
+CT armor:11
+HD armor:9
+LL armor:12
+RL armor:12
+RTL armor:4
+RTR armor:4
+RTC armor:8
 
 Weapons:4
-TAG, Right Arm
 Small Laser, Left Arm
-Small Pulse Laser, Left Torso
 Snub-Nose PPC, Right Arm
+TAG, Right Arm
+Small Pulse Laser, Left Torso
 
 Left Arm:
 Shoulder
@@ -173,20 +173,29 @@ Heat Sink
 -Empty-
 -Empty-
 
-overview:The UrbanMech was designed for just what its name suggests: urban combat and defense.
+overview:<p>The UrbanMech was introduced in 2675 by Orguss Industries to fill a specialized niche: urban combat and defense. Designed as a cheap, easily produced garrison 'Mech, the design paired heavy armor protection rivaling many medium BattleMechs with jump jets for mobility in confined city streets. The trade-off was an anemic powerplant, making the UrbanMech the slowest light 'Mech ever fielded.</p><p>This severe limitation relegated the design to urban environments where its low, stocky profile and heavy armor could shine. The UrbanMech earned a reputation as an effective ambusher, capable of surprising heavier opponents in the close confines of city fighting. Mass-produced throughout the Star League era, the design survived the Succession Wars largely because military planners dismissed it as a liability, sparing it from the technological devastation that claimed so many other designs.</p>
 
-capabilities:This was achieved by starting with a cheap, easily-produced chassis, giving it six tons of Durallex armor to rival the protection found on many medium-weight BattleMechs, and mounting a pair of Pitban 6000 jump jets for a jumping distance of 60 meters. The trade-off was that it could only mount the miserable Leenex 60 engine, making the UrbanMech the slowest light 'Mech in existence with a cruising speed of 21.6 km/h and top speed of only 32.4 km/h. This was a severe disadvantage if the 'Mech attempted to fight in open country - something for only the foolish or desperate - but off-set by the fact that fighting in the close confines of a Star League city left little room to maneuver anyways and the UrbanMech's low profile made it difficult to target. Thus the 'Mech was primarily used for fighting guerrillas and other light 'Mechs in an urban environment, an arena where it also achieved some success fighting medium and even heavy-weight 'Mechs. Standard tactics for an UrbanMech lance was to split up into its constituent parts and occupy various buildings in order to snipe the enemy before falling back to the next defensive line.
+capabilities:<p>The UrbanMech's primary armament is the Imperator-B Class 10 autocannon, a reliable weapon well-suited to the design's hit-and-run fighting style. With low heat buildup and proven reliability, the autocannon allows MechWarriors to engage targets of opportunity before withdrawing to new positions. A single Harmon small laser provides backup capability, primarily useful for suppressing infantry rather than engaging armored targets. Limited ammunition capacity (typically enough for approximately two minutes of sustained combat) reinforces the 'Mech's doctrine of brief, decisive engagements rather than prolonged firefights.</p><p>The design's six tons of Durallex Medium armor provide protection comparable to many medium 'Mechs, allowing the UrbanMech to absorb significant punishment while executing tactical withdrawals. Standard doctrine calls for UrbanMech lances to split into individual units, occupying buildings to snipe at enemy formations before falling back to the next defensive line. The Pitban 6000 jump jets provide sixty meters of jumping capability, essential for navigating urban terrain and accessing elevated firing positions.</p><p>The UrbanMech's greatest weakness remains its abysmal ground speed. Any commander foolish or desperate enough to deploy the design in open terrain invites disaster, as faster opponents can dictate engagement ranges at will. Within its intended urban environment, however, the confined spaces limit enemy mobility advantages while the 'Mech's low profile makes it a frustratingly difficult target.</p>
 
-deployment:This variant carries a Snub-Nose PPC, Small Pulse Laser, TAG, Beagle Active Probe, and Guardian ECM Suite. It retains the Small Laser of the standard UrbanMech as well. Improved Jump Jets help the UrbanMech move around the city it defends more effectively.
+deployment:<p>A significant departure from traditional UrbanMech doctrine, the -R80 reconfigures the design as an electronic warfare platform and spotter. The autocannon is replaced with a snub-nose PPC and TAG designator, while a Beagle Active Probe and Guardian ECM Suite occupy the torso bays. Improved jump jets extend jumping range to ninety meters. This variant trades raw firepower for battlefield utility, providing targeting data for artillery and missile units while disrupting enemy electronics, a role quite different from the UrbanMech's traditional ambusher mission.</p>
 
-history:Large numbers of UrbanMechs were produced by Orgus Industries from 2675 until the destruction of their assembly lines. The UrbanMech reentered production at the Betelgeuse facility of Hellespont Industrials during the Jihad, and continued to be manufactured up through 3149. As such, UrbanMechs could be found in all of the armies of the Successor States. However most military leaders saw the slow little 'Mech as a liability, confining their stockpiles to garrison duty or stripping them of parts. This dismissive attitude towards the UrbanMech saved it from the ravages of the Succession Wars and ensured its continued use into the thirty-first century. The Capellan Confederation remained the largest and only user of UrbanMechs to actually deploy them for front-line duty, a result of the devastation of the Fourth Succession War and their desperation for any 'Mech to replenish their losses. The Confederation Reserve Cavalry and Capellan Defense Force had the lion's share of UrbanMechs, followed by the Tikonov Republican Guard and St. Ives Armored Cavalry; outside the Confederation the Federated Suns' Capellan March Militia fielded the largest number of UrbanMechs due to the fact it was composed of large amounts of captured Capellan equipment. Its prominence within the Confederation meant the UrbanMech was among those 'Mechs within the CCAF to receive upgrades following the recovery of lostech; the other States followed suit with much less priority over improving other 'Mechs. Despite this the sheer costs necessary to replace the UrbanMech's engine and increase its top speed meant even the Confederation limited their refit packages to improving the weapons and armor only. A testament to the desperation of the Word of Blake Jihad, Hellespont Industrials would reactivate a shuttered production facility on Betelgeuse to produce the UrbanMech alongside primitive "retrotech" designs for material starved Capellan garrison forces. This plant would maintain production of the UrbanMech in a steadily increasing volume of configurations throughout the Dark Age Era as the CCAF secretly expanded before it waged war against the Republic of the Sphere. Rather than dramatic and expensive enhancements, Hellespont's new variants retain the venerable design's low ground speed urban combat focus and can be applied as refits as readily as new production.
+history:<p>Orguss Industries produced large numbers of UrbanMechs from 2675 until the destruction of their Marcus facility in 2837 during the Second Succession War. Throughout the Star League era, the design served admirably in its intended role of suppressing urban guerrillas and hostile light 'Mechs in heavily populated areas. When fighting erupted in the close confines of Star League cities, UrbanMechs often found themselves engaging medium and even heavy 'Mechs with surprising success, using classic ambush tactics to offset their limitations.</p><p>The Succession Wars paradoxically ensured the UrbanMech's survival. Most military leaders viewed the slow design as a liability, relegating their stockpiles to garrison duty or stripping them for parts. This dismissive attitude spared the UrbanMech from the intense combat that destroyed so many contemporaries. While other designs were consigned to history, large numbers of UrbanMechs remained in service across the Inner Sphere.</p><p>The Capellan Confederation emerged as the design's primary operator following the Fourth Succession War. Desperate for any BattleMech to replenish catastrophic losses, the Confederation deployed UrbanMechs in front-line formations, a practice unique among the Successor States. The Confederation Reserve Cavalry, Capellan Defense Force, St. Ives Lancers, and Tikonov Republican Guard all fielded significant numbers of the design. Outside Capellan space, the Federated Suns' Capellan March Militia operated the largest concentration of UrbanMechs, largely composed of captured Capellan equipment.</p><p>The recovery of lostech prompted the Confederation to prioritize upgrading the UrbanMech, producing the UM-R63 field modification kit before 3050. Other Successor States followed with their own variants, though with considerably less urgency. The prohibitive cost of replacing the design's engine meant even the Confederation limited upgrades to weapons and armor improvements. During the Word of Blake Jihad, Hellespont Industrials reactivated a shuttered facility on Betelgeuse to resume UrbanMech production alongside primitive retrotech designs for material-starved garrison forces. This plant continued producing new variants throughout the Dark Age, supporting the Capellan Confederation's secret military expansion before its war against the Republic of the Sphere.</p>
 
 manufacturer:Hellespont Industrials
-primaryfactory:Betelgeuse
-systemmanufacturer:CHASSIS:Republic-R
-systemmanufacturer:ENGINE:Leenex 60
-systemmanufacturer:ARMOR:Durallex Medium
-systemmanufacturer:JUMP_JET:Unknown
-systemmanufacturer:COMMUNICATIONS:Dalban Interact
-systemmanufacturer:TARGETING:Dalban Urban
 
+primaryfactory:Betelgeuse
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Republic
+systemmode:CHASSIS:Republic-R
+systemmanufacturer:ENGINE:Leenex
+systemmode:ENGINE:Leenex 60
+systemmanufacturer:ARMOR:Durallex
+systemmode:ARMOR:Durallex Medium
+systemmanufacturer:JUMP_JET:Pitban
+systemmode:JUMP_JET:Pitban 6000
+systemmanufacturer:COMMUNICATIONS:Dalban
+systemmode:COMMUNICATIONS:Dalban Interact
+systemmanufacturer:TARGETING:Dalban
+systemmode:TARGETING:Dalban Urban

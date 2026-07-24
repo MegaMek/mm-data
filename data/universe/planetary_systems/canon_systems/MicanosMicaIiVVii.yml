@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Micanos (Mica II, V, VII)
-sucsId: 1695
+sucsId: 1696
 xcood: 679.862
 ycood: 17.15
 spectralType:
@@ -89,6 +89,18 @@ planet:
       - name: Goela de Shaffer
       - name: Koepf
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2603-05-01'
         faction:
           source: canon
@@ -136,6 +148,12 @@ planet:
         population: 28876629.0
       - date: '2750-01-01'
         population: 29265210.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2760-01-01'
         population: 29683874.0
       - date: '2770-01-01'
@@ -152,6 +170,12 @@ planet:
         population: 29442179.0
       - date: '2830-01-01'
         population: 29309182.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2840-01-01'
         population: 29162804.0
       - date: '2850-01-01'
@@ -224,11 +248,6 @@ planet:
         population: 28155540.0
       - date: '3145-01-01'
         population: 28336314.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - IND
   - name: Yingarna
     type: ICE_GIANT
     orbitalDist: 0.7

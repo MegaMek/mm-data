@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c03d-7bab-baf5-6d68727ea1f2
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,17 @@ IS Level 2
 Jump
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Jump infantry squads are squad-strength formations equipped with personal jump packs for vertical mobility. Smaller than a full jump platoon, these squads operate as reconnaissance elements, rooftop security teams, and rapid insertion forces where a compact footprint and three-dimensional movement matter more than sustained combat power. Their reduced numbers limit staying power in prolonged engagements, but the combination of small size and jump capability makes them difficult to pin down or predict.</p>
+</overview>
 
 <source>
 TW
@@ -65,13 +69,6 @@ TW
 </squadn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
-<antimek>
-6
-</antimek>
-
-<armorKit>
-GenericKit
-</armorKit>

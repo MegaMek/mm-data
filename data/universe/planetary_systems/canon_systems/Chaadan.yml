@@ -1,0 +1,268 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Chaadan
+sucsId: 3116
+xcood: 18.195
+ycood: -508.44
+spectralType: G2V
+planet:
+  - name:
+      source: canon
+      value: Chaadan
+    type: TERRESTRIAL
+    sysPos: 1
+    event:
+      - date: '2750-01-01'
+        population: 43656.0
+        socioIndustrial: C-F-B-D-F
+      - date: '2760-01-01'
+        population: 180331.0
+      - date: '2770-01-01'
+        population: 558583.0
+      - date: '2780-01-01'
+        population: 1381404.0
+      - date: '2790-01-01'
+        population: 2842653.0
+      - date: '2800-01-01'
+        population: 5079354.0
+      - date: '2810-01-01'
+        population: 8066206.0
+      - date: '2820-01-01'
+        population: 11658596.0
+      - date: '2830-01-01'
+        population: 15565658.0
+      - date: '2840-01-01'
+        population: 19706062.0
+      - date: '2850-01-01'
+        population: 17294457.0
+      - date: '2860-01-01'
+        population: 10465756.0
+      - date: '2864-01-01'
+        name: Chadan
+        message: Chaadan renamed to Chadan
+      - date: '2870-01-01'
+        population: 6447998.0
+      - date: '2880-01-01'
+        population: 3902012.0
+      - date: '2890-01-01'
+        population: 2480712.0
+      - date: '2900-01-01'
+        population: 1656869.0
+      - date: '2910-01-01'
+        population: 929056.0
+      - date: '2920-01-01'
+        population: 484879.0
+      - date: '2930-01-01'
+        population: 270670.0
+      - date: '2940-01-01'
+        population: 138131.0
+      - date: '2950-01-01'
+        population: 69864.0
+      - date: '2960-01-01'
+        population: 35975.0
+      - date: '2970-01-01'
+        population: 19992.0
+      - date: '2980-01-01'
+        population: 12317.0
+      - date: '2990-01-01'
+        population: 8008.0
+      - date: '3000-01-01'
+        population: 4142.0
+      - date: '3003-01-01'
+        socioIndustrial: D-F-B-D-F
+      - date: '3010-01-01'
+        population: 1950.0
+      - date: '3020-01-01'
+        population: 969.0
+      - date: '3022-01-01'
+        name: Chandan
+        message: Chadan renamed to Chandan
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+    orbitalDist: 2.24
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.09
+    diameter: 13200
+    density: 5.8284
+    dayLength: 19
+    yearLength: 3.6
+    temperature: 31
+    water: 48
+    lifeForm: FISH
+    icon: green8
+  - name: Chaadan II
+    type: TERRESTRIAL
+    orbitalDist: 0.98
+    sysPos: 2
+    icon: barren7
+    pressure: STANDARD
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen, plus trace amounts of Nitrous Oxide
+    gravity: 0.52
+    diameter: 10500
+    density: 3.5
+    dayLength: 23
+    yearLength: 1.5
+    temperature: 156
+    water: 0
+    smallMoons: 3
+  - name: Chaadan III
+    type: TERRESTRIAL
+    orbitalDist: 1.4
+    sysPos: 3
+    icon: barren10
+    pressure: HIGH
+    atmosphere: TOXIC_POISON
+    composition: Carbon Dioxide, plus trace amounts of Methane
+    gravity: 0.86
+    diameter: 14500
+    density: 4.1818
+    dayLength: 17
+    yearLength: 2
+    temperature: 108
+    water: 0
+    smallMoons: 1
+  - name: Chaadan V
+    type: TERRESTRIAL
+    orbitalDist: 3.92
+    sysPos: 5
+    icon: rock16
+    pressure: Low
+    atmosphere: TOXIC_POISON
+    composition: Methane, plus trace amounts of Argon
+    gravity: 0.68
+    diameter: 11500
+    density: 4.1818
+    dayLength: 25
+    yearLength: 7.9
+    temperature: -64
+    water: 42
+    smallMoons: 3
+  - name: Chaadan VI
+    type: GAS_GIANT
+    orbitalDist: 7.28
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.73
+    diameter: 120000
+    density: 1.6
+    dayLength: 14
+    yearLength: 19.7
+    ring: true
+    smallMoons: 20
+  - name: Chaadan VII
+    type: GAS_GIANT
+    orbitalDist: 14
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.77
+    diameter: 150000
+    density: 1.3
+    dayLength: 16
+    yearLength: 52.4
+    smallMoons: 11
+    satellite:
+      - name: 7-M1
+        size: medium
+        icon: rock1
+      - name: 7-M2
+        size: medium
+        icon: rock2
+      - name: 7-M3
+        size: medium
+        icon: rock3
+      - name: 7-M4
+        size: medium
+        icon: rock4
+  - name: Chaadan VIII
+    type: ICE_GIANT
+    orbitalDist: 27.44
+    sysPos: 8
+    icon: iceg5
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.8
+    diameter: 35000
+    density: 1.6
+    dayLength: 18
+    yearLength: 143.7
+    smallMoons: 5
+  - name: Chaadan IX
+    type: ASTEROID_BELT
+    orbitalDist: 54.32
+    sysPos: 9
+    icon: asteroid1
+    yearLength: 400.4
+    temperature: -218
+  - name: Chaadan X
+    type: GAS_GIANT
+    orbitalDist: 108.08
+    sysPos: 10
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.35
+    diameter: 110000
+    density: 1.5
+    dayLength: 14
+    yearLength: 1123.6
+    smallMoons: 19
+    satellite:
+      - name: 10-L1
+        size: large
+        icon: rock1
+  - name: Chaadan XI
+    type: GAS_GIANT
+    orbitalDist: 215.6
+    sysPos: 11
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.88
+    diameter: 120000
+    density: 1.1
+    dayLength: 13
+    yearLength: 3165.7
+    ring: true
+    smallMoons: 18
+    satellite:
+      - name: 11-L1
+        size: large
+        icon: rock1
+      - name: 11-L2
+        size: large
+        icon: rock2
+      - name: 11-L3
+        size: large
+        icon: rock3
+      - name: 11-L4
+        size: large
+        icon: rock4
+primarySlot: 1

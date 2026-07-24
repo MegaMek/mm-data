@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Laureles
-sucsId: 1466
+sucsId: 1467
 xcood: -186.055
 ycood: -126.204
 spectralType: F5V
@@ -95,7 +95,7 @@ planet:
         faction:
           source: canon
           value:
-            - MCM
+            - MRep
         population: 43549.0
         socioIndustrial: D-D-B-D-D
       - date: '2250-01-01'
@@ -109,6 +109,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '2280-01-01'
         population: 2042472.0
       - date: '2290-01-01'
@@ -117,6 +123,15 @@ planet:
         population: 7444835.0
       - date: '2310-01-01'
         population: 12601562.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Marik Commonwealth
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 19925069.0
       - date: '2330-01-01'
@@ -290,11 +305,18 @@ planet:
         population: 456203602.0
       - date: '3079-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
-            - MSC
+            - MCM
       - date: '3080-01-01'
         population: 458857271.0
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MSC
       - date: '3090-01-01'
         population: 460604246.0
       - date: '3100-01-01'
@@ -317,6 +339,12 @@ planet:
           value:
             - CWE
         population: 467098056.0
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CWE
   - name: Ombues De Lavalle
     type: DWARF_TERRESTRIAL
     orbitalDist: 2.24

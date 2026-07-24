@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,18 +15,13 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-af2d-7180-a858-ccb56dac6d79
+</UUID>
 
 <UnitType>
-Aero
+AeroSpaceFighter
 </UnitType>
 
 <Name>
@@ -45,10 +40,6 @@ TRB-D56
 3074
 </year>
 
-<originalBuildYear>
-3074
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Attack Fighter
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 5
@@ -92,9 +80,13 @@ Aerodyne
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 106
@@ -137,16 +129,20 @@ IS Ammo LRM-20 Artemis-capable
 IS Ammo LRM-20 Artemis-capable
 </Fuselage Equipment>
 
+<capabilities>
+<p>The Thunderbird's weapons suite prioritizes energy endurance over raw burst damage, centering on three RAMTech 1200 large lasers and five Maxwell medium lasers distributed across the nose and both wings. Two aft-mounted Maxwell medium lasers deter pursuit effectively in extended engagements. Each wing also mounts a FarFire Maxi-Rack LRM-20 launcher, adding useful standoff reach against DropShips and larger targets, supplemented by four tons of missile reloads for reasonable combat endurance. The Vlar 300 fusion plant delivers adequate thrust for a craft of its size without making the Thunderbird a competitive interceptor. Twenty-five single heat sinks cool the design under normal firing cadence, though sustained all-weapons volleys risk thermal buildup that limits aggressive combat tactics. The L/CBM AeroSteel armor provides solid protection for a hundred-ton airframe, though concentrated capital-scale fire remains a serious threat.</p><p>The design's core strength is its reliability: the weapons mix functions well across dogfighting, strafing, and escort duties without demanding specialized maintenance cycles or rare components. This adaptability, more than any single performance metric, explains why the Thunderbird has remained in frontline service for centuries despite the availability of technically superior alternatives.</p>
+</capabilities>
+
 <overview>
-While sporting a large and rather unconventional look, the Thunderbird is an old standby design, one of the most common if dated heavy Aerospace Fighters in use across the Inner Sphere in the mid 31st century.
+<p>The TRB-D36 Thunderbird has stood at the center of Inner Sphere heavy aerospace combat since 2480, when the Lockheed Corporation of Gibbs and CBM Aerospace of Donegal pooled their resources to build a capable assault fighter for the Lyran Commonwealth Armed Forces. Designed from the outset for air-to-ground attack and DropShip escort, the craft's unconventional silhouette earned it unflattering comparisons early in its career, but its durability and straightforward reliability proved far more valuable than aesthetics. The design spread steadily across the Star League as other manufacturers successfully replicated it, ensuring that Thunderbirds entered service with every major power and dozens of minor ones. By the mid-thirty-first century, it remains one of the most recognized heavy fighters in the Inner Sphere, a ubiquitous if increasingly dated presence in aerospace wings from the Lyran Alliance to the Taurian Concordat.</p>
 </overview>
 
 <deployment>
-Developed by Lockheed/CBM in 3074 from the D46, the D56 is a heavy fighter/DropShip hunter which uses an XL Engine, seventeen tons of Ferro-Aluminum armor and twenty double heat sinks. The D56 is armed with a Heavy PPC and Ultra AC/10 in the nose and twin tail-mounted ER Small Lasers in its tail, backed up by Artemis enhanced LRM-20s and wing mounted ER Medium Lasers.
+<p>The most capable standard-production Thunderbird, the D56 was developed by Lockheed/CBM in 3074 as a dedicated heavy fighter and DropShip hunter. Its extralight engine, heavy PPC, and Ultra autocannon provide striking power suited to engaging capital vessels at range, while Artemis IV-enhanced LRM-20s and wing-mounted ER medium lasers extend its reach against fighter-scale targets. Tail-mounted ER small lasers round out the armament for engagements that turn close. Seventeen tons of ferro-aluminum armor and double heat sinks give the D56 staying power in extended engagements that the older variants cannot match. Production has continued from Gibbs into the ilClan era, making the D56 the most modern Thunderbird variant in continuous production and the preferred choice for Lyran Alliance and successor-state commands that can acquire it.</p>
 </deployment>
 
 <history>
-Created in 2487 as part of an alliance between the Lockheed Corporation of Gibbs and CBM Aerospace of Donegal, the original Thunderbird was built for the LCAF as an assault fighter, well suited to air-to-ground attack and DropShip escort missions in the so-called Age of War. Despite its less than sleek look, the sturdy and dependable Thunderbird spread across the Star League as a number of other manufacturers were able to precisely duplicate the fighter, ensuring the design survived the centuries.
+<p>The Thunderbird's origins trace to 2480 and an alliance between the Lockheed Corporation of Gibbs and CBM Aerospace of Donegal, formed to supply the Lyran Commonwealth Armed Forces with a capable assault fighter for the closing decades of the Age of War. The combined Lockheed/CBM Corporation began production at Gibbs, and the design quickly proved itself across the full range of missions the LCAF required. When the Star League formed, demand for capable heavy aerospace platforms drew additional manufacturers to the Thunderbird. Wangker Aerospace established production at Axton to supply Star League Defense Force contingents drawn from the Federated Suns, while Taurian Concordat producers at Taurus and Perdition acquired the ability to replicate the design for their own aerospace forces. The fighter's construction proved simple enough for precise duplication by manufacturers who had never designed a comparable craft, and this quality, more than any performance specification, ensured its long survival.</p><p>In 2724, Lockheed/CBM introduced the D46 as an internal performance upgrade, replacing the base large lasers with extended-range variants and fitting the wing launchers with Artemis IV-enhanced shorter-range missile racks. Parts constraints meant the SLDF produced fewer than two hundred examples during the Star League era, and the D46 remained a rare configuration despite its advantages. A more radical upgrade emerged in 2715 in the form of the D36b, a Royal SLDF configuration built on an extralight engine with Gauss rifles and extended-range large lasers, reserved for elite formations participating in the Amaris Civil War. Both advanced variants saw limited production before the Coup disrupted the industrial base across the Inner Sphere.</p><p>The Succession Wars extracted a heavy toll. Wangker's Axton facility shifted through multiple ownerships as territorial control of the Axton system changed hands during the Early Succession Wars, passing from Capellan Confederation control to Federated Suns production before the broader devastation of the Succession Wars curtailed output entirely. Lockheed/CBM's Gibbs plant fell back to standard D36 production as the advanced variants became unsustainable without Star League-era supply chains. The Taurian producers held on longest: Taurus Territorial Industries maintained an active line across most of the Succession Wars period, and Pinard Protectorates Limited opened its own Perdition facility in 3020, together supplying the Concordat's aerospace wings through the worst of the Dark Age of technology.</p><p>The recovery of Star League technical data allowed Lockheed/CBM to reintroduce the D46 in 3055 from Gibbs, two centuries after the last example had flown in combat. The more capable D56 followed in 3074, built as a dedicated DropShip hunter around an extralight engine and a heavier weapons suite. The same period saw Pinard Protectorates Limited develop the D50 on Perdition, a D36 derivative tailored to Concordat operational needs that traded missile reach for autocannon firepower and additional laser coverage. Jihad-era fighting damaged Wangker's Axton facility severely and disrupted the Perdition line, reducing the Thunderbird's active production base considerably. The Gibbs facility survived the Jihad and continued producing D56s into the ilClan era. In the conflict's margins, Rim Salvage, later identified as a front for the Word of Blake, converted a small number of recovered Star League airframes into the experimental XTS configuration using Centurion Weapon Systems from an abandoned SLDF test facility, producing only a handful of craft that proved as troubling to intelligence analysts as they were to enemy pilots.</p>
 </history>
 
 <manufacturer>
@@ -158,16 +154,28 @@ Gibbs
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Lockheed/CBM 300-TRB
-ENGINE:Vlar 300
-ARMOR:L/CBM AeroSteel
-COMMUNICATIONS:Neil 6000-a
-TARGETING:N&D Longreach
+CHASSIS:Lockheed/CBM
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Neil
+TARGETING:N&D
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:300-TRB
+ENGINE:XL 300
+ARMOR:Ferro-Aluminum
+COMMUNICATIONS:6000-a
+TARGETING:Longreach
+</systemModels>
 
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-AW
+</published>
 
 <tonnage>
 100.0

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tellman's Mistake
-sucsId: 2510
+sucsId: 2511
 xcood: -243.532
 ycood: -310.772
 spectralType:
@@ -88,6 +88,12 @@ planet:
       - name: Saddle River
       - name: New Euless
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2545-12-09'
         faction:
           source: canon
@@ -101,6 +107,15 @@ planet:
         population: 3453009.0
       - date: '2570-01-01'
         population: 23179331.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Principality of Regulus
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 91709984.0
       - date: '2590-01-01'
@@ -229,6 +244,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 268223768.0
       - date: '3096-01-01'
@@ -245,6 +266,12 @@ planet:
           value:
             - RCM
         population: 270324094.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RCM
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -253,14 +280,33 @@ planet:
         population: 270107921.0
       - date: '3145-01-01'
         population: 269945905.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - MOC
       - date: '3152-06-01'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '3152-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Port Iuppiter

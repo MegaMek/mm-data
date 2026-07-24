@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,78 +15,77 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c6f7-7edb-affe-790ae70b79da
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Vindicator
 model:VND-4L
 mul id:3429
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3063
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3063
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Skirmisher
 
-
-
-quirk:rugged_1
 quirk:difficult_eject
+quirk:rugged_1
 
+mass:45
+engine:225 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:45
-Engine:225 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:13 IS Double
+walk mp:5
+jump mp:5
 
-Heat Sinks:13 Double
-Walk MP:5
-Jump MP:5
+armor:Stealth(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:16
+RT armor:16
+CT armor:18
+HD armor:9
+LL armor:18
+RL armor:18
+RTL armor:6
+RTR armor:6
+RTC armor:9
 
-Armor:Stealth Armor
-LA Armor:14
-RA Armor:14
-LT Armor:16
-RT Armor:16
-CT Armor:18
-HD Armor:9
-LL Armor:18
-RL Armor:18
-RTL Armor:6
-RTR Armor:6
-RTC Armor:9
-
-Weapons:5
-1 ISERPPC, Right Arm
-1 ISERMediumLaser, Center Torso
-1 ISMediumPulseLaser, Head
-1 ISLRM5, Left Torso, Ammo:24
-1 ISGuardianECM, Left Torso
+Weapons:4
+ER PPC, Right Arm
+LRM 5, Left Torso
+ER Medium Laser, Center Torso
+Medium Pulse Laser, Head
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-Stealth Armor
-Stealth Armor
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+IS Stealth
+IS Stealth
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISERPPC
 ISERPPC
 ISERPPC
-Stealth Armor
-Stealth Armor
+IS Stealth
+IS Stealth
 -Empty-
 
 Left Torso:
@@ -95,11 +94,11 @@ Fusion Engine
 Fusion Engine
 Jump Jet
 Jump Jet
-ISLRM5
-ISGuardianECM
-ISGuardianECM
-Stealth Armor
-Stealth Armor
+LRM 5
+ISGuardianECMSuite
+ISGuardianECMSuite
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 
@@ -109,13 +108,13 @@ Fusion Engine
 Fusion Engine
 Jump Jet
 Jump Jet
-ISLRM5 Ammo
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+IS Ammo LRM-5
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISCASE
-Stealth Armor
-Stealth Armor
+IS Stealth
+IS Stealth
 
 Center Torso:
 Fusion Engine
@@ -150,8 +149,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth Armor
-Stealth Armor
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -164,8 +163,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth Armor
-Stealth Armor
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -173,19 +172,29 @@ Stealth Armor
 -Empty-
 -Empty-
 
-overview:The Vindicator is one of the most well-known Capellan Confederation BattleMechs. This workhorse of the CCAF was built in 2826 between the First and Second Succession War to maximize the effectiveness of the Confederation's surviving production capabilities and fulfill as many roles as possible.
+overview:<p>The Vindicator was designed and built in 2826 by Ceres Metals Industries during the lull between the First and Second Succession Wars. The First Succession War had proved disastrous for the Capellan Confederation, which lost all but one of its 'Mech-producing facilities. The remaining plant on the heavily industrialized world of Capella was limited to producing designs of less than sixty tons, and with few materials available, Confederation engineers set out to build a 'Mech capable of filling as many roles as possible with meager resources.</p><p>The result was a forty-five-ton medium 'Mech that, much like the proverbial camel designed by committee, does not excel at any single role but fulfills them all adequately. With nearly all of its components sourced from within the Confederation, the Vindicator is cheap to produce, easy to maintain, and quick to repair. This combination of versatility and logistical simplicity has made it the enduring workhorse of the Capellan Confederation Armed Forces.</p>
 
-capabilities:The 'Mech has a top speed of only 64.8 km/h, which allows it to keep up with most heavy 'Mechs and some slower medium 'Mechs. Four jump jets give it a jumping capability of up to 120 meters that, while not up to par with the greater distances of 'Mechs like the Phoenix Hawk, allows the Vindicator the ability to outmaneuver most heavier 'Mechs, as well as making it easier to traverse rough terrain. It also carries more armor than the Phoenix Hawk with good overall coverage, particularly on its rear torso and legs, making it better protected than smaller 'Mechs. Armament for the 'Mech is adequate though its primary weapons are unsuited for point-blank ranges, while sixteen heat sinks help keep it cool. 
+capabilities:<p>The GM 180 fusion engine at the heart of the Vindicator is unexceptional, granting a top speed of only 64 kilometers per hour, but it is small and inexpensive, allowing mass production in large numbers. Four Anderson Propulsion 30 jump jets provide 120 meters of jumping distance, enabling the 'Mech to outmaneuver heavier opponents and navigate the confined urban areas common across the Confederation. The Starshield armor carries more protection than lighter designs such as the Phoenix Hawk, with particularly good coverage on the rear torso and legs.</p><p>The primary weapon is the Ceres Arms Smasher PPC, which features an innovative cooling jacket with water intake ports around the muzzle. By dipping the barrel into a body of water, the pilot can rapidly cool the weapon, though this process requires the 'Mech to kneel motionless for several seconds. A Sian/Ceres Jaguar LRM-5 mounted behind an armored door in the left torso provides indirect fire support, while a head-mounted medium laser and left-arm Hessen IX small laser handle close-range engagements. Sixteen heat sinks manage the thermal load adequately, though the primary weapons are poorly suited for point-blank ranges, making the Vindicator far more effective as a fire-support platform or shock trooper against lighter units than as a dedicated brawler.</p>
 
-deployment:The 4L Vindicator is a major upgrade to the design, part of Ceres Metals' efforts to revive the line in 3063. The engine has been replaced with a 225-rated extralight engine, granting the 'Mech a top speed of 86.4 km/h, and its jumping distance was increased to 150 meters with an additional jump jet. The 'Mech uses double heat sinks for its advanced weapons load, which includes an ER PPC and LRM-5 for striking power at long range and an ER medium laser and medium pulse laser for short range work. Finally, the 'Mech carries a Guardian ECM Suite and is protected with nine tons of Stealth Armor, making it harder to target at range. The 4L became a common design among Shadow Lances following their introduction.	
+deployment:<p>Introduced in 3063, this variant represents Ceres Metals' most ambitious upgrade of the Vindicator chassis. A 225-rated extralight engine pushes the top speed to 86 kilometers per hour, while a fifth jump jet extends jumping distance to 150 meters. The weapons suite retains an ER PPC and LRM-5 for long-range engagement alongside an ER medium laser and medium pulse laser for close work. Most significantly, this variant mounts nine tons of stealth armor paired with a Guardian ECM suite, making it exceptionally difficult to target at range. This variant became a common assignment for Shadow Lances, whose infiltration and disruption missions benefit enormously from the combination of electronic warfare capability and high mobility.</p>
 
-history:Designed by committee, the Vindicator's "jack-of-all-trades" nature means it does not excel in any one role but fulfills them adequately. With almost all of its components produced on Capella, the Vindicator is also cheap, easy to mass produce, and quick to repair with a ready supply of spare parts. Unfortunately, early models of the Vindicator suffered from a design flaw wherein the head-mounted laser created a bulge in the cockpit. More than making the space cramped for tall MechWarriors, it also interfered with the ejection propulsion system, resulting in the deaths of a number of MechWarriors when their ejection seats exploded during ejection. Engineers managed to redesign the cockpit layout prior to the War of 3039, eliminating the deadly intrusion and decreasing the chance of said unfortunate malfunction. Due to its relatively lackluster design and the outrageous mark-ups on spare parts sold to out-of-state parties, the Vindicator has remained almost exclusive to the Capellan Confederation since its introduction. Even in the wake of the Fourth Succession War, with a good portion of their military complex and resources gone, the Capellan leadership continued funding production of this 'Mech and updated it with the rediscovery of lostech. Following the introduction of the Firestarter OmniMech and its spread by the Second Star League production of the Vindicator was curtailed, though the line would be partially revived with a couple of specialized variants in 3060.
+history:<p>The Vindicator first saw combat on Tikonov in 2832, during the Second Succession War. The planet's garrison, composed primarily of the Second and Third Chesterton Voltigeurs, was equipped largely with Vindicators organized into separate lances of light and heavy 'Mechs. When the Federated Suns' Second Ceti Hussars attacked, the Voltigeurs fell back to defensive positions around the vital hydroelectric plants at the city of New Hoover. Over five separate assaults employing heavy air support, night raids, and artillery bombardment, the Ceti Hussars attempted to crack the defensive ring. Each time, the Vindicators' tenacious defense threw them back. The Hussars eventually withdrew to seek easier targets, and the Voltigeurs were decorated and awarded land grants for their actions. It was during this siege that the Vindicator earned its enduring nickname of "Badger," after a squat, stubborn mammal native to Tikonov.</p><p>Early models of the Vindicator suffered from a dangerous design flaw wherein the head-mounted laser created a bulge in the cockpit that interfered with the ejection propulsion system. Several MechWarriors were killed when their ejection seats exploded during attempts to eject. Engineers redesigned the cockpit layout prior to the War of 3039, eliminating the deadly protuberance and significantly reducing the chance of ejection malfunction.</p><p>Due to its relatively lackluster performance and the outrageous markups Ceres placed on spare parts sold outside the Confederation, the Vindicator has remained almost exclusively a Capellan design. Even mercenaries working for House Liao have grudgingly accepted the 'Mech, knowing that keeping their machines operational requires continued employment with the Confederation. Vindicators are found in every regiment and serve in almost every role, from reconnaissance to filling force casualties in assault units. Despite losing a significant portion of its military complex during the Fourth Succession War, the Capellan leadership continued funding Vindicator production and updated the design with the rediscovery of Star League technology.</p><p>The production of the Firestarter OmniMech and its subsequent proliferation via the Second Star League curtailed sales of the longtime Capellan workhorse. Fortunately, Ceres Metals was able to partially revive the line in 3060 with a close-combat variant, followed by a stealth-equipped model in 3063. The latest variant attempts to combine both upgrades, though the salvaged nature of its production makes each unit essentially handmade and extraordinarily rare.</p><p>The most recent evolution, the VND-7L, returns the Vindicator to its generalist roots with Clan-technology weapons supplied by the Sea Fox Skate Khanate. Deployed in considerable numbers along the Capellan March and Free Worlds border, the design has proven that even after more than three centuries of service, the Vindicator remains a relevant and deadly combatant in the hands of Capellan MechWarriors.</p>
 
 manufacturer:Ceres Metals Industries
+
 primaryfactory:Capella
-systemmanufacturer:CHASSIS:Ceresplex IV
-systemmanufacturer:ENGINE:VOX 225 XL
-systemmanufacturer:ARMOR:Starshield with CASE
-systemmanufacturer:JUMP_JET:Anderson Propulsion 30
-systemmanufacturer:COMMUNICATIONS:CeresCom Model 21-Rs
-systemmanufacturer:TARGETING:C-Apple Churchill
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Ceresplex
+systemmode:CHASSIS:IV
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:225 XL
+systemmanufacturer:ARMOR:StarSlab
+systemmode:ARMOR:Stealth
+systemmanufacturer:JUMP_JET:Anderson Propulsion
+systemmode:JUMP_JET:30
+systemmanufacturer:COMMUNICATIONS:CeresCom
+systemmode:COMMUNICATIONS:Model 21-Rs with Guardian ECM
+systemmanufacturer:TARGETING:C-Apple
+systemmode:TARGETING:Churchill

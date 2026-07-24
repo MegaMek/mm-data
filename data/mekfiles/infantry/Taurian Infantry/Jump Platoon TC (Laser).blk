@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c076-7a53-b15f-ac61f0c9a1b2
+</UUID>
 
 <UnitType>
 Infantry
@@ -37,13 +32,13 @@ Jump Platoon (Taurian)
 (Laser)
 </Model>
 
+<mul id:>
+9275
+</mul id:>
+
 <year>
 2405
 </year>
-
-<originalBuildYear>
-2405
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -53,14 +48,20 @@ IS Level 2
 Jump
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Taurian infantry reflect the Concordat's citizen-soldier tradition, with national service requirements ensuring that most adults have received basic military training before ever donning a uniform. Jump platoons provide the vertical mobility that Taurian garrison commanders prize for defending the rough terrain and broken ground found on many Concordat border worlds. Their ability to bypass obstacles and seize elevated positions gives them a tactical advantage over standard foot infantry.</p><p>Equipped with laser rifles that offer superior range and armor penetration compared to ballistic weapons, these platoons field one of the most effective personal arms available to conventional infantry, though the weapons are significantly more expensive and require soldiers to carry additional power packs.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -75,14 +76,3 @@ TW
 Laser Rifle
 </Primary>
 
-<antimek>
-6
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
-
-<mul id:>
-9275
-</mul id:>

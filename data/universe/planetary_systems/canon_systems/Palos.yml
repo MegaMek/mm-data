@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Palos
-sucsId: 1975
+sucsId: 1976
 xcood: 50.695
 ycood: -124.723
 spectralType:
@@ -153,6 +153,12 @@ planet:
         population: 8814113.0
       - date: '2270-01-01'
         population: 19543190.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 39159242.0
       - date: '2290-01-01'
@@ -171,6 +177,12 @@ planet:
             - SSUP
       - date: '2310-01-01'
         population: 199760703.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SSUP
       - date: '2320-01-01'
         population: 301249744.0
       - date: '2330-01-01'
@@ -233,6 +245,16 @@ planet:
       - date: '2571-04-29'
         faction:
           source: canon
+          value:
+            - CC
+      - date: '2571-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 4
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CC
       - date: '2573-01-01'
@@ -344,12 +366,30 @@ planet:
             - FS
         population: 4957622887.0
         socioIndustrial: C-B-D-C-D
-      - date: '3040-04-28'
-        population: 4997442938.0
-        socioIndustrial: C-A-D-B-D
+      - date: '3030-12-31'
+        # administration:
+        #   - Sarna March
+        #   - Palos Operational Area
+        #   - Region 3
+        # capitalType: Region Capital
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-04-28'
+        population: 4997442938.0
+        socioIndustrial: C-A-D-B-D
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -359,11 +399,27 @@ planet:
           source: canon
           value:
             - CM
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3060-01-01'
         population: 5091774371.0
       - date: '3062-12-29'
         faction:
           source: canon
+          value:
+            - CC
+      - date: '3063-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 6
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CC
       - date: '3070-01-01'
@@ -373,6 +429,15 @@ planet:
       - date: '3085-08-03'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture V
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -394,10 +459,24 @@ planet:
           source: canon
           value:
             - CC
+      - date: '3135-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 5
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3140-01-01'
         population: 5603135598.0
       - date: '3145-01-01'
         population: 5640238598.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 5
   - name: Benu
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.96

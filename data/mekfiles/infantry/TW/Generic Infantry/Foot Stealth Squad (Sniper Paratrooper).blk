@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfe1-7db9-9c6c-d448e0a0ef19
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Foot Stealth Squad
 2800
 </year>
 
-<originalBuildYear>
-2800
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,14 +44,15 @@ IS Level 3
 Leg
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Sneak Suit (Camo/IR/ECM)
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
 <overview>
-Skaret Assassins JàrnFòlk
+<p>Stealth sniper squads combine airborne insertion capability, sneak suit concealment, and precision marksman training in a compact special operations element. Armed with sniper rifles and magnum auto-pistols for close defense, these squads deploy covertly behind enemy lines to eliminate high-value targets from concealed positions, relying on stealth technology to avoid detection before and after engagement.</p>
 </overview>
 
 <source>
@@ -80,20 +72,12 @@ TR:3085
 </secondn>
 
 <Primary>
-Rifle (Sniper)
+Sniper Rifle (Bolt Action)
 </Primary>
 
 <Secondary>
 Auto-Pistol (Magnum)
 </Secondary>
-
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Sneak Suit (Camo/IR/ECM)
-</armorKit>
 
 <sneakcamo>
 true
@@ -110,3 +94,4 @@ true
 <specialization>
 512
 </specialization>
+

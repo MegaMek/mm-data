@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,46 +15,46 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d1e5-7ea8-8a70-4fb122de8e23
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Ostscout
 model:OTT-9CS
 mul id:2369
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3064
-source:TR:3085S
-Rules Level:2
+techbase:Inner Sphere
+era:3064
+source:TR:3085S,TR:PP
+published:RS:3085u-PP
+rules level:2
 role:Scout
 
-
-
-quirk:imp_com
-quirk:imp_sensors
 quirk:low_profile
 quirk:rugged_1
+quirk:imp_sensors
+quirk:imp_com
 
+mass:35
+engine:280 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:35
-Engine:280 XL Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 Single
+walk mp:8
+jump mp:8
 
-Heat Sinks:10 Single
-Walk MP:8
-Jump MP:8
-
-Armor:Standard(Inner Sphere)
-LA Armor:9
-RA Armor:9
-LT Armor:12
-RT Armor:12
-CT Armor:14
-HD Armor:8
-LL Armor:11
-RL Armor:11
-RTL Armor:3
-RTR Armor:3
-RTC Armor:4
+armor:Standard(Inner Sphere)
+LA armor:9
+RA armor:9
+LT armor:12
+RT armor:12
+CT armor:14
+HD armor:8
+LL armor:11
+RL armor:11
+RTL armor:3
+RTR armor:3
+RTC armor:4
 
 Weapons:4
 ER Medium Laser, Left Arm
@@ -67,9 +67,9 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 ISERMediumLaser
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -81,9 +81,9 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 ISERMediumLaser
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -102,7 +102,7 @@ BeagleActiveProbe
 BeagleActiveProbe
 ISGuardianECMSuite
 ISGuardianECMSuite
-Endo Steel
+IS Endo Steel
 
 Right Torso:
 Fusion Engine
@@ -114,8 +114,8 @@ Jump Jet
 Jump Jet
 ISC3iUnit
 ISC3iUnit
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 
 Center Torso:
@@ -130,7 +130,7 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 ISERSmallLaser
-Endo Steel
+IS Endo Steel
 
 Head:
 Life Support
@@ -151,8 +151,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -165,8 +165,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -174,19 +174,29 @@ Endo Steel
 -Empty-
 -Empty-
 
-overview:The Ostscout was designed as a pure recon BattleMech by Ostmann Industries. To that end, it was built entirely around gathering data and getting out of trouble, tasks for which it is exceptional. 
+overview:<p>The Ostscout was designed for one purpose: scouting. Introduced in 2600 by Ostmann Industries, this 35-ton light 'Mech was built entirely around gathering intelligence and escaping danger. Its exceptional speed and maneuverability allow it to avoid trouble easily, though its minimal armament means it can only engage the lightest opponents with any hope of success. Enhanced sensor arrays and a high-resolution targeting and tracking system supply the Ostscout with a constant stream of data about its surroundings, while powerful narrow-band communications equipment allows it to report from deep inside enemy territory.</p><p>As demand for the design grew beyond Ostmann's production capacity, the company licensed Kong Interstellar Corporation to begin manufacturing in 2700, following a similar arrangement previously established for the Ostsol. The Ostscout became so valuable during the Succession Wars that commanders hoarded them like treasures, deploying them only for the most critical reconnaissance missions.</p>
 
-capabilities:The Ostscout is quick enough to escape most traps, and very few other designs can match it in terms of speed and maneuverability. However its ability to run and leap out of danger came at the expense of offensive capability. In fact were it not for aggressive lobbying on the part of its test pilots the final production model would have been completely weaponless. As it is, the Ostscout would be hard-pressed to win a fight against all but the lightest 'Mechs. A poor combatant, the 'Mech excels at operating deep behind enemy lines, gathering as much information as possible about the terrain and the disposition of enemy forces. The true centerpiece of the design is its advanced sensor systems, including the TRSS.2L3 target-tracking system and powerful narrow-band Barret 4000 comm system. The sensor arrays themselves are mounted outside the main chassis due to their delicate nature, with the Ostscout using its arms to aim them. Everything from hydrological to geological data is recorded, so much data in fact that the 'Mech's computer cannot process it fast enough. This forces the Ostscout to move slowly when traveling through an area of interest, waving its arms seemingly at random, which makes it one of the few times the 'Mech is vulnerable to the enemy. However so long as the enemy's first salvo doesn't cripple it, the Ostscout will likely escape from an ambush.
+capabilities:<p>The Ostscout's primary feature is pure speed. Its VOX 280 fusion engine, typically mounted on designs twice its size, propels the 'Mech to a maximum speed of 129.6 kilometers per hour. Combined with a 240-meter jump capability provided by eight Ostmann Sct-A jump jets, only the Spider can match its maneuverability. This agility serves as the 'Mech's true protection, as the four-and-a-half tons of Durallex Light armor offers only modest defense against concentrated fire.</p><p>The Ostscout's combat capability is severely limited by design. A single Tronel II medium laser represents its entire offensive armament, mounted only after test pilots aggressively protested the original weaponless configuration. Ten heat sinks easily manage this minimal heat load, allowing the 'Mech to jump and fire simultaneously without overheating.</p><p>The true centerpiece of the design is its advanced sensor suite. The arm-mounted sensor arrays were installed outside the main chassis to avoid magnetohydrodynamic interference, with the 'Mech using its actuator systems to aim them. During maximum-intensity scanning, the Ostscout must move slowly while waving its arrays in seemingly random patterns, making it briefly vulnerable. However, if the first enemy salvo fails to cripple it, the 'Mech will almost certainly escape.</p>
 
-deployment:The 9CS model is a complete upgrade of the venerable Ostscout, developed by ComStar and introduced in 3064. The 'Mech has been rebuilt from the ground up with a Krupp 255 Endo Steel internal structure. While still maintaining the same number of jump jets the design uses a 280 VOX extralight engine to free up weight for advanced electronics and weaponry. The arm-mounted sensor arrays were shifted to fixed points around the torso and included new side-scanning, Doppler and triangulation sensors to maintain the same data-gathering capability. Additionally a new high-speed computer, capable of handling terabytes of data in seconds, meant the Ostscout no longer had to slow down when using its sensors. The targeting-tracking system was also replaced with a TRSS Eagle Eye system mated to a Beagle Active Probe, Guardian ECM, and head-mounted TAG, while the comm system was upgraded to the Exeter Longscan 300 w/C3i Computer for better fire mission coordination. For self-defense, the 9CS model carries two Diverse Optics ER Medium Lasers in either arm and an Diverse Optics ER Small Laser in its center torso. Finally six tons of Krupp 155 Ferro-Fibrous armor provides superior protection from weapons fire.
+deployment:<p>Developed by ComStar and introduced in 3064, the 9CS stands as a complete rebuild of the Ostscout concept. A Krupp 255 endo-steel chassis and 280 VOX XL engine support fixed sensor arrays around the torso, eliminating the need to slow down during scanning operations. A high-speed computer processes terabytes of data in seconds, while TRSS Eagle Eye targeting integrates a Beagle active probe, Guardian ECM suite, and TAG designator. The Exeter Longscan 300 communications system incorporates a C3i computer for coordinating fire missions. Two Diverse Optics ER medium lasers and an ER small laser provide meaningful self-defense capability.</p>
 
-history:Starting in 2600 Ostmann built and sold the Ostscout to fulfill many armies' need for a swift reconnaissance 'Mech, but eventually found that demand was outstripping their production ability. Rather than sacrifice their popular Ostroc line of urban-combat 'Mechs, the company licensed Kong Interstellar to start building the 'Mech in 2700, an arrangement similar to that struck regarding the Ostsol. Kong would continue to build Ostscouts for the next hundred years until the destruction of their factory on Connaught at the outset of the Succession Wars. Deprived of the possibility of replacement, many commanders began to hoard their Ostscouts like valuable treasure, parceling them out only for special missions. Most Ostscout pilots would not even attempt to engage enemy 'Mechs, as the advanced sensor system became extremely rare and nearly impossible to replace. This unwillingness to put the 'Mech in danger meant many survived the Succession Wars in practically mint condition, although many which suffered damage to their advanced sensors were forced to replace them with inferior, albeit more robust, systems. Besides the Great Houses, ComStar also utilized the Ostscout, and in the aftermath of the Clan Invasion and ComStar Schism began developing a new Ostscout variant for their Com Guards. This new model would maintain the same maneuverability and intelligence-gathering capabilities of the original while improving its offensive and defensive capabilities. Debuting with success in 3064, within the next three years nearly half of all Com Guard Ostscouts had been upgraded to the new variant; however it was soon discovered that both the Lyran Alliance and Word of Blake were fielding their own updated Ostscouts identical to ComStar's. The intelligence leak would be confirmed and traced back to Dag Kesselring, former Precentor of the 66th Division, who passed on information about the program to both the Lyrans and Blakists. Used by both sides in the Blakist Jihad, the newborn Republic of the Sphere would maintain production of the 11J model Ostscout after the fall of Terra both for its own relatively limited needs as well as export sales to the Federated Suns and Lyran Commonwealth. Still produced during the Dark Age era, aside from the Krupp plant's combat focused Phoenix models both Kong Interstellar and Robinson Standard BattleWorks reintroduced variants that lean more heavily towards the original look and recon aspects of the venerable 7J model.
+history:<p>Ostmann Industries built and sold the Ostscout starting in 2600 to fulfill many armies' need for a swift reconnaissance 'Mech. When demand outstripped their production capacity, rather than sacrifice their popular Ostroc line, Ostmann licensed Kong Interstellar to begin production in 2700. Kong continued building Ostscouts for a century until the destruction of their factory on Connaught in 2802 at the outset of the Succession Wars. Deprived of replacements, commanders began hoarding their Ostscouts, parceling them out only for special missions, and most pilots would not even attempt to engage enemy 'Mechs given the irreplaceable nature of the advanced sensor systems.</p><p>The Ostscout's battle history reads as a series of daring missions deep behind enemy lines. During the Rebellion of 3010, Janos Marik used Ostscouts extensively to gather information on rebel movements and strengths. In early September 3021, four Ostscouts were dropped over New Ivaarsen by Draconis Combine DropShips to scout landing sites for a Kurita invasion force, spending five weeks evading Davion patrols while accumulating critical intelligence. The most famous exploit came in 3024 during the "Thousand Kilometer Chase," when a Capellan Ostscout pilot evaded Smithson's Chinese Bandits for ten hours, accumulating enough intelligence to enable a successful Confederation counter-attack.</p><p>ComStar also utilized the Ostscout, and following the Clan Invasion and ComStar Schism, developed a new variant maintaining the original's capabilities while improving offensive and defensive profiles. Debuting successfully in 3064, nearly half of all Com Guard Ostscouts were upgraded within three years. However, it was soon discovered that both the Lyran Alliance and Word of Blake were fielding identical variants. The intelligence leak was traced to Dag Kesselring, former Precentor of the Sixty-sixth Division, who had passed information to both the Lyrans and Blakists.</p><p>Following the Jihad, the newborn Republic of the Sphere maintained production of upgraded Ostscout models from former Word of Blake factories on Terra, selling them to the Federated Suns and Lyran Commonwealth. During the Dark Age era, Kong Interstellar reestablished production and formed an alliance with Clan Sea Fox to produce variants incorporating stealth technology and Clan weaponry, while Robinson Standard BattleWorks began manufacturing models highly prized by the Draconis Combine.</p>
 
-manufacturer:Kong Interstellar Corporation,Kong Interstellar Corporation,Ostmann Industries
-primaryfactory:Connaught,Loxley,Terra
-systemmanufacturer:CHASSIS:Krupp 255 Endo Steel
-systemmanufacturer:ENGINE:VOX 280 XL
-systemmanufacturer:ARMOR:Durallex Light
-systemmanufacturer:COMMUNICATIONS:Exeter Longscan 300 w/C3i Computer
-systemmanufacturer:TARGETING:TRSS Eagle Eye
-systemmanufacturer:JUMP_JET:Ostmann Sct-A
+manufacturer:Odin Manufacturing|Krupp Armament Works
+
+primaryfactory:Orestes|Terra
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Krupp
+systemmode:CHASSIS:255 Endo Steel
+systemmanufacturer:ENGINE:VOX
+systemmode:ENGINE:280 XL
+systemmanufacturer:ARMOR:Krupp
+systemmode:ARMOR:155
+systemmanufacturer:JUMP_JET:Rawlings
+systemmode:JUMP_JET:45
+systemmanufacturer:COMMUNICATIONS:Exeter
+systemmode:COMMUNICATIONS:Longscan 300 with C3i Computer
+systemmanufacturer:TARGETING:TRSS
+systemmode:TARGETING:Eagle Eye with Beagle Active Probe, Guardian ECM and TAG

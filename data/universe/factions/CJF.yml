@@ -17,6 +17,11 @@
 
 key: CJF
 name: Clan Jade Falcon
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CJF
 capital: Ironhold
 capitalChanges:
   3052: Sudeten
@@ -129,3 +134,5 @@ factionLeaders:
     surname: "Chistu"
     gender: "FEMALE"
     startYear: 3151
+usesMercenaries:
+  2500: false

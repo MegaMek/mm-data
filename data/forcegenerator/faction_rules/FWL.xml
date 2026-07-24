@@ -69,7 +69,12 @@
                 <option weightClass="H,M,L">%BATTALION%</option>
                 <option weightClass="M,M,M">%BATTALION%</option>
             </subforceOption>
-            <subforceOption ifWeightClass="H">
+            <!-- Catch Assault too: the Mek Regiment <weightClass> block above only rolls L/M/H,
+                 but the user can force Assault from the Force Generator dialog. Without H|A here,
+                 an Assault selection matches no subforceOption, the regiment generates zero
+                 battalions, and the whole Mek tree collapses to a single orphan element. The
+                 options in this block are already Assault-leaning, so H|A is the right home. -->
+            <subforceOption ifWeightClass="H|A">
                 <option weightClass="A,A,A">%BATTALION%</option>
                 <option weightClass="A,A,H">%BATTALION%</option>
                 <option weightClass="A,A,M">%BATTALION%</option>
@@ -168,13 +173,13 @@
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -191,10 +196,10 @@
                 <option weight="31">Recon</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L">Light Recon</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -411,13 +416,13 @@
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -432,10 +437,10 @@
                 <option weight="31">Recon</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L">Light Recon</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

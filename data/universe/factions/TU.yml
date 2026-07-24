@@ -17,7 +17,15 @@
 
 key: TU
 name: Tikonov Union
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes: []  # no SUCS equivalent
 capital: Terra
+yearsActive:
+  - start: 2177
+    end: 2243
 successor: TGU
 tags:
   - MINOR

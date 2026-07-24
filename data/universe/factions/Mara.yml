@@ -17,7 +17,16 @@
 
 key: Mara
 name: Marlette Association
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes:
+  - MarA
 capital: Terra
+yearsActive:
+  - start: 2278
+    end: 2324
 successor: FS
 tags:
   - MINOR

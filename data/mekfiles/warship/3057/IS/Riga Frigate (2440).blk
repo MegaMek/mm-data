@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed29-7d0e-8cac-d1aed29679b8
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Riga Frigate
 2440
 </year>
 
-<originalBuildYear>
-2440
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,13 +53,13 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:12.0:2:1
-smallcraftbay:4.0:2:2
-cargobay:124350.0:2:3
+asfbay:12.0:2:1::-1:0
+smallcraftbay:4.0:2:2::-1:0
+cargobay:124350.0:2:3::-1:0
 dockingcollar
 dockingcollar
-1stclassquarters:400.0:0
-crewquarters:1393.0:0
+1stclassquarters:400.0:0:-1::-1:0
+crewquarters:1393.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ crewquarters:1393.0:0
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 70
@@ -186,15 +181,19 @@ Ammo NAC/30:100
 </structural_integrity>
 
 <capabilities>
-The Riga-class frigate excelled in extended operations and independent missions. It incorporated new maneuver drives that maximized fuel efficiency without compromising speed. The ship's energy-based weapon systems eliminated the need for ammunition, enhancing its operational effectiveness. To address concerns about firepower at close range, autocannons were added, complemented by large magazine stores. The Riga's armored hull provided battlecruiser-level protection, and it carried two squadrons of fighters for self-defense and protection against enemy fighters. These capabilities made the Riga an effective escort ship during fleet deployments and enabled successful long-range operations during the Reunification War.
+<p>Displacing 750,000 tons across 693 meters of hull, the Riga carried firepower that many contemporary officers considered more fitting for a battlecruiser than a frigate. Three Heavy Naval PPCs and six NL55 naval lasers anchored the nose and broadside arcs, delivering capital-grade energy strikes at long range. Five Light Naval PPCs and six NL45 naval lasers provided secondary energy coverage across the forward quarter, aft quarter, and stern arcs. Six NAC/30 naval autocannons in the nose and broadsides and eight NAC/25 autocannons in the quarter arcs delivered punishing ballistic fire at closer ranges, with large magazine stores ensuring sustained engagements.</p><p>The emphasis on energy weapons was a deliberate choice to minimize ammunition dependency during extended independent operations, though Hegemony Naval Command insisted on the autocannon batteries for shorter-range punch. Two thousand one hundred single heat sinks managed the thermal load, while 443.5 tons of ferro-carbide armor provided protection rivaling contemporary battlecruisers. New maneuver drives maximized fuel efficiency without sacrificing speed. Two docking collars, twelve fighter bays housing two full squadrons, four small craft bays, and over 124,000 tons of cargo space rounded out a substantial logistics capacity. Two gravity decks at 140 and 65 meters served a crew of approximately 280.</p>
 </capabilities>
 
 <overview>
-The Riga-class frigate was developed by the Terran Hegemony to address deficiencies in their naval assets. Designed to fulfill the roles of a destroyer and cruiser, the Riga was optimized for extended operations and independent duty. It featured efficient maneuver drives, energy-based weapon systems, and a battlecruiser-level armor hull. Despite initial concerns about firepower at shorter ranges, a compromise was reached with the inclusion of autocannons. The Riga also served as an escort ship during fleet deployments and played a significant role in the Reunification War. The production of Riga-class frigates eventually gave way to the Congress-class in 2542.
+<p>The Riga-class frigate was Boeing Interstellar's solution to a critical gap in the Terran Hegemony's naval order of battle. Commissioned in 2440 after more than a decade of study and development, the class was designed to fill a role between destroyer and cruiser, combining the endurance for extended independent patrols with firepower well above its nominal weight class. Where existing frigates sacrificed either staying power or offensive capability, the Riga offered both, giving fleet commanders a single hull that could screen capital formations, escort convoys through contested space, or operate independently along frontier patrol routes. The design earned a reputation as a dependable workhorse of Hegemony naval operations, a vessel that punched well above its tonnage classification and could perform duties that would otherwise require a larger and more expensive warship.</p>
 </overview>
 
+<deployment>
+<p>The most infamous individual Rigas were the WoBS Red Angel and WoBS White Devil, former Star League-era hulls recovered and restored to service by the Word of Blake. The Red Angel deployed to New Avalon in October 3067 alongside the Essex-class Divine Forgiveness and Aegis-class Herald of Justice, forming the Blakist punitive fleet that would terrorize the Federated Suns capital for five years. The Red Angel and Divine Forgiveness conducted nuclear orbital bombardment of Avalon City, shattering the First Davion Guards and devastating much of the planetary capital. The Red Angel maintained orbital blockade over New Avalon until December 3072, when the Fifth FedCom RCT finally destroyed the vessel.</p><p>The White Devil met its end during Operation CASE WHITE in March 3068. In the Clan Homeworlds, the Hetherington, originally an SLDF vessel placed into storage by Clan Star Adder, was recovered by the Society and transferred to the resurrected Clan Burrock during the Wars of Reaving. After raiding a Diamond Shark convoy at Salonika in July 3072, the Hetherington returned with reinforcements but was destroyed by Diamond Shark forces in the ensuing battle.</p>
+</deployment>
+
 <history>
-The development of the Riga-class frigate came as a result of a study conducted by the Terran Hegemony's Center of Strategic Studies and Naval Command, aiming to address the lack of assets to meet mission objectives. The Riga, a Boeing Interstellar design, was authorized in 2438 after negotiations and political maneuvering. Construction commenced in 2439, and the first ship was commissioned in 2440. The production of Rigas continued until the introduction of the Congress-class frigate in 2542. During their service, Riga-class frigates played a crucial role in the Reunification War and proved their capability for extended operations. However, they were retired in 2735 to make way for the Sovetskii Soyuz-class heavy cruisers. The last Riga-class vessel was mothballed in 2740. The Word of Blake surprised the Inner Sphere by deploying two recovered Rigas during the Jihad, but both ships were destroyed by 3073. After the decommissioning of the original Riga class, a second block of Rigas, known as the Riga II, was produced for the Star League Defense Force between 2747 and 2766. The Riga II had a smaller mass than its predecessor and was designated as a destroyer and escort carrier rather than a frigate.
+<p>The Riga-class frigate originated from a joint study initiated in 2426 by the Terran Hegemony's Center of Strategic Studies and Hegemony Naval Command, which conducted a decade-long analysis of naval deficiencies. The study identified a gap endemic to most nations of the era: insufficient assets to meet mission objectives. Specifically, the Hegemony needed a vessel capable of performing destroyer duties while fighting like a cruiser. The Navy was deeply skeptical of any new frigate proposal following the Quixote procurement debacle, but Boeing Interstellar's design proved compelling enough to win approval after two years of political maneuvering. Construction began in 2438 at Boeing's Terra facility, with the first vessel completing eighteen months later and commissioning in 2440.</p><p>The class proved its worth during the Reunification War, demonstrating excellent long-range operational capability while escorting Monsoon-class battleships and Aegis-class heavy cruisers during fleet deployments. Boeing Interstellar continued production for over a century until the Congress-class frigate entered service in 2542. Even after production ceased, Rigas remained in widespread service for nearly two more centuries. The Rim Worlds Republic became by far the largest operator, fielding sixty-five vessels designated as Riga I frigates by 2765, including the RWS Sagittarius, permanently assigned to the Fifth Amaris Regulars with a lithium-fusion battery upgrade.</p><p>The Hegemony began retiring the class in 2735 to make room for the new Sovetskii Soyuz-class heavy cruisers, with the last vessels mothballed by 2740. Boeing Interstellar later developed the Riga II destroyer-carrier in 2747, a separate successor class that would eventually evolve into the York-class in Clan service. Despite formal retirement, the Word of Blake recovered at least two mothballed hulls and restored them to operational condition before the Jihad. Their actions during that conflict, particularly the nuclear bombardment of Avalon City, numbered among the most devastating naval operations of the era. In the Clan Homeworlds, the destruction of the last known Riga at Salonika during the Wars of Reaving marked the final chapter of a class that had served for over three centuries.</p>
 </history>
 
 <manufacturer>
@@ -206,12 +205,22 @@ Terra
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Boeing Interstellar
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Riga
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Frigate

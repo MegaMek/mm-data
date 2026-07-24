@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Gorfynt
-sucsId: 980
+sucsId: 981
 xcood: -233.62
 ycood: 488.928
 spectralType: F8V
@@ -87,6 +87,12 @@ planet:
       - name: Perth Amboy B
       - name: Perth Amboy C
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2719-07-26'
         faction:
           source: canon
@@ -104,6 +110,15 @@ planet:
         population: 595825.0
       - date: '2750-01-01'
         population: 1364145.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Apollo Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 2684090.0
       - date: '2770-01-01'
@@ -123,6 +138,12 @@ planet:
             - IND
         population: 45950.0
         socioIndustrial: C-C-B-D-F
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2785-01-16'
         hpg: X
       - date: '2790-01-01'
@@ -133,6 +154,12 @@ planet:
         population: 1337274.0
       - date: '2820-01-01'
         population: 2905550.0
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '2830-01-01'
         population: 5298835.0
       - date: '2840-01-01'
@@ -204,11 +231,6 @@ planet:
         population: 46371120.0
       - date: '3145-01-01'
         population: 46389672.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - ABN
   - name: Cronos's Choice
     type: TERRESTRIAL
     orbitalDist: 1.92

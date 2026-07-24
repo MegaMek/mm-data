@@ -17,6 +17,11 @@
 
 key: CNC
 name: Clan Nova Cat
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CNC
 capital: Barcella
 capitalChanges:
   3057: Irece
@@ -97,3 +102,5 @@ factionLeaders:
     gender: "MALE"
     startYear: 3120
     endYear: 3142
+usesMercenaries:
+  2500: false

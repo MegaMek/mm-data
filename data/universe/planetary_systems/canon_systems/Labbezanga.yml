@@ -1,0 +1,261 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# NOTE: Coordinates derived from lore (coreward Deep Periphery).
+
+id: Labbezanga
+xcood: -100.0
+ycood: 600.0
+spectralType: G5V
+planet:
+  - name: Labbezanga I
+    type: TERRESTRIAL
+    orbitalDist: 0.36
+    sysPos: 1
+    icon: barren4
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.51
+    diameter: 7500
+    density: 4.7795
+    dayLength: 19
+    yearLength: 1
+    temperature: 169
+    water: 0
+    smallMoons: 5
+  - name: Labbezanga
+    type: TERRESTRIAL
+    orbitalDist: 0.63
+    sysPos: 2
+    icon: green15
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.08
+    diameter: 12000
+    density: 6.3437
+    dayLength: 22
+    yearLength: 1.1
+    temperature: 29
+    water: 36
+    lifeForm: REPTILE
+    smallMoons: 3
+    event:
+      - date: '2800-01-01'
+        population: 41970.0
+        socioIndustrial: C-D-A-D-F
+      - date: '2810-01-01'
+        population: 131124.0
+      - date: '2820-01-01'
+        population: 318157.0
+      - date: '2830-01-01'
+        population: 634155.0
+      - date: '2840-01-01'
+        population: 1078328.0
+      - date: '2850-01-01'
+        population: 1631787.0
+      - date: '2860-01-01'
+        population: 2253818.0
+      - date: '2870-01-01'
+        population: 2890991.0
+      - date: '2880-01-01'
+        population: 3516878.0
+      - date: '2890-01-01'
+        population: 4100259.0
+      - date: '2900-01-01'
+        population: 4607512.0
+      - date: '2910-01-01'
+        population: 5042749.0
+      - date: '2920-01-01'
+        population: 5432545.0
+      - date: '2930-01-01'
+        population: 5774856.0
+      - date: '2940-01-01'
+        population: 6055169.0
+      - date: '2950-01-01'
+        population: 6317130.0
+      - date: '2960-01-01'
+        population: 6526220.0
+      - date: '2970-01-01'
+        population: 6712623.0
+      - date: '2980-01-01'
+        population: 6872844.0
+      - date: '2990-01-01'
+        population: 7005821.0
+      - date: '3000-01-01'
+        population: 7126447.0
+      - date: '3010-01-01'
+        population: 7239548.0
+      - date: '3020-01-01'
+        population: 7343510.0
+      - date: '3021-01-01'
+        socioIndustrial: D-D-A-D-F
+      - date: '3030-01-01'
+        population: 7444871.0
+      - date: '3040-01-01'
+        population: 7476355.0
+      - date: '3047-01-01'
+        socioIndustrial: F-F-A-D-F
+      - date: '3050-01-01'
+        population: 7465400.0
+      - date: '3060-01-01'
+        population: 7435622.0
+      - date: '3070-01-01'
+        population: 7414923.0
+      - date: '3080-01-01'
+        population: 7507441.0
+      - date: '3090-01-01'
+        population: 7648386.0
+        socioIndustrial: F-F-A-D-F
+      - date: '3100-01-01'
+        population: 7774854.0
+      - date: '3110-01-01'
+        population: 7919235.0
+      - date: '3120-01-01'
+        population: 8051792.0
+      - date: '3130-01-01'
+        population: 8171844.0
+      - date: '3140-01-01'
+        population: 8308629.0
+  - name: Labbezanga III
+    type: ICE_GIANT
+    orbitalDist: 0.9
+    sysPos: 3
+    icon: iceg16
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.02
+    diameter: 45000
+    density: 1.6
+    dayLength: 7
+    yearLength: 1.3
+    smallMoons: 10
+  - name: Labbezanga IV
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 1.44
+    sysPos: 4
+    icon: gasg13
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.99
+    diameter: 17500
+    density: 8
+    dayLength: 16
+    yearLength: 2
+    smallMoons: 3
+    satellite:
+      - name: 4-M1
+        size: medium
+        icon: rock1
+  - name: Labbezanga V
+    type: DWARF_TERRESTRIAL
+    orbitalDist: 2.52
+    sysPos: 5
+    icon: rock16
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.02
+    diameter: 1200
+    density: 1
+    dayLength: 23
+    yearLength: 4.1
+    temperature: -106
+    water: 0
+  - name: Labbezanga VI
+    type: GAS_GIANT
+    orbitalDist: 4.68
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.03
+    diameter: 130000
+    density: 1.1
+    dayLength: 17
+    yearLength: 10.2
+    ring: true
+    smallMoons: 14
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-L2
+        size: large
+        icon: rock2
+      - name: 6-L3
+        size: large
+        icon: rock3
+      - name: 6-L4
+        size: large
+        icon: rock4
+      - name: 6-L5
+        size: large
+        icon: rock5
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+      - name: 6-M3
+        size: medium
+        icon: rock3
+  - name: Labbezanga VII
+    type: GAS_GIANT
+    orbitalDist: 9
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.15
+    diameter: 90000
+    density: 0.9
+    dayLength: 14
+    yearLength: 27
+    smallMoons: 16
+  - name: Labbezanga VIII
+    type: GAS_GIANT
+    orbitalDist: 17.64
+    sysPos: 8
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.22
+    diameter: 130000
+    density: 1.2
+    dayLength: 13
+    yearLength: 74.1
+    smallMoons: 18
+    satellite:
+      - name: 8-L1
+        size: large
+        icon: rock1
+      - name: 8-M1
+        size: medium
+        icon: rock1
+      - name: 8-M2
+        size: medium
+        icon: rock2
+      - name: 8-M3
+        size: medium
+        icon: rock3
+primarySlot: 2

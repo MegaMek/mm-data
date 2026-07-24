@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,6 +20,19 @@
 <abilities>
     <!-- PILOTING SPA -->
     <ability>
+        <lookupName>wind_walker</lookupName>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq>
+            <skill>Piloting/Aircraft::Regular</skill>
+            <skill>Piloting/Spacecraft::Regular</skill>
+            <skill>Piloting/VTOL::Regular</skill>
+            <skill>Piloting/Aerospace::Regular</skill>
+            <skill>Gunnery/ProtoMek::Regular</skill>
+        </skillPrereq>
+    </ability>
+    <ability>
         <lookupName>env_specialist</lookupName>
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
@@ -36,7 +49,7 @@
             <skill>Gunnery/Aerospace::Regular</skill>
             <skill>Piloting/Aerospace::Regular</skill>
             <skill>Gunnery/ProtoMek::Regular</skill>
-            <skill>Anti-Mek::Regular</skill>
+            <skill>Anti-Mek (Climbing)::Regular</skill>
             <skill>Piloting/Ground Vehicle::Regular</skill>
             <skill>Gunnery/Aircraft::Regular</skill>
             <skill>Gunnery/Vehicle::Regular</skill>
@@ -91,6 +104,15 @@
         <weight>6</weight>
         <skillPrereq>
             <skill>Gunnery/ProtoMek::Regular</skill>
+            <skill>Piloting/Mek::Regular</skill>
+        </skillPrereq>
+    </ability>
+    <ability>
+        <lookupName>hvy_lifter</lookupName>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq>
             <skill>Piloting/Mek::Regular</skill>
         </skillPrereq>
     </ability>
@@ -162,7 +184,7 @@
         <originOnly>false</originOnly>
         <weight>3</weight>
         <skillPrereq>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Piloting/Mek::Veteran</skill>
@@ -184,7 +206,7 @@
         <originOnly>false</originOnly>
         <weight>3</weight>
         <skillPrereq>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Piloting/Mek::Veteran</skill>
@@ -196,7 +218,7 @@
         <originOnly>false</originOnly>
         <weight>3</weight>
         <skillPrereq>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Piloting/Mek::Veteran</skill>
@@ -208,7 +230,7 @@
         <originOnly>false</originOnly>
         <weight>1</weight>
         <skillPrereq>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Piloting/Mek::Veteran</skill>
@@ -239,56 +261,7 @@
         </skillPrereq>
     </ability>
 
-    <!-- GUNNERY SPA -->
-    <!-- the next three SPAs should not be enabled unless Gunnery Specialization is disabled first -->
-    <!--     <ability> -->
-    <!--         <lookupName>gunnery_ballistic</lookupName> -->
-    <!--         <xpCost>100</xpCost> -->
-    <!--         <originOnly>false</originOnly> -->
-    <!--         <weight>1</weight> -->
-    <!--         <invalidAbilities>weapon_specialist::specialist</invalidAbilities> -->
-    <!--         <skillPrereq> -->
-    <!--             <skill>Gunnery/Mek::Green</skill> -->
-    <!--             <skill>Gunnery/ProtoMek::Green</skill> -->
-    <!--             <skill>Gunnery/Aircraft::Green</skill> -->
-    <!--             <skill>Gunnery/Aerospace::Green</skill> -->
-    <!--             <skill>Gunnery/Spacecraft::Green</skill> -->
-    <!--             <skill>Gunnery/BattleArmor::Green</skill> -->
-    <!--             <skill>Gunnery/Vehicle::Green</skill> -->
-    <!--         </skillPrereq> -->
-    <!--     </ability> -->
-    <!--     <ability> -->
-    <!--         <lookupName>gunnery_missile</lookupName> -->
-    <!--         <xpCost>100</xpCost> -->
-    <!--         <originOnly>false</originOnly> -->
-    <!--         <weight>1</weight> -->
-    <!--         <invalidAbilities>weapon_specialist::specialist</invalidAbilities> -->
-    <!--         <skillPrereq> -->
-    <!--             <skill>Gunnery/Mek::Green</skill> -->
-    <!--             <skill>Gunnery/ProtoMek::Green</skill> -->
-    <!--             <skill>Gunnery/Aircraft::Green</skill> -->
-    <!--             <skill>Gunnery/Aerospace::Green</skill> -->
-    <!--             <skill>Gunnery/Spacecraft::Green</skill> -->
-    <!--             <skill>Gunnery/BattleArmor::Green</skill> -->
-    <!--             <skill>Gunnery/Vehicle::Green</skill> -->
-    <!--         </skillPrereq> -->
-    <!--     </ability> -->
-    <!--     <ability> -->
-    <!--         <lookupName>gunnery_laser</lookupName> -->
-    <!--         <xpCost>100</xpCost> -->
-    <!--         <originOnly>false</originOnly> -->
-    <!--         <weight>1</weight> -->
-    <!--         <invalidAbilities>weapon_specialist::specialist</invalidAbilities> -->
-    <!--         <skillPrereq> -->
-    <!--             <skill>Gunnery/Mek::Green</skill> -->
-    <!--             <skill>Gunnery/ProtoMek::Green</skill> -->
-    <!--             <skill>Gunnery/Aircraft::Green</skill> -->
-    <!--             <skill>Gunnery/Aerospace::Green</skill> -->
-    <!--             <skill>Gunnery/Spacecraft::Green</skill> -->
-    <!--             <skill>Gunnery/BattleArmor::Green</skill> -->
-    <!--             <skill>Gunnery/Vehicle::Green</skill> -->
-    <!--         </skillPrereq> -->
-    <!--     </ability> -->
+    <!--     GUNNERY SPA -->
     <ability>
         <lookupName>cluster_hitter</lookupName>
         <xpCost>100</xpCost>
@@ -354,7 +327,7 @@
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
         <weight>3</weight>
-        <invalidAbilities>oblique_attacker::sandblaster</invalidAbilities>
+        <invalidAbilities>cluster_hitter</invalidAbilities>
         <skillPrereq>
             <skill>Gunnery/Mek::Regular</skill>
             <skill>Gunnery/ProtoMek::Regular</skill>
@@ -407,7 +380,7 @@
             <skill>Gunnery/Aircraft::Veteran</skill>
             <skill>Gunnery/Vehicle::Veteran</skill>
             <skill>Gunnery/Spacecraft::Veteran</skill>
-            <skill>Gunnery/Battlesuit::Veteran</skill>
+            <skill>Gunnery/BattleArmor::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
         </skillPrereq>
     </ability>
@@ -502,6 +475,102 @@
 
     <!-- Misc SPA -->
     <ability>
+        <lookupName>unofficial_transport_negotiator</lookupName>
+        <displayName>Transport Negotiator (Unofficial)</displayName>
+        <desc><![CDATA[Decreases all transport costs by 5%. Multiple characters with this SPA do not stack their benefits.
+
+Has no benefit to a character without the Admin/Transport profession.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_bargain_hunter</lookupName>
+        <displayName>Bargain Hunter (Unofficial)</displayName>
+        <desc><![CDATA[Decreases the Target Number for all Appraisal checks by 2.
+
+This is useful for procurement characters as it increases the chance they will find a bargain (discount) on purchased parts.
+
+Has limited benefit if the functional appraisal option is not enabled in campaign options.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Appraisal::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_shakey_scalpel</lookupName>
+        <displayName>Shakey Scalpel (Unofficial)</displayName>
+        <desc><![CDATA[Increases the Target Number for all Surgery/Any checks by 2.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_embezzler</lookupName>
+        <displayName>Embezzler (Unofficial)</displayName>
+        <desc><![CDATA[At the end of each month, some money goes missing. Nobody knows where. It's probably fine.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_paper_surgeon</lookupName>
+        <displayName>Paper Surgeon (Unofficial)</displayName>
+        <desc><![CDATA[This character is an excellent surgeon, on paper. Increases the Target Number for all Surgery/Any checks by 2.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_loses_paperwork</lookupName>
+        <displayName>Constantly Loses Paperwork (Unofficial)</displayName>
+        <desc><![CDATA[Increases the Target Number for all Administration checks by 2.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Administration::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_patient_educator</lookupName>
+        <displayName>Patient Educator (Unofficial)</displayName>
+        <desc><![CDATA[Decreases the Target Number for all Training checks by 2.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Training::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_pathologic_insight</lookupName>
+        <displayName>Pathologic Insight (Unofficial)</displayName>
+        <desc><![CDATA[Decreases the Target Number for all Surgery/Any checks made to curse diseases by 2.
+
+This has no effect if Advanced Medical's alternative mode is disabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
         <lookupName>unofficial_houdini</lookupName>
         <displayName>Houdini (Unofficial)</displayName>
         <desc><![CDATA[Decreases the Target Number for all Escape Artist checks by 2.]]></desc>
@@ -588,7 +657,9 @@ If this character is the senior-most Admin/Command character, the number of cont
         <displayName>Tetris Master (Unofficial)</displayName>
         <desc><![CDATA[This character has mastered the subtle art of stacking cargo boxes.
 
-The campaign's cargo capacity is increased by 5% per character with this SPA.]]></desc>
+The campaign's cargo capacity is increased by 5% per character with this SPA.
+
+This SPA only confers a benefit if the character has either the Admin/Logistics or Admin/Transport roles.]]></desc>
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
         <weight>1</weight>
@@ -861,11 +932,9 @@ The following skills are affected: Acting, Appraisal, Art/Any, Computers, Crypto
     <ability>
         <lookupName>flaw_transit_disorientation_syndrome</lookupName>
         <displayName>Transit Disorientation Syndrome (ATOW)</displayName>
-        <desc><![CDATA[Is violently ill following a hyperspace jump.
+        <desc><![CDATA[Is violently ill following a hyperspace jump, increasing Fatigue (if Fatigue is enabled, default 1).
 
-They increase the Target Number of Piloting and Gunnery checks by 1 for 48 hours following the jump (Advanced Medical only).
-
-They also gain Fatigue based on the campaign options fatigue rate (default 1).]]></desc>
+Has no mechanical effect if Fatigue is disabled.]]></desc>
         <xpCost>-100</xpCost>
         <originOnly>false</originOnly>
         <weight>1</weight>
@@ -1123,6 +1192,19 @@ This SPA increases that maximum by 1, but does not increase the Attribute itself
         <skillPrereq />
     </ability>
     <ability>
+        <lookupName>unofficial_beloved_pet</lookupName>
+        <displayName>Beloved Pet (Unofficial)</displayName>
+        <desc><![CDATA[This character has a beloved pet. Their companionship helps the character through hard times.
+
+Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+This SPA increases maximum by Edge 1, but does not increase the Attribute itself.]]></desc>
+        <xpCost>200</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
         <lookupName>unofficial_implant_resistance</lookupName>
         <displayName>Implant Resistance (Unofficial)</displayName>
         <desc><![CDATA[Exhibits a natural resistance to the negative effects of EI Implants, reducing the Target Number to avoid gaining an annual Flaw by 2]]></desc>
@@ -1149,7 +1231,7 @@ This SPA increases that maximum by 1, but does not increase the Attribute itself
             <skill>Gunnery/Aerospace::Regular</skill>
             <skill>Piloting/Aerospace::Regular</skill>
             <skill>Gunnery/ProtoMek::Regular</skill>
-            <skill>Anti-Mek::Regular</skill>
+            <skill>Anti-Mek (Climbing)::Regular</skill>
             <skill>Piloting/Ground Vehicle::Regular</skill>
             <skill>Gunnery/Aircraft::Regular</skill>
             <skill>Gunnery/Vehicle::Regular</skill>
@@ -1172,7 +1254,7 @@ This SPA increases that maximum by 1, but does not increase the Attribute itself
             <skill>Gunnery/Aerospace::Regular</skill>
             <skill>Piloting/Aerospace::Regular</skill>
             <skill>Gunnery/ProtoMek::Regular</skill>
-            <skill>Anti-Mek::Regular</skill>
+            <skill>Anti-Mek (Climbing)::Regular</skill>
             <skill>Piloting/Ground Vehicle::Regular</skill>
             <skill>Gunnery/Aircraft::Regular</skill>
             <skill>Gunnery/Vehicle::Regular</skill>
@@ -1195,7 +1277,7 @@ This SPA increases that maximum by 1, but does not increase the Attribute itself
             <skill>Gunnery/Aerospace::Regular</skill>
             <skill>Piloting/Aerospace::Regular</skill>
             <skill>Gunnery/ProtoMek::Regular</skill>
-            <skill>Anti-Mek::Regular</skill>
+            <skill>Anti-Mek (Climbing)::Regular</skill>
             <skill>Piloting/Ground Vehicle::Regular</skill>
             <skill>Gunnery/Aircraft::Regular</skill>
             <skill>Gunnery/Vehicle::Regular</skill>
@@ -1236,7 +1318,7 @@ If individual initiative is enabled, this bonus applies only to the pilot's unit
             <skill>Gunnery/Aerospace::Veteran</skill>
             <skill>Piloting/Aerospace::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Gunnery/Aircraft::Veteran</skill>
             <skill>Gunnery/Vehicle::Veteran</skill>
@@ -1260,7 +1342,7 @@ If individual initiative is enabled, this bonus applies only to the pilot's unit
             <skill>Gunnery/Aerospace::Veteran</skill>
             <skill>Piloting/Aerospace::Veteran</skill>
             <skill>Gunnery/ProtoMek::Veteran</skill>
-            <skill>Anti-Mek::Veteran</skill>
+            <skill>Anti-Mek (Climbing)::Veteran</skill>
             <skill>Piloting/Ground Vehicle::Veteran</skill>
             <skill>Gunnery/Aircraft::Veteran</skill>
             <skill>Gunnery/Vehicle::Veteran</skill>
@@ -1354,7 +1436,7 @@ Furthermore, the character reduces the target number of all Sensor Operations ch
         <weight>3</weight>
         <skillPrereq>
             <skill>Small Arms::Regular</skill>
-            <skill>Gunnery/Battlesuit::Regular</skill>
+            <skill>Gunnery/BattleArmor::Regular</skill>
         </skillPrereq>
     </ability>
 
@@ -1433,6 +1515,45 @@ Furthermore, the character reduces the target number of all Sensor Operations ch
             <skill>Tech/Mek::Regular</skill>
             <skill>Tech/BattleArmor::Regular</skill>
         </skillPrereq>
+    </ability>
+    <ability>
+        <lookupName>unofficial_ill_do_it_myself</lookupName>
+        <displayName>I'll Do It Myself (Unofficial)</displayName>
+        <desc><![CDATA[Is a one-person team. Requires no astech or medic assistants.
+
+Has no effect on a character without a Tech/Any (non-vessel) or Doctor profession.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq>
+            <skill>Tech/Aero::Veteran</skill>
+            <skill>Tech/Mechanic::Veteran</skill>
+            <skill>Tech/Mek::Veteran</skill>
+            <skill>Tech/BattleArmor::Veteran</skill>
+            <skill>Surgery/Any::Veteran</skill>
+        </skillPrereq>
+    </ability>
+    <ability>
+        <lookupName>unofficial_spice_is_right</lookupName>
+        <displayName>The Spice is Right (Unofficial)</displayName>
+        <desc><![CDATA[Knows how to make the best of every meal.
+
+Reduces the target number of all Art/Cooking checks by 2.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <invalidAbilities>unofficial_kitchen_menace</invalidAbilities>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_kitchen_menace</lookupName>
+        <displayName>Kitchen Menace (Unofficial)</displayName>
+        <desc><![CDATA[Has no idea how to cook even the most basic of meals.
+
+Increases the target number of all Art/Cooking checks by 2.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <invalidAbilities>unofficial_spice_is_right</invalidAbilities>
+        <weight>1</weight>
     </ability>
     <ability>
         <lookupName>tech_maintainer</lookupName>
@@ -1663,11 +1784,85 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>unofficial_biological_machinist</lookupName>
         <displayName>Biological Machinist (Unofficial)</displayName>
-        <desc><![CDATA[Decreases the target number of all prosthetic surgeries by 2 (excludes cosmetic surgery). This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <desc><![CDATA[Decreases the target number of all advanced surgeries by 2 (excludes cosmetic surgery). This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
         <xpCost>100</xpCost>
         <originOnly>false</originOnly>
         <weight>1</weight>
         <skillPrereq />
+    </ability>
+    <ability>
+        <lookupName>unofficial_holistic_care</lookupName>
+        <displayName>Expert Holistic Care (Unofficial)</displayName>
+        <desc><![CDATA[Each day this doctor has a 1-in-20 of reducing a patient's healing time by 2 days, instead of 1. The doctor rolls once per patient per injury.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>200</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Veteran</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_trauma_surgeon</lookupName>
+        <displayName>Trauma Surgeon (Unofficial)</displayName>
+        <desc><![CDATA[The more badly injured a patient is, the harder they are to heal. This trait decreases the injury penalty by 1.
+
+Does not affect the healing penalty incurred by permanent modifications, such as prosthetics.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
+    </ability>
+    <ability>
+        <lookupName>unofficial_useless_talent</lookupName>
+        <displayName>Useless Talent (Unofficial)</displayName>
+        <desc><![CDATA[The character has a talent. It's not very useful. Has no mechanical effect, but they like showing it off at parties.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
+        <lookupName>unofficial_radio_hobbyist</lookupName>
+        <displayName>Radio Hobbyist (Unofficial)</displayName>
+        <desc><![CDATA[Decreases the target number of Communications/Any checks by 2.
+
+Has limited effects if Advanced Scouting is disabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
+        <lookupName>unofficial_hypochondriac</lookupName>
+        <displayName>Hypochondriac (Unofficial)</displayName>
+        <desc><![CDATA[The more injured a character is, the harder the Surgery/Any check to heal them. This character increases their healing Target Number by 1.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>-100</xpCost>
+        <originOnly>false</originOnly>
+        <weight>1</weight>
+        <skillPrereq />
+    </ability>
+    <ability>
+        <lookupName>unofficial_prothesis_technician</lookupName>
+        <displayName>Experienced Prothesis Technician (Unofficial)</displayName>
+        <desc><![CDATA[The more locations that have been replaced by prosthetics, or implants, the harder a patient is to heal. This trait decreases the penalty by 1.
+
+Does not affect the healing penalty incurred by normal injuries.
+
+This only has an effect if Advanced Medical's alternative mode is enabled.]]></desc>
+        <xpCost>100</xpCost>
+        <originOnly>false</originOnly>
+        <skillPrereq>
+            <skill>Surgery/Any::Regular</skill>
+        </skillPrereq>
+        <weight>1</weight>
     </ability>
     <ability>
         <lookupName>compulsion_pathologic_racism</lookupName>
@@ -1695,6 +1890,8 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <lookupName>compulsion_addiction</lookupName>
         <displayName>Significant Compulsion - Narcotic Addiction (ATOW)</displayName>
         <desc><![CDATA[Once per week a Willpower check is made (with a -2 penalty). If failed, the character suffers the Discontinuation Syndrome Injury and gains two Fatigue (if Fatigue is enabled).
+
+This check can be skipped if the campaign is willing to subsidize the character's addiction. This can be done via the 'Flags' menu in the Personnel tab.
 
 If Advanced Medical is disabled, the character suffers a single Hit, instead of the Injury.
 
@@ -1738,7 +1935,9 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_flashbacks</lookupName>
         <displayName>Minor Psychosis - Flashbacks (ATOW)</displayName>
-        <desc><![CDATA[Each week the character is required to make a Willpower check (with a -4 penalty) or suffer the 'Crippling Flashbacks' Injury (-1 Piloting, -1 Gunnery).
+        <desc><![CDATA[Each week you are required to pay a small stipend to cover medical expenses.
+
+If you are unable to pay this fee, the character is required to make a Willpower check (with a -4 penalty) or suffer the 'Crippling Flashbacks' Injury (-1 Piloting, -1 Gunnery).
 
 If Advanced Medical is disabled, the character suffers a single Hit, instead of the Injury.
 
@@ -1766,7 +1965,9 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <displayName>Minor Psychosis - Clinical Paranoia (ATOW)</displayName>
         <desc><![CDATA[Inflicts a -2 penalty to all Charisma-based skill checks.
 
-Each week the character must pass a Willpower check (with a -4 penalty) or temporarily lose all ranks in the Connections trait for the duration of the week.
+Each week you are required to pay a small stipend to cover medical expenses.
+
+If you fail to pay this fee, the character must pass a Willpower check (with a -4 penalty) or temporarily lose all ranks in the Connections trait for the duration of the week.
 
 While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <xpCost>-300</xpCost>
@@ -1777,7 +1978,11 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_split_personality</lookupName>
         <displayName>Minor Psychosis - Split Personality (ATOW)</displayName>
-        <desc><![CDATA[The character gains a number of random personalities. Each week they have a chance to switch to one of their personalities.
+        <desc><![CDATA[The character gains a number of random personalities.
+
+Each week you are required to pay a small stipend to cover medical expenses.
+
+If the stipend is not paid the character has a chance to switch to one of their personalities.
 
 While the character's personality has switched, they temporarily lose all levels in the Connections Trait.
 
@@ -1790,9 +1995,11 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_catatonia</lookupName>
         <displayName>Clinical Insanity - Catatonia (ATOW)</displayName>
-        <desc><![CDATA[Each week the character must pass a Willpower check (with a -10 penalty) or gain the Catatonia Injury (-20 Piloting, -20 Gunnery).
+        <desc><![CDATA[Each week you are required to pay a small stipend to cover medical expenses.
 
-If Advanced Medical is disabled the character gains a single Hit, instead of the Injury.
+If you fail to pay the stipend, the character must pass a Willpower check (with a -10 penalty) or gain the Catatonia Injury (-20 Piloting, -20 Gunnery).
+
+If Advanced Medical is disabled, the character gains a single Hit, instead of the Injury.
 
 While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <xpCost>-500</xpCost>
@@ -1803,7 +2010,9 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_regression</lookupName>
         <displayName>Major Psychosis - Regression (ATOW)</displayName>
-        <desc><![CDATA[Each week the character is required to pass a Willpower check (with a -7 penalty) or gain the Childlike Regression Injury (-4 Gunnery, -4 Piloting).
+        <desc><![CDATA[Each week you are required to pay a small stipend to cover medical expenses.
+
+If the stipend isn't paid, the character is required to pass a Willpower check (with a -7 penalty) or gain the Childlike Regression Injury (-4 Gunnery, -4 Piloting).
 
 If Advanced Medical is disabled the character suffers 1 Hit, instead of the Injury.
 
@@ -1816,7 +2025,9 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_hysteria</lookupName>
         <displayName>Major Psychosis - Hysteria (ATOW)</displayName>
-        <desc><![CDATA[Each week the character is required to pass a Willpower check (with a -7 penalty) or become temporarily affected by the Berserker, Confusion, or Clinical Paranoia effects.
+        <desc><![CDATA[Each week you are required to pay a small stipend to cover medical expenses.
+
+If you fail to pay the stipend, the character is required to pass a Willpower check (with a -7 penalty) or become temporarily affected by the Berserker, Confusion, or Clinical Paranoia effects.
 
 - Berserker: The character flies into a berserker frenzy inflicting 1-2 random Injuries to themselves and up to 6 bystanders. If Advanced Medical is disabled, 1-2 Hits are inflicted, instead of Injuries.
 - Confusion: The character suffers one random Injury. If Advanced Medical is disabled, the character suffers a single Hit instead of the Injury.
@@ -1831,7 +2042,9 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <ability>
         <lookupName>madness_berserker</lookupName>
         <displayName>Clinical Insanity - Berserker (ATOW)</displayName>
-        <desc><![CDATA[Once per week the character must pass a Willpower check (with a -10 penalty) or fly into a berserker frenzy inflicting 1-2 random Injuries to themselves and up to 6 bystanders.
+        <desc><![CDATA[Each week you are required to pay a small stipend to cover medical expenses.
+
+If you fail to pay the stipend, the character must pass a Willpower check (with a -10 penalty) or fly into a berserker frenzy inflicting 1-2 random Injuries to themselves and up to 6 bystanders.
 
 If Advanced Medical is disabled 1-2 Hits are inflicted, instead of Injuries.
 
@@ -2033,6 +2246,11 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <desc><![CDATA[Healing check critical failure will be rerolled with Edge.]]></desc>
     </ability>
     <ability>
+        <lookupName>edge_when_advanced_surgery_fail</lookupName>
+        <displayName>Use Edge for Advanced Surgery failure.</displayName>
+        <desc><![CDATA[Advanced Surgery failure will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
         <lookupName>edge_when_repair_break_part</lookupName>
         <displayName>Use Edge for tech breaking part.</displayName>
         <desc><![CDATA[Failed repair check that breaks the part will be rerolled with Edge.]]></desc>
@@ -2043,9 +2261,54 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
         <desc><![CDATA[Failed refit check will be rerolled with Edge.]]></desc>
     </ability>
     <ability>
-        <lookupName>edge_when_admin_acquire_fail</lookupName>
-        <displayName>Use Edge for acquisition failure.</displayName>
-        <desc><![CDATA[Failed acquisition check will be rerolled with edge.]]></desc>
+        <lookupName>edge_when_admin_acquire_fail_other</lookupName>
+        <displayName>Use Edge for Acquisition Failure (TN 2–7).</displayName>
+        <desc><![CDATA[Failed acquisition check will be rerolled with Edge (only if the Target Number is between 2 and 7).]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_admin_acquire_fail_greater_than_eight</lookupName>
+        <displayName>Use Edge for Acquisition Failure (TN 8–10).</displayName>
+        <desc><![CDATA[Failed acquisition check will be rerolled with Edge (only if the Target Number is between 8 and 10).]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_admin_acquire_fail_greater_than_eleven</lookupName>
+        <displayName>Use Edge for Acquisition Failure (TN 11–12).</displayName>
+        <desc><![CDATA[Failed acquisition check will be rerolled with Edge (only if the Target Number is 11 or 12).]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_salvage_accident</lookupName>
+        <displayName>Use Edge for Salvage Accidents.</displayName>
+        <desc><![CDATA[Salvage Accidents will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_escape_attempt_fail</lookupName>
+        <displayName>Use Edge for Escape Attempt Failure.</displayName>
+        <desc><![CDATA[Failed escape attempts will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_admin_fail_appraisal</lookupName>
+        <displayName>Use Edge for Procurement Cost Appraisal Failure.</displayName>
+        <desc><![CDATA[Failed appraisal checks made to reduce procurement costs will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_commander_negotiation_fail</lookupName>
+        <displayName>Use Edge for Commander Contract Negotiations.</displayName>
+        <desc><![CDATA[Use Edge for commander negotiation failure when generating new contracts.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_recon_fail</lookupName>
+        <displayName>Use Edge for Scouting failure.</displayName>
+        <desc><![CDATA[Failed scouting checks will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_training_fail</lookupName>
+        <displayName>Use Edge for Training Operation Failure.</displayName>
+        <desc><![CDATA[Failed training checks made during training operations will be rerolled with Edge.]]></desc>
+    </ability>
+    <ability>
+        <lookupName>edge_when_random_event_fail</lookupName>
+        <displayName>Use Edge for Random Event Failure.</displayName>
+        <desc><![CDATA[Failed skill or attributes checks made when resolving a Random Event will be rerolled with Edge.]]></desc>
     </ability>
 
     <!-- Example entries corresponding to the examples in customspa.xml
@@ -2067,7 +2330,7 @@ While this SPA does exist in ATOW, these effects are unique to MekHQ.]]></desc>
     <edgeTrigger>
         <lookupName>edge_paper_cut</lookupName>
         <displayName>Use Edge to avoid paper cut.</displayName>
-        <desc><![CDATA[A paper cut injury check will be rerolled with edge.]]></desc>
+        <desc><![CDATA[A paper cut injury check will be rerolled with Edge.]]></desc>
     </edgeTrigger>
 
     <implant>

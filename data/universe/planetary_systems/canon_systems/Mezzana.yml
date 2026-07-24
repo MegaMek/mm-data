@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Mezzana
-sucsId: 1693
+sucsId: 1694
 xcood: -357.524
 ycood: 84.74
 spectralType: G0V
@@ -75,6 +75,12 @@ planet:
     landmass:
       - capital: Podenzano
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2680-09-03'
         faction:
           source: canon
@@ -99,6 +105,16 @@ planet:
         population: 939961411.0
       - date: '2750-01-01'
         population: 1004917968.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 1037287241.0
       - date: '2770-01-01'
@@ -166,6 +182,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Alarion Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3046-01-01'
         socioIndustrial: C-D-C-D-D
       - date: '3050-01-01'
@@ -177,12 +204,24 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
       - date: '3060-01-01'
         population: 915925431.0
       - date: '3070-01-01'
         population: 928281432.0
       - date: '3080-01-01'
         population: 934989177.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Buena Province
       - date: '3090-01-01'
         population: 939487914.0
       - date: '3100-01-01'
@@ -201,6 +240,9 @@ planet:
         population: 968874370.0
       - date: '3145-01-01'
         population: 969649779.0
+      - date: '3152-12-31'
+        # administration:
+        #   - Bolan Province
   - name: Acca Larentia
     type: TERRESTRIAL
     orbitalDist: 1.76

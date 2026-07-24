@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8d9-715d-abd9-9da2e9f5bc2f
+</UUID>
 
 <UnitType>
 SupportTank
@@ -33,9 +28,9 @@ SupportTank
 Beast Riot Car
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 9224
@@ -44,10 +39,6 @@ Beast Riot Car
 <year>
 3062
 </year>
-
-<originalBuildYear>
-3062
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -63,8 +54,8 @@ Wheeled
 
 <transporters>
 troopspace:2.0
-standardseats:2.0:0
-cargobay:0.25:1:1
+standardseats:2.0:0:-1::-1:0
+cargobay:0.25:1:2::-1:0
 </transporters>
 
 <cruiseMP>
@@ -74,6 +65,18 @@ cargobay:0.25:1:1
 <engine_type>
 0
 </engine_type>
+
+<armor_type>
+51
+</armor_type>
+
+<armor_tech_rating>
+3
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 2
@@ -89,7 +92,7 @@ Advanced Fire Control
 </Body Equipment>
 
 <Front Equipment>
-Grenade Launcher (Auto)
+InfantryAutoGL:SIZE:1.0
 </Front Equipment>
 
 <Right Equipment>
@@ -102,7 +105,7 @@ Grenade Launcher (Auto)
 </Rear Equipment>
 
 <Turret Equipment>
-Flamer (Heavy)
+Flamer (Heavy):SIZE:1.0
 </Turret Equipment>
 
 <barrating>
@@ -117,13 +120,33 @@ Flamer (Heavy)
 3
 </engine_tech_rating>
 
-<armor_tech_rating>
-3
-</armor_tech_rating>
+<overview>
+<p>The Beast, first fielded in the Word of Blake Protectorate, is an anti-riot vehicle equipped to handle extreme crises. Its weapons include a turret-mounted flamer, a front-mounted grenade launcher, and a driver-operated grenade launcher system, generally equipped with non-lethal ammunition but adaptable to deadly use. The large, well-armored vehicle can transport two full squads of infantry and detain up to seven apprehended individuals.</p>
+</overview>
 
-<history>
-These units have no weights in AToW. The weights are estimates. The units are considered unofficial until weights are given.
-</history>
+<manufacturer>
+Unknown
+</manufacturer>
+
+<primaryFactory>
+Unknown
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 AToW Companion
@@ -136,3 +159,4 @@ AToW Companion
 <fuel>
 0.0
 </fuel>
+

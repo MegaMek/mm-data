@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,10 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.49.18-SNAPSHOT on 2024-01-10
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ea41-7c6d-876f-831c585570a4
+</UUID>
 
 <UnitType>
 VTOL
@@ -39,10 +39,6 @@ Karnov UR Transport
 <year>
 3089
 </year>
-
-<originalBuildYear>
-3089
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -76,9 +72,13 @@ troopspace:10.0
 22
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 10
@@ -109,19 +109,19 @@ ISGuardianECMSuite
 </Rotor Equipment>
 
 <capabilities>
-Constructed around the DAV 190 ICE aircraft engine, the Karnov is known for its reliability and ruggedness. The tiltrotor mechanism allows for horizontal speeds over 180 kph, although landing requires careful rotor positioning due to their size. The variable landing gear and interior cargo bay ramp enhance its versatility in loading and unloading operations. While its StarSlab armor offers protection against light fire, the large rotors are a vulnerability. Recent upgrades include ScatterGun machine guns for self-defense and a rotor auto-adjustment sensor to prevent accidents, demonstrating NETC's commitment to modernizing the Karnov's capabilities.
+<p>The Karnov's airframe is built around the DAV 190 ICE aircraft engine, a powerplant known for reliability and ruggedness. Drive shafts extend from the central wing spar down wing pylons to twin rotor assemblies capable of a full ninety-degree tilt, allowing horizontal speeds exceeding 180 kilometers per hour. The speed comes at a cost, as the large rotor blades must be locked vertical for landing. Many inexperienced pilots have wrecked both aircraft and crew by forgetting this critical step. Variable-geometry landing gear allows the Karnov to straddle loads up to 3.3 meters tall, with the internal cargo bay ramp extending fully for drive-on loading and unloading.</p><p>StarSlab armor forged specifically for the Karnov provides reasonable protection against infantry weapons and light shrapnel, though the oversized rotors remain vulnerable to any sustained fire. Many crashed Karnovs can be found on battlefields with fuselage and wing struts intact but rotors completely shot away. The base Karnov carries no weapons and no dedicated targeting system, relying entirely on speed and standoff distance for protection. A Johnston Q-Rotor communications system handles coordination with ground units, and the six-ton cargo bay accommodates a range of mission loads from bulk supplies to light vehicles.</p>
 </capabilities>
 
 <overview>
-The Karnov UR Transport is a heavy-lift VTOL, originally believed to be of Terran origin and several centuries old. Despite the mystery surrounding its production by the New Earth Trading Company (NETC), the Karnov has been a reliable and versatile asset in both military and corporate sectors across the Inner Sphere. Its adaptability as a cargo carrier and flying crane has made it a common sight on nearly every civilized planet.
+<p>The Karnov UR Transport is a heavy-lift tilt-rotor VTOL whose origins remain one of the enduring mysteries of Inner Sphere military logistics. Although distributed by the New Earth Trading Company since at least the early Succession Wars, NETC has never possessed VTOL manufacturing facilities of its own, and no other firm has publicly claimed credit for the design's production. Despite this uncertainty, the Karnov has earned a reputation for reliability and ruggedness that few transport craft can match. The tilt-rotor configuration makes it one of the fastest VTOLs of its weight class, equally capable as a cargo carrier and a flying crane. Military forces, mercenary commands, and commercial operators across every Successor State employ the Karnov for supply, logistics, and battlefield recovery missions, making its distinctive silhouette synonymous with rear-area transport operations throughout the Inner Sphere.</p>
 </overview>
 
 <deployment>
-The Republic's version of the Karnov incorporates a lightweight engine, enhancing both its speed and capacity. This model also features an upgrade to stealth armor, significantly improving the safety of troop insertions. With a carrying capacity of 10 tons, the Karnov (BA Stealth) is exceptionally suited for transporting not only Spheroid battle armor and special forces units but also for efficiently moving Clan second-line troops.
+<p>The Republic of the Sphere's advanced stealth transport variant, produced at the Terran NETC facility. Vehicular stealth armor with a Guardian ECM suite renders the aircraft extremely difficult to detect during insertion and extraction operations. The ten-ton cargo bay accommodates even Clan assault-class battle armor, making it ideal for moving Spheroid battle armor and special forces alike. Maintaining cruise speeds matching the original Karnov, the BA Stealth variant emphasizes survivability at the cost of weaponry. The Republic prioritized acquiring the Karnov's production plans and facilities specifically to develop this variant, viewing stealthy battle armor delivery as a critical capability for its combined-arms doctrine. The market potential for aftersales packages has proven considerable.</p>
 </deployment>
 
 <history>
-The Karnov UR Transport, initially designed for non-combat roles, has seen a significant evolution into a dedicated infantry transport in the last century. The Republic's variant, with a lighter engine and stealth armor, exemplifies this transition, catering to the transportation of various types of battle armor and special forces. The strategic importance of the Karnov, especially in the context of the impending struggle for Terra, has made acquiring its plans or production lines a key objective. Over the years, the Karnov has proven its resilience and adaptability in numerous conflicts and operations. Its ability to operate in diverse environments, from dense urban landscapes to rugged terrain, has made it a staple in both peacekeeping and warfare. The Karnov's journey from a simple logistics vehicle to a multifaceted military asset reflects the changing dynamics of warfare and the increasing importance of versatile, multi-role vehicles in military strategy. Its enduring relevance in various combat scenarios and the continued demand for its variants underscore its pivotal role in shaping tactical and strategic outcomes on the battlefield.
+<p>The Karnov UR Transport entered widespread Inner Sphere distribution around 2920, when the New Earth Trading Company began offering the design through its extensive commercial network. Unknown to most buyers, NETC's entire supply came from ComStar, provided as part of a secret arrangement in exchange for food, resources, and intelligence. ComStar maintained Karnov production lines on Terra, drawing on manufacturing expertise and engineering records preserved from the Star League era, and shipped completed vehicles to NETC for resale. This arrangement continued for over a century, providing both parties with what they needed while keeping the Karnov's true manufacturing origins hidden.</p><p>The revelation of the Com Guards following the Battle of Tukayyid in 3052 disrupted this arrangement. ComStar retained an increasing share of Karnov production for its own expanding military forces, sharply reducing shipments to NETC. The bloodied but unbowed Com Guards made clear to NETC that the priority of all available resources was rebuilding their divisions back to strength, and the resulting supply shortage forced NETC to take an unprecedented step. As a consolation, Precentor Martial Focht granted NETC a free license to produce the Karnov on their own, leading to the construction of one of the most recently built manufacturing facilities in the Inner Sphere on New Earth. The factory produced several hundred customized units annually, fulfilling both military and civilian orders.</p><p>NETC's policy of customization ensured that Karnov variants became as widely varied as the operators who purchased them. The 3055 Upgrade was the first factory variant, addressing long-standing complaints about the lack of defensive armament and the dangerously sensitive rotor system. Battle armor transport, Periphery strike, and other specialized configurations followed as demand and technology evolved. Meanwhile, the original Terran production line passed from ComStar to Word of Blake control, and then to the Republic of the Sphere following the liberation of Terra. The Republic invested heavily in advanced variants incorporating stealth technology, viewing rapid battle armor insertion as a critical capability for its combined-arms forces.</p>
 </history>
 
 <manufacturer>
@@ -134,15 +134,27 @@ Terra
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:DAV 190 Light
-ARMOR:Ceres Heavy Stealth
-COMMUNICATIONS:Johnston Q-Rotor with ECM
-TARGETING:None
+ENGINE:DAV
+ARMOR:Unknown
+JUMP_JET:N/A
+COMMUNICATIONS:Johnston
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:190 ICE
+ARMOR:Vehicular Stealth
+JUMP_JET:N/A
+COMMUNICATIONS:Q-Rotor
+</systemModels>
 
 <source>
 RG33
 </source>
+
+<published>
+RG33
+</published>
 
 <tonnage>
 30.0

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b67c-7cb9-bbd9-8c96c63a2a5f
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,12 +52,24 @@ Ambusher
 Motorized
 </motion_type>
 
+<Troopers Equipment>
+Taurian Concordat/Calderon Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The mine-sweeping platoons attached to the Red Chasseurs trace their expertise to the Trinity Alliance with the Magistracy of Canopus and the Capellan Confederation. In the 3060s, Capellan mine-handling specialists shared their knowledge with the infantry auxiliaries of the Red Chasseurs, a quick-response regiment that has served the Concordat since the fall of the Star League. The Thirty-fifth Cluster Support Force trained several companies of mine-sweeping troops who became adept at locating and defusing explosive devices in the path of advancing Taurian forces.</p><p>Equipped with auto-rifles and specialized minesweeping gear, these motorized combat engineers clear paths through minefields by disabling explosive devices without detonation, opening routes that would otherwise be impassable to friendly armor and BattleMech formations. Their value was demonstrated during action along the Federated Suns border, where a Support Force platoon located a minefield before a company of tanks blundered into it, earning commendations for their vigilance. Operating from motorized transports, these platoons can keep pace with the Chasseurs' mobile operations rather than being left behind at the pace of foot infantry.</p>
+</overview>
 
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 10
@@ -73,17 +80,10 @@ TR:3085
 </squadn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
-
-<antimek>
-8
-</antimek>
 
 <specialization>
 8
 </specialization>
 
-<armorKit>
-TaurianKit
-</armorKit>

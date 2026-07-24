@@ -1,0 +1,96 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# The Second Star League's liberation of the Combine worlds conquered by Clan Smoke
+# Jaguar. The containments cover coalition forces staging in Combine space, restricted
+# to fighting the Jaguars only.
+
+wars:
+  - name: Operation Bulldog
+    start: 3059-05-20
+    end: 3059-08-13
+    parties:
+      - factions: [SL, CSJ]
+      - factions: [DC, CSJ]
+      - factions: [CS, CSJ]
+      - factions: [CC, CSJ]
+      - factions: [FS, CSJ]
+      - factions: [FWL, CSJ]
+      - factions: [LA, CSJ]
+      - factions: [FRR, CSJ]
+      - factions: [SIC, CSJ]
+containedFactions:
+  - host: DC
+    contained: SL
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.2
+    opponents: [CSJ]
+  - host: DC
+    contained: CS
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.3
+    opponents: [CSJ]
+  - host: DC
+    contained: FWL
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.08
+    opponents: [CSJ]
+  - host: DC
+    contained: LA
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.15
+    opponents: [CSJ]
+  - host: DC
+    contained: FS
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.2
+    opponents: [CSJ]
+  - host: DC
+    contained: CC
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.13
+    opponents: [CSJ]
+  - host: DC
+    contained: FRR
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.03
+    opponents: [CSJ]
+  - host: DC
+    contained: SIC
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.05
+    opponents: [CSJ]
+  - host: DC
+    contained: CWIE
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.05
+    opponents: [CSJ]
+  - host: DC
+    contained: CNC
+    start: 3059-05-20
+    end: 3059-08-13
+    fraction: 0.05
+    opponents: [CSJ]

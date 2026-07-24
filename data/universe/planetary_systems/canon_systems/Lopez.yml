@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Lopez
-sucsId: 1516
+sucsId: 1517
 xcood: -37.757
 ycood: -330.395
 spectralType:
@@ -81,6 +81,22 @@ planet:
           source: 'Handbook: House Marik, pg. 67'
           value: Orton
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
+      - date: '2571-12-31'
+        # administration:
+        #   - Andurien Commonality
+        #   - Region 2
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2746-08-25'
         faction:
           source: canon
@@ -111,6 +127,15 @@ planet:
       - date: '2821-06-15'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '2821-12-31'
+        # administration:
+        #   - Duchy of Andurien
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2830-01-01'
@@ -168,6 +193,12 @@ planet:
           source: canon
           value:
             - DA
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DA
       - date: '3038-08-12'
         faction:
           source: canon
@@ -181,6 +212,15 @@ planet:
             - FWL
       - date: '3040-01-01'
         population: 2527626635.0
+      - date: '3040-12-31'
+        # administration:
+        #   - Duchy of Andurien
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3048-01-01'
         socioIndustrial:
           source: canon
@@ -195,6 +235,12 @@ planet:
           value: 2600500000.0
       - date: '3070-01-01'
         population: 2608313214.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DA
       - date: '3079-03-05'
         faction:
           source: canon
@@ -202,6 +248,12 @@ planet:
             - DA
       - date: '3080-01-01'
         population: 2615103652.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '3090-01-01'
         population: 2616149903.0
       - date: '3098-01-01'
@@ -222,11 +274,6 @@ planet:
         population: 2716933173.0
       - date: '3145-01-01'
         population: 2717476614.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - ABN
   - name: Kutkha
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.35

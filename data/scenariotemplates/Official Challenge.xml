@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -21,17 +21,23 @@
     <name>Official Challenge</name>
     <stratConScenarioType>OFFICIAL_CHALLENGE</stratConScenarioType>
     <shortBriefing>Display your prowess.</shortBriefing>
-    <detailedBriefing><![CDATA[A combat challenge has been issued through official channels. Deploy one (and only one) of your forces to fight on our behalf. The results of this dual will significantly impact morale.
+    <detailedBriefing><![CDATA[A combat challenge has been issued through official channels. Deploy one (and only one) of your forces to fight on our behalf. The results of this duel will significantly impact morale.
 
 The victor controls the field, and we will be the ones standing when the dust settles.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -89,7 +95,7 @@ The victor controls the field, and we will be the ones standing when the dust se
                 <generationMethod>3</generationMethod>
                 <generationOrder>5</generationOrder>
                 <maxWeightClass>4</maxWeightClass>
-                <minWeightClass>3</minWeightClass>
+                <minWeightClass>4</minWeightClass>
                 <retreatThreshold>50</retreatThreshold>
                 <startingAltitude>0</startingAltitude>
                 <syncDeploymentType>OppositeEdge</syncDeploymentType>
@@ -119,10 +125,10 @@ The victor controls the field, and we will be the ones standing when the dust se
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 95% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>95</percentage>
+            <percentage>50</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

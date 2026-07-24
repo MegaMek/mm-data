@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Washburn
-sucsId: 2725
+sucsId: 2726
 xcood: -155.32
 ycood: -103.721
 spectralType:
@@ -121,7 +121,7 @@ planet:
         faction:
           source: canon
           value:
-            - MCM
+            - MRep
         population: 60527.0
         socioIndustrial: D-F-B-F-F
       - date: '2250-01-01'
@@ -135,6 +135,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '2280-01-01'
         population: 4013272.0
       - date: '2290-01-01'
@@ -145,6 +151,15 @@ planet:
         socioIndustrial: D-D-B-F-F
       - date: '2310-01-01'
         population: 29236182.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Marik Commonwealth
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 48267476.0
       - date: '2330-01-01'
@@ -321,8 +336,20 @@ planet:
           source: canon
           value:
             - MSC
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MCM
       - date: '3080-01-01'
         population: 1242227505.0
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MSC
       - date: '3090-01-01'
         population: 1242227505.0
       - date: '3100-01-01'
@@ -347,6 +374,12 @@ planet:
           value:
             - CWE
         population: 1280571091.0
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CWE
   - name: Mars
     type: TERRESTRIAL
     orbitalDist: 1.5

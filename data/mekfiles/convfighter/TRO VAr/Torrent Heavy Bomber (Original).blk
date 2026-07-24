@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa3a-7aaa-b0b8-905559c3cf18
+</UUID>
 
 <UnitType>
 FixedWingSupport
@@ -45,10 +40,6 @@ Torrent Heavy Bomber
 2100
 </year>
 
-<originalBuildYear>
-2100
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -57,12 +48,18 @@ IS Level 2
 None
 </role>
 
+<quirks>
+internal_bomb
+atmo_flyer
+poor_performance
+</quirks>
+
 <motion_type>
 Aerodyne
 </motion_type>
 
 <transporters>
-cargobay:20.5:1:1
+cargobay:20.5:1:1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -88,6 +85,18 @@ cargobay:20.5:1:1
 <engine_type>
 7
 </engine_type>
+
+<armor_type>
+47
+</armor_type>
+
+<armor_tech_rating>
+2
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 20
@@ -148,32 +157,28 @@ External Stores Hardpoint
 2
 </engine_tech_rating>
 
-<armor_tech_rating>
-2
-</armor_tech_rating>
-
 <capabilities>
-The Torrent featured thrust vectoring and fly-by-light equipment, eliminating the need for a horizontal rudder and giving it the ability to use the short runways found on these new colonies; however, the bomber required a full runway and (occasionally) rocket assistance when carrying a full bomb load. With a crew of one officer, three enlisted and two gunners, the aircraft could carry a total of thirty tons of ordnance split between an internal bomb bay and external hardpoints, was protected by three and a half tons of Hubris Heavy armor, and with thirteen tons of fuel could reach a target half a world away.
+<p>The Torrent utilized thrust vectoring and fly-by-light systems that eliminated the need for a horizontal rudder. By using a variable-position engine mount, the heavy bomber could use many of the shorter runways found on raw colonies -- at least when carrying a limited bomb load. With a full payload, the Torrent was limited to full-length takeoffs, sometimes needing rocket assistance. Capable of carrying fifteen tons of bombs on external hardpoints and at least another fifteen tons internally, and with a large fuel capacity, the Torrent could easily strike targets half a world away with minimal refueling. Three and a half tons of Hubris Heavy armor provided modest protection, but the inclusion of one of the first Squealer I ECM suites in the 2650s proved a more effective defensive measure, confounding enemy targeting systems and helping the lumbering bomber survive in increasingly hostile skies. Even so, the Torrent remained a large and slow target, and survival depended as much on flying at night or in poor weather as on any electronic countermeasure.</p>
 </capabilities>
 
 <overview>
-Originally used by the United States of North America's Air Force, the Torrent was one of its most popular designs during the late twenty-first century. The aircraft was inherited by the Terran Alliance when it was formed in 2086 and, as new equipment was introduced, older vehicles such as the Torrent were passed on to the militias of various newly formed colony worlds during the twenty-second and twenty-third centuries. **This unit has been assigned an intro year of 2652 based on fluff so it can validate correctly for play**
+<p>As humanity moved across the stars in a massive wave of colonization, it carried the familiar tools of war. While spacefaring technology experienced a renaissance after the success of the Kearny-Fuchida interstellar jump drive, military breakthroughs were slower to come. Thus, many newly founded colonies carried military gear borrowed from their founding Terran Alliance member-state for protection. Usually included in that mix was at least a squadron of Torrent heavy bombers, one of the most popular designs with the United States of North America Air Force in the late twenty-first century and commonly pawned off on colonies in the twenty-second and twenty-third centuries as surplus equipment.</p>
 </overview>
 
 <deployment>
-This represents an original versions based on the Fluff text.
+<p>The Torrent began to fall out of favor with more modern worlds due to its lumbering speed and relatively light bomb loads compared to aerospace fighters. With the new aerospace fighters of the twenty-fourth and twenty-fifth centuries able to tear through conventional aircraft, such a low and slow combat aircraft was practically forced into retirement among many planetary militias, though continual upgrades helped prolong its service life. If a Torrent is found in service among the worlds of the Inner Sphere today, most likely it has been converted into a firefighting platform. Several small weapon manufacturers produce water bombs -- large water canisters with a small explosive device that splits the metal casing along seams, dumping water and fire suppressants into the target area. Though effective, most firefighting companies find the overhead for these bombers extremely high and use them only when in a pinch.</p>
 </deployment>
 
 <history>
-In its day, the aircraft was produced in large numbers by several corporations claiming to be the originators of the design. Continual upgrades kept the aircraft in service, including the mounting of one of the earliest ECM suites, the Squealer I, in the 2650s. As time passed, between the twenty-fourth and twenty-fifth centuries, newly introduced aerospace fighters came onto the scene and proved themselves superior to conventional aircraft like the Torrent. Since its tendency to fly low and slow made it highly vulnerable to these new fighters, the Torrent was forcibly retired from most planetary militias, but not all. General Aleksandr Kerensky brought almost a full wing of these aircraft with him during the Star League Defense Force's Exodus, where they later saw action during the Pentagon Civil War, notably with the newly formed Clans forces. However in the Inner Sphere by 3068 only one corporation still produced parts for the Torrent, located in the Capellan Confederation on Bellatrix, and once a year the company produced a complete Torrent Heavy Bomber as a token vehicle for collectors and museums. Only the Confederation still maintained a small number of Torrents within their military, as elsewhere in the Inner Sphere the aircraft was typically used as Water Bombers to fight fires. However the sheer violence of the Jihad caused the Confederation to restart production of the Torrent - part of their effort to throw everything they had at the Word of Blake - and since then the aircraft has taken on a larger role defending Capellan worlds.
+<p>Once produced en masse on several worlds by different corporations, all of which claim to own the original engineering schematics, many Torrent production lines were eventually converted to produce aerospace fighters. With parts dwindling, the last faction that could claim a Torrent anywhere among their active forces was the Capellan Confederation. At least one line on Bellatrix is still considered active for parts replacement; on a whim, the corporation builds one complete Torrent a year and sells the plane to various collectors and museums across the Sphere.</p><p>Torrents played a surprising role in the Pentagon civil wars, if ComStar records of the Clans are correct. At least a full wing had disappeared with General Kerensky, and two Torrent crews actually received mention in the early passages of the Goliath Scorpion Remembrance. These two crews were responsible for several air support runs that saved the lives of many of the new Clan's warriors, often at great peril. Only one Torrent survived the brutal engagements on Dagda -- the Venom's Kiss, displayed in the antechamber of the Goliath Scorpion's repository. This particular Torrent had the distinction of delivering saKhan Jenna Scott and her elite paratroopers inside the rebel's primary communications compound on Riva, Dagda's main continent. This action permitted the Clan to seize the massive planetary defense facility and allowed Clans Widowmaker and Burrock to take the continent of Dratha, breaking the back of Dagdan resistance.</p>
 </history>
 
 <manufacturer>
-Various
+Mujika Aerospace Technologies|Unknown|Various
 </manufacturer>
 
 <primaryFactory>
-Various
+Bellatrix|Terra|Various
 </primaryFactory>
 
 <systemManufacturers>
@@ -191,11 +196,4 @@ TR:VAr
 <tonnage>
 200.0
 </tonnage>
-
-
-<quirks>
-atmo_flyer
-internal_bomb
-poor_performance
-</quirks>
 

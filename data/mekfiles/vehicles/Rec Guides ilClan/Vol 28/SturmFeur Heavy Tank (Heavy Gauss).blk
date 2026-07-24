@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,20 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e9c6-7be0-bc48-3a79ece9b2da
+</UUID>
+
 <UnitType>
 Tank
 </UnitType>
+
 <Name>
 SturmFeur Heavy Tank
 </Name>
+
 <Model>
 (Heavy Gauss)
 </Model>
@@ -36,36 +35,11 @@ SturmFeur Heavy Tank
 <mul id:>
 3113
 </mul id:>
-<Tonnage>
-85
-</Tonnage>
-<cruiseMP>
-3
-</cruiseMP>
-<Armor>
-66
-66
-66
-48
-66
-</Armor>
-<Turret Equipment>
-ISLRM10
-ISArtemisIV
-ISERMediumLaser
-</Turret Equipment>
-<Front Equipment>
-ISHeavyGaussRifle
-</Front Equipment>
-<Body Equipment>
-ISHeavyGauss Ammo
-ISHeavyGauss Ammo
-ISHeavyGauss Ammo
-ISHeavyGauss Ammo
-ISHeavyGauss Ammo
-ISLRM10 Ammo Artemis-capable
-ISLRM10 Ammo Artemis-capable
-</Body Equipment>
+
+<year>
+3066
+</year>
+
 <type>
 IS Level 2
 </type>
@@ -73,58 +47,117 @@ IS Level 2
 <role>
 Juggernaut
 </role>
-<year>
-3066
-</year>
-<internal_type>
-0
-</internal_type>
-<armor_type>
-0
-</armor_type>
-<engine_type>
-0
-</engine_type>
+
 <motion_type>
 Tracked
 </motion_type>
 
+<cruiseMP>
+3
+</cruiseMP>
+
+<engine_type>
+0
+</engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+0
+</armor_tech_level>
+
+<armor>
+66
+66
+66
+48
+66
+</armor>
+
+<Body Equipment>
+ISHeavyGauss Ammo
+ISHeavyGauss Ammo
+ISHeavyGauss Ammo
+ISHeavyGauss Ammo
+ISHeavyGauss Ammo
+IS Ammo LRM-10 Artemis-capable
+IS Ammo LRM-10 Artemis-capable
+</Body Equipment>
+
+<Front Equipment>
+ISHeavyGaussRifle
+</Front Equipment>
+
+<Right Equipment>
+</Right Equipment>
+
+<Left Equipment>
+</Left Equipment>
+
+<Rear Equipment>
+</Rear Equipment>
+
+<Turret Equipment>
+LRM 10
+ISArtemisIV
+ISERMediumLaser
+</Turret Equipment>
 
 <capabilities>
-For point-blank anti-infantry protection, the SturmFeur carries two huge missile racks backed up by machine guns. The SturmFeur is extensively armored, more so than many frontline tanks, in comparison to many other fire-support vehicles. The SturmFeur's 19-and-a-half tons of armor allow it to resist massive damage, which is appreciated by missile carrier operators who are used to paper-thin armor that disintegrates (as the sailors will tell you) "when given a filthy look."
+<p>The SturmFeur carries a pair of LRM-20 launchers as its primary armament, providing devastating indirect and direct fire support. Targeting technology limitations during the Third Succession War era forced designers to split the launchers between a turret mount and a fixed forward position, preventing accidental friendly fire during high-angle bombardment. The turret launcher provides full traversal capability while the hull-mounted rack fires forward over the turret in a high arc. A pair of machine guns on the turret offer close-range anti-infantry defense but are ineffective against armored targets.</p><p>The 85-ton tank's InterComBust 255 ICE powerplant delivers a modest top speed of 54 km/h, typical of Lyran heavy vehicles that prioritize durability over mobility. Generous ProtecTech 6 armor plating allows the SturmFeur to absorb considerable punishment before withdrawal becomes necessary. The Angst 2100-b communications suite paired with the SturmFeur Highlight targeting system and BlindFire radar enables effective indirect fire coordination, a critical capability for a vehicle that operates best beyond visual range. The tank's principal weakness remains its complete reliance on ammunition, leaving it vulnerable once its magazines run dry, and its machine guns provide almost no deterrent against anything heavier than unarmored infantry.</p>
 </capabilities>
 
 <overview>
-The SturmFeur debuted in 3018. At that time, it was the largest combat vehicle dedicated to providing missile support in the Inner Sphere.
+<p>Commissioned by the Lyran Commonwealth Armed Forces in 3018, the SturmFeur was the largest combat vehicle dedicated to missile fire support in the Inner Sphere at the time of its introduction. Built by Trellshire Heavy Industries on Sudeten, the tank embodied the Lyran military philosophy of heavy armor and overwhelming firepower over speed and maneuverability. Its name, a misspelling of the German word for "assault fire," became synonymous with long-range missile bombardment across the Commonwealth's military academies. Despite its deliberate pace, the SturmFeur earned a reputation as a dependable workhorse, capable of absorbing punishment that would cripple lighter support vehicles while delivering sustained indirect fire from behind the front lines.</p>
 </overview>
 
 <deployment>
-A newer variant was more radical. This "Heavy Gauss" variant replaced the turret-mounted LRM-20 and Machine Guns with an Artemis IV assisted LRM-10 and an ER Medium Laser. Even more radical is the removal of the fixed missile rack and mounting a Heavy Gauss Rifle in the front of the tank. These also radically change the SturmFeur's mission from a fire support role to more of a close up brawler. Considering the SturmFeur's speed, it is unclear how well it would do in such a role.
+<p>The Heavy Gauss variant is a radical departure from the SturmFeur's traditional fire support role, mounting a forward-facing heavy Gauss rifle that transforms the vehicle into a close-range assault platform. An Artemis-equipped LRM-10 and an extended-range medium laser provide supplementary firepower. The variant's effectiveness depends heavily on favorable terrain and tactical positioning, as its modest speed limits its ability to dictate engagement ranges.</p>
 </deployment>
 
 <history>
-During the Fourth Succession War, conventional units particularly valued the SturmFeur. Its low profile proved to be the scourge of many Free Worlds League and Kuritan troops, who came under fire from these tanks that seemed to be able to hide behind even the most minor piece of terrain. It took a few ambushes for these troops to stop taking supposedly abandoned villages and parking lots for granted. It was considerably more popular among units stationed on worlds bordering the Periphery who obtained them. The majority of bandit gangs used lighter BattleMechs with less weaponry and armor. When confronted by these raiders, the SturmFeurs would deploy in a staggered formation, such that when bandits closed in on one tank in an attempt to get out of range of its missiles, they would find themselves within ideal range of the remaining defenders. To the chagrin of the attackers, the targeted SturmFeur's substantial armor allowed it to survive the attacks. Others have combined it with Demolishers, who require cover fire as they approach. Outside of the Federated Commonwealth coalition, however, very few units exhibited interest, preferring the far less expensive (albeit more vulnerable) LRM Carrier for support. Those who do obtain a SturmFeur sometimes use it as a command vehicle for their fi re-support troops, depending on its substantial armor to keep the commanders alive.
+<p>The SturmFeur entered service with the LCAF in 3018, produced at the Trellshire Heavy Industries plant on Sudeten. Within five years, Trellshire introduced an SRM variant that replaced the turret-mounted missile launcher with short-range racks and additional machine guns, creating a close-defense escort for standard SturmFeurs that proved popular among Lyran tankers.</p><p>The vehicle saw extensive action during the Fourth Succession War and became a staple of Lyran missile formations. Alan Gilmore, a SturmFeur commander during this period, developed the indirect-fire techniques that would define the vehicle's operational doctrine for generations. His high-angle launch tactics, which used the hull-mounted launcher tubes to lob missiles at extreme trajectories, proved devastatingly effective on The Edge. After retiring in 3035, Gilmore's lectures at the War College of Tamar on missile employment became known as the "Gilmore Doctrine" and remained foundational to SturmFeur crew training well into the next century. Gilmore's final battle came during the Clan invasion in defense of the War College. Though too old to be taken as a bondsman, he earned the respect of the Wolf Clan commanders. His fate remains unknown, though he is believed to have perished during the Blakist scouring of Tamar in 3070.</p><p>The Clan Invasion disrupted production when Clan Jade Falcon captured Sudeten in 3052, seizing the Trellshire plant. Production continued at Defiance Industries on Hesperus II, but the loss of Sudeten reduced overall output significantly. During the Jihad, the Word of Blake occupied Hesperus II and used the Defiance production lines to manufacture a variant incorporating a light fusion engine and their signature improved C3 computers. After Lyran forces retook the planet, they adapted the Blakist design, replacing its B-Pods with M-Pods and swapping the C3 for an ECM suite.</p><p>The most significant modernization came in 3149 when Defiance released the Cell variant, prompted by study of salvaged Clan Hell's Horses vehicles following Jade Falcon and Wolf raids on Hesperus II. This new model returned the SturmFeur to its original missile support role while incorporating modern materials and Clan-grade weaponry, alongside a companion variant mounting an improved heavy Gauss rifle for close-range engagements. Archon Trillian Steiner ordered full production of both designs, ensuring the SturmFeur would continue to serve Lyran interests well into the ilClan era.</p>
 </history>
 
 <manufacturer>
-Defiance Industries,Trellshire Heavy Industries
+Defiance Industries
 </manufacturer>
 
 <primaryFactory>
-Hesperus II,Sudeten
+Hesperus II
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:Magna 255
-ARMOR:ProtecTech 7
-COMMUNICATIONS:Angst 2100-b
-TARGETING:SturmFeur Highlight with BlindFire Radar
+CHASSIS:Unknown
+ENGINE:InterComBust
+ARMOR:ProtecTech
+COMMUNICATIONS:Angst
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:255 ICE
+ARMOR:6
+COMMUNICATIONS:2100-b
+TARGETING:SturmFeur Highlight with BlindFire Radar
+</systemModels>
 
 <source>
 RG28
 </source>
 
-<fuelType>
-PETROCHEMICALS
-</fuelType>
+<published>
+RG28
+</published>
+
+<tonnage>
+85.0
+</tonnage>
+

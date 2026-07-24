@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,81 +15,81 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cc31-7a89-8a57-ef3b6f48f1a0
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Jinggau
 model:JN-G9CC
 mul id:1710
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3072
-Source:TR:3060
-Rules Level:3
+techbase:Inner Sphere
+era:3072
+source:TR:3060
+published:RS:3060u
+rules level:3
 role:Skirmisher
-
-
 
 quirk:low_profile
 quirk:weak_head_2
 
+mass:65
+engine:325 XL Engine
+structure:IS Endo Steel
+myomer:Standard
+cockpit:Command Console
+gyro:XL Gyro
 
-Mass:65
-Engine:325 XL Engine
-Structure:Endo Steel
-Myomer:Standard
-Cockpit:Command Console
-Gyro:XL Gyro
+heat sinks:13 IS Double
+walk mp:5
+jump mp:0
 
-Heat Sinks:13 Double
-Walk MP:5
-Jump MP:0
-
-Armor:Stealth(Inner Sphere)
-LA Armor:17
-RA Armor:17
-LT Armor:24
-RT Armor:24
-CT Armor:28
-HD Armor:9
-LL Armor:22
-RL Armor:22
-RTL Armor:6
-RTR Armor:6
-RTC Armor:9
+armor:Stealth(Inner Sphere)
+LA armor:17
+RA armor:17
+LT armor:24
+RT armor:24
+CT armor:28
+HD armor:9
+LL armor:22
+RL armor:22
+RTL armor:6
+RTR armor:6
+RTC armor:9
 
 Weapons:5
-Large VSP, Right Arm
-Small VSP, Left Arm
-Small VSP, Left Arm
+Small VSP Laser, Left Arm
+Small VSP Laser, Left Arm
+Small VSP Laser, Left Arm
+Large VSP Laser, Right Arm
 Snub-Nose PPC, Right Arm
-Small VSP, Left Arm
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
-ISSmallVariableSpeedLaser
-ISSmallVariableSpeedLaser
-ISSmallVariableSpeedLaser
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
-Stealth
-Stealth
+ISSmallVSPLaser
+ISSmallVSPLaser
+ISSmallVSPLaser
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Stealth
+IS Stealth
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
-ISLargeVariableSpeedLaser
-ISLargeVariableSpeedLaser
-ISLargeVariableSpeedLaser
-ISLargeVariableSpeedLaser
+ISLargeVSPLaser
+ISLargeVSPLaser
+ISLargeVSPLaser
+ISLargeVSPLaser
 ISSNPPC
 ISSNPPC
-Endo Steel
-Endo Steel
-Stealth
-Stealth
+IS Endo Steel
+IS Endo Steel
+IS Stealth
+IS Stealth
 
 Left Torso:
 Fusion Engine
@@ -98,12 +98,12 @@ Fusion Engine
 ISMASC
 ISMASC
 ISMASC
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
-Stealth
-Stealth
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Stealth
+IS Stealth
 
 Right Torso:
 Fusion Engine
@@ -113,11 +113,11 @@ BeagleActiveProbe
 BeagleActiveProbe
 ISGuardianECMSuite
 ISGuardianECMSuite
-Endo Steel
-Endo Steel
-Endo Steel
-Stealth
-Stealth
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Stealth
+IS Stealth
 
 Center Torso:
 Fusion Engine
@@ -152,8 +152,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -166,8 +166,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -175,20 +175,27 @@ Stealth
 -Empty-
 -Empty-
 
-overview:The Jinggau is made to engage in direct combat, not lurk at the periphery or wait for a few fortunate long-range hits.
+overview:<p>The Jinggau emerged from the Shengli Arms facility on Victoria in early 3059, a product of the Capellan Confederation's Xin Sheng revitalization movement and the unlikely assistance of the Word of Blake's Toyama faction. The sixty-five-ton heavy cavalry design was one of several BattleMechs developed using the old Star League-era production infrastructure on Victoria, with Blake technicians helping to refurbish the facility as repayment of a personal debt owed to Chancellor Sun-Tzu Liao. The name Jinggau, reportedly meaning "siren," proved apt, the design was built to announce its presence on the battlefield with devastating force rather than operate from the shadows. Despite early complications during development, the Jinggau would prove itself a formidable combatant and a cornerstone of the modern Capellan Confederation Armed Forces.</p>
 
-capabilities:It can close relatively easily in virtually any terrain thanks to its top-end mobility for its weight, which includes a running speed of over 85 kph and a 150-meter leap capacity. With more than eleven tons of armor, the Jinggau has a very good chance of surviving whether traversing wide terrain or fighting in stand-up combat. The major offense comes from a number of strong hitting primary weapons including the Zhi-tong-yao ("painkiller") Gauss rifle. The weapon fires piercing shots until the Jinggau is within striking distance of its secondary lasers, which can frighten the pilot of even an assault mech. At that point, the main armaments continue to unleash their knockdown power punches while the lasers look for vulnerable areas to butcher an enemy machine.
+capabilities:<p>The Jinggau is designed to wade into the thick of combat rather than skulk at the edges of an engagement. Built on a lightweight Chariot Type II Endo Steel chassis and powered by a VOX 325 XL engine, the design achieves a top speed exceeding eighty-six kilometers per hour while five Hellespont Leaper jump jets provide one hundred and fifty meters of jump capability, allowing it to close rapidly across almost any terrain. Over eleven tons of armor give the Jinggau excellent survivability for its weight class, ensuring it can absorb punishment while pressing the attack.</p><p>The primary weapon is the formidable Zhi-tong-yao Gauss rifle, capable of striking targets at extreme range and delivering punishing kinetic impacts that can stagger even assault-class machines. Sixteen rounds of ammunition allow the Jinggau to sustain fire through several engagements before requiring resupply. As the range closes, four Diverse Optics extended-range medium lasers and a precise Raker-IV medium pulse laser provide withering close-range firepower that exploits any weakened armor the Gauss rifle has already compromised.</p><p>The reliance on an XL engine represents the design's primary vulnerability, a penetrating hit to the side torso can prove catastrophic. Additionally, the two-ton ammunition bay for the Gauss rifle presents an explosion risk if the internal structure is breached, though the weapon itself does not generate waste heat. Thirteen double heat sinks manage the thermal load effectively under normal combat conditions.</p>
 
-deployment:An advanced tech variant that emerged during the Jihad, the Jinggau's standard armor is replaced with Stealth Armor and the prerequisite Guardian ECM suite, while the jump jets are replaced with MASC. The weaponry has also been significantly altered, a Snub-Nose PPC and Large Variable Speed Pulse Laser as its main weaponry supported by a trio of Small VSP Lasers. To enhance its abilities, a Beagle active probe has been added to the 'Mech's equipment, while the standard gyro has been removed for a slightly more vulnerable XL gyro to free up the required weight.
+deployment:<p>An advanced-technology variant that also emerged during the Jihad in 3072, this configuration trades the Jinggau's jump jets for MASC and replaces the standard armor with Stealth Armor paired with a Guardian ECM suite, fundamentally altering the design's tactical profile. The weapons loadout is completely reworked around a Snub-Nose PPC and Large Variable Speed Pulse Laser as primary armament, supported by three Small Variable Speed Pulse Lasers. A Beagle active probe enhances the already formidable electronic warfare capabilities, while an XL gyro frees the tonnage required for these systems. The result is a sophisticated electronic warfare platform that can close rapidly under stealth protection before unleashing precise, punishing fire at short range.</p>
 
-history:Word of Blake's Toyama faction started sending technicians and supplies to Capellan Chancellor Sun-Tzu Liao toward the end of 3058 to assist with the completion of overhauling the old Star League production facility on Victoria. This assistance, which appeared to be a personal debt owed to Chancellor Liao, aided the Capellans in finishing up construction on the Jinggau assembly line and increased production of the Duan Gung BattleMech design. The first Jinggau, which is Chinese for siren, is said to have left the factory in early 3059, but for unknown reasons, production was suspended for more than a year before being partially resumed. Presenting a lance of Jinggau to the Fourth Tau Ceti Rangers, Sun-Tzu Liao said, “This is not a ’Mech relegated to support roles, or reconnaissance or garrison duty. This is a BattleMech for seeking out your opponent and doing him harm. This is a ’Mech with which to make your enemy miserable.” The Jinggau's extended-range medium lasers, which are made by the Free Worlds League, intrigue engineers studying it. All of the Jinggau's components, with the exception of its jump jets and targeting system, are supposed to be constructed on Victoria, just like the Duan Gung.
+history:<p>The Jinggau's origins are inextricably linked to the Capellan Confederation's Xin Sheng movement and the restoration of the Star League-era production facility on Victoria that became Shengli Arms. Toward the end of 3058, the Word of Blake's Toyama faction began providing Chancellor Sun-Tzu Liao with technicians and material resources to finish overhauling the facility, reportedly as repayment of a personal debt. This assistance accelerated the development of several new designs, with the Jinggau walking off the assembly line in early 3059. Production was halted for over a year after the initial run revealed that both arm sections required extensive redesign, but by 3060 the line had resumed in limited numbers.</p><p>The Jinggau quickly proved its worth during the Capellan-St. Ives War, where its combination of speed, firepower, and armor made it an ideal spearhead for Capellan offensive operations. As production increased, the design saw service with elite units including the Tau Ceti Rangers, Warrior Houses, and the Death Commandos. The Shengli Arms facility continued to develop variants through the Civil War period, introducing the plasma rifle-armed JN-G7L and the stealth-capable JN-G9CC during the Jihad. However, the Word of Blake Jihad inflicted devastating damage on Shengli Arms when renegade elements attacked in late 3068, crippling production lines and causing an estimated eighty-four percent loss of capital and personnel. The facility eventually restored Jinggau production to limited capacity, operating at roughly sixty-three percent output by 3079.</p><p>The design's fortunes shifted dramatically during the Victoria War when the Federated Suns invaded Victoria in 3103. The Fifth Capellan Defense Force, unwilling to let Shengli Arms fall to the enemy, razed the facility entirely. The Federated Suns subsequently sold the gutted plant to Kallon Industries, which refurbished it to produce Davion designs instead. For over four decades, no new Jinggaus left the Victoria production lines, though significant numbers remained in service across multiple nations through salvage, battlefield capture, and the Clan Hell's Horses refit programs that emerged after Operation SCOUR in 3078.</p><p>The Jinggau's renaissance came in 3145 when the CCAF recaptured Victoria. Shengli's engineers initially presented a modernized design under the "Jinggau II" designation, but Capellan officials quashed the name in favor of continuity, preferring to frame the return to Jinggau production as a restoration of normalcy rather than a new beginning. The resulting JN-G9B incorporated Clan Sea Fox-supplied technology alongside domestic innovations, producing a formidable modern combatant that surprised Republic Armed Forces defenders during Operation Clarity with its triple-strength myomer-enhanced speed and increased survivability. By the ilClan era, the Jinggau had become a truly multi-national design, with original Capellan production models, Clan-technology refits, and mixed-tech conversions serving across the Inner Sphere in the forces of the Confederation, Federated Suns, Free Worlds League, Republic remnants, and Clan Hell's Horses alike.</p>
 
 manufacturer:Shengli Arms
-primaryfactory:Victoria
-systemmanufacturer:CHASSIS:Chariot Type II Endo Steel
-systemmanufacturer:ENGINE:VOX 325 XL
-systemmanufacturer:ARMOR:Ceres Heavy Stealth
-systemmanufacturer:JUMP_JET:Hellespont Leapers
-systemmanufacturer:COMMUNICATIONS:Dian-bao Comms, heavily insulated with ECM
-systemmanufacturer:TARGETING:Dynatec Special T&T
 
+primaryfactory:Victoria
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Chariot
+systemmode:CHASSIS:Type II Endo Steel
+systemmanufacturer:ENGINE:VOX
+systemmode:ENGINE:325 XL
+systemmanufacturer:ARMOR:Ceres Metals
+systemmode:ARMOR:Stealth Armor
+systemmanufacturer:COMMUNICATIONS:Dian-bao
+systemmode:COMMUNICATIONS:Comms, Heavily Insulated
+systemmanufacturer:TARGETING:Dynatec
+systemmode:TARGETING:Special T&T

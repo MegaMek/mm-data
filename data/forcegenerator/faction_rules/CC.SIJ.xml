@@ -233,13 +233,13 @@ with a wing of aerospace support and a battalion of BattleArmor. -->
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -255,10 +255,10 @@ with a wing of aerospace support and a battalion of BattleArmor. -->
                 <option weight="31">Recon</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L">Light Recon</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

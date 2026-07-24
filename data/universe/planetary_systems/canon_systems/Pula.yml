@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Pula
-sucsId: 2079
+sucsId: 2080
 xcood: 269.227
 ycood: -230.898
 spectralType: G0V
@@ -106,6 +106,12 @@ planet:
         size: medium
         icon: rock4
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2656-10-25'
         faction:
           source: canon
@@ -139,6 +145,17 @@ planet:
         population: 17635177.0
       - date: '2750-01-01'
         population: 18240105.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 18674120.0
       - date: '2770-01-01'
@@ -157,6 +174,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Magadenovac
     type: ICE_GIANT
     orbitalDist: 1.76

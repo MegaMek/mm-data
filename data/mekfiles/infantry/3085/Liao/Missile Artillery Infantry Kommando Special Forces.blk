@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,20 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b653-7275-aeac-a43959d3ef85
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
+
 <Name>
 Missile Artillery Infantry
 </Name>
+
 <Model>
 Kommando Special Forces
 </Model>
@@ -36,25 +35,11 @@ Kommando Special Forces
 <mul id:>
 2190
 </mul id:>
-<squad_size>
-6
-</squad_size>
-<squadn>
-4
-</squadn>
-<Primary>
-Auto Rifle
-</Primary>
-<Secondary>
-InfantrySupportMachineGun
-</Secondary>
-<secondn>
-2
-</secondn>
-<Field Guns Equipment>
-ISArrowIV
-ISArrowIVAmmo
-</Field Guns Equipment>
+
+<year>
+2600
+</year>
+
 <type>
 IS Level 3
 </type>
@@ -62,15 +47,49 @@ IS Level 3
 <role>
 Missile Boat
 </role>
-<year>
-2600
-</year>
-<source>
-TR:3085
-</source>
+
 <motion_type>
 Wheeled
 </motion_type>
-<armorKit>
-LiaoKit
-</armorKit>
+
+<Troopers Equipment>
+Capellan Confederation Armor Kit (3050)
+</Troopers Equipment>
+
+<Field Guns Equipment>
+ISArrowIV
+ISArrowIVAmmo
+</Field Guns Equipment>
+
+<overview>
+<p>The Kommando Special Forces of the Fifth McCarron's Armored Cavalry field a mechanized wheeled missile artillery formation built around the Arrow IV system. The Fifth MAC's infantry forces have historically struggled to keep pace with the aggressive combined-arms doctrine favored by McCarron's Armored Cavalry, and the Kommando troops represent an effort to bridge that gap. Using field-mobile Luxor Mobile Battery artillery missile systems mounted on mechanized transports, these platoons provide indirect fire support for MAC maneuver elements. The reloading system proved unwieldy at first, and crews encountered problems adapting missile artillery to the rapid-tempo tube artillery role the MAC demanded. Despite these growing pains, the formation has matured into an effective supporting arm, giving MAC commanders organic indirect fire capability without relying on heavier dedicated artillery vehicles.</p>
+</overview>
+
+<source>
+TR:3085
+</source>
+
+<published>
+RS:3085u-CE
+</published>
+
+<squad_size>
+6
+</squad_size>
+
+<squadn>
+4
+</squadn>
+
+<secondn>
+2
+</secondn>
+
+<Primary>
+InfantryAssaultRifle
+</Primary>
+
+<Secondary>
+Machine Gun (Support)
+</Secondary>
+

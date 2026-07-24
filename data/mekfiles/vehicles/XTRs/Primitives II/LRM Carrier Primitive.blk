@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ec2a-7682-bd35-0ff30fe06d81
+</UUID>
 
 <UnitType>
 SupportTank
@@ -45,10 +40,6 @@ LRM Carrier
 2440
 </year>
 
-<originalBuildYear>
-2440
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -57,12 +48,17 @@ IS Level 2
 Missile Boat
 </role>
 
+<quirks>
+easy_maintain
+fast_reload
+obsolete:2580
+low_profile
+poor_performance
+</quirks>
+
 <motion_type>
 Tracked
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -71,6 +67,18 @@ Tracked
 <engine_type>
 1
 </engine_type>
+
+<armor_type>
+47
+</armor_type>
+
+<armor_tech_rating>
+3
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 22
@@ -115,44 +123,49 @@ LRM 15
 3
 </engine_tech_rating>
 
-<armor_tech_rating>
-3
-</armor_tech_rating>
-
 <capabilities>
-The chassis for missile carriers, but they are all essentially military transport vehicles, tracked being the most common, adapted to carry the huge missile launchers and loading equipment. Those adaptations generally consist of reinforcing the suspension systems and armoring the crew and critical components areas enough to survive the back blast from so many missiles. With an average top speed of 54 km/h and armor unable to survive counterbattery fire, if forced to engage in direct combat a carrier's life expectancy is measured in seconds.
+<p>The primitive LRM Carrier represents the original Age of War design developed by Quik Products Inc around 2440. Built as a fifty-five-ton support vehicle using primitive construction methods, it mounts three LRM-20 launchers behind BAR 6 armor rated for battlefield protection but far below modern military standards. The InterComBust 180 engine and basic fire control systems perform adequately but lack the refinements of later production models.</p><p>Advanced fire control systems partially compensate for the crude construction, and the design's straightforward maintenance requirements made it accessible to militaries with limited technical infrastructure. These vehicles were rendered obsolete by the modernized carriers that entered production around 2580, though a handful survived in Periphery arsenals for decades afterward.</p>
 </capabilities>
 
 <overview>
-Ever since the development of the first rocket centuries ago, military units have used mobile missile systems to provide cheap and effective fire support. Along with its SRM counterpart, the LRM Carrier serves in every military action across the Inner Sphere in a variety of shapes and forms.
+<p>The LRM Carrier is a sixty-ton tracked combat vehicle designed to deliver massed long-range missile fire at minimal cost. Developed by the Quikscell Company as a modernized successor to primitive Age of War designs dating back to the 2440s, the current production model entered service around 2470 and has remained in continuous use ever since. Manufactured by nearly every major military supplier across the Inner Sphere, the LRM Carrier fills the role of cheap, expendable indirect fire support in armies that cannot afford dedicated artillery assets. Its reputation as a disposable weapons platform belies its effectiveness when properly employed in massed formations, where concentrated volleys of missiles can devastate even heavily armored targets.</p>
 </overview>
 
 <deployment>
-This Age of War design uses three tons of BAR 6 armor to provide protection. First constructed in 2440, it was built with Primitive Technology, which is similar to methods used to make modern Support Vehicles. It mounted Advanced Fire Control systems to guide the three LRM-15 launchers mounted on the vehicle's front side. Five tons of ammunition kept the early LRM Carrier in the fight.
+<p>The primitive LRM Carrier served during the Age of War era, providing massed missile fire for armies still relying on pre-spaceflight military technology. Quik Products Inc manufactured these vehicles primarily on Ares and Pandora. The design was rendered obsolete by modernized carriers around 2580 but established the weapons carrier concept that would endure for centuries.</p>
 </deployment>
 
 <history>
-Manufactured by almost every major military supplier, the modern LRM Carrier is derived from those developed in the Age of War by Quik Products Inc, the future Quikscell Company. In many cases derived a little too closely, during the Succession Wars era many manufacturers were producing little more than shoddy direct copies that fell below even Quikscell's low quality standards. After the end of the Fourth Succession War Quikscell lodged lawsuits against those manufacturing clones of Quik based carriers, resulting the closure of many smaller manufacturers and larger manufacturers ending production. While those who produced their own designs were not affected, Quikscell's elimination of much of its competitors and its offer to exchange any missile carrier not produced by them for legit Quikscell versions and parts made it the number one player of the missile carrier market.
+<p>The origins of the modern missile carrier stretch back to the Age of War, when Quik Products Inc developed the first standardized tracked platforms for massed missile delivery. These early designs, constructed using primitive technology, were crude but effective, establishing the basic formula of maximum firepower on a minimal chassis that would define the weapons carrier concept for centuries. As Quik Products evolved into the Quikscell Company, the original primitive carriers were refined into the modern designs that entered widespread service by the twenty-fifth century.</p><p>During the Succession Wars, the desperate need for cheap fire support led dozens of manufacturers across the Inner Sphere to produce their own versions, many of them little more than unauthorized copies of Quikscell designs built to even lower quality standards. Shortly before the Fourth Succession War, Quikscell launched a series of lawsuits against these clone manufacturers, successfully shutting down many smaller competitors and forcing larger firms to cease production of derivative designs. The company further consolidated its market dominance by offering to exchange any non-Quikscell carrier for legitimate replacement vehicles and parts, effectively cornering the missile carrier market. One company not targeted by the legal attacks was Joint Equipment Systems, which had negotiated in good faith with Quik Products Inc centuries before.</p><p>LRM Carrier production spread across an extensive network of facilities. Quikscell plants on Ares, Kalidasa, Layover, Oliver, Pandora, and Broken Wheel turned out thousands of units across every era. Joint Equipment Systems on Alshain, Aldis Industries on Terra, Amaris Armored Vehicles on Timbuktu, the King Dumount Defense Facility on Castile, and Maxwell Planetary Defense Consortium on Maxwell all contributed to a production network spanning the entire Inner Sphere.</p><p>The first significant modernization came in 3055, when Quikscell introduced an upgraded variant for the Federated Commonwealth. By incorporating ferro-fibrous armor and Artemis IV fire control systems linked to each launcher, engineers dramatically improved missile accuracy while adding a C3 slave unit for networked targeting. The reduced engine size was considered an acceptable trade for the enhanced combat capability. Oliver and Richvale became the primary production sites for this upgrade package.</p><p>The Word of Blake produced their own radical revision during the Jihad era, utilizing an extralight fusion engine to boost both speed and armor protection while retaining Artemis IV systems and adding a C3i computer. Aldis Industries on Terra manufactured this variant throughout the Blakist occupation. In the Dark Age, Joint Equipment Systems developed the LRM Carrier C for the Rasalhague Dominion, mounting the launchers in a partial-traverse turret with hardened armor inspired by the success of the Viking IIC. The LRM Carrier's continued evolution across more than six centuries of service stands as sign of the enduring viability of cheap, massed missile platforms in modern warfare.</p>
 </history>
 
 <manufacturer>
-Various
+Joint Equipment Systems|Quikscell Company|Quikscell Company|King Dumount Defense Facility|Quikscell Company|Quikscell Company|Maxwell Planetary Defense Consortium|Quikscell Company|Quikscell Company|Aldis Industries|Amaris Armored Vehicles
 </manufacturer>
 
 <primaryFactory>
-Various
+Alshain|Ares|Broken Wheel|Castile|Kalidasa|Layover|Maxwell|Oliver|Pandora|Terra|Timbuktu
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:InterComBust 180 ICE
-ARMOR:Simple Armor Plate 6
-COMMUNICATIONS:Communicator
-TARGETING:FireScan with IndirecTrack
+ENGINE:InterComBust
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+ENGINE:180 ICE
+ARMOR:BAR 6
+</systemModels>
 
 <source>
 XTR:Primitives II
 </source>
+
+<published>
+XTR:Primitives II
+</published>
 
 <tonnage>
 55.0
@@ -165,13 +178,4 @@ XTR:Primitives II
 <fuelType>
 PETROCHEMICALS
 </fuelType>
-
-
-<quirks>
-easy_maintain
-low_profile
-fast_reload
-poor_performance
-obsolete:2580
-</quirks>
 

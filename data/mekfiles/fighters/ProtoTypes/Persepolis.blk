@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,27 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ace6-7d61-92c7-28e82c3e703b
+</UUID>
 
 <UnitType>
-Aero
+AeroSpaceFighter
 </UnitType>
 
 <Name>
 Persepolis
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 4806
@@ -44,10 +39,6 @@ Persepolis
 <year>
 3082
 </year>
-
-<originalBuildYear>
-3082
-</originalBuildYear>
 
 <type>
 Clan Level 3
@@ -60,9 +51,6 @@ Dogfighter
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 6
@@ -92,9 +80,13 @@ Aerodyne
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 2
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 56
@@ -108,6 +100,7 @@ CLERLargeLaser
 CLERLargeLaser
 CLImprovedMediumHeavyLaser
 CLImprovedMediumHeavyLaser
+CLCASE
 </Nose Equipment>
 
 <Left Wing Equipment>
@@ -121,6 +114,7 @@ CLStreakLRM20
 <Aft Equipment>
 CLImprovedSmallHeavyLaser
 CLImprovedSmallHeavyLaser
+CLCASE
 </Aft Equipment>
 
 <Wings Equipment>
@@ -134,20 +128,24 @@ Clan Streak LRM 20 Ammo
 CLCASE
 </Fuselage Equipment>
 
+<capabilities>
+<p>The Persepolis is built around a standoff engagement philosophy, with a pair of Series 7K extended-range large lasers forming the centerpiece of its offensive loadout. These nose-mounted weapons provide exceptional reach, allowing the fighter to engage targets well beyond the effective range of most Inner Sphere equivalents. Complementing this long-range punch are wing-mounted Aesalon Streak LRM-20 launchers, each carrying two tons of ammunition; the Streak guidance system ensures missiles are only committed on confirmed lock, a critical advantage in engagements where conserving ordnance can determine mission success.</p><p>For close-in work, Tiercel improved heavy medium lasers and Harpa heavy small lasers add meaningful firepower, though both weapon types share a documented tendency toward catastrophic failure under sustained combat stress, a defect pilots learn to manage rather than ignore. Twenty double heat sinks handle the thermal output of the primary weapons without difficulty under most engagement profiles, though pilots mixing long- and short-range fire simultaneously must exercise judgment.</p><p>The Persepolis achieves a safe thrust of 6 and maximum thrust of 9, modest figures for a fighter of its weight class, but nine and a half tons of Compound Gamma ferro-aluminum armor partially offset this limitation, providing better durability than the craft's acceleration profile might suggest. The aft arc remains a notable vulnerability, and experienced opponents who survive the initial fusillade seek to exploit it.</p>
+</capabilities>
+
 <overview>
-The Persepolis is a second-line Clan Aerospace Fighter developed by Clan Jade Falcon.
+<p>The Persepolis is a medium aerospace fighter designed and produced by Clan Jade Falcon at their Falcon's Roost Orbital Assembly Plant on Sudeten, entering service in 3082. Conceived as the inaugural product of the Falcons' newly constructed orbital manufacturing facility, the fighter was intended to replenish second-line aerospace wings and free the Clan's limited OmniFighter inventory for elite formations. The Persepolis fills a standoff combatant role, built to engage at long range where its primary weapons can reach targets before opponents can effectively retaliate. While capable in that role, the fighter carries a persistent reputation for inconsistent manufacturing quality, a legacy of the accelerated production program that brought it to the touman. Despite this drawback, the Persepolis has become a common sight across the breadth of Jade Falcon territory, a reliable if imperfect asset in the Clan's aerospace inventory.</p>
 </overview>
 
 <deployment>
-The medium fighter is optimized for standoff engagements using its Series 7k Extended-Range Large Lasers and its advanced tech 20-tubed Streak LRMs. Each of the launchers is supplied with two tons of ammunition, while its Streak technology prevents wasted shots. In close range, the fighter's brace of Improved Heavy Medium and Small Lasers add to Persepolis's firepower to finish off an opponent. However, flaws in the Falcons' manufacturing process sometimes caused these weapons to explode. The fighter is not considered the fastest of its class. However, it somewhat makes up for its lack of speed by being well armored, with 9 tons of Compound Gamma Ferro-Aluminum Armor.
+<p>The Persepolis has been distributed to nearly all of Clan Jade Falcon's second-line and front-line Galaxies since entering service, with the notable exception of Alpha and Delta Galaxies, which received OmniFighter allotments as their aerial complement. In second-line formations the fighter serves primarily in a standoff fire support capacity, where its long-range weapons can be employed without exposing it to the close-range engagements that reveal its weaknesses. Front-line Galaxy pilots flying the Persepolis operate alongside OmniFighters in mixed wings, where the fighter's endurance and firepower contribute even if its speed and rear coverage limit its versatility. No Trials of Possession for examples of the fighter by rival Clans have been reported.</p>
 </deployment>
 
 <history>
-First encountered in late 3085, The craft was first developed unknown to the military intelligence agencies of the Inner Sphere, until a pirate band encountered it while attempting to raid Sudeten. The Persepolis was the first product of the Falcons' new orbital space factory, Falcon's Roost Orbital Assembly Plant. The powerful fighter has seen deployment to nearly all of Clan Jade Falcon's second and front-line Galaxies with the exception of its elite formations, which have been given the allotment of the OmniFighters in the Clan's Touman.
+<p>The Persepolis was developed as part of Clan Jade Falcon's effort to expand their industrial base during the early Dark Age, a period when sustained campaigns in Prefecture IX had created pressing demand for aerospace replacements throughout the touman. The Falcon's Roost Orbital Assembly Plant on Sudeten was constructed with this fighter as its primary product, and the program was driven forward on an aggressive timetable that prioritized delivery over refinement. The manufacturing process incorporated technology sourced in part from Quickscell, a decision that enabled rapid production but introduced quality control problems that persisted throughout the production run, most visibly in the reliability of the heavy laser systems the fighter carries.</p><p>The Persepolis remained unknown to Inner Sphere intelligence until late 3085, when a pirate raiding force bound for Barcelona encountered a Star of the fighters operating in Prefecture IX. Three of the pirate craft were destroyed in the engagement before the survivors withdrew, and the incident brought both the new fighter and its orbital factory to broader attention. The Falcons subsequently distributed the Persepolis widely across their second-line and front-line Galaxies, deliberately reserving their OmniFighter allotment for elite formations while the Persepolis filled the remainder of the touman's aerospace complement. Alpha and Delta Galaxies were particularly excluded from early distribution, receiving higher-quality OmniFighters as those formations transitioned away from older second-line equipment.</p><p>By the time of the Persepolis 2's development in 3134, the political climate within the Clan had shifted dramatically under the influence of the faction conflicts between those supporting aggressive expansion and those advocating more measured approaches to operations in the Republic. The improved variant emerged partly in response to recognition that the original fighter's inherited manufacturing quality required attention, and partly as a product of the same intensified production pace that had generated the problems in the first place. The Persepolis line has remained in continuous Jade Falcon service from its introduction through the ilClan era, anchoring the aerospace complement of most of the Clan's non-elite formations.</p>
 </history>
 
 <manufacturer>
-Falcon’s Roost Orbital Assembly Plant
+Falcon's Roost Orbital Assembly Plant
 </manufacturer>
 
 <primaryFactory>
@@ -155,16 +153,28 @@ Sudeten
 </primaryFactory>
 
 <systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
 CHASSIS:Fledgling 2
 ENGINE:Consolidated 280 XL
 ARMOR:Compound Gamma Ferro-Aluminum
 COMMUNICATIONS:System XXX
 TARGETING:Omicron XX
-</systemManufacturers>
+</systemModels>
 
 <source>
 TR:Proto
 </source>
+
+<published>
+RS:Proto
+</published>
 
 <tonnage>
 70.0

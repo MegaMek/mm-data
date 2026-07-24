@@ -1,4 +1,25 @@
-#Saved from version 0.50.11 on 2025-12-28
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b685-7571-8a26-5fbf95e62b10
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
@@ -19,10 +40,6 @@ Manei Domini Recon Squad
 3065
 </year>
 
-<originalBuildYear>
-3065
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -42,82 +59,17 @@ Sneak Suit (Camo/IR/ECM)
 <Field Guns Equipment>
 </Field Guns Equipment>
 
-<capabilities>
-<div style="max-width: 900px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.5;">
-
-  <p><strong>Notes:</strong> Cybernetically enhanced infantry with the following features:</p>
-
-  <ul>
-    <li>
-      <strong>Cosmetic Enhancements:</strong>
-      No effect in combat.
-    </li>
-
-    <li>
-      <strong>Pheromone Effuser:</strong>
-      No effect in combat.
-    </li>
-
-    <li>
-      <strong>Toxin Effuser:</strong>
-      <ul>
-        <li>+0.27 damage per trooper versus other conventional infantry at Range 0.</li>
-        <li>Negated by Enviro suits.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Multi-Modal Cybernetic Eyes:</strong>
-      IR and Laser Targeting systems.
-      <ul>
-        <li>IR provides Active Probe capabilities at a 2-hex range.</li>
-        <li>Laser Targeting provides a –1 to-hit modifier.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Boosted Communicator Implants:</strong>
-      <ul>
-        <li>Provides a +1 non-cumulative Initiative modifier for friendly forces.</li>
-        <li>Allows the unit to act as part of a C3i network.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Paratroop Equipment:</strong>
-      Allows the unit to employ Atmospheric Drop rules.
-    </li>
-
-    <li>
-      <strong>Sneak Suits:</strong>
-      Apply Mimetic to-hit modifiers based on movement:
-      <ul>
-        <li>+3 to-hit when stationary.</li>
-        <li>+2 to-hit when moved 1 hex.</li>
-        <li>+1 to-hit when moved 2 hexes.</li>
-        <li>+0 to-hit when moved 3 or more hexes.</li>
-      </ul>
-      <p>
-        Additional range modifiers apply to non-infantry attackers:
-      </p>
-      <ul>
-        <li>+1 to-hit at short and medium range.</li>
-        <li>+2 to-hit at long range.</li>
-      </ul>
-    </li>
-
-    <li>
-      <strong>Active Probe Protection:</strong>
-      Unit cannot be spotted by Light and Standard Active Probes.
-    </li>
-  </ul>
-
-</div>
-</capabilities>
+<overview>
+<p>Tau Wraith reconnaissance squads served as the Manei Domini's eyes on the battlefield, operating from the shadows to coordinate friendly forces and provide targeting telemetry for heavier units. Where Tau Zombies overwhelmed through brute cybernetic force, Wraiths relied on stealth and information superiority. Each six-trooper squad wore Sneak Suits incorporating camouflage, ECM, and infrared baffling that rendered them invisible to standard detection equipment, including active probes. Their boosted communicator implants allowed Wraiths to link directly into friendly C3 networks, sharing real-time battlefield data without the need for external communications gear. Armed with Mauser 1200 LSS laser rifles and equipped with paratrooper drop capability, Wraith squads could insert behind enemy lines and remain undetected while guiding strikes from friendly formations. Few conventional forces could match their combination of stealth, communications integration, and cybernetic enhancement.</p>
+</overview>
 
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 6
@@ -126,10 +78,6 @@ TR:3085
 <squadn>
 1
 </squadn>
-
-<secondn>
-2
-</secondn>
 
 <Primary>
 Laser Rifle (Mauser 1200 LSS)
@@ -158,5 +106,4 @@ cyber_imp_laser
 gas_effuser_pheromone
 gas_effuser_toxin
 </augmentation>
-
 

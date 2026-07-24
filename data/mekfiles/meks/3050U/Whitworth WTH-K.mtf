@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,61 +15,60 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c712-7a6d-ae7c-3599ab54f052
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Whitworth
 model:WTH-K
 mul id:3545
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3070
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3070
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Missile Boat
 
-
-
-quirk:rugged_1
 quirk:weak_legs
+quirk:rugged_1
 
+mass:40
+engine:160 Fusion Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:40
-Engine:160 Fusion Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 Single
+walk mp:4
+jump mp:5
 
-Heat Sinks:10 Single
-Walk MP:4
-Jump MP:5
+armor:Standard(Inner Sphere)
+LA armor:12
+RA armor:12
+LT armor:12
+RT armor:12
+CT armor:16
+HD armor:9
+LL armor:18
+RL armor:18
+RTL armor:6
+RTR armor:6
+RTC armor:7
 
-Armor:Standard
-LA Armor:12
-RA Armor:12
-LT Armor:12
-RT Armor:12
-CT Armor:16
-HD Armor:9
-LL Armor:18
-RL Armor:18
-RTL Armor:6
-RTR Armor:6
-RTC Armor:7
-
-Weapons:5
-1 ISERMediumLaser, Right Arm
-1 ISERMediumLaser, Left Arm
-1 ISMML7, Right Torso, Ammo:34
-1 ISMML7, Left Torso
-1 ISC3SlaveUnit, Head
+Weapons:4
+ER Medium Laser, Left Arm
+ER Medium Laser, Right Arm
+MML 7, Left Torso
+MML 7, Right Torso
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 ISERMediumLaser
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -80,42 +79,42 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 ISERMediumLaser
-Endo Steel
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
 -Empty-
 
 Left Torso:
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
 ISMML7
 ISMML7
 ISMML7
 ISMML7
-ISMML7 LRM Ammo
-Endo Steel
-Endo Steel
-Endo Steel
+IS Ammo MML-7 LRM
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
 ISMML7
 ISMML7
 ISMML7
 ISMML7
-ISMML7 SRM Ammo
-Endo Steel
-Endo Steel
-Endo Steel
+IS Ammo MML-7 SRM
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Center Torso:
 Fusion Engine
@@ -128,8 +127,8 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ImprovedJump Jet
-ImprovedJump Jet
+Improved Jump Jet
+Improved Jump Jet
 
 Head:
 Life Support
@@ -173,19 +172,25 @@ Heat Sink
 -Empty-
 -Empty-
 
-overview:The Whitworth was created in 2610 as a scout 'Mech to bridge the gap between the light Wasp and medium Phoenix Hawk variants.
+overview:<p>The Whitworth was first manufactured in 2610 as a medium BattleMech intended to fill the weight gap between the lighter Wasp and heavier Phoenix Hawk designs. Originally conceived as a missile support platform for scout and strike lances, the Whitworth emerged from the Whitworth Company's design bureau on Dieron as a competent if unremarkable machine. Known colloquially as the "Tin Woodsman" among both critics and admirers, the design offered respectable firepower and adequate armor protection for its intended fire support role.</p><p>Despite an enduring reputation for mechanical unreliability in its lower actuator systems, the Whitworth proved serviceable enough to see widespread deployment across the Star League and its successor states, earning a place as a rugged if ungainly workhorse in armies throughout the Inner Sphere.</p>
 
-capabilities:Although the Whitworth is limited at short range, its missile launchers provide exceptional long-range capabilities. While its heft allows it to compete in combat with units of same and lesser size, the 'Mech is not intended to be a brawler by any means. The Whitworth is not a good short-range slugger since it lacks hand actuators, has a terrible short-range weapon loadout, and lacks the high speed curve of lighter 'Mechs. Pilots who try to utilize it as such often find themselves rocketing into the sky on their ejection seat. Furthermore, the design incorporates a faulty actuator system in the hips and legs (replacing the system would require a complete reworking of the lower half of the torso and leg assembly), resulting in far too many MechWarriors being sprawled on the battlefield and unable to move due to unresponsive (or even missing) legs.
+capabilities:<p>The Whitworth's primary armament consists of two Longbow-10 LRM launchers mounted in the torsos, providing substantial long-range firepower for a medium 'Mech. These weapons are slaved to the Garret D2J targeting system (the same anti-aircraft tracking system employed by the Rifleman and Quickdraw) giving respectable accuracy against aerial and ground targets alike. Three Intek medium lasers provide adequate close-range defense when enemies close the distance.</p><p>The design's most significant limitation is its slow maximum speed of 64 km/h, over 30 km/h slower than the Wasps and Phoenix Hawks it was designed to support. Four Whitworth Jetlift jump jets split between the legs partially compensate for this deficiency. Eight tons of Durallex Light armor provide reasonable protection, distributed heavily around the legs to protect the design's notorious weak point, a faulty actuator system in the hips and legs that can cause limbs to tear loose during aggressive maneuvering. Houses have been known to replace failed legs with those salvaged from other 'Mech designs, creating bizarre but functional hybrids.</p>
 
-deployment:Whitworth Specialty Manufacturing is responsible for upgrading the -1 Whitworths owned by the Draconis Combine and introduced this variant in 3070. The -K variant also utilizes ten single heat sinks, though it mounts two MML-7s, while two ammo bins allow for some flexibility. The use of MMLs allows the MechWarrior to focus on either ranged support or close-quarters combat. The inclusion of a C3 Slave allows the -K to share targeting telemetry. Five QuestStar improved jump jets enable the -K to jump up to 150 meters.
+deployment:<p>A Draconis Combine variant introduced in 3070 by Whitworth Specialty Manufacturing, this variant utilizes two MML-7 launchers that allow the pilot to switch between long-range missile support and close-quarters SRM fire as tactical situations demand. Five QuestStar improved jump jets enable jumps of up to 150 meters, providing excellent mobility particularly suited to urban combat environments. A C3 slave unit allows the design to share targeting telemetry with lance mates, making it an effective fire support node in combined-arms formations.</p>
 
-history:The Whitworth Company's think tank produced a mediocre design that, while well equipped, was slower than either the Wasp or the P-Hawk. The Whitworth was adequately armored and had some staying power on the battlefield, but it couldn't hope to keep up with its lance companions in a running conflict. After observing that many Whitworth pilots would rush into close-range combat in order to successfully deploy its armament loadout, Star League designers pushed the manufacturer to upgrade to the extended reach of the Longbow LRM 10 series (despite the fact that most pilots were Kuritan in origin and adhered to the samurai-style of fighting). The Whitworth, dubbed the "Tin Woodsman" by both critics and fans, served the SLDF as a reconnaissance unit or as a part of a mobile striking lance. Because many Whitworths were allocated to severe battle zones, the death of the Star League resulted in the destruction of hundreds of them. Though survivors were rapidly recruited into the military machine of the Great Houses, the loss of so many industries signaled that the design was doomed to fade away at some point in the future. The initial WTH-1S series was found in Star League troops, often in strongly reinforced urban attack companies. Many Rim Worlds Republic troops deployed Whitworths in a more brutal manner, stockpiling half of their SRM ammo bins with inferno rounds capable of igniting large towns. Many Whitworths were incorporated into the Great Houses following the demise of the Star League. Because the Whitworth Company's large complex on Dieron was destroyed during the Amaris Crisis, these Whitworths were operated until they could no longer be maintained and then became "parts storage," as the actuator and structural mounts were adaptable to numerous medium 'Mech designs. Fewer than 300 Whitworths are thought to be operable, largely in the hands of families and passed down through MechWarrior generations. Spare components are scarce, but that began to change in 3035, when Whitworth Specialty Manufacturing established on Benjamin in the Draconis Combine and began producing spare parts for the WTH-1 design. Rumors circulated that ComStar was significant in the company's early days and was somehow connected to the secret arrangement reached in 3034 between that group and Theodore Kurita.
+history:<p>The Whitworth's origins trace to the Reunification War era, when the Whitworth Company on Dieron sought to create a medium fire support platform for Star League forces. The original WTH-1S model carried Harpoon-6 SRM launchers that encouraged pilots to engage in close-range combat for which the design was poorly suited, resulting in heavy losses. By 2689, Star League defense planners mandated the replacement of these weapons with Longbow-10 LRM launchers, creating the WTH-1 that would become the standard production model.</p><p>During the Star League era, the Whitworth served in both SLDF scout units and mobile strike lances, often deployed alongside Wolverines and Phoenix Hawks for reconnaissance-in-force missions, or providing fire support to heavier formations of Riflemen and Warhammers. The Rim Worlds Republic also fielded Whitworths, including the infamous WTH-0 variant used to devastating effect during the Amaris Civil War, where Republic forces employed inferno missiles and flamers to raze entire cities.</p><p>The destruction of the Whitworth Company's Dieron facility in 2776 during the Amaris Crisis eliminated the primary source of spare parts, condemning surviving Whitworths to gradual attrition throughout the Succession Wars. By the end of this era, fewer than three hundred remained operational, mostly in the hands of MechWarrior families who had passed the machines down through generations. The design earned the unflattering nickname "Worthless" among Federated Suns and Draconis Combine pilots, though the 'Mechs themselves continued to serve their units well.</p><p>The situation changed in 3035 when Whitworth Specialty Manufacturing was incorporated on Benjamin, reportedly with ComStar assistance as part of aid offered to Theodore Kurita. This company began producing spare parts and later developed upgrade kits following the Clan Invasion. Despite these efforts, most Whitworths were decommissioned from Great House militaries by the mid-3050s, finding new homes among mercenary companies and Periphery nations like the Taurian Concordat and Outworlds Alliance.</p><p>The Jihad prompted renewed interest in the platform, with both the Federated Suns and Draconis Combine developing C3-equipped variants to counter Blakist improved C3 technology. More recently, Marian Arms Inc. on Alphard has begun producing an improved variant that has spread throughout the Inner Sphere via salvage and Draconis Combine contracts, ensuring the Whitworth's continued presence on battlefields across known space.</p>
 
-manufacturer:Whitworth Specialty Manufacturing (Refit)
+manufacturer:Whitworth Specialty Manufacturing
+
 primaryfactory:Benjamin
-systemmanufacturer:CHASSIS:Whitworth Type Ie
-systemmanufacturer:ENGINE:LTV 160
-systemmanufacturer:ARMOR:Durallex Light
-systemmanufacturer:JUMP_JET:Whitworth Improved Jetlift
-systemmanufacturer:COMMUNICATIONS:Garret T14
-systemmanufacturer:TARGETING:Garret D2j
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Unknown
+systemmanufacturer:ENGINE:LTV
+systemmode:ENGINE:LTV 160
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:JUMP_JET:QuestStar
+systemmode:JUMP_JET:QuestStar Improved
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

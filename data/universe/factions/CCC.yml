@@ -17,6 +17,11 @@
 
 key: CCC
 name: Clan Cloud Cobra
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CCC
 capital: Homer
 yearsActive:
   - start: 2807
@@ -135,3 +140,5 @@ factionLeaders:
     gender: "FEMALE"
     startYear: 3074
     endYear: 3085
+usesMercenaries:
+  2500: false

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,20 +15,19 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b641-775b-9e6e-9e955bc36569
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
+
 <Name>
 Clan Assault Infantry
 </Name>
+
 <Model>
 Ghost Bear Heavy Solahma Infantry
 </Model>
@@ -36,24 +35,11 @@ Ghost Bear Heavy Solahma Infantry
 <mul id:>
 600
 </mul id:>
-<squad_size>
-5
-</squad_size>
-<squadn>
-4
-</squadn>
-<Primary>
-InfantryClanMauserIICIAS
-</Primary>
-<Secondary>
-InfantryClanERMicroLaser
-</Secondary>
-<secondn>
-2
-</secondn>
-<armorKit>
-ClanKit
-</armorKit>
+
+<year>
+3015
+</year>
+
 <type>
 Clan Level 3
 </type>
@@ -61,12 +47,47 @@ Clan Level 3
 <role>
 Ambusher
 </role>
-<year>
-3015
-</year>
-<source>
-TR:3085
-</source>
+
 <motion_type>
 Jump
 </motion_type>
+
+<Troopers Equipment>
+Clan Armor Kit (All)
+</Troopers Equipment>
+
+<Field Guns Equipment>
+</Field Guns Equipment>
+
+<overview>
+<p>The Ghost Bear Dominion is not widely known for its unarmored infantry, as the popular image of the Clan remains the giant Elemental riding a BattleMech into battle. The Dominion's Heavy Points draw from a continual supply of retired or failed Elementals whose massive physical bulk allows them to carry the heaviest personal weapons and armor available. Equipped with Clan-manufactured Mauser IIC assault systems and extended-range support lasers, these warriors combine a lifetime of infantry training with firepower that surpasses most Inner Sphere formations of comparable size. Though they are solahma, assigned to garrison and internal security duties that offer little chance for an honorable death, their combat effectiveness should not be underestimated. Few conventional infantry formations in the Inner Sphere can match their combination of individual skill and advanced weaponry.</p>
+</overview>
+
+<source>
+TR:3085
+</source>
+
+<published>
+RS:3085u-CE
+</published>
+
+<squad_size>
+5
+</squad_size>
+
+<squadn>
+4
+</squadn>
+
+<secondn>
+2
+</secondn>
+
+<Primary>
+Laser Rifle (Mauser IIC IAS)
+</Primary>
+
+<Secondary>
+Support Laser (ER, Semi-Portable)
+</Secondary>
+

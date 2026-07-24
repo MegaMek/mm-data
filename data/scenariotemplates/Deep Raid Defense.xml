@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>Deep Raid Defense</name>
     <shortBriefing>Defend grounded DropShip from raid.</shortBriefing>
-    <detailedBriefing><![CDATA[The enemy has launched a deep strike behind our lines, targeting one of our DropShips before it can take off. This is a calculated assault meant to cripple our logistics and deny us critical mobility. Your mission is to defend the DropShip until it can launch or eliminate at least 50% of the attacking force to force their retreat.
+    <detailedBriefing><![CDATA[The enemy has launched a deep strike behind our lines, targeting one of our DropShips before it can take off. This is a calculated assault meant to cripple our logistics and deny us critical mobility. Your mission is to defend the DropShip until it can launch or eliminate at least 33% of the attacking force to force their retreat.
 
 Expect long-range bombardment. The enemy is likely to deploy artillery strikes to weaken our defenses before engaging directly. You must counter their firepower while maintaining a strong perimeter around the DropShip. Close the distance where possible, neutralize their artillery assets, and prevent them from overwhelming our position before liftoff.
 
@@ -29,13 +29,16 @@ We will control the battlefield at the end of the engagement, ensuring access to
     <battlefieldControl>PLAYER</battlefieldControl>
     <isHostileFacility>false</isHostileFacility>
     <isAlliedFacility>false</isAlliedFacility>
+    <isSuitedForAmbushes>true</isSuitedForAmbushes>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>DropZone</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -210,10 +213,10 @@ We will control the battlefield at the end of the engagement, ensuring access to
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy, cripple or force to withdraw 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy, cripple or force to withdraw 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

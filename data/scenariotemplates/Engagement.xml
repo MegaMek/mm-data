@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,19 +20,25 @@
 <ScenarioTemplate>
     <name>Engagement</name>
     <shortBriefing>Engage and destroy enemy at the front.</shortBriefing>
-    <detailedBriefing><![CDATA[Your orders are simple—engage and destroy at least 50% of enemy forces. This is not a hit-and-run operation or a delaying action. You are to commit fully to the engagement and break their strength through superior firepower and tactical positioning.
+    <detailedBriefing><![CDATA[Your orders are simple—engage and destroy at least 33% of enemy forces. This is not a hit-and-run operation or a delaying action. You are to commit fully to the engagement and break their strength through superior firepower and tactical positioning.
 
 This battle will determine control of the battlefield. The victor will hold the field at the end of the engagement, securing any salvage and denying the enemy any chance of recovery. Every enemy unit destroyed weakens their ability to wage war—make sure they do not leave this battlefield intact.
 
 Strike hard, eliminate the opposition, and take control. Victory is absolute, or it is meaningless.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -120,10 +126,10 @@ Strike hard, eliminate the opposition, and take control. Victory is absolute, or
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

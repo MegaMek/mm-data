@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -22,17 +22,23 @@
     <shortBriefing>Provide air support, minimize losses.</shortBriefing>
     <detailedBriefing><![CDATA[Your mission is to provide air support to allied ground forces currently under heavy attack. The enemy is pressing hard, and without intervention, our forces will be overwhelmed. You are to engage hostile units with precision strikes, break enemy formations, and relieve pressure on friendly positions. Coordination with ground command will be critical to ensuring maximum impact.
 
-Your primary objective is to preserve at least 50% of allied forces. Their survival is paramount to maintaining battlefield cohesion. Simultaneously, you must destroy or rout at least 50% of the enemy forces. This engagement is about turning the tide, forcing them to break, and ensuring our ground forces can hold firm.
+Your primary objective is to preserve at least 50% of allied forces. Their survival is paramount to maintaining battlefield cohesion. Simultaneously, you must destroy or rout at least 33% of the enemy forces. This engagement is about turning the tide, forcing them to break, and ensuring our ground forces can hold firm.
 
 The winner of this battle will control the field when the engagement is over. You must ensure that victory belongs to us. Strike hard, strike true, and do not let the enemy dictate the pace of battle. Your firepower will decide the outcome.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>40</baseHeight>
         <baseWidth>40</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -96,6 +102,9 @@ The winner of this battle will control the field when the engagement is over. Yo
                 <syncDeploymentType>OppositeEdge</syncDeploymentType>
                 <syncedForceName>Player</syncedForceName>
                 <useArtillery>false</useArtillery>
+                <roleChoices>
+                    <forceRole>ANTI_AIRCRAFT</forceRole>
+                </roleChoices>
             </value>
         </entry>
         <entry>
@@ -177,10 +186,10 @@ The winner of this battle will control the field when the engagement is over. Yo
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

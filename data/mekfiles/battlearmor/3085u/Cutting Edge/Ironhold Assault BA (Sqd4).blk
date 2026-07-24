@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a513-7245-a42f-a226078385ea
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -32,7 +28,7 @@ BattleArmor
 Ironhold Assault Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd4)
 </Model>
 
@@ -40,29 +36,25 @@ Ironhold Assault Battle Armor
 1623
 </mul id:>
 
-<chassis>
-biped
-</chassis>
+<year>
+3077
+</year>
 
-<weightclass>
-4
-</weightclass>
+<type>
+Clan Level 2
+</type>
 
-<Trooper Count>
-4
-</Trooper Count>
+<role>
+Juggernaut
+</role>
+
+<motion_type>
+Jump
+</motion_type>
 
 <cruiseMP>
 1
 </cruiseMP>
-
-<jumpingMP>
-2
-</jumpingMP>
-
-<Armor>
-16
-</Armor>
 
 <armor_type>
 28
@@ -79,40 +71,36 @@ BABasicManipulator:LA
 BABasicManipulator:RA
 </Point Equipment>
 
-<type>
-Clan Level 2
-</type>
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
 
-<role>
-Juggernaut
-</role>
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
 
-<year>
-3077
-</year>
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
 
-<motion_type>
-Jump
-</motion_type>
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
 
-<source>
-TR:3085
-</source>
-
-<overview>
-The Ironhold Assault Battle Armor was developed by Clan Jade Falcon during the Jihad.
-</overview>
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
 
 <capabilities>
-The Ironhold is noted for being more mobile than typical Clan Assault Armor, where it can employ its Jump Jets and give itself better tactical advantage over its opponents.
+<p>The standard Ironhold mounts two arm-mounted Anti-Personnel Gauss Rifles, each fed by a twenty-round magazine. These weapons provide excellent range and striking power against both infantry and light armored targets. The suit's two-ton frame carries sufficient standard armor to absorb considerable punishment, while integrated jump jets propel troopers up to sixty meters per bound. This mobility distinguishes the Ironhold from most assault-class battle armor, allowing operators to seize elevated positions and close gaps that heavier suits cannot. Battle claws on each arm enable swarming attacks against BattleMechs. The design trades raw firepower for tactical positioning, leaving it outgunned by dedicated fire-support suits in sustained engagements.</p>
 </capabilities>
 
+<overview>
+<p>The Ironhold is Clan Jade Falcon's dedicated assault battle armor, produced by Olivetti Weaponry on Sudeten. Entering service in 3077, the suit was developed during the Jihad as the Falcon response to the growing number of heavy and assault battle armor designs fielded by rival Clans and Inner Sphere powers. At two tons, the Ironhold balances firepower and protection while retaining greater agility than most assault-weight designs. Falcon warriors quickly embraced the suit for its combination of ranged lethality and tactical flexibility.</p>
+</overview>
+
 <deployment>
-The Armor's main weapons are its arm mounted AP Gauss Rifles. Each of the large guns has been allotted 20 rounds of ammunition.
+<p>Inner Sphere military formations that acquired Ironhold suits through salvage or Trials of Possession organized them into four-trooper squads consistent with standard infantry doctrine. These smaller units typically operated alongside conventional infantry platoons, providing anti-personnel firepower that organic forces could not match. The jump-capable standard model proved well-suited to squad-level tactics emphasizing building-to-building movement in urban operations.</p>
 </deployment>
 
 <history>
-The roots of the Ironhold go back to development of the Anti-Personnel Gauss Rifle in 3069. After the success of that weapon, a new project codenamed Project Ferrum was started to develop a new suit of battle armor with the support of the Elemental Trinary of 3rd Falcon Talon Cluster. Once development was completed, the Ironhold was successfully and covertly tested in the Periphery. It was believed that Ironhold could replace the Clan's ProtoMechs against Inner Sphere forces based on combat results. It wasn't until 3077 when the factory on Sudeten could be brought online to mass produce the suit. The mass-produced Ironholds first saw combat in June of '77 when deployed by Talon's Elemental Trinary with Devlin Stone's Coalition efforts on Shiloh.
+<p>The Ironhold traces its origins to 3069, when Clan Jade Falcon's scientist caste began collaborating with Elementals from Gamma Galaxy to develop a new assault suit. The project, codenamed Ferrum, sought to combine assault-class protection with the mobility that Falcon warriors favored. An Elemental Trinary from the Third Falcon Talon Cluster was assigned to the program, accelerating development through direct warrior input. Prototype testing in the Periphery proved the design's combat potential, with results suggesting the Ironhold could supplant ProtoMechs in certain tactical roles.</p><p>Production delays pushed the Sudeten manufacturing line at Olivetti Weaponry to a 3077 activation date, years behind the original schedule. The newly manufactured suits saw immediate combat during the Coalition's advance on Shiloh that June. The suit spread rapidly across Jade Falcon Galaxies, with the Third Falcon Talon Cluster adopting it exclusively for all Elemental warriors. This concentrated deployment elevated the previously obscure Bang-Chu Elemental Bloodname to prominence within the Cluster.</p>
 </history>
 
 <manufacturer>
@@ -127,7 +115,41 @@ Sudeten
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3085
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+2
+</jumpingMP>
+
+<armor>
+16
+</armor>
+
+<Trooper Count>
+4
+</Trooper Count>
+
+<weightclass>
+4
+</weightclass>
+

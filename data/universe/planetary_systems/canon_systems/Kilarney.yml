@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kilarney
-sucsId: 1349
+sucsId: 1350
 xcood: -313.607
 ycood: -116.408
 spectralType: F4V
@@ -107,6 +107,12 @@ planet:
       - name: Waugh
       - name: Fort McEachearn
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2516-10-02'
         faction:
           source: canon
@@ -126,6 +132,12 @@ planet:
         population: 30801468.0
       - date: '2570-01-01'
         population: 59244711.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2575-01-01'
         socioIndustrial: C-D-B-D-D
       - date: '2579-01-01'
@@ -247,6 +259,12 @@ planet:
           source: canon
           value:
             - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DTA
       - date: '3080-01-01'
         population: 297413353.0
       - date: '3090-01-01'
@@ -267,9 +285,13 @@ planet:
         population: 331266415.0
       - date: '3145-01-01'
         population: 332993487.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: An Iarmhí Belt I

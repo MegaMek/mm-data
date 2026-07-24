@@ -1,0 +1,216 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# NOTE: Coordinates derived from Exodus Road route.
+
+id: Gutara
+xcood: 302.2
+ycood: 458.2
+spectralType: M0V
+planet:
+  - name: Gutara
+    type: TERRESTRIAL
+    orbitalDist: 0.2
+    sysPos: 1
+    icon: green8
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.97
+    diameter: 11700
+    density: 5.8284
+    dayLength: 26
+    yearLength: 0.7
+    temperature: 24
+    water: 47
+    lifeForm: INSECT
+    event:
+      - date: '2600-01-01'
+        population: 56488.0
+        socioIndustrial: C-F-A-D-F
+      - date: '2610-01-01'
+        population: 677516.0
+      - date: '2620-01-01'
+        population: 3619908.0
+      - date: '2630-01-01'
+        population: 11108398.0
+      - date: '2633-01-01'
+        socioIndustrial: D-F-A-D-F
+      - date: '2640-01-01'
+        population: 23593435.0
+      - date: '2646-01-01'
+        socioIndustrial: D-F-A-D-D
+      - date: '2650-01-01'
+        population: 39048697.0
+      - date: '2660-01-01'
+        population: 54767649.0
+      - date: '2670-01-01'
+        population: 68838561.0
+      - date: '2680-01-01'
+        population: 80203148.0
+      - date: '2690-01-01'
+        population: 88595312.0
+      - date: '2700-01-01'
+        population: 94275478.0
+      - date: '2710-01-01'
+        population: 97930096.0
+      - date: '2720-01-01'
+        population: 99980169.0
+      - date: '2730-01-01'
+        population: 101118697.0
+      - date: '2740-01-01'
+        population: 26943601.0
+      - date: '2750-01-01'
+        population: 4522729.0
+      - date: '2760-01-01'
+        population: 589850.0
+      - date: '2770-01-01'
+        population: 82680.0
+      - date: '2780-01-01'
+        population: 11382.0
+      - date: '2786-01-01'
+        socioIndustrial: X-X-X-X-X
+  - name: Gutara II
+    type: TERRESTRIAL
+    orbitalDist: 0.35
+    sysPos: 2
+    icon: barren7
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen and Carbon Dioxide, plus trace amounts of Water Vapor
+    gravity: 0.52
+    diameter: 10500
+    density: 3.5
+    dayLength: 20
+    yearLength: 0.7
+    temperature: 121
+    water: 0
+  - name: Gutara III
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 0.5
+    sysPos: 3
+    icon: gasg10
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.54
+    diameter: 13500
+    density: 8
+    dayLength: 14
+    yearLength: 0.8
+    satellite:
+      - name: 3-L1
+        size: large
+        icon: rock1
+      - name: 3-M1
+        size: medium
+        icon: rock1
+      - name: 3-M2
+        size: medium
+        icon: rock2
+  - name: Gutara IV
+    type: ASTEROID_BELT
+    orbitalDist: 0.8
+    sysPos: 4
+    icon: asteroid2
+    yearLength: 1
+    temperature: -89
+  - name: Gutara V
+    type: GAS_GIANT
+    orbitalDist: 1.4
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.22
+    diameter: 120000
+    density: 1.3
+    dayLength: 7
+    yearLength: 1.8
+    ring: true
+    smallMoons: 16
+  - name: Gutara VI
+    type: GAS_GIANT
+    orbitalDist: 2.6
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.72
+    diameter: 110000
+    density: 1.1
+    dayLength: 16
+    yearLength: 4.3
+    smallMoons: 14
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-L2
+        size: large
+        icon: rock2
+      - name: 6-M1
+        size: medium
+        icon: rock1
+  - name: Gutara VII
+    type: ASTEROID_BELT
+    orbitalDist: 9.8
+    sysPos: 7
+    icon: asteroid2
+    yearLength: 30.7
+    temperature: -221
+  - name: Gutara VIII
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 19.4
+    sysPos: 8
+    icon: gasg25
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.83
+    diameter: 14500
+    density: 4
+    dayLength: 10
+    yearLength: 85.5
+    ring: true
+    smallMoons: 8
+    satellite:
+      - name: 8-M1
+        size: medium
+        icon: rock1
+  - name: Gutara IX
+    type: ICE_GIANT
+    orbitalDist: 38.6
+    sysPos: 9
+    icon: iceg10
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.85
+    diameter: 35000
+    density: 1.7
+    dayLength: 14
+    yearLength: 239.8
+    ring: true
+    smallMoons: 10
+    satellite:
+      - name: 9-M1
+        size: medium
+        icon: rock1
+primarySlot: 1

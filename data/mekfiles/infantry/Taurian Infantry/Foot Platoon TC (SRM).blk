@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c06b-7ed7-8b6e-b03d1c28932b
+</UUID>
 
 <UnitType>
 Infantry
@@ -37,13 +32,13 @@ Foot Platoon (Taurian)
 (SRM)
 </Model>
 
+<mul id:>
+9274
+</mul id:>
+
 <year>
 2370
 </year>
-
-<originalBuildYear>
-2370
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -53,14 +48,19 @@ IS Level 2
 Leg
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Taurian infantry reflect the Concordat's citizen-soldier tradition, with national service requirements ensuring that most adults have received basic military training before ever donning a uniform. Foot platoons form the garrison backbone of the TDF's infantry arm, cheap to equip and maintain on worlds where the Concordat's limited resources must stretch across dozens of systems. Since infantry regiments rarely rotate offworld, many battalions train as specialists in local terrain, and anti-BattleMech training is standard for all formations at battalion strength or greater.</p><p>Support elements carry man-portable short-range missile launchers firing the same warheads used by BattleMechs and combat vehicles, giving the platoon a potent anti-armor punch at close range.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -83,14 +83,3 @@ InfantryAssaultRifle
 InfantryHeavySRM
 </Secondary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
-
-<mul id:>
-9274
-</mul id:>

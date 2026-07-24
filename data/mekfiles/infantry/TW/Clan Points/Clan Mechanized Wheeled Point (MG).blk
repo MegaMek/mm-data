@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bf84-7f3d-8796-3673e4e2d471
+</UUID>
 
 <UnitType>
 Infantry
@@ -45,10 +40,6 @@ Clan Mechanized Wheeled Point
 2815
 </year>
 
-<originalBuildYear>
-2815
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,14 +52,19 @@ Ambusher
 Wheeled
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Clan Armor Kit (All)
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Clan mechanized wheeled Points transport five warriors in wheeled APCs, balancing road speed with operational economy. On garrison worlds with developed road networks, wheeled Points provide fast, affordable mechanized coverage for checkpoint security, convoy escort, and area patrol. They sacrifice the off-road reliability of tracked vehicles for lower maintenance costs and higher transit speeds on improved surfaces. Clan garrison planners employ wheeled Points where infrastructure supports their mobility advantage and terrain does not demand tracked capability.</p>
+</overview>
+
 <source>
-TW
+TW,TO:AUE
 </source>
 
 <squad_size>
@@ -90,10 +86,6 @@ InfantryAssaultRifle
 <Secondary>
 Machine Gun (Portable)
 </Secondary>
-
-<armorKit>
-Clan Armor Kit (All)
-</armorKit>
 
 <armordivisor>
 2.0

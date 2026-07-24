@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,7 +15,11 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.0-SNAPSHOT on 2024-08-05
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e7a9-7a3a-bc7b-1d5353eb104a
+</UUID>
+
 <UnitType>
 Tank
 </UnitType>
@@ -35,10 +39,6 @@ Destrier Siege Vehicle
 <year>
 3100
 </year>
-
-<originalBuildYear>
-3100
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -75,9 +75,13 @@ troopspace:4.0
 4
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 60
@@ -147,16 +151,19 @@ ISAntiMissileSystem
 </Turret Equipment>
 
 <capabilities>
-Twice the mass of a conventional assault tank, wrapped in almost forty tons of hardened armor, and armed with a pair of turreted Long Tom assault cannons, the Destrier excels at reducing enemy fortifications to dust within minutes of its arrival. Heavy defensive weaponry and thick armor just barely compensate for its slow speed, however.
+<p>The Destrier's most striking characteristic is its armor. Mounting thirty-seven tons of Johnston Bastion Plate 530 Hardened plating with integral CASE protection, the vehicle can absorb punishment that would destroy most conventional combat vehicles outright. To move this mass, General Motors fitted the design with a GM SuperLoad 400 XL fusion engine powerful enough to tow the Ballista trailer across varied terrain. This combination of armor and engine mass reduces the Destrier to a maximum speed of just over thirty kilometers per hour, making it among the slowest combat vehicles in active AFFS service.</p><p>Offensive firepower is concentrated in the main turret, where two Mydron Model L Long Tom cannons and a pair of Bright Blossom extended range medium lasers provide both extreme-range bombardment capability and direct-fire support. Against infantry and light vehicles, six GM light machine guns are distributed in pairs across all sides of the hull, with the flank weapons mounted in sponson turrets for wider coverage. Four MainFire Point Defense anti-missile systems guard against guided munitions, mounted in the turret and to the rear. A Guardian ECM suite and a C3 slave unit integrate the vehicle into combined-arms networks, while a four-ton infantry compartment provides organic defensive support against enemy boarding attempts.</p>
 </capabilities>
 
 <overview>
-Despite the formation of its light combat teams and its public declarations of defensive doctrine, the adoption of the Destrier Siege Vehicle at the turn of the thirty-second century proved that the AFFS hadn’t completely rejected offensive warfare. The Federated Suns' involvement in the Victoria War, where it acted as the aggressor, demonstrated to the Inner Sphere that it had not forgotten Hanse Davion’s lessons.
+<p>The Destrier Siege Vehicle stands apart from the cautious defensive doctrine that guided the Armed Forces of the Federated Suns in the early thirty-second century. Introduced in 3100 by General Motors on Salem, the two-hundred-ton tracked behemoth was conceived as a deliberate exception to a military culture increasingly focused on holding ground rather than seizing it. Built to bring overwhelming firepower against fortified installations and to trap unsuspecting opponents in devastating ambushes, the Destrier pairs tremendous armor protection with a pair of long-range artillery cannons capable of reducing fortifications to rubble within minutes of arrival. The design pays a steep price for this capability, moving at speeds that severely limit its strategic flexibility. Deployed alongside its purpose-built Ballista artillery trailer, the combined system represents one of the most formidable siege platforms ever fielded by a Successor State.</p>
 </overview>
 
+<deployment>
+<p>The Destrier's combined tonnage with its Ballista trailer makes rapid deployment all but impossible, limiting its use to pre-planned operations where substantial logistical support can be arranged in advance. The AFFS has fielded the vehicle in two primary roles: as a siege weapon against hardened installations and as an ambush platform against armored columns following predictable approach routes. Given the scarcity of Destriers in active service, individual engagements have involved only a handful of vehicles at a time, typically attached to heavy assault formations or garrison commands holding key facilities. The vehicle's extreme armor and artillery reach make it effective in last-ditch defensive actions, though commanders must accept that recovery of committed Destrier units is rarely practical once an engagement begins.</p>
+</deployment>
+
 <history>
-Given the relative scarcity of AFFS invasions, the most notable engagement to feature the Destrier came on Spica in 3104. The Eighth Avalon Hussars light combat team, the world’s garrison, was attacked by the Third McCarron’s Armored Cavalry. Unable to stand against the Third directly, the Eighth planned an ambush with the company of Destriers assigned to it. Using her ’Mechs as bait and her hovertanks as harassers, General Stasi Ivanova led the Capellan vanguard into a valley and destroyed it with concentrated Long Tom fire. As missile artillery began to fall from the Destriers’ attached Ballista trailers, the Hussars ’Mechs counterattacked and drove the Capellans into retreat.
-<p>Several times during the Kuritan invasion, Destriers and their crews have been sacrificed—voluntarily or not—as forlorn hopes to let battered Davion units escape. Too slow to retreat and too large to be easily evacuated, the Destriers make fine last-line holders. On Barlow’s End, for instance, a platoon of Destriers set itself outside the gates of the Princess Melissa spaceport. As the DCMS advanced, the Second New Ivaarsen Chasseurs withdrew to their DropShips. A small group of lottery-chosen VTOLs and hovertanks remained to designate targets for the Ballistas’ Arrow IV missiles, while the Destriers hid themselves among the spaceport buildings. As the lead ’Mechs of Ryuken-roku advanced, the Destriers fired from cover, causing enough confusion that the DropShips could escape. None of the Destrier crews survived to be captured.</p>
+<p>The Destrier emerged from a design process that ran contrary to the prevailing strategic philosophy within the AFFS. In the years following the Jihad, Federated Suns military planners increasingly emphasized defensive operations, rebuilding degraded border defenses rather than projecting offensive force. General Motors' engineering team at Salem developed the Destrier in response to a faction within the Department of the Quartermaster that argued the AFFS needed a dedicated tool for prosecuting offensive sieges and springing large-scale ambushes against enemy armored columns. The result entered service in 3100, an anomaly in an era of retrenchment.</p><p>The design's first major operational test came during the Victoria War, when the Federated Suns pushed into Capellan Confederation space. On Spica in 3104, a company of Destriers was assigned to ambush elements of the Third McCarron's Armored Cavalry. The Eighth Avalon Hussars light combat team used the vehicles as bait and directed the Capellan vanguard into a valley, where concealed Destriers opened fire and destroyed the lead elements with concentrated artillery. Despite taking losses, the operation forced the Third McCarron's to withdraw, buying time for the broader campaign.</p><p>By the 3140s, the character of the Destrier's service had shifted considerably. With the Draconis Combine pressing deep into Federated Suns territory, the AFFS deployed Destriers primarily as last-line holders, committing them to defensive actions from which recovery was rarely expected. On Barlow's End, a platoon of Destriers used the grounds of the Princess Melissa spaceport to delay advancing Combine forces long enough for DropShips to escape. As the Combine closed in, the Destrier crews fired from cover while VTOLs and hovertanks designated targets for the Ballista's Arrow IV launchers. None of the Destrier crews at Barlow's End survived to be captured.</p>
 </history>
 
 <manufacturer>
@@ -168,15 +175,28 @@ Salem
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:GM SuperLoad 400 XL Fusion
-ARMOR:Johnston Bastion Plate 530 Hardened with CASE
-COMMUNICATIONS:Electronics HICS-17 with C3 Slave and Guardian ECM Suite
-TARGETING:Federated Bombard Mk. II
+CHASSIS:General Motors
+ENGINE:General Motors
+ARMOR:Johnston
+COMMUNICATIONS:Achernar Electronics
+TARGETING:Unknown
 </systemManufacturers>
 
+<systemModels>
+CHASSIS:Unknown
+ENGINE:GM SuperLoad 400 XL
+ARMOR:Johnston Bastion Plate 530 (Hardened/CASE)
+COMMUNICATIONS:Achernar Electronics HICS-17
+TARGETING:Federated Bombard Mk. II
+</systemModels>
+
 <source>
-TR:3145:FS
+TR:3145:FS,TR:3150
 </source>
+
+<published>
+RS:3150
+</published>
 
 <tonnage>
 200.0

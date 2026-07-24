@@ -89,10 +89,19 @@
         <name ifWeightClass="L">Vanguard Striker Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Kindraa Kline ("The Extended
+             Family", Clan Fire Mandrill Touman, Sarna) is the garrison-leaning, decentralized
+             strike Kindraa - the lightest of the Fire Mandrill Kindraa. Light/strike Mek mix. -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:5,H:38,M:40,L:17</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:16,M:52,L:30</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:6,M:38,L:55</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:30,M:46,L:24</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:8,M:38,L:54</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">H</option>
             <option weight="2">M</option>
-            <option weight="1">L</option>
+            <option weight="3">L</option>
         </weightClass>
 
         <subforces>
@@ -179,6 +188,13 @@
         <name ifWeightClass="M">Vanguard Battle Cluster</name>
         <name ifWeightClass="L">Vanguard Striker Cluster</name>
         <co>%STAR_COL%</co>
+
+        <!-- Kindraa Kline second-line: same light/strike doctrine (see FL note above). -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:5,H:38,M:40,L:17</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:16,M:52,L:30</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:6,M:38,L:55</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:30,M:46,L:24</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:8,M:38,L:54</weightTarget>
 
         <weightClass>
             <option weight="1">L</option>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c068-7f4b-b67c-b6a39f5d3167
+</UUID>
 
 <UnitType>
 Infantry
@@ -37,13 +32,13 @@ Foot Platoon (Taurian)
 (MG)
 </Model>
 
+<mul id:>
+9273
+</mul id:>
+
 <year>
 2335
 </year>
-
-<originalBuildYear>
-2335
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -53,14 +48,19 @@ IS Level 2
 Leg
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>The Taurian Defense Force assigns conventional infantry to garrison and planetary defense roles across the Concordat, where citizen-soldiers serve out of patriotic duty rather than mere obligation. Foot platoons form the garrison backbone of the TDF's infantry arm, cheap to equip and maintain on worlds where the Concordat's limited resources must stretch across dozens of systems. Since infantry regiments rarely rotate offworld, many battalions train as specialists in local terrain, and anti-BattleMech training is standard for all formations at battalion strength or greater.</p><p>Support squads operate portable or crew-served machine guns that deliver sustained automatic fire, providing suppression capability that can pin down enemy infantry and threaten light vehicles.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -83,14 +83,3 @@ InfantryAssaultRifle
 Machine Gun (Portable)
 </Secondary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
-
-<mul id:>
-9273
-</mul id:>

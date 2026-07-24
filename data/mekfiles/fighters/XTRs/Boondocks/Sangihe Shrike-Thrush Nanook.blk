@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,18 +15,13 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-afd5-7dc9-8ece-4572d360943c
+</UUID>
 
 <UnitType>
-Aero
+AeroSpaceFighter
 </UnitType>
 
 <Name>
@@ -45,10 +40,6 @@ Sangihe Shrike-Thrush 'Nanook'
 3068
 </year>
 
-<originalBuildYear>
-3068
-</originalBuildYear>
-
 <type>
 Mixed (IS Chassis) Experimental
 </type>
@@ -60,9 +51,6 @@ Interceptor
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 12
@@ -92,6 +80,18 @@ Aerodyne
 7
 </armor_type>
 
+<Nose_armor_type>
+0
+</Nose_armor_type>
+
+<Nose_armor_tech>
+Inner Sphere
+</Nose_armor_tech>
+
+<Nose_armor_tech_rating>
+3
+</Nose_armor_tech_rating>
+
 <Left Wing_armor_type>
 3
 </Left Wing_armor_type>
@@ -99,6 +99,10 @@ Aerodyne
 <Left Wing_armor_tech>
 (Unknown Technology Base)
 </Left Wing_armor_tech>
+
+<Left Wing_armor_tech_rating>
+4
+</Left Wing_armor_tech_rating>
 
 <Right Wing_armor_type>
 3
@@ -108,6 +112,10 @@ Aerodyne
 (Unknown Technology Base)
 </Right Wing_armor_tech>
 
+<Right Wing_armor_tech_rating>
+4
+</Right Wing_armor_tech_rating>
+
 <Aft_armor_type>
 2
 </Aft_armor_type>
@@ -115,6 +123,10 @@ Aerodyne
 <Aft_armor_tech>
 Clan
 </Aft_armor_tech>
+
+<Aft_armor_tech_rating>
+5
+</Aft_armor_tech_rating>
 
 <Wings_armor_type>
 0
@@ -124,6 +136,10 @@ Clan
 Inner Sphere
 </Wings_armor_tech>
 
+<Wings_armor_tech_rating>
+3
+</Wings_armor_tech_rating>
+
 <Fuselage_armor_type>
 -1
 </Fuselage_armor_type>
@@ -131,6 +147,10 @@ Inner Sphere
 <Fuselage_armor_tech>
 (Unknown Technology Base)
 </Fuselage_armor_tech>
+
+<Fuselage_armor_tech_rating>
+2
+</Fuselage_armor_tech_rating>
 
 <armor>
 32
@@ -162,10 +182,57 @@ Small Laser
 <Fuselage Equipment>
 </Fuselage Equipment>
 
+<capabilities>
+<p>The Nanook's defining modification is a Magna 250 XXL engine that reduces propulsion mass dramatically compared to the standard airframe, freeing weight for heavier weapons and armor. The engine supports acceleration to six gravities under normal thrust and a theoretical maximum of nine, though the FrontierTech agreement governing reactor access formally limits operations to five gravities to protect the modified airframe. Under combat thrust the fighter's five-ton fuel supply is consumed in little more than twenty minutes, imposing a strict operational endurance ceiling regardless of other capabilities.</p><p>Offensive armament uses Clan technology throughout: a pair of ER medium lasers in the nose, a Clan medium pulse laser in each wing, and a small laser defending the rear arc. The Clan weapons deliver superior accuracy and output compared to equivalent Inner Sphere equipment without requiring ammunition. Ten double heat sinks handle the weapon load comfortably under standard thrust. Patchwork protection combines laser reflective armor on the wings with reactive armor on the nose and aft fuselage, giving the fighter meaningful resistance against both energy weapons and ballistic or explosive threats. The mixed armor approach reflects the materials available to an independent salvage team rather than a planned design choice.</p>
+</capabilities>
+
+<overview>
+<p>The Sangihe Shrike-Thrush "Nanook" is a unique experimental modification of the TR-7 Thrush assembled on Solaris VII in the years surrounding the Jihad. Built by Vining Engineering and Salvage Team for a pilot known only as Nanook, the aircraft represents independent engineering work drawing on Clan-surplus components available through informal channels in the post-Tukayyid Inner Sphere. Project records indicate work began sometime after 3052 and continued until at least the Jihad's outbreak in 3068, when the Solaris VII fighting disrupted operations across the planet. The result is a one-of-a-kind fighter with capabilities substantially exceeding any production Thrush variant, though at considerable expense and complexity. The craft has been seen at air shows and aerospace events throughout the Inner Sphere periphery in the years following the Jihad.</p>
+</overview>
+
+<deployment>
+<p>The Nanook is a non-production, one-of-a-kind aircraft with no formal military affiliation or operational doctrine. It has appeared at air shows and aerospace events throughout the Inner Sphere periphery following the Jihad, drawing attention for its unusual Clan-technology armament and modified performance profile. The craft's Clan energy weapons and mixed armor give it capabilities substantially exceeding any production Thrush, but its extreme fuel consumption under combat thrust limits tactical endurance, and its unique status makes component replacement and maintenance demanding. The FrontierTech-imposed thrust limit and ongoing maintenance requirements constrain operational deployment, leaving the aircraft primarily a demonstration piece and personal transport for its owner rather than a combat asset.</p>
+</deployment>
+
+<history>
+<p>Little is documented about the pilot known as Nanook. He appeared on Solaris VII sometime after the Battle of Tukayyid in 3052 and established a working relationship with Vining Engineering and Salvage Team before the Jihad destroyed much of the planet's independent engineering community in 3068. VEST project records give a start date somewhere between 3052 and 3068, suggesting an extended development and modification period. Nanook participated in the Wings over Donegal air show in 3072, the first documented postwar appearance of the aircraft, and has since been seen at smaller events across the Inner Sphere periphery.</p><p>The fighter reflects the Solaris VII engineering ecosystem of the post-Tukayyid era, when salvage from Clan engagements and official technology exchanges made advanced Clan components accessible to independent operators outside normal procurement channels. VEST engineers mated the established Thrush airframe with a Magna 250 XXL engine and Clan-sourced weapons to produce a craft well beyond production specifications without access to formal manufacturing infrastructure. The Jihad's devastation of Solaris VII in 3068 ended the project and scattered the engineering community responsible for the modification, though the fighter and its pilot appear to have survived the conflict intact. Whether VEST continued operations elsewhere after 3068 is unknown.</p>
+</history>
+
+<manufacturer>
+Vining Engineering and Salvage Team (VEST)
+</manufacturer>
+
+<primaryFactory>
+Solaris VII
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Mujika Aerospace Technologies
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:N/A
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Mujika Aerospace Type 12
+ENGINE:Magna 250 XXL
+ARMOR:Patchwork (Laser Reflective/Reactive)
+JUMP_JET:N/A
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 XTR:Boondocks
 </source>
 
+<published>
+XTR:Boondocks
+</published>
+
 <tonnage>
 25.0
 </tonnage>
+

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0b3-7d0c-b437-c5f40872bec8
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Harpy
 3065
 </year>
 
-<originalBuildYear>
-3065
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Scout
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 5
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 0
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -90,6 +98,7 @@ Biped
 
 <Body Equipment>
 Clan Light Machine Gun Ammo - Proto (10)
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -108,43 +117,51 @@ CLLightMG
 <Legs Equipment>
 </Legs Equipment>
 
+<capabilities>
+<p>The Harpy is defined by its jump capability. Three jump jets give the tiny machine ninety meters of leaping distance, allowing it to exploit terrain features that would block larger units and execute flanking maneuvers that heavier ProtoMeks cannot replicate. A single machine gun provides adequate firepower against infantry and battle armor formations, though it struggles to threaten anything with significant armor protection. The ten-rated fusion engine drives the two-ton frame at a modest thirty-two kilometers per hour cruising speed, making the Harpy one of the slower designs when earthbound.</p><p>The Harpy carries eleven points of armor, sufficient to absorb a medium laser hit to the torso but offering little margin against sustained fire. In standard battlefield exercises against Elemental battle armor, the Harpy generally fared poorly in direct engagements, as Elementals carry comparable firepower with better anti-Mek capability. The Harpy finds its niche in roles where its larger size offers a psychological advantage over conventional infantry and where its jump jets allow it to control engagement range. Commanders who attempt to use Harpy Points as frontline assault units quickly discover the design limitations, while those who employ them as mobile skirmishers and ambush elements find them surprisingly effective.</p>
+</capabilities>
+
+<overview>
+<p>The Harpy is a two-ton first-generation ProtoMek developed by Clan Smoke Jaguar as part of the original ProtoMek program on Huntress. The lightest design to emerge from the program, the Harpy blurs the line between battle armor and true combat walker, standing barely taller than an Elemental in powered armor. Despite its diminutive stature, the Harpy mounts a ballistic weapon and three jump jets that grant it remarkable tactical agility for its weight class. Intended primarily for anti-infantry operations and close-range ambush tactics, the Harpy relies on its small profile and jumping ability rather than armor protection or raw firepower to survive on the battlefield.</p>
+</overview>
+
+<deployment>
+<p>The Harpy 3 serves as a fundamental rethinking of the design philosophy, sacrificing the signature jump jets for a larger engine that increases ground speed to fifty-four kilometers per hour cruising. A light machine gun replaces the standard machine gun, and armor protection increases to twelve points, the highest of any Harpy variant. Without jump capability, the Harpy 3 loses much of the original design tactical flexibility but gains the ability to keep pace with faster ProtoMek formations. This variant found favor with Clan Snow Raven, who preferred the increased speed for reconnaissance operations across the open terrain common to many Homeworld garrison postings.</p>
+</deployment>
+
+<history>
+<p>The Harpy holds the distinction of being the first ProtoMek design attempted by Clan Smoke Jaguar scientists on Huntress. Conceived in the aftermath of the Battle of Tukayyid in 3052, the ProtoMek program sought to create a class of combat machine that could be manufactured at a fraction of the cost of a BattleMek while requiring pilots smaller than Elemental phenotypes. The Harpy, as the initial proof-of-concept design, was deliberately kept simple and light, allowing scientists to validate the fundamental ProtoMek technologies before scaling up to heavier designs like the Centaur and Minotaur.</p><p>The ProtoMek program remained hidden from the Jaguar Khans until the desperate defense of Huntress against Task Force Serpent in 3060. When Khan Lincoln Osis discovered the secret project, the dire circumstances of the Clan Annihilation forced him to deploy the untested machines. The Harpy and its sibling designs saw their combat debut in the jungles of Huntress, where the small ProtoMeks used the dense vegetation and broken terrain to stage ambushes against the surprised Inner Sphere forces. The Harpy proved particularly effective in these conditions, its jump jets allowing it to navigate the canopy gaps and ravines that channeled heavier units into kill zones.</p><p>Following the destruction of Clan Smoke Jaguar, multiple Clans raided Huntress to seize ProtoMek production data. The Harpy was among the least coveted designs due to its limited combat capability, but its simplicity made it one of the easiest to reproduce. Clan Coyote and Clan Blood Spirit were the first to establish independent Harpy production, valuing the design as a training platform for ProtoMek pilots and as a low-cost garrison unit. Clan Jade Falcon also acquired Harpy production data but showed little enthusiasm for the design, considering it beneath their martial standards.</p><p>The 3060s saw modest variant development as different Clans experimented with the Harpy chassis. The Harpy 2, which replaces the machine gun with an ER Micro Laser, emerged from Clan Wolf efforts to create an ammunition-independent version suitable for extended patrols. The Harpy 3 traded the jump jets for a larger engine and faster ground speed, reflecting Clan Snow Raven preferences for rapid reconnaissance over terrain agility. The Harpy 4 incorporated myomer booster technology for enhanced sprint capability while retaining the original jump configuration.</p><p>The Wars of Reaving took a heavy toll on Harpy production capacity as several manufacturing Clans were destroyed or absorbed. Despite this, the Harpy endures as a training and garrison design across the Homeworld Clans. Its low manufacturing cost and simple maintenance requirements ensure continued production even as more capable second-generation designs have largely supplanted it in frontline service. The Harpy remains most commonly encountered in solahma garrison clusters and ProtoMek training cadres, where its forgiving handling characteristics make it an ideal introduction to ProtoMek operations.</p>
+</history>
+
+<manufacturer>
+Complex 18|Industriplex Upsilon
+</manufacturer>
+
+<primaryFactory>
+Albion (Junction City)|Niles
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:10 Fusion
+</systemModels>
+
 <source>
 TR:3060
 </source>
+
+<published>
+RS:3060u
+</published>
 
 <tonnage>
 2.0
 </tonnage>
 
-<capabilities>
-The only real advantage it offered over the battle armor was the top speed and size. Because of this it was quickly relegated to anti-infantry work. As a proof of concept however, the Harpy did demonstrate that the ProtoMech (with improvements) could become a viable weapon. After the destruction of Clan Smoke Jaguar, initially just Clan Hell's Horses and Clan Star Adder adopted the Harpy for their use, joined later by Clan Jade Falcon and Clan Fire Mandrill. Capable of jumping 90 meters at a time and can maintain a cruising speed of 32 km/h, adequate for hunting down infantry. Its light armoring - a single shot from a medium laser will punch through the center torso - is also sufficient for resisting most infantry-scale weapons, while its size can be intimidating to most troopers.
-</capabilities>
-
-<overview>
-The Harpy was the first ProtoMech ever created. Intended as a "proof-of-concept" more than an actual fighting unit, the Harpy doesn't outperform a standard Elemental battle armor suit in most categories.
-</overview>
-
-<deployment>
-This upgraded version of the Harpy was first spotted during the Jihad. This speedy variant has slightly increased the ProtoMech's armor to its arms, head, and legs. It is armed with a Light Machine Gun with one ton of ammunition. To increase its top speed to 80 km/h, the jump jets were dropped.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:Unspecified
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
-</systemManufacturers>

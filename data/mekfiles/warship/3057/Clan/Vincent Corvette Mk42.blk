@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ecb2-7392-bffc-1118fc374bfd
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Mk 42
 2997
 </year>
 
-<originalBuildYear>
-2997
-</originalBuildYear>
-
 <type>
 Clan Level 3
 </type>
@@ -62,11 +53,11 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:4.0:1:1
-asfbay:10.0:2:2
-1stclassquarters:280.0:0
-crewquarters:1057.0:0
-cargobay:92187.5:1:5
+smallcraftbay:4.0:1:1::-1:0
+asfbay:10.0:2:2::-1:0
+1stclassquarters:280.0:0:-1::-1:0
+crewquarters:1057.0:0:-1::-1:0
+cargobay:92187.5:1:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -89,13 +80,21 @@ cargobay:92187.5:1:5
 1
 </engine_type>
 
+<clan_engine>
+false
+</clan_engine>
+
 <armor_type>
 12
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 6
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 16
@@ -158,6 +157,60 @@ CLERLargeLaser
 40
 </structural_integrity>
 
+<capabilities>
+<p>At 420,000 tons and 402 meters, the Vincent is a medium-weight corvette optimized for sustained patrol operations and fleet screening. Two Howser 2G2 Hotfire engines deliver two gravities of sustained acceleration with a three-gravity burst capability, enabling the ship to keep pace with most DropShips and outmaneuver all but the most modern WarShips. The primary armament consists of four Luxor-10 Series NAC/10 naval autocannons distributed across the forward quarters and broadsides, providing overlapping fields of fire without exposing the vessel's flanks. A pair of nose-mounted Barracuda capital missile launchers supply long-range striking power. Conventional weaponry includes eight large lasers spread across the same arcs for anti-fighter defense. Four hundred and ninety-three single heat sinks manage the thermal load across all weapon systems. One hundred and four tons of Delhi 9800 ferro-carbide armor protect the Mk 39 hull, while the Ulsop Robotics AI Surveillance Computer provides twice the detection range of the earlier Mk 38 system, making the Vincent an excellent picket and reconnaissance platform. A single 60-meter gravity deck supports the crew of approximately one hundred and eighty-five during extended deployments, with accommodations considered unusually well-equipped for a patrol craft. Six aerospace fighters and four small craft provide organic screening capability. The Mk 42 Clan refit replaces the original large lasers with extended-range models, upgrades to 76 tons of lamellor ferro-carbide armor, and adds a lithium-fusion battery system for double-jump capability. HarJel-based hull sealant technology enables the Mk 42 to continue operating after sustaining significant damage, while a mobile HPG and small naval comm scanner suite enhance communications and intelligence gathering. Fighter capacity expands to ten craft.</p>
+</capabilities>
+
+<overview>
+<p>The Vincent-class corvette is among the most widely produced WarShip designs in human history. Introduced in 2432 by Delhi WarShips as a replacement for the aging Bonaventure and Vigilant corvettes, the Vincent was designed from the outset as a fast, maneuverable patrol craft and fleet screening vessel for the Terran Hegemony's navy. The class earned a reputation for exceptional longevity and adaptability, ultimately serving in every Great House fleet and eventually in Clan navies as well. Few WarShip classes could match the Vincent's operational lifespan or the breadth of its service record, reflecting the soundness of Delhi's original engineering. As the smallest dedicated combat vessel in most fleets that operated it, the corvette's combination of speed, adequate firepower for its tonnage, and capable sensor systems made it a natural choice for reconnaissance patrols, convoy escort, and picket duty across centuries of interstellar conflict.</p>
+</overview>
+
+<deployment>
+<p>The Mk 42 variant served Clan navies across the Homeworlds and Inner Sphere for centuries following its 2997 introduction. The NCS Far Vision served Clan Nova Cat in the Mystic Naval Star alongside the Spirit Vision before transferring to the Transcendent Naval Star by 3067. During the Jihad, the Far Vision was assigned to Task Force EARTHBOUND, the WarShip flotilla tasked with clearing the Word of Blake's formidable naval defenses around Terra. The corvette was lost during the Battle of Terra in 3078, destroyed fighting to liberate humanity's homeworld from Blakist occupation.</p><p>The CWS Relentless Pursuit survived the devastating Wars of Reaving, remaining one of only three WarShips in Clan Coyote's possession after the widespread destruction consumed much of the Clan's naval assets. The vessel was undergoing repair at the expanded Kirin shipyard alongside a Carrack-class transport and a Liberator-class cruiser, a sign of the Vincent design's durability even after centuries of hard service.</p><p>The Clan Star Adder Pegasus met a grimmer fate. Assigned to a reconnaissance-in-force along the Hanseatic League frontier around 3088, the corvette encountered massed League fighter formations whose strength had been badly underestimated by its commanding officer, Star Admiral Tomas Columbo. The Pegasus was overwhelmed by a fighter swarm over Novgorod and lost with her entire crew, a painful lesson that even Clan-upgraded vessels remained vulnerable when committed against determined opposition without adequate screening support.</p>
+</deployment>
+
+<history>
+<p>The Vincent-class corvette entered service in 2432, designed by Delhi WarShips to provide the Terran Hegemony with a fast, efficient patrol craft capable of replacing the older Bonaventure and Vigilant corvettes. The design emphasized upgradeability through a modular systems architecture that Delhi termed "smart modularity," allowing components to be swapped and improved as technology advanced without requiring extensive structural overhaul. This approach would prove remarkably prescient, as the class remained in active production for over three centuries.</p><p>Delhi WarShips maintained production lines at two facilities: the primary yard above Carver V and a secondary facility on Capella. Over the course of three hundred years, these yards produced more than five hundred Vincent-class hulls, making it one of the most numerous WarShip classes ever constructed. The design's modular architecture proved equally attractive to the Great Houses, and surplus Vincents regularly found their way into House navies through military surplus sales and approved transfers.</p><p>During the Reunification War, ten Vincents deployed as part of Case AMBER, screening the Star League task force during operations against the Taurian Concordat at Tentativa. The class served extensively in reconnaissance and picket squadrons, where its advanced sensor suite proved invaluable for intelligence gathering along the Periphery frontier. By the Star League's peak in 2765, Vincents served in every major Inner Sphere navy. The Federated Suns operated five across its fleet groups, the Lyran Commonwealth maintained five as part of its sixty-two-vessel Vacuum Fleet, the Draconis Combine fielded four, the Capellan Confederation three, and the Free Worlds League one assigned to the Duchy of Andurien. Even the Taurian Concordat possessed a single Vincent, the only Periphery state to operate the class.</p><p>The Amaris Coup of 2766 triggered events that shaped the Vincent's later career. With Carver V under siege by Rim Worlds forces, Delhi personnel smuggled the Vincent and Essex construction plans to their Capellan yards, restarting production in defiance of protests from both Amaris and Kerensky. New-build Vincents entered Capellan service before the Succession Wars began, giving the Confederation a WarShip production capability that most Houses would soon lose entirely. During the Liberation of Terra, at least two SLDF Vincents were destroyed when a squadron of eighteen M-3 drones launched from a hidden hangar on Terra's moon and struck the fleet's lighter escorts.</p><p>The First Succession War inflicted devastating losses on all WarShip fleets, and the Vincent was no exception. At Schedar in May 2788, Combine and Federated Suns forces clashed during Operation SOLAR SHIELD, one of many engagements where former allies turned these patrol vessels against one another. The destruction of shipyard infrastructure across the Inner Sphere meant that combat losses could not be replaced, and attrition steadily reduced operational numbers through each successive conflict. Despite this, the class's durable construction and modular design kept individual vessels in service far longer than their contemporaries. Salvaged and restored hulls continued to appear in fleet rosters as late as the Jihad era, when the Word of Blake fielded at least one refurbished Vincent against Coalition forces, centuries after the last Inner Sphere production lines had fallen silent.</p><p>Vincents accompanied Kerensky's Exodus to the Deep Periphery, where Clan engineers developed the Mk 42 variant in 2997. The upgrade incorporated advanced Clan drive technology for improved strategic mobility, enhanced damage control systems, and upgraded weaponry suited to Clan doctrine. The Mk 42 served across the Homeworlds for centuries and eventually deployed to the Inner Sphere during the Clan Invasion era. Clan Vincents participated in operations ranging from garrison patrol to major fleet actions, including the desperate fighting around Terra during the Jihad. The Wars of Reaving consumed many surviving Clan examples alongside much of the Homeworld Clans' naval power, though scattered vessels endured in diminished fleets well into the late thirty-first century.</p>
+</history>
+
+<manufacturer>
+Field Refit
+</manufacturer>
+
+<primaryFactory>
+Various
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Delhi WarShips
+ENGINE:Howser
+ARMOR:Valiant
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Ulsop Robotics
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Vincent
+ENGINE:2G2 Hotfire
+ARMOR:Lamellor Ferro-Carbide
+JUMP_JET:Compact
+COMMUNICATIONS:Unknown
+TARGETING:AI Surveillance Computer
+</systemModels>
+
+<use>
+Corvette
+</use>
+
+<length>
+402 m
+</length>
+
+<height>
+1005 m Sail
+</height>
+
 <source>
 TR:3057r
 </source>
@@ -181,6 +234,10 @@ TR:3057r
 <grav_decks>
 60
 </grav_decks>
+
+<designtype>
+1
+</designtype>
 
 <crew>
 219
@@ -214,42 +271,3 @@ TR:3057r
 8
 </escape_pod>
 
-<capabilities>
-The Vincent corvette's notable features include its increased size and the implementation of "smart modularity." This innovative approach involved collaboration with other contractors to standardize ship fittings and systems, resulting in the adoption of long-lasting components that are still utilized in newer ships. The spacious interior of the Vincent allowed for the accommodation of various technological advancements over time, enabling engineers to replace engines, computers, and weapons as needed. Equipped with the Ulsop Al Surveillance Computer, the Vincent Mark XXXIX boasts enhanced detection capabilities, almost doubling the range compared to its predecessor, the Mark XXXVIII. With its four naval autocannons, eight lasers, and two missile systems, the Vincent possesses credible firepower, making it a formidable asset, particularly in squadron-based combat situations. Additionally, the Vincent Mark XXXIX is powered by two Howser 2G2 "Hotfire" engines, providing exceptional swiftness and maneuverability. The model in use with Clans during the initial invasion of the Inner Sphere differs little from the Mark 39, the most notable changes being the addition of a Lithium-Fusion Battery System and Clan HarJel-based hull-sealant technology.
-</capabilities>
-
-<overview>
-The Vincent corvette, commissioned by the Hegemony Armed Forces (HAF) to address the need for a powerful patrol vessel, played a vital role in defending Hegemony worlds. With its larger size and "smart modularity" concept, the Vincent stood out among previous corvettes. Delhi Ships, a manufacturer that later became Delhi Warships, won the contract to build the Vincent due to its design capabilities and strategic location. This marked a significant milestone for Delhi, as the Vincent design became widely produced, serving the HAF and Star League Defense Force (SLDF) for over three centuries and establishing Delhi as a major defense contractor.
-</overview>
-
-<history>
-The need for a capable patrol vessel became evident as the Terran Hegemony found itself surrounded by Inner Sphere realms, prompting the HAF to seek a vessel that could effectively deter intruders. However, compromises in previous corvette designs hindered the Hegemony's defense capabilities, leading to the formation of mixed corvette squadrons. These squadrons consisted of Bonaventure Class ships, renowned for their surveillance capabilities but lacking in armament, and Vigilant Class ships, armed but limited in detection capability. The vulnerability of the Hegemony was exposed when the Capellan army invaded Terra Firma in 2409, catching the HAF off guard. Following the eventual recapture of Terra Firma, a portion of the Liao reparations was allocated to commission a new corvette design. Delhi Ships, based on Capella and willing to accept payment in military reparations, won the contract to build the new corvette, named the Vincent. To maintain secrecy regarding Hegemony technology integrated into the Vincent, Delhi Ships agreed to establish a new facility in the Carver System. The Vincent's design, produced in large numbers, served the HAF and SLDF for over three centuries, contributing significantly to Delhi's ascent as a major Star League defense contractor.
-</history>
-
-<manufacturer>
-Refit
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<use>
-Corvette
-</use>
-
-<length>
-402 m
-</length>
-
-<height>
-1005 m Sail
-</height>

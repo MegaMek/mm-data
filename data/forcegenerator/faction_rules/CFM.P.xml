@@ -81,8 +81,19 @@
         <name ifWeightClass="L">Striker Payne</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Kindraa Payne ("Strength of Will",
+             Clan Fire Mandrill Touman, Sarna) is an elite, assault-focused Crusader Kindraa. Heavy/
+             assault Mek mix, second only to Sainze among the Fire Mandrill Kindraa. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:38,H:40,M:20,L:2</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:20,H:46,M:28,L:6</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:5,H:30,M:48,L:17</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:14,M:45,L:40</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:38,M:42,L:20</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:14,M:40,L:46</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">A</option>
+            <option weight="3">H</option>
             <option weight="2">M</option>
             <option weight="1">L</option>
         </weightClass>

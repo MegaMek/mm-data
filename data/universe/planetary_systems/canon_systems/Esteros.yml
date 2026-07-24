@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Esteros
-sucsId: 824
+sucsId: 825
 xcood: -157.657
 ycood: 268.588
 spectralType: M7V
@@ -64,6 +64,12 @@ planet:
         size: medium
         icon: rock9
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2619-02-19'
         faction:
           source: canon
@@ -108,6 +114,16 @@ planet:
         population: 2889961758.0
       - date: '2750-01-01'
         population: 2908359526.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - District of Donegal
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 2922584027.0
       - date: '2770-01-01'
@@ -177,6 +193,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Pherkad Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3042-01-01'
         socioIndustrial: A-B-C-A-C
       - date: '3050-01-01'
@@ -186,6 +213,17 @@ planet:
           source: canon
           value:
             - ARDC
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Donegal Province
+        #   - Pandora Theater
+        #   - Arc-Royal Defense Cordon
       - date: '3060-01-01'
         population: 2509383590.0
       - date: '3067-04-24'
@@ -193,6 +231,9 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3067-12-31'
+        # administration:
+        #   - Arc-Royal Theater
       - date: '3070-01-01'
         population: 2537900441.0
       - date: '3080-01-01'
@@ -219,9 +260,21 @@ planet:
           value:
             - CJF
         population: 2804252854.0
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CJF
       - date: '3152-06-01'
         faction:
           source: canon
+          value:
+            - IND
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - IND
   - name: Helius

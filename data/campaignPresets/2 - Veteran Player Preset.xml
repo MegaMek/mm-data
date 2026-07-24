@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,7 +17,7 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 -->
-<campaignPreset version="0.50.11">
+<campaignPreset version="0.51.00">
     <title>2 - Veteran Player Preset</title>
     <description><![CDATA[This preset offers the full MekHQ experience, with nearly all options enabled and balanced for a long-lasting campaign.
 <br>
@@ -43,6 +43,7 @@
     <campaignOptions>
         <manualUnitRatingModifier>0</manualUnitRatingModifier>
         <clampReputationPayMultiplier>true</clampReputationPayMultiplier>
+        <requireSupportForceTransportation>true</requireSupportForceTransportation>
         <reduceReputationPerformanceModifier>true</reduceReputationPerformanceModifier>
         <reputationPerformanceModifierCutOff>true</reputationPerformanceModifierCutOff>
         <logMaintenance>false</logMaintenance>
@@ -59,7 +60,7 @@
         <mrmsOptions>
             <mrmsOption>
                 <type>ARMOUR</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -68,7 +69,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>AMMUNITION</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -77,7 +78,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>WEAPON</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -86,7 +87,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>GENERAL_LOCATION</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -95,7 +96,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>ENGINE</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -104,7 +105,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>GYRO</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -113,7 +114,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>ACTUATOR</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -122,7 +123,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>ELECTRONICS</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -131,7 +132,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>GENERAL</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -140,7 +141,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>HEAT_SINK</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -149,7 +150,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>MEK_LOCATION</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -158,7 +159,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>PHYSICAL_WEAPON</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -167,7 +168,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>POD_SPACE</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -176,7 +177,7 @@
             </mrmsOption>
             <mrmsOption>
                 <type>UNKNOWN_LOCATION</type>
-                <active>0</active>
+                <active>1</active>
                 <skillMin>0</skillMin>
                 <skillMax>6</skillMax>
                 <targetNumberPreferred>4</targetNumberPreferred>
@@ -211,7 +212,7 @@
         <edgeCost>100</edgeCost>
         <attributeCost>100</attributeCost>
         <limitByYear>true</limitByYear>
-        <disallowExtinctStuff>false</disallowExtinctStuff>
+        <disallowExtinctStuff>true</disallowExtinctStuff>
         <allowClanPurchases>true</allowClanPurchases>
         <allowISPurchases>true</allowISPurchases>
         <allowCanonOnly>false</allowCanonOnly>
@@ -279,6 +280,7 @@
         <onlyCommandersMatterVehicles>true</onlyCommandersMatterVehicles>
         <onlyCommandersMatterInfantry>true</onlyCommandersMatterInfantry>
         <onlyCommandersMatterBattleArmor>true</onlyCommandersMatterBattleArmor>
+        <edgeRefreshPeriod>MONTHLY</edgeRefreshPeriod>
         <useEdge>true</useEdge>
         <useSupportEdge>true</useSupportEdge>
         <useImplants>true</useImplants>
@@ -297,6 +299,7 @@
         <displayAssignmentRecord>false</displayAssignmentRecord>
         <displayPerformanceRecord>false</displayPerformanceRecord>
         <awardVeterancySPAs>true</awardVeterancySPAs>
+        <awardRelevantVeterancySPAs>true</awardRelevantVeterancySPAs>
         <rewardComingOfAgeAbilities>true</rewardComingOfAgeAbilities>
         <rewardComingOfAgeRPSkills>true</rewardComingOfAgeRPSkills>
         <useTimeInService>true</useTimeInService>
@@ -322,6 +325,14 @@
         <useUsefulMedics>true</useUsefulMedics>
         <useMASHTheatres>true</useMASHTheatres>
         <mashTheatreCapacity>25</mashTheatreCapacity>
+        <useBlobInfantry>true</useBlobInfantry>
+        <useBlobBattleArmor>true</useBlobBattleArmor>
+        <useBlobVehicleCrewGround>true</useBlobVehicleCrewGround>
+        <useBlobVehicleCrewVTOL>true</useBlobVehicleCrewVTOL>
+        <useBlobVehicleCrewNaval>true</useBlobVehicleCrewNaval>
+        <useBlobVesselPilot>true</useBlobVesselPilot>
+        <useBlobVesselGunner>true</useBlobVesselGunner>
+        <useBlobVesselCrew>true</useBlobVesselCrew>
         <prisonerCaptureStyle>MEKHQ</prisonerCaptureStyle>
         <useFunctionalEscapeArtist>true</useFunctionalEscapeArtist>
         <useRandomDependentAddition>true</useRandomDependentAddition>
@@ -336,12 +347,12 @@
         <salarySpecialistInfantryMultiplier>1.28</salarySpecialistInfantryMultiplier>
         <salaryXPMultipliers>
             <ELITE>3.2</ELITE>
+            <NONE>0.5</NONE>
             <VETERAN>1.6</VETERAN>
-            <REGULAR>1.0</REGULAR>
+            <ULTRA_GREEN>0.6</ULTRA_GREEN>
             <GREEN>0.6</GREEN>
             <LEGENDARY>12.8</LEGENDARY>
-            <NONE>0.5</NONE>
-            <ULTRA_GREEN>0.6</ULTRA_GREEN>
+            <REGULAR>1.0</REGULAR>
             <HEROIC>6.4</HEROIC>
         </salaryXPMultipliers>
         <salaryTypeBase>1500 CSB,2250 CSB,900 CSB,900 CSB,900 CSB,1500 CSB,900 CSB,960 CSB,960 CSB,750 CSB,1000 CSB,1000 CSB,1000 CSB,1000 CSB,800 CSB,800 CSB,800 CSB,800 CSB,400 CSB,1500 CSB,400 CSB,500 CSB,500 CSB,500 CSB,500 CSB,0 CSB,50 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,2500 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB,250 CSB
@@ -393,6 +404,7 @@
         <serviceContractModifier>3</serviceContractModifier>
         <payBonusDefault>true</payBonusDefault>
         <payBonusDefaultThreshold>3</payBonusDefaultThreshold>
+        <includeCivilians>true</includeCivilians>
         <useCustomRetirementModifiers>true</useCustomRetirementModifiers>
         <useFatigueModifiers>true</useFatigueModifiers>
         <useSkillModifiers>true</useSkillModifiers>
@@ -436,19 +448,19 @@
         <noInterestInMarriageDiceSize>100</noInterestInMarriageDiceSize>
         <logMarriageNameChanges>true</logMarriageNameChanges>
         <marriageSurnameWeights>
-            <BOTH_HYPHEN_SPOUSE>20</BOTH_HYPHEN_SPOUSE>
+            <NO_CHANGE>100</NO_CHANGE>
+            <HYPHEN_SPOUSE>30</HYPHEN_SPOUSE>
             <SPOUSE>55</SPOUSE>
             <BOTH_SPACE_YOURS>5</BOTH_SPACE_YOURS>
-            <NO_CHANGE>100</NO_CHANGE>
+            <BOTH_SPACE_SPOUSE>5</BOTH_SPACE_SPOUSE>
+            <BOTH_HYPHEN_SPOUSE>20</BOTH_HYPHEN_SPOUSE>
             <FEMALE>160</FEMALE>
             <MALE>500</MALE>
-            <HYPHEN_YOURS>30</HYPHEN_YOURS>
-            <BOTH_HYPHEN_YOURS>20</BOTH_HYPHEN_YOURS>
-            <YOURS>55</YOURS>
-            <BOTH_SPACE_SPOUSE>5</BOTH_SPACE_SPOUSE>
-            <SPACE_SPOUSE>10</SPACE_SPOUSE>
             <SPACE_YOURS>10</SPACE_YOURS>
-            <HYPHEN_SPOUSE>30</HYPHEN_SPOUSE>
+            <YOURS>55</YOURS>
+            <HYPHEN_YOURS>30</HYPHEN_YOURS>
+            <SPACE_SPOUSE>10</SPACE_SPOUSE>
+            <BOTH_HYPHEN_YOURS>20</BOTH_HYPHEN_YOURS>
         </marriageSurnameWeights>
         <randomMarriageMethod>DICE_ROLL</randomMarriageMethod>
         <useRandomClanPersonnelMarriages>false</useRandomClanPersonnelMarriages>
@@ -462,10 +474,10 @@
         <useClanPersonnelDivorce>true</useClanPersonnelDivorce>
         <usePrisonerDivorce>true</usePrisonerDivorce>
         <divorceSurnameWeights>
+            <BOTH_KEEP_SURNAME>50</BOTH_KEEP_SURNAME>
             <SPOUSE_CHANGES_SURNAME>10</SPOUSE_CHANGES_SURNAME>
             <ORIGIN_CHANGES_SURNAME>10</ORIGIN_CHANGES_SURNAME>
             <BOTH_CHANGE_SURNAME>30</BOTH_CHANGE_SURNAME>
-            <BOTH_KEEP_SURNAME>50</BOTH_KEEP_SURNAME>
         </divorceSurnameWeights>
         <randomDivorceMethod>DICE_ROLL</randomDivorceMethod>
         <useRandomOppositeSexDivorce>true</useRandomOppositeSexDivorce>
@@ -500,7 +512,7 @@
         <enableUnitEducation>true</enableUnitEducation>
         <enableOverrideRequirements>false</enableOverrideRequirements>
         <enableShowIneligibleAcademies>false</enableShowIneligibleAcademies>
-        <entranceExamBaseTargetNumber>14</entranceExamBaseTargetNumber>
+        <entranceExamBaseTargetNumber>12</entranceExamBaseTargetNumber>
         <facultyXpRate>1.0</facultyXpRate>
         <enableBonuses>true</enableBonuses>
         <adultDropoutChance>1000</adultDropoutChance>
@@ -508,12 +520,12 @@
         <allAges>false</allAges>
         <militaryAcademyAccidents>10000</militaryAcademyAccidents>
         <enabledRandomDeathAgeGroups>
-            <ADULT>true</ADULT>
-            <PRETEEN>false</PRETEEN>
             <BABY>false</BABY>
-            <ELDER>true</ELDER>
             <TEENAGER>false</TEENAGER>
+            <PRETEEN>false</PRETEEN>
+            <ELDER>true</ELDER>
             <TODDLER>false</TODDLER>
+            <ADULT>true</ADULT>
             <CHILD>false</CHILD>
         </enabledRandomDeathAgeGroups>
         <useRandomDeathSuicideCause>false</useRandomDeathSuicideCause>
@@ -567,12 +579,12 @@
         <personnelMarketReportRefresh>true</personnelMarketReportRefresh>
         <personnelMarketRandomRemovalTargets>
             <ELITE>10</ELITE>
+            <NONE>3</NONE>
             <VETERAN>8</VETERAN>
-            <REGULAR>6</REGULAR>
+            <ULTRA_GREEN>4</ULTRA_GREEN>
             <GREEN>4</GREEN>
             <LEGENDARY>11</LEGENDARY>
-            <NONE>3</NONE>
-            <ULTRA_GREEN>4</ULTRA_GREEN>
+            <REGULAR>6</REGULAR>
             <HEROIC>11</HEROIC>
         </personnelMarketRandomRemovalTargets>
         <personnelMarketDylansWeight>0.3</personnelMarketDylansWeight>
@@ -592,6 +604,7 @@
         <contractMarketReportRefresh>true</contractMarketReportRefresh>
         <contractMaxSalvagePercentage>100</contractMaxSalvagePercentage>
         <dropShipBonusPercentage>5</dropShipBonusPercentage>
+        <pityContracts>4</pityContracts>
         <isUseTwoWayPay>false</isUseTwoWayPay>
         <isUseCamOpsSalvage>true</isUseCamOpsSalvage>
         <isUseRiskySalvage>true</isUseRiskySalvage>
@@ -630,8 +643,15 @@
         <assignPortraitOnRoleChange>false</assignPortraitOnRoleChange>
         <allowDuplicatePortraits>true</allowDuplicatePortraits>
         <useGenderedPortraitsOnly>false</useGenderedPortraitsOnly>
+        <childPortraitsWhenComingOfAge>true</childPortraitsWhenComingOfAge>
+        <noRandomPortraitsForChildren>true</noRandomPortraitsForChildren>
         <fixedMapChance>25</fixedMapChance>
+        <useAdvancedBuildingGunEmplacements>true</useAdvancedBuildingGunEmplacements>
         <spaUpgradeIntensity>2</spaUpgradeIntensity>
+        <reinforcementBaseTargetNumber>7</reinforcementBaseTargetNumber>
+        <clansObeyBiddingRules>true</clansObeyBiddingRules>
+        <alliedFacilityModifierDieSize>2</alliedFacilityModifierDieSize>
+        <enemyFacilityModifierDieSize>2</enemyFacilityModifierDieSize>
         <scenarioModMax>3</scenarioModMax>
         <scenarioModChance>25</scenarioModChance>
         <scenarioModBV>50</scenarioModBV>
@@ -641,7 +661,7 @@
         <planetTechAcquisitionBonus>-2,-1,0,1,2,8,16</planetTechAcquisitionBonus>
         <planetIndustryAcquisitionBonus>0,0,0,0,0</planetIndustryAcquisitionBonus>
         <planetOutputAcquisitionBonus>-1,0,1,2,8</planetOutputAcquisitionBonus>
-        <usePortraitForType>true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true
+        <usePortraitForType>true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false,false,false,false,false
         </usePortraitForType>
         <trackFactionStanding>true</trackFactionStanding>
         <trackClimateRegardChanges>false</trackClimateRegardChanges>
@@ -660,31 +680,31 @@
     <randomSkillPreferences>
         <overallRecruitBonus>0</overallRecruitBonus>
         <recruitmentBonuses>
-            <CONVENTIONAL_AIRCRAFT_PILOT>0</CONVENTIONAL_AIRCRAFT_PILOT>
-            <VESSEL_CREW>0</VESSEL_CREW>
-            <VESSEL_PILOT>0</VESSEL_PILOT>
-            <MEK_TECH>0</MEK_TECH>
-            <MEKWARRIOR>0</MEKWARRIOR>
-            <ADMINISTRATOR_COMMAND>0</ADMINISTRATOR_COMMAND>
-            <VEHICLE_CREW_NAVAL>0</VEHICLE_CREW_NAVAL>
-            <BATTLE_ARMOUR>0</BATTLE_ARMOUR>
-            <ASTECH>0</ASTECH>
-            <LAM_PILOT>0</LAM_PILOT>
-            <PROTOMEK_PILOT>0</PROTOMEK_PILOT>
-            <AEROSPACE_PILOT>0</AEROSPACE_PILOT>
-            <DOCTOR>0</DOCTOR>
-            <VEHICLE_CREW_GROUND>0</VEHICLE_CREW_GROUND>
             <AERO_TEK>0</AERO_TEK>
-            <VESSEL_GUNNER>0</VESSEL_GUNNER>
-            <VEHICLE_CREW_VTOL>0</VEHICLE_CREW_VTOL>
-            <SOLDIER>0</SOLDIER>
-            <BA_TECH>0</BA_TECH>
-            <MEDIC>0</MEDIC>
-            <ADMINISTRATOR_TRANSPORT>0</ADMINISTRATOR_TRANSPORT>
             <MECHANIC>0</MECHANIC>
-            <VESSEL_NAVIGATOR>0</VESSEL_NAVIGATOR>
+            <SOLDIER>0</SOLDIER>
             <ADMINISTRATOR_LOGISTICS>0</ADMINISTRATOR_LOGISTICS>
+            <ADMINISTRATOR_TRANSPORT>0</ADMINISTRATOR_TRANSPORT>
             <ADMINISTRATOR_HR>0</ADMINISTRATOR_HR>
+            <VEHICLE_CREW_VTOL>0</VEHICLE_CREW_VTOL>
+            <VESSEL_NAVIGATOR>0</VESSEL_NAVIGATOR>
+            <VEHICLE_CREW_GROUND>0</VEHICLE_CREW_GROUND>
+            <MEKWARRIOR>0</MEKWARRIOR>
+            <CONVENTIONAL_AIRCRAFT_PILOT>0</CONVENTIONAL_AIRCRAFT_PILOT>
+            <AEROSPACE_PILOT>0</AEROSPACE_PILOT>
+            <MEDIC>0</MEDIC>
+            <VEHICLE_CREW_NAVAL>0</VEHICLE_CREW_NAVAL>
+            <VESSEL_PILOT>0</VESSEL_PILOT>
+            <VESSEL_CREW>0</VESSEL_CREW>
+            <LAM_PILOT>0</LAM_PILOT>
+            <BA_TECH>0</BA_TECH>
+            <VESSEL_GUNNER>0</VESSEL_GUNNER>
+            <ADMINISTRATOR_COMMAND>0</ADMINISTRATOR_COMMAND>
+            <DOCTOR>0</DOCTOR>
+            <BATTLE_ARMOUR>0</BATTLE_ARMOUR>
+            <PROTOMEK_PILOT>0</PROTOMEK_PILOT>
+            <MEK_TECH>0</MEK_TECH>
+            <ASTECH>0</ASTECH>
         </recruitmentBonuses>
         <specialAbilityBonus>-10,-10,-2,0,1,2,3</specialAbilityBonus>
         <commandSkillsModifier>-12,-11,-10,-9,-8,-7,-7</commandSkillsModifier>
@@ -2473,12 +2493,34 @@
             </skillPrereq>
         </ability>
         <ability>
+            <lookupName>unofficial_prothesis_technician</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Regular</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
             <lookupName>flaw_slow_learner</lookupName>
             <xpCost>-300</xpCost>
             <originOnly>false</originOnly>
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities>atow_fast_learner</removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>hvy_lifter</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Piloting/Mek::Regular</skill>
+            </skillPrereq>
         </ability>
         <ability>
             <lookupName>admin_mediator</lookupName>
@@ -2533,6 +2575,17 @@
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities></removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_patient_educator</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Training::Regular</skill>
+            </skillPrereq>
         </ability>
         <ability>
             <lookupName>tm_mountaineer</lookupName>
@@ -2598,6 +2651,17 @@
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities>flaw_glass_jaw</removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_holistic_care</lookupName>
+            <xpCost>200</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Veteran</skill>
+            </skillPrereq>
         </ability>
         <ability>
             <lookupName>atow_poison_resistance</lookupName>
@@ -2708,6 +2772,7 @@
             <removeAbilities></removeAbilities>
             <skillPrereq>
                 <skill>Small Arms::Regular</skill>
+                <skill>Gunnery/BattleArmor::Regular</skill>
             </skillPrereq>
         </ability>
         <ability>
@@ -2730,6 +2795,14 @@
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities>unofficial_ghost</removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_dobrowski_depression_a_syndrome</lookupName>
+            <xpCost>-200</xpCost>
+            <originOnly>true</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
         </ability>
         <ability>
             <lookupName>mutation_exceptional_immune_system</lookupName>
@@ -2820,6 +2893,17 @@
             <removeAbilities>atow_good_vision</removeAbilities>
         </ability>
         <ability>
+            <lookupName>unofficial_trauma_surgeon</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Regular</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
             <lookupName>pain_resistance</lookupName>
             <xpCost>100</xpCost>
             <originOnly>false</originOnly>
@@ -2830,6 +2914,14 @@
         <ability>
             <lookupName>madness_split_personality</lookupName>
             <xpCost>-300</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_ageraniums_disease</lookupName>
+            <xpCost>-200</xpCost>
             <originOnly>false</originOnly>
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
@@ -2979,6 +3071,17 @@
             </skillPrereq>
         </ability>
         <ability>
+            <lookupName>unofficial_transport_negotiator</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Administration::Regular</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
             <lookupName>exceptional_attribute_dexterity</lookupName>
             <xpCost>200</xpCost>
             <originOnly>false</originOnly>
@@ -3001,6 +3104,17 @@
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities>atow_fit</removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_loses_paperwork</lookupName>
+            <xpCost>-100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Administration::Regular</skill>
+            </skillPrereq>
         </ability>
         <ability>
             <lookupName>atow_ambidextrous</lookupName>
@@ -3047,6 +3161,17 @@
             <prereqAbilities></prereqAbilities>
             <invalidAbilities></invalidAbilities>
             <removeAbilities></removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_pathologic_insight</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Regular</skill>
+            </skillPrereq>
         </ability>
         <ability>
             <lookupName>dark_secret_trivial</lookupName>
@@ -3163,6 +3288,18 @@
                 <skill>Gunnery/Spacecraft::Veteran</skill>
                 <skill>Gunnery/Aerospace::Veteran</skill>
                 <skill>Gunnery/Vehicle::Veteran</skill>
+                <skill>Gunnery/BattleArmor::Veteran</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
+            <lookupName>unofficial_paper_surgeon</lookupName>
+            <xpCost>-100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Regular</skill>
             </skillPrereq>
         </ability>
         <ability>
@@ -3290,6 +3427,25 @@
             </skillPrereq>
         </ability>
         <ability>
+            <lookupName>unofficial_bargain_hunter</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Appraisal::Regular</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
+            <lookupName>unofficial_radio_hobbyist</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+        </ability>
+        <ability>
             <lookupName>melee_specialist</lookupName>
             <xpCost>100</xpCost>
             <originOnly>false</originOnly>
@@ -3306,7 +3462,7 @@
             <xpCost>100</xpCost>
             <originOnly>false</originOnly>
             <prereqAbilities></prereqAbilities>
-            <invalidAbilities>oblique_attacker::sandblaster</invalidAbilities>
+            <invalidAbilities>cluster_hitter</invalidAbilities>
             <removeAbilities></removeAbilities>
             <skillPrereq>
                 <skill>Gunnery/Mek::Regular</skill>
@@ -3333,6 +3489,17 @@
                 <skill>Gunnery/Spacecraft::Green</skill>
                 <skill>Gunnery/Aerospace::Green</skill>
                 <skill>Gunnery/Vehicle::Green</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
+            <lookupName>unofficial_shakey_scalpel</lookupName>
+            <xpCost>-100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Surgery/Any::Regular</skill>
             </skillPrereq>
         </ability>
         <ability>
@@ -3450,6 +3617,17 @@
                 <skill>Gunnery/Spacecraft::Veteran</skill>
                 <skill>Gunnery/BattleArmor::Veteran</skill>
                 <skill>Gunnery/Vehicle::Veteran</skill>
+            </skillPrereq>
+        </ability>
+        <ability>
+            <lookupName>unofficial_embezzler</lookupName>
+            <xpCost>-100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+            <skillPrereq>
+                <skill>Administration::Regular</skill>
             </skillPrereq>
         </ability>
         <ability>
@@ -3943,6 +4121,22 @@
                 <skill>Gunnery/ProtoMek::Veteran</skill>
                 <skill>Piloting/Mek::Veteran</skill>
             </skillPrereq>
+        </ability>
+        <ability>
+            <lookupName>unofficial_useless_talent</lookupName>
+            <xpCost>100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
+        </ability>
+        <ability>
+            <lookupName>unofficial_hypochondriac</lookupName>
+            <xpCost>-100</xpCost>
+            <originOnly>false</originOnly>
+            <prereqAbilities></prereqAbilities>
+            <invalidAbilities></invalidAbilities>
+            <removeAbilities></removeAbilities>
         </ability>
         <ability>
             <lookupName>atow_combat_paralysis</lookupName>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a4da-7217-bc7f-86cb4bae4c02
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Trinity Medium Battle Armor
 3065
 </year>
 
-<originalBuildYear>
-3065
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Leg
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -80,15 +68,67 @@ Leg
 CLBAMedium Recoilless Rifle:Body
 BABattleClaw:LA
 BABattleClaw:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<capabilities>
+<p>The Theseus carries a medium recoilless rifle identical to the Taurian Asterion's standard loadout, sharing the same ballistic performance, ammunition capacity, and maintenance profile. Standard armor plating provides protection against a large laser hit, using conventional materials suited to the Magistracy's industrial base. Twin battle claws enable anti-BattleMech operations and OmniMech transport capability. Ground speed reaches approximately 30 kilometers per hour with no jump capability.</p><p>The Theseus is functionally interchangeable with the Asterion at the individual suit level, differing only in cosmetic styling that reflects Canopian cultural aesthetics. This shared combat performance across two separate national production lines gives Trinity Alliance commanders the logistical advantage of parts commonality when operating in mixed formations.</p>
+</capabilities>
+
+<overview>
+<p>The Trinity is a family of three medium battle armor suits commissioned by the Capellan Confederation Armed Forces and funded jointly by the Trinity Alliance. Introduced in the mid-3060s, the program aimed to make powered infantry available beyond the elite formations that fielded the Fa Shih. The Capellan variant, designated the Ying Long, incorporates advanced camouflage technology derived from an outside source. The Taurian Asterion and Canopian Theseus share a more conventional protection scheme, differing primarily in cosmetic styling. All three designs emphasize ground mobility, close-quarters capability against heavier units, and a flexible modular weapon mount that allows field commanders to tailor loadouts to mission requirements.</p>
+</overview>
+
+<deployment>
+<p>The Magistracy of Canopus adopted the Theseus as its primary battle armor platform, organizing troopers into four-soldier squads within the MAF's conventional infantry structure. The Canopians named their variant after the legendary founder of Athens who slew the Minotaur, a deliberate political provocation directed at their Taurian allies. Canopian squads served across the Magistracy's territories, with particular concentrations along the Marian Hegemony border and in colonial defense garrisons.</p>
+</deployment>
+
+<history>
+<p>The CCAF Strategios commissioned the Trinity after recognizing that battle armor needed to reach beyond prestige formations. The Trinity Alliance partners provided funding that accelerated development to under two years, fueling speculation that preliminary design work had already begun before the formal program launched. Initial production was handled exclusively by Ceres Metals Industries on Capella, with the Capellan government employing deliberate delays and bureaucratic obstacles to prevent technology transfer to its allies. Both the Taurian Concordat and the Magistracy of Canopus eventually reverse-engineered the design independently, establishing their own production lines through Taurus Territorial Industries on Sterope and Foxx Infantry Systems on Royal Foxx.</p><p>The rapid proliferation of the Trinity across three nations gave the Alliance a common infantry platform that saw its first major combat test during Operation Sovereign Justice, where the suits proved capable against comparable designs fielded by other powers. Upgraded variants incorporating improved protection and heavier close-combat equipment appeared during the Jihad, further extending the family's service life across all three member states.</p>
+</history>
+
+<manufacturer>
+Ceres Metals Industries|Foxx Infantry Systems|Detroit Consolidated Mechworks
+</manufacturer>
+
+<primaryFactory>
+Capella|Royal Foxx|Detroit
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-CE
+</published>
 
 <chassis>
 biped
@@ -110,35 +150,3 @@ biped
 2
 </weightclass>
 
-<overview>
-Following the introduction of the Fa Shih, Capellan Confederation Armed Forces leaders wanted battle armor to be made available to more units than just the most prestigious.
-</overview>
-
-<capabilities>
-All three versions of the Trinity mount enough armor to stop a Large Laser and can move swiftly at 32 km/h on the ground. The Battle Claws used by the battlesuit enable it to make anti-'Mech attacks and ride OmniMechs into battle.
-</capabilities>
-
-<deployment>
-This variant, produced for the Canopians, is functionally identical to the Asterion [MRR].
-</deployment>
-
-<history>
-Surprisingly, the Strategios listened and commissioned the design of a new battle armor. With funding from their Trinity Alliance allies, the CCAF put together a new unit in record time, leading to speculation that the design was already on the drawing board. The Trinity is really three different battle armors, all initially constructed by the Capellan Confederation. The Ying Long ("Shadow Dragon") uses the mimetic armor first created by Word of Blake for their Purifier, though how they acquired the technology is unknown. The Asterion and Theseus are functionally identical, but have different aesthetics. The Taurian Concordat is apparently unhappy at the decision of the Magistracy of Canopus to name their version after the legendary founder of Athens who slew the Minotaur. The Periphery nations became more and more agitated when convenient mishaps kept production solely in the hands in the Capellans. Both nations finally resorted to reverse engineering the design, then put them quietly into production. This left the Capellans with egg on their face as their allies suddenly stopped purchasing the production runs.
-</history>
-
-<manufacturer>
-Ceres Metals Industries,Detroit Consolidated Mechworks,Foxx Infantry Systems
-</manufacturer>
-
-<primaryFactory>
-Capella,Detroit,Royal Foxx
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e83a-74e0-812a-87e7aa03d7e2
+</UUID>
 
 <UnitType>
 Tank
@@ -45,24 +40,17 @@ Huitzilopochtli Assault Tank 'Huey'
 3147
 </year>
 
-<originalBuildYear>
-3147
-</originalBuildYear>
-
 <type>
 Clan Level 3
 </type>
 
-
 <role>
 Missile Boat
 </role>
+
 <motion_type>
 Tracked
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 2
@@ -80,9 +68,13 @@ false
 4
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 6
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 20
@@ -130,9 +122,53 @@ CLMediumPulseLaser
 CLERSmallLaser
 </Turret Equipment>
 
+<capabilities>
+<p>Twin Arrow IV launchers dominate the forward hull, each capable of striking targets more than three kilometers away. Four tons of ammunition allow crews to load a mix of TAG-homing missiles for precision strikes and area-effect rounds for saturation bombardment, along with field artillery scatterable mine submunitions. The vehicle's internal combustion engine limits it to a flanking speed of just 32 km/h, making it too slow to reposition under its own power in most tactical situations. DropShip transport is the standard method of moving Hueys to their operational areas.</p><p>Secondary armament centers on a turret-mounted ultra autocannon for medium-range defense, paired with two medium pulse lasers offering accurate fire against both armored and unarmored targets. An extended-range small laser supplements the turret weapons at close range. Side-mounted machine guns provide anti-infantry coverage along the vehicle's flanks. A broad-band ECM suite offers the Huey's most meaningful layer of protection, jamming enemy sensors and targeting systems to degrade incoming fire. Standard armor provides only modest physical protection at five and a half tons, a deliberate cost-saving measure reflecting the expectation that the vehicle would operate far behind the front lines.</p>
+</capabilities>
+
+<overview>
+<p>The Huitzilopochtli is a Clan assault-weight tracked combat vehicle designed as a mobile artillery platform. Descended from the Star League Defense Force's Padilla heavy artillery tank, the design was authorized by ilKhan Nicholas Kerensky after the Pentagon Civil War destroyed most of the artillery vehicles the Clans' forebears had brought on the Exodus. First produced in 2845, the vehicle quickly earned the nickname "Huey" among crews. The Clans' well-documented disdain for both artillery and combat vehicles ensured the Huitzilopochtli received minimal investment during its development, resulting in a slow, lightly armored platform powered by a conventional engine. Despite these shortcomings, the Huey fills a necessary role that few other Clan designs address, providing indirect fire support at ranges exceeding three kilometers.</p>
+</overview>
+
+<deployment>
+<p>Developed by Clan Jade Falcon at Trellshire Heavy Industries on Sudeten, the LRM variant is a modernization of the aging Huey platform. The refit replaces the standard armor with hardened plating to address the vehicle's long-standing vulnerability to direct fire, significantly increasing survivability. The missile systems are upgraded to incorporate Artemis V fire control, improving accuracy for the LRM launchers that replace some of the original armament. This variant reflects the Falcons' effort to extend the useful life of their surplus Huitzilopochtlis as dedicated missile support vehicles rather than pure artillery platforms.</p>
+</deployment>
+
+<history>
+<p>The Huitzilopochtli traces its lineage directly to the Padilla heavy artillery tank fielded by the Star League Defense Force. When Kerensky's followers departed on the Exodus, they brought relatively few artillery vehicles with them. The Pentagon Civil War destroyed most of those that survived the journey, leaving the nascent Clans critically short of indirect fire support. ilKhan Nicholas Kerensky authorized production of a replacement based on the Padilla's proven design, and the Huitzilopochtli entered service in 2845.</p><p>From its inception, the Huey suffered from the Clans' cultural prejudice against both artillery and combat vehicles. Equipping BattleMechs with Arrow IV launchers was attempted but proved only moderately effective, and many warriors considered such hybrid configurations a misuse of valuable OmniMech chassis. Nicholas Kerensky himself was eventually forced to concede that a dedicated tank-based artillery platform was the more practical solution. Even so, the vehicle received little prestige or priority in resource allocation, resulting in its austere design and minimal armor protection.</p><p>Production of the Huitzilopochtli was established at several Clan homeworld facilities. Clan Snow Raven operated a line at Industrial Complex Raven Rho on Hellgate, initially inherited from Clan Star Viper. Clan Jade Falcon maintained production at Ironhold Plant 7, while Clan Star Adder ran a facility designated Sheridan CV-T3-6 on Sheridan. These homeworld plants sustained Huey production through the Golden Century and into the Clan Invasion era.</p><p>The Jade Falcons expanded production to the Inner Sphere when Trellshire Heavy Industries on Sudeten began manufacturing the Huitzilopochtli around 3062, producing for domestic consumption within the Falcon Occupation Zone. With the eventual loss of most homeworld enclaves, Sudeten became the primary source of new Huitzilopochtlis for the Inner Sphere Clans. The Falcons have had difficulty exploiting this monopoly commercially, however, given the range of alternative artillery options available to potential buyers.</p><p>Clan Ghost Bear pursued a different path, developing the AAA variant at Benson and Bjorn on Spittal beginning around 3068. New advances in engine and weapons technology drove this anti-aircraft configuration, and limited production began in 3070. Interest from the Rasalhague Kungsarmé boosted output significantly, though the Bears restricted sales to allies or highly favorable trade deals, ensuring the variant remained relatively uncommon outside Ghost Bear and Rasalhague Dominion forces.</p>
+</history>
+
+<manufacturer>
+Trellshire Heavy Industries
+</manufacturer>
+
+<primaryFactory>
+Sudeten
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:ICE 170
+ARMOR:Hardened
+COMMUNICATIONS:TJ6 "Bell" Integrated
+TARGETING:Series VI TTS
+</systemModels>
+
 <source>
-RS:3150
+TR:3150
 </source>
+
+<published>
+RS:3150
+</published>
 
 <tonnage>
 85.0

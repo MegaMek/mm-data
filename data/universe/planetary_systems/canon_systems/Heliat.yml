@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Heliat
-sucsId: 1084
+sucsId: 1085
 xcood: 124.233
 ycood: -485.739
 spectralType:
@@ -89,6 +89,12 @@ planet:
       - name: Carlson
       - name: North Morgan
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2621-12-18'
         faction:
           source: canon
@@ -126,6 +132,15 @@ planet:
         population: 102427937.0
       - date: '2750-01-01'
         population: 102986648.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Brinton Union
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2760-01-01'
         population: 103200289.0
       - date: '2770-01-01'
@@ -140,6 +155,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2959-01-01'
         faction:
           source: canon
@@ -147,9 +168,15 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
@@ -161,9 +188,10 @@ planet:
         socioIndustrial:
           source: canon
           value: D-D-A-C-A
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: C4C-1 Belt

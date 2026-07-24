@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -34,7 +34,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%GALAXY%</option>
+            <option ifUnitType="Warship">%GALAXY%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="AeroSpaceFighter">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -106,7 +106,20 @@
         <co position="1">%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce ifDateBetween=",3059" num="2">%ELEMENT%</subforce>
+            <subforce name="Blood Naval Star" unitType="Warship">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- The naval reserve as a Clan naval star (5-6 vessels) nested under the Blood Galaxy,
+         rather than ships loose under the galaxy. -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship">
+        <name>Blood Naval Star</name>
+        <co>%STAR_CMDR%</co>
+
+        <subforces>
+            <!-- Supporting JumpShips keep the naval reserve a 5-6 vessel formation across the
+                 Clan's life as the named WarShip fleet is whittled down by losses. -->
+            <subforce unitType="Jumpship" num="2">%ELEMENT%</subforce>
             <subforce chassis="Black Lion II Battlecruiser"
                       fluffName="CBS Rocinante"
                       ifDateBetween=",3072">%ELEMENT%
@@ -128,31 +141,6 @@
                       ifDateBetween="3070,3084">%ELEMENT%
             </subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option num="3" ifDateBetween="3061,"
-                        rating="FL" unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-                <option num="4" rating="FL"
-                        unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-                <option num="5" ifDateBetween=",3060"
-                        rating="FL" unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-            </subforceOption>
-            <subforceOption>
-                <option num="2" ifDateBetween="3061,"
-                        rating="SL" unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-                <option num="3" rating="SL"
-                        unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-                <option num="4" ifDateBetween=",3060"
-                        rating="SL" unitType="AeroSpaceFighter">%CLUSTER%
-                </option>
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <force echelon="%GALAXY%" eschName="Galaxy">
@@ -163,6 +151,14 @@
             <subforceOption>
                 <option num="6">%CLUSTER%</option>
                 <option num="5">%CLUSTER%</option>
+            </subforceOption>
+            <!-- Aerospace lives with the combat galaxies now (one ASF cluster per front-line
+                 galaxy) rather than pooled in the naval reserve. Wrapped in a subforceOption so
+                 the engine generates it AFTER the combat clusters: SubForcesNode emits all plain
+                 <subforce> elements before any <subforceOption>, so a plain aero subforce would
+                 sort to the top of the galaxy regardless of XML order. -->
+            <subforceOption>
+                <option unitType="AeroSpaceFighter">%CLUSTER%</option>
             </subforceOption>
         </subforces>
 
@@ -175,8 +171,8 @@
     </force>
 
     <!--All Blood Spirit clusters include three trinaries of Meks,
-    one BA/infantry, and one vehicle. ASFs are attached to the naval
-    reserve.-->
+    one BA/infantry, and one vehicle. Each front-line galaxy also fields
+    one Aerospace Cluster (aero was previously pooled in the naval reserve).-->
 
     <force echelon="%CLUSTER%" eschName="Cluster" ifUnitType="AeroSpaceFighter">
         <name>Aerospace Cluster</name>
@@ -200,56 +196,58 @@
         <co>%STAR_COL%</co>
         <xo ifRating="Keshik" title="Aide">%LOREMASTER%</xo>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Blood Spirit is a
+             resource-poor, striker/ProtoMek-leaning Clan: medium/light-centered, Assault a
+             clear minority. Picker rolls M~38/L~38/H~25/A0, so the M and L cluster targets
+             dominate the faction blend; what little Assault there is rides in the H and M
+             targets. Lore blend ~L25/M40/H25/A10. -->
+        <weightTarget ifWeightClass="A|H" unitType="Mek" spread="8">A:26,H:42,M:29,L:3</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:11,H:22,M:54,L:13</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:7,M:39,L:52</weightTarget>
+        <!-- Aerospace: no assault-class fighters exist (caps at Heavy). Poor Clan: lighter,
+             interceptor-leaning aero. One line covers every cluster. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:30,M:42,L:28</weightTarget>
+        <!-- Vehicles: resource-poor second-line armor runs light/medium, cheaper than the Meks. -->
+        <weightTarget unitType="Tank" spread="8">A:2,H:25,M:38,L:35</weightTarget>
+
         <weightClass>
             <option weight="2">H</option>
-            <option ifRating="!Keshik" weight="2">M</option>
-            <option ifRating="!Keshik" weight="1">L</option>
+            <option ifRating="!Keshik" weight="3">M</option>
+            <option ifRating="!Keshik" weight="3">L</option>
         </weightClass>
 
         <subforces>
             <subforceOption ifWeightClass="H|A">
-                <option weightClass="A,A,A" unitType="Mek"
+                <option weightClass="A,A,A" unitType="Mek" weight="3"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,A,H" unitType="Mek"
+                <option weightClass="A,A,H" unitType="Mek" weight="4"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,A,M" unitType="Mek"
+                <option weightClass="A,A,M" unitType="Mek" weight="2"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,A,L" unitType="Mek"
-                >%TRINARY%
-                </option>
-                <option weightClass="A,H,H" unitType="Mek"
-                >%TRINARY%
-                </option>
-                <option weightClass="H,H,H" unitType="Mek"
+                <option weightClass="A,H,H" unitType="Mek" weight="2"
                 >%TRINARY%
                 </option>
             </subforceOption>
             <subforceOption ifWeightClass="M">
-                <option weightClass="A,H,M" unitType="Mek"
+                <option weightClass="M,M,M" unitType="Mek" weight="3"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,H,L" unitType="Mek"
+                <option weightClass="H,M,M" unitType="Mek" weight="3"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,M,M" unitType="Mek"
+                <option weightClass="M,M,L" unitType="Mek" weight="2"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,M,L" unitType="Mek"
+                <option weightClass="H,M,L" unitType="Mek" weight="2"
                 >%TRINARY%
                 </option>
-                <option weightClass="A,L,L" unitType="Mek"
+                <option weightClass="A,M,M" unitType="Mek" weight="2"
                 >%TRINARY%
                 </option>
-                <option weightClass="H,H,M" unitType="Mek"
-                >%TRINARY%
-                </option>
-                <option weightClass="H,H,L" unitType="Mek"
-                >%TRINARY%
-                </option>
-                <option weightClass="H,M,M" unitType="Mek"
+                <option weightClass="H,H,M" unitType="Mek" weight="1"
                 >%TRINARY%
                 </option>
             </subforceOption>
@@ -423,10 +421,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -438,14 +436,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

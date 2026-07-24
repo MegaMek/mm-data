@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Glevakha
-sucsId: 969
+sucsId: 970
 xcood: -206.769
 ycood: -303.733
 spectralType: M8V
@@ -55,6 +55,12 @@ planet:
       - name: Jones V
       - name: Jones VI
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2653-07-12'
         faction:
           source: canon
@@ -88,6 +94,15 @@ planet:
         population: 357540780.0
       - date: '2750-01-01'
         population: 364106848.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Principality of Regulus
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 367872163.0
       - date: '2770-01-01'
@@ -167,6 +182,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3089-01-01'
         socioIndustrial: B-D-B-C-C
       - date: '3090-01-01'
@@ -191,14 +212,27 @@ planet:
           value:
             - FWL
         population: 254029159.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - MOC
       - date: '3152-06-01'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Gorinov's Plains

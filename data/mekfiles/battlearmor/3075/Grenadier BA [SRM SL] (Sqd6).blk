@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a3e9-777f-968f-5a6adb55dc6f
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -40,39 +36,9 @@ Grenadier Battle Armor
 8996
 </mul id:>
 
-<chassis>
-biped
-</chassis>
-
-<weightclass>
-4
-</weightclass>
-
-<Trooper Count>
-6
-</Trooper Count>
-
-<cruiseMP>
-2
-</cruiseMP>
-
-<Armor>
-9
-</Armor>
-
-<Squad Equipment>
-ISBASmallLaser:LA
-ISBASRM4:Body
-BA-SRM4 Ammo:Body:Shots4#
-BA-SRM4 Ammo:Body:Shots3#
-BABasicManipulator:RA
-BAAPMount:RA
-InfantryAssaultRifle:RA:APM
-IS BA Stealth:RA
-IS BA Stealth:Body
-IS BA Stealth:LA
-IS BA Stealth:Body
-</Squad Equipment>
+<year>
+3065
+</year>
 
 <type>
 IS Level 2
@@ -82,17 +48,13 @@ IS Level 2
 Ambusher
 </role>
 
-<year>
-3065
-</year>
-
 <motion_type>
 Leg
 </motion_type>
 
-<source>
-TR:3075
-</source>
+<cruiseMP>
+2
+</cruiseMP>
 
 <armor_type>
 32
@@ -102,35 +64,99 @@ TR:3075
 3
 </armor_tech>
 
-<overview>
-The Grenadier is a battle armor design created by the Hahm-Heinz Design Bureau.
-</overview>
+<Squad Equipment>
+ISBASmallLaser:LA
+ISBASRM4:Body
+BA-SRM4 Ammo:Body:Shots4#
+BA-SRM4 Ammo:Body:Shots3#
+BABasicManipulator:RA
+BAAPMount:RA
+InfantryAssaultRifle:APM:RA
+IS BA Stealth (Standard):RA
+IS BA Stealth (Standard):Body
+IS BA Stealth (Standard):LA
+IS BA Stealth (Standard):Body
+</Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
 
 <capabilities>
-The team still wanted mobility, however, so the Grenadier can muster up a respectable 21 km/h on the ground. The armor is where the Grenadier is lacking, having only enough to stop an Inner Sphere Large Pulse Laser, the same amount as the venerable Inner Sphere Standard. This armor, however, is standard stealth armor, so the Grenadier is a bit more difficult to target.
+<p>The Grenadier is an assault-weight battlesuit massing two thousand kilograms, built around a fixed short-range missile launcher with seven reloads that gives it exceptional staying power in sustained engagements. The standard configuration mounts a small laser in the left arm modular weapon slot, providing reliable energy firepower that complements the missile system at close range. An anti-personnel weapon mount on the right arm handles unarmored threats. Standard stealth armor makes the suit harder to target, though its total protection is equivalent to the lighter Inner Sphere Standard suit, a modest amount for an assault-class design. Ground speed of twenty-one kilometers per hour is respectable for the weight class, but the lack of jump capability limits the suit's ability to exploit vertical terrain or rapidly reposition during engagements.</p>
 </capabilities>
 
+<overview>
+<p>The Grenadier is an assault-weight Inner Sphere battlesuit developed by the Hahm-Heinze Design Bureau for the Armed Forces of the Federated Suns. Designed to mount the heaviest weapon systems possible on a single suit frame, the Grenadier prioritized raw firepower over mobility or protection. The suit carries a fixed missile launcher, a modular weapon mount accommodating a range of battlefield roles, and an anti-personnel station for close-range defense. Standard stealth armor provides electronic signature reduction, though total protection is modest for the weight class. At two thousand kilograms, the Grenadier is too heavy for OmniMech transport, restricting deployment to ground-based insertion methods.</p>
+</overview>
+
 <deployment>
-The Grenadier comes equipped with a Modular Weapon Mount on the left arm, while it has an Anti-Personnel Weapon Mount on the right. The only fixed weapon is an SRM-4 in the body, along with seven shots, giving it remarkable staying power. The left arm mount can carry a variety of weapons, though a standard Small Laser is the most common, giving the Grenadier a punch similar to (but far greater than) the Elemental battlesuit. This Grenadier variant uses a Small Laser in the arm.
+<p>Reinforced six-trooper squads carrying the standard loadout are rare outside of dedicated assault formations. The Ceti Hussars experimented with oversized Grenadier squads during anti-piracy operations in the Periphery March, concluding that the concentrated missile fire from six suits could suppress BattleMech-scale targets long enough for supporting armor to close. The formation demands significant transport capacity and is generally reserved for operations where overwhelming close-range firepower justifies the logistical burden.</p>
 </deployment>
 
 <history>
-The firm has long had a relationship with General Motors' secondary plants on Talcott and Salem, so when the NAIS first started creating battle armor, Hahm-Heinz had access to prototypes that they could work from. Though it took almost ten years from the commencement of the program to a prototype, Hahm-Heinz created the Grenadier, which was based on a concept design that was geared towards the most powerful weapons systems possible.
+<p>The Hahm-Heinze Design Bureau began developing what would become the Grenadier when NAIS first started producing battle armor for the Federated Commonwealth. Drawing on long-standing ties to General Motors' plants on Talcott and Salem, the firm had access to early prototypes that informed their work. Nearly a decade of development produced a concept focused on mounting the heaviest possible weapon systems on a single suit. Hahm-Heinze approached the AFFC in 3062 with the finished design and two prototypes, but the FedCom Civil War consumed resources and attention, and the Federated Commonwealth initially passed on the Grenadier.</p><p>Only after the conflict demonstrated the suit's battlefield potential did production begin in earnest, with General Motors on Talcott and Albion Advanced Technologies on New Avalon manufacturing the design. Sales remained steady but slow through the Jihad years, hampered by disrupted supply lines and transportation. GM responded with an aggressive public relations effort called "Operation Parade," recruiting retired armored infantrymen to demonstrate the suit's effectiveness in field exercises and actual combat deployments alongside AFFS commands. The campaign proved successful enough that GM began offering alternative weapon configurations based on accumulated field reports and combat data.</p>
 </history>
 
 <manufacturer>
-Albion Advanced Technologies and Products,General Motors
+Albion Advanced Technologies and Products|General Motors
 </manufacturer>
 
 <primaryFactory>
-New Avalon,Talcott
+New Avalon|Talcott
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+9
+</armor>
+
+<Trooper Count>
+6
+</Trooper Count>
+
+<weightclass>
+4
+</weightclass>
+

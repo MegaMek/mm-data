@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a868-705f-9353-cc6447ee8fd7
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,10 @@ IS Level 2
 None
 </role>
 
+<quirks>
+imp_com
+</quirks>
+
 <motion_type>
 Leg
 </motion_type>
@@ -73,11 +72,65 @@ Leg
 BAArmoredGlove:LA
 BAArmoredGlove:RA
 BASearchlight:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<capabilities>
+<p>The Armored Glove configuration equips the CEX-205 with reinforced gauntlets on both manipulator mounts, giving operators the ability to handle standard infantry weapons and conduct anti-BattleMech swarm and leg attacks. At four hundred kilograms, the Groundhog is a maximum-weight exoskeleton protected by one hundred kilograms of standard armor, enough to resist small arms fire but offering little protection against heavier ordnance. The suit's ground speed of thirty kilometers per hour keeps pace with foot infantry, though the lack of jump capability limits vertical mobility in urban or broken terrain.</p><p>An integral searchlight supports low-visibility operations, while the body-mounted mission equipment storage bay provides one hundred forty-five kilograms of carrying capacity. Of the Groundhog's available configurations, the Armored Glove loadout is the most combat-oriented, though operators should not mistake the suit's ability to engage BattleMechs for genuine offensive power. The Groundhog remains an engineering platform pressed into a combat-adjacent role, not a dedicated fighting suit.</p>
+</capabilities>
+
+<overview>
+<p>The CEX-205 Groundhog is a combat engineering exoskeleton produced by Blue Shot Weapons on Solaris VII. Introduced in 3062, the Groundhog was designed as a field-ready engineering platform capable of supporting military and mercenary operations through a modular manipulator system that allows rapid reconfiguration for different tasks. The suit's interchangeable tool mounts accept a wide range of equipment, from armored gloves suitable for light combat duties to specialized industrial tools for heavy labor, mine clearance, and salvage work. An integrated searchlight and onboard mission equipment storage further extend the Groundhog's operational utility. Heavily armored for an exoskeleton, the Groundhog earned a reputation as one of the first truly battlefield-ready engineering exoskeletons available on the open market.</p>
+</overview>
+
+<deployment>
+<p>ComStar and Word of Blake forces organized Groundhog operators into six-trooper Level I formations. The Word of Blake's occupation of Solaris VII beginning in 3068 gave their forces direct access to Blue Shot Weapons' remaining inventory, and Armored Glove-equipped Level Is provided the Blakists with engineering and light security capability in the contested urban environment of Solaris City's arena districts.</p>
+</deployment>
+
+<history>
+<p>Blue Shot Weapons had long served a niche market on Solaris VII, producing industrial exo-suits primarily sold to arena management companies for routine maintenance and emergency MechWarrior extractions. The CEX-205 Groundhog, introduced in 3062, marked a deliberate shift in the company's ambitions. Drawing on advances in Inner Sphere battle armor technology, Blue Shot designed the Groundhog as their first truly field-ready combat engineering exoskeleton, offering military and mercenary units a rugged, modular platform far beyond their earlier commercial-grade offerings.</p><p>Blue Shot marketed the full line of manipulator configurations in paired sets, emphasizing the suit's adaptability for diverse field operations. Arena operators on Solaris VII also adopted the Groundhog for "tunnel rat" operations during the FedCom Civil War, using the suit's improved communications equipment and searchlight for underground engagements.</p><p>The Word of Blake invasion of Solaris VII in 3068 dealt a severe blow to Blue Shot Weapons. The company's production facilities suffered catastrophic damage during the fighting, with capacity reportedly falling below ten percent. By 3071, the damage proved insurmountable, and the Groundhog was officially discontinued. Persistent rumors of a jump-capable variant designated the CEX-250 Leapfrog had circulated for some time, but with the Blue Shot plant in ruins, the design never reached production.</p>
+</history>
+
+<manufacturer>
+Blue Shot Weapons
+</manufacturer>
+
+<primaryFactory>
+Solaris VII
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:VAr
@@ -106,41 +159,4 @@ true
 <weightclass>
 0
 </weightclass>
-
-<overview>
-The CEX-205 Groundhog was a Solaris VII produced exoskeleton designed for combat in arenas and on the battlefield in a support role.
-</overview>
-
-<capabilities>
-While equipped with Basic Manipulators and Armored Glove modules, the suit can conduct anti-'Mech swarm and leg attacks. The suit may use standard infantry weaponry and equipment only when using the Basic Manipulators. The Groundhog is equipped with a pair of Modular Adapter type "hands".
-</capabilities>
-
-<deployment>
-The Modular Adapters have two slots to accept a wide range of tools including: Armored Gloves, Basic Manipulators, Cargo Lifters, Industrial Drills, Mine Clearance, and Salvage Arm. The Cargo Lifter gives the Exoskeleton 1 ton lifting capacity. It features a Searchlight and Mission Equipment Storage unit with a capacity of 145 kilograms
-</deployment>
-
-<history>
-First developed in 3062 by Blue Shot Weapons, modular adapters added to the exoskeleton's manipulators allow it to switch to multiple roles. It was unclear if the Groundhog continued in production after the Blake Invasion of Solaris VII of 3068. Later intelligence discovered that the Groundhog was discontinued in 3071 due to heavy damage to the Blue Shot Weapons factory. There were persistent rumors that Blue Shot Weapons was experimenting with a Groundhog variant that mounted jump jets, but with their plant nearly destroyed, this "Leapfrog" suit never entered production.
-</history>
-
-<manufacturer>
-Blue Shot Weapons
-</manufacturer>
-
-<primaryFactory>
-Solaris VII
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<quirks>
-imp_com
-</quirks>
 

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,10 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.49.16-SNAPSHOT on 2023-12-30
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac43-739d-903c-9aff29c8f262
+</UUID>
 
 <UnitType>
 Dropship
@@ -39,10 +39,6 @@ Lung Wang
 <year>
 3076
 </year>
-
-<originalBuildYear>
-3076
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -90,9 +86,13 @@ cargobay:52.5:1:7::-1:0
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 220
@@ -157,23 +157,23 @@ ISMobileHPG
 </structural_integrity>
 
 <capabilities>
-The design of the Lung Wang prioritizes flexibility and firepower. Its nose houses six weapon bays, each packed with long-range missiles and various laser systems, offering impressive forward fire-projection capabilities. However, its fighter and 'Mech bays' placement limits its aft defense, a recognized design vulnerability. The Lung Wang's first maneuver under its own power in 3055 led to a successful raid against the Federated Commonwealth, demonstrating its capabilities in actual combat.
+<p>The Predator configuration replaces the original nose armament with three heavy sub-capital lasers and three Extended LRM-20 launchers, dramatically increasing forward striking power against both DropShip and WarShip-scale targets. Each wing mounts an LB 10-X autocannon, an ER large laser, two medium lasers, an ER PPC, and a medium pulse laser. The aft arc retains an ER large laser, LRM-20 and SRM-6 launchers with Artemis IV fire control, and a large pulse laser. One hundred double heat sinks accommodate the increased energy weapon load. The Mech bays have been removed in favor of two infantry bays, and aerospace fighter capacity is retained at two.</p>
 </capabilities>
 
 <overview>
-Launched in 3055 from the Rashpur-Owens Inc. yards at Capella, the Lung Wang Dropship has quickly established itself as a formidable raider in the Capellan Confederation's fleet. Built around the Xevec-19 drive system, it was conceived during the early days of Sun-Tzu Liao’s reign, with specifications demanding a craft capable of independent operation and formidable performance against non-Clan adversaries. The Lung Wang fulfills these criteria, balancing operational independence with considerable combat prowess.
+<p>The Lung Wang is a 2,600-ton Spheroid assault transport conceived as a raider capable of operating independently of support while engaging any non-Clan opponent on equal terms. Introduced in 3055, the design was commissioned to fulfill specifications demanding a fast, well-armed vessel that could carry a light raiding party of BattleMechs and aerospace fighters deep into hostile territory.</p><p>Built around a powerful new drive system that consumes almost a third of the vessel's mass, the Lung Wang delivers impressive speed for its tonnage class. Combined with formidable forward-facing firepower and adequate transport capacity, the design has proven itself an effective tool for aggressive raiding operations and has earned a reputation as one of the most capable assault transports produced during the post-Clan Invasion era.</p>
 </overview>
 
 <deployment>
-Following the Word of Blake attack on Sian, the Lung Wang underwent significant modifications. Retaining its role as an assault ship and escort vessel, the Predator variant saw upgrades with sub-capital lasers replacing some nose weapons, extended long-range missile launchers for bombardment, and a mobile hyperpulse generator for early warning capabilities. This variant proved its worth during the Jihad, particularly against Blakist forces, and is now a key asset in the Capellan Navy for orbital and system defense.
+<p>The Predator configuration was a unique refit of a single highly decorated Capellan vessel, completed after the Word of Blake was driven from Capellan space. Equipped with experimental sub-capital weapons systems, the vessel served as a proof-of-concept platform that validated the feasibility of mounting capital-grade weaponry on assault DropShips within the Capellan navy.</p>
 </deployment>
 
 <history>
-<p>The Lung Wang emerged as a groundbreaking addition to the Capellan Confederation's fleet, symbolizing a new era in their naval doctrine. From its first deployment in 3055, the Lung Wang's design and performance rapidly proved their worth in a variety of operational contexts. Its initial success near Lee was just the beginning of its storied career. The raid not only inflicted significant damage on the Federated Commonwealth forces but also served as a stark demonstration of the Lung Wang's tactical effectiveness and the Capellan Confederation's growing prowess in space warfare.</p>
+<p>The Lung Wang emerged from the Rashpur-Owens Incorporated yards at Capella in 3055, having been conceived during the early days of Chancellor Sun-Tzu Liao's reign. The prototype first maneuvered under its own power in March 3055, and by September extensive system tests had been completed. Rather than assign the vessel to routine patrol duty for its evaluation, Capellan leadership committed it to a live combat raid against a Federated Commonwealth target.</p><p>The raid occurred on November 19, 3055, near the planet Lee. A Capellan flotilla including the prototype engaged a Federated Commonwealth defense force in orbit. The Lung Wang faced an enemy assault craft in a pitched slugging match, and despite sustaining heavy damage, the new Capellan vessel emerged victorious. The engagement demonstrated that the Capellan Confederation could produce front-line assault vessels competitive with established designs, and production was stepped up to meet both domestic needs and export sales to allied states.</p><p>Following the Jihad, Rashpur-Owens refitted a decorated vessel with experimental systems including sub-capital weaponry, creating the Predator configuration. The lessons learned from this refit informed the development of the P2 variant, which became the Capellan Confederation's standard assault DropShip by 3090. The P2 standardized the sub-capital weapon systems while removing experimental equipment, providing a reliable production model for the post-Jihad era.</p>
 </history>
 
 <manufacturer>
-Rashpur-Owens Inc. (Refit)
+Refit - Rashpur-Owens Inc.
 </manufacturer>
 
 <primaryFactory>
@@ -187,6 +187,14 @@ ARMOR:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Xevec-19
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Assault Ship
@@ -207,6 +215,10 @@ Assault Ship
 <source>
 XTR:Liao
 </source>
+
+<published>
+XTR:Liao
+</published>
 
 <tonnage>
 2600.0

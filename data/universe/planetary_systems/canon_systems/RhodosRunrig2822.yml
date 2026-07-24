@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Rhodos (Runrig 2822+)
-sucsId: 2150
+sucsId: 2151
 xcood: 48.925
 ycood: -217.144
 spectralType: K6V
@@ -49,6 +49,14 @@ planet:
         capital: Nu Wa City
       - name: Western Lowellville
     event:
+      - date: '2108-12-05'
+        name: Rhodos
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2601-11-08'
         faction:
           source: canon
@@ -91,6 +99,16 @@ planet:
         population: 350671962.0
       - date: '2750-01-01'
         population: 353651688.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Capella Commonality
+        #   - Region 8
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 353692326.0
       - date: '2770-01-01'
@@ -105,8 +123,17 @@ planet:
         population: 330723569.0
       - date: '2820-01-01'
         population: 11049510.0
+      - date: '2822-01-01'
+        name: Runrig
+        message: Rhodos renamed to Runrig
       - date: '2830-01-01'
         population: 168417.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '2837-11-25'
         faction:
           source: canon
@@ -115,11 +142,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Rhodos
-      - date: '2822-01-01'
-        name: Runrig
-        message: Rhodos renamed to Runrig
   - name: Álimos Belt A
     type: ASTEROID_BELT
     orbitalDist: 0.42

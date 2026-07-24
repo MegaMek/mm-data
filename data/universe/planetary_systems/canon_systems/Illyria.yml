@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Illyria
-sucsId: 1182
+sucsId: 1183
 xcood: -439.228
 ycood: -178.11
 spectralType:
@@ -119,6 +119,12 @@ planet:
         size: medium
         icon: rock10
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2444-02-22'
         faction:
           source: canon
@@ -154,6 +160,12 @@ planet:
         population: 165572.0
       - date: '2570-01-01'
         population: 170696.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IP
       - date: '2580-01-01'
         population: 175129.0
       - date: '2590-01-01'
@@ -276,6 +288,16 @@ planet:
           source: canon
           value:
             - MH
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
+      - date: '3067-12-31'
+        # administration:
+        #   - Illyrian District
+        # capitalType: District Capital
       - date: '3070-01-01'
         population: 92938259.0
       - date: '3080-01-01'
@@ -301,11 +323,21 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
   - name: Horton
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

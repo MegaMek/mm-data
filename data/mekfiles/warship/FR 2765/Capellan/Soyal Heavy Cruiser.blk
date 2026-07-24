@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee0a-72f2-8b00-10553b9eb92a
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Soyal Heavy Cruiser
 2731
 </year>
 
-<originalBuildYear>
-2731
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,16 +53,16 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:12.0:3:1
+asfbay:12.0:3:1::-1:0
 dockingcollar
 dockingcollar
-mekbay:48.0:2
+mekbay:48.0:2:-1::-1:0
 dockingcollar
-smallcraftbay:2.0:1:7
-1stclassquarters:700.0:0
-crewquarters:2737.0:0
-steeragequarters:140.0:0
-cargobay:184412.0:2:3
+smallcraftbay:2.0:1:7::-1:0
+1stclassquarters:700.0:0:-1::-1:0
+crewquarters:2737.0:0:-1::-1:0
+steeragequarters:140.0:0:-1::-1:0
+cargobay:184412.0:2:10::-1:0
 </transporters>
 
 <SafeThrust>
@@ -98,9 +89,13 @@ cargobay:184412.0:2:3
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 140
@@ -199,15 +194,19 @@ Ammo Killer Whale:60
 </structural_integrity>
 
 <capabilities>
-The Soyal-class cruiser was known for its implementation of the advanced mass driver weapon system, which provided the ability to deliver devastating opening volleys. This revolutionary technology set it apart from conventional naval combat vessels. However, the over-engineered design of the ship, primarily to handle the stresses of firing the mass driver, resulted in an enormous size exceeding a million tons. The ship's secondary weapons were relatively minimal, as the focus was on its bow-on combat profile, which was believed to negate the need for broadside weapons.
+<p>The Soyal displaces 1,500,000 tons across 1,100 meters of hull, rivaling Farragut-class battleships in sheer mass. The centerpiece of the design is a nose-mounted medium mass driver capable of delivering devastating capital-scale damage, supplemented by two heavy naval gauss rifles in the same arc. The forward quarters each mount a NAC/30 and NAC/20 naval autocannon alongside four NL45 naval lasers. Broadsides carry a NAC/30 and NAC/20 per side with paired Killer Whale capital missile launchers, and the aft quarters repeat this combination. Two heavy naval gauss rifles and four NL45 naval lasers defend the stern. Seven hundred seventy-nine double heat sinks manage the considerable thermal load. The mass driver's critical limitation is its extremely narrow field of fire, requiring the vessel to maintain a bow-on profile to employ its most powerful weapon. Faster opponents that maneuvered outside the forward arc faced only conventional broadside armament from a vessel that sacrificed agility for firepower.</p><p>One thousand eight hundred eighty tons of standard armor provide protection befitting the vessel's displacement. Safe thrust of 1.5 gravities and maximum thrust of 2.5 gravities give the Soyal adequate acceleration for a vessel of its size. Three docking collars accommodate attached DropShips. Twelve aerospace fighters, two small craft, and a substantial complement of forty-eight BattleMechs provide combined-arms capability unusual for a cruiser. Over 184,000 tons of cargo capacity, two 145-meter gravity decks, and facilities for a crew of nearly six hundred officers and enlisted personnel support extended independent operations.</p>
 </capabilities>
 
 <overview>
-The Soyal-class cruiser was a revolutionary combat vessel developed by Delhi WarShips in response to a tender for a new Star League vessel. Its key feature was the incorporation of a powerful mass driver weapon system, which offered the ability to deliver massive opening volley damage. Although oversized and radical in design, the Soyal garnered attention due to its unique characteristics and gained orders from the Capellan Confederation and the Free Worlds League. However, the limitations of the mass driver's field of fire would later prove to be a significant weakness for the ship.
+<p>The Soyal-class heavy cruiser was designed by Delhi WarShips of Capella for the Capellan Confederation, entering service in 2731 as an unconventional capital combatant built around a single devastating spinal-mount armament. The class approached battleship displacement despite its cruiser designation, ranking among the largest WarShips constructed during the Star League era. Delhi WarShips envisioned a vessel capable of delivering crippling damage in the opening moments of a fleet engagement, a bold design philosophy that generated fierce debate among contemporary naval professionals. The Soyal earned a polarizing reputation among operational commanders, praised by some for its sheer offensive potential and questioned by others for the tactical compromises required to deliver on that promise. Few WarShip classes provoked such divided professional opinion among fleet commanders and naval architects.</p>
 </overview>
 
+<deployment>
+<p>No individual Soyal-class vessels are recorded by name in published sources. The class served primarily with the Capellan Confederation Armed Forces, where vessels were organized into reserve squadrons and commonality fleets alongside other capital combatants. In peacetime, the vessel's primary armament saw limited use beyond periodic test-firings, with results invariably classified by the Confederation. During the Succession Wars, Soyals served as fleet escorts and conducted orbital bombardment operations, achieving successes when positioning favored their forward arc but suffering when faster opponents exploited angles of approach. The Free Worlds League also operated the class following its initial Capellan deployment.</p>
+</deployment>
+
 <history>
-In 2725, Delhi WarShips saw an opportunity to make a breakthrough in the bidding for a new Star League vessel by proposing the Soyal-class cruiser. Its defining feature was the inclusion of a powerful mass driver weapon system, considered a game-changer in naval combat. However, Delhi's access to mass driver technology and research proved more limited than anticipated, leading to an over-engineered design that rivaled battleships in size. Despite its excessive design, the Soyal-class cruiser was not chosen for the Star League Navy contract. However, the Capellan Confederation recognized its potential and modified the design to fit their needs, ordering four ships for their fleet. This sparked interest from the neighboring Free Worlds League, who also placed orders for the Soyal cruisers. Although the deployment of the mass driver initially generated public demand for a similar ship in the SLDF, the limitations of the weapon system would become apparent during the Succession Wars. The Soyal's restricted field of fire made it vulnerable to faster and more maneuverable vessels, leading to embarrassing defeats. Ultimately, the Soyal-class cruisers would see limited action and fall out of use as newer ships proved more effective in combat.
+<p>The Soyal-class heavy cruiser originated from Delhi WarShips' ambitious bid to win the Star League Defense Force contract for a replacement to the aging Avatar-class cruiser. In 2725, Delhi proposed a revolutionary design centered on a weapon system capable of delivering unprecedented opening volley damage, believing it would reshape the dynamics of fleet engagements. Limited access to the underlying technology forced Delhi's engineers to heavily over-engineer the hull, producing a vessel of staggering displacement despite its cruiser classification.</p><p>The SLDF rejected the Soyal in favor of Mitchell Vehicles' Luxor class. Political maneuvering by Blue Nose Clipperships' CEO Craig Kovac on behalf of his allies at Mitchell played a role, but more fundamental problems doomed the bid. Classified SLDF targeting advancements had already made conventional weapons far more accurate at range, and the Star League had ruled out the Soyal's primary weapon as incompatible with fleet doctrine. This information was unavailable to Delhi's engineers, who had invested enormous resources designing what the SLDF considered fundamentally unsuitable.</p><p>The Capellan Confederation saved the design from oblivion. Seeking to modernize its fleet and seeing the Soyal's compatibility with their Du Shi Wang-class battleships, the Capellans ordered four initial vessels from Delhi's yards on Capella. After modifications to remove SLDF proprietary technology and add quarters for a Maskirovka intelligence detachment, the first Soyals entered service in 2731. Their deployment generated enough interest that the Free Worlds League placed its own orders, and public awareness of the vessel's primary armament led to uninformed demands for an SLDF equivalent, ultimately producing the SLS Surprise trials in the 2750s.</p><p>By 2765, ten Soyals served in the Confederation fleet, the most numerous WarShip class in the Capellan navy. The weapon that made the class fearsome ultimately proved its undoing. When the Succession Wars brought real combat, faster and more maneuverable opponents routinely avoided the vessel's forward arc, turning its greatest asset into a liability. All Soyals were eventually destroyed, with the last survivor noted in Free Worlds League service around 2838, one of the final WarShips to serve in that navy.</p>
 </history>
 
 <manufacturer>
@@ -219,12 +218,22 @@ Capella
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Delhi WarShips
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Soyal
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Heavy Cruiser

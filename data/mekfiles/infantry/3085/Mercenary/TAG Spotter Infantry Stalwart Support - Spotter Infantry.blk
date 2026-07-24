@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b660-7af5-8ae2-42536c56185e
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,8 +52,24 @@ Ambusher
 Leg
 </motion_type>
 
+<Troopers Equipment>
+Flak, Standard
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Stalwart Support is a mercenary infantry regiment formed by Colonel Harry Sanders for garrison and security contracts. The command spent over a decade in the employ of the Saiph Triumvirate, fighting insurgents and rebels on behalf of Count Balantine's regime. That prolonged counterinsurgency campaign transformed what had been a simple garrison outfit into a combat-experienced formation with hard-won expertise in urban warfare and precision fire support. The regiment's TAG spotter platoons carry Mark XX laser rifles alongside infantry-scale Target Acquisition Gear, designating targets for guided munitions delivered by the regiment's own artillery and air assets. Stalwart Support became known for calling down precision strikes in dense urban terrain with minimal collateral damage, a reputation built through years of fighting in the cities and settlements of the Chaos March.</p>
+</overview>
+
+<source>
+TR:3085S
+</source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 7
@@ -80,6 +91,7 @@ Laser Rifle (Marx XX)
 InfantryTAG
 </Secondary>
 
-<armorKit>
-ISFlakStandard
-</armorKit>
+<specialization>
+1024
+</specialization>
+

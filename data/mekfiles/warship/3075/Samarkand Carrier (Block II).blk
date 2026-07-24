@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-edec-7d5e-ac18-1e76e7378033
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Samarkand Carrier
 2668
 </year>
 
-<originalBuildYear>
-2668
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -58,17 +49,17 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:36.0:4:1
-asfbay:36.0:3:2
-smallcraftbay:12.0:1:3
+asfbay:36.0:4:1::-1:0
+asfbay:36.0:3:2::-1:0
+smallcraftbay:12.0:1:3::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-1stclassquarters:350.0:0
-crewquarters:1015.0:0
-steeragequarters:500.0:0
-cargobay:36370.0:4:11
+1stclassquarters:350.0:0:-1::-1:0
+crewquarters:1015.0:0:-1::-1:0
+steeragequarters:500.0:0:-1::-1:0
+cargobay:36370.0:4:11::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ cargobay:36370.0:4:11
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 91
@@ -249,9 +244,63 @@ IS Ammo MG - Full:100
 73
 </structural_integrity>
 
+<capabilities>
+<p>Displacing 350,000 tons across 501 meters of hull, the Samarkand is built around its fighter operations. The carrier accommodates seventy-two aerospace fighters in two bays of thirty-six, supported by twelve small craft for utility and search-and-rescue operations. Three docking collars accommodate DropShip attachments, while over 46,000 tons of cargo capacity provides logistical depth for extended deployments. Twin gravity decks measuring 150 and 60 meters allow comfortable crew rotation across its complement of officers, enlisted personnel, gunners, and a thirty-strong marine detachment.</p><p>The capital armament centers on a single Medium Naval PPC in the nose and a Light Naval PPC on each broadside, supplemented by a NAC/10 naval autocannon in each forward quarter. Naval laser batteries of NL35s and NL45s cover the flanks and aft, while extensive conventional weapons including LRM and SRM racks, lasers, and machine guns provide layered anti-aerospace defense. A known vulnerability exists near the large engine mounts in the lower rear, creating limited aft firing arcs that skilled opponents learned to exploit. The carrier's armor protection, while adequate for its intended screening role, left little margin for error when engaged by heavier combatants at close range.</p>
+</capabilities>
+
+<overview>
+<p>The Samarkand-class carrier was the Draconis Combine's first purpose-built fleet carrier, conceived as a mobile aerospace platform capable of projecting fighter superiority across entire star systems. Commissioned at the personal direction of the Coordinator during a period of escalating military tension, the class was rushed into production to meet an urgent strategic need for dedicated carrier capability. Unlike multi-role WarShips that balanced transport and combat, the Samarkand was optimized around its massive internal fighter bays, with defensive weapons and armor serving primarily to protect the vessel long enough for its aerospace wings to dominate the battlespace. The design philosophy emphasized speed and fighter capacity over raw firepower, making the Samarkand dependent on escort WarShips for protection against capital-class opponents. The class earned a reputation as the backbone of the Combine's carrier arm, though its effectiveness hinged entirely on proper fleet coordination.</p>
+</overview>
+
+<deployment>
+<p>The Block II refit dramatically increased the Samarkand's combat capability. Ferro-carbide armor replaced standard plating, Heavy Naval PPCs replaced the Light variants on each broadside, and NAC/20s supplanted the original NAC/10s in the forward quarters. Additional naval laser batteries and missile racks were added to the nose and aft-quarter arcs. Heat sinks nearly doubled to 1,700, a fourth docking collar was fitted, and the marine complement expanded to one hundred troopers.</p><p>Block II Samarkands entered service beginning in 2668 under Coordinator Urizen II's naval expansion program. The DCS New Samarkand served as a prominent Block II carrier within the Draconis Combine Admiralty, emblematic of the enhanced variant's role in the Combine's growing fleet. Three confirmed Samarkands survived the fall of the Star League to join General Kerensky's Operation Exodus: the Beijing, Deal Breaker, and Yorktown carried their fighter wings into the unknown, eventually serving with the Clans.</p>
+</deployment>
+
+<history>
+<p>The Samarkand-class carrier was born from Coordinator Hehiro Kurita's vision of a dedicated fleet carrier that would give the Draconis Combine independent aerospace superiority across its vast borders. Launched from the yards of Tengoku no Ken Master Shipwrights Ltd. on Mizunami in 2579, the class was fast-tracked into production as the Reunification War became inevitable. The first vessels proved the carrier concept during the Periphery campaigns against the Outworlds Alliance, validating the Coordinator's investment in dedicated carrier capability.</p><p>In peacetime, the surviving carriers assisted Combine colonial expansion and performed ceremonial duties, including escorting Coordinator Sanethia to Luthien in 2619. In 2668, Coordinator Urizen II authorized the Block II upgrade, incorporating significantly heavier capital weapons and improved armor protection. Multitudes of both blocks were built before the end of the Star League era, with many serving as escorts for SLDF operations.</p><p>By 2765, eight Samarkands operated across the Third and Fourth Fleets of the DCMS naval arm. The class carried a known vulnerability in its aft firing arcs that opponents learned to exploit. More damaging was the tactical misuse of Samarkands as assault vanguards, a role they were never designed to fill. Without adequate escort WarShips, the carriers were easily overcome by heavier opponents, and the Combine lost several vessels to this doctrinal error.</p><p>The Liberation of Terra campaign destroyed most of the class, though a handful of vessels survived to join General Kerensky's Operation Exodus. During the First Succession War, remaining Combine Samarkands were posted along the Lyran Commonwealth and Federated Suns borders, where attrition gradually consumed the survivors. The shipyard at Mizunami was destroyed during the Second Succession War, eliminating any possibility of building replacements or maintaining the surviving hulls. Only one vessel survived to the modern era, deteriorating into a barely functional orbital museum above New Samarkand, the last relic of the Combine's once-formidable carrier fleet.</p>
+</history>
+
+<manufacturer>
+Tengoku no Ken Master Shipwrights Ltd.
+</manufacturer>
+
+<primaryFactory>
+Mizunami
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Tengoku no Ken Master Shipwrights Ltd.
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Samarkand
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <notes>
 Unit as constructed in TRO: is 4 tons overweight. Removed 4 tons of Cargo to make unit legal.
 </notes>
+
+<use>
+Carrier
+</use>
+
+<length>
+501 m
+</length>
+
+<height>
+967 m Sail
+</height>
 
 <source>
 TR:3075
@@ -310,42 +359,3 @@ TR:3075
 30
 </escape_pod>
 
-<capabilities>
-The Samarkand-class carriers were designed to utilize their large fighter complements to engage enemy DropShips and destroyers. They excelled in their role as carriers and escorts but were not intended for direct frontline combat. However, they were underarmored and outgunned, with vulnerability near the large engine mounts in the limited aft firing arcs. Despite impressive anti-aerospace defenses, the Samarkands could be easily overwhelmed in the absence of sufficient escorts.
-</capabilities>
-
-<overview>
-The Samarkand-class carrier was the brainchild of Coordinator Hehiro Kurita and was fast-tracked into production during the Reunification War. These carriers played a crucial role in boosting the economy of several planets. The Block I Samarkands, including the Benjamin, Dieron, and Alshain, were deployed during the war and later became symbols of the Dragon's prosperity as they supported colonial expansion and delivered supplies and resources.
-</overview>
-
-<history>
-The Samarkand carriers were deployed during the Reunification War, with the first ships, including the Samarkand and Benjamin, entering service in 2581. After the war, the surviving carriers supported the Dragon's economic expansion and became iconic symbols of prosperity. In 2668, newer Block II versions were authorized, taking advantage of advancements in armor and weapons technologies. Many Samarkands served as escorts in the Star League Defense Force but were largely destroyed during the liberation of Terra. Only one Samarkand, the Togura, remains as a museum piece orbiting New Samarkand. During the Succession Wars, the few remaining carriers defended strategic locations along the Lyran and Suns borders but were mostly destroyed. Samarkands were often used in last-ditch delaying tactics to buy time for ground defenders, although they became vulnerable due to limited escorts and shortages of spare parts and fighters.
-</history>
-
-<manufacturer>
-Tengoku no Ken Master Shipwrights Ltd.
-</manufacturer>
-
-<primaryFactory>
-Mizunami
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
-
-<use>
-Carrier
-</use>
-
-<length>
-501 m
-</length>
-
-<height>
-967 m Sail
-</height>

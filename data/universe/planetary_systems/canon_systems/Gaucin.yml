@@ -1,0 +1,173 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Gaucin
+sucsId: 3123
+xcood: 160.624
+ycood: -497.983
+spectralType: G2V
+planet:
+  - name: Gaucin I
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 0.56
+    sysPos: 1
+    icon: gasg4
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1
+    diameter: 17500
+    density: 4
+    dayLength: 12
+    yearLength: 1.3
+    smallMoons: 7
+    satellite:
+      - name: 1-M1
+        size: medium
+        icon: rock1
+  - name: Gaucin II
+    type: TERRESTRIAL
+    orbitalDist: 1.4
+    sysPos: 2
+    icon: barren7
+    pressure: STANDARD
+    atmosphere: TOXIC_POISON
+    composition: Carbon Dioxide, plus trace amounts of Argon
+    gravity: 0.92
+    diameter: 13500
+    density: 4.7795
+    dayLength: 23
+    yearLength: 2
+    temperature: 70
+    water: 0
+  - name: Gaucin
+    type: TERRESTRIAL
+    orbitalDist: 2.24
+    sysPos: 3
+    icon: green22
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.23
+    diameter: 12600
+    density: 6.8337
+    dayLength: 24
+    yearLength: 3.6
+    temperature: 26
+    water: 38
+    lifeForm: REPTILE
+    event:
+      - date: '2800-01-01'
+        population: 44166.0
+        socioIndustrial: C-C-A-C-D
+      - date: '2810-01-01'
+        population: 118748.0
+      - date: '2820-01-01'
+        population: 255898.0
+      - date: '2830-01-01'
+        population: 466697.0
+      - date: '2840-01-01'
+        population: 744614.0
+      - date: '2850-01-01'
+        population: 1076114.0
+      - date: '2860-01-01'
+        population: 1437894.0
+      - date: '2870-01-01'
+        population: 1802407.0
+      - date: '2880-01-01'
+        population: 2150538.0
+      - date: '2890-01-01'
+        population: 2474355.0
+      - date: '2900-01-01'
+        population: 2761859.0
+      - date: '2910-01-01'
+        population: 3002989.0
+      - date: '2920-01-01'
+        population: 3189780.0
+      - date: '2930-01-01'
+        population: 3333636.0
+      - date: '2940-01-01'
+        population: 3454896.0
+      - date: '2950-01-01'
+        population: 3554112.0
+      - date: '2960-01-01'
+        population: 3630028.0
+      - date: '2970-01-01'
+        population: 3597663.0
+      - date: '2980-01-01'
+        population: 1480786.0
+      - date: '2990-01-01'
+        population: 498132.0
+      - date: '3000-01-01'
+        population: 158599.0
+      - date: '3010-01-01'
+        population: 47792.0
+      - date: '3020-01-01'
+        population: 12901.0
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Gaucin IV
+    type: ICE_GIANT
+    orbitalDist: 3.92
+    sysPos: 4
+    icon: iceg3
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.28
+    diameter: 45000
+    density: 2
+    dayLength: 14
+    yearLength: 7.9
+    smallMoons: 5
+    satellite:
+      - name: 4-L1
+        size: large
+        icon: rock1
+      - name: 4-M1
+        size: medium
+        icon: rock1
+      - name: 4-M2
+        size: medium
+        icon: rock2
+      - name: 4-M3
+        size: medium
+        icon: rock3
+  - name: Gaucin V
+    type: GAS_GIANT
+    orbitalDist: 7.28
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.56
+    diameter: 120000
+    density: 1.5
+    dayLength: 15
+    yearLength: 19.7
+    ring: true
+    smallMoons: 13
+    satellite:
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+primarySlot: 3

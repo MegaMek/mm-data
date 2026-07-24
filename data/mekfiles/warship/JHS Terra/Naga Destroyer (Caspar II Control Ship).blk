@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee92-78b3-afc5-d010d902dba9
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Naga Destroyer
 3067
 </year>
 
-<originalBuildYear>
-3067
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,8 +53,8 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:36.0:3:1
-smallcraftbay:6.0:1:2
+asfbay:36.0:3:1::-1:0
+smallcraftbay:6.0:1:2::-1:0
 navalrepairpressurized:75000.0:1:3:f3
 navalrepairpressurized:75000.0:1:4:f4
 navalrepairpressurized:75000.0:1:5:f5
@@ -73,10 +64,10 @@ navalrepairpressurized:7500.0:1:8:f2
 navalrepairpressurized:7500.0:1:9:f4
 navalrepairpressurized:7500.0:1:10:f5
 navalrepairpressurized:7500.0:1:11:f3
-1stclassquarters:510.0:0
-2ndclassquarters:252.0:0
-crewquarters:2310.0:0
-cargobay:83005.0:1:15
+1stclassquarters:510.0:0:-1::-1:0
+2ndclassquarters:252.0:0:-1::-1:0
+crewquarters:2310.0:0:-1::-1:0
+cargobay:83005.0:1:15::-1:0
 </transporters>
 
 <SafeThrust>
@@ -103,9 +94,13 @@ cargobay:83005.0:1:15
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 28
@@ -321,28 +316,46 @@ Ammo Screen:10
 </structural_integrity>
 
 <capabilities>
-The Naga-class light destroyer, with its heavy armor and firepower, served as a control ship for the Caspar II system. The Caspar II system, characterized by its drones, offered the capability of conducting fairly elaborate independent operations. However, its true power was realized when the drones were directly controlled by a control ship. In the case of the Terran system, three converted Naga-class WarShips, namely the Divine Command, Celestial Threads, and Enlightened Direction, acted as control ships for the Caspar II drones. The Naga-class control ships, while originally designed primarily for capital engagements, underwent modifications to improve their defensive capabilities. Additional armor plates were added to protect critical components, and anti-fighter support was enhanced with batteries of VSP lasers and MML launchers in all arcs. Sub-capital weapons were also incorporated to bolster anti-fighter and DropShip defense. The fighter bays were expanded to accommodate Hive-class drone fighters, and the Caspar II control system enabled the operation of thirty-six Caspar II drones simultaneously. Cargo holds were modified to include pressurized repair bays capable of carrying and servicing Tiamat and Dragau-class Caspar II drones. Moreover, crew space was significantly expanded to accommodate Caspar II operators and maintenance staff.
+<p>Displacing 540,000 tons, the Naga carried a substantial armament centered on eleven naval autocannons distributed across multiple firing arcs, supplemented by naval lasers, particle projector cannons, and a modest capital missile loadout of one White Shark launcher forward and one Barracuda launcher aft. This weapons suite gave the vessel credible engagement capability at multiple ranges, though the design clearly favored sustained gunnery exchanges over long-range missile duels. The class mounted 656 tons of primitive armor across a structural integrity rating of 68, providing reasonable protection for a vessel of its era.</p><p>The Naga's acceleration profile of two gravities standard and three gravities maximum was respectable for a destroyer of its tonnage, though the design's emphasis on internal volume over raw speed meant it could not match lighter escorts in a sprint. The vessel carried twelve aerospace fighters and two small craft but had no docking collars, limiting its ability to serve as a transport hub. A crew complement of 235 operated the vessel, supported by a single fifty-meter gravity deck. The most distinctive feature of the original design was its enormous cargo capacity of over 142,000 tons, suggesting the class was intended as much for extended independent patrol operations as for fleet engagements.</p>
 </capabilities>
 
 <overview>
-The Naga-class light destroyer, became known as the Naga Destroyer (Caspar II Control Ship) when operating as part of the Caspar II system, played a significant role in the Terran Hegemony's fleet. While the Naga ultimately became obsolete, it found renewed purpose as a control ship for the Caspar II drones. The Caspar II system, with its human intelligence, allowed for elaborate independent operations but demonstrated its true strength when drones were directly controlled by Naga Destroyers. Though only three Nagas remain today, efforts to reactivate these vessels persist despite their age and structural flaws.
+<p>Commissioned in the mid-twenty-seventh century by the Terran Hegemony, the Naga was designed as a heavy destroyer that prioritized raw firepower and cargo capacity over the speed that had characterized its predecessor. Riga Interstellar Shipyards of Dyev constructed the class as a direct replacement for the aging Essex-class vessels that had formed the backbone of the Hegemony's destroyer screen for over a century. The Naga was intended to fill a broad operational niche, capable of independent patrol duty in remote systems as readily as fleet screening and escort work alongside heavier capital vessels.</p><p>The class earned a reputation as a dependable fleet workhorse, its generous internal volume and heavy armament making it well-suited to the variety of missions demanded of Hegemony destroyer formations. Though not the fastest vessel in the SLDF order of battle, the Naga's combination of endurance and firepower made it a valued asset in any task force composition.</p>
 </overview>
 
+<deployment>
+<p>The Word of Blake converted three Naga-class hulls into Caspar II drone control ships at the O'Neil and Titan Yards facilities orbiting Terra, designating them as a critical component of their Space Defense System network. The conversion was extensive, tripling the fighter bay capacity to thirty-six craft, adding nine pressurized naval repair facilities for maintaining drone WarShips, and installing a Mobile HPG, Large Naval Communications Scanner Suite, and Direct Tactical Analysis System to coordinate automated naval forces across an entire star system. The trade-off was severe: the conversion rendered each vessel's Kearny-Fuchida drive inoperable, permanently tethering all three ships to the Terra system.</p><p>The WoBS Celestial Threads, WoBS Divine Command, and WoBS Enlightened Direction formed the nerve center of the Blakist drone fleet defending Terra during the Jihad. Sub-capital laser batteries, missile launchers with advanced targeting systems, and screen launchers augmented the original capital weapons suite, while a company of battle armor marines provided boarding defense. All three vessels were destroyed during Operation SCOUR in 3078, when the allied coalition fought its way through the formidable automated defenses to liberate humanity's homeworld.</p>
+</deployment>
+
 <history>
-Originally thought to be an exact duplicate of the Star League-era Caspar system, the Caspar II system revealed its unique nature during the final assault on Terra. It was discovered that the Caspar II's intelligence was human, not artificial as initially believed. The true strength of the system became apparent when the Naga Destroyers took control of the Caspar II drones. In the Terran system, three converted Naga-class WarShips—the Divine Command, Celestial Threads, and Enlightened Direction—were designated as Naga Destroyers (Caspar II Control Ships). These vessels had non-functional KF drives and were equipped with elaborate control systems. The Celestial Threads, as the first control ship to become operational, commanded the Dragau-class Caspar IIs during the defense of Mars against the Dragoon assault. However, during Case WHITE, both the Threads and the Enlightened were put out of action, dealt a severe blow by ComStar unknowingly. Nevertheless, by the time of the Coalition's assault on Terra, the Threads had been repaired, and additional smaller DropShips were converted to control smaller groups of Caspar IIs. These Naga Destroyers, along with their drones, inflicted significant damage on Coalition forces during the final battles for Terra. Despite the destruction of the last operating control ship, the Divine Command, the Caspar II drones remained a threat as they shifted to independent command trees. Their autonomous actions continued to harass the Coalition's invasion forces. While restoration efforts for the remaining Naga Destroyers persist, the extensive structural flaws and age of these vessels make the process costly. Nonetheless, the legacy of the Naga Destroyers and the Caspar II system endures, leaving a lasting impact on the conflicts surrounding Terra.
+<p>The Naga-class destroyer entered service in 2645 as a direct replacement for the venerable Essex-class destroyers that had served the Terran Hegemony since the Age of War. Designed and constructed at Riga Interstellar Shipyards on Dyev, the class represented the Hegemony Armed Forces' effort to modernize its destroyer screen with a heavier, more capable platform. The Naga quickly established itself as a reliable fleet asset, its combination of substantial firepower and generous internal volume making it well-suited to the screening, escort, and independent patrol missions that defined destroyer operations.</p><p>The class's tenure as the Hegemony's premier destroyer proved relatively brief. The introduction of the Essex II-class in the early twenty-eighth century offered a more refined and capable design that gradually supplanted the Naga in front-line fleet assignments. Still, the Naga continued to serve in secondary roles, and a number of vessels remained in active service through the fall of the Star League. The chaos of the Succession Wars scattered surviving Nagas across the Successor States, where they served various navies until attrition and the loss of maintenance infrastructure took their inevitable toll. The Rim Worlds Republic also operated at least one vessel, the Dystopia, whose wreck was discovered centuries after the Republic's destruction.</p><p>The most remarkable chapter in the class's history came during the Jihad, when the Word of Blake selected three surviving Naga hulls for conversion into Caspar II drone control ships. The extensive refit, carried out at facilities in the Terra system around 3065, transformed the aging destroyers into command platforms for the Blakist Space Defense System at the cost of their jump capability.</p><p>The three converted vessels formed the backbone of Terra's automated naval defense during the final years of the Jihad. When Operation SCOUR brought a massive allied coalition to liberate Terra in 3078, all three were destroyed in the fighting. Their loss marked the effective extinction of the Naga class, ending a service history that had spanned over four centuries and carried the design from the height of Star League naval power through the darkest years of the Succession Wars to a final, unexpected role as the nerve center of the most sophisticated automated naval defense network the Inner Sphere had ever seen.</p>
 </history>
 
+<manufacturer>
+O'Neil Yards / Titan Yards
+</manufacturer>
+
 <primaryFactory>
-O'Neil Yards - Titan Yards (Refit)
+Terra
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Riga Interstellar Shipyards
 ENGINE:Unknown
-ARMOR:Unknown
+ARMOR:Maximillian
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Primitive
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <notes>
 Rebuilt to match TRO: but unit is illegal. Due to number of pressurized bays and facings.

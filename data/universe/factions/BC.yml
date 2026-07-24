@@ -17,7 +17,15 @@
 
 key: BC
 name: Buena Collective
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes: []  # no SUCS equivalent
 capital: Buena
+yearsActive:
+  - start: 3146
+    end: 3148
 tags:
   - MINOR
   - IS

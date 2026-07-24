@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,43 +15,45 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c80f-781d-a972-f873a2b5adf4
+generator:MegaMek Suite 0.51.01 on 2026-07-20
 chassis:Kraken
 clanname:Bane
 model:4
 mul id:1844
 
 Config:Biped
-TechBase:Clan
-Era:3066
-Source:TR:3055U
-Rules Level:2
+techbase:Clan
+era:3066
+source:TR:3055U
+published:RS:3055Uu
+rules level:2
 role:Juggernaut
 
 quirk:ext_twist
 quirk:pro_actuator
 
+mass:100
+engine:300 XL (Clan) Engine
+structure:Clan Standard
+myomer:Standard
 
-Mass:100
-Engine:300 XL (Clan) Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:17 Clan Double
+walk mp:3
+jump mp:0
 
-Heat Sinks:17 Double
-Walk MP:3
-Jump MP:0
-
-Armor:Standard(Clan)
-LA Armor:34
-RA Armor:34
-LT Armor:32
-RT Armor:32
-CT Armor:46
-HD Armor:9
-LL Armor:42
-RL Armor:42
-RTL Armor:10
-RTR Armor:10
-RTC Armor:13
+armor:Standard(Clan)
+LA armor:34
+RA armor:34
+LT armor:32
+RT armor:32
+CT armor:46
+HD armor:9
+LL armor:42
+RL armor:42
+RTL armor:10
+RTR armor:10
+RTC armor:13
 
 Weapons:6
 Ultra AC/20, Left Arm
@@ -173,16 +175,27 @@ CLDoubleHeatSink
 -Empty-
 -Empty-
 
-overview:The Bane is a BattleMech that is based upon a Star League prototype that was never put into production. Tagged the Kraken by Inner Sphere forces who opposed it.
+overview:<p>The Bane, known to Inner Sphere forces by the reporting name Kraken, is a hundred-ton Clan assault BattleMech first constructed in 2827. Based on plans for a Star League prototype that never reached the production stage, the design was brought to fruition during the early years of the Clans following Operation Klondike. Originally serving as a key assault 'Mech across numerous Clan toumans, the Bane was gradually relegated to second-line and garrison duties with the advent of the OmniMech.</p><p>Despite this diminished status, the design remained a principal component of many Clan defensive formations, particularly within Clan Jade Falcon. The Falcon scientists' continued interest in the platform transformed it into a test bed for experimental technology, ensuring the venerable Bane saw more innovation and variation across its history than virtually any other Falcon second-line design.</p>
 
-capabilities:The Bane was first built in 2827. It was originally a significant part of many Clan toumans, but was gradually relegated to second-line status following the introduction of the OmniMech. As such, it is still critical to many defensive units. The design uses a lightweight XL Engine so that it can mount the arsenal that it does. Nineteen tons of armor protects this venerable assault 'Mech.
+capabilities:<p>The Bane's primary strength lies in its role as a long-range, direct-fire support platform. The base configuration mounts ten Ultra Autocannon/2s, providing an extraordinary volume of fire at extreme ranges that few opponents can match. This arsenal allows the Bane to stand off at distance and pepper targets with impunity, though its four ammunition bins limit the duration of sustained engagements. Four machine guns provide a deterrent against infantry and unarmored targets that manage to close inside minimum autocannon range.</p><p>A 300-rated XL engine propels this hundred-ton chassis to a respectable 54 kph, adequate for maintaining position in a defensive line. Nineteen tons of Forging C745 armor provides excellent protection for a second-line design, ensuring the Bane can absorb considerable punishment while delivering its withering long-range fire. Ten double heat sinks manage the design's modest heat output with ease.</p><p>The primary weakness of the base configuration is its dependency on ammunition and the relatively low individual damage of each autocannon round, making the Bane vulnerable to opponents that close range quickly before its massed fire can achieve cumulative effect.</p>
 
-deployment:This redesign actually addresses the ammunition-dependency of the earlier Banes. In this upgrade, Clan Jade Falcon scientists changed many elements of the Bane slightly, resulting in a 'Mech with a different appearance than its predecessors. Its focus is also short range, as evidenced by twin Model SH Ultra Autocannon/20s. Six tons of ammunition is adequate, though only barely. Three System 4 ATM 6s, along with four tons of ammunition, give the design great flexibility at all ranges. A single Series 7K ER Large Laser allows the 'Mech to stay in the fight in the event its ammunition bins have run dry. Seventeen double heat sinks are unequal to the task assigned them. The Falcons first deployed this multi-use design between 3065 and 3067.
+deployment:<p>Representing a significant redesign by Clan Jade Falcon scientists, the Bane 4 addresses the ammunition dependency of earlier models while shifting the design's focus to close-range combat. Twin Ultra Autocannon/20s deliver devastating firepower at short range, complemented by three ATM-6 launchers that provide tactical flexibility across all engagement distances. An extended-range large laser ensures the 'Mech retains some capability when ammunition runs dry. The Falcon engineers reworked the entire design during this upgrade, incorporating two hundred years of fixes, minor updates, and field refits while strengthening the base frame at key spots to create a far more stable firing platform. First deployed between 3065 and 3067, the Bane 4 rapidly replaced older variants throughout the Jade Falcon Occupation Zone, earning a reputation as a deadly close-range opponent during engagements at Blair Atholl and Pandora.</p>
 
-manufacturer:Tokasha MechWorks Alpha, Olivetti Weapons
-primaryfactory:Tokasha, Sudeten
-systemmanufacturer:CHASSIS:Type AXT, Mk. XX
-systemmanufacturer:ENGINE:Fusion 300 XL
-systemmanufacturer:ARMOR:Forging C745
-systemmanufacturer:COMMUNICATIONS:JNE Integrated
-systemmanufacturer:TARGETING:Series VI TTS
+history:<p>The Bane's origins trace to an unfinished Star League prototype that was carried into exile during the Exodus. Following Operation Klondike and the consolidation of the Pentagon Worlds, the design was first realized in 2827, entering service as an assault-weight fire support platform across multiple Clan toumans. Early production of the Bane centered on the Ironhold Alpha Complex, where the design was manufactured under Clan Jade Falcon ownership from the Late Succession Wars through the Civil War era.</p><p>Throughout its early history, the Bane remained uncommon among Jade Falcon second-line forces due to a lack of standardization and the relative ease of manufacturing competing designs such as the Jupiter. When the Jupiter shifted toward a fast brawler role in the 3090s, Banes filled the resulting heavy fire-support vacancy, becoming more prevalent than before and providing Falcon engineers with additional data for continued development. This longevity, coupled with the Falcon scientists' unusual interest in the platform, contributed to its role as a test bed for experimental technology that often found later application in other BattleMechs.</p><p>The Bane's combat record spans numerous conflicts across the Clan Invasion and beyond. The Bane 4 saw its baptism of fire during Jade Falcon strikes against Lyran forces at Blair Atholl and during subsequent strikes on Pandora between 3064 and 3065, where its close-range firepower caught Lyran defenders off guard. During Operation Noyan in 3147, Banes of the Eighteenth Falcon Regulars held the line against Hell's Horses at the Suleiman Dunes on Leskovik, demonstrating the design's enduring defensive capability.</p><p>Production of the Bane expanded beyond Ironhold to Olivetti Weaponry on Sudeten, which also operated a refit line converting existing chassis to updated specifications. The Bane 4 was additionally produced at the Tokasha MechWorks Alpha facility under successive Clan ownership, Ghost Bear, then Hell's Horses, and later Clan Stone Lion. The Olivetti facility suffered damage during the Wars of Reaving era but restored Bane production in the late 3090s, becoming the primary source of new Bane manufacture from the Dark Age onward.</p><p>The introduction of the modernized Bane 5, 6, and 7 variants from Olivetti Weaponry between 3105 and 3122 ensured the design's continued relevance well into the ilClan era, a remarkable sign of the adaptability of a chassis first conceived before the founding of the Clans themselves.</p>
+
+manufacturer:Olivetti Weaponry|Tokasha Mechworks Alpha
+
+primaryfactory:Sudeten|Tokasha
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Type AXT, Mk. XX
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:Fusion 300 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Forging C745
+systemmanufacturer:COMMUNICATIONS:JNE
+systemmode:COMMUNICATIONS:JNE Integrated
+systemmanufacturer:TARGETING:Unknown
+systemmode:TARGETING:Series VI TTS

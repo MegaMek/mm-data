@@ -17,6 +17,11 @@
 
 key: CSR
 name: Clan Snow Raven
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CSR
 nameChanges:
   3083: Raven Alliance
 capital: Circe
@@ -112,3 +117,5 @@ factionLeaders:
     surname: "McKenna"
     gender: "FEMALE"
     startYear: 3131
+usesMercenaries:
+  2500: false

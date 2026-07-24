@@ -17,6 +17,11 @@
 
 key: CSL
 name: Clan Stone Lion
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CSL
 capital: Tokasha
 yearsActive:
   - start: 3075
@@ -42,3 +47,5 @@ ratingLevels:
 fallBackFactions:
   - CHH
   - CLAN.HW
+usesMercenaries:
+  2500: false

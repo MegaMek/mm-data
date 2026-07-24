@@ -17,6 +17,11 @@
 
 key: CWIE
 name: Clan Wolf-in-Exile
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CWX
 capital: Arc-Royal
 yearsActive:
   - start: 3057
@@ -43,3 +48,32 @@ ratingLevels:
 fallBackFactions:
   - CLAN.IS
 postInvasionHonorRating: LIBERAL
+factionLeaders:
+  - title: "Khan"
+    firstName: "Phelan"
+    surname: "Kell"
+    gender: "MALE"
+    # Founding Khan of Clan Wolf-in-Exile from the 3057 Refusal War; served roughly 50 years.
+    startYear: 3057
+    endYear: 3108
+  - title: "Khan"
+    firstName: "Josip"
+    surname: "Rhyde"
+    gender: "MALE"
+    # Brief tenure in 3125 before Patrik Fetladral took over the same year.
+    startYear: 3125
+    endYear: 3125
+  - title: "Khan"
+    firstName: "Patrik"
+    surname: "Fetladral"
+    gender: "MALE"
+    startYear: 3125
+    endYear: 3146
+  - title: "Khan"
+    firstName: "Miriam"
+    surname: "Shaw"
+    gender: "FEMALE"
+    startYear: 3146
+    endYear: 3151
+usesMercenaries:
+  2500: false

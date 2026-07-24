@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kettering
-sucsId: 2908
+sucsId: 2909
 xcood: 446.672
 ycood: -97.517
 spectralType: K3V
@@ -49,10 +49,27 @@ planet:
         size: medium
         icon: rock5
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2800-08-11'
         hpg: X
       - date: '2805-01-13'
         hpg: B
+      - date: '2830-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Point Barrow Combat Region
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2864-10-12'
         faction:
           source: canon
@@ -103,6 +120,12 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3042-01-01'
         socioIndustrial: C-D-A-D-C
       - date: '3050-01-01'
@@ -112,6 +135,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'

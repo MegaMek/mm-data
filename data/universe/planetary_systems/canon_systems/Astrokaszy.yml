@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Astrokaszy
-sucsId: 2859
+sucsId: 2860
 xcood: -290.632
 ycood: -315.408
 spectralType:
@@ -104,6 +104,18 @@ planet:
         size: medium
         icon: rock10
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2900-05-09'
         faction:
           source: canon
@@ -183,13 +195,23 @@ planet:
           value:
             - RCM
         population: 2887075.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RCM
       - date: '3140-01-01'
         population: 2879002.0
       - date: '3145-01-01'
         population: 2877851.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: ZC4-1 Belt

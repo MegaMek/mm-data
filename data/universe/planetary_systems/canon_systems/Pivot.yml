@@ -1,0 +1,139 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Pivot
+xcood: -125.0
+ycood: 1500.0
+spectralType: K5V
+planet:
+  - name: Pivot I
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 0.98
+    sysPos: 1
+    icon: gasg4
+    pressure: Low
+    atmosphere: TOXIC_POISON
+    composition: Carbon Dioxide, plus trace amounts of Methane
+    gravity: 1.03
+    diameter: 14500
+    density: 5
+    dayLength: 10
+    yearLength: 1.5
+    temperature: 126
+    water: 0
+    smallMoons: 1
+    satellite:
+      - name: 1-M1
+        size: medium
+        icon: rock1
+  - name: Pivot II
+    type: DWARF_TERRESTRIAL
+    orbitalDist: 1.4
+    sysPos: 2
+    icon: barren7
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.1
+    diameter: 1700
+    density: 4
+    dayLength: 21
+    yearLength: 2
+    temperature: 53
+    water: 0
+  - name: Pivot
+    type: TERRESTRIAL
+    orbitalDist: 2.24
+    sysPos: 3
+    icon: green22
+    pressure: Low
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.14
+    diameter: 11700
+    density: 6.8337
+    dayLength: 24
+    yearLength: 3.6
+    temperature: 21
+    water: 48
+    lifeForm: REPTILE
+    smallMoons: 2
+    event:
+      - date: '3050-01-01'
+        population: 10077.0
+        socioIndustrial: C-B-B-B-D
+      - date: '3060-01-01'
+        population: 8917449.0
+      - date: '3070-01-01'
+        population: 10022024.0
+      - date: '3080-01-01'
+        population: 10078305.0
+      - date: '3090-01-01'
+        population: 10134902.0
+      - date: '3100-01-01'
+        population: 10204054.0
+      - date: '3110-01-01'
+        population: 10222438.0
+      - date: '3120-01-01'
+        population: 10240855.0
+      - date: '3130-01-01'
+        population: 10230619.0
+      - date: '3140-01-01'
+        population: 10232665.0
+  - name: Pivot IV
+    type: TERRESTRIAL
+    orbitalDist: 7.28
+    sysPos: 4
+    icon: rock13
+    pressure: STANDARD
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen
+    gravity: 0.5
+    diameter: 5500
+    density: 6.3337
+    dayLength: 16
+    yearLength: 19.7
+    temperature: -123
+    water: 0
+  - name: Pivot V
+    type: GAS_GIANT
+    orbitalDist: 14
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.03
+    diameter: 130000
+    density: 1.1
+    dayLength: 11
+    yearLength: 52.4
+    smallMoons: 17
+    satellite:
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+  - name: Pivot VI
+    type: ASTEROID_BELT
+    orbitalDist: 27.44
+    sysPos: 6
+    icon: asteroid1
+    yearLength: 143.7
+    temperature: -200
+primarySlot: 3

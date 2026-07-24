@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e275-73d0-8f34-c30fbebafccb
+</UUID>
 
 <UnitType>
 Tank
@@ -33,9 +28,9 @@ Tank
 Devastator Heavy Tank
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 897
@@ -64,6 +59,18 @@ Tracked
 <engine_type>
 0
 </engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 38
@@ -103,29 +110,20 @@ Autocannon/20
 Autocannon/20
 </Turret Equipment>
 
-<source>
-TR:3039
-</source>
-
-<tonnage>
-80.0
-</tonnage>
-
 <capabilities>
-The Demolisher is an intimidating machine with two turret-mounted heavy guns. The titanic weapons employ a well-known propellant system that combines two chemicals in suspension to propel a stream of massive shells at the unlucky target. This generated a tremendous amount of heat in older models. As a result, crew members were required to wear special coolant suits because the inside of the tank can become unbearably hot during a sustained firefight. The current model addressed the issue by directing the majority of the ejection gases through the barrels. The Demolisher is a defensive unit that works best in urban environments. The two massive autocannons can easily take down an assault 'Mech when they emerge from hiding. The vehicle's lack of secondary weapons, however, forces it to rely on friendly infantry to screen against enemy light armour and infantry.
+<p>The Devastator's most significant departure from the Demolisher baseline is its Type 240 fusion engine, which delivers the same 54 km/h top speed without the fuel supply and exhaust management challenges of internal combustion systems. The twin 185mm ChemJet Gun Autocannon/20s remain the core armament, capable of stripping armor from assault-weight BattleMechs in a single turret cycle. These weapons use integral autoloaders and fire four-round bursts that generate substantial heat, a manageable concern given the fusion powerplant's superior thermal envelope compared to the ICE it replaced.</p><p>Secondary armament distinguishes the Devastator from its predecessor. A Holly SRM-6 in the front hull provides medium-range punch against targets the autocannons cannot engage effectively, while a Zippo flamer mounted in the turret deters infantry attempting to board or disable the vehicle at close range. Three Intek small lasers, one front and one on each side, extend close-in defensive coverage across the hull flanks. The Durandal 160 standard armor package provides solid protection for the vehicle's weight class. The design shares the Demolisher's lack of jump capability and limited secondary arc coverage, requiring crews to rely on mutual support and positioning to compensate.</p>
 </capabilities>
 
 <overview>
-Tall, squat, and using four treads, the Demolisher has a well-earned, though sometimes exaggerated, reputation as one of the most deadly vehicles on the battlefield. Designed to counteract the increasing scarcity of 'Mechs during the Succession Wars, the Demolisher became popular, especially on worlds where BattleMechs were not available.
+<p>The Devastator is a premium third-generation evolution of the Demolisher heavy tank, produced by Aldis Industries on Terra. Where the standard Demolisher relied on a conventional internal combustion engine, the Devastator substitutes a fusion powerplant, eliminating fuel logistics and reducing the acoustic and thermal signature inherent to ICE-driven vehicles. Aldis marketed the design to wealthier Inner Sphere worlds that could afford the increased unit cost, positioning it as an upgrade for planetary militias seeking capable armor support without fielding BattleMechs. The vehicle retains the twin-autocannon turret that defines the Demolisher line while adding supplementary weapons to address the original design's lack of close-range defense. Its reputation as a terror weapon, already well established by the Demolisher family, was reinforced by high-profile Succession Wars engagements demonstrating the Devastator's effectiveness against elite BattleMech forces in urban terrain.</p>
 </overview>
 
 <deployment>
-The third generation of the Demolisher, the DVE-5B Mark III, was found mainly among the defense forces of the richer planets in the Inner Sphere. It is powered by a Type 240 fusion engine and mounts some additional weapons: A Zippo Flamer in the turret, one Intek Small Laser in the front and on each side, and a front-mounted Holly SRM-6.
+<p>The Devastator served as a premium urban assault vehicle for well-funded planetary militias and major faction garrison forces. Its fusion powerplant made it attractive to commands operating in environments where fuel resupply was difficult, particularly fortified worlds with constrained logistics infrastructure. ComStar maintained significant stocks in Com Guard reserve and garrison roles during the Succession Wars and Clan Invasion, while Word of Blake forces continued deploying the type through the Jihad. The Republic of the Sphere fielded Devastators in planetary militia and fortress garrison configurations, typically paired with standard Demolishers for combined heavy armor support throughout the Dark Age.</p>
 </deployment>
 
 <history>
-Aldis Industries was nearly destroyed during Aleksandr Kerensky's liberation of Terra in 2767 after being seized by Rim Worlds Republic troops. Aldis was rebuilt under the auspices of Jerome Blake's Terran reconstruction programme and has operated under the neutrality ComStar crafted for Terra.
-During the early days of the First Succession War, engineers at Aldis Industries devised a solution to the 'Mech technology problem. Their plan was to build a vehicle powerful enough to destroy any 'Mech but appealing to worlds that couldn't afford 'Mech forces. The tank, dubbed the Demolisher, made its debut in 2803 and has since earned a reputation as one of the most lethal vehicles on the battlefield.
+<p>Aldis Industries developed the Devastator in the early Succession Wars as a premium variant of the Demolisher, reasoning that worlds with fusion-capable maintenance infrastructure would pay for the operational advantages it provided. The design entered production in 3003, though prototype vehicles carrying the fusion conversion had circulated in limited numbers before that date.</p><p>The most frequently cited engagement involving the Devastator occurred on the Davion world of Conroe during the Fifth Sword of Light's attempted seizure in late 3025. A local resistance movement known as Red Thunder used a Devastator to ambush the Pursuit Lance of Sorenson's Sabres as it entered the town of Thessia, savaging the elite Combine BattleMech unit and forcing a hasty withdrawal. The engagement became a minor legend in militia and resistance circles, cited as proof that properly equipped ground forces could check even veteran 'Mech lance elements in urban terrain.</p><p>ComStar's control of the Aldis Terra facility brought Devastator production under the Blessed Order's direct management. The organization valued the vehicle as a garrison and deterrent asset, distributing it to client worlds and maintaining stocks within the Com Guards. The Word of Blake inherited this arrangement upon seizing Terra at the Jihad's outset, continuing production for Protectorate garrison forces. Following the Jihad, the Republic of the Sphere acquired the facility and maintained production through the Dark Age, fielding Devastators alongside the related Demolisher and Zhukov designs in planetary militia and fortress garrison roles.</p>
 </history>
 
 <manufacturer>
@@ -138,8 +136,29 @@ Terra
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:GoreTex 240
+ENGINE:Unknown
+ARMOR:Aldis Industries
+COMMUNICATIONS:Omicron
+TARGETING:Omicron
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Type 240 Fusion
 ARMOR:Durandal 160 Standard
 COMMUNICATIONS:Omicron 5000
 TARGETING:Omicron VII
-</systemManufacturers>
+</systemModels>
+
+<source>
+TR:3039
+</source>
+
+<published>
+RS:3039u
+</published>
+
+<tonnage>
+80.0
+</tonnage>
+

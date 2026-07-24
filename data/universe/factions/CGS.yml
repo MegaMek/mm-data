@@ -17,13 +17,28 @@
 
 key: CGS
 name: Clan Goliath Scorpion
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CGS
+  - EI
+  - SE
 nameChanges:
   3080: Escorpión Imperio
+  3141: Scorpion Empire
+# This file is the consolidation of the former Escorpion Imperio (CEI, from 3080) and Scorpion Empire
+# (SE, from 3141) faction files - a single entity renamed across eras. The retired faction codes are
+# kept as aliases so existing campaign saves, planetary ownership and RAT availability tables that
+# still reference CEI or SE resolve to CGS. See Faction2.getAliases().
+aliases:
+  3080: CEI
+  3141: SE
 capital: Roche
+capitalChanges:
+  3080: Granada
 yearsActive:
   - start: 2807
-    end: 3080
-successor: CEI
 tags:
   - PLAYABLE
   - MINOR
@@ -34,9 +49,29 @@ color:
   green: 125
   blue: 11
 logo: Clan/Clan Goliath Scorpion.png
+# Era-correct art: the faction shows the Escorpion Imperio emblem from 3080 (Imperio and Scorpion
+# Empire eras); the base Goliath Scorpion emblem applies before then. See Faction2.getLogo(int).
+logoChanges:
+  3080: Clan/Escorpion Imperio.png
 background: Clan/Clan Goliath Scorpion.png
+backgroundChanges:
+  3080: Clan/Escorpion Imperio.png
 camos: Clans/Goliath Scorpion
 nameGenerator: Clan
+# Carried over from the former CEI (Escorpion Imperio) file on consolidation: 0 for the early
+# Clan Goliath Scorpion eras, rising for the Escorpion Imperio / Scorpion Empire eras.
+eraMods:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  - 2
+  - 2
 ratingLevels:
   - Provisional Garrison
   - Solahma
@@ -100,3 +135,5 @@ factionLeaders:
     surname: "Scott"
     gender: "MALE"
     startYear: 3137
+usesMercenaries:
+  2500: false

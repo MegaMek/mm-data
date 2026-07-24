@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac19-7e6c-b6b3-d8f66039942c
+</UUID>
 
 <UnitType>
 Dropship
@@ -33,9 +28,9 @@ Dropship
 Gorgon Carrier
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 6522
@@ -45,10 +40,6 @@ Gorgon Carrier
 3096
 </year>
 
-<originalBuildYear>
-3096
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -57,16 +48,20 @@ IS Level 2
 None
 </role>
 
+<quirks>
+internal_bomb
+</quirks>
+
 <motion_type>
 Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:18.0:3:1
-2ndclassquarters:0.0:0
-1stclassquarters:30.0:0
-crewquarters:70.0:0
-cargobay:981.0:1:5
+asfbay:18.0:3:1::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+1stclassquarters:30.0:0:-1::-1:0
+crewquarters:70.0:0:-1::-1:0
+cargobay:981.0:1:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +88,13 @@ cargobay:981.0:1:5
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 231
@@ -161,9 +160,53 @@ ISAMS Ammo:72
 12
 </structural_integrity>
 
+<capabilities>
+<p>The Gorgon is a military DropShip optimized for aerospace fighter transport and deployment operations. Its internal layout is dominated by fighter bays and their associated maintenance, arming, and launch facilities, giving the vessel the ability to embark, maintain, and rapidly deploy a substantial fighter complement. Defensive armament is secondary to the carrier mission, with weapons systems positioned primarily to provide point defense against incoming missiles and fighters that penetrate the escort screen. Armor protection is adequate to survive glancing hits and fighter strafing runs but insufficient to sustain direct engagement with assault DropShips or Pocket WarShips. The drive system provides sufficient acceleration to maintain formation with fleet elements while allowing the Gorgon to position itself behind the combat line where its fighters can launch without exposing the carrier to direct fire. The vessel's combat contribution is measured primarily through its embarked fighters rather than its own weapons systems, making the Gorgon's effectiveness directly proportional to the quality and quantity of its aerospace complement. Support facilities aboard allow extended operations without returning to a base for fighter maintenance.</p>
+</capabilities>
+
+<overview>
+<p>The Gorgon is a carrier DropShip developed in the early thirty-second century to provide dedicated aerospace fighter transport and deployment capability. Designed to fill the gap left by the loss of WarShip-based carrier capacity during the Jihad, the Gorgon offers a practical solution for military forces that need to project aerospace power without the expense of maintaining true capital ships. The design prioritizes fighter bay capacity and rapid launch operations over direct combat capability, relying on its embarked fighter wings and escort vessels for protection. The Gorgon has found buyers among several Inner Sphere militaries seeking affordable carrier capability.</p>
+</overview>
+
+<deployment>
+<p>The standard Gorgon Carrier serves in its baseline aerospace fighter carrier configuration, providing fighter transport and deployment capability to naval task forces. These vessels typically operate in the second line of fleet formations, relying on escort vessels and their own fighter wings for protection while serving as mobile bases for sustained aerospace operations.</p>
+</deployment>
+
+<history>
+<p>The Gorgon emerged from the post-Jihad recognition that affordable carrier capability was essential for any military force seeking to project power across interstellar distances. The destruction of numerous WarShips during the Jihad had left most Inner Sphere navies without dedicated carrier assets, forcing them to rely on multi-role DropShips with limited fighter capacity to provide aerospace support for planetary operations.</p><p>The Gorgon was designed to address this gap with a purpose-built carrier that could be produced at conventional DropShip facilities rather than requiring the specialized infrastructure of a WarShip yard. By focusing exclusively on the carrier mission and accepting limitations in direct combat capability, the designers created a vessel that could be produced more quickly and cheaply than any previous dedicated carrier design.</p><p>Initial production deliveries went to forces that had suffered the most severe carrier losses during the Jihad, with the design quickly proving its worth in exercises and limited combat deployments. The Gorgon's ability to sustain fighter operations for extended periods without returning to base gave fleet commanders a capability they had lacked since the loss of their WarShip carriers. The class has since entered service with several Inner Sphere militaries, establishing itself as a practical and cost-effective solution to the post-Jihad carrier shortage.</p>
+</history>
+
+<manufacturer>
+Andurien AeroTech
+</manufacturer>
+
+<primaryFactory>
+Andurien
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-TR:3145:FWL
+TR:3145:FWL,TR:3145
 </source>
+
+<published>
+RS:3145
+</published>
 
 <tonnage>
 6800.0
@@ -208,8 +251,4 @@ TR:3145:FWL
 <escape_pod>
 3
 </escape_pod>
-
-<quirks>
-internal_bomb
-</quirks>
 

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: New Aragon
-sucsId: 1814
+sucsId: 1815
 xcood: 69.535
 ycood: -88.191
 spectralType:
@@ -158,6 +158,12 @@ planet:
         socioIndustrial: D-D-A-D-B
       - date: '2270-01-01'
         population: 123741670.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2280-01-01'
         population: 182347246.0
       - date: '2290-01-01'
@@ -176,6 +182,12 @@ planet:
         population: 983654823.0
       - date: '2360-01-01'
         population: 1132644113.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TGU
       - date: '2367-07-01'
         faction:
           source: canon
@@ -227,6 +239,15 @@ planet:
         population: 3203363886.0
       - date: '2570-01-01'
         population: 3211898060.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Chesterton Commonality
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2580-01-01'
         population: 3228879566.0
       - date: '2590-01-01'
@@ -346,16 +367,33 @@ planet:
         population:
           source: canon
           value: 2349000000.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Kathil Operational Area
+        #   - Valexa PDZ
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3030-01-01'
         population: 2240371926.0
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-06-28'
         population: 1967963128.0
         socioIndustrial:
           source: canon
           value: C-C-B-C-B
-      - date: '3040-01-19'
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3041-01-01'
@@ -382,6 +420,12 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3069-06-30'
         faction:
           source: canon
@@ -389,9 +433,25 @@ planet:
             - WOB
       - date: '3070-01-01'
         population: 1466841650.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - WOB
       - date: '3078-04-01'
         faction:
           source: canon
+          value:
+            - CC
+      - date: '3079-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 3
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CC
       - date: '3080-01-01'
@@ -399,6 +459,15 @@ planet:
       - date: '3085-09-07'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture V
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -423,9 +492,21 @@ planet:
         population: 1506985883.0
       - date: '3130-01-01'
         population: 1509398991.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ROS
       - date: '3135-10-01'
         faction:
           source: canon
+          value:
+            - IND
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - IND
       - date: '3140-01-01'
@@ -436,6 +517,15 @@ planet:
           value:
             - CC
         population: 1523958997.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Chesterton Commonality
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
   - name: Tartaros
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.12

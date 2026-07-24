@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,125 +15,123 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c5a3-7b35-91fb-bf7f0e2578cd
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:King Crab
 model:KGC-008
 mul id:1777
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3069
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3069
+source:TR:3050,TR:3050U
+published:RS:3050Uu-C
+rules level:2
 role:Sniper
-
-
 
 quirk:command_mech
 
+mass:100
+engine:300 Fusion Engine
+structure:IS Endo Steel
+myomer:Standard
+cockpit:Small Cockpit
+gyro:Heavy Duty Gyro
 
-Mass:100
-Engine:300 Fusion Engine
-Structure:Endo-Steel
-Gyro:Heavy Duty Gyro
-Cockpit:Small Cockpit
-Myomer:Standard
+heat sinks:17 IS Double
+walk mp:3
+jump mp:3
 
-Heat Sinks:17 Double
-Walk MP:3
-Jump MP:3
+armor:Standard(Inner Sphere)
+LA armor:34
+RA armor:34
+LT armor:32
+RT armor:32
+CT armor:46
+HD armor:9
+LL armor:42
+RL armor:42
+RTL armor:10
+RTR armor:10
+RTC armor:16
 
-Armor:Standard Armor
-LA Armor:34
-RA Armor:34
-LT Armor:32
-RT Armor:32
-CT Armor:46
-HD Armor:9
-LL Armor:42
-RL Armor:42
-RTL Armor:10
-RTR Armor:10
-RTC Armor:16
-
-Weapons:8
-1 ISHeavyPPC, Right Arm
-1 ISHeavyPPC, Left Arm
-1 ISImprovedC3CPU, Right Torso
-1 ISERMediumLaser, Head
-1 ISERMediumLaser, Head
-1 ISLAC2, Right Torso, Ammo:45
-1 ISLAC2, Left Torso
-1 ISGuardianECM, Right Torso
+Weapons:6
+Heavy PPC, Left Arm
+Heavy PPC, Right Arm
+Light AC/2, Left Torso
+Light AC/2, Right Torso
+ER Medium Laser, Head
+ER Medium Laser, Head
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+Heavy PPC
+Heavy PPC
+Heavy PPC
+Heavy PPC
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
-ISHeavyPPC
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+Heavy PPC
+Heavy PPC
+Heavy PPC
+Heavy PPC
 
 Left Torso:
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISLAC2
-ISLAC2 Ammo
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+Light Auto Cannon/2
+IS Ammo LAC/2
 ISCASE
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
-ISLAC2
-ISImprovedC3CPU
-ISImprovedC3CPU
-ISGuardianECM
-ISGuardianECM
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+Light Auto Cannon/2
+ISC3iUnit
+ISC3iUnit
+ISGuardianECMSuite
+ISGuardianECMSuite
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
 Gyro
 Gyro
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Jump Jet
-Endo-Steel
+IS Endo Steel
 
 Head:
 Life Support
@@ -142,6 +140,12 @@ Cockpit
 Sensors
 ISERMediumLaser
 ISERMediumLaser
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
@@ -149,7 +153,13 @@ Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
 Jump Jet
-Endo-Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
@@ -157,20 +167,33 @@ Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
 Jump Jet
-Endo-Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-overview:The King Crab has been a horror on the battlefield since its introduction just before the old Star League's demise, and it is well known for its ability to quickly kill most BattleMechs under eighty tons.
+overview:<p>The King Crab was designed in 2741 by Cosara Weaponries at the direct request of General Aleksandr Kerensky for an assault 'Mech capable of crippling or destroying another BattleMech in a single salvo. Filling the role of a devastating close-range combatant, the hundred-ton King Crab earned its fearsome reputation through the raw destructive power of its twin super-heavy autocannons, mounted in distinctive claw-like arm housings that gave the design its name. Though initially envisioned as a potential command vehicle, the King Crab proved less suited to that capacity than expected, a role ultimately filled by the Atlas.</p><p>Production was centered at Cosara facilities on Mars and Northwind under Star League authority, with the design seeing widespread service in the SLDF. The devastation of the Succession Wars reduced the King Crab to near-extinction, but ComStar's secret preservation of the Mars factory ensured the design's survival and eventual return to mass production in the thirty-first century.</p>
 
-capabilities:While not the most heavily armored 'Mech, the King Crab is still tough to crack, with sixteen tons of ferro-fibrous armor and CASE protecting its ammunition stores; however, the arms are probably the most susceptible area to receive damage and an internal hit is likely to knock an autocannon out of the fight. The 'Mech is also slow, with a cruising speed of 32 km/h and top speed of 54 km/h, and has been described as a "notorious hangar queen".
+capabilities:<p>The King Crab's tactical doctrine is straightforward: close with the enemy and deliver overwhelming firepower. Its primary armament of twin Deathgiver Autocannon/20s represents one of the most destructive weapon pairings ever mounted on a BattleMech, capable of stripping the armor from virtually any opponent in a few devastating salvos. The autocannons are housed within reinforced arm assemblies fitted with simple hand actuators that function as protective cowlings, giving the 'Mech its distinctive crab-like silhouette and the appearance of pincers opening and closing in combat. A Simpson-15 LRM launcher and Exostar large laser provide secondary fire support at longer ranges, ensuring the King Crab is not entirely helpless during its approach to engagement range.</p><p>Sixteen tons of Aldis X ferro-fibrous armor provide solid, evenly distributed protection across the chassis, with CASE safeguarding the ammunition stores from catastrophic detonation. The arms represent a notable vulnerability, however, as an internal hit to either limb can knock an autocannon out of the fight entirely. The King Crab's most significant limitation is its dependence on ammunition; each autocannon draws from a mere five-round magazine, giving pilots limited sustained firepower before running dry. Combined with a modest top speed of 54 kilometers per hour and a well-earned reputation as a maintenance-intensive design, the King Crab demands careful tactical employment and reliable logistics to realize its devastating potential.</p>
 
-deployment:Produced by Cosara Weaponries for the Word of Blake following their capture of the facility in 3069, the 008 uses the latest technologies available at the time. The autocannons have been upgraded to Heavy PPCs. The powerful weapons are backed up by paired Light Autocannon/2s, sharing one-ton of ammo in CASE-protected ammunition bin. Two ER medium lasers back up these guns. Like other Blakist units, a C3i Computer is included. A Guardian ECM Suite is also included. With seventeen double heat sinks and Jump Jets, this unit can jump and fire both of its main guns even with some heat to spare. Luckily this variant can be visually distinguished from others based on its more streamlined chassis, giving opponents some measure of warning.
+deployment:<p>Produced by Cosara Weaponries at the Word of Blake-controlled Northwind facility beginning in 3069, this variant serves as a radical departure from traditional King Crab design philosophy. The iconic autocannons were replaced entirely with twin heavy PPCs, eliminating ammunition dependency at the cost of significant heat generation. Light autocannon/2s and ER medium lasers provide supplementary firepower, while a C3i computer and Guardian ECM suite integrate the design into Blakist electronic warfare networks. Most especially, this variant is the first King Crab variant to mount jump jets, giving the traditionally earthbound assault 'Mech a measure of tactical mobility previously unimaginable. The variant's redesigned chassis gives it a noticeably more streamlined silhouette than earlier models, providing opposing MechWarriors a visual cue that they face a fundamentally different and dangerous opponent.</p>
 
-history:The KGC-000, designed by Cosara Weaponries scientists under General Kerensky's directives, performed brilliantly in its specified mission, though it was nowhere near the command vehicle that Defiance Industries' later Atlas was. The majority of King Crabs joined Kerensky on his Exodus, including all surviving -010 platforms; those that remained were surreptitiously purchased by ComStar and mothballed on Terra. Upon the Clans' arrival and the Battle of Tukayyid, most Com Guard commanders discovered that the original Imperator-D autocannon design could not close quickly enough with Clan machines to cause considerable damage. After being approached by ComStar, Cosara Weaponries created the -001 variant; the additional range gave the King Crab some much-needed reach. ComStar, pleased with their performance, gave Cosara permission to mass-produce the enhanced King Crab for general market sale, with ComStar receiving a major portion of the yearly earnings. Northwind production ended after the Word of Blake blockaded the system, and scattered intelligence reports indicate that the Blakists took control the Cosara plant. After being shut down for some months, the plant reopened in late 3069, continuously producing and sending a newer King Crab variant to Protectorate forces. First Precentor Dow took an extraordinary action for the once-secret organization after losing a major weapons supply. ComStar was able to infiltrate the Cosara plant and grab the new engineering designs by hiring a tiny mercenary group that specialized in corporate espionage. ComStar then approached Starcorps Industries and gave the young company the opportunity to create a new King Crab variation, the KGC-007. StarCorps accepted, eager to expand their product line, and the first -007s are scheduled to roll off the Son Hoa line in late 3071. The first three production runs have already been purchased by the LAAF and AFFC.
+history:<p>The King Crab's origins trace to 2741, when General Aleksandr Kerensky personally commissioned Cosara Weaponries to design an assault 'Mech of unmatched destructive power. The resulting design exceeded expectations, and production commenced at Cosara's facilities on Mars and Northwind. The King Crab served with distinction in the SLDF throughout the final decades of the Star League, though it never displaced the Atlas as the preferred command vehicle for senior officers. When the Amaris Civil War erupted in 2767, Republican forces destroyed the Mars factory, leaving only the Northwind facility operational.</p><p>The Exodus of 2784 dealt the King Crab a severe blow, as General Kerensky's departing forces took the vast majority of existing King Crabs with them, including the entire production run of the prototype KGC-010. The Northwind factory's destruction in 2786, an early casualty of the First Succession War, effectively ended new production in the Inner Sphere. The King Crab's relatively simple construction meant surviving examples were easier to maintain than many Star League-era designs, but attrition took its toll. By the close of the Third Succession War, only a handful remained in active service with the Great Houses, each one a prized and jealously guarded asset.</p><p>ComStar's seizure of Terra through Operation Silver Shield proved critical to the King Crab's survival. The order's technicians repaired and mothballed the damaged Mars factory, secretly stockpiling King Crabs for future use. By the early thirty-first century, ComStar contracted Cosara Weaponries to quietly resume production to replenish their aging reserves, equipping the Com Guards with refurbished and newly built King Crabs. The looming threat of the Clan Invasion spurred the development of the KGC-001 "Clanbuster" variant in 3052, which proved so successful at the Battle of Tukayyid that ComStar authorized general market sales from both the Mars and Northwind plants, with Cosara receiving a share of profits.</p><p>The Word of Blake's conquest of Terra and subsequent seizure of the Northwind factory in 3069 upended King Crab production once again. The Blakists retooled the Northwind line to produce their own variants, including the jump-capable KGC-008 for Protectorate forces. ComStar responded with an uncharacteristically bold move, dispatching a mercenary espionage team to infiltrate the Northwind facility and steal the new design specifications. These plans were then offered to StarCorps Industries, who eagerly began producing the KGC-007 at their Son Hoa plant for ComStar, the Lyran Alliance, and the Federated Suns alike.</p><p>The post-Jihad era saw continued evolution of the King Crab. StarCorps relocated their production line from Son Hoa to Loburg in the late 3090s, introducing the modernized KGC-009 in 3104 to meet the demands of the Lyran Commonwealth Armed Forces. The design proved popular with senior Lyran officers despite its continued ammunition dependency. Cosara Weaponries eventually returned the Mars facility to active production under Republic of the Sphere oversight, developing the KGC-011 with its revolutionary XXL engine for dramatically improved battlefield mobility. By the ilClan era, the King Crab remained a respected and feared assault platform, its production split between Cosara's historic Mars facility and StarCorps' Loburg plant, ensuring the design's continued presence on battlefields across the Inner Sphere.</p>
 
 manufacturer:Cosara Weaponries
-primaryfactory:Northwind 
-systemmanufacturer:CHASSIS:Hollis Mark IIe
-systemmanufacturer:ENGINE:Vlar 300
-systemmanufacturer:ARMOR:ProtecTech 12 with CASE
-systemmanufacturer:COMMUNICATIONS:Dalban Commline
-systemmanufacturer:TARGETING:Dalban HiRez-B
+
+primaryfactory:Northwind
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Unknown (redesigned chassis)
+systemmanufacturer:ENGINE:Vlar
+systemmode:ENGINE:300
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:JUMP_JET:Unknown
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

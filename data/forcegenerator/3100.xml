@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -1898,7 +1898,7 @@
                 <availability>General:8</availability>
             </model>
         </chassis>
-        <chassis name='Arondight Pocket Warship' unitType='Dropship'>
+        <chassis name='Arondight Pocket WarShip' unitType='Dropship'>
             <availability>LA:4,ROS:4,MERC:3+,FS:5</availability>
             <model name=''>
                 <roles>pocket_warship</roles>
@@ -1910,7 +1910,7 @@
             </model>
             <model name='(SCC)'>
                 <roles>pocket_warship</roles>
-                <availability>IS:5</availability>
+                <availability>LA:5,ROS:5,MERC:5,FS:5</availability>
             </model>
         </chassis>
         <chassis name='Arrow IV Assault Vehicle' unitType='Tank'>
@@ -1932,6 +1932,61 @@
             <model name='ASN-99'>
                 <roles>spotter</roles>
                 <availability>CC:2,MOC:2</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Air Defense Missile Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:3</availability>
+            <model name='(3075) (Fusion)'>
+                <roles>anti_aircraft,mixed_artillery</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Bombard Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:1!D:1!F:1</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:3</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:1!D:1!F:1</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(3057) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Siege Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:1!B:1!C:1</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Assault Triumph' unitType='Dropship'>
@@ -10547,6 +10602,27 @@
                 <availability>CLAN.IS:8,IS:8,Periphery:8,CEI:8</availability>
             </model>
         </chassis>
+        <chassis name='Heavy Blaze Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:4!B:4!C:3!D:3</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Bombard Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:5!B:5!C:4!D:4!F:4</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:4!B:4!C:5!D:5!F:5</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Heavy Forester' unitType='Mek'>
             <availability>CLAN.IS:2,IS:2,TC:2,MOC:2</availability>
             <model name='HFL-1 LoggerMech'>
@@ -10584,6 +10660,12 @@
                 <availability>IS:8,RA.OA:8,Periphery:8,HL:8</availability>
             </model>
         </chassis>
+        <chassis name='Heavy Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Heavy Lifter' unitType='Mek'>
             <availability>FS:5,ROS:4,PIR:3+</availability>
             <model name='HCL-1 CargoMech'>
@@ -10601,11 +10683,39 @@
                 <availability>MOC:8,CC:8,DA:8,FR:8</availability>
             </model>
         </chassis>
+        <chassis name='Heavy Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:5!B:5!C:4!D:4!F:4</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Heavy NLRM Carrier' unitType='Tank'>
             <availability>FS:6,FVC:5+,MH:3+</availability>
             <model name=''>
                 <roles>fire_support</roles>
                 <availability>FS:8,FVC:8,MH:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(3057) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Siege Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:2</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Heavy Strike Fighter' unitType='Conventional Fighter'>
@@ -13327,9 +13437,50 @@
                 <availability>General:1-</availability>
             </model>
         </chassis>
+        <chassis name='Light Bombard Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:8!B:9!C:8!D:8!F:8</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:8!B:8!C:9!D:10!F:10</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(2300) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:8!B:9!C:8!D:8!F:8</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Light SRM Carrier' unitType='Tank'>
             <availability>MOC:7,CC:4,RA.OA:5,FVC:4,Periphery.CM:7,Periphery.MW:5,Periphery.HR:7,Periphery.ME:7,MH:6,Periphery.OS:5,TC:8,Periphery:4</availability>
             <model name=''>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(3057) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(3075) (Fusion)'>
+                <roles>fire_support</roles>
                 <availability>General:8</availability>
             </model>
         </chassis>
@@ -15575,6 +15726,75 @@
             <model name='(SRM)'>
                 <roles>ground_support,interceptor</roles>
                 <availability>MERC:4,DC:2-,Periphery:4</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Air Defense Missile Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:5!B:5!C:6!D:6!F:6</availability>
+            <model name='(3075) (Fusion)'>
+                <roles>anti_aircraft,mixed_artillery</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Blaze Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:8!B:8!C:7!D:7</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Bombard Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:7!C:6!D:6!F:6</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Command Tower' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:5!D:5</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>command</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:7!D:7!F:7</availability>
+            <model name='(3050) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:7!C:6!D:6!F:6</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(3057) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Siege Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(3075) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Medium Strike Fighter' unitType='Conventional Fighter'>
@@ -18951,7 +19171,7 @@
             </model>
         </chassis>
         <chassis name='Rifleman' unitType='Mek'>
-            <availability>CLAN.IS:4,ROS:6,IS:4,FWL:7,FS:8,CJF:6,Periphery:3</availability>
+            <availability>CLAN.IS:4-,ROS:6,IS:4,FWL:7,FS:8,CJF:6-,Periphery:3</availability>
             <model name='C 2'>
                 <roles>anti_aircraft,raider</roles>
                 <availability>CJF:4</availability>

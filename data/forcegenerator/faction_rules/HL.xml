@@ -218,7 +218,7 @@ would have none so I've attached a wing to each RDF. -->
         <ruleGroup>
             <formation ifRole="command" ifUnitType="Tank">
                 <option weight="40">Vehicle Command</option>
-                <option weight="6">Battle</option>
+                <option weight="6" ifWeightClass="H|A">Battle</option>
                 <option weight="1" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Fast Assault</option>
                 <option weight="1" ifWeightClass="H|A">Hunter</option>
@@ -227,13 +227,13 @@ would have none so I've attached a wing to each RDF. -->
             <formation ifIndex="0|1" ifRole="!command" ifUnitType="Tank">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="16">Battle</option>
+                <option weight="16" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="3" ifWeightClass="M">Medium Battle</option>
-                <option weight="3" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="2" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -248,10 +248,10 @@ would have none so I've attached a wing to each RDF. -->
                 <option weight="35" role="+recon">Recon</option>
                 <option weight="4" ifWeightClass="H|A" role="+recon">Heavy Recon</option>
                 <option weight="12" ifWeightClass="L" role="+recon">Light Recon</option>
-                <option weight="20">Battle</option>
+                <option weight="20" ifWeightClass="H|A">Battle</option>
                 <option weight="5" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="5" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="4" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="L">Light Striker/Cavalry</option>

@@ -17,11 +17,17 @@
 
 key: NC
 name: Nueva Castile
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes:
+  - NC
 capital: Asturias
 yearsActive:
   - start: 2392
     end: 3080
-successor: CEI
+successor: CGS # was CEI; the Escorpion Imperio was consolidated into the CGS faction file
 tags:
   - PLAYABLE
   - DEEP_PERIPHERY

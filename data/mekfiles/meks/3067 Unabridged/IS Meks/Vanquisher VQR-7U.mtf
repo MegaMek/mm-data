@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,139 +15,142 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-ce11-7313-b905-f95c68967f34
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Vanquisher
 model:VQR-7U
 mul id:5721
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3071
-Rules Level:3
+techbase:Inner Sphere
+era:3071
+source:TR:J
+published:RS:3067u
+rules level:3
 role:Juggernaut
-source:RS:3067u
 
-
-
-quirk:stable
-quirk:bad_rep_clan
 quirk:bad_rep_is
+quirk:stable
 quirk:no_arms
+quirk:bad_rep_clan
 
+mass:100
+engine:300 Compact Engine
+structure:IS Endo Steel
+myomer:Triple-Strength
+cockpit:Small Cockpit
+gyro:Compact Gyro
 
-Mass:100
-Engine:300 Compact Fusion Engine
-Structure:Endo-Steel
-Gyro:Compact Gyro
-Cockpit:Small Cockpit
-Myomer:Triple Strength Myomer
+heat sinks:16 IS Double
+walk mp:3
+jump mp:0
 
-Heat Sinks:16 Double
-Walk MP:3
-Jump MP:0
+armor:Standard(Inner Sphere)
+LA armor:34
+RA armor:34
+LT armor:32
+RT armor:32
+CT armor:45
+HD armor:9
+LL armor:42
+RL armor:42
+RTL armor:10
+RTR armor:10
+RTC armor:14
 
-Armor:Standard Armor
-LA Armor:34
-RA Armor:34
-LT Armor:32
-RT Armor:32
-CT Armor:45
-HD Armor:9
-LL Armor:42
-RL Armor:42
-RTL Armor:10
-RTR Armor:10
-RTC Armor:14
-
-Weapons:11
-1 ISHeavyFlamer, Head, Ammo:10
-1 ISBeagleActiveProbe, Center Torso
-1 ISRemoteSensorDispenser, Left Torso
-1 ISImprovedC3CPU, Center Torso
-1 ISERFlamer, Right Arm
-1 ISERFlamer, Left Arm
-1 ISPlasmaRifle, Right Arm, Ammo:40
-1 ISPlasmaRifle, Left Arm
-1 ISSmallVSPLaser, Left Torso
-1 ISSmallVSPLaser, Left Torso
-1 ISSNPPC, Right Torso
+Weapons:8
+Plasma Rifle, Left Arm
+ER Flamer, Left Arm
+Plasma Rifle, Right Arm
+ER Flamer, Right Arm
+Small VSP Laser, Left Torso
+Small VSP Laser, Left Torso
+Snub-Nose PPC, Right Torso
+Heavy Flamer, Head
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 ISPlasmaRifle
 ISPlasmaRifle
-ISERFlamer
-ISPlasmaRifle Ammo
+ER Flamer
+ISPlasmaRifleAmmo
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 ISPlasmaRifle
 ISPlasmaRifle
-ISERFlamer
-ISPlasmaRifle Ammo
+ER Flamer
+ISPlasmaRifleAmmo
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
 
 Left Torso:
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISSmallVSPLaser
 ISSmallVSPLaser
-ISPlasmaRifle Ammo
+ISPlasmaRifleAmmo
 RemoteSensorDispenser
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 Triple Strength Myomer
 Triple Strength Myomer
 
 Right Torso:
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISSNPPC
 ISSNPPC
-ISPlasmaRifle Ammo
-Endo-Steel
+ISPlasmaRifleAmmo
+IS Endo Steel
 Triple Strength Myomer
 Triple Strength Myomer
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISBeagleActiveProbe
-ISBeagleActiveProbe
-ISImprovedC3CPU
-ISImprovedC3CPU
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
+BeagleActiveProbe
+BeagleActiveProbe
+ISC3iUnit
+ISC3iUnit
 
 Head:
 Life Support
 Sensors
 Cockpit
 Sensors
-ISHeavyFlamer
-ISHeavyFlamer Ammo
+Heavy Flamer
+IS Heavy Flamer Ammo
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
@@ -155,7 +158,13 @@ Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
 Triple Strength Myomer
-Endo-Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
@@ -163,20 +172,34 @@ Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
 Triple Strength Myomer
-Endo-Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-overview:Based on the King Crab, and built in the same factory that first produced the Mackie, the Vanquisher has a legendary pedigree.
+overview:<p>The Vanquisher was introduced in 3063 as a Word of Blake assault 'Mech designed to showcase the faction's newly developed improved C3 computer technology. Commissioned by Precentor Martial St. Jamais, the design was intended to serve as the anchor of Word of Blake Militia C3i networks, providing devastating long-range firepower while networked with faster spotting units. Skobel MechWorks on Terra, a company with a storied history dating back to the production of the original Mackie, was selected to manufacture the design.</p><p>Based loosely on the venerable King Crab, the Vanquisher nonetheless bears only superficial resemblance to its predecessor, sharing primarily its leg structure and hunched torso profile. The design entered limited production for the Word of Blake Militia, where it quickly became a valued component of the faction's networked combat formations.</p>
 
-capabilities:In order to allow it to carry as heavy a payload as possible without sacrificing durability, the 'Mech is built on a Hollis Alteration Mark VI Endo Steel that carries a Vlar 300 fusion engine, which propels the 'Mech to a top speed of 54 km/h. The Vanquisher is protected by nineteen and a half tons of armor with CASE in both side torsos to protect the 'Mech from going down in an ammunition explosion.
+capabilities:<p>The Vanquisher is built around the concept of networked long-range fire support. Its Skobel Wave VI communications system integrates an improved C³ computer, allowing the 'Mech to share targeting data with up to five other networked units. This capability enables the slow-moving assault 'Mech to deliver precise strikes at extended ranges using targeting information relayed from faster companions.</p><p>The primary armament consists of two Corean light Gauss rifles and two Diverse Optics Sunbeam extended-range large lasers, giving the Vanquisher exceptional reach across the battlefield. Three Diverse Optics extended-range medium lasers provide secondary firepower capable of discouraging lighter 'Mechs that close to shorter ranges.</p><p>Defensively, the Vanquisher prioritizes durability over mobility. Its Vlar 300 standard fusion engine, while limiting top speed to just 54 kilometers per hour, avoids the catastrophic vulnerability of extralight designs. Nearly twenty tons of Aldis Plate armor provide excellent protection for a 'Mech of any weight class, and CASE in both side torsos safeguards against ammunition explosions from the light Gauss rifle bins. The Hollis Alteration Mark VI endo steel chassis saves critical weight, allowing the design to carry its impressive weapons payload without sacrificing protection. These design choices make the Vanquisher remarkably survivable, though its lack of speed leaves it dependent on proper positioning and C³i network support.</p>
 
-deployment:This Vanquisher variant uses a Compact Engine and Compact Gyro to improve survivability. The MechWarrior piloting it is forced into a Small Cockpit, which allows the head to carry a Heavy Flamer and fuel. Each arm carries a Plasma Rifle and ER Flamer, which are backed up by a Snub Nose PPC and two Small VSP Lasers. A Beagle Active Probe allows the 7U to find hidden enemy units, and a Remote Sensor Dispenser is also fitted. This variant also carries sixteen double heat sinks to dissipate the heat generated by the weapons, but it is also equipped with Triple Strength Myomer to turn a liability (excess heat) into a strength.
+deployment:<p>A radical departure from traditional Vanquisher doctrine, this variant abandons long-range combat entirely in favor of close-quarters devastation. Each arm mounts a plasma rifle paired with an extended-range flamer, supported by a snub-nose PPC and two small variable speed pulse lasers. A heavy flamer in the head adds further incendiary capability. The design incorporates Triple Strength Myomer, which converts the substantial heat generated by its weapons into enhanced physical striking power. A Beagle Active Probe and remote sensor dispenser provide battlefield awareness, while a compact engine, compact gyro, and small cockpit make room for the extensive weapons suite.</p>
 
-history:The Vanquisher has its genesis in the development of reverse engineered Improved C3 Computers. Once the Word of Blake had perfected their version of C3i, Cameron St. Jamais contacted Skobel MechWorks and contracted them to produce a 'Mech that would showcase the features of the new system. The Vanquisher was the result of that request.
+history:<p>The Vanquisher emerged from the Word of Blake's ambitious program to integrate improved C³ technology into their military forces. When Word of Blake ROM agents secured the plans for ComStar's improved C³ computer during the late 3050s, Precentor Martial St. Jamais made deploying the technology a top priority. While several existing Star League-era designs were retrofitted with the new system, St. Jamais also commissioned an entirely new design built around the C³i's capabilities. Skobel MechWorks, selected for its deep institutional knowledge and its historic Russia facility on Terra, reopened production lines that had manufactured the Mackie centuries earlier.</p><p>The Vanquisher and various C³i-equipped 'Mechs were distributed across every division of the Word of Blake Militia following the design's introduction in 3063, where they proved popular with MechWarriors who appreciated the combination of heavy firepower and robust survivability. The design saw notable action during the FedCom Civil War era, with one of the most dramatic engagements occurring on Epsilon Eridani in late 3066. During that battle, raiders attacked the defending Quality of Mercy III, and a Demi-Precentor commanding a Level II built around two Vanquishers and four Hussars successfully held off an entire company. The attackers, identifying themselves as the Devil's Brigade, were denounced by the Duke of Eridani as agents of the Terracap Confederation, though the defending commander believed them to be a masquerading Com Guards Eleventh Division unit seeking revenge for their removal from Caph.</p><p>During the Jihad, production continued at Skobel MechWorks under Word of Blake control, with several new variants entering service to meet the evolving demands of the conflict. The later Jihad-era variants moved away from the original C³i-centered design philosophy, incorporating diverse weapon configurations and experimental technologies such as Triple Strength Myomer, compact engines, and plasma weapons. These variants reflected the Word of Blake's increasing willingness to field unconventional designs as the war intensified.</p><p>Following the liberation of Terra and the fall of the Word of Blake, the Skobel MechWorks facility came under Republic of the Sphere control. Production of the Vanquisher appears to have ceased in the post-Jihad period, though surviving examples continue to serve in various formations across the Inner Sphere, their robust construction ensuring long operational lifespans despite the design's association with the reviled Word of Blake.</p>
 
-manufacturer:Skobel MechWorks
-primaryfactory:Russia, Terra
-systemmanufacturer:CHASSIS:Hollis Alteration Mark VI
-systemmanufacturer:ENGINE:Vlar 300
-systemmanufacturer:ARMOR:Aldis Plate with CASE
-systemmanufacturer:COMMUNICATIONS:Skobel Wave VI Comm with C3i Computer
-systemmanufacturer:TARGETING:Falcon 12b Watcher
+manufacturer:Skobel Mechworks
+
+primaryfactory:Terra
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Hollis
+systemmode:CHASSIS:Alteration Mark VI
+systemmanufacturer:ENGINE:Unknown
+systemmanufacturer:ARMOR:Aldis
+systemmode:ARMOR:Plate with CASE
+systemmanufacturer:COMMUNICATIONS:Skobel
+systemmode:COMMUNICATIONS:Wave VI Comm
+systemmanufacturer:TARGETING:Falcon
+systemmode:TARGETING:12b Watcher

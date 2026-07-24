@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfa0-70d5-a8a7-79ddcd443c64
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,16 @@ Clan Level 2
 Leg
 </motion_type>
 
+<Troopers Equipment>
+Clan Armor Kit (All)
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Clan foot squads are squad-strength formations of Clan conventional infantry operating outside the standard five-warrior Point structure. These smaller elements serve specialized security roles, observation posts, and detachment duties where a full Point is unnecessary or unavailable. Drawn from the same garrison pool as standard foot Points, squad-sized Clan infantry fills the gaps in territorial defense that larger formations cannot economically cover.</p>
+</overview>
 
 <source>
 TW
@@ -69,18 +72,10 @@ TW
 </secondn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
 <Secondary>
-SRM Launcher (Hvy, One-Shot)
+InfantryHeavySRM
 </Secondary>
-
-<antimek>
-8
-</antimek>
-
-<armorKit>
-ClanKit
-</armorKit>
 

@@ -17,6 +17,11 @@
 
 key: FOR
 name: Fiefdom of Randis
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes: []  # no SUCS equivalent
 capital: Randis IV (Hope IV 2988-)
 yearsActive:
   - start: 2988

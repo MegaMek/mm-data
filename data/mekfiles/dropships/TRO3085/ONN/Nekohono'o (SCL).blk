@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac0e-796d-8a03-dc3ff46d4436
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Nekohono'o
 3080
 </year>
 
-<originalBuildYear>
-3080
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -62,13 +53,13 @@ Spheroid
 </motion_type>
 
 <transporters>
-asfbay:6.0:2:1
-smallcraftbay:9.0:2:2
-battlearmorbay:27.0:2:3
-cargobay:1583.0:2:4
-2ndclassquarters:0.0:0
-crewquarters:287.0:0
-1stclassquarters:90.0:0
+asfbay:6.0:2:1::-1:0
+smallcraftbay:9.0:2:2::-1:0
+battlearmorbay:27.0:2:3::-1:0
+cargobay:1583.0:2:4::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+crewquarters:287.0:0:-1::-1:0
+1stclassquarters:90.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ crewquarters:287.0:0
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 310
@@ -107,11 +102,11 @@ crewquarters:287.0:0
 </armor>
 
 <Nose Equipment>
-(B) Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
+(B) Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
 (B) MRM 40
 MRM 40
 MRM 40
@@ -126,11 +121,11 @@ ISAMS Ammo:72
 </Nose Equipment>
 
 <Left Side Equipment>
-(B) Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
+(B) Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
 (B) MRM 40
 MRM 40
 IS MRM 40 Ammo:36
@@ -141,8 +136,8 @@ ISERPPC
 ISERPPC
 ISERPPC
 ISERPPC
-(R) (B) Sub-Capital Laser (SCL/2)
-(R) Sub-Capital Laser (SCL/2)
+(R) (B) Sub-Capital Laser /2
+(R) Sub-Capital Laser /2
 (R) (B) Heavy PPC
 (R) Heavy PPC
 (R) Heavy PPC
@@ -162,11 +157,11 @@ ISApollo
 </Left Side Equipment>
 
 <Right Side Equipment>
-(B) Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
-Sub-Capital Laser (SCL/1)
+(B) Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
+Sub-Capital Laser /1
 (B) MRM 40
 MRM 40
 IS MRM 40 Ammo:36
@@ -177,8 +172,8 @@ ISERPPC
 ISERPPC
 ISERPPC
 ISERPPC
-(R) (B) Sub-Capital Laser (SCL/2)
-(R) Sub-Capital Laser (SCL/2)
+(R) (B) Sub-Capital Laser /2
+(R) Sub-Capital Laser /2
 (R) (B) Heavy PPC
 (R) Heavy PPC
 (R) Heavy PPC
@@ -198,8 +193,8 @@ ISApollo
 </Right Side Equipment>
 
 <Aft Equipment>
-(B) Sub-Capital Laser (SCL/2)
-Sub-Capital Laser (SCL/2)
+(B) Sub-Capital Laser /2
+Sub-Capital Laser /2
 (B) ISLargePulseLaser
 ISLargePulseLaser
 ISLargePulseLaser
@@ -224,9 +219,53 @@ ISNC3
 16
 </structural_integrity>
 
+<capabilities>
+<p>The SCL variant replaces the standard configuration's capital missile launchers with an extensive battery of sub-capital lasers. The nose mounts five SCL/1 weapons alongside three Apollo-equipped MRM-40 launchers and three anti-missile systems. Each broadside carries five SCL/1s, two SCL/2s, three Heavy PPCs, five ER PPCs, and multiple MRM-40 racks with Apollo fire control, backed by screen launchers and anti-missile systems. The aft arc mounts two SCL/2s, seven large pulse lasers, and three Apollo-equipped MRM-40s.</p><p>A Naval C3 system coordinates the vessel's fire with other equipped ships. The SCL retains six aerospace fighter bays, nine small craft bays, and twenty-seven Battle Armor transport points with over 1,580 tons of cargo capacity. With 425 double heat sinks, the vessel can sustain its energy weapons for extended engagements. The crew of 299 operates the vessel's extensive weapons batteries and flight operations. Armor protection of 958 points and a safe thrust of five maintain the class's characteristic survivability and maneuverability.</p>
+</capabilities>
+
+<overview>
+<p>The Nekohono'o, literally meaning 'Flaming Cat,' is the largest purpose-built assault DropShip ever produced. At 16,000 tons, this massive Spheroid was designed by the Draconis Combine Admiralty to counter the threat posed by enemy WarShip fleets through sheer volume of firepower delivered from a comparatively inexpensive DropShip platform.</p><p>Built on a proven heavy transport chassis, the Nekohono'o carries capital-grade weaponry, extensive battle armor boarding capacity, and organic aerospace fighter support. The design reflects a pragmatic approach to naval warfare, leveraging available DropShip manufacturing capacity to produce vessels that could threaten capital ships without the enormous cost and construction time of dedicated WarShips.</p>
+</overview>
+
+<deployment>
+<p>The SCL variant was developed during the Jihad as an alternative to the capital missile-armed standard configuration. By substituting sub-capital lasers for the Kraken-T launchers, the SCL trades the one-shot nature of missile weapons for sustained-fire capability. These vessels served alongside other Nekohono'o variants in Draconis Combine naval task forces, providing concentrated energy weapons fire against WarShip-class targets.</p>
+</deployment>
+
+<history>
+<p>The Nekohono'o originated from a sobering Draconis Combine Admiralty report delivered shortly after the cessation of hostilities with Clan Ghost Bear. The report stated that a concerted Ghost Bear attack utilizing their full WarShip fleet would be virtually unstoppable. Though such an attack would violate established Clan doctrine, the Ghost Bears' increasing integration into the Inner Sphere made the possibility too dangerous to ignore. With existing WarShip production already straining Combine resources to the breaking point, the Coordinator ordered the Admiralty to find an alternative solution.</p><p>Engineers began with the chassis of the proven Rose-class DropShip to accelerate development. The resulting vessel incorporated naval-grade missile launchers, extensive battle armor boarding facilities, and small craft launch bays. BBP Industries at New Samarkand produced the class, with six vessels in service by the end of 3067. As a gesture of integration, the vessel was named for Clan Nova Cat, and several prototypes were sent to the Nova Cats' Alpha Galaxy for testing and feedback. The Eridani Light Horse also operated a pair of Nekohono'os, taking delivery after their return from peacekeeping operations.</p><p>The Jihad era saw the development of specialized variants including a ground fire support configuration with cruise missile launchers and a sub-capital laser variant. Both incorporated Naval C3 systems for enhanced fleet coordination. The class continued to serve Combine naval forces through the Dark Age period.</p>
+</history>
+
+<manufacturer>
+Tomori Trans Industrial
+</manufacturer>
+
+<primaryFactory>
+Chatham
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-ONN
+</published>
 
 <tonnage>
 16000.0
@@ -271,3 +310,4 @@ TR:3085
 <escape_pod>
 6
 </escape_pod>
+

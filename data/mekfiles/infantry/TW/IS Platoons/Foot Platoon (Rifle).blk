@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c003-7c02-b5ed-d81e96df79d5
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,11 +52,19 @@ Ambusher
 Leg
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Foot infantry platoons are the most basic and numerous conventional military formation across the Inner Sphere and Periphery. Deployed on foot without dedicated transport, these platoons are slow to reposition but cheap to raise, easy to supply, and capable of holding ground that faster units cannot afford to garrison permanently. Every major military fields foot platoons in enormous numbers for planetary defense, installation security, and rear-area policing. Their lack of mobility makes them poorly suited for offensive operations against armored forces, but in prepared defensive positions, urban terrain, or dense forests, dismounted infantry remain difficult to dislodge without committing disproportionate resources.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -73,13 +76,6 @@ TW
 </squadn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-GenericKit
-</armorKit>

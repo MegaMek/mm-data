@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Niops (Niops V, VI, VII)
-sucsId: 1875
+sucsId: 1876
 xcood: -374.013
 ycood: -263.173
 spectralType:
@@ -188,11 +188,17 @@ planet:
         capital: Old Seiberling City
       - name: Miller
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2638-12-16'
         faction:
           source: canon
           value:
-            - NIOPS
+            - SL
         population: 49743.0
         socioIndustrial: C-D-C-D-F
       - date: '2640-01-01'
@@ -224,6 +230,12 @@ planet:
         population: 176108182.0
       - date: '2750-01-01'
         population: 179163027.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2760-01-01'
         population: 180292473.0
       - date: '2770-01-01'
@@ -312,11 +324,6 @@ planet:
         population: 137112394.0
       - date: '3145-01-01'
         population: 137469350.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - IND
   - name: Niops VIII
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.92

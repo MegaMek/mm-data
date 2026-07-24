@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,27 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac79-78e1-86b8-2267cade0241
+</UUID>
 
 <UnitType>
-Aero
+AeroSpaceFighter
 </UnitType>
 
 <Name>
 Chippewa IIC
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 590
@@ -44,10 +39,6 @@ Chippewa IIC
 <year>
 2860
 </year>
-
-<originalBuildYear>
-2860
-</originalBuildYear>
 
 <type>
 Clan Level 2
@@ -60,9 +51,6 @@ Fire Support
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 5
@@ -96,9 +84,13 @@ false
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 2
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 92
@@ -142,24 +134,23 @@ Clan Ammo LRM-15 (Clan) Artemis-capable
 Clan Ammo LRM-15 (Clan) Artemis-capable
 Clan Ammo LRM-15 (Clan) Artemis-capable
 Clan Streak SRM 4 Ammo
+CLCASE
 </Fuselage Equipment>
 
-
-
-<tonnage>
-90.0
-</tonnage>
+<capabilities>
+<p>The Chippewa IIC carries an offensive payload of nearly fifty-five tons, built around four wing-mounted Series 6b extended-range large lasers that provide the fighter with devastating standoff firepower. An advanced targeting computer enhances accuracy across all weapon systems, making the IIC exceptionally lethal in precision engagements. Twin nose-mounted Series 2b extended-range medium lasers and a pair of Type XV "Crossbow" LRM-15 launchers with Artemis IV fire control supplement the primary armament, while a Pattern JX Streak SRM-4 provides efficient close-range supplementary fire. Two Series 1 extended-range small lasers cover the aft arc.</p><p>The Bowie 50 CM Mod A airframe is powered by a Consolidated Fusion 270 engine, maintaining the same thrust profile as its Inner Sphere ancestor. Twenty-five double heat sinks manage the thermal output effectively, allowing the pilot to fire the full laser battery without excessive heat buildup. Thirteen and a half tons of Compound XAS ferro-aluminum armor provides substantially better protection than the original Chippewa, while CASE protects against catastrophic ammunition explosions from the missile stores. Rander 200 communications and Rander TAS targeting systems carry forward from the original design.</p>
+</capabilities>
 
 <overview>
-Designed by the Star League, the heavy Chippewa isn't extremely fast, but it has an impressive array of armament.
+<p>The Chippewa IIC is a ninety-ton Clan heavy aerospace fighter developed by Clan Mongoose around 2860, during the Golden Century. Produced at Industriplex MC2 on Circe, it was designed as an aerospace superiority fighter to give the lighter Mongoose touman hard-hitting firepower against orbital, air, and ground targets. Based on the proven Inner Sphere Chippewa airframe, the IIC variant incorporated Clan-grade weapons and electronics to create one of the most capable heavy fighters in the Homeworlds during its operational period.</p><p>The design's fate was inextricably tied to that of its Clan. Despite proving its worth in combat, the Chippewa IIC could not survive the political annihilation of Clan Mongoose, and its legacy remains one of battlefield excellence overshadowed by extinction.</p>
 </overview>
 
 <deployment>
-The personal Chippewa of Michael Gladstone, a deserter from the Lyran Regulars, the Chippewa Gladstone can be found near the Rim Collection acting as an escort for various merchant DropShips and JumpShips. Modified to carry a pair of Extended LRM-15 launchers in the nose, Gladstone can engage enemy forces from much further out than they expect. The standard armor has been removed and replaced with Laser Reflective Armor, which means energy weapons are far less effective against the Chippewa. If an enemy does manage to close with Gladstone they'll receive a rude shock: Ten ER Medium Lasers and enough Double Heat Sinks to use them. In the technology-starved Periphery, the Chippewa Gladstone is one of the most effective and fearsome Aerospace Fighters in service.
+<p>The base Chippewa IIC configuration represents the standard production model fielded by Clan Mongoose throughout the Golden Century. Its combination of a targeting computer with four extended-range large lasers makes it one of the most accurate heavy fighters of its era, capable of delivering concentrated damage at ranges that most opponents cannot effectively return fire. The Artemis-enhanced LRM launchers provide additional long-range punch during approach runs.</p>
 </deployment>
 
 <history>
-Mostly used in the Lyran Commonwealth, the Chippewa has become House Steiner's main heavy fighter. Prior to the start of the First Succession War Steiner captured the Bowie Industries plant on Dell, where W5 models were produced until House Kurita successfully destroyed the plant in a raid. Another major production site was the Bowie Industries in the planet Wyatt, until 3068, when the Word of Blake nuked it during the Jihad. A heavy fighter, the Chippewa utilizes its large wings to provide added maneuverability when fighting in an atmosphere. The outer portions of each wing can retract inward, allowing for the fighter to be stored aboard transports more easily.
+<p>Clan Mongoose developed the Chippewa IIC during the Golden Century as part of their effort to build a competitive touman despite their Clan's relatively modest resources. The fighter entered production around 2860 at Industriplex MC2 on Circe, quickly becoming one of the most capable heavy fighters in the Clan Homeworlds. Where most Mongoose assets were light or medium weight, the Chippewa IIC gave their aerospace forces a genuine heavy-hitter capable of standing up to the larger fighters fielded by rival Clans.</p><p>The Chippewa IIC's finest hour came during the Trial of Absorption that would ultimately destroy Clan Mongoose. When the Smoke Jaguars isolated Clan Mongoose on Circe, the two Clans' fleets clashed in a brutal orbital engagement. The flagships of the opposing fleets, the Mongoose's Du Shi Wang-class battleship Quicksilver Mongoose and the Jaguar McKenna-class battleship Obsidian, became the centerpiece of the battle. Despite facing an equal number of enemy fighters that were predominantly light and medium designs, three dozen Chippewa IICs savaged the Jaguar fighter screen with their accurate, concentrated laser fire. The Jaguars' lighter craft were quickly chewed up, allowing the Chippewa IICs to focus their weapons on the Obsidian itself, tearing holes in the WarShip's aft armor and crippling its thrust capacity.</p><p>The victory over the Obsidian proved to be the beginning of the end. The Jaguars landed their touman on Circe and, after fierce fighting, Absorbed the remaining Mongooses. Disgusted by the Mongooses, the victorious Smoke Jaguars were content to let every aspect of the former Clan fade into obscurity, including the venerable Chippewa IIC. No effort was made to continue production or even maintain existing airframes. By 3049, the design was completely extinct from the Clan Homeworlds, despite persistent rumors of a handful of craft surviving in the hands of Dark Caste bandits.</p>
 </history>
 
 <manufacturer>
@@ -171,19 +162,32 @@ Circe
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Bowie 50
-ENGINE:PlasmaStar 270
-ARMOR:Wyatt Coresteel Standard
-COMMUNICATIONS:Rander 200
-TARGETING:Rander TAS
+CHASSIS:Bowie
+ENGINE:Consolidated
+ARMOR:Compound XAS
+JUMP_JET:N/A
+COMMUNICATIONS:Rander
+TARGETING:Rander
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:50 CM Mod A
+ENGINE:Fusion 270
+ARMOR:Ferro-Aluminum
+JUMP_JET:N/A
+COMMUNICATIONS:200
+TARGETING:TAS
+</systemModels>
 
 <source>
 TR:GC
 </source>
 
+<published>
+TR:GC
+</published>
+
 <tonnage>
 90.0
 </tonnage>
-
 

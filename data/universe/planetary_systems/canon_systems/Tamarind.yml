@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tamarind
-sucsId: 2475
+sucsId: 2476
 xcood: -268.942
 ycood: -83.292
 spectralType:
@@ -144,6 +144,12 @@ planet:
         size: medium
         icon: rock16
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2341-11-19'
         faction:
           source: canon
@@ -151,6 +157,12 @@ planet:
             - FWL
         population: 44849.0
         socioIndustrial: D-F-B-D-C
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 228515.0
       - date: '2360-01-01'
@@ -199,6 +211,12 @@ planet:
         population: 2939793722.0
       - date: '2570-01-01'
         population: 3057160005.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 3148848137.0
       - date: '2590-01-01'
@@ -302,6 +320,10 @@ planet:
         population:
           source: canon
           value: 3562000000.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Tamarind
+        # capitalType: Region Capital
       - date: '3030-01-01'
         population: 3565746752.0
       - date: '3040-01-01'
@@ -324,9 +346,21 @@ planet:
           value: 3581000000.0
       - date: '3070-01-01'
         population: 3592477554.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DT
       - date: '3079-04-15'
         faction:
           source: canon
+          value:
+            - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -351,9 +385,14 @@ planet:
         population: 3815386961.0
       - date: '3145-01-01'
         population: 3834511668.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+        # capitalType: District Capital
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Barjac

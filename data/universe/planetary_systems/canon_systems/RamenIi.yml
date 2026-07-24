@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ramen II
-sucsId: 2113
+sucsId: 2114
 xcood: -28.01
 ycood: -152.955
 spectralType: K3V
@@ -69,6 +69,12 @@ planet:
       - name: Nuova Solopaca Archipelago
       - name: Nuova Salussola Archipelago
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2614-04-10'
         faction:
           source: canon
@@ -112,6 +118,16 @@ planet:
         population: 1354795382.0
       - date: '2750-01-01'
         population: 1366940999.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Capella Commonality
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 1366954870.0
       - date: '2770-01-01'
@@ -133,6 +149,15 @@ planet:
       - date: '2821-02-12'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '2821-12-31'
+        # administration:
+        #   - Duchy of Orloff
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2830-01-01'
@@ -167,6 +192,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Ramen III
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.12

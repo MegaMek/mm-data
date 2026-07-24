@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed0b-715c-946e-e6e758350c0e
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Mako Corvette
 2692
 </year>
 
-<originalBuildYear>
-2692
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,11 +53,11 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:2.0:1:1
-cargobay:940.0:1:2
-steeragequarters:75.0:0
-1stclassquarters:250.0:0
-crewquarters:840.0:0
+smallcraftbay:2.0:1:1::-1:0
+cargobay:940.0:1:2::-1:0
+steeragequarters:75.0:0:-1::-1:0
+1stclassquarters:250.0:0:-1::-1:0
+crewquarters:840.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ crewquarters:840.0:0
 13
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 35
@@ -214,15 +209,19 @@ IS Gauss Ammo:80
 </structural_integrity>
 
 <capabilities>
-The Mako-class corvette stands out with its formidable armament, equipped with naval autocannons, naval PPCs, and naval lasers for engaging enemy WarShips. Additionally, it possesses lasers, Gauss rifles, and autocannons to defend against aerospace fighters. However, the true strengths of the Mako lie in its exceptional maneuverability and impressive armor. Weighing 200,000 tons, the Mako boasts nearly 200 tons of armor and can achieve a remarkable acceleration of 4.5 Gs.
+<p>Displacing 200,000 tons and measuring 390 meters in length, the Mako-class is remarkably fast for a WarShip, capable of sustaining 3g acceleration with a maximum sprint of 4.5g, making it one of the swiftest capital vessels of its era. The ship's capital armament centers on a single Naval Autocannon/20 in the nose supplemented by four Naval Autocannon/25 batteries mounted on the broadsides, providing concentrated close-range firepower. Two Light Naval PPCs in the nose and two Medium Naval PPCs on the broadsides deliver energy strikes at longer ranges, while a pair of Naval Laser 35 batteries cover the aft arc.</p><p>The Mako's anti-fighter defenses are especially comprehensive for a vessel of its size, comprising thirty-five ER Large Lasers, twenty-two Gauss Rifles, and three Autocannon/10 batteries distributed across all arcs. Protection comes from 199.5 tons of Improved Ferro-Aluminum armor over a structural integrity rating of 50, backed by 600 double heat sinks to manage the thermal output of its energy-heavy conventional weapons suite. The decision to forgo aerospace fighter bays entirely left the vessel dependent on its own point defenses and escort support, carrying only two small craft. A single 55-meter gravity deck provides crew habitability during extended patrols, though the vessel proved cramped by contemporary standards with only 940 tons of cargo capacity.</p>
 </capabilities>
 
 <overview>
-The Lyran Mako-class corvette, named for its sleek and swift characteristics reminiscent of its shark namesake, boasted impressive maneuverability, capable of sustained 3G maneuvers and sprinting up to 4.5Gs. Despite its compact size, the Mako outperformed most opposing WarShips and many DropShips, featuring a formidable array of weapons and armor. Manufactured by Bolson Shipyards, the Mako served as an escort and performed independent operations, patrolling Lyran Commonwealth borders and serving as picket vessels in isolated systems. Over a hundred Makos were constructed between 2692 and the fall of the Star League, seeing action on both sides during the conflict to liberate Terra. However, devastating losses along the border with the Free Worlds League in 2787, combined with the destruction of Bolson yards, led to attrition and scrapping of the Makos. The last Mako was destroyed in 2841 during the Second Succession War's defense of Caledonia against Kurita forces.
+<p>The Mako-class corvette was a Lyran Commonwealth design commissioned in 2692 from Bolson Shipyards above New Kyoto. Named for the swift and aggressive shark species, the vessel was conceived as a fast escort and independent patrol craft, built to screen heavier fleet elements and patrol Commonwealth borders. The class broke sharply from traditional Lyran naval philosophy, which favored large, heavily armed capital ships, and Bolson Shipyards was an unconventional choice of builder for a combat vessel. Despite its compact hull and modest displacement, the Mako earned a reputation for aggressive performance, combining high acceleration with concentrated firepower that allowed it to punch above its weight in fleet engagements. The class proved popular with Commonwealth naval planners, who valued its ability to fill patrol and picket roles that larger vessels could not efficiently perform.</p>
 </overview>
 
+<deployment>
+<p>During Operation ELBOW JOINT at Bolan in March 2785, the LCS Aurelius, Nerva, Vespasian, and Vitellius advanced ahead of heavier cruisers but dispersed across too broad a front. League destroyers FWLS Talwar and Turk destroyed the Aurelius and Vitellius, while the damaged Nerva and Vespasian required two years of repair at Bolson Shipyards. The LCS Augustus was destroyed defending the Bolson yards themselves on February 14, 2787, flanked by League destroyers during a major Free Worlds League assault.</p><p>The LCS Anthemius and Heraclius joined the LCAF raid on Dieron in April 2787, where both were destroyed alongside their opponents, the Lola I-class destroyers DCS Akiko and Maja. The LCS Constantius and Hadrian served in Kommodore Sharae's squadron at Finmark in 2792, surviving an operation that saw concealed nuclear weapons destroy two Vincent corvettes before Sharae ordered retaliatory orbital bombardment.</p><p>Three Makos that accompanied the Exodus Fleet entered Clan Burrock service. The Fuchida fell to Bandit Caste control at Waypoint 531 before being destroyed by CGS Andromeda in November 3073. The Stone Crab fought at the Battles of Salonika in July 3072, devastating a Diamond Shark convoy before vanishing near Priori. The CBS Ingrid Bucharev arrived at Tanis in 3072 with irreparable jump drive damage, serving as a stationary platform until overwhelmed by Star Adder and Cloud Cobra forces in December 3074.</p>
+</deployment>
+
 <history>
-The Lyran Mako-class corvette, renowned for its sleek and agile nature, paid homage to its sea-dwelling shark namesake. Manufactured by Bolson Shipyards of New Kyoto, known for their production of conventional JumpShips, the Mako stood out as their sole entry into the combat JumpShip market. The design, deviating from the Lyran doctrine of heavy naval vessels, served as an escort for larger ships, undertaking independent operations, border patrols, and picket duties in remote Lyran systems. During its production period from 2692 to the fall of the Star League, over a hundred Makos were constructed, primarily for the Lyran Commonwealth Armed Forces (LCAF) but also for export. The Star League Defense Force (SLDF) utilized a few Makos as courier vessels, while the Rim Worlds Republic purchased five to reinforce their loyalist fleet. Consequently, Makos found themselves fighting on both sides of the conflict to liberate Terra. It is widely believed that all SLDF and Rim Worlds Makos were destroyed in the war, leaving none remaining with the Clans. The Lyran Makos faced severe devastation during the intense border clashes with the Free Worlds League in 2787. The Bolson yards themselves were shattered in the Marik offensive, leading to the loss of the capability to maintain Mako-class vessels. Attrition gradually diminished the fleet as numerous Makos fell in enemy engagements, and others were decommissioned due to the impossibility of keeping them in service. This cannibalization of resources allowed the Mako corvettes to persist until 2841 when the last Mako was destroyed while attempting to defend Caledonia against Kurita forces during the Second Succession War.
+<p>The Mako-class corvette entered production at the Bolson Shipyards above New Kyoto in 2692. The design was a deliberate break from the Lyran Commonwealth's traditional preference for large, heavily armed WarShips. Bolson Shipyards, primarily a manufacturer of conventional JumpShips and civilian spacecraft, produced the Mako as their sole entry into the combat WarShip market. The class prioritized speed and maneuverability over raw firepower, intended to serve as a fast escort for heavier fleet elements, a border patrol vessel, and an independent picket ship for remote systems.</p><p>The Mako proved popular enough that over a hundred hulls were constructed during the class's production run, which continued until the Bolson yards were destroyed in 2787. The Lyran Commonwealth operated the largest fleet of Makos, fielding twenty-seven vessels by 2765, but the design was also exported to foreign powers. The Star League Defense Force purchased a small number for use as courier vessels, while the Rim Worlds Republic acquired five to supplement their fleet. This export history meant that when the Amaris Civil War erupted, Mako-class corvettes found themselves fighting on both sides of the conflict. All SLDF and Rim Worlds Makos are believed to have been destroyed during the war, and none are thought to have remained with any faction that would become the Clans, though at least three Makos did in fact join General Kerensky's Exodus Fleet.</p><p>The First Succession War proved devastating for the Lyran Mako fleet. Intense border clashes with the Free Worlds League in 2787 inflicted severe losses, and the destruction of the Bolson Shipyards during the Marik offensive that same year eliminated any possibility of building replacements or properly maintaining the surviving vessels. Attrition steadily reduced the fleet as Makos fell in combat engagements or were cannibalized for parts to keep their sisters operational. This gradual decline continued through the Second Succession War until the last Mako-class vessel was destroyed in 2841 while defending Caledonia against a Kurita invasion force.</p><p>Unknown to the Inner Sphere, three Makos that had accompanied the Exodus Fleet survived in Clan space, eventually falling under the control of Clan Burrock. When Clan Burrock was Absorbed by Clan Star Adder in 3059, remnants of the Burrock warrior caste fled into the Deep Periphery and established a Bandit Caste, taking these ancient corvettes with them. The three vessels saw their final service during the Wars of Reaving in the early 3070s, fighting in engagements across the Deep Periphery before being destroyed or stranded one by one. The last confirmed Mako action occurred at the Tanis system in December 3074, bringing the class's three-and-a-half-century service history to a close.</p>
 </history>
 
 <manufacturer>
@@ -234,12 +233,22 @@ New Kyoto
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Bolson Shipyards
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Improved Ferro-Aluminum
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Corvette

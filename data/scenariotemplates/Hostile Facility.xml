@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -21,7 +21,7 @@
     <name>Facility Assault</name>
     <stratConScenarioType>HOSTILE_FACILITY</stratConScenarioType>
     <shortBriefing>Assault and weaken enemy-held facility.</shortBriefing>
-    <detailedBriefing><![CDATA[A hidden enemy-controlled facility has been identified for destruction. This installation is too valuable to remain in enemy hands, and its defenders must be eliminated to ensure it is no longer operational. Your mission is to destroy at least 75% of the defending forces. This is not an occupation—this is eradication.
+    <detailedBriefing><![CDATA[A hidden enemy-controlled facility has been identified for destruction. This installation is too valuable to remain in enemy hands, and its defenders must be eliminated to ensure it is no longer operational. Your mission is to destroy at least 50% of the defending forces. This is not an occupation—this is eradication.
 
 The priority is destruction, not capture. Do not concern yourself with securing the facility. The enemy will fight to protect this installation, but their defenses will crumble under sustained pressure. Crush their forces, level their defenses, and ensure that when this battle is over, the facility is of no use to anyone.
 
@@ -30,9 +30,10 @@ The victor will control the battlefield at the end of the engagement. If the fac
     <isHostileFacility>true</isHostileFacility>
     <mapParameters>
         <allowedTerrainTypes>
+            <allowedTerrainType>TemperateFacility</allowedTerrainType>
             <allowedTerrainType>ColdFacility</allowedTerrainType>
             <allowedTerrainType>HotFacility</allowedTerrainType>
-            <allowedTerrainType>TemperateFacility</allowedTerrainType>
+            <allowedTerrainType>FrozenFacility</allowedTerrainType>
         </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
@@ -136,6 +137,11 @@ The victor will control the battlefield at the end of the engagement. If the fac
                 <startingAltitude>0</startingAltitude>
                 <syncDeploymentType>None</syncDeploymentType>
                 <useArtillery>false</useArtillery>
+                <roleChoices>
+                    <forceRole>FIRE_SUPPORT</forceRole>
+                    <forceRole>SR_FIRE_SUPPORT</forceRole>
+                    <forceRole>ARTILLERY</forceRole>
+                </roleChoices>
             </value>
         </entry>
     </scenarioForces>
@@ -160,10 +166,10 @@ The victor will control the battlefield at the end of the engagement. If the fac
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 75% of the defending forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 50% of the defending forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>75</percentage>
+            <percentage>50</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

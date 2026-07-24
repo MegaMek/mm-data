@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac2a-7c08-8fc3-aee2203bbcc7
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Tiamat II
 3112
 </year>
 
-<originalBuildYear>
-3112
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,11 +53,11 @@ Spheroid
 </motion_type>
 
 <transporters>
-asfbay:6.0:1:1
-2ndclassquarters:0.0:0
-1stclassquarters:100.0:0
-cargobay:2581.0:1:6
-steeragequarters:430.0:0
+asfbay:6.0:1:1::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+1stclassquarters:100.0:0:-1::-1:0
+cargobay:2581.0:1:6::-1:0
+steeragequarters:430.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ steeragequarters:430.0:0
 20
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 810
@@ -105,9 +100,9 @@ steeragequarters:430.0:0
 </armor>
 
 <Nose Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Sub-Capital Cannon (Heavy)
 Sub-Capital Cannon (Heavy)
 Sub-Capital Cannon (Heavy)
@@ -131,12 +126,12 @@ ISLaserAntiMissileSystem
 </Nose Equipment>
 
 <Left Side Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Capital Missile Launcher (AR10 Launcher)
 Capital Missile Launcher (AR10 Launcher)
 Ammo AR10 Killer Whale:20
@@ -176,12 +171,12 @@ ISLaserAntiMissileSystem
 </Left Side Equipment>
 
 <Right Side Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Capital Missile Launcher (AR10 Launcher)
 Capital Missile Launcher (AR10 Launcher)
 Ammo AR10 Killer Whale:20
@@ -255,19 +250,19 @@ ISNC3
 </structural_integrity>
 
 <capabilities>
-The ship is protected by 219 tons worth of Heavy Ferro Aluminum armor, which provides a considerable amount of protection for the ship. The ship is equipped with 10 Life boats to allow for the ship's crew to evacuate the vessel.
+<p>The Tiamat II introduced by the Republic of the Sphere in 3112 removes the nose-mounted AR-10 launcher from the base manned design and uses the freed tonnage to install a Naval C3 System, enabling coordinated fire between squadron mates for dramatically improved tactical effectiveness. The remaining weapons array is extensive: Sub-Capital Laser/3 batteries and Heavy Sub-Capital Cannons in the nose alongside Heavy Gauss Rifles and ER PPCs, while each broadside carries paired AR-10 launchers, Heavy PPCs, ER large lasers, Artemis IV-equipped MML-9 racks, Large Variable Speed Pulse Lasers, and Laser Anti-Missile Systems.</p><p>The aft arc mounts Piranha sub-capital missile launchers, Large Variable Speed Pulse Lasers, MML-9 batteries with Artemis IV, Laser AMS, and a Screen Launcher. Six aerospace fighter bays provide organic fighter support. Cargo capacity increases to 2,581 tons compared to the drone variant. A crew of 145 operates the vessel. The 526 double heat sinks and 3,015 points of Heavy Ferro-Aluminum armor match the base Tiamat specifications.</p>
 </capabilities>
 
 <overview>
-The Tiamat was designed as a command and control vessel for the Manei Domini, intended to take on and destroy multiple Star League era WarShips in an engagement.
+<p>The Tiamat is a massive 36,000-ton Spheroid pocket warship originally conceived during the Jihad as a command and control vessel capable of engaging and destroying multiple Star League era WarShips in a single engagement. Designed to withstand tremendous punishment while delivering devastating firepower at both capital and conventional scales, the Tiamat represents one of the most ambitious DropShip designs ever attempted.</p><p>Following the Jihad, the design was adapted for conventional manned operation and entered production for a new generation of naval forces. The Tiamat's combination of sub-capital and capital weaponry, heavy armor protection, and substantial cargo capacity makes it one of the most powerful non-WarShip combatants in known space.</p>
 </overview>
 
 <deployment>
-Known as the Tiamat II, this variant was introduced by the Republic of the Sphere. To allow it to coordinate with squadron mates better, engineers removed the Kraken-T launcher from the nose and used the freed space to install a Naval C3 System.
+<p>The Tiamat II serves as the backbone of the Republic of the Sphere's Black Water Navy, operating in squadrons where the Naval C3 system enables coordinated fire between multiple hulls. These vessels provide the Republic with capital-grade firepower without the enormous expense and infrastructure requirements of maintaining conventional WarShips, filling a critical gap in the post-Jihad naval theater.</p>
 </deployment>
 
 <history>
-The ship was originally conceived by order of the Manei Domini commanding officer, Apollyon, in 3066. It was later redesigned for use with the Republic of the Sphere's armed forces after the Jihad. Its designers made the original model able to withstand considerable punishment. The first ship was operational by 3076. The Tiamat was exclusive to the Manei Domini's use. However, escalating pressures of the war prompted the design to be employed by regular Word of Blake forces, but only under certain conditions. Apollyon had ordered that no "frail" human should be allowed to control the vessels. Eventually, Precentor Martial Cameron St. Jamais managed to convince Apollyon to release the design for regular Blakist use. Apollyon suggested the vessels be converted with the new Caspar II drone technology. These vessels were used effectively in the defense of the last of the Word of Blake Protectorate worlds, including the Liberation of Terra. After the war, the newly formed Republic of the Sphere, needing to build up its Black Water Navy, used the designs for a manned version of the Tiamat. The ship was put into production at Terra's badly damaged O'Neil Shipyards by 3085.
+<p>The Tiamat was originally conceived in 3066 by order of Apollyon, commanding officer of the Manei Domini, who demanded a vessel capable of challenging WarShips without being one itself. The resulting design was intended exclusively for Manei Domini use, with the first operational vessel completed by 3076. As the pressures of the Jihad escalated, Precentor Martial Cameron St. Jamais convinced Apollyon to release the design for regular Word of Blake forces, though Apollyon insisted that no unaugmented human should control the vessels. This restriction led to the development of a variant equipped with CASPAR II drone technology, allowing autonomous operation without a human crew.</p><p>These drone-operated Tiamats proved effective in the defense of the last Word of Blake Protectorate worlds, including the final battle for Terra. After the Jihad, the newly formed Republic of the Sphere, desperate to build a viable navy from the wreckage of the conflict, seized upon the Tiamat design. The Republic put a manned version into production at Terra's badly damaged O'Neil Shipyards by 3085, and later introduced the Tiamat II upgrade in 3112 with improved coordination systems for squadron-level operations.</p>
 </history>
 
 <manufacturer>
@@ -286,6 +281,14 @@ COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
 
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <use>
 Pocket WarShip
 </use>
@@ -303,8 +306,12 @@ Pocket WarShip
 </height>
 
 <source>
-RS:3145-NTNU
+TR:3145
 </source>
+
+<published>
+RS:3145-NTNU,RS:3145
+</published>
 
 <tonnage>
 36000.0

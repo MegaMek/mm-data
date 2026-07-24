@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,19 +15,14 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e5d1-77f6-8fd7-0cfa6001f4ac
+</UUID>
 
 <UnitType>
 Tank
 </UnitType>
-
-<blockversion>
-1
-</blockversion>
 
 <Name>
 Condor Heavy Hover Tank
@@ -45,10 +40,6 @@ Condor Heavy Hover Tank
 3068
 </year>
 
-<source>
-TR:3075
-</source>
-
 <type>
 IS Level 2
 </type>
@@ -57,29 +48,29 @@ IS Level 2
 Missile Boat
 </role>
 
-<tonnage>
-50.0
-</tonnage>
-
 <motion_type>
 Hover
 </motion_type>
-
-<engine_type>
-2
-</engine_type>
 
 <cruiseMP>
 9
 </cruiseMP>
 
+<engine_type>
+2
+</engine_type>
+
 <armor_type>
 1
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -122,19 +113,19 @@ ISAntiMissileSystem
 </Turret Equipment>
 
 <capabilities>
-Although expensive to buy and to maintain, this immense hovercraft is capable of a flank speed of 129 km/h and a cruising speed of 86 km/h, making it one of the fastest vehicles in its weight class and as fast as the speediest 'Mechs and vehicles. Six tons of StarSlab/9.5 Mk II armor give the Condor considerable protection for its role, though the bulk is concentrated on the front and turret, notably weakening the sides. Unlike tracked or wheeled vehicles of the same weight, the Condor is intended to attack enemies "on the fly" at medium ranges.
+<p>The Jones 165 internal combustion engine drives the Condor's fifty-ton hull to a flank speed approaching 130 kilometers per hour, placing it among the fastest vehicles in its weight class and competitive with light BattleMechs in open terrain. Six tons of StarSlab armor concentrate protection along the frontal arc and turret, giving the vehicle considerable resilience during high-speed strafing passes. The sides and rear are especially thin, a vulnerability that demands disciplined maneuvering and prevents the Condor from trading fire at standstill against well-equipped opponents.</p><p>The turret carries a GM Whirlwind autocannon paired with two Defiance B3M medium lasers, a combination suited to medium-range engagement on the move. A hull-mounted SureFire MiniGun provides anti-infantry coverage against infantry closing in. The combustion engine eliminates heat concerns entirely, but ammunition consumption in sustained actions can become a limiting factor. Faction modification programs across the Successor States reflect the vehicle's widely distributed presence, with units stripping or replacing weapons to suit local logistics. The Federated Suns commonly favors additional autocannon firepower, while Capellan forces often prefer an all-laser configuration that eliminates ammunition dependency entirely.</p>
 </capabilities>
 
 <overview>
-A heavy cavalry unit designed for rapid reaction to a shifting battle, the Condor is one of the few heavy hover tanks available.
+<p>Introduced a few years before the founding of the original Star League, the Condor Heavy Hover Tank is among the most recognized and widely distributed combat vehicles in the Inner Sphere. Red Devil Industries designed the Condor as a cavalry platform capable of rapid reaction to a shifting battle, and the tank's remarkable top speed gave it a place in armored formations across multiple Successor States. The Lyran Commonwealth was its primary patron and largest customer, though export licenses enabled sales to the Federated Suns and Capellan Confederation throughout the Succession Wars era. Its persistent critics pointed to a high price tag, much of which reflected Lyran export tariffs, as evidence that only the wealthiest formations could afford proper quantities. Following the loss of Red Devil's primary production facilities, the design passed to new hands and underwent a thorough modernization that preserved the Condor name while transforming virtually every major system.</p>
 </overview>
 
 <deployment>
-An attempt by Quikscell to reduce the Condor's dependence on ammunition based weaponry, this variant of the upgraded tank replaced the autocannon with a Cyclops extended-range large laser, with the remaining weight being used to add a turret-mounted anti-missile system, a Guardian ECM suite, and an additional ton of armor.
+<p>Quikscell's energy-weapon alternative to the standard Upgrade replaces the LB-X autocannon with a Cyclops extended-range large laser, adding an anti-missile system and Guardian ECM suite at the cost of one ton of armor compared to the baseline Upgrade. The variant sacrifices some raw firepower for operational independence from ammunition supply, a priority in the isolated supply chains of the Jihad era. The ECM protection also makes it difficult for missile-heavy opponents to achieve lock-on at range. Deployed primarily in Lyran Commonwealth and allied commands, the Laser version sees wider adoption in garrison forces and secondary commands where ammunition resupply is uncertain.</p>
 </deployment>
 
 <history>
-Introduced a few short years before the formation of the original Star League, the Condor remained one of Red Devil Industries main sellers for centuries and was widely distributed across the Inner Sphere, with the militaries of the Lyran Commonwealth, Federated Suns and Capellan Confederation fielding the majority during the Succession Wars. With the loss of Red Devil's factories with the capture of Pandora by Clan Jade Falcon in 3064, the design was secured by Quikscell Company, who developed an advanced new-tech refresh of the venerable and still highly popular design, even selling the unassembled components of the tank in kit form in effort to keep up with demand. Red Devil actually builds their own under license. Originally, Defiance Industries declined to allow the company to do so, which led to Red Devil offering a bounty for used or slightly damaged lasers taken in combat to recondition and install on new Condors. When Defiance noticed that some of its flagship BattleMech designs, such as the Zeus, attracted undue fire from foes attempting to cash in on the bounty, they quickly relented. Not nearly as notable, the reliable SureFire MiniGun, mounted on the body, is intended as an anti-personnel weapon.
+<p>Red Devil Industries fielded the Condor in 2564, entering the market just before the creation of the original Star League and establishing it as one of the oldest continuously produced hover tanks in the Inner Sphere. Production at Pandora served primarily the Lyran Commonwealth, where Red Devil used its considerable political connections to push export licenses that opened the Federated Suns and Capellan Confederation markets, offsetting the steep Steiner tariffs built into every transaction. The Succession Wars sustained demand steadily as each state wore through existing stocks and sought replacements. Red Devil later licensed manufacture to Jalastar Aerospace on Panpour, ensuring a Federated Suns-side source that reduced dependence on politically managed export quotas.</p><p>The wars of the thirty-first century brought new challenges. Red Devil worked to upgrade the Condor platform with a fusion engine variant to remain competitive, but competition from more modern designs intensified. Clan Jade Falcon's conquest of Pandora in 3064 silenced Red Devil's main facility, apparently ending the design's primary production source.</p><p>Recovery came from an unexpected direction. The Quikscell Company, another Pandora-based manufacturer that had already relocated a line to Richvale before the invasion, secured the design rights and launched a substantially modernized variant alongside an aggressive marketing campaign. To meet demand that outpaced production capacity, Quikscell sold unassembled vehicles in kit form, an unconventional tactic that kept Condors flowing to operators who could not wait for factory output, though reliability varied sharply with the skill of the assembling crew. The Pandora facility eventually resumed operations under Clan Jade Falcon's oversight, producing several advanced variants before the Lyran Alliance's recapture of Pandora in 3110 brought the production line back under Lyran management.</p>
 </history>
 
 <manufacturer>
@@ -147,8 +138,31 @@ Richvale
 
 <systemManufacturers>
 CHASSIS:Unknown
-ENGINE:Core Tek 215 XL fusion engine
-ARMOR:StarSlab/9.5 Ferro-Fibrous Mk II
-COMMUNICATIONS:TharHes KR-A P/Comm
-TARGETING:TharHes Mars 1 with TAG
+ENGINE:CoreTek
+ARMOR:Brooks, Inc.
+JUMP_JET:Unknown
+COMMUNICATIONS:TharHes
+TARGETING:TharHes
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:215 XL
+ARMOR:StarSlab/9.5 Ferro-Fibrous Mk II
+JUMP_JET:Unknown
+COMMUNICATIONS:KR-A P/Comm
+TARGETING:Mars 1
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<published>
+RS:3075u-CE,RSFP:Battlefield
+</published>
+
+<tonnage>
+50.0
+</tonnage>
+

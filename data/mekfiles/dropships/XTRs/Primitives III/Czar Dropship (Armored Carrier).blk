@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,31 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac53-7af9-8c8e-a44a30af5680
+</UUID>
 
 <UnitType>
 Dropship
 </UnitType>
 
 <Name>
-Czar Dropship
+Czar DropShip
 </Name>
 
 <Model>
 (Armored Carrier)
 </Model>
-
-<mul id:>
-5626
-</mul id:>
 
 <year>
 2505
@@ -57,18 +48,27 @@ IS Level 2
 None
 </role>
 
+<quirks>
+atmo_instability
+docking_arms
+difficult_maintain
+sensor_ghosts
+obsolete:2740
+imp_target_short
+</quirks>
+
 <motion_type>
 Spheroid
 </motion_type>
 
 <transporters>
-smallcraftbay:1.0:1:1
-heavyvehiclebay:12.0:2:2
-lightvehiclebay:24.0:2:3
-steeragequarters:260.0:0
-2ndclassquarters:7.0:0
-infantrybay:18.0:1:4:Mechanized
-cargobay:1596.5:1:5
+smallcraftbay:1.0:1:1::-1:0
+heavyvehiclebay:12.0:2:2::-1:0
+lightvehiclebay:24.0:2:3::-1:0
+steeragequarters:260.0:0:-1::-1:0
+2ndclassquarters:7.0:0:-1::-1:0
+infantrybay:18.0:1:6:Mechanized:-1:0
+cargobay:1596.5:1:7::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +95,13 @@ cargobay:1596.5:1:5
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 98
@@ -162,19 +166,19 @@ Medium Laser
 </structural_integrity>
 
 <capabilities>
-The design is armed with only energy weapons, each of its weapons bays being fitted with two Large Lasers and four Medium Lasers. Twenty-Five tons primitive grade of military armor is used to protect the DropShip's hull from enemy fire. As one of its features, the ship has the ability to be reconfigured to carry various military formations. Initially, it was configured for Infantry battalions, but decades later it could be configured to carry a battalion of Armor and Mechanized Infantry.
+<p>The Armored Carrier configuration of the Czar repurposes the vessel's vast internal volume to transport a combined arms force of twelve heavy vehicles, twenty-four light vehicles, and eighteen infantry platoons, along with approximately 1,597 tons of cargo and supplies. The weapons array is identical across all Czar variants: the nose mounts two large lasers and four medium lasers, each broadside carries four large lasers and eight medium lasers, and the aft arc mounts two large lasers and four medium lasers. One hundred twelve single heat sinks manage the thermal load. The vessel's primitive construction contributes to several operational quirks including atmospheric instability, sensor ghosting, and higher-than-normal maintenance requirements. A small craft bay provides utility transport capability. The large crew complement of 381 reflects the extensive support personnel required for the embarked combat formations.</p>
 </capabilities>
 
 <overview>
-The Czar Class was an early multi-role military DropShip which first entered service with the Terran Hegemony in 2468.
+<p>The Czar is one of the earliest true DropShip designs, developed by Deimos Clipperships for the Terran Hegemony Armed Forces in the mid-twenty-fifth century. Conceived in response to a military request for proposals, the 6,400-ton spheroid was among the very first vessels designed to use the newly developed hardpoint and docking collar coupling system. Built on a proven civilian hull, the Czar served as a standard combat transport for Hegemony regiments and would soldier on through centuries of service. Despite being a military design, the vessel was constructed to civilian spheroid standards rather than the more robust military specifications that later became standard, a reflection of its era's nascent DropShip engineering practices.</p>
 </overview>
 
 <deployment>
-Version based off Fluff text. Should be considered Unofficial
+<p>The Armored Carrier variant served as the Terran Hegemony's primary combined arms transport during the early expansion era, carrying armored battalions consisting of BattleMech lances and vehicle companies for planetary assault operations. These vessels were later adopted by the SLDF before being gradually replaced by more capable designs during the Age of War escalation.</p>
 </deployment>
 
 <history>
-It was one of the very first proper DropShips in a technical sense. Like the Clippership V, it was developed within a decade of the invention of a functional Hardpoint and Docking Collar coupling, based on the proven Clippership IV hull that had been used for the prototype for these new technologies (Nimbus III). (In the case of the Czar this was in response to a HAF Request for Proposals.) The military career of the Czar would begin as standard Combat Transport for Hegemony's regiments used for invasions, carried on the new Liberty class of JumpShips. It would soldier on through the centuries, which would include serving in the SLDF. After being decommissioned from military service, the ship would linger on well after the fall of the Star League in civilian service with a few ancient survivors still active as of 3079. It should be noted that the Czar, despite being a military design, is constructed to Civilian Spheroid DropShip standards, as opposed to the more rugged Military DropShip standards.
+<p>The Czar class DropShip first entered service with the Terran Hegemony Armed Forces in 2468, developed within a decade of the invention of functional docking collar technology. Based on the proven Clippership IV hull that had served as the prototype platform for hardpoint coupling systems, the Czar was designed to be carried aboard the new Liberty class of JumpShips and served as the Hegemony's standard combat transport during the early expansion era. The design continued to serve through the centuries, including duty with the Star League Defense Force.</p><p>As higher-capacity and more capable transports entered service during the Age of War, the Czar was gradually decommissioned from frontline military duty. However, the design's proven reliability ensured a long second career in civilian service. Numerous hulls were converted for commercial transport roles, and despite the growing scarcity of spare parts, a few ancient survivors remained active well into the thirty-first century. The Czar's longevity speaks to the fundamental soundness of its original engineering, even if its primitive technology and civilian-grade construction rendered it thoroughly obsolete for military purposes long before its final examples left service.</p>
 </history>
 
 <manufacturer>
@@ -182,7 +186,7 @@ Deimos Clipperships
 </manufacturer>
 
 <primaryFactory>
-Mars
+Unknown
 </primaryFactory>
 
 <systemManufacturers>
@@ -192,6 +196,14 @@ ARMOR:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Combat Transport
@@ -212,6 +224,10 @@ Combat Transport
 <source>
 XTR:Primitives III
 </source>
+
+<published>
+XTR:Primitives III
+</published>
 
 <tonnage>
 6400.0
@@ -256,14 +272,4 @@ XTR:Primitives III
 <escape_pod>
 4
 </escape_pod>
-
-
-<quirks>
-atmo_instability
-difficult_maintain
-docking_arms
-imp_target_short
-sensor_ghosts
-obsolete:2740
-</quirks>
 

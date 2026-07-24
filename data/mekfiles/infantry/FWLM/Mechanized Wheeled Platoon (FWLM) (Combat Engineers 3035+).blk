@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,7 +15,11 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.05-SNAPSHOT on 2025-04-14
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bcbd-7e74-8b13-f939fc5df139
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
@@ -31,10 +35,6 @@ Mechanized Wheeled Platoon (FWLM)
 <year>
 3030
 </year>
-
-<originalBuildYear>
-3030
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -53,18 +53,16 @@ Vibro-Shovel
 Vibro-Shovel
 Vibro-Shovel
 Vibro-Shovel
+Vibro-Shovel
 Free Worlds League Infantry Kit (3035+)
+Infantry Bridge Kit
 </Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
-<capabilities>
-Using a combination of bridging equipment and light earthmoving vehicles these troops assist conventional forces in crossing minor obstacles and improving defensive fighting positions.
-</capabilities>
-
 <overview>
-Combat engineers are support troops used to improve the mobility and protection of combat forces.  They can also be found in non-combat situations such as natural disaster response, helping government assistance reach those in need and constructing temporary camps for evacuees.
+<p>The Free Worlds League's fractious politics have always made centralized BattleMech procurement difficult, pushing the FWLM toward heavy investment in conventional infantry to fill the gaps. Wheeled mechanized platoons in FWLM service ride armored personnel carriers that offer good road speed and reasonable protection, making them well-suited to the League's developed industrial worlds where paved infrastructure supports rapid deployment between population centers. Trained as combat engineers, these troops carry specialized equipment for rapid construction of field fortifications, obstacle emplacement, and demolition operations, providing commanders with the ability to reshape terrain to tactical advantage.</p>
 </overview>
 
 <notes>
@@ -82,6 +80,10 @@ Intro date based on prototype release of FWL advanced infantry kit
 <Primary>
 Submachine Gun
 </Primary>
+
+<encumberingarmor>
+true
+</encumberingarmor>
 
 <specialization>
 33

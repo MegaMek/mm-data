@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Oceana
-sucsId: 1918
+sucsId: 1919
 xcood: -96.423
 ycood: -108.084
 spectralType: K0V
@@ -84,6 +84,12 @@ planet:
         population: 1809777.0
       - date: '2310-01-01'
         population: 4029629.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 8073755.0
       - date: '2323-01-01'
@@ -96,6 +102,12 @@ planet:
         population: 39025956.0
       - date: '2360-01-01'
         population: 57284950.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2370-01-01'
         population: 79764099.0
       - date: '2380-01-01'
@@ -138,6 +150,9 @@ planet:
         population: 562066208.0
       - date: '2570-01-01'
         population: 566238057.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Marik Commonwealth
       - date: '2580-01-01'
         population: 572231047.0
       - date: '2590-01-01'
@@ -280,6 +295,12 @@ planet:
         population: 500929483.0
       - date: '3130-01-01'
         population: 501932344.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MSC
       - date: '3132-08-07'
         hpg: X
       - date: '3139-07-01'
@@ -291,15 +312,15 @@ planet:
         population: 503944095.0
       - date: '3145-01-01'
         population: 503843316.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Clan Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
-      - date: '3152-06-01'
-        faction:
-          source: sucs
-          value:
             - CP
   - name: Finn Maccoul
     type: GAS_GIANT

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ecd2-77df-9af1-78375d7bf0eb
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Bonaventure Corvette
 2317
 </year>
 
-<originalBuildYear>
-2317
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,11 +53,11 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:6.0:2:1
-smallcraftbay:2.0:1:2
-cargobay:53780.0:1:3
-1stclassquarters:170.0:0
-crewquarters:616.0:0
+asfbay:6.0:2:1::-1:0
+smallcraftbay:2.0:1:2::-1:0
+cargobay:53780.0:1:3::-1:0
+1stclassquarters:170.0:0:-1::-1:0
+crewquarters:616.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ crewquarters:616.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 21
@@ -157,15 +152,19 @@ IS Ammo AC/10:80
 </structural_integrity>
 
 <capabilities>
-The Bonaventure was poorly armed, even compared with vessels of similar size dating from the Terran Alliance. Only against AeroSpace Fighters was the Bonaventure not severely under-gunned. For naval engagements, the vessel boasted only a single pair of naval lasers. Against smaller targets, the Bonaventure could hold its own with an array of lasers, autocannons and long-range missiles. The Bonaventure-class was not intended for transportation and boasted no DropShip collars. The vessel did possess three cargo bays, one for a pair of small craft, one for a single squadron of fighters, and a last bay capable of storing 53,926 tons of supplies.
+<p>Displacing 240,000 tons across a 486-meter hull, the Bonaventure was one of the lightest WarShips of its era. Its primary asset was an advanced sensor suite that provided exceptional long-range detection capability, making the corvette invaluable for reconnaissance and early warning operations. This emphasis on electronics came at the expense of armament, however, and the class mounted only a modest complement of naval lasers, conventional autocannons, large lasers, and missile launchers spread across its firing arcs.</p><p>The vessel was particularly swift for a capital WarShip, achieving a safe thrust of four gravities with a maximum burst of six, giving it the speed to outrun most adversaries it could not outfight. Protection was minimal at just 156 tons of standard armor, reinforcing the class's design philosophy of detection and evasion over direct engagement. Six aerospace fighters and two small craft provided a modest screening capability.</p><p>A single cavernous cargo bay of nearly 54,000 tons gave the Bonaventure surprising logistical utility for a corvette, while accommodations for a crew of just 121 kept the vessel compact and efficient. The Bonaventure carried no docking collars, relying on its small craft complement for auxiliary operations.</p>
 </capabilities>
 
 <overview>
-The Bonaventure-class corvette was developed during the tumultuous era of the Terran Alliance's decline. Led by Admiral James McKenna, the project continued under the newly formed Terran Hegemony, featuring excellent mobility and advanced sensor capabilities. Initially paired with the Vigilant-class corvette, the Bonaventure served in reconnaissance missions and later transitioned to picket duty, providing early warning and intercepting intruders. However, with the advent of the Vincent-class corvette in 2432, the Bonaventure-class was eventually replaced.
+<p>The Bonaventure-class corvette was built by Boeing Interstellar on Terra and entered service in 2317, making it one of the earliest purpose-designed reconnaissance capital vessels in the Terran Hegemony fleet. Commissioned to fill a critical gap in the young nation's naval order of battle, the corvette emphasized long-range detection and electronic surveillance over direct combat capability, carrying advanced detection equipment that ranked among the most capable systems available in the twenty-fourth century.</p><p>The class earned a strong reputation as a scout and early warning platform, providing invaluable intelligence to fleet commanders operating along the Hegemony's expanding borders. Its light armament, however, left the Bonaventure poorly suited to pitched engagements with heavier combatants, and the corvette proved most effective when operating in concert with other vessel classes that could provide the firepower it lacked.</p>
 </overview>
 
+<deployment>
+<p>The THS Cochran distinguished itself during the Age of War when a Draconis Combine destroyer squadron raided the Imbros III system, catching a Hegemony Armed Forces patrol squadron as it arrived. The Cochran, the sole survivor of the initial engagement, led three Combine vessels on an extended pursuit through the system's asteroid belt. Exploiting her advanced sensors to full advantage, the corvette executed a series of ambushes that destroyed one enemy destroyer and crippled another before the Cochran herself was finally eliminated. The remaining Combine vessel withdrew when HAF reinforcements arrived, and the next Monsoon-class battleship to enter service was christened Cochran to commemorate the action.</p>
+</deployment>
+
 <history>
-The development of the Bonaventure-class corvette began during the final days of the Terran Alliance, spearheaded by Admiral James McKenna. As he rose to power and formed the Terran Hegemony, the project continued uninterrupted, showcasing the corvette's impressive mobility and sophisticated sensor suite. However, during the Capella campaign, it became evident that the Bonaventure lacked sufficient firepower. To address this limitation, the Hegemony Armed Forces (HAF) decided to pair the Bonaventure-class with the heavily armed Vigilant-class corvette, forming four-corvette squadrons for data gathering sweeps before invasions. As the borders of the Terran Hegemony stabilized, the Bonaventure shifted to picket duty, utilizing its exceptional long-range detection capabilities to provide early warnings and coordinate interception efforts. During one notable engagement, a Kurita destroyer squadron attacked a HAF patrol squadron, resulting in the destruction of all but the THS Cochran, which evaded pursuit using the Bonaventure-class corvette's advanced sensors and superior speed. The Cochran's successful resistance led to the christening of the next Monsoon-class Battleship as the Cochran, honoring the valor displayed in the battle. However, the Bonaventure-class corvette was eventually replaced by the more versatile Vincent-class corvette upon its introduction in 2432, marking the end of an era for the Bonaventure-class in the Terran Hegemony's naval forces.
+<p>The Bonaventure-class corvette was conceived during the twilight of the Terran Alliance as a personal initiative of Admiral James McKenna. Development proceeded without interruption through the political transition that saw McKenna remove corrupt politicians from power and establish the Terran Hegemony, and Boeing Interstellar on Terra delivered the first vessels in 2317. The class was rushed into service to support the newly elected Director-General's ambitious plans to consolidate and expand the Hegemony's borders, prioritizing speed and sensor capability over raw combat power.</p><p>The Bonaventure's limitations as a frontline combatant became apparent during operations over Capella, where the corvette's light armament proved wholly inadequate for direct engagement with enemy WarShips. The Hegemony Armed Forces adapted by pairing Bonaventures with the more heavily armed Vigilant-class corvette, creating mixed four-ship squadrons that conducted data-gathering reconnaissance sweeps through target systems ahead of invasion forces. These missions became one of the class's signature contributions to Hegemony naval doctrine. As the Hegemony's borders stabilized, the class transitioned to picket duty along the frontier, where its exceptional detection capabilities provided early warning of incursions and allowed better-armed vessels to be vectored to intercept intruders.</p><p>The more versatile Vincent-class corvette entered service in 2432 and gradually replaced the Bonaventure in frontline reconnaissance roles. Many surviving vessels were relegated to secondary duties or transferred to allied states. By 2765, the Rim Worlds Republic maintained a fleet of thirty-two Bonaventure-class corvettes, the largest known concentration of the type still in active service at that date, sustained by dedicated maintenance facilities operated by Roe Weapon Systems in the Finmark system.</p><p>The production facility at Boeing Interstellar on Terra that had built the class continued to serve the Terran Hegemony and its successors across subsequent eras, though Bonaventure production had long since ceased. Attrition during the Succession Wars and the passage of centuries eventually eliminated the remaining vessels from active service, though the class's legacy as one of the earliest purpose-built reconnaissance WarShips endured in the design philosophy of later scout and surveillance vessels.</p>
 </history>
 
 <manufacturer>
@@ -180,9 +179,19 @@ Terra
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Corvette

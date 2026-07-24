@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -30,20 +30,21 @@ The victor will control the battlefield at the end of the engagement, securing a
     <isAlliedFacility>false</isAlliedFacility>
     <mapParameters>
         <allowedTerrainTypes>
+            <allowedTerrainType>Urban</allowedTerrainType>
             <allowedTerrainType>ColdUrban</allowedTerrainType>
             <allowedTerrainType>HotUrban</allowedTerrainType>
-            <allowedTerrainType>Urban</allowedTerrainType>
         </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
         <widthScalingIncrement>5</widthScalingIncrement>
     </mapParameters>
+    <scenarioModifiers>Rookies.xml</scenarioModifiers>
     <scenarioForces>
         <entry>
             <key>Player</key>
@@ -198,10 +199,10 @@ The victor will control the battlefield at the end of the engagement, securing a
                 <howMuch>1</howMuch>
             </failureEffect>
             <additionalDetails />
-            <description>Destroy, cripple or force the withdrawal of 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy, cripple or force the withdrawal of 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

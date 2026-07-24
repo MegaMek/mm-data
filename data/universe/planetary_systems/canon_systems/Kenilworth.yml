@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kenilworth
-sucsId: 1326
+sucsId: 1327
 xcood: 561.597
 ycood: -161.563
 spectralType: M1V
@@ -52,6 +52,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2597-08-27'
         faction:
           source: canon
@@ -98,6 +104,17 @@ planet:
         population: 99372391.0
       - date: '2750-01-01'
         population: 101012713.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Broken Wheel Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 102569297.0
       - date: '2770-01-01'
@@ -144,6 +161,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Kecamatan Kapas
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.35

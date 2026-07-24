@@ -422,14 +422,14 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="12">Battle</option>
+                <option weight="12" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A" name="Rifle Lance">Rifle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -446,11 +446,11 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
                 <option weight="31" role="+recon">Recon</option>
                 <option weight="10" ifWeightClass="H|A" role="+recon">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L" role="+recon">Light Recon</option>
-                <option weight="16">Battle</option>
+                <option weight="16" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A" name="Rifle Lance">Rifle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -505,14 +505,14 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="12">Battle</option>
+                <option weight="12" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Rifle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -527,11 +527,11 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
                 <option weight="31" role="+recon">Recon</option>
                 <option weight="10" ifWeightClass="H|A" role="+recon">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L" role="+recon">Light Recon</option>
-                <option weight="16">Battle</option>
+                <option weight="16" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Rifle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -555,7 +555,7 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
         <name>{alpha} Company</name>
         <co>%LT%</co>
 
-        <role ifRole="lct">
+        <role ifFlags="lct">
             <option>+recon</option>
             <option>+apc</option>
         </role>
@@ -842,7 +842,7 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
         </weightClass>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option weightClass="H,H,H">%WING%</option>
                 <option weightClass="H,H,M">%WING%</option>
                 <option weightClass="H,H,L">%WING%</option>
@@ -873,7 +873,7 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
         <subforces>
             <subforce role="command">%FLIGHT%</subforce>
 
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option weightClass="H,H,H">%SQUADRON%</option>
                 <option weightClass="H,H,M">%SQUADRON%</option>
                 <option weightClass="H,H,L">%SQUADRON%</option>

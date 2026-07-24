@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Rennes
-sucsId: 2139
+sucsId: 2140
 xcood: 507.261
 ycood: -200.59
 spectralType: K5V
@@ -60,6 +60,12 @@ planet:
       - name: Sainte-Marguerite-sur-Duclair
       - name: Dufour
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2678-01-29'
         faction:
           source: canon
@@ -89,6 +95,17 @@ planet:
         population: 27987812.0
       - date: '2750-01-01'
         population: 29487913.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Broken Wheel Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 30261277.0
       - date: '2770-01-01'
@@ -135,6 +152,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Stirling-Rawdon
     type: TERRESTRIAL
     orbitalDist: 0.49

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a59f-72ef-9e56-43ab00d45f2e
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -70,24 +65,88 @@ Jump
 </armor_tech>
 
 <Squad Equipment>
-ISBAMagshotGR:RA
+ISBAMagshotGaussRifle:RA
 BABasicManipulator:LA
 BABasicManipulator:RA
 BA-Magnetic Clamp:Body
 IS BA ECM:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
-IS BA Stealth:Body
-IS BA Stealth:LA
-IS BA Stealth:LA
-IS BA Stealth:LA
+IS BA Stealth (Standard):Body
+IS BA Stealth (Standard):LA
+IS BA Stealth (Standard):LA
+IS BA Stealth (Standard):LA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Magnetic configuration replaces the parafoil attachment and anti-personnel weapon mount with magnetic clamps, allowing the suit to attach to vehicles, BattleMechs, or structures during operations. This trade sacrifices high-altitude insertion capability and antipersonnel defense in exchange for enhanced tactical mobility on the active battlefield. The Magshot Gauss Rifle remains as the primary weapon, preserving long-range sniping capability. Operators can ride armored vehicles into contested areas, dismount at close range, and engage targets before repositioning. The suit retains its stealth armor, ECM suite, and jump jets, making it an effective mobile sniping platform that can reposition rapidly by clamping onto passing vehicles between engagements.</p>
+</capabilities>
+
+<overview>
+<p>The Infiltrator Mk. II was developed by the New Avalon Institute of Science as a replacement for the original Infiltrator battle armor. Produced by Albion Advanced Technologies and Products on New Avalon, the medium-weight stealth suit entered service in 3060 after a lengthy development program. Nicknamed the "Puma" by its operators, the Mk. II addressed the shortcomings of its predecessor while preserving the core mission of deep reconnaissance and covert operations. The suit earned a strong reputation among Federated Commonwealth special forces and intelligence agencies as a capable platform for both stealth scouting and direct action missions that the original Infiltrator could not perform.</p>
+</overview>
+
+<deployment>
+<p>Word of Blake formations fielded the Magnetic configuration in six-trooper Level I formations during the Jihad. These formations attached to Blakist armored columns for mobile operations, providing dismountable reconnaissance and sniping teams that could rapidly redeploy across a fluid battlefield by clamping onto passing vehicles.</p>
+</deployment>
+
+<history>
+<p>The Infiltrator Mk. II traces its origins to growing dissatisfaction with the original Infiltrator among Federated Commonwealth intelligence agencies. Though the Armed Forces of the Federated Commonwealth was the first Inner Sphere military to field battle armor, the sheer size of the AFFC worked against continued innovation. The Commonwealth had more line units to equip than any other nation and was still rebuilding formations shattered during the Clan Invasion. Research and development funding dropped as priority shifted toward recovering from battlefield losses, leaving new battle armor development stalled.</p><p>The Intelligence Secretariat, the command element of the Federated Commonwealth Intelligence Command, recognized the original Infiltrator's limitations most acutely. In February 3056, the Secretariat directed the Office of Science and Technology to coordinate with the NAIS on developing a replacement. Progress was slow until a breakthrough arrived from an unexpected source. In 3057, the Gray Death Legion discovered a Star League vault on Karbala containing several Mark XXI Nighthawk powered armor suits. Under orders from Archon-Prince Victor Steiner-Davion, Grayson Carlyle handed the recovered suits over to the NAIS, where they were systematically dismantled and analyzed. Though the Nighthawk suits were destroyed in the process, they provided invaluable data that accelerated the replacement program considerably. NAIS scientists began producing prototypes in January 3059, and full-scale production started in March 3060.</p><p>The resulting Mk. II quickly proved superior to its predecessor in nearly every measurable category except cost. Demand outstripped supply almost immediately. Both DMI and MIIO purchased close to forty percent of all suits manufactured in the early production runs. Losses during the FedCom Civil War further tightened an already strained supply chain, though the Puma could eventually be found in most Regimental Combat Teams and dedicated special forces units across both successor states.</p><p>The Mk. II's combat record established it as the premier Inner Sphere stealth battle armor. Covert operations forces praised its ability to scout enemy positions undetected and fight its way out when discovered. The suit remained in wide service across both the AFFS and LAAF after the FedCom schism, with commanders on both sides considering it essential equipment for special operations formations.</p><p>Several variant configurations emerged over the decades following initial production. A sensor-focused variant appeared in 3063, trading the primary weapon for enhanced detection equipment. During the Jihad, a magnetic clamp configuration entered service in 3071 for operators who needed to attach to vehicles or structures on the active battlefield. A marine variant designed for boarding operations followed in the Dark Age era. The experimental Coral Intent prototypes explored mimetic armor and C3 integration under Project CORAL INTENT at Achernar BattleMechs on New Avalon. Each configuration preserved the suit's core stealth characteristics while adapting mission equipment for specialized operational requirements. Production expanded beyond New Avalon when HDF Manufacturing on Falsterbo began manufacturing the standard Puma configuration during the late Republic era, ensuring continued supply as the political arena shifted across the former Federated Commonwealth.</p>
+</history>
+
+<manufacturer>
+Albion Advanced Technologies and Products
+</manufacturer>
+
+<primaryFactory>
+New Avalon
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-ONN
+</published>
 
 <chassis>
 biped
@@ -109,35 +168,3 @@ biped
 2
 </weightclass>
 
-<overview>
-The Infiltrator Mk. II is a battle armor suit designed as a replacement for the earlier Infiltrator Mk. I.
-</overview>
-
-<capabilities>
-Although the Puma has just a top ground speed of 10.8 km/h, the inclusion of integral Jump Jets allows it to jump 90 meters at a time. The 360kg of Standard Stealth armor the Mk. II caries not only allows it to withstand a full burst from an Inner Sphere Medium Pulse Laser and keep fighting, it also mimics the effect of a combination IR/ECM Sneak Suit, continually recharged by the suit to allow indefinite operation. Providing additional electronic protection is a personal-sized ECM Suite. Finally the suit includes an optional Parafoil attachment that aids in HALO drops.
-</capabilities>
-
-<deployment>
-This Jihad variant, first used in 3071, replaces the parafoil and AP weapon mount to make place for Magnetic Clamps.
-</deployment>
-
-<history>
-The original Infiltrator had long served the Armed Forces of the Federated Commonwealth (as well as DMI and MIIO) as a stealth suit that was a capable scout and could easily penetrate enemy lines. It did, however, have a number of drawbacks to its design and as one of the first generation of battle armor it no longer served the needs of the Federated Commonwealth's intelligence agencies sufficiently. Despite this need for a replacement, it took some time for the Commonwealth to respond as they had more units to equip with battle armor than any other nation and were still in the midst of rebuilding many units shattered during the Clan Invasion. Initial research and development on the new suit began in February 3056, when the Intelligence Secretariat directed the Office of Science and Technology to coordinate with the New Avalon Institute of Science on a replacement, but it wasn't until a year later when they received a startling breakthrough. The Gray Death Legion had located an ancient Star League vault on Karbala and retrieved several Nighthawk power armor suits from the hidden cache. Under orders from his liege Archon-Prince Victor Steiner-Davion, Grayson Carlyle was forced to hand the suits over to the NAIS in August 3057, where they were dismantled entirely. The destruction of the Nighthawk suits provided invaluable data to the NAIS scientists, who in January 3059 began producing prototype suits; full-scale production would finally start in March 3060. The Infiltrator Mk. II, nicknamed the "Puma" by many troopers, proved to be superior to the original Infiltrator in nearly every way except cost. This was especially true when performing "direct actions" as the Mk. II was far more combat-capable than the original. Demand for the new suit exceeded supply in the early years - both FedCom intelligence agencies bought up nearly half of all Mk. IIs produced - and this shortage was only exacerbated after casualties suffered during the FedCom Civil War. Despite this the Mk. II could be found in most Regimental Combat Teams and dedicated special forces units for years to come.
-</history>
-
-<manufacturer>
-Albion Advanced Technologies and Products,Refit
-</manufacturer>
-
-<primaryFactory>
-New Avalon,Various
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

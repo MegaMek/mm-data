@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,6 +15,8 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-dd9a-73aa-a62a-dfcc1c21c722
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Ground Pounder
 model:DVM-2 MiningMech
 mul id:7872
@@ -23,11 +25,13 @@ Config:Biped
 techbase:Inner Sphere
 era:3125
 source:TR:I
+published:TR:I
 rules level:2
 role:Ambusher
 
+
 mass:65
-engine:195 ICE Engine(IS)
+engine:195 ICE Engine
 structure:IS Industrial
 myomer:Standard
 cockpit:Industrial Cockpit
@@ -83,8 +87,8 @@ Heavy-Duty Pile Driver
 Left Torso:
 MechSprayer
 MechSprayer
-Liquid Storage:size:2.0
-Liquid Storage:size:2.0
+Liquid Storage:SIZE:2.0
+Liquid Storage:SIZE:2.0
 -Empty-
 -Empty-
 -Empty-
@@ -97,8 +101,8 @@ Liquid Storage:size:2.0
 Right Torso:
 MechSprayer
 MechSprayer
-Liquid Storage:size:2.0
-Liquid Storage:size:2.0
+Liquid Storage:SIZE:2.0
+Liquid Storage:SIZE:2.0
 -Empty-
 -Empty-
 -Empty-
@@ -164,4 +168,24 @@ Tracks
 -Empty-
 -Empty-
 
+overview:<p>The Ground Pounder is a sixty-five-ton MiningMech manufactured by DeValt Industries at their facility on Halstead Station, introduced in 3125 as another in the wave of designs inspired by Achernar BattleMechs' successful Dig King and Dig Lord. Like the closely related Burrower produced by Duratron Enterprises, the Ground Pounder is a low-tech imitation built around inexpensive components and an internal combustion engine, designed to compete in the civilian mining market on price rather than technological sophistication.</p><p>The Ground Pounder's similarities to the Burrower extend beyond their shared Dig Lord heritage, both designs follow nearly identical mass and general configurations, differing primarily in component manufacturers and specific equipment loadouts. This parallel development reflects the common practice of multiple companies independently copying the same successful design using the widely available Dig King specifications as a starting point.</p>
 
+capabilities:<p>The Ground Pounder employs a DeValt MM-2600.2 chassis frame that closely parallels the Burrower's Duratron design, powered by the same ConLee 195-rated internal combustion engine. The civilian DVM-2 variant differs from the Burrower in its specific tool loadout, carrying a mining drill and two sprayers rather than fluid guns, along with a hydraulic pile driver instead of a rock cutter. This configuration suggests the Ground Pounder was optimized for surface and shallow excavation work rather than the deep tunnel mining that characterized the original Dig King.</p><p>The factory-standard DVM-2M MiningMech MOD follows the same militarization pattern as the Burrower MOD, replacing mining equipment with weapons while retaining the pile driver for close combat. DeValt's conversion mounts two SRM-4 launchers guided by two Guided Technologies I NCK "Thornbush" packs and two Bulldog machine guns, supported by advanced fire control and heavy industrial StarSlab/3 armor. Two heat sinks manage waste heat from the weapons systems. The SRM-focused loadout gives the Ground Pounder MOD better close-range punch than the Burrower's MML-based armament, though it lacks the flexibility of switching between missile types. Both MOD variants share the characteristic tracked movement system and narrow, low-profile silhouette inherited from their mining origins.</p>
+
+deployment:<p>The base DVM-2 is the original civilian Ground Pounder introduced in 3125, distinguished from the similar Burrower by its use of a hydraulic pile driver rather than a rock cutter and sprayers instead of fluid guns alongside its mining drill. Like the Burrower, it runs on a ConLee 195-rated ICE and completely lacks heat sinks in its civilian configuration. The pile driver's presence suggests the Ground Pounder was oriented toward surface and foundation work rather than deep tunnel mining.</p>
+
+history:<p>DeValt Industries introduced the Ground Pounder in 3125, a decade after Duratron Enterprises brought the Burrower to market. Produced on Halstead Station in Draconis Combine space, the Ground Pounder competed directly with the Burrower and other Dig Lord derivatives for the civilian mining market. While the design offered no significant technical advantages over its competitors, DeValt's established distribution network and competitive pricing secured steady sales across Combine worlds and neighboring states.</p><p>The DVM-2M MOD variant entered production in 3133, slightly later than the Burrower's militarized version. Like the Burrower MOD, both designs are suspected to derive their armed configurations from the much older Dig King MOD patterns that had proven their worth during the Succession Wars. The Ground Pounder MOD found its niche alongside the Burrower in the rapidly expanding market for affordable armed platforms that emerged following the collapse of the HPG network and the subsequent breakdown of centralized authority across much of the Inner Sphere.</p><p>The parallel existence of the Burrower and Ground Pounder (two very similar designs from different manufacturers competing for the same market) exemplifies the broader pattern of MiningMech proliferation during the Dark Age. With BattleMech trade restricted and traditional military supply chains disrupted, the armed IndustrialMech became an essential component of local defense forces, mercenary commands, and even criminal enterprises across the Inner Sphere. The formation of all-MOD mercenary commands and the growing presence of armed MiningMechs in even established military formations testified to the enduring demand for these affordable, if unsophisticated, combat platforms.</p>
+
+manufacturer:DeValt Industries
+
+primaryfactory:Halstead Station
+
+fluffdate:2026-02-21 18:24:59
+
+systemmanufacturer:CHASSIS:DeValt
+systemmode:CHASSIS:MM-2600.2
+systemmanufacturer:ENGINE:ConLee
+systemmode:ENGINE:195 ICE
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:COMMUNICATIONS:Omicron
+systemmode:COMMUNICATIONS:5000

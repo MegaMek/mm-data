@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfdb-72c8-bc6f-125d01990f37
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Foot Platoon
 2500
 </year>
 
-<originalBuildYear>
-2500
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,16 +44,15 @@ IS Level 3
 Leg
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
 <overview>
-Originally Heavy Mountain Infantry / Cavalier 'Mountain Men' Infantry Guard, Magistracy Cavaliers
-and
-Mountaineer 45th Cerulean Mountain Infantry, 3rd Davion Guards
+<p>Mountain rifle platoons are trained for high-altitude combat in thin atmospheres, carrying Imperator assault rifles and heavy mortars suited to the steep terrain and long engagement ranges of mountain warfare. These troops traverse vertical terrain at three times the rate of standard infantry and operate effectively in conditions that exhaust conventional soldiers. The heavy mortars provide organic indirect fire capability that is particularly valuable in mountainous terrain where line-of-sight weapons cannot reach defilade positions.</p>
 </overview>
 
 <source>
@@ -86,17 +76,10 @@ Rifle (Imperator AX-22 Assault)
 </Primary>
 
 <Secondary>
-Mortar (Heavy)
+InfantryHeavyMortar
 </Secondary>
-
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
 
 <specialization>
 128
 </specialization>
+

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Glabach
-sucsId: 962
+sucsId: 963
 xcood: 108.824
 ycood: 443.254
 spectralType: G5V
@@ -67,6 +67,12 @@ planet:
       - name: Neu Redange
       - name: Dippach
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2675-01-15'
         faction:
           source: canon
@@ -93,6 +99,16 @@ planet:
         population: 73728219.0
       - date: '2750-01-01'
         population: 77853206.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Rasalhague Military District
+        #   - Trondheim Prefecture
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2760-01-01'
         population: 80040269.0
       - date: '2770-01-01'
@@ -139,6 +155,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Zoepfel
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

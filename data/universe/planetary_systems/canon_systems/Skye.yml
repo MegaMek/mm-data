@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Skye
-sucsId: 2356
+sucsId: 2357
 xcood: -57.009
 ycood: 51.376
 spectralType:
@@ -174,6 +174,12 @@ planet:
         population: 264756793.0
       - date: '2270-01-01'
         population: 363102954.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 479589455.0
       - date: '2290-01-01'
@@ -187,6 +193,12 @@ planet:
         population: 773878763.0
       - date: '2310-01-01'
         population: 942112446.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FoS
       - date: '2320-01-01'
         population: 1117039083.0
       - date: '2330-01-01'
@@ -198,10 +210,26 @@ planet:
           source: canon
           value:
             - LA
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FoS
       - date: '2350-01-01'
         population: 1678879085.0
       - date: '2360-01-01'
         population: 1866135455.0
+      - date: '2366-12-31'
+        # administration:
+        #   - Federation of Skye
+        # capitalType: District Capital
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2370-01-01'
         population: 2053308612.0
       - date: '2378-01-01'
@@ -248,6 +276,11 @@ planet:
         population: 4508821494.0
       - date: '2570-01-01'
         population: 4574685036.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Federation of Skye
+        #   - Isle of Skye
+        # capitalType: District Capital
       - date: '2580-01-01'
         population: 4614844774.0
       - date: '2590-01-01'
@@ -350,14 +383,26 @@ planet:
       - date: '3030-03-13'
         population: 4153725755.0
         socioIndustrial: B-B-B-C-C
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-04-03'
         population: 4210181270.0
         socioIndustrial:
           source: canon
           value: A-A-A-B-B
-      - date: '3040-01-19'
+      - date: '3040-12-31'
+        # administration:
+        #   - Skye March
+        #   - Alcor Operational Area
+        #   - Region 2
+        # capitalType: District Capital
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -367,6 +412,16 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Skye Province
+        # capitalType: District Capital
       - date: '3060-01-01'
         population: 4307706827.0
       - date: '3067-01-01'
@@ -384,6 +439,16 @@ planet:
       - date: '3081-01-16'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3081-12-31'
+        # administration:
+        #   - Prefecture IX
+        # capitalType: Region Capital
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -407,6 +472,12 @@ planet:
           source: canon
           value:
             - CJF
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CJF
       - date: '3140-01-01'
         population: 4732438895.0
       - date: '3145-01-01'
@@ -416,14 +487,16 @@ planet:
           source: canon
           value:
             - CWE
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - CWE
-      - date: '3152-06-01'
+      - date: '3152-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - IoS
   - name: Hung

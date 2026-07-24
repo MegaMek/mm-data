@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -24,14 +24,15 @@
     <allowEarlyVictory>true</allowEarlyVictory>
     <hostileFacilityCount>0</hostileFacilityCount>
     <scenarioOdds>
-        <scenarioOdds>20</scenarioOdds>
-        <scenarioOdds>40</scenarioOdds>
-        <scenarioOdds>80</scenarioOdds>
-        <scenarioOdds>40</scenarioOdds>
+        <!-- This is based on CamOps pg 42 rev 5th printing -->
+        <scenarioOdds>38</scenarioOdds>
+        <scenarioOdds>48</scenarioOdds>
+        <scenarioOdds>48</scenarioOdds>
+        <scenarioOdds>58</scenarioOdds>
     </scenarioOdds>
     <deploymentTimes>
+        <!-- Fast strike-and-vanish turnover. The value '3' is intentionally repeated three times to weight the probability of selecting 3 as a deployment time. -->
         <deploymentTimes>2</deploymentTimes>
-        <!-- The value '3' is intentionally repeated three times to weight the probability of selecting 4 as a deployment time. -->
         <deploymentTimes>3</deploymentTimes>
         <deploymentTimes>3</deploymentTimes>
         <deploymentTimes>3</deploymentTimes>
@@ -42,21 +43,22 @@
             <objectiveCount>-1</objectiveCount>
             <objectiveType>AnyScenarioVictory</objectiveType>
             <objectiveScenarioModifiers>
-                <objectiveScenarioModifier>OverwhelmingEnemyGroundReinforcements.xml</objectiveScenarioModifier>
-                <objectiveScenarioModifier>OverwhelmingEnemyAirReinforcements.xml</objectiveScenarioModifier>
+                <objectiveScenarioModifier>EnemyHotDrop.xml</objectiveScenarioModifier>
+                <objectiveScenarioModifier>BadEvent.xml</objectiveScenarioModifier>
             </objectiveScenarioModifiers>
         </objectiveParameter>
         <objectiveParameter>
             <objectiveType>FacilityDestruction</objectiveType>
-            <objectiveCount>-1.0</objectiveCount>
+            <objectiveCount>-1</objectiveCount>
         </objectiveParameter>
         <objectiveParameter>
-            <objectiveCount>-1.0</objectiveCount>
+            <objectiveCount>-0.5</objectiveCount>
             <objectiveType>SpecificScenarioVictory</objectiveType>
             <objectiveScenarios>
-                <objectiveScenario>VIP Ambush.xml</objectiveScenario>
                 <objectiveScenario>Deep Raid.xml</objectiveScenario>
                 <objectiveScenario>Deep Raid Defense.xml</objectiveScenario>
+                <objectiveScenario>Frontline Disruption.xml</objectiveScenario>
+                <objectiveScenario>Supply Denial.xml</objectiveScenario>
             </objectiveScenarios>
         </objectiveParameter>
     </objectiveParameters>

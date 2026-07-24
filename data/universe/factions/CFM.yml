@@ -17,6 +17,11 @@
 
 key: CFM
 name: Clan Fire Mandrill
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CFM
 capital: Shadow
 yearsActive:
   - start: 2807
@@ -47,7 +52,7 @@ factionLeaders:
     firstName: "Raymond"
     surname: "Sainze"
     gender: "MALE"
-    startYear: 3807
+    startYear: 2807
     endYear: 2817
   - title: "Khan"
     firstName: "Vernon"
@@ -94,3 +99,5 @@ factionLeaders:
     gender: "FEMALE"
     startYear: 3071
     endYear: 3073
+usesMercenaries:
+  2500: false

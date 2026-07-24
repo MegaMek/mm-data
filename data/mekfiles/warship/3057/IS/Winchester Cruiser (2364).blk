@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed4d-787a-9b6a-8c3710b17587
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Winchester Cruiser
 2364
 </year>
 
-<originalBuildYear>
-2364
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,15 +53,15 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:12.0:3:1
-smallcraftbay:6.0:2:2
-cargobay:155352.0:1:3
+asfbay:12.0:3:1::-1:0
+smallcraftbay:6.0:2:2::-1:0
+cargobay:155352.0:1:3::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
-1stclassquarters:630.0:0
-steeragequarters:280.0:0
-crewquarters:1127.0:0
+1stclassquarters:630.0:0:-1::-1:0
+steeragequarters:280.0:0:-1::-1:0
+crewquarters:1127.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -97,9 +88,13 @@ crewquarters:1127.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 45
@@ -207,15 +202,19 @@ Medium Laser
 </structural_integrity>
 
 <capabilities>
-The Winchester-class cruisers were notable for their combination of heavy armor and high speed. They could reach a maximum acceleration of 2.5 Gs while withstanding heavy fire, making them resilient in combat. The primary firepower of the cruisers relied on naval autocannon and lasers, complemented by smaller-scale lasers and autocannon for anti-fighter defense. These cruisers also featured fighter and small craft bays capable of accommodating three support squadrons and docking collars for larger vessels. They often carried a range of attendant DropShips, including troop transports and boarding craft, manned partially by the Winchester's own complement of trained marines.
+<p>At 740,000 tons and 457 meters, the Winchester is a compact but heavily armed cruiser that relies on naval autocannons and lasers for its primary firepower. Three NL45 naval lasers anchor the nose battery, while the forward quarters each mount a NAC/25 naval autocannon and three Barracuda capital missile launchers for combined kinetic and missile striking power. The broadsides deliver the main weight of fire with four NAC/10 naval autocannons per side, supported by three large lasers and six medium lasers for anti-fighter defense. The aft quarters mount paired NL35 naval lasers, and two NAC/30 naval autocannons in the direct stern provide a heavy deterrent against pursuit, supplemented by four conventional AC/5 autocannons. One thousand five hundred single heat sinks manage the thermal load across all arcs. Five hundred and fourteen tons of standard armor provide solid protection for the era.</p><p>Three docking collars support attached DropShips, typically ranging from troop transports to boarding craft crewed in part by the ship's complement of fifty-six trained marines. Twelve aerospace fighters and six small craft provide screening capability. Two gravity decks measuring 70 and 90 meters in diameter serve the crew, and a cavernous cargo hold carries over 154,000 tons of supplies. As an Age of War design, however, the Winchester lacks more advanced capital weapons fielded by later cruiser classes, and its reliance on single heat sinks constrains sustained fire across all weapon arcs simultaneously.</p>
 </capabilities>
 
 <overview>
-The Winchester-class cruiser was a significant military asset for the Taurian Concordat during a time of shifting power dynamics in the Inner Sphere. Produced at the Illiushin shipyards, these cruisers showcased the Concordat's determination to strengthen its naval forces and defend against potential invasions. Known for their impressive speed and heavy armor, the Winchester-class cruisers became a source of pride for the Taurian space fleet, representing the rugged and progressive spirit of the Concordat.
+<p>The Winchester-class cruiser was the pride of the Taurian Concordat's early space fleet, entering service in 2364 as a bold demonstration of Periphery naval power. Built at Illiushin Shipyards on the Concordat world of Illiushin, the Winchester was conceived during a period of rising tensions between the Periphery states and the Inner Sphere's expanding great powers. The Concordat, determined to defend its sovereignty against potential aggression, invested heavily in its naval arm, and the Winchester became the centerpiece of that effort. Fast, well armored, and heavily armed for its era, the class earned a fearsome reputation among potential adversaries. Few Periphery nations of the period could field a cruiser of comparable power, and the Winchester proved that the Concordat could compete with its larger neighbors in open naval warfare.</p>
 </overview>
 
+<deployment>
+<p>The TCS Pinard was part of a Taurian Concordat flotilla that jumped into the Malagrotta system in 2573, arriving with navigational problems alongside several other Concordat warships including two Wagon Wheel-class frigates. After proceeding toward the mining moon Fortuna for repairs, a Federated Suns naval squadron arrived two days later and engaged the Taurian force. In a three-hour battle, the Federated Suns destroyed or captured all but one Taurian vessel, losing only a single Leopard CV-class DropShip. The TCS Pinard was the sole survivor, escaping the engagement that became known as the Malagrotta Affair and securing its place in Taurian naval legend.</p>
+</deployment>
+
 <history>
-During a period of political upheaval and the rise of more powerful Inner Sphere realms, the Taurian Concordat embarked on an arming campaign to secure its future. The construction of the Winchester-class cruisers marked the beginning of the Concordat's new fleet, serving as a symbol of their military might. Despite their impressive armor and speed, the Winchester-class cruisers became obsolete by the time the Concordat faced full-scale interstellar warfare during the Reunification War. Throughout the war, these aging cruisers were destroyed in various engagements, with the final vessels meeting their fate in the Battle of Robsart in 2581. The Winchester-class cruisers had a mixed armament, allowing them to engage both large and small targets. However, compared to later cruisers and heavier classes, their light armor and armament posed a disadvantage during the Reunification War, leading to their ultimate defeat.
+<p>The Winchester-class cruiser emerged from the turbulent decades following the collapse of the Terran Alliance, when the Taurian Concordat faced an increasingly hostile strategic environment. The Terran Hegemony was consolidating its grip on the Inner Sphere's core worlds, and the Crucis Pact was coalescing into what would become the Federated Suns. Concordat leadership, determined to defend its sovereignty against these rising powers, responded with a comprehensive military buildup centered on strengthening its naval capabilities. Illiushin Shipyards on the Concordat world of Illiushin received the commission to produce what would become the flagship class of the Taurian space fleet.</p><p>Entering service in 2364, the Winchester immediately earned a place of honor within the Concordat's naval arm. The class combined impressive acceleration with heavy armor protection, making it a formidable opponent for any vessel of its era. Its armament was considerable, and a large marine complement gave it a credible boarding capability. Serving aboard a Winchester was considered the height of a Taurian naval officer's career, and the class came to symbolize Concordat independence and military ambition.</p><p>The Winchester first saw significant combat during the Malagrotta Affair of 2573, when the TCS Pinard escaped a disastrous engagement that destroyed the rest of a Concordat flotilla. The incident directly precipitated the Reunification War, transforming the Concordat's long-held fears about Inner Sphere aggression into reality.</p><p>The Reunification War proved fatal to the entire class. As the Star League Defense Force systematically dismantled the Taurian Concordat's military, Winchester-class cruisers were engaged and destroyed in actions across Concordat space. No vessel of the class survived the war intact. The final Winchesters fell in 2581 at the Battle of Robsart, one of the last major naval actions of the campaign. With no surviving examples and Illiushin Shipyards unable to replace them, a class that had once symbolized Taurian sovereignty was consigned to history. The loss of the Winchesters left a lasting mark on the Concordat's naval identity, a reminder of both the heights the nation had reached and the price of its defiance.</p>
 </history>
 
 <manufacturer>
@@ -227,12 +226,22 @@ Illiushin
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Illiushin Shipyards
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Winchester
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Compact
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Cruiser

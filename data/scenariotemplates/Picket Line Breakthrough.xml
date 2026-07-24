@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -27,12 +27,18 @@ Expect light screening forces supported by rapid response elements. The enemy wi
 As you will be pushing into enemy territory, we will be unable to secure the battlefield following the engagement. Any salvage or wreckage left behind will be lost, so prioritize survival and mission success over prolonged engagements. Punch through, force them to react, and establish dominance beyond their lines.]]></detailedBriefing>
     <battlefieldControl>ENEMY</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>50</baseHeight>
         <baseWidth>17</baseWidth>
         <heightScalingIncrement>0</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>

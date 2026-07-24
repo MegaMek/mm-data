@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ebd0-7d5d-b967-89609fb4de53
+</UUID>
 
 <UnitType>
 Tank
@@ -33,9 +28,9 @@ Tank
 Maxim Flanker
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 2116
@@ -44,10 +39,6 @@ Maxim Flanker
 <year>
 3074
 </year>
-
-<originalBuildYear>
-3074
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -62,7 +53,7 @@ Hover
 </motion_type>
 
 <transporters>
-cargobay:4.0:1:1
+cargobay:4.0:1:1::-1:0
 </transporters>
 
 <cruiseMP>
@@ -72,6 +63,18 @@ cargobay:4.0:1:1
 <engine_type>
 0
 </engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 20
@@ -108,43 +111,55 @@ Machine Gun(ST)
 Machine Gun
 </Rear Equipment>
 
-<tonnage>
-50.0
-</tonnage>
+<capabilities>
+<p>The Flanker replaces the standard Maxim's turret with a pair of sponson turrets mounted on either side of the hull, each carrying a mix of missile and ballistic weapons. The right sponson mounts an LRM-15 and an SRM-4, while the left sponson carries an SRM-2 and three machine guns. A rear-mounted machine gun provides minimal protection against pursuing infantry. A fusion engine replaces the standard ICE powerplant, increasing the flank speed to 129 kilometers per hour while freeing internal volume.</p><p>The deliberate asymmetry of the armor layout places nearly all protection on the left side, with the right side carrying minimal plating. This was intended to allow the vehicle to orbit an enemy position while presenting its armored flank, then deploy infantry from the protected side. In practice, the lack of a top-mounted turret eliminated hull-down engagement options, and the unbalanced armor distribution was not properly compensated for in the vehicle's guidance system. The hover skirt proved particularly vulnerable to flanking fire, and the overall concept failed to account for the basic reality that hovercraft are especially susceptible to side hits that damage their mobility.</p>
+</capabilities>
+
+<overview>
+<p>The Maxim Flanker is an experimental prototype developed at Cyclops Incorporated's facility on Skye in 3074. Designed by technician Buford Leopold, the Flanker attempted to reimagine the Maxim's role during troop deployment by mounting sponson turrets and adopting a deliberately asymmetric armor layout. The concept never progressed beyond the prototype stage, and only a single vehicle was constructed.</p><p>Intended to present a heavily armored broadside to the enemy while deploying infantry from the protected opposite side, the Flanker represented an unconventional and ultimately unsuccessful approach to hover transport tactics. The design attracted brief attention within Cyclops for its creative ambition, though its fundamental tactical assumptions proved flawed under testing conditions.</p>
+</overview>
+
+<deployment>
+<p>The sole Maxim Flanker prototype was constructed at Cyclops Incorporated's Skye facility in 3074 and never progressed beyond initial testing. The prototype's poor performance during live-fire exercises led Cyclops to cancel the project. No production variants were authorized, and the design exists only as an experimental curiosity in the company's archives.</p>
+</deployment>
+
+<history>
+<p>The Maxim Flanker emerged from the personal initiative of Buford Leopold, a technician at Cyclops Incorporated on Skye who envisioned a new approach to troop deployment from hover transports. Leopold proposed that a Maxim could be modified to present a single heavily armored side to the enemy while using sponson-mounted weapons to suppress opposition during infantry deployment. The concept attracted enough internal interest at Cyclops to secure prototype funding, with construction beginning in 3074 during the height of the Jihad.</p><p>Leopold's design was apparently developed without significant input from combat veterans, and the prototype's first live-fire exercise highlighted numerous fundamental problems. The asymmetric armor made the vehicle dangerously vulnerable to flanking fire from the right side, a weakness that any competent opponent could exploit within moments of engagement. The sponson turrets lacked the firing arcs of a conventional top turret, and the unbalanced weight distribution was never properly addressed in the flight control software. The exercise ended when the Flanker's air skirt collapsed during a low-speed maneuver, leaving the prototype stationary and exposed.</p><p>Cyclops Incorporated shelved the project after the failed trials. The Flanker's design files were retained in the company archives, and the single prototype was reportedly scrapped for parts. The project is occasionally referenced within Cyclops as a cautionary example of the gap between theoretical innovation and battlefield practicality.</p>
+</history>
+
+<manufacturer>
+Cyclops Incorporated
+</manufacturer>
+
+<primaryFactory>
+Skye
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:PowerTech
+ARMOR:Unknown
+COMMUNICATIONS:Maxim New Standard
+TARGETING:Maxim New Standard
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:165 Highlift
+ARMOR:Unknown
+COMMUNICATIONS:I/O
+TARGETING:TargetTrack
+</systemModels>
 
 <source>
 XTR:Corps
 </source>
 
-<capabilities>
-The Maxim transport fulfilled an infantryman's dream. Its single infantry bay is configured to carry an entire foot platoon with enough space for them to check their weapons and move around comfortably.
-The seats are all padded and face the centre of the vehicle, allowing infantry to communicate with one another and boost morale. Unlike other craft, the crew of the Maxim can deflate the rear portion of the hover skirt when disembarking or mounting up. In a combat situation, the Maxim also performs admirably. With its short- and long-range missiles, the hovertank can provide cover fire in any direction for a debarking infantry platoon.
-</capabilities>
+<published>
+XTR:Corps
+</published>
 
-<overview>
-While many infantry transports have been popular, none have reached the iconic status of the Maxim.
-</overview>
+<tonnage>
+50.0
+</tonnage>
 
-<deployment>
-Designed to increase the hovercraft's performance while dropping troops, the Flanker model has Sponson Turrets and has much more armor on its left side than its right. The idea was to present a heavily-armed and armored broadside to the enemy while performing its primary duty.
-</deployment>
-
-<history>
-Nobody anticipated how quickly the Maxim would become a success after it was designed and manufactured by Maxim Transport Industries, a start-up company on Al Na'ir led by a retired infantry general. The Maxim has spread to every corner of the Inner Sphere and is now considered the standard for troop transports. Many units rejoiced at the prospect of being able to transport their infantry platoons in a single vehicle rather than three or four separate vehicles. The company thrived and later opened plants on Skye and Sian, with plans to open plants on Atreus and Kathil once several more vehicles could be produced. While the Maxim was a huge success, many of MTI's other forays into the military market were abysmal failures, and the company barely survived. During the beginning of 3037, a massive scandal erupted throughout the company, effectively ending it. Accusations of inappropriate behaviour among coworkers, embezzlement, and rumours of bizarre hazing rituals led to the company's demise and dissolution. Sensing an opportunity, prominent corporations purchased nearby Maxim facilities at low rates, and in the case of the Sian facility, with armed force.
-</history>
-
-<manufacturer>
-Field Refit
-</manufacturer>
-
-<primaryFactory>
-Various
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown Fusion
-ARMOR:ProtecTech 6
-COMMUNICATIONS:Scarborough Talky 2 with ECM
-TARGETING:Scarborough Tracky 1 with TAG
-</systemManufacturers>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,52 +15,52 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c3f1-7872-96a8-88be8f198716
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Clint
 model:CLNT-3-3T
 mul id:649
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3069
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3069
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Striker
 
-
-
 quirk:imp_target_long
-quirk:imp_target_med
-quirk:difficult_maintain
 quirk:exp_actuator
+quirk:difficult_maintain
+quirk:imp_target_med
 quirk:non_standard
 
+mass:40
+engine:240 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:40
-Engine:240 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 Single
+walk mp:6
+jump mp:6
 
-Heat Sinks:10 Single
-Walk MP:6
-Jump MP:6
-
-Armor:Ferro-Fibrous
-LA Armor:9
-RA Armor:9
-LT Armor:12
-RT Armor:12
-CT Armor:12
-HD Armor:9
-LL Armor:16
-RL Armor:16
-RTL Armor:4
-RTR Armor:4
-RTC Armor:4
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:9
+RA armor:9
+LT armor:12
+RT armor:12
+CT armor:12
+HD armor:9
+LL armor:16
+RL armor:16
+RTL armor:4
+RTR armor:4
+RTC armor:4
 
 Weapons:3
-1 ISLAC5, Right Arm, Ammo:40
-1 ISMediumLaser, Left Torso
-1 ISMediumLaser, Center Torso
+Light AC/5, Right Arm
+Medium Laser, Left Torso
+Medium Laser, Center Torso
 
 Left Arm:
 Shoulder
@@ -80,8 +80,8 @@ Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-ISLAC5
-ISLAC5
+Light Auto Cannon/5
+Light Auto Cannon/5
 -Empty-
 -Empty-
 -Empty-
@@ -92,29 +92,29 @@ ISLAC5
 
 Left Torso:
 Jump Jet
-ISMediumLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+Medium Laser
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
 Right Torso:
 Jump Jet
 Heat Sink
-ISLAC5 Ammo
-ISLAC5 Ammo
+IS Ammo LAC/5
+IS Ammo LAC/5
 ISCASE
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -129,8 +129,8 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISMediumLaser
-Ferro-Fibrous
+Medium Laser
+IS Ferro-Fibrous
 
 Head:
 Life Support
@@ -174,19 +174,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Clint was primarily designed as a cheap recon unit, with the capabilities of a well-armed, low-end medium weight 'Mech, and in this regard it served well. 
+overview:<p>The Clint was commissioned in 2607 by the Star League Defense Force from Andoran Industries Limited, a minor BattleMech firm on Bell that secured the contract under the Star League Armaments Act by undercutting competitors with cost-cutting design features. Mass production of the CLNT-2-3T began in 2608, with over 300 units built before the fall of the Star League and the destruction of Andoran's factories during fighting between House Davion and House Liao.</p><p>Designed primarily as an inexpensive reconnaissance unit with the capabilities of a well-armed, low-end medium 'Mech, the Clint fulfilled its intended role admirably despite significant maintenance challenges. The design's non-standard components and shoddy construction made it a technician's nightmare, but its combination of speed, firepower, and an exceptional targeting system ensured its continued service across the Inner Sphere and Periphery for centuries.</p>
 
-capabilities:With a top speed of 97.2 km/h and a jumping capability of 180 meters, the Clint can easily keep up with other recon elements and maneuver through mountainous or urban terrain. Its Sloan 220 Lockover T&T system in particular shines, as it is simple to use and provides the pilot with excellent battlefield data. Although the 'Mech has limited ammunition reserves for its autocannon, the Sloane 220 ensures that whatever the Clint shoots at, it hits.
+capabilities:<p>The original Clint prototypes mounted a heavier Armstrong Buster-class autocannon, but chassis stress problems during testing forced Andoran to downgrade to the lighter Armstrong J11 autocannon/5. This weapon provides reliable medium-range firepower, complemented by a pair of Martell medium lasers that give the Clint effective close-range punch. The design's limited ammunition supply can force pilots to rely entirely on their lasers during prolonged engagements.</p><p>The Clint's Pitban 240 fusion engine propels the 'Mech to speeds approaching 100 kilometers per hour, while Andoran Model JJII jump jets provide 180 meters of jumping capability, allowing it to keep pace with other reconnaissance elements and maneuver effectively through broken terrain. This mobility, combined with the exceptional Sloane 220 Lockover targeting system, compensates significantly for the design's maintenance difficulties.</p><p>The Clint exemplifies the adage that one's ride was built by the lowest bidder. Its non-standard components require specific replacements that cannot be easily exchanged with other BattleMech types, and parts rarely lasted a year under normal use. The gyroscope became particularly notorious, with replacement units commanding prices literally worth their weight in gold during the Succession Wars. Despite these flaws, engineers who can look past the poor-quality parts generally agree that the overall design is steady and reliable.</p>
 
-deployment:Produced by the Taurian Concordat at the outbreak of the Jihad, the 3-3T modifies the original 2-3T. It adds ferro-fibrous armor to the design and swaps out the AC/5 with a light AC/5, presumably supplied to them by the Word of Blake. This lighter weapon makes room for the inclusion of CASE and two tons of ammunition, ensuring it is able to carry various types of munitions. 
+deployment:<p>Produced by Pinard Protectorates Limited in the Taurian Concordat at the outbreak of the Jihad, the 3-3T modifies the original 2-3T by adding ferro-fibrous armor and replacing the standard AC/5 with a light autocannon of the same caliber, presumably supplied by the Word of Blake. The weight savings from the lighter weapon allowed designers to incorporate CASE protection and expand ammunition capacity to two tons, enabling the use of various specialized munitions while protecting against catastrophic ammunition explosions.</p>
 
-history:The Clint was built in 2607 as a direct result of the Star League Armaments Act, a law intended to provide frontier areas with cutting-edge warfare technology. However, Andoran Industries Ltd., a tiny BattleMech firm based on Bell, won the project by undercutting its competitors with cost-cutting design features. The Clint was not only made with substandard parts that rarely lasted a year, but it also employed very few standard components; modular pieces that could be easily transferred between many different 'Mechs could not be used in the Clint without extensive modification. The machine became a technician's nightmare, requiring more time to fix than comparable 'Mechs and allowing Andoran to recoup the Clint's low purchase price with a costly service contract. Before the Star League crumbled, over 300 Clints were created, and Andoran's factories were destroyed during conflict between the Federated Suns and the Capellan Confederation. House Davion and House Liao seized the majority of the remaining Clints and dispatched them to isolated regions inside their realms for defense purposes, however the Capellans retained several of the 'Mechs in front-line troops. Nonetheless, the explosion of the Bell facility destroyed not only the original Clint blueprints, effectively terminating new unit and spare part production, but also records of the exact number of Clints made and variants created. Clints could therefore be found across the Inner Sphere throughout the Succession Wars, proving rather popular in the Periphery, although the origins of many of these machines, and whether their different loadouts were official manufacture modifications or simple field-refits, remained unknown. Furthermore, the Clint's non-standard components quickly rose in price - the gyro, in instance, became worth its weight in gold - and many were simply stripped for parts to fix damaged machines. Despite the design's inherent maintenance challenges, an estimated 200 Clints remained in service until the Clan Invasion, largely in the hands of the Capellans or scattered throughout the Suns' border regions. The Confederation also created the 3U model, which the Federated Commonwealth swiftly adopted after the Bell Refit Yards were erected on the ruins of the original factory complex. The plans for the design finally made their way to Defiance Industries of Furillo, which began constructing new Clints for the first time in millennia in 3055.
+history:<p>The destruction of Andoran Industries during the First Succession War was comprehensive, eliminating not only the original Clint blueprints but also all records of production numbers and official variants. Houses Davion and Liao took possession of the lion's share of surviving Clints, shipping most to remote locations for garrison duty, though the Capellans maintained several in front-line units. The design proved popular in the Periphery, and Clints could be found throughout the Inner Sphere, though the origins of many machines and whether their differing loadouts represented factory variants or field refits remained unknown.</p><p>During the First Succession War, Davion and Liao forces clashed on Bell, with bombing attacks reducing the planet's cities to rubble. House Liao deployed ten Clints in urban centers where they proved their worth. Liao subsequently sent several to the Marik front, where they participated in battles on Pella and Ingersoll against the Free Worlds League's Protectorate Guard. The Arcturan Guard of House Steiner acquired a Clint during a raid on Alula Australis, using it effectively in urban combat on Alexandria and Ryde.</p><p>An estimated 200 Clints remained in service through the Clan Invasion, mostly with Capellan forces or scattered along the Federated Suns' border regions. The Capellan Confederation introduced the 2-3U upgrade variant, which was subsequently adopted by the Federated Commonwealth after Bell Refit Yards established operations on the ruins of the original Andoran complex. Using all-new tooling painstakingly reverse-engineered by Defiance Industries from captured examples, the design's blueprints eventually reached Defiance's Furillo facility, which began producing new Clints in 3055 following repeated CCAF raids on Bell.</p><p>The FedCom Civil War and Jihad prompted further development, with Defiance releasing the 5U model during the Civil War and the 6S following the fall of Hesperus II to Blakist forces. Word of Blake assistance enabled the Taurian Concordat to establish Clint production at Pinard Protectorates Limited on MacLeod's Land, introducing the 3-3T variant. Production continued into the ilClan era with the 3-4T, a sensible upgrade that shares components with the Cadaver and finally addresses many of the design's troublesome non-standard features.</p>
 
 manufacturer:Pinard Protectorates Limited
-primaryfactory:Macleod's Land
-systemmanufacturer:CHASSIS:Andoran Model III
-systemmanufacturer:ENGINE:Pitban 240
-systemmanufacturer:ARMOR:Durallex Super Medium with CASE
-systemmanufacturer:COMMUNICATIONS:Raldon R1
-systemmanufacturer:TARGETING:Sloane 220 Lockover System
-systemmanufacturer:JUMP_JET:Andoran Model JJII
+
+primaryfactory:MacLeod's Land
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Andoran
+systemmode:CHASSIS:Model III
+systemmanufacturer:ENGINE:Pitban
+systemmode:ENGINE:240
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Andoran
+systemmode:JUMP_JET:Model JJII
+systemmanufacturer:COMMUNICATIONS:Raldon
+systemmode:COMMUNICATIONS:R1
+systemmanufacturer:TARGETING:Sloane
+systemmode:TARGETING:220 Lockover System

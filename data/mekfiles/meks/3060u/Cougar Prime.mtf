@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,43 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cbca-7ad4-962e-e01013f88cd7
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Cougar
 model:Prime
 mul id:712
 
-Config:Biped Omnimech
-TechBase:Clan
-Era:3058
-Source:TR:3060
-Rules Level:2
+Config:Biped OmniMek
+techbase:Clan
+era:3058
+source:TR:3060,TR:CI
+published:RSFP:Wave 2
+rules level:2
 role:Sniper
-
 
 quirk:ubiquitous_clan
 
+mass:35
+engine:175 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:35
-Engine:175 XL (Clan) Engine(IS)
-Structure:Clan Endo Steel
-Myomer:Standard
+heat sinks:10 Clan Double
+base chassis heat sinks:7
+walk mp:5
+jump mp:0
 
-Heat Sinks:10 Double
-Base Chassis Heat Sinks:7
-Walk MP:5
-Jump MP:0
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:11
-RA Armor:11
-LT Armor:12
-RT Armor:12
-CT Armor:14
-HD Armor:8
-LL Armor:12
-RL Armor:12
-RTL Armor:4
-RTR Armor:4
-RTC Armor:5
+armor:Ferro-Fibrous(Clan)
+LA armor:11
+RA armor:11
+LT armor:12
+RT armor:12
+CT armor:14
+HD armor:8
+LL armor:12
+RL armor:12
+RTL armor:4
+RTR armor:4
+RTC armor:5
 
 Weapons:4
 Large Pulse Laser, Left Arm
@@ -65,8 +66,8 @@ Upper Arm Actuator
 Lower Arm Actuator
 CLDoubleHeatSink
 CLDoubleHeatSink
-CLLargePulseLaser (omnipod)
-CLLargePulseLaser (omnipod)
+CLLargePulseLaser (OMNIPOD)
+CLLargePulseLaser (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -79,8 +80,8 @@ Upper Arm Actuator
 Lower Arm Actuator
 CLDoubleHeatSink
 CLDoubleHeatSink
-CLLargePulseLaser (omnipod)
-CLLargePulseLaser (omnipod)
+CLLargePulseLaser (OMNIPOD)
+CLLargePulseLaser (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -90,8 +91,8 @@ CLLargePulseLaser (omnipod)
 Left Torso:
 Fusion Engine
 Fusion Engine
-CLLRM10 (omnipod)
-Clan Ammo LRM-10 (omnipod)
+CLLRM10 (OMNIPOD)
+Clan Ammo LRM-10 (OMNIPOD)
 Clan Endo Steel
 Clan Endo Steel
 Clan Endo Steel
@@ -106,8 +107,8 @@ Fusion Engine
 Fusion Engine
 CLDoubleHeatSink
 CLDoubleHeatSink
-CLLRM10 (omnipod)
-Clan Ammo LRM-10 (omnipod)
+CLLRM10 (OMNIPOD)
+Clan Ammo LRM-10 (OMNIPOD)
 Clan Ferro-Fibrous
 Clan Ferro-Fibrous
 Clan Ferro-Fibrous
@@ -171,18 +172,27 @@ Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:Based on the Adder, the Cougar is a powerful Clan Jade Falcon light OmniMech.
+overview:<p>The Cougar is a 35-ton Clan light OmniMech developed by Clan Jade Falcon in the aftermath of the Refusal War of 3057. Following the devastating conflict with Clan Wolf, Khan Marthe Pryde directed her scientists to complete a full Star of five new OmniMech designs. Having already stretched the Falcon scientist caste to their limits producing the Fire Falcon, Black Lanner, Night Gyr, and Turkina, Pryde ordered her scientists to modify an existing design rather than build from scratch. The Adder was selected as the basis, and Jade Falcon scientists managed to field the Cougar in roughly half the time normally required to develop a new OmniMech. First deployed during the battle of Coventry in 3058, the Cougar quickly proliferated beyond the Jade Falcons, appearing in the toumans of other Clans and eventually among Inner Sphere forces. Designated a light fire support platform, the Cougar earned a reputation as a "pocket heavy" capable of delivering firepower far exceeding its weight class.</p>
 
-capabilities:Though the two 'Mechs are visually similar and share the same weight, the Cougar is slower and better armed than the Adder, replacing its progenitor's 210 XL Engine with a lighter 175 XL model and mounting just five and a half tons of Ferro-Fibrous armor on an Endo Steel frame to boost the available pod-space to 19 tons. Though some Clan MechWarriors complained that the loss of speed was damning for a light 'Mech, the overall consensus was the increased firepower made up for this lack.
+capabilities:<p>Jade Falcon technicians gave the Cougar significantly more pod space than its Adder progenitor by replacing the older design's 210-rated XL engine with a lighter 175-rated model. This trade sacrificed top speed, dropping from 97 to 86 kilometers per hour, a controversial decision for a light 'Mech. The overall consensus among Clan warriors held that the increased firepower more than compensated for the reduced mobility.</p><p>Built on a JF 3 Light Endo Steel frame and protected by five and a half tons of Compound JF Ferro-Fibrous armor, the Cougar carries nineteen tons of pod space, an extraordinary allocation for a chassis of its weight. The designers closely followed the Adder's philosophy of ranged combat across all primary configurations. The Prime configuration exemplifies this approach, mounting paired large pulse lasers and LRM-10 racks for a combination of accurate direct fire and indirect support capability.</p><p>The Cougar's primary weakness remains its thin armor protection, which leaves it vulnerable to concentrated fire from heavier opponents. Without jump jets on its base chassis, the design relies entirely on pod-mounted equipment to address mobility concerns. The Cougar's continued existence owes much to tests performed on the chassis in the late thirtieth century, which heralded jump-capable derivatives like the Eyrie while ironically creating infrastructure to keep building the original design.</p>
 
-deployment:The Jade Falcon scientists continued to closely mimic the Adder in the Cougar's weapon systems, the greater pod space allowing them to enhance them while adhering to original's philosophy of ranged combat. The primary configuration is a good example, mounting a pair of LRM-10s and Large Pulse Lasers for a combination of direct and indirect fire support.
+deployment:<p>Mounting paired large pulse lasers and twin LRM-10 racks, this variant configuration exemplifies the Cougar's fire support doctrine. The large pulse lasers provide exceptional accuracy at extended ranges, while the missile launchers add indirect fire capability. This combination allows the Cougar to engage effectively from beyond typical return-fire distance for light 'Mechs, though the limited ammunition supply for the missile systems demands careful fire discipline during extended engagements.</p>
 
-history:After the Refusal War with Clan Wolf, the Falcon's newly-vested Khan Marthe Pryde strove to rebuild her shattered touman, reaping the benefits of efforts by her predecessor Elias Crichell to step up the pace of the Falcon breeding program and to bring new and deadly OmniMechs into service. With regards the latter, the successful introduction of the Fire Falcon, Black Lanner, Night Gyr and Turkina pleased her, but Pryde desired the symbolic goal of a complete Star of new 'Mechs. Recognizing that she'd stretched her Clan's scientists to the limit to produce those four designs already, Khan Pryde directed her scientists to modify an existing design into an even more deadly machine for the fifth member. The design selected was the Adder, and in using an existing design the Falcon scientists were able to field a virtually new 'Mech in roughly half the time normally required to construct and test a new OmniMech. First seeing service during the fighting on Coventry in 3058, the Cougar quickly spread to other Clans, most notably Clan Smoke Jaguar's defenders during Operation BULLDOG. The visual similarity to the Adder caught the Inner Sphere forces who faced it on Coventry and Port Arthur off-guard, incorrectly assuming it was the older design and being shocked by the greater firepower the Cougar was capable of unleashing. Remaining popular with the Falcons, the Ironhold facility that produced the Cougar was destroyed by Clan Steel Viper in 3071 during the Wars of Reaving.
+history:<p>The Cougar first saw combat with Jade Falcon forces during the fighting on Coventry in 3058. Its visual similarity to the Adder caught Inner Sphere forces off guard, units on Coventry and Port Arthur incorrectly assumed they faced the older design and were shocked by the greater firepower the Cougar was capable of unleashing. The design spread rapidly to other Clans, most particularly appearing among Clan Smoke Jaguar's defenders during Operation BULLDOG.</p><p>The Ironhold Alpha Complex served as the Cougar's sole manufacturing facility for over a decade until Clan Steel Viper destroyed it in 3071 during the Wars of Reaving. Production was only briefly interrupted, however, as concurrent experimental work on the Cougar-XR at Olivetti Weaponry on Sudeten had already established the infrastructure necessary to produce the standard OmniMech in the Inner Sphere as well. Olivetti became the primary (and eventually sole) manufacturer of the design.</p><p>The Cougar gradually supplanted the Kit Fox as the primary light support 'Mech of the Jade Falcon touman during the Dark Age era. Yet the design found itself increasingly unpopular among adherents of the Mongol movement within Clan Jade Falcon, who favored speed and aggressive mobility over the Cougar's plodding fire support doctrine. As a result, much of Olivetti's production was directed toward trade, making the Cougar the most common Falcon 'Mech fielded by other Clans, Great House militaries, and mercenary commands.</p><p>Despite its critics, the Cougar demonstrated enduring value as a fire support platform throughout the thirty-second century. When Wolf's Dragoons counterattacked the Second Robinson Rangers on New Avalon's Connemara Plains in 3146, a light Star of Cougars engaged a lance of Gunsmiths. The Dragoons' lasers failed to penetrate the Gunsmiths' reflective armor, but the Cougars' ample secondary weaponry proved decisive. The Kell Hounds found less success with the design while defending Arc-Royal against the Jade Falcons, as faster Eyries exploited the mountain ranges on Gerechtland to cover for the sluggish Hound Cougars, which were torn apart at close range.</p><p>The experimental X-series rebuilds produced at Olivetti explored composite structure and improved jump jet technology in standard BattleMech configurations, but the expense of these modifications proved prohibitive. The failure of the X-series ultimately resulted in production of the original OmniMech being reinstated, cementing the Cougar's role as a conventional fire support platform rather than an experimental testbed.</p>
 
-manufacturer:Ironhold Alpha Complex
-primaryfactory:Ironhold
-systemmanufacturer:CHASSIS:JF 3 Light Endo Steel
-systemmanufacturer:ENGINE:175 JF Extralight
-systemmanufacturer:ARMOR:Compound JF Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:JF Integrated
-systemmanufacturer:TARGETING:Series JFVIII KITT
+manufacturer:Ironhold Alpha Complex|Olivetti Weaponry
+
+primaryfactory:Ironhold|Sudeten
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:JF
+systemmode:CHASSIS:3 Light Endo Steel
+systemmanufacturer:ENGINE:JF
+systemmode:ENGINE:175 Extralight
+systemmanufacturer:ARMOR:Compound JF
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:COMMUNICATIONS:JF
+systemmode:COMMUNICATIONS:Integrated
+systemmanufacturer:TARGETING:JF
+systemmode:TARGETING:Series JFVIII KITT

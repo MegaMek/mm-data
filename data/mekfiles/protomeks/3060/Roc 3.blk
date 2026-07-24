@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0c6-78e3-abe9-de7c44aa9ab5
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Roc
 3064
 </year>
 
-<originalBuildYear>
-3064
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Brawler
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 5
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 0
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -90,6 +98,7 @@ Biped
 </armor>
 
 <Body Equipment>
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -111,44 +120,51 @@ Biped
 CLMediumPulseLaser
 </Main Gun Equipment>
 
+<capabilities>
+<p>The Roc primary weapon is its ER Medium Laser, a weapon that would be respectable on a light BattleMek and is devastating on a seven-ton ProtoMek. The extended-range variant allows engagement at distances where most ProtoMek opponents cannot effectively return fire, giving the Roc a significant tactical advantage in open terrain. Five jump jets provide one hundred and fifty meters of jumping distance, allowing the Roc to exploit terrain features, clear obstacles, and execute flanking maneuvers that ground-bound opponents cannot counter. The sixty-rated fusion engine delivers fifty-four kilometers per hour cruising speed, adequate for keeping pace with medium-weight formations.</p><p>The Roc armor protection of thirty-one points is among the best for first-generation ProtoMeks of its weight class, sufficient to absorb multiple medium weapon hits before structural compromise. As an energy-only design, the base Roc has no ammunition dependency, allowing indefinite combat endurance limited only by pilot fatigue and heat buildup. The Roc only significant limitation is the single-weapon loadout, which means a weapon hit or targeting system malfunction reduces the design to a very expensive paperweight. Despite this vulnerability, the Roc ratio of mobility to firepower and its all-around competence have made it the measuring stick against which other ProtoMek designs are judged.</p>
+</capabilities>
+
+<overview>
+<p>The Roc is a seven-ton first-generation ProtoMek developed by Clan Smoke Jaguar as the backbone of the original ProtoMek program on Huntress. Widely regarded as the most successful design to emerge from the program, the Roc combines mobility, armor, and firepower more effectively than any of its siblings, making it suitable for a wide variety of attack and defense missions. Built around an ER Medium Laser and five jump jets, the Roc delivers BattleMek-grade firepower from a platform capable of traversing nearly any terrain. Its balance of capabilities made it the most commonly fielded ProtoMek in the Homeworld Clans by the mid-3060s, forming the core of most mixed ProtoMek formations.</p>
+</overview>
+
+<deployment>
+<p>The Roc 3 trades the jump jets for a Medium Pulse Laser and significantly heavier armor at twenty-six points. The pulse laser improved accuracy partially compensates for the loss of positional flexibility that jump jets provide. Cruising speed remains at fifty-four kilometers per hour. This ground-bound variant is deployed in defensive positions where jump capability is less critical and the additional armor allows the Roc 3 to hold terrain under fire that would force a base model to withdraw. The design is most common in garrison forces tasked with fixed-position defense.</p>
+</deployment>
+
+<history>
+<p>The Roc was conceived by Smoke Jaguar scientists as the primary combat ProtoMek in the original lineup, designed to balance all the competing demands of speed, protection, and firepower in a single chassis. Where other designs in the program specialized in reconnaissance, anti-infantry work, or heavy fire support, the Roc was intended to be the generalist, capable of performing adequately in any role. The decision to build it around an ER Medium Laser rather than a missile or ballistic weapon reflected the Jaguar scientists emphasis on reliability and endurance over burst damage potential.</p><p>The Roc combat debut during the Battle of Huntress in 3060 validated the design philosophy. In the varied terrain of Huntress, from dense jungle to rocky highlands, the Roc jump jets allowed it to operate effectively everywhere while its ER Medium Laser engaged targets at ranges that kept the fragile ProtoMek frame outside the effective envelope of most small arms. Multiple Points of Rocs were credited with delaying Inner Sphere advances long enough for Jaguar forces to establish secondary defensive positions, their combination of firepower and mobility making them difficult targets to pin down.</p><p>Following the Jaguar Annihilation, the Roc became arguably the most sought-after ProtoMek design. Virtually every Clan that acquired ProtoMek technology prioritized Roc production, recognizing it as the most versatile and capable design available. Clan Snow Raven established a major production line at the Snow Raven Industrial Complex Alpha on Dante, while Clan Wolf began manufacturing Rocs at Csesztreg. Clan Goliath Scorpion continued production at the original Abysmal Manufacturing Complex on Huntress, and several other Clans established smaller production runs at various facilities.</p><p>The Roc has inspired more variant configurations than any other first-generation ProtoMek. The Roc 2 mounts a Heavy Medium Laser for increased close-range damage. The Roc 3 trades jump jets for a Medium Pulse Laser and heavier armor. The Roc 4 combines an ECM Suite with an AP Gauss Rifle for electronic warfare capability. The Roc 5 pushes jump capability to seven jets with a Medium Chemical Laser. Each variant reflects a different Clan tactical philosophy applied to the proven Roc chassis.</p><p>The Wars of Reaving saw the Society produce the Roc Z variant at the Abysmal Manufacturing Complex, equipped with a Magnetic Clamp System for OmniMek transport and a Medium Chemical Laser. The upheaval of the Reaving disrupted several Roc production lines as Clans were absorbed or destroyed, but the design broad production base ensured continuity. The Roc remains the single most commonly fielded ProtoMek design across the surviving Homeworld Clans, its versatility and proven combat record ensuring that it will remain in production for decades to come.</p>
+</history>
+
+<manufacturer>
+Aeroyard Gargain|Kindraa Payne-Beyl-Grant Main Production Facility|Reserve Industriplex-2
+</manufacturer>
+
+<primaryFactory>
+Bearclaw|Shadow|York
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:GM
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:60 Fusion
+</systemModels>
+
 <source>
 TR:3060
 </source>
+
+<published>
+RS:3060u
+</published>
 
 <tonnage>
 7.0
 </tonnage>
 
-<capabilities>
-By the time it was created, the engineers and technicians had enough feedback from the other units to find a good balance of armor, weaponry, and speed. It proved to be very popular with pilots, and formed the backbone of many ProtoMech Points and Stars. In a sense a "super-Elemental". It can also maintain a cruising speed of 54 km/h and carries sufficient armoring to survive a direct PPC hit to the chest.
-</capabilities>
-
-
-<overview>
-The Roc is considered one of the best of the first generation ProtoMechs, and most known successful, as it was produced, operative and fighting for almost a century.
-</overview>
-
-<deployment>
-This variant of the Roc, developed at same time as Roc 2, utilizes Pulse Laser technology. The main gun is exchanged for a Medium Pulse Laser, with less armor reduction than the Roc 2. However, the designers were forced to drop the jump jets from the ProtoMech.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units. After its development by the Smoke Jaguars, the Roc was adopted by Clans Coyote, Goliath Scorpion, Hell's Horses and Wolf-in-Exile. Other Clans also adopted the Roc towards the latter half of the 31st century. In the year 3069, a Roc-producing factory of Clan Steel Viper on Arcadia was taken by the forces of Clan Blood Spirit. By the time of the Dark Ages only the Raven Alliance still fielded the original Roc.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:Unspecified
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
-</systemManufacturers>

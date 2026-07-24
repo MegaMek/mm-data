@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Thamel (Wyeth's Glory 3130+)
-sucsId: 2524
+sucsId: 2525
 xcood: 24.526
 ycood: -415.047
 spectralType: F7V
@@ -93,6 +93,14 @@ planet:
         size: large
         icon: rock15
     event:
+      - date: '2108-12-05'
+        name: Thamel
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2735-10-01'
         faction:
           source: canon
@@ -106,12 +114,26 @@ planet:
         population: 106451.0
       - date: '2750-01-01'
         population: 442691.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 13
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 1389365.0
       - date: '2770-01-01'
         population: 3502346.0
       - date: '2780-01-01'
         population: 7321332.0
+      - date: '2786-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 14
       - date: '2790-01-01'
         population: 8503665.0
       - date: '2800-01-01'
@@ -144,16 +166,25 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '3025-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - CC
-      - date: '2108-12-05'
-        name: Thamel
+            - ABN
       - date: '3130-01-01'
         name: Wyeth's Glory
         message: Thamel renamed to Wyeth's Glory
+      - date: '3130-12-31'
+        # administration:
+        #   - Victoria Commonality
+        #   - Region 7
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
   - name: Valkyrja Belt
     type: ASTEROID_BELT
     orbitalDist: 3.64

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cbcd-7351-81cb-4dffc01c15e3
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Duan Gung
 model:D9-G10
 mul id:934
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3070
-Source:TR:3060
-Rules Level:2
+techbase:Inner Sphere
+era:3070
+source:TR:3060
+published:RS:3060u
+rules level:2
 role:Striker
 
-
-
-quirk:pro_actuator
 quirk:non_standard
+quirk:pro_actuator
 
+mass:25
+engine:175 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:25
-Engine:175 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:7
+jump mp:6
 
-Heat Sinks:10 Double
-Walk MP:7
-Jump MP:6
-
-Armor:Stealth(Inner Sphere)
-LA Armor:5
-RA Armor:5
-LT Armor:8
-RT Armor:8
-CT Armor:10
-HD Armor:9
-LL Armor:6
-RL Armor:6
-RTL Armor:2
-RTR Armor:2
-RTC Armor:3
+armor:Stealth(Inner Sphere)
+LA armor:5
+RA armor:5
+LT armor:8
+RT armor:8
+CT armor:10
+HD armor:9
+LL armor:6
+RL armor:6
+RTL armor:2
+RTR armor:2
+RTC armor:3
 
 Weapons:4
 Medium Laser, Left Arm
@@ -69,8 +69,8 @@ ISDoubleHeatSink
 ISDoubleHeatSink
 ISDoubleHeatSink
 Medium Laser
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 
@@ -83,8 +83,8 @@ ISDoubleHeatSink
 ISDoubleHeatSink
 ISDoubleHeatSink
 Medium Laser
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 
@@ -98,8 +98,8 @@ ISDoubleHeatSink
 Jump Jet
 Jump Jet
 Jump Jet
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 
 Right Torso:
@@ -111,8 +111,8 @@ Jump Jet
 Jump Jet
 Light PPC
 Light PPC
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 
@@ -149,8 +149,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -163,8 +163,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Stealth
-Stealth
+IS Stealth
+IS Stealth
 -Empty-
 -Empty-
 -Empty-
@@ -172,4 +172,29 @@ Stealth
 -Empty-
 -Empty-
 
+overview:<p>The Duan Gung is a twenty-five-ton light fire support BattleMech introduced in 3058 by Shengli Arms on Victoria for the Capellan Confederation Armed Forces. The design traces its lineage to the Star League-era Sling BattleMech, which also served as a progenitor of the Clan Mist Lynx OmniMech. Named Duan Gung, meaning "Short Bow," the design was developed as part of the Capellan technological renaissance of the late 3050s, filling the light missile support role within the Confederation's military. One of the earliest fruits of the Xin Sheng movement's industrial revitalization, the Duan Gung demonstrated that the Confederation could once again produce competitive new BattleMech designs rather than relying solely on aging Star League-era platforms or foreign imports.</p>
 
+capabilities:<p>Approaching speeds of one hundred and twenty kilometers per hour, the Duan Gung presents a minimal target while crossing the battlefield. Its Chilton 360 jump jets provide an impressive one hundred and eighty meters of jump capability, giving it mobility that rivals or exceeds other light BattleMechs in rough and broken terrain. Built on a weight-saving Chariot Type II endo steel chassis and powered by an Omni 175 XL engine, the design devotes its freed tonnage to armament rather than protection.</p><p>The primary weapon is a Zeus LRM-10 launcher, providing effective fire support at long range and indirect fire capability when operating as part of a reconnaissance or screening lance. Two Martell medium lasers deliver credible close-range firepower when enemies close the distance. This combination allows the Duan Gung to engage at range before transitioning to direct-fire combat as circumstances dictate.</p><p>The design's principal weakness is its thin armor profile. Four tons of Valiant Defco armor leave the Duan Gung vulnerable to concentrated fire, and the exposed XL engine means the loss of a single side torso is catastrophic. When employed as missile support for light or medium lances, however, the design performs admirably, using its speed and jump capability to maintain favorable engagement distances.</p>
+
+deployment:<p>Introduced during the Jihad, this variant is a significant reconfiguration of the Duan Gung for a direct support role. The Zeus LRM-10 is replaced by a Ceres Arms light PPC, providing superior range and eliminating ammunition dependency. Hellespont Lite stealth armor replaces the standard Valiant Defco plating, supported by a Guardian ECM suite integrated into an enhanced Dian-bao communications system. A Diverse Optics ER small laser supplements the retained Martell medium lasers for anti-infantry work. This variant trades the original's missile support capability for enhanced survivability through reduced sensor signatures, making it well-suited for operating alongside other fast, stealthy Capellan designs.</p>
+
+history:<p>The Duan Gung emerged from Chancellor Sun-Tzu Liao's campaign to restore Capellan military industry during the Xin Sheng movement of the late 3050s. Shengli Arms on Victoria, one of the few Star League-era production facilities to survive the Succession Wars in Capellan space, was refurbished with assistance from technicians and material resources provided through the Confederation's growing ties with the Word of Blake. Engineers based the new design on Sling blueprints found in the facility's archives, and CCAF Strategic Director Talon Zahn shepherded the project through its development phase. A fully functioning prototype walked off the assembly line in late 3057, with limited production beginning the following year and full-scale manufacturing ramping up shortly thereafter.</p><p>Trial deployments with the Red Lancers and Warrior House Dai Da Chi validated the design's capabilities. Dai Da Chi was particularly impressed with how the Duan Gung complemented the Raven, the Confederation's primary scout 'Mech. In single-combat tests held in the Da-jiao-tang Mountains on Grand Base, the Duan Gung proved capable of defeating heavier opponents two or even three times its own weight by exploiting its mobility to strike from unexpected angles. In 3059, Chancellor Liao offered the design for sale to current Star League member states and units with ties to the original Star League Defense Force, broadening the Duan Gung's exposure beyond Capellan borders.</p><p>The Jihad devastated Shengli Arms when the Word of Blake-aligned Victoria Rangers turned against the factory in December 3068, inflicting crippling damage before being driven off by Sung's Rangers. The company suffered capital and personnel losses of eighty-four percent, though the Duan Gung production line was among the first restored to limited output. A stealth-armored variant emerged from this period of rebuilding as Shengli engineers incorporated the Confederation's latest technologies into the design.</p><p>The Victoria War brought further upheaval to the Duan Gung's production history. The Federated Suns briefly captured Victoria, and the retreating CCAF ultimately destroyed the Shengli Arms facility to prevent it from falling into enemy hands. Production continued, however, through Detroit Consolidated MechWorks on Detroit, where a former Stinger production line had been converted to manufacture the Duan Gung following the Capellan Confederation's absorption of that world. This ensured the design remained available to CCAF forces through the Dark Age and into the ilClan era.</p>
+
+manufacturer:Shengli Arms|Detroit Consolidated Mechworks
+
+primaryfactory:Victoria|Detroit
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Chariot
+systemmode:CHASSIS:Type II Endo Steel
+systemmanufacturer:ENGINE:Omni
+systemmode:ENGINE:175 XL
+systemmanufacturer:ARMOR:Hellespont
+systemmode:ARMOR:Lite Stealth
+systemmanufacturer:JUMP_JET:Chilton
+systemmode:JUMP_JET:360
+systemmanufacturer:COMMUNICATIONS:Dian-bao
+systemmode:COMMUNICATIONS:Comms, Enhanced
+systemmanufacturer:TARGETING:Dynatec
+systemmode:TARGETING:990 T&T

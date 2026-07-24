@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Everett
-sucsId: 834
+sucsId: 835
 xcood: 149.754
 ycood: -91.345
 spectralType: F0V
@@ -96,6 +96,12 @@ planet:
       - name: Museros
       - name: New Medina
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2735-11-08'
         faction:
           source: canon
@@ -109,6 +115,17 @@ planet:
         population: 137507.0
       - date: '2750-01-01'
         population: 775931.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 3086349.0
       - date: '2770-01-01'
@@ -128,8 +145,29 @@ planet:
           source: canon
           value:
             - CC
+      - date: '2821-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 7
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2830-01-01'
         population: 426595.0
+      - date: '2830-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 1
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2839-09-25'
         faction:
           source: canon
@@ -138,6 +176,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '2864-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Devatas Belt
     type: ASTEROID_BELT
     orbitalDist: 4.48

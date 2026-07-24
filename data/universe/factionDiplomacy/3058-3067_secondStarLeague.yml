@@ -1,0 +1,55 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# Second Star League, formed at the First Whitting Conference (November 3058; founding
+# day approximate) and dissolved at the Fourth Whitting Conference on 28 November 3067.
+# Without this entry the member states are treated as mutual enemies for the League's
+# whole existence. Pairs are ended early where a war between members is recorded
+# (Capellan-St. Ives War, FedCom Civil War). CC-FS and CC-FC pairs are deliberately
+# omitted: the Chaos March and Xin Sheng raiding kept that border hostile despite
+# shared membership.
+
+alliances:
+  - name: Second Star League
+    start: 3058-11-01
+    end: 3067-11-28
+    parties:
+      - factions: [SL, CS, DC, FRR, FWL, CC]
+      - factions: [FC, SL, CS, FRR, FWL]
+      - factions: [FC, FS]
+      - factions: [FC, DC]
+        end: 3062-11-15
+      - factions: [FS, SL, CS, FRR, FWL]
+      - factions: [FS, DC]
+        end: 3062-11-15
+      - factions: [LA, SL, CS, DC, FRR, FWL]
+      - factions: [LA, FC]
+        end: 3062-11-15
+      - factions: [LA, FS]
+        end: 3062-11-15
+      - factions: [SIC, SL, CS, DC, FRR, FWL]
+      - factions: [SIC, LA]
+      - factions: [SIC, FC]
+      - factions: [SIC, FS]
+      - factions: [SIC, CC]
+        end: 3061-01-26
+      - factions: [SL, MOC]
+        start: 3061-01-01
+      - factions: [SL, TC]
+        start: 3061-01-01
+      - factions: [SL, CNC]
+        start: 3059-05-20

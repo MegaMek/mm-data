@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b775-71a9-bee9-a08719797892
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Donkey)
 2300
 </year>
 
-<originalBuildYear>
-2300
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,17 @@ IS Level 3
 Beast:Donkey
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The humble Terran donkey has proven surprisingly resilient across hundreds of colonized worlds, carrying loads and riders through terrain that would defeat more temperamental mounts. Sure-footed, low-maintenance, and capable of subsisting on sparse forage, donkeys serve garrison forces and militia units on underdeveloped worlds where maintaining mechanized transport is impractical or unaffordable. Donkey-mounted infantry formations are most common in the Periphery and on backwater worlds where military budgets do not stretch to hovercraft or tracked vehicles. These platoons patrol mountain passes, forested highlands, and rough country where their mounts' steady temperament and endurance compensate for their lack of speed. Commanders who underestimate donkey-mounted scouts operating in familiar terrain often regret the oversight.</p>
+</overview>
 
 <squad_size>
 7
@@ -67,12 +67,4 @@ Beast:Donkey
 <Primary>
 Submachine Gun
 </Primary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
 

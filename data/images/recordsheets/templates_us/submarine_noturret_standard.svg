@@ -9,7 +9,7 @@
    version="1.0"
    id="svg492"
    sodipodi:docname="submarine_noturret_standard.svg"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -27,14 +27,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="4.0870772"
-     inkscape:cx="377.40907"
+     inkscape:cx="162.09628"
      inkscape:cy="171.88322"
-     inkscape:window-width="1920"
-     inkscape:window-height="1121"
-     inkscape:window-x="-7"
-     inkscape:window-y="-7"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="3832"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g267" />
+     inkscape:current-layer="unitDataPanel" />
   <g
      style="mml-color-elements:btLogo,cglLogo"
      id="rs_template">
@@ -3181,7 +3181,7 @@
          style="font-style:normal;font-weight:bold;font-size:7.7px;font-family:Eurostile"
          textLength="38.696999"
          lengthAdjust="spacingAndGlyphs"
-         id="text231">Rules Level:</text>
+         id="labelRules">Rules Level:</text>
       <text
          fill="#000000"
          x="158.24001"
@@ -3229,7 +3229,7 @@
          style="font-style:normal;font-weight:bold;font-size:7.7px;font-family:Eurostile"
          textLength="40.915001"
          lengthAdjust="spacingAndGlyphs"
-         id="text233">Engine Type:</text>
+         id="labelEngine">Engine Type:</text>
       <text
          fill="#000000"
          x="64.128998"
@@ -3237,35 +3237,38 @@
          y="74"
          style="font-style:normal;font-weight:normal;font-size:7.7px;font-family:Eurostile"
          text-anchor="start">Lorem Ipsum</text>
-      <path
-         d="M 3,78.5 H 219.4"
-         stroke-width="1.932"
-         stroke-linejoin="round"
-         stroke="#000000"
-         id="path233" />
-      <text
-         x="3"
-         y="87.5"
-         fill="#000000"
-         text-anchor="start"
-         style="font-style:normal;font-weight:bold;font-size:8.6px;font-family:Eurostile"
-         textLength="121.508"
-         lengthAdjust="spacingAndGlyphs"
-         id="text234">Weapons &amp; Equipment Inventory</text>
-      <text
-         fill="#000000"
-         x="171.132"
-         id="unitScale"
-         y="87.5"
-         style="font-style:normal;font-weight:normal;font-size:6.76px;font-family:Eurostile"
-         text-anchor="start">(hexes)</text>
-      <rect
-         fill="none"
-         x="3"
-         width="216.39999"
-         id="inventory"
-         height="171.64301"
-         y="87.5" />
+      <g
+         id="gInventoryBox">
+        <path
+           d="M 3,78.5 H 219.4"
+           stroke-width="1.932"
+           stroke-linejoin="round"
+           stroke="#000000"
+           id="path233" />
+        <text
+           x="3"
+           y="87.5"
+           fill="#000000"
+           text-anchor="start"
+           style="font-style:normal;font-weight:bold;font-size:8.6px;font-family:Eurostile"
+           textLength="121.508"
+           lengthAdjust="spacingAndGlyphs"
+           id="text234">Weapons &amp; Equipment Inventory</text>
+        <text
+           fill="#000000"
+           x="171.132"
+           id="unitScale"
+           y="87.5"
+           style="font-style:normal;font-weight:normal;font-size:6.76px;font-family:Eurostile"
+           text-anchor="start">(hexes)</text>
+        <rect
+           fill="none"
+           x="3"
+           width="216.39999"
+           id="inventory"
+           height="171.64301"
+           y="87.5" />
+      </g>
       <path
          d="M 3,260.643 H 219.4"
          stroke-width="1.932"
@@ -3642,7 +3645,6 @@
            stroke-width="0.96"
            stroke-linejoin="round"
            stroke="#000000"
-           destroy="1"
            id="sensor_hit_4" />
         <text
            x="128.32001"
@@ -3714,6 +3716,21 @@
            textLength="4.8000002"
            lengthAdjust="spacingAndGlyphs"
            id="text259">+3</text>
+        <path
+           fill="none"
+           d="M 124.32,1.315 C 124.32,0.589 124.909,0 125.635,0 h 5.37 c 0.726,0 1.315,0.589 1.315,1.315 v 5.37 C 132.32,7.411 131.731,8 131.005,8 h -5.37 C 124.909,8 124.32,7.411 124.32,6.685 Z"
+           stroke-width="0.96"
+           stroke-linejoin="round"
+           stroke="#000000"
+           id="motive_system_hit_4" />
+        <text
+           x="128.32001"
+           y="6"
+           fill="#000000"
+           text-anchor="middle"
+           style="font-style:normal;font-weight:normal;font-size:5.7px;font-family:Eurostile"
+           textLength="4.8000002"
+           id="text2759">I</text>
       </g>
       <text
          fill="#000000"
@@ -4151,7 +4168,7 @@
              style="font-style:normal;font-weight:bold;font-size:10.6px;font-family:Eurostile"
              textLength="189.06799"
              lengthAdjust="spacingAndGlyphs"
-             id="text346">NAVAL COMBAT VEHICLE HIT LOCATION</text>
+             id="text346">NAVAL COMBAT VEHICLE HIT LOCATION TABLE</text>
         </g>
       </g>
       <text
@@ -4204,6 +4221,9 @@
            text-anchor="middle"
            style="font-style:normal;font-weight:bold;font-size:5.7px;font-family:Eurostile"
            id="text349"><tspan
+             x="22.24"
+             y="0"
+             id="tspan347">2D6 Roll</tspan><tspan
              x="66.720001"
              y="0"
              id="tspan347">FRONT</tspan><tspan
@@ -4212,7 +4232,7 @@
              id="tspan348">REAR</tspan><tspan
              x="177.92"
              y="0"
-             id="tspan349">SIDES</tspan></text>
+             id="tspan349">SIDE§</tspan></text>
         <text
            text-anchor="middle"
            style="font-style:normal;font-weight:bold;font-size:5.7px;font-family:Eurostile"
@@ -4494,7 +4514,7 @@
            y="60"
            style="font-style:normal;font-weight:normal;font-size:4.8px;font-family:Eurostile"
            text-anchor="start"
-           id="text409">for more information).</text>
+           id="text409">for more information). Apply damage at the end of the phase in which the damage takes effect.</text>
         <text
            x="6"
            y="65"
@@ -4856,6 +4876,9 @@
            text-anchor="middle"
            style="font-style:normal;font-weight:bold;font-size:7.2px;font-family:Eurostile"
            id="text460"><tspan
+             x="56.849998"
+             y="0"
+             id="tspan457">2D6 Roll</tspan><tspan
              x="102.33"
              y="0"
              id="tspan457">FRONT</tspan><tspan

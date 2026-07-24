@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Shipka
-sucsId: 2315
+sucsId: 2316
 xcood: 80.12
 ycood: -110.657
 spectralType:
@@ -153,6 +153,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2599-07-07'
         faction:
           source: canon
@@ -198,6 +204,16 @@ planet:
         population: 793706799.0
       - date: '2750-01-01'
         population: 809346183.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 5
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 819726463.0
       - date: '2768-04-23'
@@ -265,11 +281,28 @@ planet:
           value:
             - FS
         population: 493037601.0
+      - date: '3030-12-31'
+        # administration:
+        #   - Sarna March
+        #   - Palos Operational Area
+        #   - Region 1
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '3040-01-01'
         population: 497445220.0
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3044-01-01'
@@ -281,11 +314,27 @@ planet:
           source: canon
           value:
             - CM
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3060-01-01'
         population: 507240596.0
       - date: '3062-12-25'
         faction:
           source: canon
+          value:
+            - CC
+      - date: '3063-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 7
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CC
       - date: '3070-01-01'
@@ -295,6 +344,15 @@ planet:
       - date: '3085-12-10'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture V
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -316,10 +374,24 @@ planet:
           source: canon
           value:
             - CC
+      - date: '3135-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 6
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3140-01-01'
         population: 575584151.0
       - date: '3145-01-01'
         population: 581020151.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 6
   - name: Dima's Belt
     type: ASTEROID_BELT
     orbitalDist: 2.6

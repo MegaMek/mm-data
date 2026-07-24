@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bf75-7924-9ff2-ab7e9d53f0f8
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,11 +52,19 @@ Ambusher
 Tracked
 </motion_type>
 
+<Troopers Equipment>
+Clan Armor Kit (All)
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Clan mechanized tracked Points move five warriors in tracked APCs for all-terrain mechanized operations. Tracked vehicles handle the widest range of ground conditions, making these Points the most reliable mechanized infantry for garrison duty on worlds with varied or hostile terrain. Clan commanders assign tracked Points to sectors where wheeled or hover transport would struggle, and the armored carriers provide meaningful protection during transit. These formations anchor defensive positions and provide the mobile reserve that lighter Clan infantry elements lack.</p>
+</overview>
+
 <source>
-TW
+TW,TO:AUE
 </source>
 
 <squad_size>
@@ -76,6 +79,3 @@ TW
 Laser Rifle
 </Primary>
 
-<armorKit>
-ClanKit
-</armorKit>

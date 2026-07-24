@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b7c4-7b59-a775-eb19f66d9842
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Tariq)
 2750
 </year>
 
-<originalBuildYear>
-2750
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,17 @@ IS Level 3
 Beast:Tariq
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The tariq (plural tariqim) is a large bipedal lizard native to the Outworlds Alliance world of Brasha. Standing just under two meters tall at the shoulder, tariqim are swift, durable, and highly intelligent. Fleshy nutrient deposits near the base of their tails sustain the animals for days in harsh conditions, while a tough, wrinkled hide and transparent inner eyelids protect against sand, grit, and desert exposure. Tariqim rival some BattleMechs and combat vehicles in overland speed, making them exceptional mounts for fast-moving infantry. The Qum'ran Guard of the Brasha Planetary Militia are the most famous tariq-mounted formation, riding their animals in service of the Outworlds Alliance. Riders form close bonds with their mounts, caring for them as family members and mourning their loss in battle. Following the Clan Invasion, Clan Snow Raven investigated the economic feasibility of broader tariq export across the Inner Sphere.</p>
+</overview>
 
 <squad_size>
 7
@@ -67,12 +67,4 @@ Beast:Tariq
 <Primary>
 Auto-Shotgun
 </Primary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
 

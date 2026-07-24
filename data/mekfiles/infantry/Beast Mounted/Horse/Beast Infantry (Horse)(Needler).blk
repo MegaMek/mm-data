@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b791-7d8e-af7f-6dc14d7b97ad
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Horse)
 2680
 </year>
 
-<originalBuildYear>
-2680
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,17 @@ IS Level 3
 Beast:Horse
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The horse remains the most widely used beast mount in human space, carried to hundreds of worlds during humanity's expansion across the stars. Cavalry traditions stretching back thousands of years on Terra have persisted wherever horses thrive, and many planetary militias maintain mounted infantry formations as a practical and affordable supplement to mechanized forces. Horses are fast, responsive to trained riders, and capable of operating across open terrain, grasslands, and light forest without mechanical support. On worlds where industrial infrastructure is limited or where fuel supplies are unreliable, horse-mounted infantry provide commanders with a mobile reserve that requires only fodder and water. These formations excel at reconnaissance, flanking maneuvers, and rapid pursuit, though they remain vulnerable to concentrated firepower and lack the protection of even the lightest armored vehicle.</p>
+</overview>
 
 <squad_size>
 7
@@ -67,12 +67,4 @@ Beast:Horse
 <Primary>
 Needler Rifle
 </Primary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
 

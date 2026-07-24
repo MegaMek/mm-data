@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a807-7acc-8494-a1b61440f64c
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Elemental III Battle Armor
 3091
 </year>
 
-<originalBuildYear>
-3091
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Jump
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 1
@@ -85,10 +73,6 @@ Clan BA Stealth (Basic):Body
 Clan BA Stealth (Basic):LA
 Clan BA Stealth (Basic):RA
 CLAdvancedSRM2OS:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 </Point Equipment>
 
 <Trooper 1 Equipment>
@@ -109,20 +93,24 @@ LegAttack
 <Trooper 6 Equipment>
 </Trooper 6 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
 <capabilities>
-The roots of the Elemental battle armor can be traced back to pressurized diving suits built by Clan Goliath Scorpion. These underwater suits already had most of the basic equipment common to current battle armor designs: myomer musculature, self-contained air-supply and life support systems, and heavy, atmospherically sealed bodies designed to handle extreme conditions. Clan Wolf saw the diving suit's military potential, but instead of claiming the designs through combat, they directed their merchant caste to acquire a number through trade. Weaponization of these suits began with adding armor, weapons, and small jump jets until proof of concept was established. Advanced manufacturing then ensued, and while Clan Wolf did experiment with specialist suits designed for specific environments, they eventually settled on a general purpose design that defined the standard used by all Clans for over two centuries. The specialist suits would later go on to inspire the Gnome, Salamander, Sylph and Undine.
+<p>The third-generation Elemental returns to the jump-capable profile of the original suit while incorporating stealth armor to mask the trooper from enemy sensors. This directly addresses the Elemental II's most criticized flaw: the myomer booster's massive heat signature. A single-shot advanced short-range missile launcher in a detachable weapon pack provides the anti-armor capability absent from the Elemental II, while the modular weapon mount accommodates anti-personnel gauss rifles, flamers, or micro pulse lasers. The battle claw is retained, preserving full anti-BattleMech swarming capability. Stealth armor trades raw protection for sensor evasion, making the Elemental III somewhat more vulnerable to direct hits than its predecessors but considerably harder to detect and target at range. This combination of restored jump mobility, reduced sensor signature, and retained close-combat capability positions the design as a more balanced successor to the original than the speed-focused Elemental II.</p>
 </capabilities>
 
 <overview>
-It was a marvel of Clan engineering that allowed a small group of operators to take down large 'Mechs and survive the encounter. While it is possible for a normal-sized human to use the battle armor, this design is tailored for the Clans' giant Elemental warriors and only they can bring out its fullest potential.
+<p>Produced by Clan Hell's Horses at the Csesztreg Industriplex Gamma, the Elemental III entered service in 3091 as a complementary design to the ground-focused Elemental II. Where its predecessor prioritized speed, the Elemental III returns to the jump-capable profile of the original Elemental while incorporating modern materials and sensor-defeating technology. The one-ton medium suit was developed to keep the foundational Elemental concept competitive against the growing variety of battle armor designs fielded by both Clan and Inner Sphere forces. The Horses' intent was to offer a balanced alternative that could operate alongside Elemental II formations in mixed-role deployments.</p>
 </overview>
 
 <deployment>
-Introduced soon after the Elemental II, this variant is more similar to the specifications of the original Elemental battlesuit. As well as the standard Battle Claw, the Elemental III mounts a single-shot Advanced SRM-2 launcher in its Detachable Weapon Pack, and incorporates Stealth Armor to mask the suit from sensors.
+<p>Six-trooper formations fielding the Elemental III with anti-personnel gauss rifles have appeared in small numbers among successor organizations that inherited the Level I structure. The combination of stealth armor and standoff weaponry makes these formations well-suited to installation security, where six troopers with reduced signatures can establish an undetectable perimeter around sensitive facilities.</p>
 </deployment>
 
 <history>
-The standard against which all battle armor is measured, the Elemental battle armor was first introduced in 2868 by Clan Wolf in a Trial of Possession against the Nova Cats. After the first use of the battle armor in 2868 against the Nova Cats, the Wolves entered into a series of trials later that year with Clan Hell's Horses. The Wolves put their new battle armor up against the Hell's Horses genetically engineered infantry, the precursor to the modern Clan Elemental. When the trials were over, the Hell's Horses had won the Wolves battle armor technology, and the Wolves had gotten the needed information to breed their own Elementals. Almost immediately, each Clan combined their own technology with that of the other, creating the tradition of matching Elemental troops with battle armor. Within a short period of time, battle armored Elemental troop deployments spread across Clan forces. The appearance of Elemental battle armor during the Clan Invasion of the Inner Sphere struck awe and fear in the MechWarriors who first faced them: to see swarms of armored infantrymen bouncing across the battlefield, survive direct hits even from a Medium Laser, and literally tear apart 'Mechs contributed to their initial impression that they were fighting aliens. The suits' ability to survive deadly hits and make great leaps inspired Victor Steiner-Davion to first nickname them "Toads," an epithet which continues to be used by Spheroids.
+<p>The origins of modern battle armor trace back to pressurized diving suits developed by Clan Goliath Scorpion on the resource-rich world of Dagda. These Water Elemental Mining Suits featured myomer musculature, self-contained life support, and atmospherically sealed bodies designed for extreme underwater conditions. Clan Wolf recognized the military potential of these suits and directed their merchant caste to acquire several through trade rather than combat.</p><p>Wolf scientists began weaponizing the diving suits, adding armor plating, weapons, and small jump jets. While the Wolves experimented with specialist designs tailored to specific environments, they ultimately settled on a general-purpose configuration suited to most battlefield conditions. Those early specialist prototypes would later inspire the Gnome, Salamander, Sylph, and Undine designs.</p><p>The Wolves first deployed their new battle armor in 2868, winning a Trial of Possession against a Star of Clan Nova Cat light troops. Later that year, the Wolves entered a series of Trials with Clan Hell's Horses. The Horses had been breeding genetically enhanced conventional infantry, the precursors to the modern Elemental phenotype. When the Trials concluded, both Clans had gained what the other possessed: the Horses won battle armor technology, and the Wolves obtained the knowledge to breed their own Elementals. Almost immediately, each Clan combined their new acquisition with their existing strengths, creating the tradition of matching Elemental troops with battle armor. Within a short period, armored Elemental deployments spread across every Clan.</p><p>The suit remained largely unchanged for nearly two centuries, a reflection of its sound fundamental design. Clan Snow Raven developed a variant early in this period optimized for boarding actions and zero-gravity combat. The standard configuration served as the backbone of Clan infantry forces throughout the Golden Century and the Political Century that followed.</p><p>The appearance of battle-armored Elementals during the Clan Invasion of the Inner Sphere in 3050 struck genuine terror into the MechWarriors who first faced them. Swarms of armored infantry bouncing across the battlefield, shrugging off direct weapons fire, and literally tearing apart BattleMechs led many Inner Sphere soldiers to believe they were fighting aliens. Victor Steiner-Davion coined the nickname "Toads," which persists among Spheroids to this day. Clan Wolf fielded a specialized reconnaissance configuration during the Invasion, optimized for extended operations behind enemy lines. The Inner Sphere scrambled to reverse-engineer captured suits, eventually producing the inferior but serviceable Inner Sphere Standard.</p><p>As decades passed and new battle armor designs proliferated across both Clan and Inner Sphere forces, the Elemental suit remained the gold standard of Clan armored infantry. Clan Jade Falcon engineers developed a heat-hardened configuration during the Jihad, while production expanded to Occupation Zone facilities as Clans established manufacturing on conquered territory.</p><p>Clan Hell's Horses, with their long tradition of combined-arms doctrine and infantry excellence, pursued the most ambitious evolution of the Elemental concept. Their engineers developed a prototype that traded the suit's characteristic jump capability for dramatically increased ground speed. The experimental design showed promise but suffered from weight penalties that limited its weaponry and prevented effective anti-BattleMech attacks. A refined production model entered service from the Csesztreg Industriplex Gamma, addressing many of the prototype's shortcomings while retaining the speed-focused approach. Shortly after, the Horses introduced a third-generation design from the same facility, returning to the original suit's jump-capable profile while incorporating advanced armor and sensor-defeating technology. These successive generations ensured the Elemental lineage remained at the forefront of Clan infantry technology well into the ilClan era.</p>
 </history>
 
 <manufacturer>
@@ -134,17 +122,30 @@ Csesztreg
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Various
-ENGINE:Various
-ARMOR:Various
-JUMPJET:Various
-COMMUNICATIONS:Various
-TARGETING:Various
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 RG24
 </source>
+
+<published>
+RG24
+</published>
 
 <chassis>
 biped

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e9c5-73a7-a4b0-c5635703ebd7
+</UUID>
 
 <UnitType>
 Tank
@@ -45,10 +40,6 @@ SturmFeur Heavy Tank
 3149
 </year>
 
-<originalBuildYear>
-3149
-</originalBuildYear>
-
 <type>
 Mixed (IS Chassis)
 </type>
@@ -60,9 +51,6 @@ Missile Boat
 <motion_type>
 Tracked
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 4
@@ -76,9 +64,13 @@ Tracked
 6
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 69
@@ -123,39 +115,52 @@ CLArtemisIV
 </Turret Equipment>
 
 <capabilities>
-For point-blank anti-infantry protection, the SturmFeur carries two huge missile racks backed up by machine guns. The SturmFeur is extensively armored, more so than many frontline tanks, in comparison to many other fire-support vehicles.
+<p>The SturmFeur carries a pair of LRM-20 launchers as its primary armament, providing devastating indirect and direct fire support. Targeting technology limitations during the Third Succession War era forced designers to split the launchers between a turret mount and a fixed forward position, preventing accidental friendly fire during high-angle bombardment. The turret launcher provides full traversal capability while the hull-mounted rack fires forward over the turret in a high arc. A pair of machine guns on the turret offer close-range anti-infantry defense but are ineffective against armored targets.</p><p>The 85-ton tank's InterComBust 255 ICE powerplant delivers a modest top speed of 54 km/h, typical of Lyran heavy vehicles that prioritize durability over mobility. Generous ProtecTech 6 armor plating allows the SturmFeur to absorb considerable punishment before withdrawal becomes necessary. The Angst 2100-b communications suite paired with the SturmFeur Highlight targeting system and BlindFire radar enables effective indirect fire coordination, a critical capability for a vehicle that operates best beyond visual range. The tank's principal weakness remains its complete reliance on ammunition, leaving it vulnerable once its magazines run dry, and its machine guns provide almost no deterrent against anything heavier than unarmored infantry.</p>
 </capabilities>
 
 <overview>
-The SturmFeur debuted in 3018. At that time, it was the largest combat vehicle dedicated to providing missile support in the Inner Sphere.
+<p>Commissioned by the Lyran Commonwealth Armed Forces in 3018, the SturmFeur was the largest combat vehicle dedicated to missile fire support in the Inner Sphere at the time of its introduction. Built by Trellshire Heavy Industries on Sudeten, the tank embodied the Lyran military philosophy of heavy armor and overwhelming firepower over speed and maneuverability. Its name, a misspelling of the German word for "assault fire," became synonymous with long-range missile bombardment across the Commonwealth's military academies. Despite its deliberate pace, the SturmFeur earned a reputation as a dependable workhorse, capable of absorbing punishment that would cripple lighter support vehicles while delivering sustained indirect fire from behind the front lines.</p>
 </overview>
 
 <deployment>
-No information on this variant
+<p>Released in 3149 from Defiance Industries on Hesperus II, the Cell variant was developed after study of salvaged Clan Hell's Horses vehicles. Its fuel cell powerplant reduces acquisition and operating costs while providing improved speed over the original model. Several Commonwealth regiments have received the Cell as a modern replacement for aging standard SturmFeur stocks, with its Clan-grade LRM launchers and Artemis fire control dramatically improving accuracy over earlier variants.</p>
 </deployment>
 
 <history>
-During the Fourth Succession War, conventional units particularly valued the SturmFeur. Its low profile proved to be the scourge of many Free Worlds League and Kuritan troops, who came under fire from these tanks that seemed to be able to hide behind even the most minor piece of terrain. It took a few ambushes for these troops to stop taking supposedly abandoned villages and parking lots for granted. It was considerably more popular among units stationed on worlds bordering the Periphery who obtained them. The majority of bandit gangs used lighter BattleMechs with less weaponry and armor. When confronted by these raiders, the SturmFeurs would deploy in a staggered formation, such that when bandits closed in on one tank in an attempt to get out of range of its missiles, they would find themselves within ideal range of the remaining defenders. To the chagrin of the attackers, the targeted SturmFeur's substantial armor allowed it to survive the attacks. Others have combined it with Demolishers, who require cover fire as they approach. Outside of the Federated Commonwealth coalition, however, very few units exhibited interest, preferring the far less expensive (albeit more vulnerable) LRM Carrier for support. Those who do obtain a SturmFeur sometimes use it as a command vehicle for their fi re-support troops, depending on its substantial armor to keep the commanders alive.
+<p>The SturmFeur entered service with the LCAF in 3018, produced at the Trellshire Heavy Industries plant on Sudeten. Within five years, Trellshire introduced an SRM variant that replaced the turret-mounted missile launcher with short-range racks and additional machine guns, creating a close-defense escort for standard SturmFeurs that proved popular among Lyran tankers.</p><p>The vehicle saw extensive action during the Fourth Succession War and became a staple of Lyran missile formations. Alan Gilmore, a SturmFeur commander during this period, developed the indirect-fire techniques that would define the vehicle's operational doctrine for generations. His high-angle launch tactics, which used the hull-mounted launcher tubes to lob missiles at extreme trajectories, proved devastatingly effective on The Edge. After retiring in 3035, Gilmore's lectures at the War College of Tamar on missile employment became known as the "Gilmore Doctrine" and remained foundational to SturmFeur crew training well into the next century. Gilmore's final battle came during the Clan invasion in defense of the War College. Though too old to be taken as a bondsman, he earned the respect of the Wolf Clan commanders. His fate remains unknown, though he is believed to have perished during the Blakist scouring of Tamar in 3070.</p><p>The Clan Invasion disrupted production when Clan Jade Falcon captured Sudeten in 3052, seizing the Trellshire plant. Production continued at Defiance Industries on Hesperus II, but the loss of Sudeten reduced overall output significantly. During the Jihad, the Word of Blake occupied Hesperus II and used the Defiance production lines to manufacture a variant incorporating a light fusion engine and their signature improved C3 computers. After Lyran forces retook the planet, they adapted the Blakist design, replacing its B-Pods with M-Pods and swapping the C3 for an ECM suite.</p><p>The most significant modernization came in 3149 when Defiance released the Cell variant, prompted by study of salvaged Clan Hell's Horses vehicles following Jade Falcon and Wolf raids on Hesperus II. This new model returned the SturmFeur to its original missile support role while incorporating modern materials and Clan-grade weaponry, alongside a companion variant mounting an improved heavy Gauss rifle for close-range engagements. Archon Trillian Steiner ordered full production of both designs, ensuring the SturmFeur would continue to serve Lyran interests well into the ilClan era.</p>
 </history>
 
 <manufacturer>
-Defiance Industries,Trellshire Heavy Industries
+Defiance Industries
 </manufacturer>
 
 <primaryFactory>
-Hesperus II,Sudeten
+Hesperus II
 </primaryFactory>
 
 <systemManufacturers>
-ENGINE:TharHes 340 Fuel Cell
-ARMOR:Durallex Special Heavy Ferro-Fibrous with CASE
-COMMUNICATIONS:Angst 2100-b
-TARGETING:SturmFeur Highlight with BlindFire Radar and Artemis IV FCS
+CHASSIS:Unknown
+ENGINE:TharHes
+ARMOR:Durallex
+COMMUNICATIONS:Angst
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:340 Fuel Cell
+ARMOR:Special Heavy Ferro-Fibrous
+COMMUNICATIONS:2100-b
+TARGETING:SturmFeur Highlight with BlindFire Radar and Artemis IV FCS
+</systemModels>
 
 <source>
 RG28
 </source>
+
+<published>
+RG28,RSFP:Battlefield
+</published>
 
 <tonnage>
 85.0

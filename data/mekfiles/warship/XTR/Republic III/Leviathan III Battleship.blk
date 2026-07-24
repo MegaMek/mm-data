@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-eead-70ee-b060-e9b1ab92653e
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Leviathan III Battleship
 3150
 </year>
 
-<originalBuildYear>
-3150
-</originalBuildYear>
-
 <type>
 Clan Level 3
 </type>
@@ -62,9 +53,9 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:60.0:5:1
-smallcraftbay:10.0:2:2
-cargobay:14712.5:12:3
+asfbay:60.0:5:1::-1:0
+smallcraftbay:10.0:2:2::-1:0
+cargobay:14712.5:12:3::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
@@ -85,9 +76,9 @@ dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-1stclassquarters:1700.0:0
-crewquarters:4900.0:0
-2ndclassquarters:1575.0:0
+1stclassquarters:1700.0:0:-1::-1:0
+crewquarters:4900.0:0:-1::-1:0
+2ndclassquarters:1575.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -118,9 +109,13 @@ false
 12
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 6
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 1000
@@ -799,15 +794,19 @@ Clan Ammo ATM-12:900
 </structural_integrity>
 
 <capabilities>
-The Leviathan III, a derivative of the Leviathan-class hull, is a highly anticipated development in the Rasalhague Dominion's naval capabilities. Incorporating lessons from the Second Combine-Dominion War, the Leviathan III is expected to feature twenty docking collars for DropShip transport, indicating a shift in responsibility for supplying the aerospace complement onto the transported DropShips. While the precise armament of the Leviathan III is not confirmed, it is believed to be a modified version of the Leviathan II's weaponry, optimized for long-range combat. Defensive measures are also likely to be incorporated to fend off enemy fighters and prevent them from reaching nuclear attack range. The implications of the Leviathan III are significant. While primarily serving as a transport for DropShip Stars, its sheer size and capabilities make it a formidable force. With the potential to carry eight Aesir aerospace fighters, the Leviathan III's complement rivals that of the fearsome Rasalhague. The remaining docking collars hold undisclosed potential, potentially accommodating additional assault DropShip Stars. The Dominion's renewed focus on such monumental craft, coupled with its historical expertise in naval construction, raises concerns for the Republic as previous alliances between the two factions have faded.
+<p>The Leviathan III mounts an exceptionally comprehensive weapons suite built around heavy naval Gauss rifles, heavy naval PPCs, naval autocannons, and banks of naval laser fifty-fives in every arc. Capital missile launchers and sub-capital Stingray missiles on the broadsides provide flexible engagement options at varying ranges. The conventional weapons fit features upgraded systems including LRM-20 batteries with Artemis V fire control, ATM-12 launchers with multiple ammunition types, ER PPCs with PPC capacitors, and extensive arrays of extended-range lasers and pulse lasers. Both conventional and laser anti-missile systems provide redundant point-defense coverage across most arcs, a direct response to the nuclear-armed attacks that threatened earlier Leviathan-class vessels during the Jihad.</p><p>The most significant structural change from the Leviathan II is the dramatic expansion of docking capacity to twenty DropShip collars, shifting the primary aerospace complement responsibility to carried DropShips rather than internal fighter bays. The vessel still accommodates sixty aerospace fighters and ten small craft internally, serving primarily as a screening element. Five thousand three hundred seventy-three tons of Lamellor Ferro-Carbide armor provides exceptional protection, a substantial increase over earlier Leviathan designs. Ten thousand double heat sinks manage the massive thermal output of the weapons suite. Structural integrity of one hundred fifty matches the Leviathan II's reinforced construction. A lithium-fusion battery and mobile HPG round out the vessel's strategic capabilities.</p>
 </capabilities>
 
 <overview>
-The Rasalhague Dominion navy, having learned lessons from the Jihad, recognizes the expense and vulnerability of WarShips but acknowledges their indispensable role in achieving orbital supremacy. The Leviathan-class battleships played a crucial role in the Dominion's successful assaults on Luthien, Dieron, and Terra. Conversely, their assaults on New Earth, without the presence of such heavy assets, met with failure. As a result, the Dominion understands the importance of heavy battleships in facing formidable opposition.
+<p>The Leviathan III Battleship is the latest evolution of the Leviathan design lineage, developed by the Rasalhague Dominion as its premier capital WarShip for the ilClan era. Built at the Alshain Naval Yards, the class maintains the same massive two million four hundred thousand ton displacement as its predecessors while adopting a fundamentally different force projection philosophy. Where the Leviathan II emphasized internal aerospace capacity, the Leviathan III was designed to serve as a mobile base for DropShip-borne combined-arms formations alongside its direct combat role. The class entered production during a period when few powers possessed the resources or industrial will to construct new capital WarShips, making even a single hull of such magnitude a strategic asset of the first order. The Leviathan III carries the Dominion's tradition of fielding the largest and most heavily armed WarShips in existence into a new generation of interstellar conflict.</p>
 </overview>
 
+<deployment>
+<p>No named vessels of the Leviathan III class have been identified in open intelligence reports. The first hull is attributed a production year of 3150, though the vessel's precise designation and operational deployment remain classified. Outside analysts initially misread Dominion shipyard activity during the 3130s and 3140s as routine DropShip fleet expansion, only recognizing the scale of the construction program after Dominion sources disclosed the existence of a new Leviathan derivative. Whether additional hulls have been laid down at the Alshain Naval Yards or elsewhere remains unknown. The completed vessel presumably assumed the role of fleet flagship from the CGB Rasalhague, the last surviving Leviathan II, serving as the cornerstone of the Dominion's naval order of battle during the ilClan era.</p>
+</deployment>
+
 <history>
-In the aftermath of the Jihad, the Rasalhague Dominion recognized the cost and vulnerability of WarShips but also their crucial role in achieving orbital supremacy. The Leviathan-class battleships played a pivotal role in successful Dominion assaults on key targets. However, when facing significant opposition without the presence of these heavy assets, their assaults failed. This realization reinforced the importance of heavy battleships in the Dominion's naval strategy. Following the expansion of the Dominion's aerospace sibkos after Gray Monday, intelligence agencies initially believed the Dominion was focusing on expanding its DropShip navy. However, recent revelations from an internal Dominion report indicate the development of a new Leviathan derivative, tentatively named Leviathan III. The Leviathan III appears to incorporate lessons from the Second Combine-Dominion War and is expected to feature twenty docking collars for DropShip transport, relieving the battleship of direct responsibility for housing aerospace fighters. While precise details about the armament of the Leviathan III remain undisclosed, it is speculated to be a modified version of the Leviathan II's weaponry, optimized for long-range combat. Additionally, defensive measures are anticipated to prevent enemy fighters from reaching nuclear attack range. The prospect of the Leviathan III raises concerns as the Dominion's renewed focus on constructing such monumental craft suggests a potential shift in its priorities and alliances. Despite increased security measures at Clan shipyards, rumors have surfaced of construction at Quatre Belle, raising the possibility of a joint Bear-Raven WarShip project. The combination of the Dominion's production capabilities and the Alliance's naval expertise could create a formidable and potentially invincible force, posing a significant challenge to other factions.
+<p>The Leviathan III class emerged from the Rasalhague Dominion's hard-won recognition during the Jihad that heavy battleships remained indispensable for achieving orbital supremacy despite their enormous cost and vulnerability to concentrated attack. The Dominion's successful assaults on key worlds during Operation SCOUR had relied heavily on the presence of Leviathan-class vessels, while operations conducted without such capital assets met with measurably greater resistance and higher casualty rates among the assault formations. This operational experience drove Dominion strategists to conclude that a successor to the Leviathan II was essential once industrial capacity recovered sufficiently to support such an ambitious undertaking.</p><p>The Second Combine-Dominion War and the broader instability of the early thirty-second century delayed any serious development effort for years. It was not until after the disruptions caused by Gray Monday in the 3130s that the Dominion began quietly expanding its aerospace training programs and naval infrastructure in preparation for new capital construction. The Alshain Naval Yards, which had maintained the sole surviving Leviathan II through decades of service, possessed both the institutional knowledge and the physical capacity to undertake a new program of this scale. Construction proceeded under extensive secrecy, with the true nature of the shipyard activity concealed behind what appeared to be routine DropShip fleet expansion.</p><p>The design philosophy evolved significantly from the Leviathan II. Dominion naval architects recognized that DropShip-borne formations offered greater tactical flexibility than a massive internal fighter wing and reduced the risk of losing an entire aerospace complement if the mothership sustained critical damage. The Leviathan III was accordingly designed around a dramatically expanded docking capacity, with the internal aerospace component reduced to a screening role. This shift allowed the vessel to function as both a direct combatant and a mobile staging base for combined-arms operations, a dual role that the Leviathan II had never been configured to fill.</p><p>The armament drew on the latest Clan technologies available to the Dominion, with upgraded fire control, enhanced energy weapons, and redundant defensive systems reflecting the hard lessons of the Jihad. Armor protection increased substantially over the Leviathan II, further enhancing the vessel's survivability against the kinds of concentrated fire that had destroyed two of the three earlier battleships. Rumors of collaboration with the Raven Alliance surfaced during the construction period, with reports of activity at the Quatre Belle facility suggesting the Dominion had sought outside naval expertise. Such a partnership would echo the original Ghost Bear-Snow Raven cooperation that produced the first Leviathan decades earlier, combining the Dominion's industrial capacity with the Alliance's deep knowledge of naval architecture.</p><p>The Leviathan III entered service in an era when the construction of new capital WarShips was an extraordinary rarity. Most powers had long since exhausted the industrial capacity and political will required to build vessels of such immense scale. The Dominion's ability to produce a successor to the Leviathan II, decades after the Jihad had devastated the Inner Sphere's naval yards, confirmed the Rasalhague Dominion's commitment to maintaining a naval capability that no neighboring state could match. Whether additional vessels followed the first hull remains unknown, but the existence of the class ensured that the Dominion would continue to field the largest and most heavily armed WarShips in the Inner Sphere well into the ilClan period.</p>
 </history>
 
 <manufacturer>
@@ -819,12 +818,22 @@ Alshain
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Alshain Naval Yards
 ENGINE:Unknown
-ARMOR:Unknown
+ARMOR:Valiant
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Lamellor Ferro-Carbide
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Battleship

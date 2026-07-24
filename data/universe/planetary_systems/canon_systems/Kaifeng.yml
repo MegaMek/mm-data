@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kaifeng
-sucsId: 1277
+sucsId: 1278
 xcood: 71.853
 ycood: -152.286
 spectralType: G0V
@@ -27,7 +27,7 @@ event:
   - date: '2383-09-30'
     nadirCharge: yes
   - date: '2825-02-22'
-    zenithCharge: no
+    nadirCharge: no
 planet:
   - name: Zhào's World
     type: TERRESTRIAL
@@ -78,7 +78,7 @@ planet:
     lifeForm: REPTILE
     landmass:
       - name: Goei's Hold 1
-        capital: Mahabohdi
+        capital: Mahabodhi
       - name: Goei's Hold 2
       - name: Goei's Hold 3
     event:
@@ -109,6 +109,12 @@ planet:
         population: 18052104.0
       - date: '2270-01-01'
         population: 26401695.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2280-01-01'
         population: 36967772.0
       - date: '2290-01-01'
@@ -127,6 +133,12 @@ planet:
         population: 164338264.0
       - date: '2360-01-01'
         population: 188088774.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SSUP
       - date: '2367-07-01'
         faction:
           source: canon
@@ -178,6 +190,16 @@ planet:
         population: 440624639.0
       - date: '2570-01-01'
         population: 446756466.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 5
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2580-01-01'
         population: 452207060.0
       - date: '2590-01-01'
@@ -284,6 +306,17 @@ planet:
           value:
             - FS
         population: 450979506.0
+      - date: '3030-12-31'
+        # administration:
+        #   - Sarna March
+        #   - Palos Operational Area
+        #   - Region 3
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '3040-01-01'
         population: 455876480.0
       - date: '3040-01-19'
@@ -291,8 +324,14 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3043-01-01'
-        socioIndustrial: B-B-A-C-B
+        socioIndustrial: B-B-A-C-A
       - date: '3050-01-01'
         population: 460964898.0
       - date: '3057-11-01'
@@ -300,21 +339,41 @@ planet:
           source: canon
           value:
             - SSUP
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SSUP
       - date: '3058-06-15'
         faction:
           source: canon
           value:
             - CC
+      - date: '3058-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3060-01-01'
         population: 464899799.0
+      - date: '3063-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 7
       - date: '3070-01-01'
         population: 467837913.0
       - date: '3080-01-01'
         population: 470559257.0
+      - date: '3085-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 3
       - date: '3090-01-01'
         population: 476335242.0
       - date: '3097-01-01'
-        socioIndustrial: B-B-A-C-B
+        socioIndustrial: B-B-A-C-A
       - date: '3100-01-01'
         population: 478722883.0
       - date: '3110-01-01'
@@ -323,12 +382,24 @@ planet:
         population: 480737747.0
       - date: '3130-01-01'
         population: 484017903.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 3
       - date: '3132-08-07'
         hpg: X
+      - date: '3135-12-31'
+        # administration:
+        #   - Liao Commonality
+        #   - Region 6
       - date: '3140-01-01'
         population: 488003168.0
       - date: '3145-01-01'
         population: 490155112.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 6
   - name: Soma
     type: GIANT_TERRESTRIAL
     orbitalDist: 4.2

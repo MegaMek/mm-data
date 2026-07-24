@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c024-7787-833f-61434fd64cf2
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,11 +52,19 @@ Ambusher
 Wheeled
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>Mechanized wheeled platoons transport their infantry in wheeled armored personnel carriers optimized for speed on roads and improved surfaces. Wheeled APCs are cheaper to maintain and faster on pavement than tracked alternatives, making these platoons ideal for garrison rapid-response forces, highway patrol, and urban security operations. Their off-road capability is limited compared to tracked vehicles, restricting employment in rough terrain, but on developed worlds with good road networks, wheeled mechanized infantry offer the best balance of speed, protection, and operating cost.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -73,9 +76,6 @@ TW
 </squadn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
-<armorKit>
-GenericKit
-</armorKit>

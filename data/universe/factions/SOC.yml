@@ -17,6 +17,10 @@
 
 key: SOC
 name: The Society
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes: [ ]  # no SUCS equivalent
 capital: Terra
 yearsActive:
   - start: 3072
@@ -32,6 +36,12 @@ background: Clan/The Society.png
 camos: Clans/Society
 nameGenerator: Clan
 ratingLevels:
-  - PG
+  - Provisional Garrison
+  - Solahma
+  - Second Line
+  - Front Line
+  - Keshik
 fallBackFactions:
   - CLAN
+usesMercenaries:
+  2500: false

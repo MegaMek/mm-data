@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e932-79ed-b0e1-53d84232a3cf
+</UUID>
 
 <UnitType>
 Tank
@@ -44,10 +39,6 @@ Vargr APC Tank
 <year>
 2945
 </year>
-
-<originalBuildYear>
-2945
-</originalBuildYear>
 
 <type>
 IS Level 1
@@ -72,6 +63,18 @@ troopspace:7.0
 <engine_type>
 1
 </engine_type>
+
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 50
@@ -104,9 +107,53 @@ Machine Gun
 LRM 15
 </Turret Equipment>
 
+<capabilities>
+<p>The Vargr carries a seven-ton infantry bay capable of transporting a full infantry complement to the battlefield. A 240 ICE engine propels the vehicle to 65 km/h on suitable terrain. Its turret mounts two machine guns and two medium lasers, providing adequate suppressive fire once infantry has been delivered to the objective.</p><p>Armor protection is substantial for a vehicle of its class, improving the likelihood of delivering its payload intact. The use of an ICE engine, while well-suited to the limited industrial base of the Aurigan Periphery, reduces endurance compared to fusion-powered alternatives. The vehicle's armament is light relative to its mass, reflecting its purpose as a carrier rather than a dedicated combat unit.</p>
+</capabilities>
+
+<overview>
+<p>The Vargr is a 65-ton wheeled armored personnel carrier developed for the Aurigan Coalition in 2944. Its name derives from the Old Norse word for wolf. Produced on Mechdur, the Coalition's principal industrial world, the Vargr serves as the primary means of moving infantry across contested terrain. Large for its class, it emphasizes protection and carrying capacity over firepower.</p>
+</overview>
+
+<deployment>
+<p>The LRM variant replaces the medium lasers with a single turret-mounted LRM-15 and eight rounds of ammunition, trading close-range laser capability for indirect fire support. This allows the vehicle to engage at longer ranges alongside its machine guns, and provides a fire support option when infantry is not embarked. Introduced in 2945, one year after the base model.</p>
+</deployment>
+
+<history>
+<p>The Vargr first appeared among forces operating in the Aurigan Reach before being formally documented in House Arano: The Aurigan Coalition. Production was centered on Mechdur, the Coalition's sole significant industrial world during the period.</p><p>The vehicle appears exclusively in Aurigan Coalition unit availability lists from the era, absent even from mercenary rosters, indicating that production output was reserved entirely for Coalition forces. Active manufacturing spanned the Late Succession Wars period through the early Renaissance era. The design's tight association with Aurigan Coalition supply chains limited its spread to other factions, and it remains a distinctly regional vehicle.</p>
+</history>
+
+<manufacturer>
+Aspero-Dinton Mining
+</manufacturer>
+
+<primaryFactory>
+Mechdur
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:240 ICE
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 Arano
 </source>
+
+<published>
+Arano
+</published>
 
 <tonnage>
 65.0
@@ -115,3 +162,4 @@ Arano
 <fuelType>
 PETROCHEMICALS
 </fuelType>
+

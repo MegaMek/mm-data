@@ -17,6 +17,10 @@
 
 key: CP
 name: Clan Protectorate
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes: [ ]  # no SUCS equivalent
 capital: Marik
 yearsActive:
   - start: 3138
@@ -51,3 +55,5 @@ factionLeaders:
     surname: "Kalasa"
     gender: "MALE"
     startYear: 3138
+usesMercenaries:
+  2500: false

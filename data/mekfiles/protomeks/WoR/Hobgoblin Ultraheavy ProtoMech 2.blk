@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e124-7045-bfa1-6318d2939eb5
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Hobgoblin Ultraheavy ProtoMech
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 Clan Level 4
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Biped
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 4
@@ -80,6 +68,22 @@ false
 0
 </engine_type>
 
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
+
 <internal_type>
 -1
 </internal_type>
@@ -94,6 +98,7 @@ false
 
 <Body Equipment>
 CLAPGaussRifle Ammo (20)
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -116,28 +121,20 @@ CLAPGaussRifle
 <Legs Equipment>
 </Legs Equipment>
 
-<source>
-WoR
-</source>
-
-<tonnage>
-10.0
-</tonnage>
-
 <capabilities>
-While not being intended for use on the battlefield, the Society was able to quickly put the tested Hobgoblin design into production to supplement their forces. The magnetic clamp system, which allowed Society BattleMechs to transport the Hobgoblin to various danger places on the battlefield, compensated for the poor top speed. This was a significant advantage because the Hobgoblin's slow speed made it an easy target.
+<p>The base Hobgoblin's weapons suite is built around the Fusillade rapid-fire weapon system mounted in the main gun position, supplemented by an AP Gauss Rifle in the right arm with forty rounds of ammunition. The Fusillade provides suppressive fire capability against infantry and light vehicles, while the AP Gauss Rifle delivers precise anti-personnel firepower at range. The Magnetic Clamp System in the torso allows the Hobgoblin to attach to and ride an OmniMek into the combat zone, compensating for the design's modest forty-three kilometers per hour cruising speed.</p><p>Fifty-five points of armor make the Hobgoblin exceptionally durable for its tonnage, approaching the protection levels of some light BattleMeks. Without jump jets, the design is dependent on its transport Mek for rapid deployment and relies on ground speed for tactical maneuvering after detachment. The Hobgoblin is designed for a specific tactical doctrine: ride into the engagement zone on an OmniMek, detach at close range, and use its substantial anti-personnel firepower to clear infantry and battle armor formations while the transport Mek handles heavier targets. This transported assault role gives the Hobgoblin strategic mobility far exceeding what its ground speed alone would allow.</p>
 </capabilities>
 
 <overview>
-The Hobgoblin ultraheavy ProtoMech was developed by The Society as a test vehicle for the Fusillade weapon system and ProtoMech-scale Magnetic Clamps.
+<p>The Hobgoblin is a ten-ton ultraheavy ProtoMek designed during the Wars of Reaving as a transported assault platform. Equipped with a Magnetic Clamp System that allows it to ride into battle attached to an OmniMek, the Hobgoblin combines the rapid deployment capability of battle armor with the superior firepower and protection of a ProtoMek chassis. At ten tons, it occupies the lower end of the ultraheavy ProtoMek weight bracket but packs substantial anti-personnel firepower through its combination of Fusillade rapid-fire weapons and AP Gauss Rifles, making it a devastating close-range combatant once deployed from its transport.</p>
 </overview>
 
 <deployment>
-This variant removes some armor and the Fusillade. Instead the Hobgoblin 2 carries three more AP Gauss Rifles, bringing the total to four. Each has five reloads, which is enough to devastate conventional infantry forces, but not enough to turn the tide of a battle.
+<p>The Hobgoblin 2 replaces the Fusillade with additional AP Gauss Rifles, mounting four of the precision anti-personnel weapons: two in the torso, one in the right arm, and one in the left arm. Twenty rounds of shared ammunition provide adequate engagement endurance for the transported assault role. Armor is reduced to forty-eight points to accommodate the additional weapons mass. The Magnetic Clamp System is retained in the torso, maintaining the transported assault doctrine. The concentrated AP Gauss firepower provides precise, long-ranged anti-personnel capability that is more effective against battle armor and hardened infantry than the base model's Fusillade, though it sacrifices the broader suppressive fire capability.</p>
 </deployment>
 
 <history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
+<p>The Hobgoblin was developed during the Wars of Reaving to fill a specific tactical niche: providing heavy anti-personnel firepower that could be delivered rapidly to the point of need without requiring independent strategic mobility. The Magnetic Clamp System solved the fundamental mobility limitation of heavy ProtoMeks by allowing them to ride OmniMeks into combat, a concept borrowed from battle armor doctrine but applied at a significantly larger scale.</p><p>The design's combination of transport capability and heavy anti-personnel weapons made it particularly effective during the urban and industrial fighting that characterized much of the Reaving campaigns. Hobgoblin Points would ride their transport Meks into contested areas, detach near enemy infantry concentrations, and use their Fusillade and AP Gauss weapons to systematically clear defensive positions that would have been costly for BattleMeks to reduce alone.</p><p>The Hobgoblin 2 variant replaced the Fusillade with additional AP Gauss Rifles, mounting four of the precision anti-personnel weapons across the arms and torso alongside the Magnetic Clamp System. While this reduced the suppressive fire capability of the base model, the concentrated AP Gauss firepower proved more effective against hardened targets and battle armor formations. Armor was reduced to forty-eight points to accommodate the additional weapons mass, but the variant retained the Magnetic Clamp System and transported assault doctrine that defined the Hobgoblin concept. Both variants saw extensive service during the Reaving and continue to serve in Homeworld Clan formations that maintain the transported ProtoMek assault doctrine.</p>
 </history>
 
 <manufacturer>
@@ -149,10 +146,28 @@ Ironhold
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:HOB/11
-ENGINE:60 Fusion
-ARMOR:ProtoMech Standard/2
-JUMPJET:Unspecified
-COMMUNICATIONS:PMT-429
-TARGETING:Ribaldi 402 TTS
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Ultraheavy
+ENGINE:45
+ARMOR:Standard
+</systemModels>
+
+<source>
+WoR,WoRS
+</source>
+
+<published>
+WoR,WoRS
+</published>
+
+<tonnage>
+10.0
+</tonnage>
+

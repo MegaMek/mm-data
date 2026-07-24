@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Shaobuon (Liu's Memory 3130+)
-sucsId: 2291
+sucsId: 2292
 xcood: -10.824
 ycood: -416.351
 spectralType: K3V
@@ -50,6 +50,14 @@ planet:
         capital: Phillips City
       - name: Nova Kröslin
     event:
+      - date: '2108-12-05'
+        name: Shaobuon
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2731-01-05'
         faction:
           source: canon
@@ -63,6 +71,16 @@ planet:
         population: 223052.0
       - date: '2750-01-01'
         population: 737546.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 13
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 1926931.0
       - date: '2770-01-01'
@@ -87,16 +105,25 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '2864-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - CC
-      - date: '2108-12-05'
-        name: Shaobuon
+            - ABN
       - date: '3130-01-01'
         name: Liu's Memory
         message: Shaobuon renamed to Liu's Memory
+      - date: '3130-12-31'
+        # administration:
+        #   - Victoria Commonality
+        #   - Region 6
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
   - name: López
     type: TERRESTRIAL
     orbitalDist: 0.49

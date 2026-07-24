@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Nockatunga
-sucsId: 1884
+sucsId: 1885
 xcood: -289.027
 ycood: -54.076
 spectralType: F2V
@@ -114,6 +114,12 @@ planet:
         population: 108673.0
       - date: '2270-01-01'
         population: 369670.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 1058856.0
       - date: '2283-01-01'
@@ -138,6 +144,12 @@ planet:
           value:
             - FWL
         population: 110463789.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 147786973.0
       - date: '2380-01-01'
@@ -182,6 +194,12 @@ planet:
         population: 846473096.0
       - date: '2570-01-01'
         population: 852627163.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 858787503.0
       - date: '2590-01-01'
@@ -296,14 +314,24 @@ planet:
         population: 714225830.0
       - date: '3070-01-01'
         population: 719242950.0
+      - date: '3079-10-01'
+        faction:
+          source: canon
+          value:
+            - LA
       - date: '3079-11-29'
         faction:
           source: canon
           value:
             - DTA
-      - date: '3079-10-01'
+      - date: '3079-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Dixie Theater
+      - date: '3079-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - LA
       - date: '3080-01-01'
@@ -319,6 +347,10 @@ planet:
         population: 752348164.0
       - date: '3130-01-01'
         population: 764635463.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -329,9 +361,13 @@ planet:
           value:
             - DTA
         population: 778679239.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Mildura Shire

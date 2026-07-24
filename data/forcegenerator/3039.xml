@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -24,9 +24,9 @@
 >
     <factions>
         <faction key='BAN'>
-            <!-- Omni percentages: 5,5 -->
-            <!-- Clan percentages: 20,20 -->
-            <!-- Star League percentages: 70,70 -->
+            <pctOmni>5,5</pctOmni>
+            <pctClan>20,20</pctClan>
+            <pctSL>70,70</pctSL>
             <salvage pct='10'>CCC:2,CHH:2,CSR:2,CIH:2,CSV:2,CFM:2,CCO:2,CGS:2,CSA:2,CDS:2,CW:2,CBS:1,CNC:2,CSJ:2,CJF:2,CGB:2,CB:5</salvage>
         </faction>
         <faction key='BoS'>
@@ -57,17 +57,17 @@
             <weightDistribution era='3039' unitType='AeroSpaceFighter'>1,1,1</weightDistribution>
         </faction>
         <faction key='CBS'>
-            <!-- Omni percentages: 0,0,5,40,60 -->
-            <!-- Clan percentages: 20,20,50,80,100 -->
-            <!-- Star League percentages: 80,80,50,20,0 -->
+            <pctOmni>0,0,5,40,60</pctOmni>
+            <pctClan>20,20,50,80,100</pctClan>
+            <pctSL>80,80,50,20,0</pctSL>
             <pctClan unitType='Vehicle'>0,0,10,25,35</pctClan>
             <pctSL unitType='Vehicle'>100,100,90,75,65</pctSL>
             <salvage pct='5'>CHH:3,CCC:3,CDS:1,CW:3,CSV:10,CNC:5,CSJ:5,CCO:3,CJF:3,CB:5</salvage>
         </faction>
         <faction key='CB'>
-            <!-- Omni percentages: 0,0,6,75,100 -->
-            <!-- Clan percentages: 40,40,70,100,100 -->
-            <!-- Star League percentages: 60,60,30,0,0 -->
+            <pctOmni>0,0,6,75,100</pctOmni>
+            <pctClan>40,40,70,100,100</pctClan>
+            <pctSL>60,60,30,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:1,CHH:5,CSR:4,CIH:4,CSV:6,CFM:3,CCO:5,CGS:3,CSA:4,CDS:5,CW:4,CBS:3,CNC:10,CSJ:5,CJF:4</salvage>
@@ -75,17 +75,17 @@
             <weightDistribution era='3039' unitType='Tank'>4,1,3,2</weightDistribution>
         </faction>
         <faction key='CCC'>
-            <!-- Omni percentages: 0,0,28,100,100 -->
-            <!-- Clan percentages: 6,6,40,100,100 -->
-            <!-- Star League percentages: 94,94,60,0,0 -->
+            <pctOmni>0,0,28,100,100</pctOmni>
+            <pctClan>6,6,40,100,100</pctClan>
+            <pctSL>94,94,60,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CHH:2,CSR:2,CIH:3,CSV:7,CFM:3,CCO:7,CGS:2,CSA:7,CDS:1,CW:7,CBS:2,CNC:10,CSJ:3,CJF:5,CGB:2,CB:1</salvage>
         </faction>
         <faction key='CCO'>
-            <!-- Omni percentages: 8,8,10,90,100 -->
-            <!-- Clan percentages: 63,63,63,100,100 -->
-            <!-- Star League percentages: 37,37,37,0,0 -->
+            <pctOmni>8,8,10,90,100</pctOmni>
+            <pctClan>63,63,63,100,100</pctClan>
+            <pctSL>37,37,37,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CHH:1,CCC:3,CIH:8,CSR:2,CSV:2,CFM:2,CGS:1,CSA:3,CDS:1,CW:1,CBS:1,CNC:7,CSJ:10,CJF:10,CB:2</salvage>
@@ -93,17 +93,17 @@
             <weightDistribution era='3039' unitType='Tank'>3,1,3,2</weightDistribution>
         </faction>
         <faction key='CFM'>
-            <!-- Omni percentages: 0,0,5,55,100 -->
-            <!-- Clan percentages: 30,30,60,100,100 -->
-            <!-- Star League percentages: 70,70,40,0,0 -->
+            <pctOmni>0,0,5,55,100</pctOmni>
+            <pctClan>30,30,60,100,100</pctClan>
+            <pctSL>70,70,40,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:2,CHH:3,CSR:2,CIH:3,CSV:10,CCO:2,CGS:7,CSA:10,CDS:2,CW:4,CNC:3,CSJ:5,CJF:7,CGB:1,CB:1</salvage>
         </faction>
         <faction key='CGB'>
-            <!-- Omni percentages: 0,0,20,100,100 -->
-            <!-- Clan percentages: 60,60,80,100,100 -->
-            <!-- Star League percentages: 40,40,20,0,0 -->
+            <pctOmni>0,0,20,100,100</pctOmni>
+            <pctClan>60,60,80,100,100</pctClan>
+            <pctSL>40,40,20,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CHH:10,CCC:2,CIH:5,CSV:10,CFM:3,CGS:2,CCO:1,CSA:5,CDS:1,CW:8,CNC:8,CSJ:2,CJF:8</salvage>
@@ -111,25 +111,25 @@
             <weightDistribution era='3039' unitType='Tank'>3,1,3,2</weightDistribution>
         </faction>
         <faction key='CGS'>
-            <!-- Omni percentages: 0,0,20,50,80 -->
-            <!-- Clan percentages: 6,6,60,70,90 -->
-            <!-- Star League percentages: 94,94,40,30,10 -->
+            <pctOmni>0,0,20,50,80</pctOmni>
+            <pctClan>6,6,60,70,90</pctClan>
+            <pctSL>94,94,40,30,10</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:1,CHH:2,CIH:6,CSV:8,CFM:8,CCO:2,CSA:4,CDS:4,CW:1,CNC:4,CSJ:2,CJF:10,CGB:2,CB:2</salvage>
         </faction>
         <faction key='CHH'>
-            <!-- Omni percentages: 5,5,25,80,90 -->
-            <!-- Clan percentages: 20,20,75,90,100 -->
-            <!-- Star League percentages: 80,80,25,10,0 -->
+            <pctOmni>5,5,25,80,90</pctOmni>
+            <pctClan>20,20,75,90,100</pctClan>
+            <pctSL>80,80,25,10,0</pctSL>
             <pctClan unitType='Vehicle'>5,5,40,50,60</pctClan>
             <pctSL unitType='Vehicle'>95,95,60,50,40</pctSL>
             <salvage pct='10'>CCC:1,CSR:1,CIH:8,CSV:4,CFM:5,CCO:1,CGS:3,CSA:3,CDS:3,CW:3,CBS:1,CNC:5,CSJ:8,CJF:3,CGB:10,CB:3</salvage>
         </faction>
         <faction key='CIH'>
-            <!-- Omni percentages: 0,0,0,90,100 -->
-            <!-- Clan percentages: 40,40,70,100,100 -->
-            <!-- Star League percentages: 60,60,30,0,0 -->
+            <pctOmni>0,0,0,90,100</pctOmni>
+            <pctClan>40,40,70,100,100</pctClan>
+            <pctSL>60,60,30,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:1,CHH:4,CSR:1,CSV:8,CFM:5,CCO:7,CGS:8,CSA:8,CDS:9,CW:6,CNC:3,CSJ:7,CJF:10,CGB:5,CB:2</salvage>
@@ -137,49 +137,49 @@
             <weightDistribution era='3039' unitType='Tank'>5,2,3,1</weightDistribution>
         </faction>
         <faction key='CJF'>
-            <!-- Omni percentages: 20,20,60,100,100 -->
-            <!-- Clan percentages: 40,40,80,100,100 -->
-            <!-- Star League percentages: 60,60,20,0,0 -->
+            <pctOmni>20,20,60,100,100</pctOmni>
+            <pctClan>40,40,80,100,100</pctClan>
+            <pctSL>60,60,20,0,0</pctSL>
             <pctClan unitType='Vehicle'>0,0,20,20,20</pctClan>
             <pctSL unitType='Vehicle'>100,100,80,80,80</pctSL>
             <salvage pct='10'>CCC:1,CHH:1,CSR:2,CIH:5,CSV:10,CFM:5,CCO:6,CGS:6,CSA:4,CDS:5,CW:10,CNC:1,CSJ:3,CGB:4,CB:1</salvage>
         </faction>
         <faction key='CNC'>
-            <!-- Omni percentages: 10,10,50,90,100 -->
-            <!-- Clan percentages: 20,20,60,100,100 -->
-            <!-- Star League percentages: 80,80,40,0,0 -->
+            <pctOmni>10,10,50,90,100</pctOmni>
+            <pctClan>20,20,60,100,100</pctClan>
+            <pctSL>80,80,40,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:8,CHH:5,CSR:8,CIH:3,CSV:3,CFM:5,CCO:10,CGS:5,CSA:8,CDS:2,CW:6,CBS:3,CSJ:3,CJF:3,CGB:8,CB:5</salvage>
         </faction>
         <faction key='CDS'>
-            <!-- Omni percentages: 0,0,0,90,100 -->
-            <!-- Clan percentages: 80,80,90,100,100 -->
-            <!-- Star League percentages: 20,20,10,0,0 -->
+            <pctOmni>0,0,0,90,100</pctOmni>
+            <pctClan>80,80,90,100,100</pctClan>
+            <pctSL>20,20,10,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='12'>CCC:3,CHH:10,CSR:10,CIH:10,CSV:6,CFM:10,CCO:8,CGS:3,CSA:10,CW:2,CNC:8,CSJ:10,CJF:8,CB:10</salvage>
         </faction>
         <faction key='CSJ'>
-            <!-- Omni percentages: 20,20,50,90,100 -->
-            <!-- Clan percentages: 60,60,80,100,100 -->
-            <!-- Star League percentages: 40,40,20,0,0 -->
+            <pctOmni>20,20,50,90,100</pctOmni>
+            <pctClan>60,60,80,100,100</pctClan>
+            <pctSL>40,40,20,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:2,CHH:6,CSR:1,CIH:8,CSV:5,CFM:6,CCO:10,CGS:2,CSA:2,CDS:5,CW:8,CBS:2,CNC:5,CJF:7,CGB:1,CB:3</salvage>
         </faction>
         <faction key='CSR'>
-            <!-- Omni percentages: 40,40,80,100,100 -->
-            <!-- Clan percentages: 80,80,100,100,100 -->
-            <!-- Star League percentages: 20,20,0,0,0 -->
+            <pctOmni>40,40,80,100,100</pctOmni>
+            <pctClan>80,80,100,100,100</pctClan>
+            <pctSL>20,20,0,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CHH:1,CCC:2,CIH:2,CSV:2,CFM:3,CCO:3,CSA:2,CDS:3,CW:7,CNC:10,CSJ:1,CJF:4,CB:3</salvage>
         </faction>
         <faction key='CSA'>
-            <!-- Omni percentages: 20,20,30,100,100 -->
-            <!-- Clan percentages: 80,80,95,100,100 -->
-            <!-- Star League percentages: 20,20,5,0,0 -->
+            <pctOmni>20,20,30,100,100</pctOmni>
+            <pctClan>80,80,95,100,100</pctClan>
+            <pctSL>20,20,5,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,50,50</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,50,50</pctSL>
             <salvage pct='10'>CCC:3,CHH:1,CSR:1,CIH:5,CSV:5,CFM:10,CCO:3,CGS:3,CDS:2,CW:6,CNC:5,CSJ:1,CJF:5,CGB:2,CB:2</salvage>
@@ -187,17 +187,17 @@
             <weightDistribution era='3039' unitType='Tank'>3,1,3,2</weightDistribution>
         </faction>
         <faction key='CSV'>
-            <!-- Omni percentages: 40,40,80,100,100 -->
-            <!-- Clan percentages: 50,50,90,100,100 -->
-            <!-- Star League percentages: 50,50,10,0,0 -->
+            <pctOmni>40,40,80,100,100</pctOmni>
+            <pctClan>50,50,90,100,100</pctClan>
+            <pctSL>50,50,10,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:2,CHH:2,CSR:1,CIH:6,CFM:4,CCO:3,CGS:3,CSA:6,CDS:5,CW:5,CBS:2,CNC:1,CSJ:3,CJF:10,CGB:3,CB:3</salvage>
         </faction>
         <faction key='CW'>
-            <!-- Omni percentages: 0,0,15,100,100 -->
-            <!-- Clan percentages: 40,40,60,100,100 -->
-            <!-- Star League percentages: 70,70,40,0,0 -->
+            <pctOmni>0,0,15,100,100</pctOmni>
+            <pctClan>40,40,60,100,100</pctClan>
+            <pctSL>70,70,40,0,0</pctSL>
             <pctClan unitType='Vehicle'>6,6,40,40,40</pctClan>
             <pctSL unitType='Vehicle'>94,94,60,60,60</pctSL>
             <salvage pct='10'>CCC:2,CHH:1,CSR:10,CIH:4,CSV:5,CFM:2,CCO:1,CGS:3,CSA:3,CDS:1,CNC:2,CSJ:4,CJF:10,CGB:2,CB:1</salvage>
@@ -878,6 +878,40 @@
             </model>
             <model name='ASN-21'>
                 <availability>IS:8,FC:8,Periphery:8,HL:8,Periphery.Deep:8,PIR:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:3</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:4!B:4!C:4!D:3!F:3</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Assault Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:1</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Asshur Artillery Spotter' unitType='Tank'>
@@ -4661,6 +4695,20 @@
                 <availability>CLAN:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
+        <chassis name='Heavy Blaze Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:4!B:4!C:3!D:3</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:5!B:5!C:6!D:6!F:6</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Heavy Forester' unitType='Mek'>
             <availability>IS:2+,FS:3+,LA!A:3!B:2!C:1!F:1,FC!A:2!B:1,TC:1+</availability>
             <model name='HFL-1 LoggerMech'>
@@ -4688,6 +4736,40 @@
             <model name='(SRM)'>
                 <roles>apc</roles>
                 <availability>PIR:6-,Periphery.Deep:6-,IS.pm:4,Periphery:6-</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:7!B:7!C:7!D:6!F:6</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Siege Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:2</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Heavy Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:2!B:2!C:3!D:3!F:4</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Heavy Strike Fighter' unitType='Conventional Fighter'>
@@ -5855,6 +5937,40 @@
                 <availability>General:1-</availability>
             </model>
         </chassis>
+        <chassis name='Light Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:9!B:9!C:10!D:10!F:10</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(2300) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS:10</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Light Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6!D:7!F:8</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
         <chassis name='Light Strike Fighter' unitType='Conventional Fighter'>
             <availability>CC:7-,LA:8-,FWL:7-,SIC:7-,DA:7,BAN:2,DC:7-</availability>
             <model name='Angel'>
@@ -5954,7 +6070,7 @@
             </model>
         </chassis>
         <chassis name='Loki (Hellbringer)' unitType='Mek' omni='Clan'>
-            <availability>CLAN:3+,CBS!Keshik:3!Front Line:3,CB!Keshik:3!Front Line:3,CCO!Keshik:3!Front Line:3!Second Line:1!Solahma:1,CFM!Keshik:3!Front Line:3!Second Line:2,CGB!Kehsik:2!Front Line:2!Second Line:1,CGS!Keshik:2!Front Line:2!Second Line:1,CHH!Keshik:3!Front Line:3!Second Line:2,CIH!Keshik:3!Front Line:2,CJF!Keshik:3!Front Line:2!Second Line:2!Solahma:1,CNC!Keshik:1!Front Line:2!Second Line:1,CDS!Keshik:1!Front Line:2,CSJ!Keshik:3!Front Line:2!Second Line:1!Solahma:1,CSV!Keshik:1!Front Line:1!Second Line:2,CW!Keshik:1!Front Line:1!Second Line:1,BAN:0</availability>
+            <availability>CLAN:3+,CBS!Keshik:3!Front Line:3,CB!Keshik:3!Front Line:3,CCO!Keshik:3!Front Line:3!Second Line:1!Solahma:1,CFM!Keshik:3!Front Line:3!Second Line:2,CGB!Keshik:2!Front Line:2!Second Line:1,CGS!Keshik:2!Front Line:2!Second Line:1,CHH!Keshik:3!Front Line:3!Second Line:2,CIH!Keshik:3!Front Line:2,CJF!Keshik:3!Front Line:2!Second Line:2!Solahma:1,CNC!Keshik:1!Front Line:2!Second Line:1,CDS!Keshik:1!Front Line:2,CSJ!Keshik:3!Front Line:2!Second Line:1!Solahma:1,CSV!Keshik:1!Front Line:1!Second Line:2,CW!Keshik:1!Front Line:1!Second Line:1,BAN:0</availability>
             <model name='A'>
                 <roles>fire_support</roles>
                 <availability>CLAN:6</availability>
@@ -7078,6 +7194,61 @@
             <model name='(SRM)'>
                 <roles>ground_support,interceptor</roles>
                 <availability>MERC.WD:4,FRR:5,MERC:4,DC:4,Periphery:4</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Blaze Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:8!B:8!C:7!D:7</availability>
+            <model name='(3025) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Command Tower' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:5!D:5</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>command</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Flak Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:7!B:7!C:7!D:8!F:8</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>anti_aircraft</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Laser Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(3039) (Fusion)'>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Missile Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:9!B:9!C:8!D:8!F:8</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Shredder Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>sr_fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Siege Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:6!B:6!C:6</availability>
+            <model name='(3039) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
+            </model>
+        </chassis>
+        <chassis name='Medium Sniper Gun Emplacement' unitType='Advanced Building'>
+            <availability>IS!A:3!B:3!C:4!D:5!F:5</availability>
+            <model name='(2300) (Fusion)'>
+                <roles>fire_support</roles>
+                <availability>General:8</availability>
             </model>
         </chassis>
         <chassis name='Medium Strike Fighter' unitType='Conventional Fighter'>
@@ -10263,7 +10434,7 @@
                 <deployedWith>Chaparral</deployedWith>
                 <availability>CHH:7,CLAN:5,BAN:2</availability>
             </model>
-            <model name='(SRM2)'>
+            <model name='(Original)'>
                 <deployedWith>Chaparral</deployedWith>
                 <availability>CHH:1</availability>
             </model>

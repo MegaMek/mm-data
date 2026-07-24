@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a7e9-740d-9fde-a2f889c94484
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,10 @@ IS Level 2
 Scout
 </role>
 
+<quirks>
+easy_maintain
+</quirks>
+
 <motion_type>
 Jump
 </motion_type>
@@ -71,14 +70,78 @@ Jump
 
 <Squad Equipment>
 BAAPMount:LA
-InfantryAssaultRifle:LA:APM
+InfantryAssaultRifle:APM:LA
 BAAPMount:RA
-InfantryAssaultRifle:RA:APM
+InfantryAssaultRifle:APM:RA
 BA-Magnetic Clamp:Body
-ISMechanicalJumpBooster:Body
+BAMechanicalJumpBooster:Body
 BAArmoredGlove:RA
 BABattleClawVibro:LA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Gladiator-S is a full battle armor conversion of the original exoskeleton platform. Enhanced myomer and a redesigned power supply double the ground speed to forty kilometers per hour, allowing troopers to close with targets quickly. A vibro-claw on the left arm provides dedicated anti-armor melee capability, while anti-personnel weapon mounts on each arm allow the suit to engage infantry at range. Magnetic clamps carried over from the original 'Spider' design enable rapid BattleMech or vehicle transportation, and mechanical jump boosters provide short thirty-meter hops for clearing obstacles and rough terrain. The boosters are not effective for sustained mobility but offer tactical flexibility in close-quarters situations. Standard armor protection remains the suit's most significant limitation, offering substantially less coverage than dedicated military battle armor designs. The Gladiator-S fills a budget-conscious niche, trading raw survivability for speed, low cost, and a minimal training footprint.</p>
+</capabilities>
+
+<overview>
+<p>The Gladiator-S is a military-grade battle armor conversion of the original Gladiator exoskeleton, produced by StarCorps Industries at their Emris IV facility. Introduced in 3084, the 400-kilogram suit was developed to bridge the gap between armed exoskeletons and dedicated battle armor, offering a low-cost combat platform for forces unable to field heavier powered infantry. StarCorps designed the Gladiator-S for mercenary commands, corporate garrison units, and irregular forces operating in environments where full battle armor procurement was impractical. The suit's arena heritage gave it a rough-and-ready quality that appealed to operators who valued simplicity and affordability over raw combat power.</p>
+</overview>
+
+<deployment>
+<p>The Gladiator-S saw limited adoption by ComStar-affiliated security forces in the post-Jihad period, organized into six-trooper Level I formations for facility defense and internal security roles. The suit's low training requirements and modest cost made it accessible to garrison units that lacked the budget or technical support infrastructure for frontline battle armor.</p>
+</deployment>
+
+<history>
+<p>The Gladiator-S grew directly from the experiences of Abasi Oteke and the Solaris Home Defense League during the Jihad. After acquiring Solaris Arms' technical data, StarCorps Industries brought Oteke on as a consultant to help transform his personal 'Spider' design into a mass-producible military platform. The result was a more capable combat suit that crossed the threshold from exoskeleton into true battle armor, with meaningful improvements across every performance metric.</p><p>StarCorps deliberately kept production limited, recognizing that the Gladiator-S could not match dedicated battle armor designs in protection or firepower. The suit found its market among irregular forces, smaller mercenary outfits, and corporate security detachments who valued its low cost and short training cycle over raw combat power. StarCorps marketed the design heavily using footage of Oteke's wartime exploits and pit fight victories, positioning the Gladiator-S as a proven combat system rather than an untested prototype.</p>
+</history>
+
+<manufacturer>
+StarCorps Industries
+</manufacturer>
+
+<primaryFactory>
+Emris IV
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:Proto
@@ -104,36 +167,3 @@ biped
 0
 </weightclass>
 
-<overview>
-The Gladiator Exoskeleton was created for the thrills and chills of the Class 1 fighting circuit on Solaris VII.
-</overview>
-
-<capabilities>
-The exoskeleton was designed to handle any of a wide array of handheld infantry arms and also heavy melee weaponry for show fights. It is noted for its sturdy and easy to maintain design. The suit visually resembles a mechanical knight. The suit is typically equipped with a pair of Armored Gloves and has 100 kg worth of Standard Armor protecting its hull. Weaponry typically used for the Gladiator was primarily arena restricted weaponry. It also could have its manipulators changed for other equipment. One popular modification was equipped with an Industrial Drill.
-</capabilities>
-
-<deployment>
-This version is based on "The Spider", a custom variant from Solaris and produced by StarCorps Industries. The ground speed was increased to 40 km/h, allowing the unit to quickly close with enemy forces. In case more speed is needed, the Gladiator-S is equipped with a Magnetic Clamp system. The Vibro-Claw on the left arm can inflict damage on armored units, and the Anti-Personnel Weapon Mount on each arm allows for anti-infantry work.
-</deployment>
-
-<history>
-The Gladiator was Solaris Arms' entry against similar Pit Fighters to get notoriety. Solaris Arms hoped that by demonstrating their Exoskeleton's capacities in the arena, they would catch the eye of military organizations. They hoped to lure them into purchasing the design for anti-BattleMech combat applications. However, the general consensus from the Inner Sphere powers was that it was more prudent to concentrate their funding into battle armor development. The Solaris Arms plant was destroyed in 3071, but StarCorps put the design into production on Emris IV.
-</history>
-
-
-<manufacturer>
-Solaris Arms
-</manufacturer>
-
-<primaryFactory>
-Solaris VII
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

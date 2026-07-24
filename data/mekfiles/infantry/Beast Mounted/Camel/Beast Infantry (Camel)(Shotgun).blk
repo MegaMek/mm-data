@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b75f-7455-9bd5-e88c04f97e24
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Camel)
 2680
 </year>
 
-<originalBuildYear>
-2680
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,17 @@ IS Level 3
 Beast:Camel
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The Terran camel has accompanied humanity across the stars, thriving on arid and desert worlds where vehicles break down and water is scarce. Camels require minimal sustenance, can endure extreme heat, and traverse soft sand and broken ground that would strand wheeled or tracked transports. On Periphery worlds and underdeveloped colonies where mechanized logistics are unreliable, military commanders have turned to camel-mounted infantry as a practical alternative. These formations trade speed and protection for self-sufficiency, capable of operating far from supply lines for extended periods. While no match for armored forces in a direct engagement, camel-mounted troops excel at patrolling vast frontier territories, screening flanks, and conducting raiding operations across inhospitable terrain.</p>
+</overview>
 
 <squad_size>
 7
@@ -67,12 +67,4 @@ Beast:Camel
 <Primary>
 Auto-Shotgun
 </Primary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
 

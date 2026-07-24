@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b622-71fb-83ef-5a566d21a04e
+</UUID>
 
 <UnitType>
 Infantry
@@ -57,8 +52,25 @@ Ambusher
 Tracked
 </motion_type>
 
+<Troopers Equipment>
+ComStar Infantry Kit
+Infantry Bridge Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The bridge-building engineers of Take the Time III-chi earned their reputation during the Jihad as part of the Forty-eighth Division. Assigned to the Eleventh Army, these combat engineers became experts at moving the division's heavier combat units across rivers, streams, and chasms that blocked their path. Operating under Word of Blake fire, the bridging troops often worked under direct enemy observation, quickly digging fighting positions along riverbanks while assembling their spans. Armed with pulse laser rifles, the engineers could defend their bridgehead while construction proceeded. Their tracked mechanized transport gave them the carrying capacity for bridge-building equipment and the cross-country mobility to reach remote crossing points that wheeled vehicles could not access.</p>
+</overview>
+
+<source>
+TR:3085
+</source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 6
@@ -69,17 +81,10 @@ Tracked
 </squadn>
 
 <Primary>
-IS Pulse Laser Rifle
+Pulse Laser Rifle (Inner Sphere)
 </Primary>
 
-<armorKit>
-ComstarKit
-</armorKit>
+<specialization>
+1
+</specialization>
 
-<history>
-Infantry bridge-building equipment not coded in MM. Unit included for completeness.
-</history>
-
-<era>
-TRO: 3085
-</era>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a216-73a9-b7cc-a76a7072de3e
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -40,43 +36,42 @@ Fa Shih Battle Armor
 8505
 </mul id:>
 
-<chassis>
-biped
-</chassis>
+<year>
+3062
+</year>
 
-<weightclass>
-2
-</weightclass>
+<type>
+IS Level 3
+</type>
 
-<Trooper Count>
-5
-</Trooper Count>
+<role>
+Ambusher
+</role>
+
+<motion_type>
+Jump
+</motion_type>
 
 <cruiseMP>
 1
 </cruiseMP>
 
-<jumpingMP>
-3
-</jumpingMP>
-
-<Armor>
-7
-</Armor>
-
 <armor_type>
 28
 </armor_type>
 
+<armor_tech>
+3
+</armor_tech>
+
 <Squad Equipment>
-BA Machine Gun:RA
+CLBAMG:RA
 BA-Magnetic Clamp:Body
 BAAPMount:LA
-InfantryAssaultRifle:LA:APM
+InfantryAssaultRifle:APM:LA
 BABasicManipulatorMineClearance:LA
 BABasicManipulatorMineClearance:RA
 </Squad Equipment>
-
 
 <Trooper 1 Equipment>
 ISBAMineDispenser:Body
@@ -98,62 +93,73 @@ ISBAMineDispenser:Body
 ISBAMineDispenser:Body
 </Trooper 5 Equipment>
 
-<type>
-IS Level 3
-</type>
-
-<role>
-Ambusher
-</role>
-
-<year>
-3062
-</year>
-
-<motion_type>
-Jump
-</motion_type>
-
-<source>
-TR:3058U
-</source>
-
-<armor_tech>
-3
-</armor_tech>
-
-<overview>
-The Fa Shih ("Master of Methods") was the result of the Capellan Confederation biting off more than it could chew.
-</overview>
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
 
 <capabilities>
-The Fa Shih duplicates many of the features of the Inner Sphere Standard battle armor, including its jump capacity and most of the weaponry used. However the suit went against battle armor philosophy at the time by emphasizing defensive capabilities as much as offensive. The most notable expression of this philosophy is its use of mines. The Capellans have long used mines in combat, so the Fa Shih comes equipped with the ability to lay minefields similar in respect to FASCAM ordnance as well as mine clearing apparatuses on its arms. In keeping with the Xin Sheng campaign instituted by Chancellor Sun-Tzu Liao, the Fa Shih's armoring was also modeled along traditional Chinese aesthetic lines.
+<p>Weighing one thousand kilograms, the Fa Shih carries a mine dispenser on its back capable of scattering grenade-sized mines across several hundred square meters of terrain when deployed mid-jump. Two dispensing canisters allow troopers to either expand a single minefield or seed a second area entirely. The suit's manipulators incorporate mine clearance equipment, giving it the ability to both lay and remove minefields. Magnetic clamps at the knees and underarms allow the Fa Shih to ride standard BattleMechs and vehicles into battle, a critical feature given the Confederation's limited OmniMech inventory. Jump jets provide leaps of up to ninety meters, and three hundred fifty kilograms of standard armor offer above-average protection for a medium suit, enough to absorb a hit from a Clan extended-range medium laser. The machine gun configuration mounts a rapid-fire ballistic weapon in the right arm's modular weapon mount, making it particularly effective against conventional infantry and light vehicles. An anti-personnel weapon mount on the left arm provides additional firepower for clearing defensive positions.</p>
 </capabilities>
 
+<overview>
+<p>The Fa Shih, or "Master of Methods," was the Capellan Confederation's first indigenous battle armor design. Developed by Ceres Metals with assistance from the Word of Blake, the medium suit entered service in 3062 as an adaptation of the Inner Sphere Standard. Distinguished by its mine-laying capability and ability to ride conventional vehicles into battle, the Fa Shih filled a defensive and area-denial role that complemented the Confederation's long tradition of mine warfare. The design earned a strong reputation among Capellan armed forces and continued serving long after more advanced suits became available.</p>
+</overview>
+
 <deployment>
-The Fa Shih carries a Modular Weapon Mount in its right arm that can house a Flamer, Machine Gun, Small Laser, Light Recoilless Rifle, or a Light TAG to spot for Arrow IV Artillery or Semi-Guided LRMs. An Anti-Personnel Weapon Mount in the left arm allows the Fa Shih to carry lighter weaponry suitable for taking on infantry. Like the Inner Sphere Standard the Fa Shih is equipped with jump jets to make leaps of up to 90 meters at a time and can engage in anti-BattleMech attacks. Although they weren't able to incorporate their new stealth armor technology into the design, the Capellans were still able to mount 350kg of standard armor on the Fa Shih, providing above-average protection for a suit of its size and the ability to absorb a hit from a Clan ER Medium Laser while still keeping the pilot alive. As a minelayer, though, the Fa Shih's most important feature is its Mine Dispenser. Carried on the back of the suit, the dispenser is equipped with two canisters which, when deployed in mid-jump, can cover several hundred square meters of terrain with mines. In addition to laying mines, the Fa Shih can also safely remove them with the addition of Mine Clearance Equipment to its basic manipulators. Another beneficial attribute of the Fa Shih, is that it is equipped with Magnetic Clamps located on the knees and underarms. These magnetic clamps allow the Fa Shih trooper to ride into battle on standard vehicles and 'Mechs in a similar manner to how other battle armors can hitch a ride on OmniMechs. This feature was considered a necessity due to the fact that the Confederation had only a single OmniMech design of their own at the time, the Men Shen. **To lay the "Mines" you need to use the "Lay Mine" then "Jump" to deploy the minefield.**
+<p>Machine gun-equipped Fa Shih suits organized into five-trooper Clan Points served primarily in anti-infantry and security roles. The additional trooper per formation compared to Inner Sphere squads increased the volume of suppressive fire available, though Clan commanders rarely committed these captured suits to frontline engagements.</p>
 </deployment>
 
 <history>
-With the introduction of Battle Armor by the Clans and as other Inner Sphere powers began fielding their own native suits, the Confederation had decided to produce three different battle armor designs concurrently. Research and development began in April 3056, but since they did not have any practical experience with battle armor, they realized they could not take on such a large task and reduced their workload to one unit, an adaptation of the Inner Sphere Standard. Even so, it took several years and finally the help of the Word of Blake before the Capellans could properly implement the environmental containment and life support systems for their suit and begin final testing in 3060. Finalized prototypes became available starting in June 3061, with full-scale production starting March 3062. The Fa Shih quickly built a reputation for excellence among the Capellan armed forces; although the Confederation eventually succeeded in its original design goal when the Trinity series of battle armor debuted, the Fa Shih continued to serve for many years on the battlefield. During the Jihad the Capellan Confederation received a boon as the appearance of Clan forces on their borders allowed for the firsthand acquisition of Clan technology. Using Clan components Ceres Metals refitted several Fa Shih suits in 3078 to better match the Ying Long Trinity suit's capabilities and improve their anti-BattleMech potential. While successful, any further development of these improved Fa Shih suits at the time was stopped until the Confederation could either secure a steady supply of Clan technology or reverse engineer it themselves.[
+<p>The Capellan Confederation lagged behind other Great Houses in developing battle armor. While rival states fielded their own suits, the Confederation ambitiously planned three concurrent designs beginning in April 3056. Lacking practical experience with powered armor technology, Capellan engineers quickly discovered the scope exceeded their abilities and consolidated efforts on a single design adapted from the Inner Sphere Standard. Even this reduced program stalled for years until Word of Blake technical advisors helped solve persistent life support and environmental containment failures. Final testing began in 3060, with completed prototypes available by June 3061 and full-scale production at Ceres Metals and Hellespont Industrials starting in March 3062.</p><p>The Fa Shih earned a strong reputation within the CCAF. Warrior House battalions each received at least a platoon of suits, and the design became closely identified with Capellan infantry combat teams. Even after the more advanced Trinity series entered service, the Fa Shih remained a battlefield staple. During the Jihad, encounters with Clan forces along the Confederation's borders provided access to Clan technology. Ceres Metals used captured Clan myomer boosters to produce an experimental refit in 3078, though the limited supply of Clan components prevented mass production. A dedicated support variant entered production in 3074, expanding the suit's role beyond mine warfare.</p>
 </history>
 
 <manufacturer>
-Ceres Metals Industries
+Ceres Metals|Hellespont Industrials
 </manufacturer>
 
 <primaryFactory>
-Capella
+Capella|Sian
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
 
-<notes>
-</notes>
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3058U
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+3
+</jumpingMP>
+
+<armor>
+7
+</armor>
+
+<Trooper Count>
+5
+</Trooper Count>
+
+<weightclass>
+2
+</weightclass>
+

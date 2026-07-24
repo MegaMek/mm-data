@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -27,12 +27,18 @@ This is a show of strength—hit them hard, make them bleed, and leave no doubt 
 The victor will control the battlefield at the end of the engagement, securing the area and denying the enemy any future foothold here. Send a message—this ground belongs to us.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>

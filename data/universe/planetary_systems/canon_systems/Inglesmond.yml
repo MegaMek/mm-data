@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Inglesmond
-sucsId: 1818
+sucsId: 1819
 xcood: 33.896
 ycood: 33.94
 spectralType:
@@ -116,6 +116,12 @@ planet:
         population: 131130.0
       - date: '2270-01-01'
         population: 502646.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2280-01-01'
         population: 1602202.0
       - date: '2290-01-01'
@@ -134,6 +140,12 @@ planet:
         population: 73171186.0
       - date: '2340-01-01'
         population: 117397812.0
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 176115780.0
       - date: '2360-01-01'
@@ -182,6 +194,15 @@ planet:
         population: 2056580945.0
       - date: '2570-01-01'
         population: 2103066019.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Lone Star Province
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TH
       - date: '2580-01-01'
         population: 2127657054.0
       - date: '2590-01-01'
@@ -232,6 +253,12 @@ planet:
           source: canon
           value:
             - RWR
+      - date: '2767-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - AE
       - date: '2770-01-01'
         population: 2025059747.0
       - date: '2773-07-10'
@@ -245,6 +272,12 @@ planet:
           value: 4200000000.0
         socioIndustrial: A-A-A-A-A
         hpg: A
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TH
       - date: '2787-09-18'
         population:
           source: canon
@@ -283,8 +316,24 @@ planet:
         population: 1982801495.0
       - date: '2820-01-01'
         population: 1965124036.0
+      - date: '2821-12-31'
+        # administration:
+        #   - Dieron Military District
+        #   - Lone Star Prefecture
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2830-01-01'
         population: 1939603183.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '2840-01-01'
         population: 1914413766.0
       - date: '2850-01-01'
@@ -363,9 +412,12 @@ planet:
         population: 1817544225.0
       - date: '3145-01-01'
         population: 1818271388.0
+      - date: '2349-01-01'
+        name: Inglesmond
+        message: New Britain renamed to Inglesmond
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - ABN
   - name: Bielobog

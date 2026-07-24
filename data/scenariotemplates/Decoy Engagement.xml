@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,21 +20,26 @@
 <ScenarioTemplate>
     <name>Decoy Engagement</name>
     <shortBriefing>Engage enemy, act as decoy.</shortBriefing>
-    <detailedBriefing><![CDATA[Your mission is to serve as a decoy, drawing the attention of a large enemy force while our allies carry out critical objectives elsewhere in the sector. The enemy must believe you are the primary threat, forcing them to commit their forces fully to your position. Your task is to survive for the designated duration or, if possible, eliminate 75% of the enemy forces to break their will.
+    <detailedBriefing><![CDATA[Your mission is to serve as a decoy, drawing the attention of a large enemy force while our allies carry out critical objectives elsewhere in the sector. The enemy must believe you are the primary threat, forcing them to commit their forces fully to your position. Your task is to survive for the designated duration or, if possible, eliminate 50% of the enemy forces to break their will.
 
 This engagement is about endurance, misdirection, and tactical maneuvering. The enemy will press hard, believing you to be the key target, but you must endure. Use the terrain to your advantage, control the pace of the battle, and engage only when necessary. If you hold them long enough, our allies will complete their objectives uncontested.
 
-Should you succeed in routing 75% of the enemy force, they will lose cohesion, and we will control the battlefield at the end of the engagement. This will allow us full access to any salvageable assets left behind. Victory here will not only ensure the success of our allies but also give us a chance to recover valuable battlefield resources.
+Should you succeed in routing 50% of the enemy force, they will lose cohesion, and we will control the battlefield at the end of the engagement. This will allow us full access to any salvageable assets left behind. Victory here will not only ensure the success of our allies but also give us a chance to recover valuable battlefield resources.
 
 Hold the line, weather the storm, and outlast them. If they break, the field is ours.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Hills</allowedTerrainType>
+            <allowedTerrainType>ColdHills</allowedTerrainType>
+            <allowedTerrainType>HotHillsDry</allowedTerrainType>
+            <allowedTerrainType>HotHillsWet</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -98,6 +103,11 @@ Hold the line, weather the storm, and outlast them. If they break, the field is 
                 <syncDeploymentType>OppositeEdge</syncDeploymentType>
                 <syncedForceName>Player</syncedForceName>
                 <useArtillery>false</useArtillery>
+                <roleChoices>
+                    <forceRole>RECON</forceRole>
+                    <forceRole>RAIDER</forceRole>
+                    <forceRole>CAVALRY</forceRole>
+                </roleChoices>
             </value>
         </entry>
     </scenarioForces>
@@ -150,10 +160,10 @@ Hold the line, weather the storm, and outlast them. If they break, the field is 
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 75% of the following forces. +2 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 50% of the following forces. +2 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>75</percentage>
+            <percentage>50</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

@@ -1,0 +1,313 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Highwater
+sucsId: 3118
+xcood: 61.138
+ycood: -495.083
+spectralType: G2V
+planet:
+  - name: Highwater
+    type: TERRESTRIAL
+    orbitalDist: 0.24
+    sysPos: 1
+    icon: green8
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1
+    diameter: 12000
+    density: 5.8284
+    dayLength: 23
+    yearLength: 0.8
+    temperature: 29
+    water: 50
+    lifeForm: REPTILE
+    event:
+      - date: '2800-01-01'
+        population: 55643.0
+        socioIndustrial: C-D-A-D-D
+      - date: '2810-01-01'
+        population: 173748.0
+      - date: '2820-01-01'
+        population: 417255.0
+      - date: '2830-01-01'
+        population: 824062.0
+      - date: '2840-01-01'
+        population: 1393617.0
+      - date: '2850-01-01'
+        population: 2081751.0
+      - date: '2860-01-01'
+        population: 2828175.0
+      - date: '2870-01-01'
+        population: 3586585.0
+      - date: '2880-01-01'
+        population: 4318742.0
+      - date: '2890-01-01'
+        population: 4978239.0
+      - date: '2900-01-01'
+        population: 5578030.0
+      - date: '2910-01-01'
+        population: 4486054.0
+      - date: '2920-01-01'
+        population: 2965792.0
+      - date: '2930-01-01'
+        population: 2005080.0
+      - date: '2940-01-01'
+        population: 1340495.0
+      - date: '2950-01-01'
+        population: 833347.0
+        socioIndustrial: C-D-A-C-C
+      - date: '2960-01-01'
+        population: 576145.0
+      - date: '2970-01-01'
+        population: 438052.0
+      - date: '2980-01-01'
+        population: 334925.0
+      - date: '2990-01-01'
+        population: 221424.0
+      - date: '3000-01-01'
+        population: 126577.0
+      - date: '3010-01-01'
+        population: 65429.0
+      - date: '3020-01-01'
+        population: 33258.0
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Highwater II
+    type: TERRESTRIAL
+    orbitalDist: 0.42
+    sysPos: 2
+    icon: barren7
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen and Carbon Dioxide, plus trace amounts of Methane
+    gravity: 0.74
+    diameter: 12500
+    density: 4.1818
+    dayLength: 15
+    yearLength: 0.8
+    temperature: 124
+    water: 0
+    smallMoons: 2
+    satellite:
+      - name: 2-M1
+        size: medium
+        icon: rock1
+      - name: 2-M2
+        size: medium
+        icon: rock2
+      - name: 2-M3
+        size: medium
+        icon: rock3
+  - name: Highwater III
+    type: ICE_GIANT
+    orbitalDist: 0.6
+    sysPos: 3
+    icon: iceg16
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.55
+    diameter: 30000
+    density: 1.3
+    dayLength: 15
+    yearLength: 0.9
+    smallMoons: 4
+    satellite:
+      - name: 3-M1
+        size: medium
+        icon: rock1
+      - name: 3-M2
+        size: medium
+        icon: rock2
+      - name: 3-M3
+        size: medium
+        icon: rock3
+  - name: Highwater IV
+    type: GAS_GIANT
+    orbitalDist: 0.96
+    sysPos: 4
+    icon: gasg29
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.37
+    diameter: 120000
+    density: 0.8
+    dayLength: 14
+    yearLength: 1.2
+    ring: true
+    smallMoons: 16
+  - name: Highwater V
+    type: GAS_GIANT
+    orbitalDist: 1.68
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.77
+    diameter: 150000
+    density: 1.3
+    dayLength: 17
+    yearLength: 2.3
+    ring: true
+    smallMoons: 9
+    satellite:
+      - name: 5-G1
+        size: giant
+        icon: oddmoon1
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-L2
+        size: large
+        icon: rock2
+  - name: Highwater VI
+    type: GAS_GIANT
+    orbitalDist: 3.12
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.99
+    diameter: 150000
+    density: 1.4
+    dayLength: 24
+    yearLength: 5.6
+    ring: true
+    smallMoons: 18
+    satellite:
+      - name: 6-G1
+        size: giant
+        icon: oddmoon1
+      - name: 6-G2
+        size: giant
+        icon: oddmoon2
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-L2
+        size: large
+        icon: rock2
+      - name: 6-L3
+        size: large
+        icon: rock3
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+      - name: 6-M3
+        size: medium
+        icon: rock3
+      - name: 6-M4
+        size: medium
+        icon: rock4
+  - name: Highwater VII
+    type: ICE_GIANT
+    orbitalDist: 6
+    sysPos: 7
+    icon: iceg18
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.95
+    diameter: 35000
+    density: 1.9
+    dayLength: 14
+    yearLength: 14.7
+    smallMoons: 5
+    satellite:
+      - name: 7-G1
+        size: giant
+        icon: oddmoon1
+      - name: 7-G2
+        size: giant
+        icon: oddmoon2
+      - name: 7-L1
+        size: large
+        icon: rock1
+      - name: 7-L2
+        size: large
+        icon: rock2
+      - name: 7-L3
+        size: large
+        icon: rock3
+  - name: Highwater VIII
+    type: GAS_GIANT
+    orbitalDist: 11.76
+    sysPos: 8
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 3.42
+    diameter: 160000
+    density: 1.5
+    dayLength: 17
+    yearLength: 40.3
+    ring: true
+    smallMoons: 22
+    satellite:
+      - name: 8-L1
+        size: large
+        icon: rock1
+      - name: 8-L2
+        size: large
+        icon: rock2
+      - name: 8-L3
+        size: large
+        icon: rock3
+      - name: 8-M1
+        size: medium
+        icon: rock1
+      - name: 8-M2
+        size: medium
+        icon: rock2
+      - name: 8-M3
+        size: medium
+        icon: rock3
+      - name: 8-M4
+        size: medium
+        icon: rock4
+  - name: Highwater IX
+    type: ASTEROID_BELT
+    orbitalDist: 23.28
+    sysPos: 9
+    icon: asteroid1
+    yearLength: 112.3
+    temperature: -235
+  - name: Highwater X
+    type: GAS_GIANT
+    orbitalDist: 46.32
+    sysPos: 10
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 3.14
+    diameter: 130000
+    density: 1.7
+    dayLength: 9
+    yearLength: 315.2
+    smallMoons: 28
+primarySlot: 1

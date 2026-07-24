@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,53 +15,52 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cab2-7a46-b7b3-ef66a217615f
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Pillager
 model:PLG-1N
 mul id:2524
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2575
-Source:TR:3058U
-Rules Level:1
+techbase:Inner Sphere
+era:2575
+source:TR:3058U,TR:SW
+published:RS:SW
+rules level:1
 role:Juggernaut
-
-
-
 
 quirk:battle_fists_la
 quirk:battle_fists_ra
 
+mass:100
+engine:300 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:100
-Engine:300 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:16 Single
+walk mp:3
+jump mp:2
 
-Heat Sinks:16 Single
-Walk MP:3
-Jump MP:2
-
-Armor:Standard((Unknown Technology Base))
-LA Armor:30
-RA Armor:30
-LT Armor:26
-RT Armor:26
-CT Armor:38
-HD Armor:9
-LL Armor:37
-RL Armor:37
-RTL Armor:11
-RTR Armor:11
-RTC Armor:17
+armor:Standard(Inner Sphere)
+LA armor:30
+RA armor:30
+LT armor:26
+RT armor:26
+CT armor:38
+HD armor:9
+LL armor:37
+RL armor:37
+RTL armor:11
+RTR armor:11
+RTC armor:17
 
 Weapons:6
 Medium Laser, Left Arm
 Medium Laser, Right Arm
-Medium Laser, Head
+AC/20, Left Torso
+AC/20, Right Torso
 SRM 4, Center Torso
-Autocannon/20, Right Torso
-Autocannon/20, Left Torso
+Medium Laser, Head
 
 Left Arm:
 Shoulder
@@ -175,19 +174,28 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The largest BattleMech ever built by HildCo Interplanetary, the Pillager is built as a larger version of the Victor, and is intended for assaulting urban centers and hardened fortifications.
+overview:<p>Inspired by the success of its Victor design, HildCo Interplanetary developed a larger assault 'Mech capable of spearheading attacks against urban centers and hardened fortifications. First fielded in 2575 as the PLG-1N during the Reunification War, the hundred-ton Pillager was the largest BattleMech ever constructed by HildCo. The original design proved devastating in its intended role, and by 2594 the chassis had been upgraded to the PLG-3Z standard incorporating cutting-edge Star League technology including twin Gauss rifles.</p><p>The Pillager's reputation as a fearsome assault platform endured across centuries. Though production was interrupted during the Succession Wars, HildCo's eventual reintroduction of the PLG-3Z in 3058 restored the design to prominence, and the Pillager has since become a cornerstone of the Capellan Confederation Armed Forces while seeing service across most major militaries and numerous mercenary commands.</p>
 
-capabilities:Based on a range of engine types, the Pillager has average mobility for its size, with a top speed of 54 km/h. Three HildCo Model 13 jump jets allow the 'Mech to jump up to ninety meters, increasing its mobility. The Pillager possesses outstanding armor protection and more than enough heat sinks to meet the Pillager's needs.
+capabilities:<p>Built on one of the largest chassis ever designed, the Pillager presents an intimidating sight on any battlefield. The Vlar 300 XL engine provides a top speed of 54 kilometers per hour, modest for an assault 'Mech but acceptable given the design's emphasis on overwhelming firepower. Three HildCo Model 13 jump jets grant the Pillager a ninety-meter jump capability, a remarkable feature for a hundred-ton design that allows it to navigate urban terrain and exploit elevated firing positions that would be inaccessible to most assault 'Mechs.</p><p>The Pillager's primary armament consists of twin Poland Main Model A Gauss rifles, capable of engaging targets at extreme range with devastating kinetic energy. A Defiance B3L large laser provides effective intermediate-range support, while four Ceres Arms medium lasers deliver a punishing close-range barrage. Nineteen tons of StarSlab armor offer excellent protection, and fourteen double heat sinks ensure the 'Mech runs remarkably cool even when firing its full complement of weapons.</p><p>The primary weakness of the design lies in its extralight engine. While the weight savings enable the Pillager's impressive weapons array, the loss of either side torso will disable the 'Mech entirely, a vulnerability that later Capellan variants have sought to address through alternative engine configurations and stealth systems.</p>
 
-deployment:The original Pillager, designed in 2575 and fielded for the first two decades of the Reunification War, uses a standard fusion engine instead of the extralight model that went into production. Other limitations include a 60 meter jump range and 17 tons of armor. The weapons suite was also different, relying on twin torso mounted Autocannon/20s, a single SRM-4, and three medium lasers; one mounted in each arm and a head-mounted laser firing to the rear. Sixteen single heat sinks kept the heat under control.
+deployment:<p>The original Pillager design from 2575 serves as a fundamentally different approach from later models. Built around a standard fusion engine and armed with twin Autocannon/20s rather than Gauss rifles, this variant was designed as a devastating close-range assault platform. An SRM-4 launcher and three medium lasers supplemented the massive autocannons, while seventeen tons of armor and two jump jets provided reasonable protection and mobility for urban combat operations. Sixteen single heat sinks managed the design's modest heat output. Though this variant was eventually superseded by the PLG-3Z, surviving examples remained in service through the Succession Wars as increasingly rare relics of Star League engineering.</p>
 
-history:The Pillager was the largest 'Mech ever built by HildCo during the Reunification War. The destruction of the manufacturing facilities that produced the Pillager's advanced technologies halted production during the Second Succession War, but the decoding of the Gray Death memory core allowed the Pillager to be reintroduced to the Inner Sphere. The Pillager has a long and colorful battle history. From the Reunification Battle through the Succession Wars, it has seen action in every war. Records show that during those fights, enemy forces tended to retreat at the sight of approaching Pillagers. The Pillager most recently demonstrated its amazing strength during the FedCom and the Capellan/St. Ives Civil Wars. When a Pillager-led unit attacked, many strongholds and defenses crumbled. Even now, in the struggle between Hasek's Capellan March and House Liao, the Pillager is making an impact on the battlefield, just as it did during the Amaris Civil War. The Pillager now serves in the majority of house militaries and mercenary troops. Because of the reintegration of St. Ives, the Capellan military has the most brawny 'Mechs.
+history:<p>The Pillager was conceived during the build-up to the Reunification War as the Star League Defense Force required heavy assault assets capable of breaching fortified positions and fighting in dense urban environments. HildCo Interplanetary, already respected for the Victor design, delivered the PLG-1N in 2575. Armed with twin Autocannon/20s and supported by an SRM-4 launcher and medium lasers, the original Pillager was a close-range wrecking ball that earned a fearsome reputation during the first two decades of the Reunification War. Records indicate that enemy forces during those conflicts tended to flee at the mere sight of approaching Pillagers.</p><p>By 2594, the design was upgraded to the PLG-3Z standard, replacing the autocannons with twin Gauss rifles and the standard engine with an extralight model. This transformation turned the Pillager from a short-range brawler into a long-range devastator while retaining its jump capability. The PLG-3Z served throughout the Star League era and into the early Succession Wars, where the loss of advanced technology production lines eventually halted manufacturing. Critically, the factory on St. Ives survived intact, but the specialized component lines for Gauss rifles and XL engines did not.</p><p>For centuries, the Pillager existed only as a dwindling number of irreplaceable relics. HildCo particularly chose not to restart production of the simpler PLG-1N, instead waiting until the recovery of advanced technology made the superior PLG-3Z viable again. When production resumed in 3058, the Pillager quickly demonstrated its enduring value. During the FedCom Civil War and the Capellan-St. Ives conflict, the 'Mech proved its awesome power as strongholds and defenses collapsed when Pillager-led units assaulted them.</p><p>Following the reintegration of the St. Ives Compact, HildCo reopened its St. Ives plant for full production. The Strategios, having revamped the CCAF's tactical doctrines, commissioned HildCo to develop new variants reflecting Capellan strategic priorities. This led to the PLG-4Z, produced under license by Hellespont on Sian due to its stealth armor requirements, and subsequent variants incorporating Arrow IV artillery systems, triple strength myomer, and eventually Clan-technology autocannons acquired through trade with Clan Sea Fox. The Jihad inflicted severe damage on HildCo's facilities, with the St. Ives plant suffering sixty-seven percent capital and personnel losses during the Word of Blake's final attacks on the world. Despite this devastation, HildCo's board of directors rebuilt with state assistance, determined to fortify the factories against future threats.</p><p>The Pillager today serves in most house militaries and numerous mercenary commands, though the Capellan Confederation retains the largest concentration of the design thanks to HildCo's continued presence on St. Ives. A limited production run from General Motors on Kathil has also placed PLG-3Z models in Federated Suns service, ensuring the Pillager's battlefield presence extends well beyond the Confederation's borders.</p>
 
 manufacturer:HildCo Interplanetary
+
 primaryfactory:St. Ives
-systemmanufacturer:CHASSIS:HildCo Heavy Type VIIQT
-systemmanufacturer:ENGINE:Vlar 300
-systemmanufacturer:ARMOR:StarSlab/9.5 Mk II
-systemmanufacturer:JUMP_JET:HildCo Model 13
-systemmanufacturer:COMMUNICATIONS:CeresCom Recon Model 12K
-systemmanufacturer:TARGETING:C-Apple Churchill
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:HildCo
+systemmode:CHASSIS:Heavy Type VIIQT
+systemmanufacturer:ENGINE:Vlar
+systemmode:ENGINE:300
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:JUMP_JET:HildCo
+systemmode:JUMP_JET:Model 13
+systemmanufacturer:COMMUNICATIONS:CeresCom
+systemmode:COMMUNICATIONS:Recon Model 12K
+systemmanufacturer:TARGETING:C-Apple
+systemmode:TARGETING:Churchill

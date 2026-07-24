@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,9 @@
 <ScenarioTemplate>
     <name>Reconnaissance Interdiction</name>
     <shortBriefing>Prevent hostile reconnaissance.</shortBriefing>
-    <detailedBriefing><![CDATA[Enemy reconnaissance units have been deployed to gather intelligence on our movements, threatening the security of our operations. Your mission is to eliminate them before they can complete their reconnaissance. If they succeed, our positions will be compromised, giving the enemy a critical advantage.
+    <detailedBriefing><![CDATA[DISCLAIMER: it is recommended that you play this scenario with Double Blind enabled and with Single Blind disabled.
+
+Enemy reconnaissance units have been deployed to gather intelligence on our movements, threatening the security of our operations. Your mission is to eliminate them before they can complete their reconnaissance. If they succeed, our positions will be compromised, giving the enemy a critical advantage.
 
 Expect these forces to prioritize speed, evasion, and long-range observation tactics. They will attempt to avoid direct engagement and may have stealth capabilities or electronic warfare support to mask their presence. You must act quickly, intercept their units, and wipe them out before they can relay any useful data.
 
@@ -29,15 +31,20 @@ We will control the battlefield at the end of the engagement, ensuring that any 
     <isAlliedFacility>false</isAlliedFacility>
     <battlefieldControl>PLAYER</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Hills</allowedTerrainType>
+            <allowedTerrainType>ColdHills</allowedTerrainType>
+            <allowedTerrainType>HotHillsDry</allowedTerrainType>
+            <allowedTerrainType>HotHillsWet</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
-        <additionalMapSheetWide>0</additionalMapSheetWide>
+        <additionalMapSheetWide>1</additionalMapSheetWide>
         <widthScalingIncrement>5</widthScalingIncrement>
     </mapParameters>
     <scenarioForces>
@@ -127,12 +134,12 @@ We will control the battlefield at the end of the engagement, ensuring that any 
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy 95% of the following force. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy 75% of the following force. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>Destroy</objectiveCriterion>
-            <percentage>95</percentage>
+            <percentage>75</percentage>
             <timeLimitAtMost>false</timeLimitAtMost>
-            <timeLimitScaleFactor>2</timeLimitScaleFactor>
+            <timeLimitScaleFactor>1</timeLimitScaleFactor>
             <timeLimitType>ScaledToPrimaryUnitCount</timeLimitType>
         </scenarioObjective>
     </scenarioObjectives>

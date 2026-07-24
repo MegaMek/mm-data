@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Pencader
-sucsId: 2007
+sucsId: 2008
 xcood: -350.486
 ycood: -52.774
 spectralType: K2V
@@ -81,6 +81,12 @@ planet:
       - name: Torres
       - name: Bailey
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2715-12-29'
         faction:
           source: canon
@@ -98,6 +104,16 @@ planet:
         population: 987800.0
       - date: '2750-01-01'
         population: 2289675.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 4536045.0
       - date: '2770-01-01'
@@ -154,11 +170,26 @@ planet:
         population: 87002276.0
       - date: '3030-01-01'
         population: 88151822.0
+      - date: '3030-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Bolan Province
       - date: '3040-01-01'
         population: 89327898.0
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Tamarind March
+        #   - Bolan Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3047-01-01'
@@ -170,8 +201,22 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Cavanaugh Theater
       - date: '3060-01-01'
         population: 91426830.0
+      - date: '3068-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Dixie Theater
       - date: '3070-01-01'
         population: 92197617.0
       - date: '3080-01-01'
@@ -188,6 +233,10 @@ planet:
         population: 95711101.0
       - date: '3130-01-01'
         population: 96963468.0
+      - date: '3130-12-31'
+        # administration:
+        #   - Bolan Province
+        #   - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -198,9 +247,13 @@ planet:
           value:
             - DTA
         population: 99021232.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Audubon Park

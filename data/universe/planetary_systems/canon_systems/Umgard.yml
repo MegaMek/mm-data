@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Umgard
-sucsId: 2625
+sucsId: 2626
 xcood: 124.332
 ycood: -419.083
 spectralType: K8V
@@ -53,6 +53,12 @@ planet:
         capital: Tebo City
       - name: Minor Collins
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2657-04-14'
         faction:
           source: canon
@@ -86,6 +92,16 @@ planet:
         population: 8260222.0
       - date: '2750-01-01'
         population: 8502658.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 14
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 8685111.0
       - date: '2770-01-01'
@@ -106,6 +122,16 @@ planet:
             - IND
       - date: '2820-01-01'
         population: 926221.0
+      - date: '2822-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 15
+      - date: '2822-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2830-01-01'
         population: 451457.0
       - date: '2840-01-01'
@@ -119,7 +145,7 @@ planet:
             - ARC
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
       - date: '3025-03-15'
@@ -128,15 +154,22 @@ planet:
           value:
             - ARC
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
           value:
             - ARC
         population: 9265811.0
-      - date: '3151-01-01'
+      - date: '3030-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: Hull

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ulvskollen
-sucsId: 2623
+sucsId: 2624
 xcood: 582.383
 ycood: -207.234
 spectralType: G5V
@@ -92,6 +92,12 @@ planet:
       - name: Little South Westfield
       - name: Big South Westfield
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2714-04-10'
         faction:
           source: canon
@@ -109,6 +115,17 @@ planet:
         population: 605746.0
       - date: '2750-01-01'
         population: 1226245.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Broken Wheel Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 2190620.0
       - date: '2770-01-01'
@@ -129,6 +146,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Vik
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

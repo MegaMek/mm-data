@@ -17,6 +17,11 @@
 
 key: CHH
 name: Clan Hell's Horses
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CHH
 capital: Niles (Clan)
 capitalChanges:
   3074: Csesztreg
@@ -116,3 +121,5 @@ factionLeaders:
     surname: "Lassenerra"
     gender: "MALE"
     startYear: 3152
+usesMercenaries:
+  2500: false

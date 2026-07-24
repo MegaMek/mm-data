@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,45 +15,45 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d498-7c99-8f68-429b7a8cf843
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Spider
 model:SDR-10K
 mul id:6934
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3143
-Source:RS:3145-NTNU
-Rules Level:3
+techbase:Inner Sphere
+era:3143
+source:TR:3145
+published:RS:3145-NTNU,RS:3145
+rules level:3
 role:Scout
 
-
-
-quirk:easy_maintain
 quirk:nimble_jumper
 quirk:no_eject
+quirk:easy_maintain
 
+mass:30
+engine:240 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:30
-Engine:240 XL Engine(IS)
-Structure:IS Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:8
+jump mp:8
 
-Heat Sinks:10 Double
-Walk MP:8
-Jump MP:8
-
-Armor:Ballistic-Reinforced(Inner Sphere)
-LA Armor:3
-RA Armor:3
-LT Armor:6
-RT Armor:6
-CT Armor:9
-HD Armor:6
-LL Armor:6
-RL Armor:6
-RTL Armor:3
-RTR Armor:3
-RTC Armor:3
+armor:Ballistic-Reinforced(Inner Sphere)
+LA armor:3
+RA armor:3
+LT armor:6
+RT armor:6
+CT armor:9
+HD armor:6
+LL armor:6
+RL armor:6
+RTL armor:3
+RTR armor:3
+RTC armor:3
 
 Weapons:1
 Large Re-engineered Laser, Right Torso
@@ -170,21 +170,29 @@ IS Endo Steel
 -Empty-
 -Empty-
 
-overview:The Spider was the first BattleMech produced by Newhart Industries, designed in 2650 as a light reconnaissance and attack 'Mech to be used by Star League Defense Force Special Operations forces such as the Blackhearts.
+overview:<p>The Spider was developed by Newhart Interstellar Industries in 2650 for the Star League Defense Force's elite Special Operations units, including the Blackhearts. Newhart had designed the chassis before the SLDF even issued its request for proposals, allowing the company to win the contract and begin production immediately. The Spider's combination of exceptional mobility, reliable components, and energy-only weapons made it ideal for extended reconnaissance missions deep behind enemy lines.</p><p>Its distinctive appearance comes from a spiderweb-pattern armor alignment on the front torso, emphasized by bright red fiberglass sealant in the seams between armor plates. While never produced in large numbers, the Spider's rapid manufacturing process kept SLDF special forces well-equipped until the fall of the Star League. Following the destruction of Newhart's New Earth factory in 2776, the design nearly disappeared until Nimakachi Fusion Products Limited resumed production for the Free Worlds League.</p>
 
-capabilities:In terms of maneuverability the Spider has a ground speed comparable to a Locust and can out-jump either the vaunted Wasp or Stinger light 'Mechs. Built with top-of-the-line reliable parts, sophisticated reconnaissance equipment and an energy weapon payload which allowed for extended operations without resupply, the Spider was a great success. While not produced in large numbers it could be rapidly manufactured and so served up through to the end of the Star League.
+capabilities:<p>The Spider's primary asset is speed, both on the ground and through the air. With a top speed matching the Locust and a jump capacity exceeding both the Wasp and Stinger, the Spider can outmaneuver virtually any BattleMech on flat terrain. The jump jet system was designed not just for standard leaps but for mid-flight course corrections, allowing the pilot to pivot while maintaining their original landing point. Enemy pilots refer to this unpredictable "twitchiness" as a significant challenge for targeting systems.</p><p>The 'Mech mounts two center torso-mounted Aberdovey Mk III medium lasers. While more expensive than common Martell models, these weapons require minimal maintenance and draw directly from the fusion reactor, eliminating ammunition concerns during extended operations. Three and a half tons of Durallex Light armor offers modest protection, though most pilots consider speed their primary defense.</p><p>The fully integrated O/P communications and targeting system transmits both voice communications and sensor readings simultaneously. However, this sophisticated electronics package, combined with the head armor configuration, leaves no room for a proper ejection system, a flaw that persists across most Spider variants.</p>
 
-deployment:This variant removes the standard weaponry and replaces it with a single Large Re-engineered Laser. It's protected by Ballistic-Reinforced Armor.
+deployment:<p>An elaborate variant of the Spider, the SDR-10K mounts a large re-engineered laser as its primary weapon and replaces standard armor with ballistic-reinforced plating. This configuration provides enhanced protection against autocannon fire while delivering precise, powerful energy strikes at medium range, making it well suited for operations against vehicle-heavy opposition.</p>
 
-history:Beyond exceeding all of the SLDF's minimum requirements Newhart had actually designed the Spider before receiving the Star League's request for proposals and were ready to begin production immediately, factors which helped the company win the contract very quickly. Newhart's Spider factory on New Earth was destroyed in 2776 as part of the Amaris Civil War and very few Spiders ended up in the hands of the Successor States when the Star League dissolved. As their numbers began to dwindle during the Succession Wars, entire offensive operations were conducted simply to secure spare parts for these 'Mechs. So rare was the Spider that Wolf's Dragoons were notable for having an entire lance of Spiders (albeit split among the various regiments). This trend towards extinction was finally reversed when the Free Worlds League was able to secure the schematics for the Spider. In a deal with Nimakachi Fusion Products Limited, the company was given exclusive control of the 'Mech's technical specifications in exchange for building them for the Free Worlds League. Nimakachi began building new Spiders from their factory on Tematagi and later expanded their facilities on Lapida II to produce them as well, resulting in the Free Worlds League and Draconis Combine having the largest number of Spiders in active service. The recovery of lost Star League technology inspired Nimakachi to update the Spider with new upgrades, resulting in the improved SDR-7M and the derivative Venom. While the Free Worlds League did not express much interest in these 'Mechs, Nimakachi found ready buyers among the other Great Houses. In particular the Draconis Combine had lost a large number of light 'Mechs during the Clan Invasion and bought up local- and foreign-made Spiders to replenish their ranks. The Word of Blake also expressed an interest in these Spiders and bought a number to outfit their military. These Spiders were used as part of the Blakist conquest of Terra and were later gifted to the Protectorate Militia, where they fought in the Jihad. Starting in 3067, the Spider was restyled by Nimakachi which allowed the addition of an ejection system to the cockpit of the new SDR-7K, 7K2, and 7KC.
+history:<p>Newhart Interstellar Industries produced the Spider alongside AeroSpace Fighters and the Hussar BattleMech from their facility on New Earth until Amaris's forces destroyed the factory in 2776. Very few Spiders reached the Successor States when the Star League dissolved, and their numbers dwindled rapidly during the Succession Wars as spare parts became scarce. Offensive operations were launched simply to secure components for these valued reconnaissance 'Mechs.</p><p>The Spider's rarity made certain units notable for possessing them. Wolf's Dragoons reportedly operated an entire lance of Spiders, split among their various regiments, an impressive concentration of such scarce machines. The 2934 Battle of Styk saw Marik Militia units and Warrior House Fujita employ Spiders against Deneb Light Cavalry forces defending Devonshire. Using close-combat assault tactics and their exceptional jumping ability, the Spiders penetrated Davion's outer defenses and enabled Marik forces to hold the city for several hours.</p><p>The Free Worlds League eventually secured the Spider's technical schematics from the Terran Hegemony ruins and struck a deal with Nimakachi Fusion Products Limited. In exchange for exclusive control of the design, Nimakachi began producing Spiders at their Tematagi facility and later expanded to Lapida II. By the late Succession Wars, the Free Worlds League and Draconis Combine possessed the greatest numbers of active Spiders.</p><p>The Clan Invasion's devastating losses prompted Nimakachi to upgrade their Spider designs and develop the heavier Venom. The Word of Blake purchased significant numbers of Spiders beginning in 3058, using them during their conquest of Terra and later equipping their Protectorate Militia. Nimakachi's 3067 redesign finally incorporated an ejection system in the SDR-7K series. Following the Jihad, both Krupp Armament Works on Terra and Nimakachi's rebuilt Tematagi plant have continued Spider production, with variants appearing in service with the Republic of the Sphere, the Draconis Combine's Sword of Light, and even Clan Ghost Bear's second-line Clusters.</p>
 
-manufacturer:Nimakachi Fusion Products Limited
+manufacturer:Nimakachi Fusion Products Ltd.
+
 primaryfactory:Lapida II
-systemmanufacturer:CHASSIS:Crucis-II Deluxe Endo Steel
-systemmanufacturer:ENGINE:Pitban 240 XL
-systemmanufacturer:ARMOR:Kallon FWL Special Ferro-Fibrous
-systemmanufacturer:JUMP_JET:Rawlings 75
-systemmanufacturer:COMMUNICATIONS:Omicron 4002 Networking Channel
-systemmanufacturer:TARGETING:TRSS Eagle Eye
 
+fluffdate:2026-02-28 17:47:08
 
+systemmanufacturer:CHASSIS:Crucis-II
+systemmode:CHASSIS:Deluxe Endo Steel
+systemmanufacturer:ENGINE:Pitban
+systemmode:ENGINE:240
+systemmanufacturer:ARMOR:Durallex
+systemmode:ARMOR:Ballistic-Reinforced
+systemmanufacturer:JUMP_JET:Rawlings
+systemmode:JUMP_JET:75
+systemmanufacturer:COMMUNICATIONS:Omicron
+systemmode:COMMUNICATIONS:4002 Networking Channel
+systemmanufacturer:TARGETING:TRSS
+systemmode:TARGETING:Eagle Eye

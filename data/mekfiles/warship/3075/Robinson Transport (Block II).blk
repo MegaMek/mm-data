@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ede4-7ccc-a289-caea777a2ec1
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Robinson Transport
 2705
 </year>
 
-<originalBuildYear>
-2705
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -58,16 +49,16 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:24.0:4:1
-smallcraftbay:12.0:2:2
-mekbay:36.0:4
+asfbay:24.0:4:1::-1:0
+smallcraftbay:12.0:2:2::-1:0
+mekbay:36.0:4:-1::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-1stclassquarters:460.0:0
-crewquarters:833.0:0
-cargobay:54989.0:2:10
+1stclassquarters:460.0:0:-1::-1:0
+crewquarters:833.0:0:-1::-1:0
+cargobay:54989.0:2:10::-1:0
 </transporters>
 
 <SafeThrust>
@@ -94,9 +85,13 @@ cargobay:54989.0:2:10
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 104
@@ -217,15 +212,19 @@ IS Ammo LRM-20:30
 </structural_integrity>
 
 <capabilities>
-The Robinson Block II incorporated cutting-edge technologies obtained from the Terran Hegemony, enabling it to achieve superior armor protection and enhanced defense against aerospace fighters. With the integration of Double Heat Sinks, the ship's heat dissipation capabilities were significantly improved, allowing for prolonged operations in combat scenarios. The implementation of Ferro-Carbide armor provided twice the armor protection compared to previous versions, ensuring increased resilience against enemy attacks. These advancements made the Robinson Block II a formidable transport vessel that could withstand heavy firepower while preserving its cargo space for the transportation of troops and BattleMechs.
+<p>Displacing 400,000 tons across 537 meters of hull, the Robinson combines substantial troop transport capability with respectable naval firepower. Thirty-six internal bays house a full battalion of combat vehicles or heavy machines, with specialized cocoons enabling combat drops directly from low orbit, a capability shared by few other vessel classes. Four docking collars carry DropShips for conventional deployment, while twenty-four fighter bays and twelve small craft provide layered aerospace defense. Over 56,000 tons of cargo space round out the logistics capacity.</p><p>The Block I mounts two NAC/30 naval autocannons and two Heavy Naval PPCs as its primary capital weapons, supplemented by Light Naval PPCs, NL45 and NL35 naval lasers, and conventional weapons including LRM-20 racks for anti-DropShip duty. However, none of these batteries can concentrate enough fire to threaten a dedicated combatant of equal or greater tonnage. The Block II replaced single heat sinks with doubles, upgraded standard armor to ferro-carbide plating that effectively doubled protection, and added PPCs and LRM racks to the broadside and aft arcs for significantly improved anti-aerospace defense. A crew of over 350 officers, enlisted, gunners, and bay personnel operate the vessel across its transport and combat roles.</p>
 </capabilities>
 
 <overview>
-The Robinson Block II, introduced in 2705, represents an advanced iteration of the Robinson-class WarShip. Benefiting from advanced naval components developed by the Terran Hegemony, the Block II variant showcased significant enhancements in armor protection and defensive capabilities. Despite these improvements, the ship maintained its primary function as a versatile transport vessel. The integration of technologies such as Double Heat Sinks and Ferro-Carbide armor bolstered its resilience without sacrificing cargo capacity.
+<p>The Robinson-class transport was the Federated Suns' answer to a uniquely ambitious naval requirement: a single vessel capable of transporting an entire regiment between star systems and then supporting their planetary assault upon arrival. Commissioned in 2560 by Challenge Systems at Galax under the direction of Prince Alexander Davion, the Robinson filled a role few other WarShip classes attempted, combining heavy troop and vehicle transport capacity with enough firepower to provide meaningful orbital support during contested landings. Rather than serving in mobile fleet formations, the class was designed for permanent attachment to specific frontier commands, giving border garrisons their own dedicated interstellar assault capability. The Robinson earned a reputation as a reliable workhorse of the Federated Suns Navy, able to operate independently in regions where larger fleet elements were unavailable or committed elsewhere.</p>
 </overview>
 
+<deployment>
+<p>Block II Robinsons served alongside their older Block I sisters across the four major Federated Suns fleets, with their improved armor protection making them considerably more survivable in sustained engagements. The upgraded vessels were particularly valued for deep-strike transport missions where extended exposure to hostile aerospace assets was expected, as their enhanced broadside and aft coverage reduced vulnerability during approach and withdrawal maneuvers. The ferro-carbide armor proved its worth during the bitter naval fighting of the First Succession War, though the relentless attrition of those conflicts eventually claimed Block II vessels alongside their older counterparts.</p>
+</deployment>
+
 <history>
-The introduction of the Robinson Block II in 2705 marked a significant milestone in the evolution of the Robinson-class WarShip. With the loosening of the Terran Hegemony's control over advanced military technologies, the Federated Suns gained access to crucial naval components that propelled the Robinson's capabilities to new heights. The integration of Double Heat Sinks and Ferro-Carbide armor not only enhanced the ship's defensive capabilities but also reflected the continuous advancements in the field of WarShip design. The Robinson Block II, retaining its role as a versatile transport vessel, played a vital role in various military operations of the Federated Suns. Its ability to transport troops, BattleMechs, and supplies while offering robust defensive capabilities made it an indispensable asset on the battlefield. The integration of advanced technologies allowed the Robinson Block II to excel in combat scenarios, ensuring the safe delivery of ground forces and providing crucial support during operations. As the Federated Suns faced numerous conflicts and challenges, the Robinson Block II proved its worth and resilience. Its deployment in key regions and alongside frontline units safeguarded vital territories and contributed to the success of numerous military campaigns. The Robinson Block II stands as a testament to the advancements made in WarShip technology and its significant impact on the Federated Suns' military capabilities.
+<p>The Robinson-class transport emerged from the political upheaval following the Davion Civil War. Prince Alexander Davion, acutely aware of the need to rebuild the Federated Suns Navy while rewarding the border systems that had supported his claim, commissioned a new WarShip class that entered service in 2560. Named for the strategically vital border world, the Robinson embodied an ambitious concept: a single vessel that could transport an entire regiment between stars, deliver troops directly to a planetary surface, and provide orbital fire support throughout the engagement. Challenge Systems at Galax, already the primary Federated Suns WarShip producer, built the class at the same yards that produced Congress D frigates.</p><p>Unlike conventional WarShips assigned to mobile fleet operations, Robinsons were permanently attached to specific commands. The Ceti Hussars received dedicated Robinson support along the Draconis Combine border, while other vessels patrolled near New Syrtis alongside the New Syrtis Fighter Cruisers guarding that frontier. The FSS Woodbine proved the transport-combat concept during the Malagrotta Affair of 2573, helping destroy or capture nearly an entire Taurian Concordat flotilla. As Hegemony technology became available to the Federated Suns, the military introduced the Block II variant in 2705. Unlike the Davion destroyer, which was completely transformed by its upgrade program, the Robinson retained its original mass but received improved armor protection and upgraded heat management systems that allowed expanded weapons coverage across the broadside and aft arcs.</p><p>By 2765, eight Robinsons operated across four Federated Suns fleets with two additional vessels in the Department of Naval Transport. The First Succession War devastated the class. The FSS New Ivaarsen carried reinforcements to Clovis in 2787 during the Combine invasion, while the Battle of Cholame in 2788 claimed most surviving vessels. The FSS Marlette, one of the few to escape Cholame, continued serving into the 2810s before suffering crippling damage at Dahar IV. Most critically, the Draconis Combine captured two Block I Robinsons after exploiting a vulnerability in the design. Centuries later, those captured vessels became the direct inspiration for the Kyushu-class frigate, which maintained the Robinson's hybrid transport-combat role for Combine service.</p>
 </history>
 
 <manufacturer>
@@ -237,12 +236,22 @@ Galax
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Challenge Systems
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Robinson
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Transport

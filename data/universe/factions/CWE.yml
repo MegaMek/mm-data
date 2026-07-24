@@ -17,11 +17,17 @@
 
 key: CWE
 name: Wolf Empire
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - WE
 capital: Gienah
 yearsActive:
   - start: 3143
 tags:
-  - MINOR
+  - PLAYABLE
+  - MAJOR
   - CLAN
   - BATCHALL
 color:
@@ -40,3 +46,12 @@ ratingLevels:
 fallBackFactions:
   - CW
   - CWIE
+factionLeaders:
+  - title: "Khan"
+    firstName: "Alaric"
+    surname: "Ward"
+    gender: "MALE"
+    # Founder and Khan of the Wolf Empire from 3143 (later ilKhan after the 3151 ilClan Trial).
+    startYear: 3143
+usesMercenaries:
+  2500: false

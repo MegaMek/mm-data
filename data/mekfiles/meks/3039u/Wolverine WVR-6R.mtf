@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,55 +15,55 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c338-7203-9a51-f587c68e116c
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Wolverine
 model:WVR-6R
 mul id:3573
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2575
-Source:TR:3039
-Rules Level:1
+techbase:Inner Sphere
+era:2575
+source:TR:3039,TR:SW
+published:RSFP:Wave 1,RS:GoAC
+rules level:1
 role:Skirmisher
 
-
-
-quirk:command_mech
+quirk:cramped_cockpit
 quirk:ext_twist
-quirk:imp_com
-quirk:pro_actuator
+quirk:command_mech
 quirk:ubiquitous_clan
 quirk:ubiquitous_is
-quirk:cramped_cockpit
+quirk:pro_actuator
+quirk:imp_com
 weaponquirk:jettison_capable:RA:4:Autocannon/5
 
+mass:55
+engine:275 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:55
-Engine:275 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:12 Single
+walk mp:5
+jump mp:5
 
-Heat Sinks:12 Single
-Walk MP:5
-Jump MP:5
-
-Armor:Standard(Inner Sphere)
-LA Armor:16
-RA Armor:16
-LT Armor:20
-RT Armor:20
-CT Armor:20
-HD Armor:8
-LL Armor:16
-RL Armor:16
-RTL Armor:6
-RTR Armor:6
-RTC Armor:8
+armor:Standard(Inner Sphere)
+LA armor:16
+RA armor:16
+LT armor:20
+RT armor:20
+CT armor:20
+HD armor:8
+LL armor:16
+RL armor:16
+RTL armor:6
+RTR armor:6
+RTC armor:8
 
 Weapons:3
-Medium Laser, Head
+AC/5, Right Arm
 SRM 6, Left Torso
-Autocannon/5, Right Arm
+Medium Laser, Head
 
 Left Arm:
 Shoulder
@@ -177,19 +177,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Wolverine commonly served as a heavy scout unit. Often deployed in situations where heavy opposition could easily destroy lighter BattleMechs, it has had a reliable service record ever since its initial deployment within the Star League Defense Force. With respectable armor, speed, and firepower, it can easily outfight lighter enemy scouts and defend itself capably if ambushed.
+overview:<p>The Wolverine traces its origins to the earliest days of BattleMech development, when Norse BattleMech Works of Marduk designed the prototype WVR-1R in 2471 for the Armed Forces of the Federated Suns. Intended as a versatile front-line combatant emphasizing maneuverability and balanced firepower, the Wolverine filled a crucial role as a heavy scout and cavalry 'Mech capable of operating independently or as part of larger formations. When Kallon Industries acquired production rights and introduced the definitive WVR-6R in 2575, the design became one of the most widely produced medium BattleMechs in the Inner Sphere. Manufactured on multiple worlds by firms including Kallon Industries, Victory Industries, and Free Worlds Defense Industries, the Wolverine has served in every major conflict from the Age of War through the ilClan era. Its enduring success stems from a design philosophy that prioritizes versatility over specialization, making it equally effective as a scout, skirmisher, and striker.</p>
 
-capabilities:The autocannon, missile system and laser found on most Wolverines are all reliable and well-storied systems. Unfortunately, the jump jets suffer from an opposing reputation; the Northrup 12000's are underpowered and prone to breakdowns. The one defining system to be found on the Wolverine, however, are its superb Tek BattleCom and Garret T11-b communications systems. The comgear, regardless of the manufacturer, is well-shielded and features a multi-channel transmitter and receiver, making the Wolverine a powerful Command BattleMech for scouting formations.
+capabilities:<p>The Wolverine's effectiveness stems from its well-balanced combination of firepower, mobility, and protection. The definitive WVR-6R mounts an Imperator-A autocannon/5 as its primary weapon, providing consistent medium-range fire support, complemented by a Holly short-range missile six-pack for close-quarters engagements and a single Magna Mk II medium laser in the head for additional punch. This weapons mix gives the Wolverine reliable engagement options across multiple ranges without generating excessive heat, a critical advantage during sustained operations.</p><p>Jump jets manufactured by Northrup provide a 120-meter jump capability, granting tactical mobility that allows the Wolverine to navigate difficult terrain and leverage advantageous firing positions. The chassis carries nine and a half tons of Maximillian 60 armor, providing excellent protection for its weight class and allowing the Wolverine to absorb punishment that would cripple lighter scouts. While the design's 86.4 kilometer-per-hour ground speed has occasionally been criticized as somewhat lacking for a dedicated reconnaissance platform, it remains adequate for the combined-arms skirmisher role in which the Wolverine excels.</p><p>The integrated Garret T11-b communication system and Sync Tracker targeting-tracking system give the Wolverine above-average command and control capabilities, making it a natural choice for lance and company command 'Mechs. This combination of respectable firepower, solid protection, and strong electronics has made the Wolverine particularly favored by Houses Davion, Kurita, and Marik, each of whom has developed specialized variants tailored to their tactical doctrines.</p>
 
-deployment:The Wolverine carries a weapons payload that is both versatile and, at the same time, limited by its ammunition dependencies. The primary weapon on board is a GM Whirlwind Autocannon/5. This weapon, mounted in the right arm along with one ton of ammunition, allows the Wolverine to cause damage to the enemy at respectable ranges. This is backed up for short range work by a Harpoon-6 SRM-6 launcher with one ton of reloads in the left torso and a single Magna Mk II Medium Laser mounted in the head. The laser is the most unique aspect of the Wolverine as it is mounted in a ball turret originally providing a 360° field of fire on early models of the Wolverine. Following the addition of the Harpoon launcher and Tek BattleCom electronics blister, a fire-interrupt circuit had to be added to prevent pilots from shooting their own 'Mech. Five Northrup 120000 jump jets, with two in either leg and the fifth in the rear torso, improves upon the Wolverine's relatively fast cruising speed of 54 km/h by allowing it to jump up to 150 meters at a time. Unfortunately the jets are slightly underpowered for this role and must be operated near maximum thrust to achieve their potential, resulting in increased wear and tear on the components. For this reason a number of variants were introduced which simply removed the jump jets. Nine and a half tons of armor make the Wolverine well-protected and emphasize its survivability when undertaking dangerous reconnaissance missions. Twelve heat sinks also provide adequate heat dissipation even in the event of damage to the fusion engine, further emphasizing the durability of the machine. In its role as a command 'Mech the Wolverine is well equipped with the same Tek BattleCom system with multi-channel transceiver/receiver as found on the Phoenix Hawk. Well-shielded in the head blister this set-up allows the Wolverine to provide superior electronic support when leading other 'Mechs or conducting reconnaissance on its own.
+deployment:<p>The definitive Wolverine variant was introduced in 2575 by Kallon Industries for the newly formed Star League Defense Force, serving with distinction during the Reunification War. Representing the full modernization of the Norse BattleMech Works design, this variant replaced all primitive-era components while retaining the proven weapons configuration established by the earlier WVR-3R: an autocannon/5 backed by an SRM-6 and a head-mounted medium laser. The modernized chassis featured improved armor protection, a full-rated CoreTek 275 fusion engine, and five Northrup 12000 jump jets. Following approval for general use by the Great Houses, this variant became one of the most widely produced BattleMechs in the Inner Sphere, with factories operating on Nanking and Thermopolis under Kallon, Gibson under Free Worlds Defense Industries, and Marduk under Victory Industries. Additional manufacturers including Diplass BattleMechs and Taurus Territorial Industries further expanded the production base, ensuring this variant remained available throughout the devastation of the Succession Wars.</p>
 
-history:A widespread part of every major military, the Wolverine has manufacturing plants scattered throughout the entire Inner Sphere. While certain states-notably the Free Worlds League-have larger numbers of the design, only the Capellans began facing a shortage of the Wolverine after the loss of their Nanking facilities.
+history:<p>The Wolverine's story begins in the tumult of the Age of War, when the Federated Suns sought a new front-line BattleMech to bolster its border defenses. Norse BattleMech Works won the Capellan March contract, delivering the first four WVR-1R prototypes to Prince Varnay in 2471 and earning the design the informal nickname "Varnay-1R" among early pilots. The initial Wolverine emphasized rugged construction and close-combat capability, with engineers choosing heavy armor plating over more exotic weapons systems after initial experiments with particle projection cannons proved problematic due to overheating and electromagnetic interference with onboard systems.</p><p>The design underwent steady refinement over the following century. The WVR-3R appeared in 2490, incorporating incremental improvements, but it was not until Kallon Industries purchased production rights and introduced the WVR-6R in 2575 that the Wolverine reached its definitive form. The WVR-6R became a staple of the Star League Defense Force, with Kallon's factories on Nanking and Thermopolis producing thousands of units alongside facilities operated by Free Worlds Defense Industries on Gibson and Victory Industries on Marduk. Ironically, the Wolverine's proven design would serve as the template for Hegemony engineers' later upgrades to the competing Griffin and Shadow Hawk chassis, cementing its influence across the iconic fifty-five-ton medium 'Mech trio.</p><p>During the Succession Wars, the Wolverine became particularly associated with the Free Worlds League Military, which fielded the largest concentration of the design. The Fourth Succession War dramatically reshuffled production, as the Capellan Confederation lost control of the Nanking facility to the Federated Commonwealth while the Draconis Combine captured Victory Industries' Marduk plant. These shifts drove the development of faction-specific variants as each Great House sought to tailor the Wolverine to their own strategic needs, with House Kurita, House Davion, and House Marik all producing distinctive modifications reflecting their particular combat philosophies.</p><p>The Clan Invasion and subsequent technological renaissance sparked a new wave of Wolverine development. Multiple manufacturers introduced upgraded variants incorporating recovered Star League technology and newly developed weapons systems. The WVR-7K proved spectacularly successful in Kuritan service, inspiring Victory Industries' Project Phoenix modernization program, while the Davion WVR-7D took a more haphazard approach to upgrades before being refined through the same initiative. The Jihad era saw both Word of Blake-influenced designs and resistance variants enter service, with the WVR-9M particularly emerging as a field modification used by Duchess Alys Rousset-Marik's freedom fighters before Kallon Industries adopted it for formal production at Thermopolis.</p><p>The post-Jihad period brought significant changes to Wolverine manufacturing. Luthien Armor Works secured licensing rights that shifted substantial production toward the Draconis Combine, while Kallon Industries' Nanking facility was rebuilt under Republic of the Sphere auspices. The ilClan era produced perhaps the most dramatic development in the Wolverine's long history when Clan Wolf seized the Thermopolis facility and converted its production lines to manufacture the Conjurer, the Clan design originally built from the Wolverine chassis. Despite this loss, manufacturers across the Inner Sphere continue to produce the Wolverine in significant numbers, ensuring the venerable design remains a fixture of medium 'Mech lances from the Periphery to Terra itself.</p>
 
-manufacturer:Diplass BattleMechs,Gibson Federated BattleMechs (A Division of Free Worlds Defense Industries),Diplass BattleMechs,Victory Industries (formerly Norse BattleMech Works),Kallon Weapon Industries,Taurus Territorial Industries,Kallon Weapon Industries 
-primaryfactory:Apollo,Gibson,Inner Surge,Marduk,Nanking,Taurus,Thermopolis
-systemmanufacturer:CHASSIS:Crucis-A
-systemmanufacturer:ENGINE:Core Tek 275
-systemmanufacturer:ARMOR:Maximillian 60
-systemmanufacturer:JUMP_JET:Northrup 12000
-systemmanufacturer:COMMUNICATIONS:Garret T11-b
-systemmanufacturer:TARGETING:Sync Tracker(39-42071)
+manufacturer:Diplass BattleMechs|Gibson Federated BattleMechs (A Division of Free Worlds Defense Industries)|Diplass BattleMechs|Victory Industries (formerly Norse BattleMech Works)|Kallon Weapon Industries|Taurus Territorial Industries|Kallon Weapon Industries
+
+primaryfactory:Apollo|Gibson|Inner Surge|Marduk|Nanking|Taurus|Thermopolis
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Crucis
+systemmode:CHASSIS:Crucis-A
+systemmanufacturer:ENGINE:CoreTek
+systemmode:ENGINE:CoreTek 275
+systemmanufacturer:ARMOR:Maximillian
+systemmode:ARMOR:Maximillian 60
+systemmanufacturer:JUMP_JET:Northrup
+systemmode:JUMP_JET:Northrup 12000
+systemmanufacturer:COMMUNICATIONS:Garret
+systemmode:COMMUNICATIONS:Garret T11-b
+systemmanufacturer:TARGETING:Sync Tracker
+systemmode:TARGETING:Sync Tracker (39-42071)

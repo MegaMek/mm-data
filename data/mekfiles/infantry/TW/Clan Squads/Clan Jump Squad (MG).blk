@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfa6-7bd6-9b16-0c70eb3b6842
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,17 @@ Clan Level 2
 Jump
 </motion_type>
 
+<Troopers Equipment>
+Clan Armor Kit (All)
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Clan jump squads field squad-strength jump-capable warriors for reconnaissance and vertical-access missions. Smaller than a standard Clan jump Point, these formations operate as observation teams, rooftop security elements, and insertion forces where reduced numbers and three-dimensional mobility compensate for limited sustained firepower. Their compact size makes them easier to deploy from limited transport assets.</p>
+</overview>
 
 <source>
 TW
@@ -69,18 +73,10 @@ TW
 </secondn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
 <Secondary>
 Machine Gun (Portable)
 </Secondary>
-
-<antimek>
-6
-</antimek>
-
-<armorKit>
-ClanKit
-</armorKit>
 

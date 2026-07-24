@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Narellan
-sucsId: 1798
+sucsId: 1799
 xcood: 170.602
 ycood: -253.882
 spectralType: M5V
@@ -47,6 +47,12 @@ planet:
       - name: Millbury
       - name: Pulaski
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2275-04-13'
         faction:
           source: canon
@@ -62,6 +68,12 @@ planet:
         population: 840203.0
       - date: '2310-01-01'
         population: 2032101.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 4354119.0
       - date: '2330-01-01'
@@ -76,6 +88,12 @@ planet:
         population: 24526246.0
       - date: '2360-01-01'
         population: 37736467.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2370-01-01'
         population: 54479344.0
       - date: '2380-01-01'
@@ -120,6 +138,11 @@ planet:
         population: 526029057.0
       - date: '2570-01-01'
         population: 536451633.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 1
       - date: '2580-01-01'
         population: 544440833.0
       - date: '2590-01-01'
@@ -222,14 +245,25 @@ planet:
         population: 315532987.0
       - date: '3020-01-01'
         population: 301178618.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Altair PDZ
       - date: '3030-01-01'
         population: 296400387.0
-      - date: '3040-09-07'
-        population: 300489015.0
-        socioIndustrial: C-D-D-B-F
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-09-07'
+        population: 300489015.0
+        socioIndustrial: C-D-D-B-F
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3049-01-01'
@@ -241,6 +275,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -269,9 +309,25 @@ planet:
           value:
             - CC
         population: 343851954.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 12
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
+      - date: '3151-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Carmacks Prefecture
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
   - name: Oceanus

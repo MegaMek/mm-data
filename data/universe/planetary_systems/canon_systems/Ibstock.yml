@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ibstock
-sucsId: 1166
+sucsId: 1167
 xcood: -20.985
 ycood: -101.91
 spectralType: G4V
@@ -71,6 +71,12 @@ planet:
         socioIndustrial: C-D-F-F-F
       - date: '2270-01-01'
         population: 123255.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 553918.0
       - date: '2290-01-01'
@@ -84,6 +90,12 @@ planet:
           source: canon
           value:
             - DoL
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 36744351.0
       - date: '2330-01-01'
@@ -96,6 +108,12 @@ planet:
         population: 230658755.0
       - date: '2360-01-01'
         population: 362128299.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCom
       - date: '2367-07-01'
         faction:
           source: canon
@@ -147,6 +165,16 @@ planet:
         population: 4983619968.0
       - date: '2570-01-01'
         population: 5033737445.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Tikonov Commonality
+        #   - Region 1
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2580-01-01'
         population: 5079434925.0
       - date: '2590-01-01'
@@ -192,6 +220,10 @@ planet:
         population: 5075253484.0
       - date: '2780-01-01'
         population: 5086818359.0
+      - date: '2786-12-31'
+        # administration:
+        #   - Tikonov Commonality
+        #   - Region 4
       - date: '2790-01-01'
         population: 5082897869.0
       - date: '2800-01-01'
@@ -203,6 +235,12 @@ planet:
       - date: '2821-04-12'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2830-01-01'
@@ -276,9 +314,24 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3082-12-06'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3085-12-31'
+        # administration:
+        #   - Prefecture VI
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -297,6 +350,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SA
       - date: '3140-01-01'
         population: 5233196007.0
       - date: '3145-06-27'
@@ -305,9 +364,13 @@ planet:
           value:
             - OP
         population: 5255221652.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Oriente Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Pandora
@@ -572,7 +635,7 @@ planet:
         population: 1788314930.0
       - date: '3151-01-01'
         faction:
-          source: sucs
+          source: SUCS
           value:
             - FWL
   - name: Ceneus

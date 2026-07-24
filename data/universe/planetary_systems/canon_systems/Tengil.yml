@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tengil
-sucsId: 2514
+sucsId: 2515
 xcood: -65.304
 ycood: -311.897
 spectralType: K7V
@@ -53,6 +53,12 @@ planet:
         capital: New Smoky Lake
       - name: Lubec
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2628-02-15'
         faction:
           source: canon
@@ -90,6 +96,16 @@ planet:
         population: 286580966.0
       - date: '2750-01-01'
         population: 289138626.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Andurien Commonality
+        #   - Region 2
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 290494869.0
       - date: '2770-01-01'
@@ -107,6 +123,15 @@ planet:
       - date: '2821-01-27'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '2821-12-31'
+        # administration:
+        #   - Duchy of Andurien
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2830-01-01'
@@ -135,6 +160,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Phoebe Belt
     type: ASTEROID_BELT
     orbitalDist: 0.42

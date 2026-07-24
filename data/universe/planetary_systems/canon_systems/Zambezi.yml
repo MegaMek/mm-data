@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Zambezi
-sucsId: 2813
+sucsId: 2814
 xcood: 388.168
 ycood: -188.606
 spectralType: M8V
@@ -53,6 +53,12 @@ planet:
       - name: New Breit IV
       - name: New Breit V
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2674-10-16'
         faction:
           source: canon
@@ -82,6 +88,17 @@ planet:
         population: 147069839.0
       - date: '2750-01-01'
         population: 154147438.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Chirikof Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 158104153.0
       - date: '2770-01-01'
@@ -124,6 +141,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: F1 Belt
     type: ASTEROID_BELT
     orbitalDist: 0.07

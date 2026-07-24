@@ -95,6 +95,12 @@ planet:
         population: 2097190.0
       - date: '2316-01-01'
         socioIndustrial: D-F-B-C-C
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 4069749.0
       - date: '2330-01-01'
@@ -105,6 +111,12 @@ planet:
         population: 18339511.0
       - date: '2360-01-01'
         population: 26690131.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2370-01-01'
         population: 36830303.0
       - date: '2380-01-01'
@@ -149,6 +161,9 @@ planet:
         population: 274916586.0
       - date: '2570-01-01'
         population: 282180159.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Marik Commonwealth
       - date: '2580-01-01'
         population: 289168448.0
       - date: '2590-01-01'
@@ -303,15 +318,15 @@ planet:
         population: 433843405.0
       - date: '3145-01-01'
         population: 437590548.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Clan Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
-      - date: '3152-06-01'
-        faction:
-          source: sucs
-          value:
             - CP
   - name: Z-1 Belt
     type: ASTEROID_BELT

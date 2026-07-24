@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Lesnovo
-sucsId: 1483
+sucsId: 1484
 xcood: -315.4
 ycood: -266.86
 spectralType:
@@ -114,6 +114,12 @@ planet:
           source: canon
           value: Zletovo
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2644-12-12'
         faction:
           source: canon
@@ -152,6 +158,15 @@ planet:
         population: 3338738138.0
       - date: '2750-01-01'
         population: 3434465755.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 3506618646.0
       - date: '2770-01-01'
@@ -168,6 +183,10 @@ planet:
         population: 3484256571.0
       - date: '2830-01-01'
         population: 3411806834.0
+      - date: '2830-12-31'
+        # administration:
+        #   - Rim Commonality
+        # capitalType: Region Capital
       - date: '2840-01-01'
         population: 3340863578.0
       - date: '2843-01-01'
@@ -213,6 +232,9 @@ planet:
         population:
           source: canon
           value: 2631000000.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Rim Commonality
       - date: '3030-01-01'
         population: 1874780365.0
       - date: '3040-01-01'
@@ -225,11 +247,21 @@ planet:
         population: 452988330.0
       - date: '3060-01-01'
         population: 221865451.0
+      - date: '3067-12-31'
+        # administration:
+        #   - Rim Commonality
+        # capitalType: District Capital
       - date: '3070-01-01'
         population: 127778340.0
       - date: '3075-04-13'
         faction:
           source: canon
+          value:
+            - RCM
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - RCM
       - date: '3080-01-01'
@@ -254,9 +286,14 @@ planet:
         population: 136441650.0
       - date: '3145-01-01'
         population: 136769503.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Rim Commonality
+        # capitalType: District Capital
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Suchopcek

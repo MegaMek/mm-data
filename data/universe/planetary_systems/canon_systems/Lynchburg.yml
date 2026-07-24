@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Lynchburg
-sucsId: 1544
+sucsId: 1545
 xcood: 340.721
 ycood: -128.144
 spectralType: F8V
@@ -99,6 +99,12 @@ planet:
         size: large
         icon: rock6
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2713-10-25'
         faction:
           source: canon
@@ -116,6 +122,17 @@ planet:
         population: 1486069.0
       - date: '2750-01-01'
         population: 3414831.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 3
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 6704362.0
       - date: '2770-01-01'
@@ -158,6 +175,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: New East Stroudsburg
     type: GAS_GIANT
     orbitalDist: 6.24

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0e0-7c25-80bf-d5383508bdc9
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Cecerops
 3067
 </year>
 
-<originalBuildYear>
-3067
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Scout
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 8
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 0
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -90,6 +98,7 @@ Biped
 
 <Body Equipment>
 Clan Streak SRM 1 Ammo (10)
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -108,28 +117,20 @@ CLStreakSRM1
 <Legs Equipment>
 </Legs Equipment>
 
-<source>
-TR:3075
-</source>
-
-<tonnage>
-3.0
-</tonnage>
-
 <capabilities>
-The Cecerops has high speed and decent weaponry. The high speed allows the Cecerops to outrun most 'Mechs and Elementals, while keeping pace with fast hovercraft like the Shamash. Though not as heavily armored as some other ProtoMechs, the design's high speed prevents most opponents from getting a target lock.
+<p>Speed is the Cecerops' defining characteristic. A forty-five-rated fusion engine drives the three-ton frame to a cruising speed of ninety-seven kilometers per hour with a flank speed approaching one hundred fifty, allowing it to keep pace with most light BattleMeks and hovercraft. Even at rest, the design appears to be in motion; every line of the chassis is optimized for velocity. A single ER Micro Laser provides ammunition-independent firepower, allowing Cecerops Stars to operate for extended periods without resupply, a critical advantage for the resource-strapped Blood Spirits.</p><p>When operating in packs, the overwhelming and constant barrage of laser fire from a Cecerops Star can intimidate medium Mek pilots and bring down light Meks with proper tactics. Most Cecerops pilots are highly experienced by the time they earn assignment to the design, and the chaotic swirl of a pack hunting in concert deliberately mimics the sphinx-raptor's predatory behavior. Fourteen points of armor provide reasonable protection for the weight class, though sustained fire from heavier weapons will quickly overwhelm the design's defenses. The Cecerops excels in harassment and pursuit roles where its extraordinary speed can be leveraged without exposing it to concentrated return fire.</p>
 </capabilities>
 
 <overview>
-The Cecerops ProtoMech was designed and built by Clan Blood Spirit using materials acquired from Clan Snow Raven.
+<p>The Cecerops is a three-ton second-generation ProtoMek designed by Clan Blood Spirit using resources acquired through collaboration with the Snow Ravens. The first ProtoMek fully designed outside the original Smoke Jaguar program, the Cecerops bears a striking resemblance to the sphinx-raptor found on several Clan worlds, with a snakelike body profile and a forward-thrusting head cowl aerodynamically engineered to reduce drag. Among Blood Spirit ProtoMek forces, piloting a Cecerops is considered an extremely high honor, reflecting both the design's demanding performance envelope and its role as a symbol of the beleaguered Clan's determination to maintain military relevance despite dwindling BattleMek resources.</p>
 </overview>
 
 <deployment>
-This variant reduces the engine size slightly to incorporate a single tube Streak SRM launcher.
+<p>The most widely used Blood Spirit variant, the Cecerops 2 trades a fraction of engine power for a torso-mounted Streak SRM-1 launcher with ten rounds of ammunition-efficient guided missiles. The reduced engine drops cruising speed to eighty-six kilometers per hour, still remarkably fast but a noticeable step down from the base model. Armor protection remains at fourteen points. The Streak system ensures no missile is wasted, making the Cecerops 2 more resource-efficient in sustained engagements than conventional missile-armed ProtoMeks. This variant was developed during the constant clashes with the Star Adders on Arcadia and Albion, where ammunition conservation became a critical concern for the embattled Blood Spirits.</p>
 </deployment>
 
 <history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units. The Cecerops is assigned to the best available Blood Spirit pilots. These officers are highly skilled and very experienced in ProtoMech tactics by the time they are assigned to Cecerops. The Snow Ravens received several shipments of the Cecerops, but deployment details are unknown.
+<p>The Cecerops was born from an unlikely partnership between Clan Blood Spirit and Clan Snow Raven, two Clans whose shared outsider status in Homeworld politics drove them to collaborate on military technology development. The Snow Ravens provided critical resources and technical assistance that allowed the Blood Spirits to establish their own ProtoMek production capability at the Reserve Industriplex-2 on York. The Cecerops was the first fruit of this collaboration, though it proved an engineering challenge that delayed production until after the smaller and simpler design had already reached the field.</p><p>The Cecerops' debut on Arcadia was marred by controversy. Star Colonel Suzanne Church of the 171st Crimson Guards, commanding an entire Trinary of Cecerops and Chrysaors, treated the ProtoMeks as glorified Elementals rather than exploiting their speed and mobility. Predictably, the machines were overkill against enemy Elementals and wasted when deployed in tight terrain with limited maneuver space. When Church blamed the Cecerops for her command's poor showing, a Cecerops pilot named Andre challenged her to a Trial of Grievance. Issued in front of other Star Colonels and her own troops, Church could not refuse without losing honor. Despite fighting augmented, Church fell to Andre's clever tactical exploitation of the Cecerops' capabilities, simultaneously winning the Trial and demonstrating the design's true potential.</p><p>With BattleMeks becoming increasingly scarce in the constant warfare for York between the Spirits and Star Adders, ProtoMeks gradually usurped much of the Blood Spirit touman as a necessary weapon of choice. The Cecerops became the prestige assignment among the Clan's ProtoMek forces, with failed MekWarrior sibkos reportedly adapting to the program to maintain the large numbers the Clan needed to field effectively. Several initial shipments went to the Snow Ravens as payment for their assistance, though this arrangement ended in 3071 with the Ravens' abrupt departure from Clanspace.</p><p>Production disruptions followed when Clan Cloud Cobra destroyed one of the Blood Spirit production facilities, though the Spirits managed to convert a defunct facility on Albion left behind by the departing Ravens. During the constant clashes with the Star Adders on Arcadia and Albion, several variant configurations were developed to address specific tactical requirements, expanding the Cecerops' role beyond its original pure-speed reconnaissance mission. Contradicting Blood Spirit exclusivity, modified Cecerops were also reportedly sighted among mysterious gray-painted raiding forces that struck targets across the Falcon and Horse Occupation Zones in late 3073, their origin and allegiance unknown.</p>
 </history>
 
 <manufacturer>
@@ -141,10 +142,30 @@ York
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:York Raptoris
-ENGINE:45 Type CX Fusion
-ARMOR:BloodWeave Prosis
-JUMPJET:Unspecified
-COMMUNICATIONS:Tabitha-II Howler
-TARGETING:CEC-PM 7
+CHASSIS:York
+ENGINE:Unknown
+ARMOR:BloodWeave
+COMMUNICATIONS:Tabitha-II
+TARGETING:CEC-PM
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Raptoris
+ENGINE:40 Type CX Fusion
+ARMOR:Prosis
+COMMUNICATIONS:Howler
+TARGETING:7
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<published>
+RS:3075u-CE
+</published>
+
+<tonnage>
+3.0
+</tonnage>
+

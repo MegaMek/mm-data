@@ -306,10 +306,10 @@ division where most factions organize around a regiment. -->
 
         <ruleGroup>
             <formation ifFlags="!independent" ifIndex="0">
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -320,13 +320,13 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="!independent" ifIndex="1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -339,14 +339,14 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="!independent" ifIndex="!0|1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -389,10 +389,10 @@ division where most factions organize around a regiment. -->
 
         <ruleGroup>
             <formation ifFlags="!mixed" ifIndex="0">
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -403,13 +403,13 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="!mixed" ifIndex="1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -422,14 +422,14 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="!mixed" ifIndex="!0|1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -501,10 +501,10 @@ division where most factions organize around a regiment. -->
 
         <ruleGroup>
             <formation ifFlags="mixed" ifIndex="0">
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -515,13 +515,13 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="mixed" ifIndex="1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="21">Battle</option>
+                <option weight="21" ifWeightClass="H|A">Battle</option>
                 <option weight="10" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="5" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="1" ifWeightClass="H|A">Berserker/Close</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -534,14 +534,14 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="mixed" ifIndex="!0|1">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="17">Battle</option>
+                <option weight="17" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -635,7 +635,7 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="mixedRegiment">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
@@ -679,7 +679,7 @@ division where most factions organize around a regiment. -->
             <formation ifFlags="mixedBattalion">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
@@ -812,7 +812,7 @@ division where most factions organize around a regiment. -->
         </weightClass>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option weightClass="H,H,H">%WING%</option>
                 <option weightClass="H,H,M">%WING%</option>
                 <option weightClass="H,H,L">%WING%</option>
@@ -849,7 +849,7 @@ division where most factions organize around a regiment. -->
         </weightClass>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option weightClass="H,H,H">%SQUADRON%</option>
                 <option weightClass="H,H,M">%SQUADRON%</option>
                 <option weightClass="H,H,L">%SQUADRON%</option>

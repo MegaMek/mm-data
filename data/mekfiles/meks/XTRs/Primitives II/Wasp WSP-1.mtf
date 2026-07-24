@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,47 +15,46 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-dfe9-7fb1-a28e-46c6392f3885
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Wasp
 model:WSP-1
 mul id:3519
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2464
-Source:XTR:Primitives II
-Rules Level:4
+techbase:Inner Sphere
+era:2464
+source:XTR:Primitives II
+published:XTR:Primitives II
+rules level:4
 role:Scout
-
-
-
 
 quirk:hard_pilot
 quirk:weak_legs
 
+mass:20
+engine:120 Fusion Engine
+structure:IS Standard
+myomer:Standard
+cockpit:Primitive Cockpit
+gyro:Standard Gyro
 
-Mass:20
-Engine:120 Fusion Engine(IS)
-Structure:Standard
-Myomer:Standard
-Cockpit:Primitive Cockpit
-Gyro:Standard Gyro
+heat sinks:10 Single
+walk mp:5
+jump mp:5
 
-Heat Sinks:10 Single
-Walk MP:5
-Jump MP:5
-
-Armor:Primitive(Inner Sphere)
-LA Armor:3
-RA Armor:3
-LT Armor:4
-RT Armor:4
-CT Armor:6
-HD Armor:4
-LL Armor:3
-RL Armor:3
-RTL Armor:2
-RTR Armor:2
-RTC Armor:3
+armor:Primitive(Inner Sphere)
+LA armor:3
+RA armor:3
+LT armor:4
+RT armor:4
+CT armor:6
+HD armor:4
+LL armor:3
+RL armor:3
+RTL armor:2
+RTR armor:2
+RTC armor:3
 
 Weapons:1
 Medium Laser, Right Arm
@@ -172,19 +171,27 @@ ISPrototypeJumpJet
 -Empty-
 -Empty-
 
-overview:Introduced in 2464 as an attempt by General Mechanics to create a fast and maneuverable recon BattleMech for the Terran Hegemony, the Wasp was revolutionary for being the first 'Mech capable of jumping, sporting a prototype Jump Jet system; however, the system was not perfected for most of the next decade. With improvements in production and Jump Jet technology, the modern WSP-1A Wasp began production in 2471. Centuries later, it is still considered a valued asset for recon work and is one of the most numerous 'Mechs in existence.
+overview:<p>The Wasp was introduced in 2471 as the first BattleMech to mount jump jets, a revolutionary advancement that redefined battlefield mobility. Developed by General Mechanics under the direction of engineer Soren Iishi, the design emerged from an ambitious Terran Hegemony Armed Forces requirement for a highly mobile fast reconnaissance platform. The Wasp's ability to leap over obstacles and rough terrain gave it unmatched flexibility for scouting operations, setting a paradigm that would influence light 'Mech doctrine for centuries.</p><p>Mass-produced in staggering numbers throughout the Age of War and Star League eras, the Wasp became the most numerous BattleMech in the Inner Sphere. Better quality control made the Wasp more respected than the similar Stinger. Its combination of speed, jump capability, and low production cost made it the quintessential reconnaissance platform, with centuries-old Wasps existing in vast numbers, a testament not to durability but to prodigious production.</p>
 
-capabilities:The WSP-1A Wasp was not designed as a line combat unit. It carries a light weapons payload meant primarily for self-defense against other Light 'Mechs and was not meant to be used to engage heavier 'Mechs, resulting in tactics such as the Jump-Kick in order to deal more damage. The six Jump Jets split between the Wasp's left and right leg are responsible for its jumping distance of 180 meters and its longevity as a recon 'Mech. It also makes up for the relatively slow 66.5 km/h cruising speed produced by its four-ton fusion engine. Ten standard heat sinks are more than enough for the Wasp - it can actually fire both of its weapon systems continuously with little to no issue unless the jump jets have been overused. The three tons of armor protection is average for light 'Mechs, and with its placement around the chassis essentially two shots to the same spot anywhere will punch through and cause damage.
+capabilities:<p>General Mechanics designed the Wasp with an emphasis on low cost, simplicity of maintenance, and expendability. All major systems were engineered for rugged durability and ease of replacement in forward operating conditions. The standard armament of a single medium laser and SRM-2 launcher provides adequate firepower for reconnaissance engagements while minimizing logistical demands, allowing extended operations without resupply.</p><p>The Wasp's Hermes 120 fusion engine propels the twenty-ton chassis to speeds exceeding ninety kilometers per hour, while its Rawlings 52 jump jets enable leaps of up to 180 meters. This mobility allows MechWarriors to rapidly disengage from superior forces or exploit terrain features inaccessible to heavier units. The arm-mounted medium laser serves as the primary weapon, offering reliable performance across most combat conditions.</p><p>However, the design's light armor protection serves as a significant vulnerability. The Wasp cannot sustain concentrated fire from heavier opponents, and early production models suffered from catastrophic leg actuator failures when pilots employed jump-kick maneuvers. This flaw was corrected by 2610 with the universal retrofit of MMSR actuator bars following the infamous Battle of Electra in 2580. Chronic finger myomer issues on some models led MechWarriors to remove the right hand of their 'Mechs and wrist-mount the laser instead.</p>
 
-deployment:Developed by General Mechanics on Mars in 2464 as the first generation Wasp, this version used several primitive components. The primitive engine reduced the top speed to 85 km/h and meant that only a single medium laser was carried. The prototype jump jets could only cover 150 meters in a jump. The primitive armor provided much less protection than the later Succession Wars-era Wasps, even though it carried three and a half tons of armor.
+deployment:<p>The original prototype Wasp utilized primitive components including a basic fusion engine, early cockpit systems, and experimental jump jets that frequently damaged the airframe during operation. Introduced in 2464, this variant served primarily as a proof-of-concept demonstrator for General Mechanics' revolutionary jump-capable design. The primitive systems made it unsuitable for sustained combat operations, and production shifted to the improved WSP-1A once component technology matured.</p>
 
-history:The classic WSP-1A had a ground speed that could be considered lackluster when compared to many modern light 'Mechs, but this was offset by its jump capability. While carrying heavier weapons than 'Mechs like the Locust, the Wasp would generally only engage other light 'Mechs, using its jump capabilities to avoid conflicts with larger foes. The Wasp was also used in the role of raider because of its ability to hit and fade in rough terrain. Even after the sheer destruction of the Succession Wars, the Wasp still remained the most numerous 'Mech ahead of the Locust and Stinger; many thousands were in use by all of the Great Houses and in the Periphery while a hundred more were built each year from factories across known space. Nearly half of all newly-built Wasps came from IBMU's and Kali Yama's factories located in the Free Worlds League on Shiro III and Kalidasa respectively. Among other major Inner Sphere Wasp manufacturing sites were Defiance Industries' Furillo factory within the Lyran Commonwealth and Archenar BattleMechs on New Avalon within the Federated Suns. Many of the Great Houses had Wasp variants built specifically for them, as did Wolf's Dragoons. Out in the Periphery the Wasp was manufactured on Taurus, Perdition, Canopus IV and Alpheratz, making it equally common among the Periphery States. The reintroduction of Star League lostech was used to update the ancient design with modern improvements, starting first with the WSP-1S built by Defiance for the Federated Commonwealth. This was followed by the new WSP-3W built specifically for Wolf's Dragoons by Archenar, then the WSP-3M built by IBMU and Kali Yama. Another wave of updates came when Vicore Industries began to peddle their "Project Phoenix" program and found a willing buyer in Hellespont Industries. Requiring only minor changes to their production line, these new more mobile, more stealthy WSP-3Ls debuted in late July of 3067, and within the Capellan Confederation Armed Forces was used with new Raven and Phoenix Hawk models to form Shadow Lances. Taurus Territorial and Detroit Consolidated also began building these new Wasps under license from Hellespont, while Defiance designed their own updated version of the Wasp, the WSP-3S, which was then licensed to Archenar.
+history:<p>Development of the Wasp began in the mid-twenty-fifth century when General Mechanics sought to expand beyond its role as a subcontractor for the Mackie and Banshee programs. Engineer Soren Iishi, known as "Dr. Hive," led a team tasked with creating a 'Mech capable of unprecedented mobility. While the team's ultimate vision of a flying BattleMech would require decades more advancement to realize as the Land-Air 'Mech, their work on jump jet integration proved revolutionary. When the WSP-1X-02 prototype demonstrated its capabilities by leaping over a hangar during trials before HAF High Command, the competition was effectively over.</p><p>Production of the WSP-1A began in 2471, and General Mechanics constructed thousands of Wasps for the Hegemony and later the Star League. The design's widespread adoption led to the development of combined Wasp and Stinger swarm tactics that became legendary during the Star League era. However, the popularity of jump-kick maneuvers revealed a critical flaw in the leg actuators, resulting in numerous catastrophic failures during the Battle of Electra in 2580. By 2610, nearly all operational Wasps had been retrofitted with strengthened MMSR actuator bars.</p><p>The Succession Wars saw the Wasp deployed extensively by all Great Houses. The second battle of Ravannion in 3022 demonstrated the continued viability of light 'Mech swarm tactics when a Combine battalion assembled a full battalion's worth of Wasps and Stingers against Davion defenders. Everything went wrong for the attackers, freezing temperatures wreaked havoc with light 'Mechs overdue for maintenance, and Davion MechWarriors used their much-maligned Blackjacks' autocannons to devastating effect at ranges far exceeding the light 'Mechs' weapons. The engagement ultimately ended in disaster for the Combine forces.</p><p>The Phoenix programs of the 3060s returned the Wasp to prominence with upgraded variants incorporating recovered Star League technology and new innovations like stealth armor. The Word of Blake Jihad disrupted production across the Inner Sphere, though many factories eventually resumed operations under new management. Following the formation of the Wolf Empire, conquest of Kalidasa led to ramped-up Wasp production, ensuring the design remains one of the most common light 'Mechs in service. Wolf Empire's Theta Galaxy equipped with new Wasp Cs raided into the Lyran Commonwealth, striking the Eighth Donegal Guards on Caledonia, where the arm-mounted large laser proved decisive in cutting through the Guards' light screening units.</p>
 
-manufacturer:Hellespont Industrials,Bermuda Combat Systems,Nimakachi Fusion Products Limited,General Mechanics,Meridian Manufacturing
-primaryfactory:Betelgeuse,Booker,Lesnovo,Mars,New St. Andrews
-systemmanufacturer:CHASSIS:1A Type 3
+manufacturer:Hellespont Industrials|Bermuda Combat Systems|Nimakachi Fusion Products Limited|General Mechanics|Meridian Manufacturing
+
+primaryfactory:Betelgeuse|Booker|Lesnovo|Mars|New St. Andrews
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Achernar
+systemmode:CHASSIS:Unknown (Primitive)
 systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:Unknown (Primitive)
 systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Unknown (Primitive)
 systemmanufacturer:JUMP_JET:Unknown
-systemmanufacturer:COMMUNICATIONS:Duoteck 65
-systemmanufacturer:TARGETING:RadCom TXX
+systemmode:JUMP_JET:Unknown (Prototype)
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Saltville
-sucsId: 2220
+sucsId: 2221
 xcood: 377.938
 ycood: -99.438
 spectralType: K8V
@@ -62,6 +62,12 @@ planet:
         size: medium
         icon: rock16
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2672-06-19'
         faction:
           source: canon
@@ -91,6 +97,17 @@ planet:
         population: 105054616.0
       - date: '2750-01-01'
         population: 111182458.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Minette Operational Area
+        #   - Point Barrow Combat Region
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 115071499.0
       - date: '2770-01-01'
@@ -137,6 +154,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Dickey
     type: ICE_GIANT
     orbitalDist: 0.42

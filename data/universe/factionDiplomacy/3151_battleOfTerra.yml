@@ -1,0 +1,34 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# Derived from the Sarna 3151 year page. The Wolf Empire and Jade Falcon invasions of
+# the Republic remnant end with Devlin Stone's surrender on 14 April 3151; the ilClan
+# Trial between the Wolves and the Falcons follows (16-19 April). Note Clan Wolf uses
+# faction code CW through 3142 and CWE (Wolf Empire) from 3143 on.
+
+wars:
+  - name: Battle of Terra
+    start: 3151-01-01
+    end: 3151-04-19
+    parties:
+      - factions: [CWE, ROS]
+        end: 3151-04-14
+      - factions: [CJF, ROS]
+        start: 3151-01-21
+        end: 3151-04-14
+      - factions: [CWE, CJF]
+        start: 3151-04-16

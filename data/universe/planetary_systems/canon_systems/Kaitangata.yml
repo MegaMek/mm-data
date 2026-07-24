@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kaitangata
-sucsId: 1278
+sucsId: 1279
 xcood: 231.608
 ycood: -279.75
 spectralType: F6V
@@ -80,6 +80,12 @@ planet:
         size: medium
         icon: rock17
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-12-19'
         faction:
           source: canon
@@ -89,6 +95,12 @@ planet:
         socioIndustrial: D-C-B-D-A
       - date: '2360-01-01'
         population: 156429.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2370-01-01'
         population: 487567.0
       - date: '2380-01-01'
@@ -133,6 +145,17 @@ planet:
         population: 187205058.0
       - date: '2570-01-01'
         population: 195731896.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 2
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2580-01-01'
         population: 204101836.0
       - date: '2590-01-01'
@@ -231,6 +254,11 @@ planet:
         population: 240481870.0
       - date: '3020-01-01'
         population: 241063911.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - New Syrtis PDZ
       - date: '3030-01-01'
         population: 242710842.0
       - date: '3034-01-01'
@@ -242,6 +270,12 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3041-01-01'
         socioIndustrial: B-C-B-C-A
       - date: '3050-01-01'
@@ -251,6 +285,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -279,9 +319,25 @@ planet:
           value:
             - CC
         population: 269446750.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 13
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
+      - date: '3151-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Sirdar Operational Area
+        #   - New Syrtis PDZ
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
   - name: Oglala Lakota

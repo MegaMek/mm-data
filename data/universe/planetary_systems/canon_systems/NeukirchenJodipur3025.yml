@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Neukirchen (Jodipur 3025-)
-sucsId: 1255
+sucsId: 1256
 xcood: 406.348
 ycood: -247.142
 spectralType: F4V
@@ -111,6 +111,14 @@ planet:
       - name: Nahant
       - name: Damakasuwa
     event:
+      - date: '2108-12-05'
+        name: Jodipur
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2375-04-29'
         faction:
           source: canon
@@ -160,6 +168,17 @@ planet:
         population: 81475619.0
       - date: '2570-01-01'
         population: 86238228.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Chirikof Operational Area
+        #   - Region 1
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2580-01-01'
         population: 89920490.0
       - date: '2590-01-01'
@@ -261,6 +280,14 @@ planet:
         population: 108423493.0
       - date: '3020-01-01'
         population: 107636249.0
+      - date: '3025-01-01'
+        name: Neukirchen
+        message: Jodipur renamed to Neukirchen
+      - date: '3025-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Chirikof Operational Area
+        #   - Remagen Combat Region
       - date: '3027-01-01'
         socioIndustrial: D-C-C-D-C
       - date: '3030-01-01'
@@ -270,6 +297,12 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3045-01-01'
@@ -283,8 +316,19 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3070-01-01'
         population: 112473995.0
+      - date: '3079-12-31'
+        # administration:
+        #   - Periphery March
+        #   - June Operational Area
+        #   - Islamabad Combat Region
       - date: '3080-01-01'
         population: 114196658.0
       - date: '3090-01-01'
@@ -304,11 +348,6 @@ planet:
         population: 120894956.0
       - date: '3145-01-01'
         population: 121112763.0
-      - date: '2108-12-05'
-        name: Jodipur
-      - date: '3025-01-01'
-        name: Neukirchen
-        message: Jodipur renamed to Neukirchen
   - name: Kromsdorf
     type: TERRESTRIAL
     orbitalDist: 3.92

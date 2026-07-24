@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e13c-747a-93b4-41a0253367ca
+</UUID>
 
 <UnitType>
 SmallCraft
@@ -45,10 +40,6 @@ LC-100
 2953
 </year>
 
-<originalBuildYear>
-2953
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -62,10 +53,10 @@ Aerodyne
 </motion_type>
 
 <transporters>
-2ndclassquarters:0.0:0
-crewquarters:14.0:0
-1stclassquarters:80.0:0
-cargobay:6.0:1:4
+2ndclassquarters:0.0:0:-1::-1:0
+crewquarters:14.0:0:-1::-1:0
+1stclassquarters:80.0:0:-1::-1:0
+cargobay:6.0:1:4::-1:0
 </transporters>
 
 <SafeThrust>
@@ -92,9 +83,13 @@ cargobay:6.0:1:4
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 33
@@ -121,6 +116,42 @@ cargobay:6.0:1:4
 <structural_integrity>
 8
 </structural_integrity>
+
+<capabilities>
+<p>The LC-100 carries fuel sufficient for more than a week of travel at 1G and food stores for a month of sustained space travel. Luxury quarters accommodate seven passengers, and a five-ton cargo bay handles personal freight. The Astrolux can land in the small craft bay of any DropShip or JumpShip as easily as at a planetary port, making it suitable for complex multi-leg voyages.</p>
+</capabilities>
+
+<overview>
+<p>The Lockheed/CBM LC-100 Astrolux StarYacht is the most popular long-range civilian spacecraft designed for private ownership in the Inner Sphere. Produced at Lockheed/CBM's Donegal facilities, it has been the defining craft of its category since its introduction in 2953.</p>
+</overview>
+
+<history>
+<p>Introduced in 2953, the Astrolux's combination of range, comfort, and versatility prompted numerous knock-off designs and legal disputes over the following century. Despite that competition, the LC-100 remains one of Lockheed/CBM's most successful civilian products.</p>
+</history>
+
+<manufacturer>
+Lockheed/CBM Corp.
+</manufacturer>
+
+<primaryFactory>
+Donegal
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 HB:HS
@@ -169,3 +200,4 @@ HB:HS
 <escape_pod>
 0
 </escape_pod>
+

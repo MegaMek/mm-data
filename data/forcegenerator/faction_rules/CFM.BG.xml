@@ -72,7 +72,7 @@
         </subforces>
 
         <attachedForces>
-            <subforce unitType="Warship" fluffName="CFM Anathma"
+            <subforce unitType="Warship" fluffName="CFM Anathema"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
             <subforce unitType="Warship" fluffName="CFM Howler"
@@ -87,6 +87,10 @@
     <force echelon="%CLUSTER%" eschName="Cluster" ifUnitType="AeroSpaceFighter">
         <name>Mandrill Airborne</name>
         <co>%STAR_COL%</co>
+
+        <!-- The 87th Mandrill Airborne - Beyl-Grant's signature aerospace cluster. Strong, heavier
+             fighter mix (no assault-class fighters exist). -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:46,M:42,L:12</weightTarget>
 
         <weightClass>
             <option weight="2">H</option>
@@ -165,10 +169,19 @@
         <name ifWeightClass="L">Striker Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Kindraa Beyl-Grant (Clan Fire
+             Mandrill Touman, Sarna) is the aerospace-integrated, auxiliary-dependent Kindraa (the
+             87th Mandrill Airborne). Lighter Mek mix with the confederation's strongest aero. -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:6,H:34,M:44,L:16</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:18,M:52,L:28</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:8,M:42,L:49</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:46,M:42,L:12</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:40,L:48</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">H</option>
             <option weight="2">M</option>
-            <option weight="1">L</option>
+            <option weight="2">L</option>
         </weightClass>
 
         <subforces>
@@ -264,6 +277,9 @@
     <force echelon="%CLUSTER%" eschName="Cluster" ifRating="SL|PG|Sol" ifFlags="binary">
         <name>Auxiliary Cluster</name>
         <co>%STAR_COL%</co>
+
+        <!-- Beyl-Grant aero-binary auxiliary: strong fighter mix (see Mandrill Airborne note). -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:46,M:42,L:12</weightTarget>
 
         <weightClass>
             <option weight="2">H</option>
@@ -378,10 +394,17 @@
         <name>Auxiliary Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Beyl-Grant second-line auxiliary: lighter Mek mix with strong aero (see FL note). -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:6,H:34,M:44,L:16</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:18,M:52,L:28</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:8,M:42,L:49</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:46,M:42,L:12</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:40,L:48</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">H</option>
             <option weight="2">M</option>
-            <option weight="1">L</option>
+            <option weight="2">L</option>
         </weightClass>
 
         <subforces>

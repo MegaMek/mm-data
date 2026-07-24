@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -21,29 +21,33 @@
     <contractTypeName>Planetary Assault</contractTypeName>
     <alliedFacilityCount>0</alliedFacilityCount>
     <briefing>Destroy or capture designated facilities.</briefing>
-    <allowEarlyVictory>false</allowEarlyVictory>
+    <allowEarlyVictory>true</allowEarlyVictory>
     <hostileFacilityCount>0</hostileFacilityCount>
     <scenarioOdds>
+        <!-- This is based on CamOps pg 42 rev 5th printing -->
         <scenarioOdds>20</scenarioOdds>
-        <scenarioOdds>40</scenarioOdds>
-        <scenarioOdds>80</scenarioOdds>
+        <scenarioOdds>30</scenarioOdds>
+        <scenarioOdds>30</scenarioOdds>
         <scenarioOdds>40</scenarioOdds>
     </scenarioOdds>
     <deploymentTimes>
-        <deploymentTimes>2</deploymentTimes>
-        <!-- The value '3' is intentionally repeated three times to weight the probability of selecting 4 as a deployment time. -->
-        <deploymentTimes>3</deploymentTimes>
-        <deploymentTimes>3</deploymentTimes>
-        <deploymentTimes>3</deploymentTimes>
-        <deploymentTimes>4</deploymentTimes>
+        <!-- Sustained large-scale campaign. The value '6' is intentionally repeated three times to weight the probability of selecting 6 as a deployment time. -->
+        <deploymentTimes>5</deploymentTimes>
+        <deploymentTimes>6</deploymentTimes>
+        <deploymentTimes>6</deploymentTimes>
+        <deploymentTimes>6</deploymentTimes>
+        <deploymentTimes>7</deploymentTimes>
     </deploymentTimes>
+    <globalScenarioModifiers>
+        <globalScenarioModifier>HostileBVBudgetIncrease.xml</globalScenarioModifier>
+    </globalScenarioModifiers>
     <objectiveParameters>
         <objectiveParameter>
             <objectiveType>FacilityDestruction</objectiveType>
-            <objectiveCount>-2</objectiveCount>
+            <objectiveCount>-1</objectiveCount>
         </objectiveParameter>
         <objectiveParameter>
-            <objectiveCount>-2.0</objectiveCount>
+            <objectiveCount>-0.5</objectiveCount>
             <objectiveType>SpecificScenarioVictory</objectiveType>
             <objectiveScenarios>
                 <objectiveScenario>Annihilation.xml</objectiveScenario>
@@ -59,6 +63,10 @@
                 <objectiveScenario>Interception Defense.xml</objectiveScenario>
                 <objectiveScenario>Picket Line Breakthrough.xml</objectiveScenario>
                 <objectiveScenario>Pivotal Battle.xml</objectiveScenario>
+                <objectiveScenario>Combat Drop.xml</objectiveScenario>
+                <objectiveScenario>Meeting Engagement.xml</objectiveScenario>
+                <objectiveScenario>Rolling Thunder.xml</objectiveScenario>
+                <objectiveScenario>Escalation.xml</objectiveScenario>
             </objectiveScenarios>
         </objectiveParameter>
     </objectiveParameters>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,22 +20,29 @@
 <ScenarioTemplate>
     <name>Annihilation</name>
     <shortBriefing>Obliterate the enemy force.</shortBriefing>
-    <detailedBriefing><![CDATA[Your orders are clear. This is not a surgical strike, nor a precision raid—this is extermination. The enemy force in this sector must be wiped out, with 95% confirmed casualties before we consider this battlefield secured. Their continued presence is unacceptable, and we cannot afford to let even a remnant regroup for future operations.
+    <detailedBriefing><![CDATA[Your orders are clear. This is not a surgical strike, nor a precision raid—this is extermination. The enemy force in this sector must be wiped out, with 75% confirmed casualties before we consider this battlefield secured. Their continued presence is unacceptable, and we cannot afford to let even a remnant regroup for future operations.
 
 The victor controls the field, and we will be the ones standing when the dust settles.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>0</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
         <widthScalingIncrement>5</widthScalingIncrement>
     </mapParameters>
+    <scenarioModifiers>Elites.xml</scenarioModifiers>
     <scenarioForces>
         <entry>
             <key>Player</key>
@@ -88,10 +95,10 @@ The victor controls the field, and we will be the ones standing when the dust se
                 <generationMethod>1</generationMethod>
                 <generationOrder>5</generationOrder>
                 <maxWeightClass>4</maxWeightClass>
-                <minWeightClass>2</minWeightClass>
+                <minWeightClass>3</minWeightClass>
                 <retreatThreshold>50</retreatThreshold>
                 <startingAltitude>0</startingAltitude>
-                <syncDeploymentType>OppositeEdge</syncDeploymentType>
+                <syncDeploymentType>OppositeArc</syncDeploymentType>
                 <syncedForceName>Player</syncedForceName>
                 <useArtillery>false</useArtillery>
             </value>
@@ -118,10 +125,10 @@ The victor controls the field, and we will be the ones standing when the dust se
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 95% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 75% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>95</percentage>
+            <percentage>75</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

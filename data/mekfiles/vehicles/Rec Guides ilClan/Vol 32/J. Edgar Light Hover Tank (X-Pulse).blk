@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ea25-7291-b188-0e29f0a034d2
+</UUID>
 
 <UnitType>
 Tank
@@ -37,17 +32,13 @@ J. Edgar Light Hover Tank
 (X-Pulse)
 </Model>
 
-<year>
-3144
-</year>
-
-<originalBuildYear>
-3144
-</originalBuildYear>
-
 <mul id:>
 9476
 </mul id:>
+
+<year>
+3144
+</year>
 
 <type>
 IS Level 2
@@ -61,9 +52,6 @@ Scout
 Hover
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 11
 </cruiseMP>
@@ -76,9 +64,13 @@ Hover
 6
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 31
@@ -110,41 +102,55 @@ SRM 2
 ISMediumXPulseLaser
 </Turret Equipment>
 
+<capabilities>
+<p>The J. Edgar's defining asset is its speed. Powered by a Leenex 145 fusion engine, the vehicle reaches a flank speed of 183 kilometers per hour, a figure few ground combat vehicles can match. This speed enables rapid approach, a decisive strike, and equally rapid withdrawal before heavier opponents can bring their weapons to bear. The hover propulsion system also provides excellent terrain-crossing capability over flat and water-covered ground.</p><p>The original armament pairs a Diverse Optics medium laser with two Harvester SRM 2 racks in the turret. This combination is effective at close range against light armor and infantry, and the full alpha strike output is respectable for a design of its tonnage. Against medium or heavier targets, however, the J. Edgar's weapons prove inadequate, and the tank must rely on evasion rather than firepower.</p><p>Armor protection is the design's greatest weakness. The StarSlab/7 plating provides modest coverage at best, and sustained fire from any competent opponent will rapidly threaten the hull. Operational difficulties compounded the problem as the Succession Wars progressed. The original TracTex Alpha-1 targeting system became increasingly difficult to source, prompting Olivetti to replace it with the RCA Instatrac Mk. II, while Pinard's factories substituted the Neil 5000 communications unit for the original Alphard system. These piecemeal updates kept the J. Edgar functional but made standardized maintenance more challenging across the fleet.</p>
+</capabilities>
+
+<overview>
+<p>The J. Edgar Light Hover Tank traces its origins to the Alphard Trading Corporation, a Periphery trading house that diversified into military manufacturing during the early twenty-eighth century. ATC designed the J. Edgar as an affordable, fast raiding vehicle to capitalize on the widespread demand for light combat vehicles across the Inner Sphere and Periphery. The tank proved only a marginal commercial success, and ATC shuttered its military manufacturing operations in 2732, leaving the design's future uncertain.</p><p>The vehicle survived through Pinard Protectorates Limited, which licensed the design for the Taurian Concordat in 2755, and later through Olivetti Weaponry, which began production in 3006 without securing an ATC license. Despite that litigation and the design's modest combat performance, the J. Edgar's exceptional speed kept it relevant through centuries of warfare.</p>
+</overview>
+
+<deployment>
+<p>The X-Pulse returns to fusion-powered performance while modernizing the armament with a Diverse Optics Type 25PX Medium X-Pulse Laser. The ProtecTech 19 heavy ferro-fibrous armor provides greater protection per ton than the original StarSlab arrangement. Produced across seven facilities spanning the Marian Hegemony, Taurian Concordat, Fronc Reaches, Free Worlds League, Federated Suns, and Draconis Combine, the X-Pulse serves as a first-line reconnaissance asset across a wide range of political boundaries, reflecting the design's enduring utility as a fast strike platform.</p>
+</deployment>
+
+<history>
+<p>Alphard Trading Corporation entered the military vehicle market as part of a broader strategy to expand its commercial reach. The J. Edgar, introduced in 2722, was the company's flagship military product and its last. While the vehicles sold adequately during the initial production run, the diversification ultimately failed to generate the returns ATC anticipated, and the company closed all military manufacturing facilities in 2732. The design earned a mixed reputation in early service, performing adequately in raiding and reconnaissance roles but lacking the firepower to threaten serious opposition.</p><p>The Taurian Concordat secured a production license through Pinard Protectorates Limited in 2755, ensuring the J. Edgar's survival in Periphery service. The Draconis Combine purchased substantial numbers from ATC's original production run, distributing them among fast cavalry and reconnaissance formations. Two centuries of operational losses and parts shortages steadily reduced the Combine's inventory, eventually relegating survivors to secondary commands including the Legion of Vega and Ghost Regiments.</p><p>Olivetti Weaponry's entry into J. Edgar production in 3006 revitalized the design's availability but triggered prolonged legal disputes with ATC over licensing rights, litigation that persisted for decades and grew more complicated when Clan Jade Falcon captured Sudeten during the Invasion. ComStar's suppression of military production records during this period obscured the tank's origins so thoroughly that some archives lost track of the original designer entirely. The Marian Hegemony's Alphard Trading Company, a distinct enterprise sharing only a name with the original ATC, later adopted and adapted the design for its own purposes. By the Dark Age, multiple independent manufacturers across the Inner Sphere and Periphery produced J. Edgar variants, cementing its place as one of the most widely distributed light hover tanks in the known galaxy.</p>
+</history>
+
+<manufacturer>
+Alphard Trading Corporation|Alphard Trading Corporation|Colonial Tractors|Kali Yama/Alphard Trading Corp.|Pinard Protectorates Limited|Scarborough Manufacturers|StarCorps Industries
+</manufacturer>
+
+<primaryFactory>
+Addhara|Alphard (MH)|Fronc|Kendall|Pinard|Al Na'ir|Crofton
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Leenex
+ARMOR:Unknown
+COMMUNICATIONS:Neil
+TARGETING:RCA
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:145
+ARMOR:ProtecTech 19
+COMMUNICATIONS:5000
+TARGETING:Instatrac Mark XII
+</systemModels>
+
 <source>
 RG32
 </source>
+
+<published>
+RG32,RSFP:Battlefield
+</published>
 
 <tonnage>
 25.0
 </tonnage>
 
-<capabilities>
-With very light armor, the J. Edgar is dependent on it's extreme speed for protection. Attempts over the years have aimed at improving it's armor while not sacrificing it's incredible speed.
-</capabilities>
-
-<overview>
-The J. Edgar is a lightweight, speedy hovercraft. The J. Edgar's speed and the infinite endurance provided by a fusion engine make it ideal for reconnaissance and raiding missions.
-</overview>
-
-<deployment>
-The vehicle's iterative evolution is continued with the next modification, which employs current X-Pulse laser technology and armor.
-</deployment>
-
-<history>
-The J. Edgar is one of the Alphard Trade Corporation's few vehicles. ATC decided to build a number of military and civilian vehicles to sell to any globe, country, or individual willing to buy them in order to grow its market and generate profits. Although the vehicles sold well at first, the diversification failed over time, and ATC closed down all vehicle manufacturing plants in 2732. The Alphard Trade Corporation's final military vehicle was the J. Edgar. The J. Edgar, which was designed as a low-cost, fast, and effective fighter, was only a moderate success throughout its ten-year production period. Many anticipated the J. Edgar to simply vanish, but in 2755, Pinard Protectorates Ltd. licensed the design and began manufacturing it for the Taurian Concordat. In 3006, the newly formed Olivetti Weaponry also began to produce the vehicle, albeit they failed to license the concept from ATC; this fact ensnared both parties in decades-long litigation (later worsened by the Jade Falcon conquest of Sudeten). During the New Vandenberg Rebellion, the reconstituted Taurian Defense Force made heavy use of the J. Edgar. The vehicle later became a key component of Taurian light armor formations. The Draconis Combine purchased many of ATC's original run of manufacturing, but two centuries of attrition significantly reduced their numbers. Most of the survivors were relegated to armor units supporting the Legion of Vega and the Ghost Regiments as they became increasingly difficult to sustain. During the 3039 counter-offensive against the Federated Suns, both commands deployed the quick J. Edgar to great advantage as rapid raiders. Old J. Edgars still arise from time to time with planetary militia and mercenary commands. The Com Guards also have a limited number of soldiers selected from their massive stores of Star League-era equipment on Terra. By the partnership with the Lyran Commonwealth that resulted in the formidable Federated Commonwealth, the Federated Suns got access to new J. Edgars. The Davions prefer to concentrate their vehicles in companies connected to the Avalon Hussars and Deneb Light Cavalry, whilst the Lyrans distribute them piecemeal to fill gaps in their scout and light armor groups.
-</history>
-
-<manufacturer>
-Alphard Trading Company,Alphard Trading Company
-</manufacturer>
-
-<primaryFactory>
-Alphard,Addhara
-</primaryFactory>
-
-<systemManufacturers>
-ENGINE:145 Leenex Fusion
-ARMOR:ProtecTech 19 Heavy Ferro-Fibrous
-COMMUNICATIONS:Alphard Original Two
-TARGETING:RCA Instatrac Mk. II
-</systemManufacturers>

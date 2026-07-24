@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8dc-72eb-906e-b0b726970333
+</UUID>
 
 <UnitType>
 SupportTank
@@ -33,9 +28,9 @@ SupportTank
 Dune Buggy
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 9226
@@ -44,10 +39,6 @@ Dune Buggy
 <year>
 2010
 </year>
-
-<originalBuildYear>
-2010
-</originalBuildYear>
 
 <type>
 IS Level 5
@@ -62,8 +53,8 @@ Wheeled
 </motion_type>
 
 <transporters>
-cargobay:0.2:1:1
-standardseats:2.0:0
+cargobay:0.2:1:1::-1:0
+standardseats:2.0:0:-1::-1:0
 </transporters>
 
 <cruiseMP>
@@ -73,6 +64,18 @@ standardseats:2.0:0
 <engine_type>
 1
 </engine_type>
+
+<armor_type>
+43
+</armor_type>
+
+<armor_tech_rating>
+4
+</armor_tech_rating>
+
+<armor_tech_level>
+1
+</armor_tech_level>
 
 <armor>
 1
@@ -87,8 +90,8 @@ ISOffRoadChassis
 </Body Equipment>
 
 <Front Equipment>
-Machine Gun (Support)
-Wire-Guided Missile Launcher
+Machine Gun (Support):SIZE:1.0
+Wire-Guided Missile Launcher:SIZE:1.0
 </Front Equipment>
 
 <Right Equipment>
@@ -112,13 +115,33 @@ Wire-Guided Missile Launcher
 4
 </engine_tech_rating>
 
-<armor_tech_rating>
-4
-</armor_tech_rating>
+<overview>
+<p>Dune buggies have been a mainstay of militias for countless centuries. Apart from jeeps, few other vehicle classes are more reliable and sturdy in off-road battle. Outfitted with an open gunner's station, dune buggies are very effective against other light vehicles and infantry, especially in the shifting sands of a desert or beachfront terrain. Not only pirate bands refit civilian vehicles into fighting machines.</p>
+</overview>
 
-<history>
-These units have no weights in AToW. The weights are estimates. The units are considered unofficial until weights are given.
-</history>
+<manufacturer>
+Unknown
+</manufacturer>
+
+<primaryFactory>
+Unknown
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 AToW Companion
@@ -135,3 +158,4 @@ AToW Companion
 <fuelType>
 PETROCHEMICALS
 </fuelType>
+

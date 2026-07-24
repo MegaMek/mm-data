@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Mandaree
-sucsId: 1583
+sucsId: 1584
 xcood: 182.484
 ycood: -308.99
 spectralType: F3V
@@ -74,6 +74,12 @@ planet:
         capital: Beck
       - name: Hall
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2273-01-17'
         faction:
           source: canon
@@ -89,12 +95,24 @@ planet:
         population: 822286.0
       - date: '2310-01-01'
         population: 1795100.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2320-01-01'
         population: 3535908.0
       - date: '2330-01-01'
         population: 6332362.0
       - date: '2340-01-01'
         population: 10408928.0
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2345-01-01'
         socioIndustrial: C-C-A-D-C
       - date: '2350-02-26'
@@ -105,6 +123,12 @@ planet:
         population: 15948656.0
       - date: '2360-01-01'
         population: 22997869.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2370-01-01'
         population: 31579214.0
       - date: '2380-01-01'
@@ -147,6 +171,11 @@ planet:
         population: 217449125.0
       - date: '2570-01-01'
         population: 219612516.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 1
       - date: '2580-01-01'
         population: 222237484.0
       - date: '2590-01-01'
@@ -250,14 +279,25 @@ planet:
         population: 180680489.0
       - date: '3020-01-01'
         population: 173668809.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Altair PDZ
       - date: '3030-01-01'
         population: 170780149.0
-      - date: '3040-03-11'
-        population: 172479269.0
-        socioIndustrial: B-C-B-D-C
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-03-11'
+        population: 172479269.0
+        socioIndustrial: B-C-B-D-C
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3045-01-01'
@@ -269,6 +309,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -293,6 +339,16 @@ planet:
         population: 184191698.0
       - date: '3145-01-01'
         population: 184191698.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Sirdar Operational Area
+        #   - Altair PDZ
+      - date: '3151-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Sirdar Operational Area
+        #   - New Syrtis PDZ
   - name: Wei Ch'eng
     type: TERRESTRIAL
     orbitalDist: 2.4

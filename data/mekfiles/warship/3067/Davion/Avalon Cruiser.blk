@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed8f-7c91-bfae-421a21c851dd
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Avalon Cruiser
 3061
 </year>
 
-<originalBuildYear>
-3061
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,18 +53,18 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:6.0:2:1
-smallcraftbay:6.0:2:2
+smallcraftbay:6.0:2:1::-1:0
+smallcraftbay:6.0:2:2::-1:0
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
 dockingcollar
-2ndclassquarters:448.0:0
-1stclassquarters:590.0:0
-crewquarters:1484.0:0
-cargobay:13855.5:4:12
+2ndclassquarters:448.0:0:-1::-1:0
+1stclassquarters:590.0:0:-1::-1:0
+crewquarters:1484.0:0:-1::-1:0
+cargobay:13855.5:4:12::-1:0
 </transporters>
 
 <SafeThrust>
@@ -100,9 +91,13 @@ cargobay:13855.5:4:12
 12
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 344
@@ -339,32 +334,46 @@ ISArtemisIV
 </structural_integrity>
 
 <capabilities>
-The Avalon-class cruiser was designed to be heavily armed and armored, serving as the focal point of a naval task force. With its substantial fuel capacity, the Avalon could support the operations of an entire task force for extended periods. As per AFFC naval doctrine, each Avalon was accompanied by a dozen or more Assault DropShips, which allowed the cruiser to prioritize its anti-ship capabilities rather than extensive point-defense weaponry.
+<p>Displacing seven hundred and seventy thousand tons, the Avalon mounted fourteen capital missile tubes as its primary armament, a configuration that evolved from the Admiralty's decision to transform the original energy-weapon design into a dedicated missile cruiser. These tubes could deliver a variety of capital missile payloads at extreme range, supported by naval autocannon, naval laser batteries, naval gauss rifles, and an extensive array of anti-missile systems for close defense. Over seventeen hundred tons of advanced ferro-carbide armor sheathed the hull, providing a level of protection that exceeded many vessels of considerably greater displacement.</p><p>The class carried five times the standard fuel capacity of a comparable WarShip, enabling extended independent operations and the ability to sustain an entire task force's fuel requirements on long-range deployments. A lithium-fusion battery system provided a critical second jump capability without recharging, further extending the vessel's strategic reach. Six docking collars accommodated the substantial DropShip escort required by AFFC doctrine, which mandated no fewer than twelve assault DropShips per Avalon deployment, a tactical necessity that reflected the vessel's optimization for ranged combat over close-quarters engagements. The vessel's acceleration was impressive for a cruiser of this displacement. Twelve fighters provided organic screening capability, while sixty-four battle armor marines gave the class a formidable boarding action capacity. Two gravity decks of differing sizes served the crew's living requirements.</p>
 </capabilities>
 
 <overview>
-The Avalon-class cruiser, designed during the Clan invasion, underwent significant modifications and evolved into a missile cruiser on orders from the AFFC Admiralty. Intended to be the centerpiece of a naval task force, the Avalon boasted impressive armament, armor, and fuel capacity, allowing it to sustain prolonged operations. However, the FedCom Civil War took a toll on the class, with only a limited number of surviving vessels.
+<p>The Avalon-class cruiser was designed and constructed at the James McKenna Shipyards above Kathil for the Armed Forces of the Federated Commonwealth, entering service in 3061 as the centerpiece of the realm's renewed naval construction program. The Federated Commonwealth intended the design to anchor a modern capital WarShip capability, harnessing the industrial resources of Kathil's extensive shipbuilding infrastructure to produce a vessel capable of meeting the evolving strategic threats of the thirty-first century.</p><p>Classified as a cruiser, the Avalon nonetheless carried an armament and protection scheme that led many naval officers to regard it as a battlecruiser in all but designation. The class earned a reputation as one of the most formidable WarShips fielded by any Successor State during the era of its introduction. Its combination of advanced armor protection, sustained operational endurance, and overwhelming ranged firepower established a new standard for modern cruiser construction.</p>
 </overview>
 
+<deployment>
+<p>The FCS Melissa Davion, lead vessel of the class, entered service during operations along the Capellan border in 3061 before becoming embroiled in the FedCom Civil War. The vessel departed Federated space in 3063 and later led the assault on New Avalon in November 3066. Captured by the Word of Blake in 3069 and recommissioned as the WoBS Beneficence, she served under Blakist colors until her destruction at Circinus in 3081.</p><p>The FCS Simon Davion was seized by Free Skye forces at Hesperus II in 3064 and later conducted orbital bombardment operations before returning to Federated service after the Civil War. The vessel was destroyed at Kathil in May 3070 during a nuclear attack on the shipyards. The FCS Robert Davion never completed fitting out, destroyed at Kathil in December 3062 when rammed by an unmanned DropShip in one of the war's earliest casualties. The FCS Hanse Davion was rushed from the yards and destroyed at New Syrtis in October 3065 alongside the corvette FCS Covenant in a mutual destruction engagement. The FCS Alexander Davion fell during the assault on New Avalon when an enemy corvette activated its KF drive at close range, annihilating both vessels. The FCS Andrew Davion vanished during the Civil War and was never confirmed to have entered operational service.</p><p>The FCS Lucien Davion proved the longest-lived of the class, surrendering after the Battle of New Avalon and subsequently serving as flagship for senior Federated Suns leaders for nearly eight decades. Her destruction at the Palmyra Disaster in 3144 at the hands of McFadden's Sky Storm marked the final extinction of the Avalon class.</p>
+</deployment>
+
 <history>
-Despite initial delays in construction due to the costs of post-invasion rebuilding, the Avalon underwent continuous design modifications during its dormant years. The AFFC Admiralty ordered the transformation of the cruiser into a missile cruiser, aligning it with evolving naval technology. However, the FedCom Civil War took a toll on the class, resulting in only two confirmed surviving vessels. The whereabouts of a third vessel remain unknown.
+<p>The Avalon program originated in the early 3050s, when the AFFC Admiralty commissioned designs for a new cruiser class to strengthen the Federated Commonwealth's naval forces. Construction delays caused by the enormous costs of postwar rebuilding pushed the program back several years, though the AFFC invested heavily in upgrading the naval yards at Galax, Kathil, and New Syrtis to support the project. The first keel was laid at Kathil's James McKenna Shipyards in early 3057, with Kathil Shipworks and Universal Air contributing manufacturing expertise for the hull and drive systems respectively. The lead vessel entered service in 3061, and additional hulls followed in rapid succession, with seven vessels either completed or under construction by late 3062.</p><p>The FedCom Civil War proved catastrophic for the class. Vessels divided between loyalist and allied factions found themselves on opposing sides of a fratricidal conflict, and the war consumed the class with remarkable speed. Multiple vessels were lost in fleet actions at New Avalon, New Syrtis, and Kathil, with additional hulls destroyed before completion or lost under circumstances that were never fully accounted for. Only three Avalons survived the Civil War intact, and one of those had been captured by a hostile power.</p><p>The Jihad further reduced the class. The captured vessel served under enemy colors until destroyed in 3081, while another fell to enemy action during an assault on the Kathil shipyards in 3070. The sole surviving vessel served the Federated Suns as an irreplaceable flagship for decades, its continued existence evidence of both the design's robustness and the impossibility of replacing it as the shipyards at Kathil had been rendered incapable of producing new hulls. The last Avalon-class cruiser was destroyed in 3144, marking the extinction of what had been intended as the cornerstone of Federated naval power for generations. From seven hulls laid down, none survived to see the ilClan era, a sobering illustration of how quickly even the most capable WarShips could be consumed by the scale and intensity of Inner Sphere conflicts.</p>
 </history>
 
 <manufacturer>
-Kathil Shipworks - McKenna Shipyards, Universal Air
+Kathil Shipworks - McKenna Shipyards|Universal Air
 </manufacturer>
 
 <primaryFactory>
-Kathil,Kathil
+Kathil|Kathil
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Universal Air
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Goliath LV9
+ARMOR:Lamellor Ferro-Carbide
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <notes>
 Unit as constructed in TRO: is 4 tons overweight. Removed 4 tons of Cargo to make unit legal.

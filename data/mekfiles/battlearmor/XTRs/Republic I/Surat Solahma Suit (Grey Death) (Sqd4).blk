@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a98e-7ba4-be76-d17d3f2dbe44
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Surat (Gray Death) Solahma Suit
 </Name>
 
-<model>
+<Model>
 (Sqd4)
 </Model>
 
@@ -45,10 +40,6 @@ Surat (Gray Death) Solahma Suit
 3090
 </year>
 
-<originalBuildYear>
-3090
-</originalBuildYear>
-
 <type>
 Mixed (IS Chassis)
 </type>
@@ -57,12 +48,15 @@ Mixed (IS Chassis)
 Ambusher
 </role>
 
+<quirks>
+bad_rep_is
+easy_maintain
+poor_work
+</quirks>
+
 <motion_type>
 Leg
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -81,10 +75,6 @@ BABattleClaw:LA
 CLBAHeavySmallLaser:RA
 BAAPMount:LA
 InfantryAssaultRifle:APM
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 </Squad Equipment>
 
 <Trooper 1 Equipment>
@@ -100,37 +90,44 @@ LegAttack
 </Trooper 4 Equipment>
 
 <capabilities>
-The Legion decided to remove the suits' jump jets to make room for dedicated anti-infantry firepower, superior sensor systems, and reinforced myomer bundles to improve ground speed. While losing the ability to leap over obstacles, these changes made the suit easier to maintain and cheaper to build than the Inner Sphere Standard.
+<p>The Surat conversion replaces the Gray Death Standard's original armor with lighter Clan-manufactured plating, freeing mass for a Clan-specification Heavy Small Laser mounted in the right arm. A Battle Claw on the left arm and an Anti-Personnel Weapon Mount are retained from the base suit. The energy weapon delivers punishing damage at close range, compensating for the reduced armor protection with raw offensive output. At 1,000 kilograms, the Surat matches the Standard's weight class while carrying substantially heavier armament.</p><p>The suit lacks jump capability entirely, relying on ground movement alone. The field-conversion origin shows in the design's rough edges: components are often ill-fitting scrounged parts adapted to frames built for different equipment. These compromises make the suit easier to maintain with basic tools but give it a well-earned reputation for poor workmanship. The Surat can be adapted to troopers of any physique, from hulking Elementals to recruited Inner Sphere garrison infantry, and costs significantly less to maintain than purpose-built Clan battle armor.</p>
 </capabilities>
 
 <overview>
-The Gray Death Standard battle armor was developed by the technicians of the Gray Death Legion after the New Avalon Institute of Science sent them prototype battle armor suits, the progenitors of what eventually became the Inner Sphere Standard, for field testing.
+<p>The Surat (Gray Death) Solahma Suit is a medium battle armor field conversion widely used by Clan solahma infantry formations. Created by stripping captured or requisitioned Gray Death Standard Suits and refitting them with Clan-manufactured equipment, the Surat fills a gap between unarmored garrison troops and frontline Elemental armor. First documented around 3090, the conversion spread through multiple Clan garrison commands as a practical and cost-effective way to arm expendable formations with powered infantry capability.</p>
 </overview>
 
 <deployment>
-This suit replaces the standard armor with lighter Clan-built armor. This in turn frees up space for heavier weapons. Most frequently a Heavy Small Laser is fitted to the suit. The suit itself is frequently used by solahma infantry formations in Clan toumans. Though it has a bad reputation among Clan Elementals, it is nevertheless an effective weapon.
+<p>Four-trooper squads of Surat-equipped solahma warriors served as garrison infantry on Clan-held worlds throughout the former Republic of the Sphere. Inner Sphere squad organization reflected the origins of both the suits and many of their wearers, as Clan garrison commands often assigned captured freeborn personnel to these formations alongside aging solahma warriors. Squad-level deployments typically involved perimeter defense, facility security, and anti-insurgency patrols.</p>
 </deployment>
 
 <history>
-The new armor, as well as the Gray Death Scout suit, debuted during the Clan Invasion in battle against Clan Jade Falcon for control of Pandora. The Gray Death Standard played a decisive role in the Gray Death Legion's victory over the Falcons. Afterwards the Legion continued to build limited numbers of Standard suits, largely to replenish their own losses but also to sell small numbers to other mercenary commands. Following its creation, the Legion also sold limited numbers of Gray Death Standard suits to the Lyran Alliance. The Gray Death Legion was effectively destroyed in battle on Hesperus II in 3065, one of the many casualties of the FedCom Civil War, but the suits they created would live on. Surviving members of the Legion's support staff created Gray Death Technologies and, with financial aid from Defiance Industries, established a dedicated factory on Glengarry to continued production. As the only dedicated battle armor manufacturer within the realm, Gray Death Technologies continued to sell its Standard suits to the Lyran Alliance Armed Forces and various mercenaries. Disaster struck again during the Jihad when the Word of Blake attacked Glengarry in 3073 and sacked the factory. The destruction was not complete however and the survivors were able to restart production on a new variant of the Gray Death Standard. When Precentor Berith attacked again a year later he was more thorough in destroying the factory and rendered GDT incapable of building any battle suits. By that point Gray Death Technologies was bought up by Defiance Industries, which decided to move manufacturing of the Gray Death Standard to Furillo and put a hold on new suits. Production of the Gray Death Strike suit resumed in late 3080, although sale of the latter was restricted to the Lyran Alliance (and Defiance Industries' own security forces).
+<p>The designation "Surat" entered Clan military vocabulary as a dismissive epithet for captured Inner Sphere battle armor pressed into service by solahma infantry formations. The first documented instances of these field conversions occurred during a pirate raid on Ramora in 3091, when footage captured Clan warriors wearing modified Gray Death Standard Suits engaging a BattleMech lance. The Gray Death line proved ideal for conversion due to the simplicity of its ground-based Standard and Strike chassis designs, which lacked the complex jump systems that complicated other refits.</p><p>Solahma warriors, already resigned to expendable garrison duty, adopted the Surat refits without complaint. Clan garrison commanders found the conversions practical: stripping Inner Sphere armor and replacing it with lighter Clan plating freed mass for heavier weapons, and the resulting suits required fewer resources than maintaining frontline Elemental armor for troops considered disposable. The derogatory name stuck, reinforced by the disdain that frontline Elementals directed at both the suits and their wearers. Despite this reputation, garrison infantry commanders recognized that Surat-equipped formations delivered firepower well beyond what unarmored solahma troops could achieve.</p>
 </history>
 
 <manufacturer>
-Defiance Industries,Gray Death Technologies
+Field Refit
 </manufacturer>
 
 <primaryFactory>
-Furillo,Glengary
+Various
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 XTR:RotS 1
@@ -155,11 +152,4 @@ biped
 <weightclass>
 2
 </weightclass>
-
-
-<quirks>
-easy_maintain
-bad_rep_is
-poor_work
-</quirks>
 

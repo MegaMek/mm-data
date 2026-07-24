@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -22,7 +22,7 @@
     <shortBriefing>Defend allied facility, minimize damage.</shortBriefing>
     <detailedBriefing><![CDATA[Your orders are clear: defend the base against the incoming enemy assault. At least 25% of the base infrastructure must remain intact by the end of the engagement.
 
-At the same time, this is not just about survival. You are to destroy at least 50% of enemy forces before the battle concludes.
+At the same time, this is not just about survival. You are to destroy at least 33% of enemy forces before the battle concludes.
 
 The victor will control the field when this is over. Ensure that it is us.]]></detailedBriefing>
     <battlefieldControl>VICTOR</battlefieldControl>
@@ -30,9 +30,10 @@ The victor will control the field when this is over. Ensure that it is us.]]></d
     <isAlliedFacility>true</isAlliedFacility>
     <mapParameters>
         <allowedTerrainTypes>
+            <allowedTerrainType>TemperateFacility</allowedTerrainType>
             <allowedTerrainType>ColdFacility</allowedTerrainType>
             <allowedTerrainType>HotFacility</allowedTerrainType>
-            <allowedTerrainType>TemperateFacility</allowedTerrainType>
+            <allowedTerrainType>FrozenFacility</allowedTerrainType>
         </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
@@ -136,6 +137,11 @@ The victor will control the field when this is over. Ensure that it is us.]]></d
                 <startingAltitude>0</startingAltitude>
                 <syncDeploymentType>None</syncDeploymentType>
                 <useArtillery>false</useArtillery>
+                <roleChoices>
+                    <forceRole>FIRE_SUPPORT</forceRole>
+                    <forceRole>SR_FIRE_SUPPORT</forceRole>
+                    <forceRole>ARTILLERY</forceRole>
+                </roleChoices>
             </value>
         </entry>
     </scenarioForces>
@@ -160,10 +166,10 @@ The victor will control the field when this is over. Ensure that it is us.]]></d
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the attacking forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the attacking forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

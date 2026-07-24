@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b7ac-79f5-b4ca-7a0171ee2754
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Beast Infantry (Orca)
 2570
 </year>
 
-<originalBuildYear>
-2570
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,8 +44,16 @@ IS Level 3
 Beast:Orca
 </motion_type>
 
+<Troopers Equipment>
+Environment Suit, Hostile
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The orca, or killer whale, represents one of the most unusual beast-mounted infantry concepts employed in the BattleTech universe. Trained orcas carry riders and equipment through aquatic environments, providing a submersible infantry platform that no conventional vehicle can easily replicate at comparable cost. Orca-mounted infantry operate in coastal waters, rivers, and open ocean, conducting amphibious raids, underwater reconnaissance, and maritime interdiction missions. The animals' intelligence and natural hunting instincts make them responsive to trained handlers, though maintaining orca-mounted formations requires access to suitable aquatic habitats and specialized veterinary support. These units are extremely rare and geographically limited to worlds with extensive water features, but where they do operate, they exploit an environment that most military planners neglect entirely.</p>
+</overview>
 
 <squad_size>
 2
@@ -76,9 +75,13 @@ Gyrojet Rifle
 Support Laser (Heavy)
 </Secondary>
 
-<armorKit>
-Environment Suit, Hostile
-</armorKit>
+<encumberingarmor>
+true
+</encumberingarmor>
+
+<spacesuit>
+true
+</spacesuit>
 
 <specialization>
 4096

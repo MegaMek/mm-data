@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,6 +17,12 @@
 
 key: PoR
 name: Principality of Rasalhague
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: KA
+sucsCodes:
+  - PoR
 capital: Rasalhague
 yearsActive:
   - start: 2260
@@ -38,3 +44,6 @@ ratingLevels:
   - A
 fallBackFactions:
   - IS
+aresConventionsSignatory:
+  2412: true
+  2786: false

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b673-7409-a46a-710580cec9df
+</UUID>
 
 <UnitType>
 Infantry
@@ -45,10 +40,6 @@ Second Lyran Armored Infantry
 3060
 </year>
 
-<originalBuildYear>
-3060
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -57,15 +48,24 @@ IS Level 3
 Motorized
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Lyran Alliance/Lyran Commonwealth (3060+) Infantry Kit
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>The Second Lyran Armored Infantry, attached to the Thirty-second Lyran Guards, fields one of the LCAF's more specialized platoon configurations. Twenty Mauser and Gray flechette needler rifles supplemented by eight Firedrake support needlers give this motorized formation a devastating volume of anti-personnel fire that can shred opposing infantry formations with ease. Against hardened targets the platoon is far less effective, as flechette weapons struggle to penetrate vehicle armor or BattleMech plating. The Firedrakes offer a secondary capability that partially offsets this limitation: turned against the terrain itself, they can ignite buildings, vegetation, and ground cover, denying the enemy concealment and forcing defenders out of prepared positions.</p>
+</overview>
+
 <source>
 TR:3085
 </source>
+
+<published>
+RS:3085u-CE
+</published>
 
 <squad_size>
 7
@@ -86,14 +86,6 @@ Needler Rifle (M&G Flechette)
 <Secondary>
 Needler, Support (Firedrake)
 </Secondary>
-
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Lyran Alliance/Lyran Commonwealth (3060+) Infantry Kit
-</armorKit>
 
 <armordivisor>
 2.0

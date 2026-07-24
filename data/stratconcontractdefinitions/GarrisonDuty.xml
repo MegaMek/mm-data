@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -24,23 +24,27 @@
     <allowEarlyVictory>false</allowEarlyVictory>
     <hostileFacilityCount>0</hostileFacilityCount>
     <scenarioOdds>
+        <!-- This is based on CamOps pg 42 rev 5th printing -->
         <scenarioOdds>10</scenarioOdds>
         <scenarioOdds>20</scenarioOdds>
         <scenarioOdds>20</scenarioOdds>
-        <scenarioOdds>20</scenarioOdds>
+        <scenarioOdds>30</scenarioOdds>
     </scenarioOdds>
     <deploymentTimes>
-        <deploymentTimes>2</deploymentTimes>
-        <!-- The value '3' is intentionally repeated three times to weight the probability of selecting 4 as a deployment time. -->
-        <deploymentTimes>3</deploymentTimes>
-        <deploymentTimes>3</deploymentTimes>
+        <!-- The value '4' is intentionally repeated three times to weight the probability of selecting 4 as a deployment time. -->
         <deploymentTimes>3</deploymentTimes>
         <deploymentTimes>4</deploymentTimes>
+        <deploymentTimes>4</deploymentTimes>
+        <deploymentTimes>4</deploymentTimes>
+        <deploymentTimes>5</deploymentTimes>
     </deploymentTimes>
     <objectiveParameters>
         <objectiveParameter>
             <objectiveType>AlliedFacilityControl</objectiveType>
-            <objectiveCount>-2</objectiveCount>
+            <objectiveCount>-1</objectiveCount>
+            <objectiveScenarioModifiers>
+                <objectiveScenarioModifier>LocalGarrisonTurrets.xml</objectiveScenarioModifier>
+            </objectiveScenarioModifiers>
         </objectiveParameter>
     </objectiveParameters>
 </ScenarioTemplate>

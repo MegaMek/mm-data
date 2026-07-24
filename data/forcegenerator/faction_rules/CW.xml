@@ -109,22 +109,42 @@
                       ifDateBetween=",3057"
                       chassis="McKenna Battleship">%ELEMENT%
             </subforce>
+            <!-- McKenna's Pride: the SLDF Great Father's flagship (Aleksandr Kerensky's,
+            holds his remains), a pan-Clan relic until Vlad Ward secreted it away in 3077
+            after Op SPATHA II. Canonically hidden/uncrewed until recovered in 3147, but
+            it is Clan Wolf's owned asset from 3077, so the faction-leader ToE fields it
+            from then (heaviest hull = flagship). Continues into the Wolf Empire (CWE). -->
+            <!-- Pin the SLDF (2652) variant by full name: McKenna's Pride IS Aleksandr
+            Kerensky's original Star League battleship, not the Clan (2851) refit. Chassis-only
+            "McKenna Battleship" fails for a Clan faction post-Jihad (Clan 2851 extinct, IS 2652
+            not Clan-legal) -> no unit, no sprite. Full-name reference resolves it directly. -->
+            <subforce role="command" fluffName="CWS McKenna&apos;s Pride"
+                      ifDateBetween="3077,"
+                      chassis="McKenna Battleship (2652)">%ELEMENT%
+            </subforce>
             <subforce fluffName="CWS Mother Jocasta"
                       ifDateBetween=",3057"
                       chassis="Cameron Battlecruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Nicholas Kerensky"
-                      ifDateBetween=",3073"
+                      ifDateBetween=",3074"
                       chassis="Texas Battleship">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Bloody Fang"
                       chassis="Cameron Battlecruiser">%ELEMENT%
             </subforce>
+            <!-- Arctic Wolf served with Beta Galaxy in 3052; lost or renamed by the
+            Refusal War (not in the 3057 roster). -->
+            <subforce fluffName="CWS Arctic Wolf"
+                      ifDateBetween=",3057"
+                      chassis="Black Lion II Battlecruiser">%ELEMENT%
+            </subforce>
             <subforce fluffName="CWS Stealthy Kill"
-                      ifDateBetween=",3073"
+                      ifDateBetween=",3078"
                       chassis="Black Lion II Battlecruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Blood Drinker"
+                      ifDateBetween=",3078"
                       chassis="Black Lion II Battlecruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Implacable"
@@ -155,7 +175,7 @@
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Relentless Pursuit"
-                      ifDateBetween=",3070"
+                      ifDateBetween=",3073"
                       chassis="Vincent Corvette">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Trailblazer"
@@ -175,11 +195,11 @@
                       chassis="Potemkin Troop Cruiser">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Provider"
-                      ifDateBetween=",3070"
+                      ifDateBetween=",3073"
                       chassis="Volga Transport">%ELEMENT%
             </subforce>
             <subforce fluffName="CWS Night Warrior"
-                      ifDateBetween="2950,"
+                      ifDateBetween="2950,3078"
                       chassis="Carrack Transport">%ELEMENT%
             </subforce>
         </subforces>

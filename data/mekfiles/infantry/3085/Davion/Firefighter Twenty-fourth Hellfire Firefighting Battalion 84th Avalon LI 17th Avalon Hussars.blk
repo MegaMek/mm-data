@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-b635-7782-b760-8bf9476cade4
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,21 @@ IS Level 3
 Motorized
 </motion_type>
 
+<Troopers Equipment>
+Federated Suns Infantry Kit
+Fire Extinguisher
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>The AFFS dedicates significant resources to non-combat infantry specialties, recognizing that war produces destruction that must be managed alongside the fighting itself. The Hellfire Battalions are among the most unusual formations in any Successor State military: motorized firefighting engineers equipped to suppress battlefield blazes and protect civilian infrastructure during planetary assaults. Riding compact all-purpose vehicles, Hellfire troops are more likely to be seen carrying shovels and portable chemical sprayers than their issued Thunderstroke II gauss rifles. The guns were selected for their inability to start fires rather than for raw stopping power, a practical choice that reflects the formation's unusual dual mission of fire suppression and area security.</p>
+</overview>
+
+<source>
+TR:3085
+</source>
 
 <squad_size>
 7
@@ -61,13 +69,10 @@ Motorized
 </squadn>
 
 <Primary>
-Thunderstroke II
+Gauss Rifle (Thunderstroke II)
 </Primary>
 
-<armorKit>
-DavionKit
-</armorKit>
+<specialization>
+4
+</specialization>
 
-<source>
-TR:3085
-</source>

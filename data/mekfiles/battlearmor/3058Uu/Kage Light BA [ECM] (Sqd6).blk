@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a2bc-73bb-bd53-730adafc5244
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -72,12 +67,8 @@ Jump
 <Squad Equipment>
 BAArmoredGlove:LA
 BAArmoredGlove:RA
+InfantryAssaultRifle:APM:RA
 BAPartialWing:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
-Infantry Auto Rifle:APM:RA
 IS BA Stealth (Basic):Body
 IS BA Stealth (Basic):Body
 IS BA Stealth (Basic):RA
@@ -102,6 +93,51 @@ IS BA ECM:Body
 <Trooper 6 Equipment>
 </Trooper 6 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The ECM-equipped Kage sacrifices its squad support weapon mount to carry a battle armor ECM suite, extending the suit's electronic warfare capability beyond passive stealth. The right forearm retains an anti-personnel weapon mount, typically loaded with a submachine gun, and both armored gloves remain free for climbing and manipulation. At 750 kilograms, the Kage carries 275 kilograms of basic stealth armor incorporating electronic and infrared suppression that defeats even active probe systems. The suit's partial wing assembly enables assisted jumps of 120 meters while retracting flush to minimize the trooper's radar signature when grounded.</p><p>The ECM suite actively disrupts enemy targeting and communications within its effective radius, making this configuration particularly valuable during penetration operations where the team must suppress sensor networks rather than simply avoid them. The trade-off is the loss of heavier squad-level firepower, leaving the team reliant on anti-personnel weapons for direct engagements.</p>
+</capabilities>
+
+<overview>
+<p>The Kage ("shadow") light battle armor was one of the first Draconis Combine designs to enter production following the Truce of Tukayyid. Developed jointly by Internal Security Force scientists and Draconis Elite Strike Team advisers, the suit was built for reconnaissance, infiltration, and intelligence gathering in hostile environments. Produced by New Samarkand Metals and Luthien Armor Works, the Kage entered service in 3056 as a replacement for the older DEST Infiltration Suit, offering far greater protection and mobility. The design earned a strong reputation within DCMS special operations and line formations alike for its exceptional aerial agility and advanced stealth characteristics.</p>
+</overview>
+
+<deployment>
+<p>Word of Blake forces captured ECM-equipped Kage suits during the Jihad and organized them into six-trooper Level I formations. Blakist intelligence units found the combination of stealth armor and active jamming well suited to counter-infiltration operations on occupied Combine worlds.</p>
+</deployment>
+
+<history>
+<p>Research and development of the Kage began in March 3051 as a joint project between Internal Security Force scientists and Draconis Elite Strike Team advisers. The program grew from a failed prototype of the Raiden battle armor, repurposing its chassis for a dedicated reconnaissance and infiltration role. First prototypes appeared in May 3052, but the design team quickly encountered a serious problem. DCMS commanders had demanded a suit capable of outjumping most BattleMechs, and the jump jet configuration necessary to achieve those distances produced dangerously unstable flight characteristics. Several test operators were killed before engineers devised a solution: a partial wing with stabilizing fins that could retract flush against the suit when not in use. This redesign consumed three and a half additional years of development before mass production finally commenced in March 3056.</p><p>The Kage entered service as a direct replacement for the DEST Infiltration Suit, and within years it had virtually displaced the older sneak suit across Combine special operations units. Where the Infiltration Suit provided stealth alone, the Kage combined infiltration capability with enough armor and mobility to survive contact with powered opponents. Regular DCMS line formations also received Kage suits, employing them primarily as forward observers and artillery spotters for Arrow IV batteries using light TAG designators.</p><p>One of the suit's earliest high-profile deployments came during Operation Serpent, the Inner Sphere's strike against the Clan Smoke Jaguar homeworld of Huntress. Three DEST teams wearing Kage suits infiltrated the planet's surface with orders to destroy the command and control center coordinating orbital defenses. The teams overcame Elemental guards at the facility and completed their mission, clearing the way for the invasion fleet to press the attack. The Kage's stealth and jump capability proved critical in allowing the teams to bypass ground-level security and approach the target undetected.</p><p>During the Jihad, Kage-equipped DEST operatives carried out another critical operation in 3069, extracting Hohiro Kurita from Word of Blake captivity. That same year saw brutal fighting on Luthien itself, where a close-combat variant armed with vibro-claws appeared for the first time. These weaponless but lethally equipped suits proved effective against unarmored targets in the close quarters of urban combat. Luthien Armor Works had begun producing this variant, but the plant was destroyed mere months after the production line opened. New Samarkand Metals continued as the primary source for all Kage production through the Jihad and into the Dark Age, adding a space operations variant designed for boarding actions and the experimental Kage C, which incorporated advanced stealth technology salvaged from captured Blakist suits along with a networked sensor system to enhance the Kage's value within coordinated formations.</p><p>The Kage remained a cornerstone of Combine special operations capability through the Republic era and beyond. Its combination of stealth, aerial agility, and compact size ensured continued demand even as newer battle armor designs entered service. DCMS doctrine continued to favor Kage teams for deep reconnaissance, target designation, and sabotage missions where heavier suits would compromise operational security.</p>
+</history>
+
+<manufacturer>
+New Samarkand Metals|Luthien Armor Works
+</manufacturer>
+
+<primaryFactory>
+New Samarkand|Luthien
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3058U
@@ -127,35 +163,3 @@ biped
 1
 </weightclass>
 
-<overview>
-The Kage (Japanese: "shadow") Light Battle Armor was one of the first Battle Armor designs produced by the Draconis Combine after the Truce of Tukayyid.
-</overview>
-
-<capabilities>
-The standout feature of the Kage is its Partial Wing assembly which allows it to make assisted jumps of 120 meters at a time and clear obstacles up to 24 meters in height; when not in use the wing retracts in order to reduce the suit's visibility and radar signature. This mobility is enhanced by the suit's stealth features, 275kg of Basic Stealth armor. Although providing barely enough protection against a single hit from a medium laser, it incorporates aspects of a combination stealth suit with electronic and infrared suppression capabilities and can run indefinitely thanks to integral rechargers. Not even Beagle Active Probes can detect the Kage suit thanks to these features On rare occasions DEST squads will outfit their suits with additional equipment, such as laser microphones, shotgun microphones, remote sensor dispensers and ECM suites, however these are field modifications rather than official factory variants. Like most suits, the Kage normally requires the use of a special module to allow the wearer to slip easily into and out of the suit. However, given the nature of its designated mission, the Kage was specially designed so that a person by themselves could get into and out of it in the field as needed.
-</capabilities>
-
-<deployment>
-As it is primarily geared towards intelligence gathering and covert operations, the Kage does not carry particularly heavy weaponry: an Anti-Personnel Weapon Mount on the right forearm, typically equipped with a submachine gun, keeps both of the Armored Gloves free for other tasks. Within a Kage team one of the four troopers is designated as the support element and operates a single heavier weapon in place of the antipersonnel weapon, such as a Flamer, Small Laser, Machine Gun, or Light TAG. This weapon is carried into battle in pieces by each team member thanks to their Squad Support Weapon Mount and assembled prior to combat.
-</deployment>
-
-<history>
-Built for reconnaissance and battlefield infiltration, development of the Kage was a joint operation between Internal Security Force scientists and Draconis Elite Strike Team advisers. Indeed the Kage was meant to provide an alternative to the much-respected DEST Infiltration Suit for missions in which DEST teams could expect heavy opposition, and since production started in 3056 the battle armor has virtually replaced the older Sneak Suit. Working off of a failed prototype of the Raiden, research and development of the Kage began in March of 3051 with the first prototypes unveiled in May 3052, however it soon became apparent there was a problem in the design. Draconis commanders had insisted upon a battle armor suit which could outjump most other BattleMechs, but the necessary jump jet configuration to achieve these distances meant a highly unstable flight characteristics, leading to the deaths of more than one test operator. Disaster was averted when the design team refined the jump controls and added a special partial wing and stabilizing fins, an alteration which took another three and a half years to implement before mass production started in March 3056. The end result though was a battle armor suit which exceeded not only its own original specifications but that of every other battle armor save the Sylph in its ability to travel through the air. The Kage has proven to be a success since its introduction, used by both DEST and regular line units; the latter tend to use them as artillery spotters for Arrow IV units, especially when using a laser designator. One of the suit's most famous early uses was as part of Task Force Serpent's strike against the Clan Smoke Jaguar homeworld of Huntress. Three teams of DEST troopers equipped with Kage suits infiltrated onto the planet's surface with the mission of knocking out the command and control center responsible for coordinating the planet's orbital defenses. In this they succeeded, overcoming the Elementals guarding the facility and opening the way for the invasion fleet to continue the operation. In 3069 a DEST team equipped with Kage suits was also responsible for rescuing Hohiro Kurita from the Word of Blake during the Jihad. The Kage suit would continue to be used in the following years with new variants introduced.
-</history>
-
-<manufacturer>
-Luthien Armor Works,New Samarkand Metals
-</manufacturer>
-
-<primaryFactory>
-Luthien,New Samarkand
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

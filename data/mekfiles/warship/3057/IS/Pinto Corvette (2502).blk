@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed1e-7731-bf5c-d8a182e3799d
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Pinto Corvette
 2502
 </year>
 
-<originalBuildYear>
-2502
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,13 +53,13 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:2.0:1:1
-asfbay:12.0:2:2
-cargobay:10943.0:1:3
+smallcraftbay:2.0:1:1::-1:0
+asfbay:12.0:2:2::-1:0
+cargobay:10943.0:1:3::-1:0
 dockingcollar
-steeragequarters:140.0:0
-1stclassquarters:250.0:0
-crewquarters:742.0:0
+steeragequarters:140.0:0:-1::-1:0
+1stclassquarters:250.0:0:-1::-1:0
+crewquarters:742.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +86,13 @@ crewquarters:742.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 14
@@ -320,32 +315,46 @@ IS Ammo AC/5:400
 </structural_integrity>
 
 <capabilities>
-The Pinto-class corvette was built for light duty but possessed superior armor, particularly in the front, compared to the Hegemony's Vincent-class. It boasted a powerful arsenal of capital and conventional weaponry and featured a DropShip transport capability. Additionally, it was supported by two fighter squadrons, making it versatile enough to support small invasions or hold defensive lines.
+<p>Displacing 160,000 tons across 298 meters of hull, the Pinto carries a diverse armament reflecting its Periphery origins. The forward-arc offensive punch comes from two Light Naval PPCs in the nose, supplemented by five Large Lasers and ten Medium Lasers for anti-fighter defense. Each broadside mounts a NAC/10 naval autocannon alongside two AC/20s and five AC/5s, providing respectable close-range firepower against both capital ships and smaller craft. Two Barracuda capital missile launchers per aft quarter give the vessel rear-arc striking capability, while three NL35 naval lasers are distributed across the forward and aft arcs. An extensive array of small lasers and machine guns across four arcs provides layered anti-fighter and anti-boarding defenses. Eight hundred single heat sinks manage the thermal load. Ninety-three tons of standard armor over a structural integrity of twenty-nine provide adequate protection for a vessel of its role. The Pinto's safe thrust of five and maximum of eight deliver solid acceleration for a corvette, enabling pursuit and evasion maneuvers. The single docking collar supports one DropShip, while twelve fighter bays and two small craft bays provide respectable aerospace support. A single 45-meter gravity deck and over 10,000 tons of cargo capacity allow extended independent deployments far from port.</p>
 </capabilities>
 
 <overview>
-The Pinto-class corvette, originating from the Rim Worlds Republic, was initially developed as a defensive picket ship during the period of Periphery independence. While many were sold to other realms, sales were discontinued during the Reunification War to maintain a facade of loyalty to the Star League. The Pinto proved to be superior to the Hegemony's Vincent-class corvette in terms of armor, weaponry, and versatility, capable of supporting invasions or defending against enemy forces. However, the Pintos met their demise during Kerensky's return and subsequent conflicts, with rumors suggesting that a few crippled vessels may have survived in uncharted regions of the Deep Periphery.
+<p>The Pinto-class corvette was the backbone of Periphery naval power for centuries, serving as a picket and patrol vessel across four major Periphery states. Designed and first constructed by Rockwell-Vasquez Starcraft of the Rim Worlds Republic in the twenty-sixth century, the Pinto became one of the most widely produced WarShips outside the Star League. Its relatively modest displacement and mixed armament made it well suited to system defense and convoy escort duties, though it lacked the firepower to stand against dedicated capital WarShips in a fleet engagement. The design's accessibility and comparatively low cost relative to larger vessels made it attractive to smaller nations that could not afford the Star League's heavier designs, earning the Pinto a lasting reputation as the defining Periphery corvette of its era.</p>
 </overview>
 
+<deployment>
+<p>The FWLS Dyson and FWLS Irbid served together during Geralk Marik's Lyran Campaigns, providing orbital fire support at the Battle of Loric. When Lyran BattleMechs appeared on the battlefield, Captain-General Marik called on both corvettes to rain naval autocannon fire on the enemy. However, when ground forces became entangled at close range, both captains refused to continue firing despite Marik's demands, and Lyran forces overran the command post, killing Marik. The TCS New Karachi was among a Taurian flotilla that strayed into the Malagrotta system in 2573, where Federated Suns naval forces destroyed or captured nearly all Taurian vessels in a three-hour engagement. By 2765, the Magistracy of Canopus permanently assigned Pintos to each of its three Chasseurs a Cheval regiments: the MCS Royal Foxx, MCS Thraxa, and MCS Stiletto. The Outworlds Alliance constructed the OAS Pulsar at Alpheratz, the newest of fifteen Alliance WarShips, and Alliance Pintos were known to operate in wolfpacks. During the Jihad, the Word of Blake fielded at least four salvaged Pintos: the Syrstart and Gorgon, both destroyed during CASE WHITE in 3068, and the Milvano and Mayenne, which survived until the final Battle of Terra in 3078.</p>
+</deployment>
+
 <history>
-The Pinto-class corvette originated in the Rim Worlds Republic as a defensive picket ship during the time of Periphery independence. After discontinuing sales to maintain loyalty to the Star League during the Reunification War, Tedeo Amaris restarted the construction of Pintos in 2650 as part of a military buildup. Despite pressure from the Star League, no demands were made to reduce the RWR fleet, which would later become a regret for the Terran Hegemony. During the Amaris crisis, the Rim Worlds' fleet possessed a significant number of Pintos, ready to strike against the League defenders once Kerensky's attention was diverted. However, the Pinto class faced its downfall when the SLDF WarShips returned under Kerensky's command to overthrow the Republican forces. Throughout the campaigns in the Periphery and the liberation of worlds, the Pinto class was apparently destroyed, along with the destruction of the WarShip's two shipyards in the shattered Rim Worlds Republic. Nevertheless, rumors persist of a few crippled Pintos that may have withdrawn to uncharted regions of the Deep Periphery, where they remain as derelicts to this day.
+<p>The Pinto-class corvette entered service in 2502 as a product of the Rim Worlds Republic's independent shipbuilding efforts, designed as a picket and patrol vessel suited to the defensive needs of a Periphery state. The Republic initially sold Pintos to other Periphery nations, including the Taurian Concordat, Magistracy of Canopus, and Outworlds Alliance, establishing the class as the standard light WarShip across the Periphery. Sales were discontinued as the Reunification War loomed, with the Amaris family seeking to maintain the appearance of loyalty to the Star League. The Pinto saw combat during the war itself, with Taurian Concordat vessels deploying at Tentativa and suffering losses at Malagrotta. Production resumed in the 2650s under Tadeo Amaris as part of a massive military buildup that saw approximately thirty additional hulls laid down and mothballed under Star League pressure. The Magistracy of Canopus also began manufacturing Pintos after completing the Diamond Garter Fleet Yards in 2725, while the Outworlds Alliance constructed at least one vessel at Alpheratz after the revocation of Council Edict 2650. By April 2765, over one hundred Pintos were in active service across the four Periphery states, making it the most numerous WarShip class outside the Star League navy. The Rim Worlds Republic alone operated fifty-two active vessels plus thirty in mothball. The Amaris Crisis and the subsequent SLDF campaign to liberate Terra destroyed both primary Pinto production facilities and scattered the surviving vessels. The Finmark yards were specifically destroyed by Lyran forces in 2792. Rumors persisted for centuries that crippled Pintos had withdrawn to uncharted Deep Periphery worlds, surviving as derelicts far from known space. These rumors proved prophetic when the Word of Blake revealed at least four operational Pintos during the Jihad, salvaged and restored to service through means unknown. All four were destroyed between 3068 and 3078, bringing what is likely the final chapter of the Pinto's remarkably long service history to a close.</p>
 </history>
 
 <manufacturer>
-Unknown, Roe Weapon Systems, Rockwell-Vasquez Starcraft Inc.
+Rockwell-Vasquez Starcraft Inc.|Roe Weapon Systems|Unknown
 </manufacturer>
 
 <primaryFactory>
-Alpheratz, Finmark, Zertarum
+Zertarum|Finmark|Alpheratz
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Rockwell-Vasquez Starcraft Inc.
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Pinto
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Corvette

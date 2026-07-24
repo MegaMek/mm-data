@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee8d-790c-bd48-91df5d9a8246
+</UUID>
 
 <UnitType>
 Warship
@@ -44,10 +39,6 @@ Newgrange III Yardship
 <year>
 3066
 </year>
-
-<originalBuildYear>
-3066
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -103,9 +94,13 @@ cargobay:354640.5:1:15::-1:0
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 83
@@ -250,32 +245,46 @@ ISAMS Ammo:240
 </structural_integrity>
 
 <capabilities>
-The Newgrange-class YardShip, exemplified by the Erinyes, represented the pinnacle of mobile repair and fabrication. Equipped with an immense unpressurized repair bay, it could accommodate WarShips of up to 2.3 million tons, showcasing its exceptional repair capabilities. With substantial cargo storage and advanced on-board manufacturing facilities, the YardShip functioned as a self-sufficient factory in space, capable of fabricating small parts as required. Its crew complement of over seven thousand included skilled workers, who also enjoyed luxurious recreational facilities across the ship's grav decks. The YardShip further boasted a fleet of small craft for passenger transportation and housed a battalion's worth of WorkMechs for repair operations. However, the YardShip's armament remained light, emphasizing its reliance on escorts for protection.
+<p>Each Newgrange displaced 2,300,000 tons and stretched 2,680 meters from stem to stern, with a 3,000-meter jump sail. The forward unpressurized repair bay alone accounted for 2,100,000 tons of capacity, large enough to enclose and service virtually any WarShip in existence. Onboard manufacturing and assembly facilities could fabricate replacement components as needed, and the cargo bays held sufficient material to house a fully dismantled destroyer. Four 250-meter gravity decks provided comfortable living and recreation facilities for a complement exceeding seven thousand crew, repair technicians, and passengers. A battalion of WorkMeks supported repair operations, while a fleet of small craft facilitated personnel transfers.</p><p>Propulsion came from conventional drives delivering a safe thrust of two and maximum of three, supplemented by a standard Kearny-Fuchida drive with an integrity of 44 and four docking collars. Ferro-Carbide armor provided 600 tons of protection across all arcs, backed by a structural integrity of 25. The weapons suite consisted of eight Barracuda missile launchers, eight Naval Laser 45s, eight Naval Laser 55s, sixteen ER Large Lasers, eight PPCs, and forty Anti-Missile Systems. This was respectable for self-defense but inadequate against dedicated naval opposition. Seven hundred eighty-seven double heat sinks managed thermal loads. The standard variant also carried a Mobile Hyperpulse Generator, enabling independent interstellar communication.</p>
 </capabilities>
 
 <overview>
-The Newgrange-class YardShip, renowned for its immense size and mobile repair capabilities, served as a monumental vessel during the era of the first Star League. With its monolithic structure and forward-mounted unpressurized repair bay, the YardShip excelled in providing extensive repair and refit support for WarShips. However, despite its impressive size, the Newgrange-class was lightly armed and relied on escorts for defense. Notably, records revealed the existence of a modified Newgrange-class YardShip named Erinyes, which underwent significant weaponization during the Jihad, utilizing a mass driver and drive-equipped asteroids for stealth orbital bombardments.
+<p>The Newgrange class was the largest mobile shipyard ever constructed, with each vessel stretching to nearly double the length of a McKenna-class battleship. Designed by Di Tron Heavy Industries of Terra and introduced in the early twenty-seventh century, these enormous vessels served as the backbone of the SLDF's mobile repair and refit infrastructure. Each Newgrange functioned as a self-sufficient orbital factory capable of traveling between star systems, carrying the personnel, equipment, and raw materials needed to service even the heaviest capital vessels far from any fixed shipyard. Despite their intimidating presence in fleet formations, these vessels carried only modest armament relative to their enormous mass and relied heavily on escort ships for protection against dedicated attacks. Few classes in the history of interstellar warfare have commanded such reverence among naval engineers and fleet commanders, and the loss of even a single vessel was considered a strategic catastrophe.</p>
 </overview>
 
+<deployment>
+<p>The Erinyes was a single modified Newgrange developed by the Word of Blake circa 3065 for deep space mining operations. Its massive pressurized bay was reconfigured with a spinal-mounted heavy mass driver running the length of the vessel, while the remaining space was converted to store large asteroids and equip them with system drives. During the Jihad, the Word repurposed this capability for stealth orbital bombardments, using the mass driver and drive-equipped asteroids to devastate targets at Mundo Nublar, Taurus, Lopez, and Jardine.</p><p>First observed by intelligence operatives in the Deep Periphery as early as 3066, the vessel became a legendary phantom, a Flying Dutchman blamed for everything from the destruction of Arkab to an engineered drought on Wisconsin. Decrypted Blakist archives first confirmed its existence in 3079, and a Republic Armed Forces intelligence alert issued in December 3081 formally acknowledged the threat it posed. The Erinyes was believed to remain operational somewhere in the Deep Periphery with an unknown complement of crew and equipment.</p>
+</deployment>
+
 <history>
-During the tumultuous Jihad, descriptions of a super-massive WarShip began circulating among intelligence agencies and spacefaring communities, sparking intrigue and speculation. These reports, combined with rumors that the Word of Blake had modified one of their Newgrange-class YardShips, gave rise to a mythical reputation, likening the vessel to the legendary Flying Dutchman. Blamed for various calamities, including the destruction of Arkab and alleged bio-engineered droughts on Wisconsin, the rumored ship remained an enigmatic presence, unverifiable but deeply ingrained in the collective imagination. The vessel's existence continued to grow in legend despite the concerted efforts of The Republic and its allied nations to dispel the rumors. In 3079, a breakthrough occurred when data decryption of Blakist archives unveiled a reference to a ship known only as Erinyes. Although further information on this mysterious ship remained elusive for the next six years, the legend surrounding it persisted, refusing to be fully suppressed. The destruction of Lopez in 3083 added fuel to the fire, intensifying the tales and making it nearly impossible to quell the rumors completely. Recent discoveries from decrypted archives have shed light on the modifications made to the Erinyes, adding credibility to several events attributed to the Word's ghostly vessel. The massive pressurized bay underwent a significant reconfiguration, featuring the installation of a spinal-mounted heavy mass driver as its primary modification. Additionally, the remaining space was converted to accommodate large asteroids, enabling their refitting with thrust engines. These modifications originated from the original concept of the Erinyes as a deep-space mining vessel capable of extracting rare ores or fitting asteroids with drives for transportation to a central processing location. However, during the Jihad, the Word repurposed the ship's capabilities, turning it into a formidable weapon. The Erinyes, armed with its mass driver and equipped with drive-equipped asteroids, participated in at least two confirmed stealth orbital bombardments, striking from great distances and then swiftly retreating with its jump drive, leaving the target worlds devastated. Believed to still be operational, the Erinyes continues its mysterious activities with an unknown complement of crew and equipment. Its presence, as well as any reports of ghost ships, sightings, or rumors of Word activity, are to be immediately forwarded to RAF intelligence, ensuring vigilant monitoring of this enigmatic and potentially dangerous vessel.
+<p>Di Tron Heavy Industries of Terra introduced the Newgrange class in 2600, creating what would become the definitive mobile shipyard of the Star League era. The first operational vessel salvaged and repaired battle-damaged WarShips from the Reunification War's brutal Battle of Robsart as early as 2603, demonstrating the class's strategic value within just three years of its commissioning. Over the following decades, approximately two hundred Newgranges were constructed, forming the backbone of the SLDF's mobile repair and refit infrastructure. Their ability to service capital vessels in forward operating areas transformed SLDF fleet logistics, allowing damaged WarShips to return to frontline duty without the lengthy transit to fixed shipyards.</p><p>In 2776, the SLDF's remaining Newgranges underwent top-secret modifications at the Krester shipyards near Keid in preparation for Operation LIBERATION, the final assault on the Amaris-held Terran system. After the liberation and General Kerensky's Exodus, only about forty-five Newgranges remained in the Inner Sphere. The early Succession Wars proved devastating to these irreplaceable vessels. YardShips were prime targets because they could neither jump nor maneuver while servicing another vessel, and hostile forces recognized that destroying a single Newgrange crippled an enemy's ability to maintain its remaining WarShip fleet. By the thirty-first century, the class was believed extinct.</p><p>ComStar reportedly based its smaller Faslane YardShip design on the remains of two derelict Newgrange hulls maintained at hidden shipyards near Terra, while secretly preserving at least one intact vessel at a covert facility. When ComStar fractured, the Word of Blake inherited these hidden assets. The dramatic reappearance of a Newgrange during the Jihad shocked the Inner Sphere, proving the class still existed. The Republic of the Sphere subsequently operated three vessels before mothballing them in the late Republic era. The class experienced an unexpected resurgence in the 3150s when vessels long thought lost were recovered and returned to active service, nearly five centuries after the first Newgrange was launched.</p>
 </history>
 
 <manufacturer>
-Unknown
+Di Tron Heavy Industries
 </manufacturer>
 
 <primaryFactory>
-Refit
+Terra
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Di Tron Heavy Industries
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Newgrange III
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Standard
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <notes>
 No Stats available for this unit. Reduced Cargo Space and add Heavy Mass Driver.
@@ -294,7 +303,7 @@ Deep Space Mining
 </height>
 
 <source>
-JHS:3076
+JHS:3076,TR:3085S
 </source>
 
 <tonnage>

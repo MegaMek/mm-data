@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c079-7588-bcf6-0394a1a2f2ea
+</UUID>
 
 <UnitType>
 Infantry
@@ -37,13 +32,13 @@ Jump Platoon (Taurian)
 (Rifle)
 </Model>
 
+<mul id:>
+9278
+</mul id:>
+
 <year>
 2335
 </year>
-
-<originalBuildYear>
-2335
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -53,14 +48,20 @@ IS Level 2
 Jump
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Generic Infantry Kit
+AntiMekGear
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
+<overview>
+<p>The Taurian Defense Force assigns conventional infantry to garrison and planetary defense roles across the Concordat, where citizen-soldiers serve out of patriotic duty rather than mere obligation. Jump platoons provide the vertical mobility that Taurian garrison commanders prize for defending the rough terrain and broken ground found on many Concordat border worlds. Their ability to bypass obstacles and seize elevated positions gives them a tactical advantage over standard foot infantry.</p><p>Armed with standard ballistic assault rifles, the most common and affordable infantry weapon in the Inner Sphere, these platoons deliver reliable short-range firepower and can be equipped and resupplied from almost any garrison stockpile.</p>
+</overview>
+
 <source>
-TW
+TW,TM
 </source>
 
 <squad_size>
@@ -75,14 +76,3 @@ TW
 InfantryAssaultRifle
 </Primary>
 
-<antimek>
-6
-</antimek>
-
-<armorKit>
-Generic Infantry Kit
-</armorKit>
-
-<mul id:>
-9278
-</mul id:>

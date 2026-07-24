@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Hellos Minor
-sucsId: 1088
+sucsId: 1089
 xcood: -185.483
 ycood: -180.968
 spectralType: G0V
@@ -103,6 +103,12 @@ planet:
       - name: Southern Banebdedet
       - name: Old Old Bridge
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2565-10-09'
         faction:
           source: canon
@@ -112,6 +118,15 @@ planet:
         socioIndustrial: C-D-D-D-B
       - date: '2570-01-01'
         population: 228183.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Principality of Regulus
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 2329003.0
       - date: '2590-01-01'
@@ -230,6 +245,12 @@ planet:
           source: canon
           value:
             - PR
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - PR
       - date: '3080-01-01'
         population: 524417827.0
       - date: '3086-02-01'
@@ -241,6 +262,12 @@ planet:
         population: 530324321.0
       - date: '3095-01-01'
         socioIndustrial: A-C-C-A-A
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RF
       - date: '3100-01-01'
         population: 531917683.0
       - date: '3110-01-01'
@@ -258,9 +285,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Regulan Fiefs
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Chenequa

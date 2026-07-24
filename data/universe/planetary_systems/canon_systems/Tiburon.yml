@@ -1,0 +1,147 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Tiburon
+sucsId: 3127
+xcood: 75.876
+ycood: -505.977
+spectralType: G2V
+planet:
+  - name:
+      source: canon
+      value: Tiburon
+    type: TERRESTRIAL
+    sysPos: 1
+    event:
+      - date: '2750-01-01'
+        population: 55077.0
+        socioIndustrial: D-D-C-D-F
+      - date: '2760-01-01'
+        population: 186459.0
+      - date: '2770-01-01'
+        population: 494701.0
+      - date: '2780-01-01'
+        population: 279226.0
+      - date: '2790-01-01'
+        population: 82685.0
+      - date: '2800-01-01'
+        population: 36279.0
+      - date: '2810-01-01'
+        population: 18318.0
+      - date: '2820-01-01'
+        population: 10062.0
+      - date: '2822-01-01'
+        socioIndustrial: X-X-X-X-X
+      - date: '3022-01-01'
+        name: Tiverton
+        message: Tiburon renamed to Tiverton
+    orbitalDist: 0.7
+    pressure: HIGH
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.7
+    diameter: 12300
+    density: 4
+    dayLength: 18
+    yearLength: 1.2
+    temperature: 43
+    water: 23
+    lifeForm: MAMMAL
+    icon: green8
+  - name: Tiburon III
+    type: TERRESTRIAL
+    orbitalDist: 1
+    sysPos: 3
+    icon: barren10
+    pressure: HIGH
+    atmosphere: TOXIC_POISON
+    composition: Ammonia and Carbon Dioxide, plus trace amounts of Nitrous Oxide
+    gravity: 1.22
+    diameter: 13500
+    density: 6.3337
+    dayLength: 23
+    yearLength: 1.4
+    temperature: 53
+    water: 0
+  - name: Tiburon IV
+    type: ICE_GIANT
+    orbitalDist: 2.8
+    sysPos: 4
+    icon: iceg3
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.17
+    diameter: 55000
+    density: 1.5
+    dayLength: 10
+    yearLength: 4.8
+    smallMoons: 2
+  - name: Tiburon V
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 5.2
+    sysPos: 5
+    icon: gasg16
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.88
+    diameter: 15500
+    density: 4
+    dayLength: 19
+    yearLength: 11.9
+    smallMoons: 2
+    satellite:
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+  - name: Tiburon VI
+    type: ASTEROID_BELT
+    orbitalDist: 10
+    sysPos: 6
+    icon: asteroid1
+    yearLength: 31.6
+    temperature: -181
+  - name: Tiburon VII
+    type: GAS_GIANT
+    orbitalDist: 19.6
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.77
+    diameter: 150000
+    density: 1.3
+    dayLength: 10
+    yearLength: 86.8
+    ring: true
+    smallMoons: 16
+    satellite:
+      - name: 7-M1
+        size: medium
+        icon: rock1
+      - name: 7-M2
+        size: medium
+        icon: rock2
+      - name: 7-M3
+        size: medium
+        icon: rock3
+primarySlot: 1

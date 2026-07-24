@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,13 +15,17 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.11 on 2026-01-12
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c10c-792a-b41a-b1a39db92b7c
+</UUID>
+
 <UnitType>
 Jumpship
 </UnitType>
 
 <Name>
-Leviathan Jumpship
+Leviathan JumpShip
 </Name>
 
 <Model>
@@ -35,10 +39,6 @@ Leviathan Jumpship
 <year>
 2468
 </year>
-
-<originalBuildYear>
-2468
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -143,23 +143,23 @@ dockingcollar
 </structural_integrity>
 
 <capabilities>
-The Leviathan doubled the DropShip capacity of the Liberty class while also offering more than twice the internal cargo space and shuttle bays, all for only a 33% increase in price. Lockheed prioritized the well-being of both the crew and their "clients." The ship featured two separate grav decks: a 90-meter deck specifically for the passengers of docked DropShips and a second deck reserved for the JumpShip’s own crew. To lower operating costs, the ship was built with large access panels and roomy maintenance tunnels. This ensured that repairs were fast and required less specialized labor. The ship’s greatest strengths were also its weaknesses. The external maintenance panels made the vessel "embarrassingly easy" to board and commandeer, while its exposed fuel bunkers made it easy for attackers to disable the ship with minimal effort.
+<p>The Leviathan doubled the DropShip capacity of the Liberty class while also offering more than twice the internal cargo space and shuttle bays, all for only a 33% increase in price. Lockheed prioritized the well-being of both the crew and their "clients." The ship featured two separate grav decks: a 90-meter deck specifically for the passengers of docked DropShips and a second deck reserved for the JumpShip’s own crew. To lower operating costs, the ship was built with large access panels and roomy maintenance tunnels. This ensured that repairs were fast and required less specialized labor. The ship’s greatest strengths were also its weaknesses. The external maintenance panels made the vessel "embarrassingly easy" to board and commandeer, while its exposed fuel bunkers made it easy for attackers to disable the ship with minimal effort.</p>
 </capabilities>
 
 <overview>
-The Leviathan was an ambitious "super-transport" designed by Lockheed Galactic to capitalize on the revolutionary docking collar technology pioneered by Blue Nose Interstellar. Aimed at the high-end commercial market, it was built to be more efficient and much larger than its contemporaries. While it was a masterpiece of logistics and crew comfort, its design eventually became a liability due to significant security flaws that made it a prime target for hijackers. Regardless, the design was an examplary of its class for a century of spacefaring.
+<p>The Leviathan was an ambitious "super-transport" designed by Lockheed Galactic to capitalize on the revolutionary docking collar technology pioneered by Blue Nose Interstellar. Aimed at the high-end commercial market, it was built to be more efficient and much larger than its contemporaries. While it was a masterpiece of logistics and crew comfort, its design eventually became a liability due to significant security flaws that made it a prime target for hijackers. Regardless, the design was an examplary of its class for a century of spacefaring.</p>
 </overview>
 
 <history>
-Launched shortly after the Liberty-class, the Leviathan was the cornerstone of Lockheed Galactic’s industrial expansion. It was an immediate success, particularly with large transport conglomerates that used its massive capacity to haul both their own fleets and "tramp" vessels for extra profit. However, by the late 25th century, the ship’s reputation soured as it became known as "easy pickings" for pirates. The very features that made it easy to maintain also made it easy to board. While military and corporate models were later retrofitted with better security and marine detachments, the Leviathan was eventually phased out in favor of the Star Lord and other designs better suited for the high-intensity warfare of the Star League era.
+<p>Launched shortly after the Liberty-class, the Leviathan was the cornerstone of Lockheed Galactic’s industrial expansion. It was an immediate success, particularly with large transport conglomerates that used its massive capacity to haul both their own fleets and "tramp" vessels for extra profit. However, by the late 25th century, the ship’s reputation soured as it became known as "easy pickings" for pirates. The very features that made it easy to maintain also made it easy to board. While military and corporate models were later retrofitted with better security and marine detachments, the Leviathan was eventually phased out in favor of the Star Lord and other designs better suited for the high-intensity warfare of the Star League era.</p>
 </history>
 
 <manufacturer>
-Lockheed Galactic
+Lockheed Galactic|Thompson's Shipyards
 </manufacturer>
 
 <primaryFactory>
-Thorin
+Thorin|Keid
 </primaryFactory>
 
 <use>
@@ -171,8 +171,12 @@ Transport
 </length>
 
 <source>
-XTR:Primitives III
+XTR:Primitives III,XTR:Primitives V
 </source>
+
+<published>
+XTR:Primitives V
+</published>
 
 <tonnage>
 410000.0
@@ -222,5 +226,4 @@ XTR:Primitives III
 <escape_pod>
 5
 </escape_pod>
-
 

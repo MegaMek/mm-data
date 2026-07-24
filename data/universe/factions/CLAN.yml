@@ -17,6 +17,11 @@
 
 key: CLAN
 name: All Clans
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - C
 capital: Strana Mechty
 yearsActive:
   - start: 2807
@@ -36,3 +41,5 @@ ratingLevels:
   - Second Line
   - Front Line
   - Keshik
+usesMercenaries:
+  2500: false

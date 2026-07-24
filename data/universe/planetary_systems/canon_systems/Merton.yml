@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Merton
-sucsId: 1689
+sucsId: 1690
 xcood: -392.711
 ycood: -121.755
 spectralType: K2V
@@ -62,6 +62,12 @@ planet:
         size: large
         icon: rock6
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2745-12-10'
         faction:
           source: canon
@@ -73,6 +79,12 @@ planet:
         hpg: B
       - date: '2750-01-01'
         population: 133247.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 499639.0
       - date: '2765-01-01'
@@ -148,6 +160,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 80428651.0
       - date: '3100-01-01'
@@ -170,9 +188,13 @@ planet:
           value:
             - DTA
         population: 81627848.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: New Malvern

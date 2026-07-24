@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bf26-7ed2-a191-e91a28d0f8ad
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,17 @@ Clan Level 5
 Leg
 </motion_type>
 
+<Troopers Equipment>
+Clan Armor Kit (All)
+AntiMekGear
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Clan anti-BattleMech foot squads field a squad-strength element trained to engage BattleMechs and armored vehicles at close quarters. Smaller than a standard anti-BattleMech Point, these squads operate as ambush teams and position-denial elements in terrain where their reduced numbers can be offset by concealment and surprise. The Clan warrior caste expects conventional infantry to hold ground at any cost, and anti-BattleMech squads embody that expectation in its most direct form.</p>
+</overview>
 
 <source>
 TW
@@ -69,18 +73,10 @@ TW
 </secondn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
 <Secondary>
-LRM Launcher (FarShot)
+InfantryLRM
 </Secondary>
-
-<antimek>
-5
-</antimek>
-
-<armorKit>
-ClanKit
-</armorKit>
 

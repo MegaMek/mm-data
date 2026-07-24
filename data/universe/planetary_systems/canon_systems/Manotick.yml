@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Manotick
-sucsId: 1593
+sucsId: 1594
 xcood: -372.491
 ycood: -133.95
 spectralType: F7V
@@ -88,6 +88,12 @@ planet:
     landmass:
       - capital: Buckley
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2627-08-25'
         faction:
           source: canon
@@ -131,6 +137,15 @@ planet:
         population: 193987985.0
       - date: '2750-01-01'
         population: 195249666.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Abbey District
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 196181870.0
       - date: '2770-01-01'
@@ -206,6 +221,12 @@ planet:
           source: canon
           value:
             - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DTA
       - date: '3080-01-01'
         population: 176137172.0
       - date: '3090-01-01'
@@ -226,9 +247,13 @@ planet:
         population: 186319525.0
       - date: '3145-01-01'
         population: 186580555.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Warwick

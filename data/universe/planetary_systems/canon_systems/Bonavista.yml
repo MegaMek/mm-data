@@ -1,0 +1,344 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Bonavista
+sucsId: 3114
+xcood: -51.958
+ycood: -444.27
+spectralType: G2V
+planet:
+  - name: Bonavista
+    type: TERRESTRIAL
+    orbitalDist: 0.24
+    sysPos: 1
+    icon: green8
+    pressure: HIGH
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 1.09
+    diameter: 13200
+    density: 5.8284
+    dayLength: 22
+    yearLength: 0.8
+    temperature: 38
+    water: 44
+    lifeForm: REPTILE
+    smallMoons: 3
+    satellite:
+      - name: 1-M1
+        size: medium
+        icon: rock1
+      - name: 1-M2
+        size: medium
+        icon: rock2
+    event:
+      - date: '2750-01-01'
+        population: 53911.0
+        socioIndustrial: C-D-A-F-C
+      - date: '2760-01-01'
+        population: 255733.0
+      - date: '2770-01-01'
+        population: 878056.0
+      - date: '2780-01-01'
+        population: 2338795.0
+      - date: '2790-01-01'
+        population: 5078319.0
+      - date: '2800-01-01'
+        population: 9353742.0
+      - date: '2810-01-01'
+        population: 15235915.0
+      - date: '2820-01-01'
+        population: 22319323.0
+      - date: '2830-01-01'
+        population: 30162705.0
+      - date: '2840-01-01'
+        population: 38224102.0
+      - date: '2850-01-01'
+        population: 46116848.0
+      - date: '2860-01-01'
+        population: 53377187.0
+      - date: '2870-01-01'
+        population: 59977787.0
+      - date: '2880-01-01'
+        population: 65649992.0
+      - date: '2890-01-01'
+        population: 70718313.0
+      - date: '2900-01-01'
+        population: 53914534.0
+      - date: '2910-01-01'
+        population: 32476060.0
+      - date: '2920-01-01'
+        population: 21137504.0
+      - date: '2930-01-01'
+        population: 14761123.0
+      - date: '2940-01-01'
+        population: 9951704.0
+      - date: '2950-01-01'
+        population: 5746583.0
+      - date: '2960-01-01'
+        population: 2434392.0
+      - date: '2970-01-01'
+        population: 1045891.0
+      - date: '2980-01-01'
+        population: 574905.0
+      - date: '2990-01-01'
+        population: 298707.0
+      - date: '2992-01-01'
+        socioIndustrial: C-D-A-D-C
+      - date: '3000-01-01'
+        population: 161897.0
+      - date: '3010-01-01'
+        population: 109920.0
+      - date: '3020-01-01'
+        population: 82360.0
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Bonavista II
+    type: DWARF_TERRESTRIAL
+    orbitalDist: 0.6
+    sysPos: 2
+    icon: barren7
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.09
+    diameter: 1500
+    density: 4
+    dayLength: 20
+    yearLength: 0.9
+    temperature: -49
+    water: 0
+  - name: Bonavista III
+    type: GAS_GIANT
+    orbitalDist: 0.96
+    sysPos: 3
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.57
+    diameter: 110000
+    density: 1
+    dayLength: 16
+    yearLength: 1.2
+    smallMoons: 17
+    satellite:
+      - name: 3-M1
+        size: medium
+        icon: rock1
+      - name: 3-M2
+        size: medium
+        icon: rock2
+  - name: Bonavista IV
+    type: GAS_GIANT
+    orbitalDist: 1.68
+    sysPos: 4
+    icon: gasg29
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.05
+    diameter: 90000
+    density: 1.6
+    dayLength: 18
+    yearLength: 2.3
+    ring: true
+    smallMoons: 19
+  - name: Bonavista V
+    type: ICE_GIANT
+    orbitalDist: 3.12
+    sysPos: 5
+    icon: iceg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.74
+    diameter: 40000
+    density: 1.3
+    dayLength: 10
+    yearLength: 5.6
+    smallMoons: 3
+    satellite:
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-L2
+        size: large
+        icon: rock2
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+      - name: 5-M3
+        size: medium
+        icon: rock3
+      - name: 5-M4
+        size: medium
+        icon: rock4
+  - name: Bonavista VI
+    type: GAS_GIANT
+    orbitalDist: 6
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.05
+    diameter: 90000
+    density: 1.6
+    dayLength: 10
+    yearLength: 14.7
+    smallMoons: 17
+    satellite:
+      - name: 6-G1
+        size: giant
+        icon: oddmoon1
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-L2
+        size: large
+        icon: rock2
+      - name: 6-L3
+        size: large
+        icon: rock3
+      - name: 6-L4
+        size: large
+        icon: rock4
+      - name: 6-L5
+        size: large
+        icon: rock5
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+      - name: 6-M3
+        size: medium
+        icon: rock3
+      - name: 6-M4
+        size: medium
+        icon: rock4
+  - name: Bonavista VII
+    type: GAS_GIANT
+    orbitalDist: 11.76
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.22
+    diameter: 120000
+    density: 1.3
+    dayLength: 17
+    yearLength: 40.3
+    ring: true
+    smallMoons: 16
+    satellite:
+      - name: 7-L1
+        size: large
+        icon: rock1
+      - name: 7-L2
+        size: large
+        icon: rock2
+      - name: 7-M1
+        size: medium
+        icon: rock1
+      - name: 7-M2
+        size: medium
+        icon: rock2
+  - name: Bonavista VIII
+    type: ASTEROID_BELT
+    orbitalDist: 23.28
+    sysPos: 8
+    icon: asteroid3
+    yearLength: 112.3
+    temperature: -237
+  - name: Bonavista IX
+    type: GAS_GIANT
+    orbitalDist: 46.32
+    sysPos: 9
+    icon: gasg29
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.39
+    diameter: 120000
+    density: 1.4
+    dayLength: 13
+    yearLength: 315.2
+    smallMoons: 21
+    satellite:
+      - name: 9-G1
+        size: giant
+        icon: oddmoon1
+      - name: 9-L1
+        size: large
+        icon: rock1
+      - name: 9-L2
+        size: large
+        icon: rock2
+      - name: 9-L3
+        size: large
+        icon: rock3
+      - name: 9-L4
+        size: large
+        icon: rock4
+      - name: 9-L5
+        size: large
+        icon: rock5
+      - name: 9-M1
+        size: medium
+        icon: rock1
+      - name: 9-M2
+        size: medium
+        icon: rock2
+  - name: Bonavista X
+    type: GAS_GIANT
+    orbitalDist: 92.4
+    sysPos: 10
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.54
+    diameter: 120000
+    density: 0.9
+    dayLength: 13
+    yearLength: 888.2
+    ring: true
+    smallMoons: 21
+    satellite:
+      - name: 10-L1
+        size: large
+        icon: rock1
+      - name: 10-L2
+        size: large
+        icon: rock2
+      - name: 10-M1
+        size: medium
+        icon: rock1
+      - name: 10-M2
+        size: medium
+        icon: rock2
+      - name: 10-M3
+        size: medium
+        icon: rock3
+primarySlot: 1

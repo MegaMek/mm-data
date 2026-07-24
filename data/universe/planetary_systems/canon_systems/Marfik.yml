@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Marfik
-sucsId: 1606
+sucsId: 1607
 xcood: -40.604
 ycood: 97.664
 spectralType:
@@ -174,6 +174,12 @@ planet:
         size: medium
         icon: oddmoon3
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2743-08-02'
         faction:
           source: canon
@@ -183,6 +189,16 @@ planet:
         socioIndustrial: C-D-C-C-C
       - date: '2750-01-01'
         population: 285939.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Federation of Skye
+        #   - Virginia Shire
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2752-09-07'
         hpg: B
       - date: '2760-01-01'
@@ -251,17 +267,45 @@ planet:
           value:
             - LA
             - DC
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
+            - LA
       - date: '3030-02-06'
         faction:
           source: canon
           value:
             - LA
         population: 3139452950.0
+      - date: '3030-12-31'
+        # administration:
+        #   - Federation of Skye
+        #   - Virginia Shire
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '3040-01-01'
         population: 3133781181.0
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Skye March
+        #   - Ryde Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3049-01-01'
@@ -273,6 +317,16 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Skye Province
+        #   - Freedom Theater
       - date: '3060-01-01'
         population: 3178782069.0
       - date: '3070-01-01'
@@ -282,6 +336,15 @@ planet:
       - date: '3081-06-29'
         faction:
           source: canon
+          value:
+            - ROS
+      - date: '3081-12-31'
+        # administration:
+        #   - Prefecture IX
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - ROS
       - date: '3090-01-01'
@@ -301,6 +364,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3140-01-25'
         population: 3314875643.0
         socioIndustrial: A-B-C-A-B
@@ -310,9 +379,16 @@ planet:
           value:
             - CJF
         population: 3316865165.0
-      - date: '3152-06-01'
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CJF
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - IND
   - name: Clark's Madness

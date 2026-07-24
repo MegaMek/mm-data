@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Prydain
-sucsId: 2078
+sucsId: 2079
 xcood: -269.754
 ycood: 247.101
 spectralType: F6V
@@ -107,6 +107,12 @@ planet:
       - name: New Wallingford
       - name: New Nansen
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2714-05-15'
         faction:
           source: canon
@@ -124,6 +130,16 @@ planet:
         population: 1250550.0
       - date: '2750-01-01'
         population: 2917168.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Coventry Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 5750467.0
       - date: '2769-10-11'
@@ -169,6 +185,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Temple Hirst
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.64

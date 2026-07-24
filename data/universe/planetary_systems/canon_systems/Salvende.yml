@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Salvende
-sucsId: 2222
+sucsId: 2223
 xcood: 640.213
 ycood: 278.418
 spectralType: G3V
@@ -68,6 +68,12 @@ planet:
       - name: Lesser Bellbrook
       - name: Greater Bellbrook
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2745-09-28'
         faction:
           source: canon
@@ -77,6 +83,15 @@ planet:
         socioIndustrial: C-C-A-F-F
       - date: '2750-01-01'
         population: 103801.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Traders Domain
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - OA
       - date: '2751-12-23'
         hpg: B
       - date: '2760-01-01'
@@ -101,6 +116,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: 02-1
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.0

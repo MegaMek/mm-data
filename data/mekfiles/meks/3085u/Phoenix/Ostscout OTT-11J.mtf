@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,46 +15,46 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d1e1-7da1-ad37-f7931a04f973
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Ostscout
 model:OTT-11J
 mul id:2365
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3078
+techbase:Inner Sphere
+era:3078
 source:TR:3085
-Rules Level:2
+published:RS:3085u-PP
+rules level:2
 role:Scout
 
-
-
-quirk:imp_com
-quirk:imp_sensors
 quirk:low_profile
 quirk:rugged_1
+quirk:imp_sensors
+quirk:imp_com
 
+mass:35
+engine:315 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:35
-Engine:315 XL Engine(IS)
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:9
+jump mp:8
 
-Heat Sinks:10 Double
-Walk MP:9
-Jump MP:8
-
-Armor:Ferro-Fibrous(Inner Sphere)
-LA Armor:7
-RA Armor:7
-LT Armor:8
-RT Armor:8
-CT Armor:10
-HD Armor:9
-LL Armor:7
-RL Armor:7
-RTL Armor:2
-RTR Armor:2
-RTC Armor:4
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:7
+RA armor:7
+LT armor:8
+RT armor:8
+CT armor:10
+HD armor:9
+LL armor:7
+RL armor:7
+RTL armor:2
+RTR armor:2
+RTC armor:4
 
 Weapons:3
 Light PPC, Left Torso
@@ -66,28 +66,28 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Left Torso:
 Fusion Engine
@@ -99,9 +99,9 @@ Jump Jet
 Jump Jet
 Light PPC
 Light PPC
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
 Fusion Engine
@@ -113,9 +113,9 @@ Jump Jet
 Jump Jet
 Light PPC
 Light PPC
-Endo Steel
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Center Torso:
 Fusion Engine
@@ -129,13 +129,13 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 ISTAG
-Endo Steel
+IS Endo Steel
 
 Head:
 Life Support
 Sensors
 Cockpit
-Endo Steel
+IS Endo Steel
 Sensors
 Life Support
 -Empty-
@@ -150,8 +150,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Ferro-Fibrous
+IS Endo Steel
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -164,8 +164,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Ferro-Fibrous
+IS Endo Steel
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -173,19 +173,29 @@ Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:The Ostscout was designed as a pure recon BattleMech by Ostmann Industries. To that end, it was built entirely around gathering data and getting out of trouble, tasks for which it is exceptional. 
+overview:<p>The Ostscout was designed for one purpose: scouting. Introduced in 2600 by Ostmann Industries, this 35-ton light 'Mech was built entirely around gathering intelligence and escaping danger. Its exceptional speed and maneuverability allow it to avoid trouble easily, though its minimal armament means it can only engage the lightest opponents with any hope of success. Enhanced sensor arrays and a high-resolution targeting and tracking system supply the Ostscout with a constant stream of data about its surroundings, while powerful narrow-band communications equipment allows it to report from deep inside enemy territory.</p><p>As demand for the design grew beyond Ostmann's production capacity, the company licensed Kong Interstellar Corporation to begin manufacturing in 2700, following a similar arrangement previously established for the Ostsol. The Ostscout became so valuable during the Succession Wars that commanders hoarded them like treasures, deploying them only for the most critical reconnaissance missions.</p>
 
-capabilities:The Ostscout is quick enough to escape most traps, and very few other designs can match it in terms of speed and maneuverability. However its ability to run and leap out of danger came at the expense of offensive capability. In fact were it not for aggressive lobbying on the part of its test pilots the final production model would have been completely weaponless. As it is, the Ostscout would be hard-pressed to win a fight against all but the lightest 'Mechs. A poor combatant, the 'Mech excels at operating deep behind enemy lines, gathering as much information as possible about the terrain and the disposition of enemy forces. The true centerpiece of the design is its advanced sensor systems, including the TRSS.2L3 target-tracking system and powerful narrow-band Barret 4000 comm system. The sensor arrays themselves are mounted outside the main chassis due to their delicate nature, with the Ostscout using its arms to aim them. Everything from hydrological to geological data is recorded, so much data in fact that the 'Mech's computer cannot process it fast enough. This forces the Ostscout to move slowly when traveling through an area of interest, waving its arms seemingly at random, which makes it one of the few times the 'Mech is vulnerable to the enemy. However so long as the enemy's first salvo doesn't cripple it, the Ostscout will likely escape from an ambush.
+capabilities:<p>The Ostscout's primary feature is pure speed. Its VOX 280 fusion engine, typically mounted on designs twice its size, propels the 'Mech to a maximum speed of 129.6 kilometers per hour. Combined with a 240-meter jump capability provided by eight Ostmann Sct-A jump jets, only the Spider can match its maneuverability. This agility serves as the 'Mech's true protection, as the four-and-a-half tons of Durallex Light armor offers only modest defense against concentrated fire.</p><p>The Ostscout's combat capability is severely limited by design. A single Tronel II medium laser represents its entire offensive armament, mounted only after test pilots aggressively protested the original weaponless configuration. Ten heat sinks easily manage this minimal heat load, allowing the 'Mech to jump and fire simultaneously without overheating.</p><p>The true centerpiece of the design is its advanced sensor suite. The arm-mounted sensor arrays were installed outside the main chassis to avoid magnetohydrodynamic interference, with the 'Mech using its actuator systems to aim them. During maximum-intensity scanning, the Ostscout must move slowly while waving its arrays in seemingly random patterns, making it briefly vulnerable. However, if the first enemy salvo fails to cripple it, the 'Mech will almost certainly escape.</p>
 
-deployment:This variant is also produced by Krupp Armament Works. The top speed of the 'Mech is close to 150 km/h thanks to a GM 315 XL Engine. It uses eight standard jump jets and Ferro-Fibrous Armor, but removes all the advanced electronic equipment except for a TAG. The weapons and electronics are replaced by a pair of Moscovia Light PPCs.
+deployment:<p>Produced by Krupp Armament Works from former Word of Blake facilities on Terra, the 11J pushes the Ostscout's speed to 151 kilometers per hour through a GM 315 XL engine. Krupp 156 ferro-fibrous armor provides enhanced protection, while the formerly spindly arms now end in fully-articulated hands. Each torso mounts a Moscovia light PPC, giving the design unprecedented offensive capability at ranges that surprise even experienced opponents. The variant retains TAG for artillery designation while removing other advanced electronics. The Republic of the Sphere maintains limited production, exporting units to the Federated Suns and Lyran Commonwealth.</p>
 
-history:Starting in 2600 Ostmann built and sold the Ostscout to fulfill many armies' need for a swift reconnaissance 'Mech, but eventually found that demand was outstripping their production ability. Rather than sacrifice their popular Ostroc line of urban-combat 'Mechs, the company licensed Kong Interstellar to start building the 'Mech in 2700, an arrangement similar to that struck regarding the Ostsol. Kong would continue to build Ostscouts for the next hundred years until the destruction of their factory on Connaught at the outset of the Succession Wars. Deprived of the possibility of replacement, many commanders began to hoard their Ostscouts like valuable treasure, parceling them out only for special missions. Most Ostscout pilots would not even attempt to engage enemy 'Mechs, as the advanced sensor system became extremely rare and nearly impossible to replace. This unwillingness to put the 'Mech in danger meant many survived the Succession Wars in practically mint condition, although many which suffered damage to their advanced sensors were forced to replace them with inferior, albeit more robust, systems. Besides the Great Houses, ComStar also utilized the Ostscout, and in the aftermath of the Clan Invasion and ComStar Schism began developing a new Ostscout variant for their Com Guards. This new model would maintain the same maneuverability and intelligence-gathering capabilities of the original while improving its offensive and defensive capabilities. Debuting with success in 3064, within the next three years nearly half of all Com Guard Ostscouts had been upgraded to the new variant; however it was soon discovered that both the Lyran Alliance and Word of Blake were fielding their own updated Ostscouts identical to ComStar's. The intelligence leak would be confirmed and traced back to Dag Kesselring, former Precentor of the 66th Division, who passed on information about the program to both the Lyrans and Blakists. Used by both sides in the Blakist Jihad, the newborn Republic of the Sphere would maintain production of the 11J model Ostscout after the fall of Terra both for its own relatively limited needs as well as export sales to the Federated Suns and Lyran Commonwealth. Still produced during the Dark Age era, aside from the Krupp plant's combat focused Phoenix models both Kong Interstellar and Robinson Standard BattleWorks reintroduced variants that lean more heavily towards the original look and recon aspects of the venerable 7J model.
+history:<p>Ostmann Industries built and sold the Ostscout starting in 2600 to fulfill many armies' need for a swift reconnaissance 'Mech. When demand outstripped their production capacity, rather than sacrifice their popular Ostroc line, Ostmann licensed Kong Interstellar to begin production in 2700. Kong continued building Ostscouts for a century until the destruction of their factory on Connaught in 2802 at the outset of the Succession Wars. Deprived of replacements, commanders began hoarding their Ostscouts, parceling them out only for special missions, and most pilots would not even attempt to engage enemy 'Mechs given the irreplaceable nature of the advanced sensor systems.</p><p>The Ostscout's battle history reads as a series of daring missions deep behind enemy lines. During the Rebellion of 3010, Janos Marik used Ostscouts extensively to gather information on rebel movements and strengths. In early September 3021, four Ostscouts were dropped over New Ivaarsen by Draconis Combine DropShips to scout landing sites for a Kurita invasion force, spending five weeks evading Davion patrols while accumulating critical intelligence. The most famous exploit came in 3024 during the "Thousand Kilometer Chase," when a Capellan Ostscout pilot evaded Smithson's Chinese Bandits for ten hours, accumulating enough intelligence to enable a successful Confederation counter-attack.</p><p>ComStar also utilized the Ostscout, and following the Clan Invasion and ComStar Schism, developed a new variant maintaining the original's capabilities while improving offensive and defensive profiles. Debuting successfully in 3064, nearly half of all Com Guard Ostscouts were upgraded within three years. However, it was soon discovered that both the Lyran Alliance and Word of Blake were fielding identical variants. The intelligence leak was traced to Dag Kesselring, former Precentor of the Sixty-sixth Division, who had passed information to both the Lyrans and Blakists.</p><p>Following the Jihad, the newborn Republic of the Sphere maintained production of upgraded Ostscout models from former Word of Blake factories on Terra, selling them to the Federated Suns and Lyran Commonwealth. During the Dark Age era, Kong Interstellar reestablished production and formed an alliance with Clan Sea Fox to produce variants incorporating stealth technology and Clan weaponry, while Robinson Standard BattleWorks began manufacturing models highly prized by the Draconis Combine.</p>
 
 manufacturer:Krupp Armament Works
+
 primaryfactory:Terra
-systemmanufacturer:CHASSIS:Krupp 255 Endo Steel
-systemmanufacturer:ENGINE:GM 315 XL
-systemmanufacturer:ARMOR:Krupp 156 Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:Exeter Longscan 300
-systemmanufacturer:TARGETING:TRSS Eagle Eye with TAG
-systemmanufacturer:JUMP_JET:Ostmann Sct-A
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Krupp
+systemmode:CHASSIS:255 Endo Steel
+systemmanufacturer:ENGINE:GM
+systemmode:ENGINE:315 XL
+systemmanufacturer:ARMOR:Krupp
+systemmode:ARMOR:156 Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Rawlings
+systemmode:JUMP_JET:45
+systemmanufacturer:COMMUNICATIONS:Exeter
+systemmode:COMMUNICATIONS:Longscan 300
+systemmanufacturer:TARGETING:TRSS
+systemmode:TARGETING:Eagle Eye with TAG

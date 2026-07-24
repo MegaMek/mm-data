@@ -17,6 +17,11 @@
 
 key: RA
 name: Raven Alliance
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - RA
 capital: Alpheratz
 yearsActive:
   - start: 3083
@@ -41,6 +46,7 @@ ratingLevels:
   - Keshik
 fallBackFactions:
   - CSR
+  - OA # Outworlds Alliance: RA formed from the CSR + OA merger, so it inherits OA unit availability
   - CLAN.IS
 factionLeaders:
   - title: "Khan"
@@ -60,4 +66,6 @@ factionLeaders:
     surname: "McKenna"
     gender: "FEMALE"
     startYear: 3131
+usesMercenaries:
+  2500: false
 

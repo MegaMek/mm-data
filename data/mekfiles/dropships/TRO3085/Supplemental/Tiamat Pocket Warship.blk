@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,27 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac15-75b4-a4c4-5d3f06ebe1d2
+</UUID>
 
 <UnitType>
 Dropship
 </UnitType>
 
 <Name>
-Tiamat Pocket Warship
+Tiamat Pocket WarShip
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 5243
@@ -44,10 +39,6 @@ Tiamat Pocket Warship
 <year>
 3075
 </year>
-
-<originalBuildYear>
-3075
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -62,10 +53,10 @@ Spheroid
 </motion_type>
 
 <transporters>
-asfbay:6.0:6:1
-1stclassquarters:110.0:0
-cargobay:2082.0:1:6
-steeragequarters:440.0:0
+asfbay:6.0:6:1::-1:0
+1stclassquarters:110.0:0:-1::-1:0
+cargobay:2082.0:1:6::-1:0
+steeragequarters:440.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -92,9 +83,13 @@ steeragequarters:440.0:0
 20
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 810
@@ -104,9 +99,9 @@ steeragequarters:440.0:0
 </armor>
 
 <Nose Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Sub-Capital Cannon (Heavy)
 Sub-Capital Cannon (Heavy)
 Sub-Capital Cannon (Heavy)
@@ -132,12 +127,12 @@ ISLaserAntiMissileSystem
 </Nose Equipment>
 
 <Left Side Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Capital Missile Launcher (AR10 Launcher)
 Capital Missile Launcher (AR10 Launcher)
 Ammo AR10 Killer Whale:20
@@ -177,12 +172,12 @@ ISLaserAntiMissileSystem
 </Left Side Equipment>
 
 <Right Side Equipment>
-(B) Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
-Sub-Capital Laser (SCL/3)
+(B) Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
+Sub-Capital Laser /3
 (B) Capital Missile Launcher (AR10 Launcher)
 Capital Missile Launcher (AR10 Launcher)
 Ammo AR10 Killer Whale:20
@@ -255,19 +250,19 @@ Ammo Screen:20
 </structural_integrity>
 
 <capabilities>
-The ship is protected by 219 tons worth of Heavy Ferro Aluminum armor, which provides a considerable amount of protection for the ship. The ship is equipped with 10 Life boats to allow for the ship's crew to evacuate the vessel.
+<p>The CASPAR II Drone variant replaces the manned crew with an Advanced Smart Robotic Control System, enabling autonomous operation with a maximum thrust of 5g. The drone shares the same 219 tons of Heavy Ferro-Aluminum armor as the manned version, providing 3,015 points of protection. However, the drone mounts considerably less weaponry than its manned counterpart, lacking the capital-grade AR-10 launchers, MML-9 batteries, and Laser Anti-Missile Systems found on the Republic's crewed variant.</p><p>The drone retains a formidable array of sub-capital weapons including Sub-Capital Laser/3 batteries across all arcs, Heavy Sub-Capital Cannons in the nose, Heavy Gauss Rifles, ER PPCs, Heavy PPCs on the broadsides, and Large Variable Speed Pulse Lasers for anti-fighter defense. Screen launchers and Piranha sub-capital missiles cover the aft arc. Cargo capacity is limited to 258 tons. The CASPAR II system provides competent robotic gunnery sufficient to operate the vessel's weapons effectively in combat without human oversight.</p>
 </capabilities>
 
 <overview>
-The Tiamat was designed as a command and control vessel for the Manei Domini, intended to take on and destroy multiple Star League era WarShips in an engagement.
+<p>The Tiamat is a massive 36,000-ton Spheroid pocket warship originally conceived during the Jihad as a command and control vessel capable of engaging and destroying multiple Star League era WarShips in a single engagement. Designed to withstand tremendous punishment while delivering devastating firepower at both capital and conventional scales, the Tiamat represents one of the most ambitious DropShip designs ever attempted.</p><p>Following the Jihad, the design was adapted for conventional manned operation and entered production for a new generation of naval forces. The Tiamat's combination of sub-capital and capital weaponry, heavy armor protection, and substantial cargo capacity makes it one of the most powerful non-WarShip combatants in known space.</p>
 </overview>
 
 <deployment>
-The Standard or Republic version of the Tiamat produced less thrust than the earlier Blakist Drone configuration, capable of only 3 g of acceleration. However, the ship makes up for its lack of speed with firepower. The ship features a mix of Capital and Sub-Capital grade weaponry. The bulk of the ship's weaponry is focused in its forward arcs, which harkens to its Drone configuration's intended mission as an interceptor.
+<p>The standard Tiamat Pocket WarShip represents the manned production variant produced by the Republic of the Sphere beginning around 3085. One of the largest and most heavily armed non-WarShip combat vessels ever constructed, the standard Tiamat mounts a devastating array of capital and conventional weapons backed by massive armor protection and exceptional structural integrity. The manned variant trades the extreme maneuverability of the original drone version for reliable crew-directed tactical judgment, serving as the cornerstone of the Republic's naval defense fleet.</p>
 </deployment>
 
 <history>
-The ship was originally conceived by order of the Manei Domini commanding officer, Apollyon, in 3066. It was later redesigned for use with the Republic of the Sphere's armed forces after the Jihad. Its designers made the original model able to withstand considerable punishment. The first ship was operational by 3076. The Tiamat was exclusive to the Manei Domini's use. However, escalating pressures of the war prompted the design to be employed by regular Word of Blake forces, but only under certain conditions. Apollyon had ordered that no "frail" human should be allowed to control the vessels. Eventually, Precentor Martial Cameron St. Jamais managed to convince Apollyon to release the design for regular Blakist use. Apollyon suggested the vessels be converted with the new Caspar II drone technology. These vessels were used effectively in the defense of the last of the Word of Blake Protectorate worlds, including the Liberation of Terra. After the war, the newly formed Republic of the Sphere, needing to build up its Black Water Navy, used the designs for a manned version of the Tiamat. The ship was put into production at Terra's badly damaged O'Neil Shipyards by 3085.
+<p>The Tiamat was originally conceived in 3066 by order of Apollyon, commanding officer of the Manei Domini, who demanded a vessel capable of challenging WarShips without being one itself. The resulting design was intended exclusively for Manei Domini use, with the first operational vessel completed by 3076. As the pressures of the Jihad escalated, Precentor Martial Cameron St. Jamais convinced Apollyon to release the design for regular Word of Blake forces, though Apollyon insisted that no unaugmented human should control the vessels. This restriction led to the development of a variant equipped with CASPAR II drone technology, allowing autonomous operation without a human crew.</p><p>These drone-operated Tiamats proved effective in the defense of the last Word of Blake Protectorate worlds, including the final battle for Terra. After the Jihad, the newly formed Republic of the Sphere, desperate to build a viable navy from the wreckage of the conflict, seized upon the Tiamat design. The Republic put a manned version into production at Terra's badly damaged O'Neil Shipyards by 3085, and later introduced the Tiamat II upgrade in 3112 with improved coordination systems for squadron-level operations.</p>
 </history>
 
 <manufacturer>
@@ -285,6 +280,14 @@ ARMOR:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Pocket WarShip

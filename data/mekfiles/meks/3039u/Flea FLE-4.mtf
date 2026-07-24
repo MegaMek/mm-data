@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,51 +15,50 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c20d-7252-a39e-b6972c308ef4
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Flea
 model:FLE-4
 mul id:1140
 
 Config:Biped
-TechBase:Inner Sphere
-Era:2501
-Source:TR:3039
-Rules Level:1
+techbase:Inner Sphere
+era:2501
+source:TR:3039,TR:SW
+published:RS:SW
+rules level:1
 role:Scout
 
-
-
-
+quirk:no_arms
 quirk:easy_maintain
 quirk:imp_life_support
-quirk:no_arms
 
+mass:20
+engine:120 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:20
-Engine:120 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 Single
+walk mp:6
+jump mp:0
 
-Heat Sinks:10 Single
-Walk MP:6
-Jump MP:0
-
-Armor:Standard(Inner Sphere)
-LA Armor:3
-RA Armor:3
-LT Armor:3
-RT Armor:3
-CT Armor:5
-HD Armor:5
-LL Armor:3
-RL Armor:3
-RTL Armor:1
-RTR Armor:1
-RTC Armor:2
+armor:Standard(Inner Sphere)
+LA armor:3
+RA armor:3
+LT armor:3
+RT armor:3
+CT armor:5
+HD armor:5
+LL armor:3
+RL armor:3
+RTL armor:1
+RTR armor:1
+RTC armor:2
 
 Weapons:4
+Small Laser, Left Arm
+Small Laser, Left Arm
 Large Laser, Right Arm
-Small Laser, Left Arm
-Small Laser, Left Arm
 Flamer, Center Torso
 
 Left Arm:
@@ -174,19 +173,26 @@ Heat Sink
 -Empty-
 -Empty-
 
+overview:<p>The Flea began life as the Trooper, a dedicated reconnaissance BattleMech designed by Toddlette Industries for the Free Worlds League Military. When the prototype first hit test fields in 2475, it was riddled with so many flaws that it took twenty-five years of additional development before the design could pass a proper field combat test. Rather than saddle a redesigned machine with the bad reputation its predecessor had earned, the Free Worlds League rechristened the upgraded model the FLE-4 Flea in 2501, making it the very first FWLM BattleMech to incorporate modern technology.</p><p>Focused on speed and firepower at the expense of protection, the inexpensive Flea was easy to mass-produce during the early Succession Wars, but excessive losses led Earthwerks Incorporated to shut down production in favor of heavier designs. The Flea remained an exceedingly rare sight until the arrival of Wolf's Dragoons, whose effective use of the light chassis sparked a manufacturing revival that eventually spread production across several worlds and made the Flea a common militia and garrison design throughout the Inner Sphere and Periphery.</p>
 
-Overview: The Flea was the direct descendant of the Free Worlds League first scout 'Mech, the Trooper. Neither the Trooper nor the Flea would impress any military analysts, though, with their generally slow speed and fragile armor making them easy prey for even the lightest opposing BattleMechs. With production of the Flea ceasing even before the start of the Succession Wars, this generally unpopular design seemed destined for the history books until the appearance of Wolf's Dragoons and their many ancient BattleMechs, Flea included.
+capabilities:<p>The post-Helm Memory Core FLE-17 represents the modern standard for the Flea line. Built on an Earthwerk Trooper II endo steel chassis, it retains the original design's maximum speed of just under one hundred kilometers per hour while incorporating a MASC system that allows short bursts approaching one hundred thirty kilometers per hour. This extraordinary speed is the Flea's primary defense, as the chassis mounts only three tons of Livingston Ceramics armor plating, leaving little margin for error against even light weapons fire.</p><p>The FLE-17's primary armament consists of a pair of Martell medium pulse lasers that provide reliable hitting power at close to medium range, supplemented by an Olympian flamer for anti-infantry work and two rear-mounted Martell small lasers for point defense against pursuing threats. The simple construction and modular components make the Flea a favorite among technicians, with critical systems situated for easy repair and upgrades. This maintainability has proven as valuable as its speed, allowing garrison and militia forces to keep their Fleas operational with minimal logistical support.</p><p>The design philosophy deliberately sacrifices survivability for affordability and speed. A single well-placed hit from a medium-caliber weapon can penetrate most of the Flea's armor, and a large laser strike can shear off a limb entirely. Pilots who rely on the Flea's protection rather than its mobility rarely survive long.</p>
 
-Capabilities: The Flea, as a 'Mech with many different variants, can accomplish many different roles. However, most of these models work best in infantry support roles, where the heavier armor and firepower of the 'Mech make it a valued friend and a dangerous foe. The firepower of the Flea itself is stronger than one might suspect; if cornered, inattentive scout 'Mechs can quickly find themselves at the mercy of a Flea.
+deployment:<p>The original production Flea model introduced in 2501, this variant mounts a Martell large laser as its primary weapon, allowing it to engage targets at standoff range while relying on its ninety-seven kilometer per hour top speed to avoid return fire. Two Martell small lasers and an Olympian flamer provide close-range capability, but the cost of this relatively heavy armament is a mere two tons of armor protection, half that of the contemporary Locust. Excessive losses during the Succession Wars led to the design's discontinuation, though surviving examples remained in scattered service for centuries.</p>
 
-Deployment: The main Earthwerks factory for the Flea was reopened following the signing of an exclusive contract with the Wolf's Dragoons. Initially only producing replacement parts and an occasional replacement 'Mech, Earthwerks eventually opened a second line to keep up with increasing demand. Expiration of the Dragoon contract in 3041 was welcomed by Earthwerks; the publicity gained through the Dragoons had created a healthy market for the Flea. Their original model, the FLE-4, would remain in Free Worlds League service until the tail end of the Clan Invasion.
+history:<p>The Flea's origins trace to the Age of War, when Colonel J. Marcus Llewelyn-Jaymes led a team at Toddlette Industries to create the Free Worlds League's first dedicated reconnaissance BattleMech. The resulting Trooper prototype of 2475 was plagued by fundamental design flaws, including legs that could not withstand combat stress and a complete lack of ejection mechanisms. Despite these shortcomings, political connections and rumored bribery kept the program alive until a comprehensive redesign produced the FLE-4 in 2501. Earthwerks Incorporated acquired Toddlette Industries in 2581, establishing Flea production lines on multiple worlds throughout Free Worlds League space.</p><p>Production continued through the Star League era and into the early Succession Wars, where the Flea's low cost made it attractive to desperate commands. However, the design's paper-thin armor led to staggering attrition rates, and one by one the production lines switched to heavier, more survivable designs. By the late Succession Wars, the Flea had virtually vanished from military inventories outside the Free Worlds League. This changed dramatically with the arrival of Wolf's Dragoons, who fielded a half-dozen Fleas to devastating effect. When the Dragoons were reduced to just a pair of operational Fleas after the Fourth Succession War, they reached an exclusive contract with Earthwerks to reopen production on Asuncion and Bernardo.</p><p>The Capellan Confederation acquired the Flea's blueprints through a Maskirovka operation during the mid-3040s. After the Dragoons' exclusivity clause lapsed, Earthwerks began producing the advanced FLE-17 almost exclusively for the Confederation until 3053, while also selling to any interested parties at affordable prices. The Confederation's Earthwerks Ltd. facility on Victoria added a third major production center, and the Flea found immediate use among the Confederation's numerous militia and garrison forces. Sales among mercenary units between 3067 and 3068 set profit records for the company, with many of the newer urban warfare variants flying off production lines.</p><p>The Jihad disrupted production significantly. The Word of Blake seized Asuncion, and fighting damaged facilities across multiple worlds. The Victoria factory was destroyed by retreating Capellan forces during the Victoria War. In the aftermath, Nimakachi Fusion Products Ltd. rebuilt a factory on Tematagi by 3084, adding new production capacity within Regulan Centralist Movement territory. The Republic of the Sphere controlled several former Earthwerks worlds during the early Dark Age period, though production patterns shifted as political boundaries changed.</p><p>By the ilClan era, Flea production had consolidated around Earthwerks-FWL, Inc. facilities on Asuncion and Bernardo under Free Worlds League control, with Earthwerks Ltd. on Grand Base providing Capellan Confederation production and Nimakachi continuing output on Tematagi. The FLE-21 model demonstrated continued interest in the design, with Wolf's Dragoons placing significant orders in an effort to revive the Flea's traditional role as a fast hunter-killer against other light BattleMechs.</p>
 
-systemmanufacturer:CHASSIS:Earthwerks
+manufacturer:Toddlette Industries|Earthwerks-FWL, Inc.|Earthwerks-FWL, Inc.|Earthwerks-FWL, Inc.
+
+primaryfactory:Ariel|Asuncion|Bernardo|Keystone
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Earthwerk
 systemmode:CHASSIS:Trooper
-systemmanufacturer:ENGINE:GM
+systemmanufacturer:ENGINE:General Motors
 systemmode:ENGINE:120
-systemmanufacturer:ARMOR:Livingston
-systemmode:ARMOR:Ceramics
+systemmanufacturer:ARMOR:Livingston Ceramics
+systemmode:ARMOR:Unknown
 systemmanufacturer:COMMUNICATIONS:Neil
 systemmode:COMMUNICATIONS:2000
 systemmanufacturer:TARGETING:Dalban

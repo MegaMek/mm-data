@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -28,12 +28,14 @@ There is no need to concern yourself with minimizing damage or securing the spoi
 No distractions. No delays. No mercy. Execute the raid, cripple their supply line, and get out before the enemy can mount a counterattack.]]></detailedBriefing>
     <battlefieldControl>ENEMY</battlefieldControl>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Convoy</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>0</baseHeight>
         <baseWidth>0</baseWidth>
         <heightScalingIncrement>5</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -129,7 +131,6 @@ No distractions. No delays. No mercy. Execute the raid, cripple their supply lin
                 <syncDeploymentType>None</syncDeploymentType>
                 <useArtillery>false</useArtillery>
                 <roleChoices>
-                    <forceRole>CIVILIAN</forceRole>
                     <forceRole>SUPPORT</forceRole>
                     <forceRole>SUPPORT</forceRole>
                     <forceRole>CARGO</forceRole>
@@ -187,10 +188,10 @@ No distractions. No delays. No mercy. Execute the raid, cripple their supply lin
                 <howMuch>1</howMuch>
             </failureEffect>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces to force convoy surrender. +2 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces to force convoy surrender. +2 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

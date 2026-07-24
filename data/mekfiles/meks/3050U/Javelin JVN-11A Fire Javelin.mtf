@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,43 +15,43 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c584-7ded-af4b-20343fa7a68d
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Javelin
 model:JVN-11A 'Fire Javelin'
 mul id:1677
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3053
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3053
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Striker
-
-
 
 quirk:unbalanced
 
+mass:30
+engine:180 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:30
-Engine:180 Fusion Engine(IS)
-Structure:Standard
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:6
+jump mp:6
 
-Heat Sinks:10 Double
-Walk MP:6
-Jump MP:6
-
-Armor:Ferro-Fibrous(Inner Sphere)
-LA Armor:9
-RA Armor:9
-LT Armor:9
-RT Armor:9
-CT Armor:11
-HD Armor:9
-LL Armor:12
-RL Armor:12
-RTL Armor:3
-RTR Armor:3
-RTC Armor:3
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:9
+RA armor:9
+LT armor:9
+RT armor:9
+CT armor:11
+HD armor:9
+LL armor:12
+RL armor:12
+RTL armor:3
+RTR armor:3
+RTC armor:3
 
 Weapons:7
 Medium Laser, Right Arm
@@ -67,9 +67,9 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -96,13 +96,13 @@ ISDoubleHeatSink
 ISDoubleHeatSink
 Medium Laser
 Medium Laser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
 ISDoubleHeatSink
@@ -113,10 +113,10 @@ ISDoubleHeatSink
 ISDoubleHeatSink
 Medium Laser
 Medium Laser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -174,18 +174,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Javelin was first built in 2751 by Stormvanger Assemblies as a recon 'Mech meant to be exported to the member states of the Star League. 
+overview:<p>The Javelin was introduced in 2751 by Stormvanger Assemblies as a light reconnaissance 'Mech designed for export to Star League member states. Built as a compromise between speed and firepower, the thirty-ton design proved fast enough to avoid heavier opponents while carrying sufficient weaponry to discourage pursuit. The Javelin's exceptional maneuverability made it equally adept at conducting ambushes, earning it the widespread reputation of appearing almost out of nowhere and giving rise to the phrase "sneaky as a Javelin."</p><p>Though production on Caph ended when the factory was destroyed during the Amaris Civil War in 2774, the Federated Suns (the design's largest customer) successfully incorporated the Javelin into virtually all of their BattleMech regiments. The design's continued popularity prompted Jalastar Aerospace to begin new production in 3055, ensuring the Javelin's service well into the thirty-second century.</p>
 
-capabilities:A compromise between speed and firepower, the Javelin was fast enough to avoid engagements with heavier 'Mechs while still having sufficient firepower to dissuade pursuit. In particular, the 'Mech's maneuverability meant that while its main function was to perform reconnaissance, the Javelin became adept at conducting ambushes, gaining a reputation for appearing out of nowhere and giving rise to the phrase "sneaky as a Javelin." Notably, the missiles and their ammunition stores are placed so far forward in the 'Mech's torso that the Javelin has a front-heavy center of gravity, causing MechWarriors unfamiliar with the design's forward-lean while running to be prone to falling over while moving at high speeds in difficult terrain.			
+capabilities:<p>The Javelin mounts a pair of Arrowlite SRM-6 launchers in its torso, providing devastating close-range firepower capable of exploiting breaches in enemy armor. With one ton of ammunition per launcher, the design carries sufficient missile stores for most engagements, though extended guerrilla operations can strain supply lines. The placement of these launchers so far forward in the torso creates a front-heavy center of gravity, giving the Javelin a distinctive forward lean when running at full speed. Pilots unfamiliar with this characteristic often struggle to keep the 'Mech upright in difficult terrain, though experienced MechWarriors learn to compensate for this tendency.</p><p>A GM 180 fusion engine propels the Javelin to speeds of ninety-seven kilometers per hour, while six Rawlings 95 jump jets provide a jumping distance of one hundred eighty meters. This mobility allows the Javelin to dictate engagements, closing rapidly to deliver its missile payload before withdrawing. However, with only four tons of StarGuard I armor, the design is ill-suited for prolonged firefights or hand-to-hand combat, and commanders typically withdraw their Javelins once ammunition is expended.</p>
 
-deployment:The Javelin carries a limited weapons array consisting of only two Arrowlite SRM-6 launchers, one each in the left and right torso with one ton of ammunition per launcher. This makes the Javelin highly reliant on good supply lines and can hamper the 'Mech if it is forced into guerrilla combat, though with one ton of ammo per launcher it has sufficient endurance for most battles. As a close support 'Mech, it is highly adept at swooping in and helping deliver the final blow, especially as its scattering missiles can exploit and cripple exposed systems. However, its light armor makes the Javelin ill-suited for hand-to-hand brawling.
+deployment:<p>A post-Clan Invasion field refit introduced in 3053, this second Fire Javelin emerged when many older Javelins required significant repairs. Incorporating double heat sinks and ferro-fibrous armor, the 11A mounts seven medium lasers using components typically surplus from other upgraded 'Mechs. An additional ton of armor provides improved protection over both the original Fire Javelin and standard variants. While primarily a field refit, Jalastar Aerospace has produced limited numbers to meet demand.</p>
 
-history:The Javelin had yet to be integrated into most SLDF regiments when the Amaris Civil War struck and Stormvanger Assemblies' factory on Caph was destroyed in 2774, ending all production of the Javelin design. Despite this, the Federated Suns - who had purchased the largest total number of Javelins from Stormvanger Assemblies - succeeded in their plans to incorporate the design into practically all of their 'Mech regiments at the start of the First Succession War, where its appearance took many enemy combatants off-guard. Though employed to varying degrees by the other Successor States, the Javelin quickly became synonymous with the Federated Suns, often anchoring scout lances, or, in certain units, teaming up with other Javelins to create mobile fire support lances. Following the creation of the Federated Commonwealth, the design was upgraded with newly-recovered lostech during the latter part of the 3040s, and at the behest of AFFC High Command, Jalastar Aerospace began production of new Javelins in 3055. Since then, the sturdy and reliable scout 'Mech has continued to serve with distinction on the battlefield; though the original's level of armor protection has been deemed as insufficient by some, new variants continue to be introduced as technology progresses, ensuring its continued service towards the end of the thirty-first century.
+history:<p>Stormvanger Assemblies introduced the Javelin in 2751 as an export design for Star League member states seeking a capable light reconnaissance platform. The Federated Suns emerged as the largest customer, and House Davion took particular interest in the design's development. By the opening shots of the First Succession War, the Javelin had been integrated into most Federated Suns regiments, its sudden battlefield appearances catching many enemy combatants off guard.</p><p>The Javelin earned its reputation for ambush tactics during numerous engagements throughout the Succession Wars. During the long Battle of Kentares, a lance of Javelins and a Wasp from the Second Crucis Lancers executed a devastating rear attack against Kurita forces, destroying a Phoenix Hawk and damaging several other 'Mechs before using leapfrogging tactics to withdraw to friendly lines. The Second Battle of Cylene II in December 3002 demonstrated even more innovative usage, when recon lances composed mostly of Javelins hid beneath thirty meters of water in Waterhole Number Nine. When Kurita assault regiments entered the lake, the concealed Javelins surfaced and unleashed devastating point-blank missile barrages, contributing to the Combine's subsequent withdrawal from the planet.</p><p>The destruction of Stormvanger's Caph factory in 2774 during the Amaris Civil War ended original production. Despite this, the Javelin remained in widespread service, particularly with the Armed Forces of the Federated Suns. During the War of 3039, elements of the Tenth Deneb Light Cavalry on Marduk employed Javelins in aggressive anti-armor tactics, charging through Combine Demolisher formations while delivering full salvos of missiles.</p><p>Following the Clan Invasion, the Federated Commonwealth initiated upgrade programs incorporating recovered lostech. Jalastar Aerospace began producing new Javelins in 3055 at the behest of AFFC High Command, with the JVN-11D becoming the primary production variant during the Jihad era. The ilClan period has seen Jalastar return the Javelin to its classic missile-armed striker role with the JVN-12N, now featuring Clan-specification weaponry and enhanced mobility for continued service alongside Stingers and Wasps in AFFS reconnaissance lances.</p>
 
-manufacturer:Jalastar Aerospace, Field Refit
-primaryfactory:Panpour,Various
-systemmanufacturer:CHASSIS:Duralyte 246
-systemmanufacturer:ENGINE:GM 180
-systemmanufacturer:ARMOR:ArcShield Maxi IV
-systemmanufacturer:COMMUNICATIONS:Garret T10B
-systemmanufacturer:TARGETING:Dynatec 128C
+manufacturer:Jalastar Aerospace|Field Refit
+
+primaryfactory:Panpour|Various
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Duralyte
+systemmode:CHASSIS:246
+systemmanufacturer:ENGINE:GM
+systemmode:ENGINE:180
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Rawlings
+systemmode:JUMP_JET:95
+systemmanufacturer:COMMUNICATIONS:Garret
+systemmode:COMMUNICATIONS:T10B
+systemmanufacturer:TARGETING:Dynatec
+systemmode:TARGETING:128C

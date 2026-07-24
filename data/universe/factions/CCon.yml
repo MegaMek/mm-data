@@ -17,6 +17,11 @@
 
 key: CCon
 name: Coreward Confederacy
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes: []  # no SUCS equivalent
 nameChanges:
   2371: Autocracy of New Virginia
   2400: Virginian Union

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a5cd-71a9-af0a-4c145d930855
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Trinity Medium Battle Armor
 3073
 </year>
 
-<originalBuildYear>
-3073
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Leg
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -80,12 +68,66 @@ Leg
 ISBARL4:RA
 ISBARL5:Body
 BABattleClaw:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 ISBAMicroGrenadeLauncher:LA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<capabilities>
+<p>The Theseus "Killshot" takes a radically different approach to firepower, mounting a combined nine-tube rocket array backed by a grenade launcher. The four-tube and five-tube rocket launchers deliver a devastating opening salvo capable of threatening light vehicles and damaging BattleMech armor in concentrated fire, while the grenade launcher provides sustained anti-infantry and area-denial capability after the rockets are expended. Standard armor and battle claws are retained from the base Theseus design. Ground speed holds at approximately 30 kilometers per hour with no jump capability.</p><p>The "Killshot" designation reflects the variant's emphasis on maximum first-strike damage, making it effective in ambush scenarios and defensive fighting positions. Once the rocket tubes are spent, the suit's ranged effectiveness drops to the grenade launcher alone, leaving it heavily reliant on teammates for sustained engagements.</p>
+</capabilities>
+
+<overview>
+<p>The Trinity is a family of three medium battle armor suits commissioned by the Capellan Confederation Armed Forces and funded jointly by the Trinity Alliance. Introduced in the mid-3060s, the program aimed to make powered infantry available beyond the elite formations that fielded the Fa Shih. The Capellan variant, designated the Ying Long, incorporates advanced camouflage technology derived from an outside source. The Taurian Asterion and Canopian Theseus share a more conventional protection scheme, differing primarily in cosmetic styling. All three designs emphasize ground mobility, close-quarters capability against heavier units, and a flexible modular weapon mount that allows field commanders to tailor loadouts to mission requirements.</p>
+</overview>
+
+<deployment>
+<p>Word of Blake Level I sections of six "Killshot" troopers maximized the variant's burst-damage philosophy. The combined fifty-four rocket tubes in a full section delivered a staggering opening salvo, and Blakist planners deployed these formations specifically to crack defensive positions during infantry-led assaults. After expending their rockets, the sections fell back to a fire-support role using their grenade launchers.</p>
+</deployment>
+
+<history>
+<p>The CCAF Strategios commissioned the Trinity after recognizing that battle armor needed to reach beyond prestige formations. The Trinity Alliance partners provided funding that accelerated development to under two years, fueling speculation that preliminary design work had already begun before the formal program launched. Initial production was handled exclusively by Ceres Metals Industries on Capella, with the Capellan government employing deliberate delays and bureaucratic obstacles to prevent technology transfer to its allies. Both the Taurian Concordat and the Magistracy of Canopus eventually reverse-engineered the design independently, establishing their own production lines through Taurus Territorial Industries on Sterope and Foxx Infantry Systems on Royal Foxx.</p><p>The rapid proliferation of the Trinity across three nations gave the Alliance a common infantry platform that saw its first major combat test during Operation Sovereign Justice, where the suits proved capable against comparable designs fielded by other powers. Upgraded variants incorporating improved protection and heavier close-combat equipment appeared during the Jihad, further extending the family's service life across all three member states.</p>
+</history>
+
+<manufacturer>
+Foxx Infantry Systems
+</manufacturer>
+
+<primaryFactory>
+Royal Foxx
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3085
@@ -111,35 +153,3 @@ biped
 2
 </weightclass>
 
-<overview>
-Following the introduction of the Fa Shih, Capellan Confederation Armed Forces leaders wanted battle armor to be made available to more units than just the most prestigious.
-</overview>
-
-<capabilities>
-All three versions of the Trinity mount enough armor to stop a Large Laser and can move swiftly at 32 km/h on the ground. The Battle Claws used by the battlesuit enable it to make anti-'Mech attacks and ride OmniMechs into battle.
-</capabilities>
-
-<deployment>
-A Grenade Launcher backs up nine one-shot rocket tubes (a Rocket Launcher 4 plus a Rocket Launcher 5).
-</deployment>
-
-<history>
-Surprisingly, the Strategios listened and commissioned the design of a new battle armor. With funding from their Trinity Alliance allies, the CCAF put together a new unit in record time, leading to speculation that the design was already on the drawing board. The Trinity is really three different battle armors, all initially constructed by the Capellan Confederation. The Ying Long ("Shadow Dragon") uses the mimetic armor first created by Word of Blake for their Purifier, though how they acquired the technology is unknown. The Asterion and Theseus are functionally identical, but have different aesthetics. The Taurian Concordat is apparently unhappy at the decision of the Magistracy of Canopus to name their version after the legendary founder of Athens who slew the Minotaur. The Periphery nations became more and more agitated when convenient mishaps kept production solely in the hands in the Capellans. Both nations finally resorted to reverse engineering the design, then put them quietly into production. This left the Capellans with egg on their face as their allies suddenly stopped purchasing the production runs.
-</history>
-
-<manufacturer>
-Foxx Infantry Systems
-</manufacturer>
-
-<primaryFactory>
-Royal Foxx
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Foster
-sucsId: 2941
+sucsId: 2942
 xcood: 44.164
 ycood: 1733.181
 spectralType:
@@ -68,6 +68,12 @@ planet:
         capital: Beekman
       - name: Thiele
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2802-07-23'
         faction:
           source: canon
@@ -106,13 +112,13 @@ planet:
           source: canon
           value:
             - CFM
+      - date: '2870-01-01'
+        population: 3224362.0
       - date: '2872-01-01'
         faction:
           source: canon
           value:
-            - CLAN
-      - date: '2870-01-01'
-        population: 3224362.0
+            - CCO
       - date: '2880-01-01'
         population: 4238422.0
       - date: '2890-01-01'
@@ -147,7 +153,16 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CCO
+            - CFM
+            - CIH
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCO
+            - CFM
       - date: '3030-01-01'
         population: 10832900.0
       - date: '3040-01-01'
@@ -156,12 +171,28 @@ planet:
         socioIndustrial: A-A-D-A-C
       - date: '3050-01-01'
         population: 10995573.0
+      - date: '3052-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCO
+            - CFM
+            - CIH
       - date: '3059-12-12'
         faction:
           source: canon
           value:
             - CFM
             - CCO
+      - date: '3059-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCO
+            - CFM
+            - CIH
       - date: '3060-01-01'
         population: 11107675.0
       - date: '3070-01-01'
@@ -179,12 +210,6 @@ planet:
           value:
             - CGS
             - CFM
-            - CSV
-      - date: '3073-09-13'
-        faction:
-          source: canon
-          value:
-            - CGS
             - CSV
       - date: '3073-03-12'
         faction:
@@ -204,6 +229,12 @@ planet:
           value:
             - CSV
             - CGS
+      - date: '3073-09-13'
+        faction:
+          source: canon
+          value:
+            - CGS
+            - CSV
       - date: '3074-01-01'
         socioIndustrial: A-A-D-B-C
       - date: '3075-10-01'

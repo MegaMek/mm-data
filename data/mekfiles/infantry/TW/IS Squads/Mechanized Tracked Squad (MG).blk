@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-c04c-7ca1-89d2-4dead13c7052
+</UUID>
 
 <UnitType>
 Infantry
@@ -49,8 +44,16 @@ IS Level 2
 Tracked
 </motion_type>
 
+<Troopers Equipment>
+Generic Infantry Kit
+</Troopers Equipment>
+
 <Field Guns Equipment>
 </Field Guns Equipment>
+
+<overview>
+<p>Mechanized tracked squads ride in tracked armored personnel carriers at squad strength, providing all-terrain mechanized capability in a smaller package than a full platoon. These formations serve as armored reconnaissance elements, point security teams, and independent screening forces that need to cross rough ground reliably. The tracked APC handles terrain that would stop wheeled vehicles, and its armor protects the squad during movement, though the small troop count limits what the squad can hold once dismounted.</p>
+</overview>
 
 <source>
 TW
@@ -69,13 +72,10 @@ TW
 </secondn>
 
 <Primary>
-Auto-Rifle
+InfantryAssaultRifle
 </Primary>
 
 <Secondary>
 Machine Gun (Portable)
 </Secondary>
 
-<armorKit>
-GenericKit
-</armorKit>

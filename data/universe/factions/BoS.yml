@@ -17,6 +17,11 @@
 
 key: BoS
 name: Barony of Strang
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: SLDF
+sucsCodes: []  # no SUCS equivalent
 capital: Von Strang's World
 yearsActive:
   - start: 2779

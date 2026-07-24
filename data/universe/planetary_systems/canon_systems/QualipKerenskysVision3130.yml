@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Qualip (Kerensky's Vision 3130+)
-sucsId: 2087
+sucsId: 2088
 xcood: -72.643
 ycood: 189.27
 spectralType: F7V
@@ -104,6 +104,14 @@ planet:
         size: large
         icon: rock4
     event:
+      - date: '2108-12-05'
+        name: Qualip
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2597-06-05'
         faction:
           source: canon
@@ -147,6 +155,16 @@ planet:
         population: 756012942.0
       - date: '2750-01-01'
         population: 758715345.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Tamar Pact
+        #   - Camlann Shire
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 755194371.0
       - date: '2770-01-01'
@@ -171,6 +189,12 @@ planet:
         population: 2659293.0
       - date: '2860-01-01'
         population: 1703067.0
+      - date: '2864-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '2870-01-01'
         population: 1053926.0
       - date: '2880-01-01'
@@ -192,6 +216,15 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3130-01-01'
+        name: Kerensky's Vision
+        message: Qualip renamed to Kerensky's Vision
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CW
       - date: '3145-12-12'
         faction:
           source: canon
@@ -200,16 +233,23 @@ planet:
         hpg: A
         population: 48487.0
         socioIndustrial: B-C-A-D-A
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CJF
       - date: '3151-10-12'
         faction:
           source: canon
           value:
             - TamP
-      - date: '2108-12-05'
-        name: Qualip
-      - date: '3130-01-01'
-        name: Kerensky's Vision
-        message: Qualip renamed to Kerensky's Vision
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TamP
   - name: Bin Mukhtar
     type: TERRESTRIAL
     orbitalDist: 3.64

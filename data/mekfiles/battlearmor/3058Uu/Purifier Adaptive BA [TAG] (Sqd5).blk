@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a30c-71f1-9a2d-e521b477c2c3
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Purifier Adaptive Battle Armor
 3062
 </year>
 
-<originalBuildYear>
-3062
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Jump
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 1
@@ -78,23 +66,84 @@ Jump
 
 <Squad Equipment>
 CLBALightTAG:LA
-BA Mimetic:RA
-BA Mimetic:Body
-BA Mimetic:Body
-BA Mimetic:LA
-BA Mimetic:Body
-BA Mimetic:RA
-BA Mimetic:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
+IS BA Mimetic:RA
+IS BA Mimetic:Body
+IS BA Mimetic:Body
+IS BA Mimetic:LA
+IS BA Mimetic:Body
+IS BA Mimetic:RA
+IS BA Mimetic:Body
 BABattleClaw:RA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The TAG configuration equips the Purifier Adaptive's modular weapon port with a light target acquisition gear system, enabling troopers to designate targets for artillery strikes and semi-guided missile fire from allied units. This configuration carries no direct-fire weapons beyond the suit's battle claw, relying entirely on supporting forces for offensive action. The mimetic armor proves especially valuable in this role, as TAG operators must maintain line of sight to their targets while remaining undetected. Jump jets provide ninety-meter leaps for reaching elevated observation positions, and the trooper's low signature allows extended spotting without drawing counterfire. The TAG loadout demands coordination with artillery and missile assets, making it less useful for independent operations but devastating when integrated into a combined-arms force.</p>
+</capabilities>
+
+<overview>
+<p>The Purifier Adaptive is a medium battle armor design developed by the Word of Blake, built around a mimetic armor system capable of shifting color to match its surroundings. First fielded in 3062 from the Krupp Armament Works on Terra, the suit was among the first combat systems to employ adaptive camouflage technology, allowing troopers to become nearly invisible when stationary. Though lightly protected compared to other medium suits, the Purifier compensates with stealth and jump capability, filling a specialized reconnaissance and infiltration role. Its unique capabilities have made the Purifier one of the most distinctive battle armor suits in service across the Inner Sphere.</p>
+</overview>
+
+<deployment>
+<p>Clan Points employing TAG-equipped Purifiers were uncommon, though not unheard of among Clans that adopted combined-arms tactics incorporating artillery support. Five-trooper Points assigned to the spotting role operated in coordination with allied artillery Stars, using the suit's camouflage to maintain target designation without drawing counterfire.</p>
+</deployment>
+
+<history>
+<p>The origins of the Purifier Adaptive trace to ComStar's Sandhurst Royal Military College on Terra, where scientists began developing mimetic color-shifting technology for infantry use in 3058. When elements of the Word of Blake overran the college, the Sandhurst Training Regiment fought to defend it but could not prevent the research data from falling into enemy hands. ComStar believed the project had been destroyed along with the facility.</p><p>Word of Blake engineers had gained considerable experience in battle armor development through their joint program with the Free Worlds League Military to produce the Achileus light suit. That expertise proved critical in adapting ComStar's mimetic research into a functional battle armor camouflage system. Development proceeded at the Krupp Armament Works in Germany, where Blakist technicians refined the technology through extensive testing before settling on a final production design. A prototype was revealed in August 3061, and the Purifier entered full production the following year.</p><p>Production at Krupp proceeded at an advanced pace, with the Word of Blake placing large quantities of the suit into every Division. The Purifier quickly earned a feared reputation during the Jihad, where its camouflage capabilities made it deadly in ambush operations and urban fighting. Troopers learned to exploit the suit's stealth by holding position until targets entered effective range, then striking before the enemy could react. Field commanders learned to manage the suit's operational limitations through disciplined tactical doctrine, maximizing the camouflage advantage under favorable conditions.</p><p>Following the liberation of Terra and the dissolution of the Word of Blake, significant numbers of Purifier suits fell into Coalition hands. The Republic of the Sphere proved the most enthusiastic adopter, capturing enough suits to equip multiple formations within the Republic Armed Forces. Republic commanders reorganized their Purifier troopers into four-member squads, mirroring standard Inner Sphere infantry doctrine rather than the Blakist six-trooper formation structure. Aside from this organizational change, the Republic operated the suit identically to the original Word of Blake configuration.</p><p>Production eventually expanded beyond Terra. HDF Manufacturing on Falsterbo began producing the Purifier Adaptive during the later Republic era, and additional manufacturers including Brevard Industries and Paragon Defense also took up production to meet growing demand. By the ilClan era, the Purifier Adaptive had spread well beyond its Blakist origins, finding service with multiple factions who valued its unique stealth capabilities.</p>
+</history>
+
+<manufacturer>
+Krupp Armament Works|HDF Manufacturing
+</manufacturer>
+
+<primaryFactory>
+Terra|Falsterbo
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3058U
 </source>
+
+<published>
+RS:3058Uu-C
+</published>
 
 <chassis>
 biped
@@ -116,35 +165,3 @@ biped
 2
 </weightclass>
 
-<overview>
-The Purifier Adaptive battle armor is produced by Word of Blake, though the original data was stolen from ComStar.
-</overview>
-
-<capabilities>
-The Mimetic Armor makes the Purifier Adaptive much more difficult to target, especially when it is motionless. The drawback comes in the amount of armor it carries; only enough to stop a blast from a Medium Pulse Laser. It does, however, mount enough jump jets to leap ninety meters at a time.
-</capabilities>
-
-<deployment>
-The Purifier Adaptive has a battle claw that aids it in anti-'Mech attacks. It mounts a modular weapon port that can accept an ER Small Laser, Compact Narc Launcher, Light TAG, or a Support PPC. The ER Small is the only vehicle-scale weapon. The TAG allows the squad to act as spotters for artillery and semi-guided missile fire. The Narc launcher only has one reload, and it is so bulky that a Purifier Adaptive trooper cannot make anti-'Mech attacks or jump until it runs out of ammunition and the launcher is jettisoned. The newest addition is the infantry-scale PPC, which, though an infantry weapon, allows the Purifier Adaptive to stand off and snipe at opponents, making good use of its mimetic armor.
-</deployment>
-
-<history>
-When the Word conquered Terra in 3058, they found the research that ComStar scientists had started only months before. For their part, ComStar believed the data had been destroyed, so they were as shocked as everybody else when a prototype turned up in August 3061. The Purifier Adaptive is revolutionary in that it uses mimetic, color-shifting armor. It has dozens of tiny cameras that feed data concerning the environment back to a computer that shifts the colors of the suit to camouflage, much like a chameleon does naturally. This effect is much better the less the armor moves, as the computer does not have to struggle to keep up with the background. The Republic of the Sphere captured many Purifier suits and put them into service. The Republic Armed Forces organized their troops into four man squads. Aside from this organizational change, the Purifier operated in exactly the same manner as the Word of Blake version.
-</history>
-
-<manufacturer>
-HDF Manufacturing,Krupp Armament Works
-</manufacturer>
-
-<primaryFactory>
-Falsterbo,Terra
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

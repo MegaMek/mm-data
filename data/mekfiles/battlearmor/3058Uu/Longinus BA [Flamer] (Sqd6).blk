@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a2ec-7209-a6df-24969f17b691
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Longinus Battle Armor
 3061
 </year>
 
-<originalBuildYear>
-3061
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Jump
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 1
@@ -81,15 +69,11 @@ CLBAFlamer:RA
 ISBASRM2OS:Body
 BAAPMount:LA
 InfantryAssaultRifle:APM:LA
-BA Advanced:RA
-BA Advanced:RA
-BA Advanced:LA
-BA Advanced:LA
-BA Advanced:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
+IS BA Advanced:RA
+IS BA Advanced:RA
+IS BA Advanced:LA
+IS BA Advanced:LA
+IS BA Advanced:Body
 BABattleClaw:LA
 </Squad Equipment>
 
@@ -111,9 +95,59 @@ BABattleClaw:LA
 <Trooper 6 Equipment>
 </Trooper 6 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Longinus carries a detachable one-shot SRM-2 launcher on a specialized dorsal mounting, providing an opening salvo capability before close engagement. Internal safety mechanisms prevent the suit's jump jets from engaging until the launcher is expended and jettisoned, after which troopers can leap up to ninety meters. The Flamer configuration mounts a small flamer in the right-arm modular weapon system, well-suited for clearing infantry positions and flushing defenders from enclosed spaces. A battle claw on the left arm enables anti-BattleMech swarming attacks, supplemented by an anti-personnel weapon mount for engaging unarmored infantry. The suit's advanced armor composite provides protection roughly equivalent to Clan battle armor plating, with enough coverage to absorb a direct large laser hit. This protection comes at significant manufacturing cost, as the specialized composites require dedicated production processes.</p>
+</capabilities>
+
+<overview>
+<p>The Longinus was the Free Worlds League's answer to the Clan Elemental battle armor, developed jointly with the Word of Blake beginning in 3054. Classified as a medium battle armor, the suit came closer to matching its Clan-tech inspiration than any other Inner Sphere design of the era. The FWL's alliance with the Blakists provided access to technologies that rival programs in other Great Houses lacked. First fielded in 3057, the Longinus earned a reputation as both capable and expensive, with production costs well above comparable Inner Sphere designs.</p>
+</overview>
+
+<deployment>
+<p>Word of Blake Militia formations organized Longinus suits into six-trooper Level I sections following the Captain-General's decision to supply the design. Flamer-armed Level I units excelled in the close-quarters fighting that characterized Blakist urban operations, and their larger formation size allowed Militia commanders to saturate a defensive position more quickly than the four-trooper FWLM squads they trained alongside.</p>
+</deployment>
+
+<history>
+<p>Development of the Longinus began in October 3054 as a joint venture between the Free Worlds League and the Word of Blake. The FWLM sought to replicate the Clan Elemental battle armor, and access to Blakist technologies gave the League an advantage over rival programs in the Federated Commonwealth and Draconis Combine. The advanced nature of the design and bureaucratic friction between the League and its allies slowed progress well beyond comparable efforts elsewhere.</p><p>The first prototypes reached testing in April 3056, and the results were catastrophic. Armor composites shattered during live-fire exercises, and power systems failed at random. Investigation traced many of these failures to a hidden ComStar sympathizer embedded in the Blakist development staff. Following the operative's removal, the team produced a corrected series of prototypes in early 3057. These early suits lacked the backpack missile launcher that made the Elemental so lethal, and the FWLM demanded one be incorporated. Other Inner Sphere teams had tried and failed to combine jump capability with a shoulder-mounted launcher, producing suits that were either too heavy on the ground or too ungainly in mid-jump. The Longinus team spent eight months on the problem before devising a detachable mounting that required jettisoning the launcher before the jump jets could engage.</p><p>By this point the project had far exceeded its budget, and the League Central Coordination Commission refused further funding. Production resumed only when Captain-General Thomas Marik personally authorized additional resources and IBMU agreed to absorb some costs in exchange for access to Blakist technology. The first production suits rolled off the Irian assembly line in December 3057. They arrived too late for Operation Guerrero but saw action in the Sirian Campaign and proved their worth during Operation Bulldog, where Longinus troopers held their own against Clan Elementals.</p><p>Corean Enterprises on Stewart and Kali-Yama Weapons Industries on Kalidasa soon picked up production, making the suit a common sight throughout the FWLM. Rear-echelon formations received small allotments for security, while elite frontline units fielded company or even battalion-strength deployments. The Longinus played a considerable role in the FWLM's success in the Isle of Skye. Thomas Marik initially refused to supply the suit to the Word of Blake for their planned assault on Terra, but his stance later softened, and Longinus suits began appearing in the Word of Blake Militia in significant numbers. During the Jihad, modified variants with magnetic clamps and experimental C³i electronics expanded the suit's operational profile, though the latter project was shelved after trials revealed excessive capability trade-offs.</p>
+</history>
+
+<manufacturer>
+Irian BattleMechs Unlimited|Corean Enterprises|Kali Yama Weapons Industries|Etna Foundries|Gibson Federated BattleMechs
+</manufacturer>
+
+<primaryFactory>
+Irian|Stewart|Kalidasa|Oriente|Gibson
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 TR:3058U
 </source>
+
+<published>
+RS:3058Uu-C
+</published>
 
 <chassis>
 biped
@@ -134,37 +168,4 @@ biped
 <weightclass>
 2
 </weightclass>
-
-<overview>
-The Longinus was the Free Worlds League's attempt to duplicate Elemental Battle Armor.
-</overview>
-
-<capabilities>
-The Longinus came closest to mimicking the capabilities of the Elemental suit that inspired it, and was thus considered one of the best ever built by the Inner Sphere at the time. It was also revolutionary for carrying an advanced armor composite which almost perfectly matched the Clans' composite on their suits. The 360kg of plating covering the Longinus is enough to withstand a full blast from a Large Laser and keep the trooper wearing it alive. It was also responsible for the tremendous price increase of the suit as new manufacturing processes were required to supply enough of this material.
-</capabilities>
-
-<deployment>
-The suit's right arm ends in a Modular Weapon Mount which could carry the standard Small Laser, Flamer, or Machine Gun (in 3063 it could also accommodate a "David" Light Gauss Rifle). Its left arm ends in a Battle Claw and features an Anti-Personnel Weapon Mount which can carry a light weapon for use against unarmored infantry, such as a sub-machine gun. Most importantly the suit features an integral SRM-2 launcher carried on a special detachable mounting. Safety mechanisms prevent the Longinus from engaging its jump jets while the launcher is still attached, but once jettisoned it can make leaps of up to 90 meters at a time. Jettisoning the launcher is also required in order for the battle armor to make anti-'Mech attacks. Finally the launcher carries only a single round of missiles due to the additional safety mechanisms taking up space.
-</deployment>
-
-<history>
-Though they were unable to match the original Clan-tech machine, the Longinus came the closest of any Inner Sphere attempt at the time, thanks in part to the help of the Word of Blake. Initial development of the suit began in October 3054, however due to the advanced nature of the Longinus' construction and bureaucratic wrangling between the League and its Blakist allies, the process of reaching prototype stage took much longer than the comparable Inner Sphere Standard. In April 3056 the first suits were ready for testing; unfortunately their debut was a disaster. During live-fire exercises the armor composite protecting the suits shattered and the suits' power systems would fail at random without warning. It was eventually discovered that a hidden ComStar sympathizer was the cause for many of these problems. Following their elimination from the development team, the suit underwent a series of redesigns and a new series of prototypes were produced in early 3057. The Free Worlds League Military however was still not satisfied with these early models. While it could leap through the air via jump jets like the Elemental, the Longinus did not also carry the backpack SRM launcher; other Inner Sphere design teams which had attempted to match these two capabilities found their suits too ungainly to control on the ground or in the air. At the insistence of the military the Longinus development team spent the next eight months trying to solve the issue before coming up with the solution. The suit would have both jump jets and the SRM launcher, but the former could only be used once the latter had been expended and jettisoned. By this point though the project had gone way over budget and the LCCC was weary of providing any further resources. Only when Captain-General Thomas Marik personally authorized additional funds to cover the expenses - and when IBMU agreed to defray some of their costs in exchange for Blakist technology - did mass production of the Longinus begin in December 3057. These first suits were ready in time to participate in Operation Bulldog, where they proved themselves in combat against Elementals. Corean Enterprises and Kali-Yama later picked up production of the Longinus as well, making the suit a common sight within the FWLM: even garrison forces were given a squad or two of Longinus suits, while some elite units had multiple companies of the battle armor. Despite the assistance they provide in the battle armor's development Captain-General Marik was unwilling to supplying the Longinus to the Blakists, specifically for their planned invasion of Terra. Afterwards though Marik's stance softened and significant numbers of these suits began appearing in the Word of Blake Militia.
-</history>
-
-<manufacturer>
-Gibson Federated BattleMechs (A Division of Free Worlds Defense Industries),Irian BattleMechs Unlimited,Kali Yama Weapons Industries Inc.,Etna Foundries,Corean Enterprises - MacAdams-Suharno
-</manufacturer>
-
-<primaryFactory>
-Gibson,Irian,Kalidasa,Oriente,Stewart
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>
 

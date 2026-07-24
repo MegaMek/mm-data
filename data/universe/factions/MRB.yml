@@ -17,10 +17,15 @@
 
 key: MRB
 name: Mercenary Review Board
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CG
+sucsCodes: []  # no SUCS equivalent
 capital: Galatea
 yearsActive:
   - start: 2789
-  - end: 3052
+    end: 3052
 tags:
   - IS
   - MERC

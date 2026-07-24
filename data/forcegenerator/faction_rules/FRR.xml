@@ -123,13 +123,13 @@
             <formation ifIndex="0|1" ifRole="!command">
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4" ifWeightClass="L|M">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="12">Battle</option>
+                <option weight="12" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="3" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="H|A" name="Berserker Lance">Berserker/Close</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -146,10 +146,10 @@
                 <option weight="31" role="+recon">Recon</option>
                 <option weight="10" ifWeightClass="H|A" role="+recon">Heavy Recon</option>
                 <option weight="10" ifWeightClass="L" role="+recon">Light Recon</option>
-                <option weight="18">Battle</option>
+                <option weight="18" ifWeightClass="H|A">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A" name="Berserker Lance">Berserker/Close</option>
                 <option weight="7" ifWeightClass="H|A">Assault</option>
                 <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -185,7 +185,7 @@
         </weightClass>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option augmented="1"
                         weightClass="H,H,H">%SQUADRON%
                 </option>
@@ -245,7 +245,7 @@
         </weightClass>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option augmented="0"
                         weightClass="H,H" weight="2">%SQUADRON%
                 </option>
@@ -302,7 +302,7 @@
         </ruleGroup>
 
         <subforces>
-            <subforceOption ifWeightClass="H" ifUnitType="AeroSpaceFighter">
+            <subforceOption ifWeightClass="H|A" ifUnitType="AeroSpaceFighter">
                 <option weightClass="H,H" weight="2">%FLIGHT%</option>
                 <option weightClass="H,M">%FLIGHT%</option>
             </subforceOption>
@@ -599,13 +599,13 @@
         <formation ifIndex="0">
             <option weight="32">Fire</option>
             <option weight="6">Fire Support</option>
-            <option weight="4">Direct Fire</option>
+            <option weight="4" ifWeightClass="H|A">Direct Fire</option>
             <option weight="4" ifWeightClass="L|M">Light Fire</option>
             <option weight="2" role="+anti_aircraft">Anti-Air</option>
-            <option weight="12">Battle</option>
+            <option weight="12" ifWeightClass="H|A">Battle</option>
             <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-            <option weight="4" ifWeightClass="M">Medium Battle</option>
-            <option weight="2" ifWeightClass="L">Light Battle</option>
+            <option weight="20" ifWeightClass="M">Medium Battle</option>
+            <option weight="20" ifWeightClass="L">Light Battle</option>
             <option weight="3" ifWeightClass="H|A">Assault</option>
             <option weight="8" ifWeightClass="H|A" name="Berserker Lance">Berserker/Close</option>
             <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -622,10 +622,10 @@
             <option weight="31" role="+recon">Recon</option>
             <option weight="10" ifWeightClass="H|A" role="+recon">Heavy Recon</option>
             <option weight="10" ifWeightClass="L" role="+recon">Light Recon</option>
-            <option weight="18">Battle</option>
+            <option weight="18" ifWeightClass="H|A">Battle</option>
             <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-            <option weight="4" ifWeightClass="M">Medium Battle</option>
-            <option weight="2" ifWeightClass="L">Light Battle</option>
+            <option weight="20" ifWeightClass="M">Medium Battle</option>
+            <option weight="20" ifWeightClass="L">Light Battle</option>
             <option weight="6" ifWeightClass="H|A" name="Berserker Lance">Berserker/Close</option>
             <option weight="7" ifWeightClass="H|A">Assault</option>
             <option weight="2" ifWeightClass="L|M|H">Striker/Cavalry</option>
@@ -641,7 +641,7 @@
 
         <subforces generate="group" ifUnitType="Mek">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -651,41 +651,35 @@
                 <option weightClass="A,A,H,H,M">%ELEMENT%</option>
             </subforceOption>
             <subforceOption ifWeightClass="H">
-                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
-                <option weightClass="A,A,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,H,H"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="H,H,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="H,H,H,H,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,H,H,H" weight="2">%ELEMENT%</option>
+
+                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="M">
-                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,M,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="M,M,M,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="L">
-                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,L,L,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,L,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="L,L,L,L,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,L,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="M,M,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
+</subforceOption>
         </subforces>
     </force>
 
@@ -696,13 +690,13 @@
         <formation ifUnitType="Tank">
             <option weight="32">Fire</option>
             <option weight="6">Fire Support</option>
-            <option weight="4">Direct Fire</option>
+            <option weight="4" ifWeightClass="H|A">Direct Fire</option>
             <option weight="4" ifWeightClass="L|M">Light Fire</option>
             <option weight="2" role="+anti_aircraft">Anti-Air</option>
-            <option weight="17">Battle</option>
+            <option weight="17" ifWeightClass="H|A">Battle</option>
             <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-            <option weight="4" ifWeightClass="M">Medium Battle</option>
-            <option weight="2" ifWeightClass="L">Light Battle</option>
+            <option weight="20" ifWeightClass="M">Medium Battle</option>
+            <option weight="20" ifWeightClass="L">Light Battle</option>
             <option weight="3" ifWeightClass="H|A">Assault</option>
             <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
             <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -726,7 +720,7 @@
 
         <subforces>
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%POINT%</option>
+                <option weightClass="A,A,A,A,H">%POINT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%POINT%
                 </option>

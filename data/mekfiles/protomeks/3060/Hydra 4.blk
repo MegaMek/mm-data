@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0bb-7c00-8af7-bc739ca0e0aa
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Hydra
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Brawler
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 4
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 0
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -93,6 +101,7 @@ Biped
 CLAPGaussRifle Ammo (10)
 CLAPGaussRifle Ammo (10)
 CLAPGaussRifle Ammo (10)
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -116,43 +125,51 @@ CLAPGaussRifle
 CLAPGaussRifle
 </Main Gun Equipment>
 
+<capabilities>
+<p>The Hydra firepower is concentrated in its torso-mounted Streak SRM-3 launcher, which ensures that missiles only fire when the targeting system achieves a solid lock, eliminating waste from near-misses. The three-missile salvo delivers enough kinetic energy to threaten light BattleMek armor, and a full Point of Hydras firing in concert can strip armor from medium-weight targets with alarming efficiency. The Micro Pulse Laser mounted in the main gun provides accurate close-range backup fire, its pulse-firing mode partially compensating for the inherent targeting limitations of the ProtoMek fire control system.</p><p>The Hydra most significant limitation is its lack of mobility options. With a cruising speed of only forty-three kilometers per hour and no jump jets, the six-ton design cannot disengage from unfavorable encounters or navigate broken terrain with any agility. Twenty-nine points of armor provide reasonable protection for the weight class but cannot withstand concentrated fire from BattleMek-scale weapons for long. Ammunition dependency is also a concern, as the Streak launcher carries only twelve rounds before being reduced to the Micro Pulse Laser alone. Commanders typically deploy Hydra Points in terrain that favors short-range engagement, where the Streak missiles and pulse laser can be brought to bear before faster enemies can exploit the Hydra limited speed.</p>
+</capabilities>
+
+<overview>
+<p>The Hydra is a six-ton first-generation ProtoMek designed by Clan Smoke Jaguar as a medium assault platform within the original ProtoMek program on Huntress. Occupying the weight class between the versatile five-ton Centaur and the heavier Roc, the Hydra centers its firepower around a Streak SRM-3 launcher backed by a Micro Pulse Laser, giving it significant hitting power at short to medium range. The design lacks jump capability and carries moderate armor, trading mobility for raw combat effectiveness. In the combined-arms ProtoMek doctrine developed by the Jaguars, the Hydra was intended to serve as the primary engagement platform, closing with enemies identified by lighter scouts and delivering concentrated missile and energy fire.</p>
+</overview>
+
+<deployment>
+<p>The Hydra 4 mounts three AP Gauss Rifles, a radical weapon fit that provides exceptional sustained anti-personnel and anti-battle-armor firepower. Each rifle carries independent ammunition, giving the variant substantial endurance in prolonged engagements against infantry and light targets. Thirty-five points of armor, the highest of any Hydra variant, provide solid protection. The design retains the base model speed and lack of jump capability. The triple AP Gauss configuration makes the Hydra 4 one of the most effective anti-infantry ProtoMeks in service, capable of shredding conventional infantry formations and threatening even heavy battle armor at close range.</p>
+</deployment>
+
+<history>
+<p>The Hydra was developed as the dedicated medium assault ProtoMek in the original Smoke Jaguar lineup, filling the gap between the multi-role Centaur and the heavier fire support designs. Jaguar scientists designed it around the Streak SRM system, recognizing that missile accuracy was critical for a platform too small to carry large ammunition reserves. The combination of Streak technology with a pulse laser created a ProtoMek that could reliably hit its targets at combat ranges where larger machines often struggled against the small, fast-moving ProtoMek profile.</p><p>During the Battle of Huntress in 3060, the Hydra proved one of the more effective ProtoMek designs in direct combat. Several Points of Hydras engaged Inner Sphere light and medium BattleMeks at close range in the dense jungle terrain surrounding the Abysmal Manufacturing Complex, using the vegetation to close to optimal missile range before the larger machines could bring their superior firepower to bear. The Streak system proved particularly valuable in the jungle fighting, where standard missiles would have been wasted on deflection shots through heavy foliage.</p><p>Following the Jaguar Annihilation, the Hydra attracted interest from Clans that valued direct combat capability over reconnaissance or fire support. Clan Blood Spirit was among the first to establish independent Hydra production, appreciating the design straightforward combat philosophy that aligned with their aggressive martial tradition. Clan Hell Horses also produced the Hydra in significant numbers at Industriplex Upsilon on Niles, integrating it into their combined-arms formations alongside conventional armor and infantry.</p><p>Variant development for the Hydra has explored diverse tactical niches. The Hydra 2 mounts a Streak SRM-5 with three jump jets, creating a more mobile but lightly armored missile platform. The Hydra 3 replaces the missile and laser combination with an LRM-6 launcher and jump jets, converting the design into a mobile fire support unit. The Hydra 4 mounts three AP Gauss Rifles, a radical departure that transforms the Hydra into a dedicated anti-battle-armor and anti-infantry platform with exceptional sustained firepower.</p><p>The Wars of Reaving disrupted multiple Hydra production lines as the Homeworld Clans turned on each other. Clan Blood Spirit, one of the primary producers, was annihilated during the Reaving, and their production facilities were seized or destroyed. Despite these losses, the Hydra remains in production at several surviving facilities, its reliable combat performance ensuring continued demand among Clans that maintain large ProtoMek formations in their toumans.</p>
+</history>
+
+<manufacturer>
+Reserve Industriplex-2
+</manufacturer>
+
+<primaryFactory>
+York
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:36 Fusion
+</systemModels>
+
 <source>
 TR:3060
 </source>
+
+<published>
+RS:3060u
+</published>
 
 <tonnage>
 6.0
 </tonnage>
 
-<capabilities>
-It also boasts sufficient armoring to survive a direct hit by a PPC to its torso. However, the 36-rated fusion engine can only propel the Hydra to a cruising speed of 43 km/h. Unfortunately to get the armor and weaponry, the designers had to omit jump jets and a larger engine that would increase the Hydra's speed. These limitations aside, the Hydra is a good general purpose ProtoMech.
-</capabilities>
-
-<overview>
-Intended to serve as a medium assault unit, the Hydra carries heavy armor and a decent weapon suite.
-</overview>
-
-<deployment>
-Unfortunately to get the armor and weaponry, the designers had to omit jump jets and a larger engine that would increase the Hydra's speed. These limitations aside, the Hydra is a good general purpose ProtoMech.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:36 Fusion
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
-</systemManufacturers>

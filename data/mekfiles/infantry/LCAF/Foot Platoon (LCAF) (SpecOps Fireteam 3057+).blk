@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,7 +15,11 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#Saved from version 0.50.05-SNAPSHOT on 2025-04-26
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bdb8-7a39-8e49-95a5ad545702
+</UUID>
+
 <UnitType>
 Infantry
 </UnitType>
@@ -31,10 +35,6 @@ Foot Platoon (LCAF)
 <year>
 3057
 </year>
-
-<originalBuildYear>
-3057
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -56,12 +56,8 @@ Sneak Suit (Camo/IR/ECM)
 <Field Guns Equipment>
 </Field Guns Equipment>
 
-<capabilities>
-Only moderately more capable than regular infantry in terms of raw firepower, most of the utility of these formations is found in their skill and training. A direct assault at a critical point can make the difference between an easy success and slow, grinding failure.  Equipped with the latest in infantry stealth gear only makes these forces more threatening.
-</capabilities>
-
 <overview>
-Special operations forces, or SpecOps, are sometimes called on to take key parts of important assault operations. Too expensive to field in large numbers these veteran operators are used to assist with planning, training, and leading larger groups of more conventionally trained infantry.
+<p>Lyran infantry draw confidence from knowing their equipment is first-rate, even when assigned to garrison duty on worlds far from the front lines. Foot infantry platoons form the backbone of the LCAF's garrison forces, deploying on foot to hold positions, patrol perimeters, and secure urban areas where vehicles cannot easily operate. Armed with assault rifles and Blazer laser rifles that combine two emitters into a single devastating energy weapon, these platoons mix conventional ballistic firepower with high-energy precision shots. These special operations fireteams are small, highly trained units configured for reconnaissance, sabotage, and direct action behind enemy lines, relying on stealth and precise execution rather than conventional firepower.</p>
 </overview>
 
 <notes>
@@ -87,6 +83,18 @@ Rifle (TK Assault)
 <Secondary>
 Laser Rifle (Blazer)
 </Secondary>
+
+<sneakcamo>
+true
+</sneakcamo>
+
+<sneakir>
+true
+</sneakir>
+
+<sneakecm>
+true
+</sneakecm>
 
 <specialization>
 512

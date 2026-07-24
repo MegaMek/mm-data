@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c970-7cfd-a043-0b130774a4b8
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Blackjack
 model:BJ2-OB
 mul id:380
 
-Config:Biped Omnimech
-TechBase:Inner Sphere
-Era:3057
-Source:TR:3058U
-Rules Level:2
+Config:Biped OmniMek
+techbase:Inner Sphere
+era:3057
+source:TR:3058U,TR:CI
+published:RS:CI
+rules level:2
 role:Sniper
-
-
 
 quirk:non_standard
 
+mass:50
+engine:200 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:50
-Engine:200 XL Engine(IS)
-Structure:IS Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+base chassis heat sinks:8
+walk mp:4
+jump mp:4
 
-Heat Sinks:10 Double
-Base Chassis Heat Sinks:8
-Walk MP:4
-Jump MP:4
-
-Armor:Standard(Inner Sphere)
-LA Armor:14
-RA Armor:14
-LT Armor:18
-RT Armor:18
-CT Armor:22
-HD Armor:9
-LL Armor:18
-RL Armor:18
-RTL Armor:6
-RTR Armor:6
-RTC Armor:9
+armor:Standard(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:18
+RT armor:18
+CT armor:22
+HD armor:9
+LL armor:18
+RL armor:18
+RTL armor:6
+RTR armor:6
+RTC armor:9
 
 Weapons:3
 Gauss Rifle, Left Arm
@@ -65,13 +65,13 @@ Upper Arm Actuator
 ISDoubleHeatSink
 ISDoubleHeatSink
 ISDoubleHeatSink
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
-ISGaussRifle (omnipod)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
+ISGaussRifle (OMNIPOD)
 
 Right Arm:
 Shoulder
@@ -79,11 +79,11 @@ Upper Arm Actuator
 ISDoubleHeatSink
 ISDoubleHeatSink
 ISDoubleHeatSink
-LRM 10 (omnipod)
-LRM 10 (omnipod)
-ISArtemisIV (omnipod)
-IS Ammo LRM-10 Artemis-capable (omnipod)
-IS Ammo LRM-10 Artemis-capable (omnipod)
+LRM 10 (OMNIPOD)
+LRM 10 (OMNIPOD)
+ISArtemisIV (OMNIPOD)
+IS Ammo LRM-10 Artemis-capable (OMNIPOD)
+IS Ammo LRM-10 Artemis-capable (OMNIPOD)
 -Empty-
 -Empty-
 
@@ -91,8 +91,8 @@ Left Torso:
 Fusion Engine
 Fusion Engine
 Fusion Engine
-IS Gauss Ammo (omnipod)
-IS Gauss Ammo (omnipod)
+IS Gauss Ammo (OMNIPOD)
+IS Gauss Ammo (OMNIPOD)
 IS Endo Steel
 IS Endo Steel
 IS Endo Steel
@@ -105,7 +105,7 @@ Right Torso:
 Fusion Engine
 Fusion Engine
 Fusion Engine
-Small Laser (omnipod)
+Small Laser (OMNIPOD)
 IS Endo Steel
 IS Endo Steel
 IS Endo Steel
@@ -126,7 +126,7 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISC3SlaveUnit (omnipod)
+ISC3SlaveUnit (OMNIPOD)
 IS Endo Steel
 
 Head:
@@ -171,19 +171,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:An upgrade of the Blackjack BattleMech, the Blackjack OmniMech is a powerful and adaptable medium weight workhorse.
+overview:<p>The Blackjack OmniMech was developed by Luthien Armor Works in 3057, born from the Draconis Combine's technology exchange program during the Clan Invasion. When Ceres Metals Industries' St. Ives branch provided LAW with specifications and licenses for the BJ-2 Blackjack, the company manufactured only a handful of standard models before retooling the production line for an OmniMech variant. Weighing fifty tons (five more than its parent design) the BJ2-O became the first Inner Sphere OmniMech exported for foreign manufacture when LAW provided production plans to Irian BattleMechs Unlimited and Ceres Metals Industries.</p><p>This milestone was tarnished by the "monkey model" controversy, when both IBMU and Ceres discovered their initial production runs could only mount Inner Sphere OmniPods while DCMS units suffered no such limitation. LAW eventually released the necessary software interfaces, and the design has since become one of the most widely produced OmniMechs in the Inner Sphere.</p>
 
-capabilities:Weighing five tons heavier than its parent design, the use of advanced construction materials gives the OmniMech Blackjack 26.5 tons of pod space, allowing it to carry an impressive weapons payload. A maneuverable and enduring design for its size, four permanently mounted Icarus jump jets that allow the Blackjack to jump up to one hundred and twenty meters, the 'Mech protected by nine-and-a-half tons of armor. The Blackjack is also built with a weight saving Alshain 50 Endo Steel chassis and a Nissan 200 XL Engine giving it a top speed of 64.8 kph.
+capabilities:<p>Built on an Alshain 50 endo steel chassis and powered by a Nissan 200 XL engine, the Blackjack OmniMech achieves a top speed of sixty-four kilometers per hour supplemented by four permanently mounted Icarus Standard jump jets providing 120 meters of jump range. Nine and a half tons of Mitchell Argon armor offers solid protection for a fifty-ton platform, while the weight savings from the XL engine and endo steel construction free an impressive 26.5 tons of pod space, rivaling many heavy 'Mechs in payload capacity.</p><p>The Prime configuration reflects the design's fire-support heritage with twin Ultra AC/5s capable of doubling their rate of fire, supported by four medium lasers for close engagements and four machine guns for anti-infantry work. The generous pod capacity has made the chassis remarkably adaptable, with configurations ranging from long-range sniper loadouts featuring Gauss rifles to energy-heavy brawling packages. This flexibility, combined with reliable jump capability and adequate protection, has made the Blackjack OmniMech a valued platform for commanders requiring a medium-weight design capable of fulfilling multiple tactical roles.</p>
 
-deployment:A long-range bombardment configuration, the primary weapon in the B configuration is a Gauss rifle backed up by an LRM-10 with an Artemis IV fire control system for increased missile accuracy. For token close range defense, this configuration carries a small laser. The B configuration is also linked to allied C3 networks with its C3 slave unit, making it a very accurate 'Mech.
+deployment:<p>A dedicated sniper configuration, Alternate Configuration B pairs a Gauss rifle with an LRM-10 launcher enhanced by an Artemis IV fire control system for improved missile accuracy. A C3 slave unit links the 'Mech to allied targeting networks, significantly improving accuracy at all ranges when operating within a coordinated lance. A single small laser provides token point defense, as the configuration relies on standoff distance and networked targeting data for its effectiveness.</p>
 
-history:Much like the Firestarter OmniMech, the genesis of the omni-Blackjack stems from the Combine's technology exchange program during the initial Clan Invasion with Ceres Metals Industries ' St. Ives Compact branch offering Luthien Armor Works specifications and licences to manufacturer the ill-regarded Blackjack. Even though it received the upgraded and more effective BJ-2 version, LAW manufactured only a few examples before reworking and retooling the line to manufacture an OmniMech version. As well as returning the updated Omni version to Ceres, LAW also exported the BJ2-0 Blackjack to the Free Worlds League's Irian BattleMechs Unlimited, making it the first OmniMech exported for manufacturing. Any goodwill LAW earned from this decision was short-lived when both IBMU and CMI discovered the first production runs of their Blackjacks could only mount Inner Sphere OmniPods, accusing the Combine of only exporting so-called "monkey" versions, the Combine company's claims of not having perfected the complex software interfaces to support Clan weapons when the plans were exported ringing hollow when Draconis Combine Mustered Soldiery Blackjacks did not suffer from this lack. LAW eventually offered up the required details allowing both companies to resolve the issue in future production runs with earlier versions being upgraded during their first major overhaul.
+history:<p>Luthien Armor Works converted the newly licensed BJ-2 design into an OmniMech beginning in 3057, and the decision to export the BJ2-O to both Irian BattleMechs Unlimited and Ceres Metals Industries marked the first time an Inner Sphere OmniMech had been licensed for foreign manufacture. The goodwill this gesture generated was quickly squandered when both IBMU and CMI discovered their exported production runs could only accept Inner Sphere OmniPods, while Draconis Combine Mustered Soldiery Blackjacks had no such restriction. LAW's claim that the complex software interfaces for Clan weapon compatibility had not been perfected at the time of export rang hollow, and the company eventually released the necessary technical data with earlier export models upgraded during scheduled overhauls.</p><p>The design was produced across the Inner Sphere for nearly a decade before the Word of Blake Jihad reshaped the production environment. Luthien Armor Works suffered devastating losses during the conflict's opening stages, and the increasingly desperate company sold the entire Blackjack OmniMech engineering and design rights to Irian BattleMechs Unlimited. Ceres Metals Industries accepted a production license from IBMU rather than purchasing the design outright. IBMU reworked the engineering to accommodate Free Worlds League weapon components, and by 3068 had begun producing record numbers of BJ2-O series units.</p><p>Maintenance on post-Jihad Blackjacks requires IBMU-certified parts, with persistent rumors of incompatibility between newer IBMU OmniPods and older LAW-produced units complicating logistics for mixed-era formations. The Free Worlds League and Capellan Confederation field the largest number of Blackjack OmniMechs, with Ceres Metal Works maintaining limited production primarily serving Capellan formations along the Federated Suns border. General Motors also operates a production line on New Valencia, further expanding the design's reach across the Inner Sphere.</p>
 
-manufacturer:Irian BattleMechs Unlimited,Luthien Armor Works,General Motors/Blackwell Corporation,Irian BattleMechs Unlimited,Ceres Metals Industries,Ceres Metals Industries
-primaryfactory:Irian,Luthien,New Valencia,Shiro III,St. Ives,Warlock
-systemmanufacturer:CHASSIS:Alshain 50 Endo Steel
-systemmanufacturer:ENGINE:Nissan 200 XL
-systemmanufacturer:ARMOR:Mitchell Argon
-systemmanufacturer:JUMP_JET:Icarus Standard
-systemmanufacturer:COMMUNICATIONS:Sipher Security Plus
-systemmanufacturer:TARGETING:Matabushi Sentinel
+manufacturer:Luthien Armor Works|Irian BattleMechs Unlimited|Irian BattleMechs Unlimited|Ceres Metals Industries|Ceres Metals Industries|General Motors/Blackwell Corporation
+
+primaryfactory:Luthien|Irian|Shiro III|St. Ives|Warlock|New Valencia
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Alshain
+systemmode:CHASSIS:50 Endo Steel
+systemmanufacturer:ENGINE:Nissan
+systemmode:ENGINE:200 XL
+systemmanufacturer:ARMOR:Mitchell
+systemmode:ARMOR:Argon
+systemmanufacturer:JUMP_JET:Icarus
+systemmode:JUMP_JET:Standard
+systemmanufacturer:COMMUNICATIONS:Sipher
+systemmode:COMMUNICATIONS:Security Plus
+systemmanufacturer:TARGETING:Matabushi
+systemmode:TARGETING:Sentinel

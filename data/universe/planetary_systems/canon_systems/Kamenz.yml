@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kamenz
-sucsId: 1286
+sucsId: 1287
 xcood: -311.151
 ycood: -4.36
 spectralType: G2V
@@ -63,6 +63,12 @@ planet:
     landmass:
       - capital: Asgård City
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2370-10-18'
         faction:
           source: canon
@@ -130,6 +136,12 @@ planet:
         population: 2552520964.0
       - date: '2570-01-01'
         population: 2691162485.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 2814772266.0
       - date: '2590-01-01'
@@ -189,6 +201,16 @@ planet:
           source: canon
           value:
             - LA
+      - date: '2821-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2830-01-01'
         population: 3155916260.0
       - date: '2840-01-01'
@@ -237,12 +259,23 @@ planet:
         socioIndustrial: B-B-D-B-C
       - date: '3030-01-01'
         population: 2775766044.0
-      - date: '3040-05-07'
-        population: 2800020563.0
-        socioIndustrial: A-B-C-A-C
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-05-07'
+        population: 2800020563.0
+        socioIndustrial: A-B-C-A-C
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Alarion Operational Area
+        #   - Region 3
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -254,12 +287,25 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
+        #   - Timbuktu Theater
       - date: '3060-01-01'
         population: 2842905979.0
       - date: '3070-01-01'
         population: 2868894491.0
       - date: '3080-01-01'
         population: 2893673381.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Timbuktu Theater
       - date: '3090-01-01'
         population: 2914000155.0
       - date: '3096-01-01'
@@ -283,9 +329,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Lopter

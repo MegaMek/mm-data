@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Sudeten
-sucsId: 2428
+sucsId: 2429
 xcood: -83.471
 ycood: 292.084
 spectralType:
@@ -148,6 +148,12 @@ planet:
         size: large
         icon: rock12
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2610-11-03'
         faction:
           source: canon
@@ -196,6 +202,16 @@ planet:
           value:
             - LA
         population: 2360046396.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Tamar Pact
+        #   - Tamar Domains
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 2378235814.0
       - date: '2770-01-01'
@@ -267,14 +283,25 @@ planet:
         socioIndustrial: B-C-C-D-C
       - date: '3033-01-01'
         socioIndustrial: B-C-B-C-C
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-03-08'
         population: 2260680852.0
         socioIndustrial:
           source: canon
           value: B-B-A-B-C
-      - date: '3040-01-19'
+      - date: '3040-12-31'
+        # administration:
+        #   - Tamar March
+        #   - Benfled Operational Area
+        #   - Region 2
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -285,9 +312,21 @@ planet:
           value:
             - CJF
             - FC
+      - date: '3050-09-30'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3050-10-13'
         faction:
           source: canon
+          value:
+            - CJF
+      - date: '3051-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - CJF
       - date: '3060-01-01'

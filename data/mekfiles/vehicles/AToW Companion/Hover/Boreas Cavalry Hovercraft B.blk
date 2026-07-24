@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e8c9-7cbe-a88f-62c6e42329ad
+</UUID>
 
 <UnitType>
 SupportTank
@@ -45,10 +40,6 @@ B
 3062
 </year>
 
-<originalBuildYear>
-3062
-</originalBuildYear>
-
 <type>
 Clan Level 5
 </type>
@@ -62,8 +53,8 @@ Hover
 </motion_type>
 
 <transporters>
+standardseats:1.0:0:-1::-1:0
 BattleArmorHandles - troopers:-1
-standardseats:1.0:0
 </transporters>
 
 <cruiseMP>
@@ -77,6 +68,18 @@ standardseats:1.0:0
 <clan_engine>
 false
 </clan_engine>
+
+<armor_type>
+49
+</armor_type>
+
+<armor_tech_rating>
+5
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <omni>
 1
@@ -96,7 +99,7 @@ Advanced Fire Control
 </Body Equipment>
 
 <Front Equipment>
-Autocannon (Bearhunter Superheavy)
+Autocannon (Bearhunter Superheavy):SIZE:1.0
 </Front Equipment>
 
 <Right Equipment>
@@ -120,13 +123,17 @@ Autocannon (Bearhunter Superheavy)
 5
 </engine_tech_rating>
 
-<armor_tech_rating>
-5
-</armor_tech_rating>
+<overview>
+<p>Clan Hell's Horses upgraded their standard Clan hoverpods with Omni technology, adding a larger engine to improve versatility and speed. The result was the Boreas, which can swap weaponry based on battlefield needs. It has since become the premier covert operations support vehicle for infantry scout units in the Horses' touman, providing fast, flexible reconnaissance with a two-seat crew arrangement.</p>
+</overview>
 
-<history>
-These units have no weights in AToW. The weights are estimates. The units are considered unofficial until weights are given.
-</history>
+<manufacturer>
+Unknown
+</manufacturer>
+
+<primaryFactory>
+Unknown
+</primaryFactory>
 
 <source>
 AToW Companion
@@ -143,3 +150,4 @@ AToW Companion
 <fuel>
 0.029
 </fuel>
+

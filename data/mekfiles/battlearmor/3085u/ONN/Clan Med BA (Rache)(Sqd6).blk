@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a55e-7bd9-bf72-6264ac351ed4
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -75,13 +70,73 @@ CLBASRM3 (OS):Body
 CLBASRM3 (OS):RA
 BABasicManipulator:LA
 BABasicManipulator:RA
-CLBAJumpBooster:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
+BAJumpBooster:Body
 BASearchlight:LA
 </Point Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Rache upgrades the base design with improved armor protection, making it more durable in sustained engagements than other configurations. Its primary armament consists of an arm-mounted machine gun paired with twin one-shot SRM-3 launchers, giving each trooper a solid combination of sustained anti-infantry fire and single-use missile strikes. The machine gun proves effective against soft targets and light vehicles, while the SRM-3 salvos deliver concentrated damage against armored opponents.</p><p>This weapons package emphasizes staying power over the hit-and-run approach of other configurations. The Rache retains the base chassis’s jump booster system, HarJel self-sealing protection, and searchlight. Its heavier armor comes at the cost of some internal payload flexibility, but the trade-off gives frontline units a more survivable platform for prolonged combat operations.</p>
+</capabilities>
+
+<overview>
+<p>The Clan Medium Battle Armor is a Clan-technology medium-weight suit developed by Clan Nova Cat’s Scientist Caste after the Clan’s relocation to the Inner Sphere. Designed as an improvement over the standard Elemental, the suit incorporates enhanced jump mobility at the cost of reduced protection, filling a gap for a more agile powered infantry platform. Its distinctive samurai-influenced styling reflects the Clan’s growing cultural ties to its Draconis Combine hosts. The design’s adaptable chassis proved attractive to multiple Clans, each fielding specialized configurations suited to their own tactical doctrines and operational needs.</p>
+</overview>
+
+<deployment>
+<p>ComStar and Word of Blake Level I formations fielded the Rache in six-trooper teams. The configuration’s heavier protection made it effective for defensive operations where Level I units needed to hold positions without immediate resupply, and six troopers with improved armor could anchor an infantry position against numerically superior conventional forces.</p>
+</deployment>
+
+<history>
+<p>Following Clan Nova Cat’s Abjuration from the Clan Homeworlds, the Clan found itself in desperate need of replacement equipment lost during the forced relocation to the Inner Sphere. Khan Santin West, himself an Elemental, took particular interest in rebuilding his battle armor forces. With newer designs emerging from Clan space and the Inner Sphere alike, West charged his Scientist Caste with developing a suit that could hold its own against them.</p><p>Working from the basic Elemental chassis, Nova Cat scientists drew inspiration from the Gray Death Legion’s Scout battle armor to dramatically enhance the suit’s mobility. The resulting design emphasized agility over raw protection, with reworked armament to complement its enhanced movement capabilities. The Draconis Combine provided the Nova Cats with new homeworlds and subsidized construction of a dedicated production facility on Irece, strengthening the partnership between the Clan and its hosts.</p><p>Development suffered a setback in 3062 when hostilities erupted between Clan Ghost Bear and House Kurita, drawing Nova Cat resources away from the project. The few operational prototypes performed well against Ghost Bear forces, and full-scale production began in 3067. Cat Elementals quickly nicknamed the new suit the “Rabid,” and it soon replaced the standard Elemental as the primary battle armor throughout the Nova Cat Touman. Only senior Elemental commanders retained the older suit to reduce equipment losses.</p><p>Clan Diamond Shark, by then established on several Inner Sphere worlds, recognized commercial opportunity in the design. Offering discounted weapons and supplies in exchange for blueprints and schematics, Shark merchants established production lines on Twycross, Trondheim, and Itabaiana. They traded the suit to Clan Ghost Bear and Clan Wolf, both of whom developed specialized configurations tailored to their respective doctrines. Reports that the design was also being marketed to Inner Sphere buyers and Clan Wolf (In Exile) allegedly sparked a confrontation between the Sharks and the Clan Council that escalated near Strana Mechty. Despite this controversy, production continued to expand, with additional manufacturing facilities coming online in subsequent years to meet growing demand across multiple Clans.</p>
+</history>
+
+<manufacturer>
+Refit - W-7 Facilities
+</manufacturer>
+
+<primaryFactory>
+Weingarten
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3085
@@ -107,26 +162,3 @@ biped
 2
 </weightclass>
 
-<capabilities>
-Instead of the modular weapon ports of the Elemental Battle Armor, Clan Battle Armor mounts a fixed Flamer. Similarly, the SRM-2 pod is no longer detachable, though the new model uses a pair of One-Shot SRM-2 launchers. Interestingly, Clan Battle Armor also incorporates a standard searchlight that can be useful in and out of combat, though the design lacks an anti-personnel weapon. Like all Clan battle armor, Clan Battle Armor employs HarJel. The use of Basic Manipulators allow it to ride OmniMechs and also to make anti-'Mech attacks.
-</capabilities>
-
-<overview>
-Following their Abjuration from the Clan Homeworlds, Clan Nova Cat needed to rebuild. In so doing, Khan Santin West directed his scientist caste to create a new battle armor that could stand up to the newer designs coming out of Clan space.
-</overview>
-
-<deployment>
-Clan Wolf's updated armor uses an arm-mounted Machine Gun and twin One-Shot SRM-3 launchers for its main armament. It also increases the armor protection offered to the Elemental using it.
-</deployment>
-
-<history>
-Based on the Elemental suit, the result was the Clan Battle Armor, whose visual aesthetic shows that the Clan's contact with the Draconis Combine was already rubbing off on them. Though the design has a slow ground speed, the designers used the jump booster pioneered on the Gray Death Scout armor to rocket it up to one hundred twenty meters at a time. This necessitated a slight reduction in armor and a reworking of the weaponry. Clan Elementals have nicknamed these battle armor Rabids.
-</history>
-
-<manufacturer>
-Rhodes Foundry
-</manufacturer>
-
-<primaryFactory>
-Devil's Rock
-</primaryFactory>

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c7dc-74c5-9d4d-9385741c1b82
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Hellhound
 clanname:Conjurer
 model:5
 mul id:1477
 
 Config:Biped
-TechBase:Clan
-Era:3067
-Source:TR:3055U
-Rules Level:2
+techbase:Clan
+era:3067
+source:TR:3055U
+published:RS:3055Uu
+rules level:2
 role:Skirmisher
 
 quirk:ext_twist
 
+mass:50
+engine:300 Fusion (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:50
-Engine:300 Fusion (Clan) Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 Clan Double
+walk mp:6
+jump mp:6
 
-Heat Sinks:10 Double
-Walk MP:6
-Jump MP:6
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:14
-RA Armor:14
-LT Armor:19
-RT Armor:19
-CT Armor:23
-HD Armor:9
-LL Armor:24
-RL Armor:24
-RTL Armor:5
-RTR Armor:5
-RTC Armor:7
+armor:Ferro-Fibrous(Clan)
+LA armor:14
+RA armor:14
+LT armor:19
+RT armor:19
+CT armor:23
+HD armor:9
+LL armor:24
+RL armor:24
+RTL armor:5
+RTR armor:5
+RTC armor:7
 
 Weapons:4
 ATM 6, Left Arm
@@ -67,8 +69,8 @@ CLATM6
 CLATM6
 CLATM6
 Clan Ammo ATM-6
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
@@ -81,17 +83,17 @@ CLATM6
 CLATM6
 CLATM6
 Clan Ammo ATM-6
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 
 Left Torso:
 Jump Jet
 Jump Jet
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Endo Steel
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -105,9 +107,9 @@ Jump Jet
 Jump Jet
 CLERMediumLaser
 CLERMediumLaser
-Endo Steel
-Endo Steel
-Ferro-Fibrous
+Clan Endo Steel
+Clan Endo Steel
+Clan Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -147,8 +149,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+Clan Endo Steel
+Clan Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -161,8 +163,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+Clan Endo Steel
+Clan Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -170,18 +172,29 @@ Endo Steel
 -Empty-
 -Empty-
 
-overview:The Conjurer (code-named the Hellhound by the Inner Sphere nations) is a fast, inexpensive medium BattleMech that excels at medium to short range.
+overview:<p>The Conjurer, designated the Hellhound by Inner Sphere intelligence agencies, is in every practical sense a Wolverine IIC, a comprehensive Clan technology rebuild of the venerable Inner Sphere design. Introduced in 2829, the Conjurer was developed from the WVR-7H Wolverine II, the Star League Defense Force's Royal variant of the standard Wolverine chassis. Despite the clear lineage, the Clans refused to retain the original name due to the stigma associated with the Not-Named Clan, instead designating the rebuilt 'Mech the Conjurer.</p><p>Built on an endo steel internal structure and protected by eight and a half tons of ferro-fibrous armor, the fifty-ton Conjurer served primarily as a second-line combatant throughout much of Clan history. The design gained renewed prominence when Clan Nova Cat established manufacturing on Irece following the Clan's Abjurement, and later when the Wolf Empire converted the Thermopolis Wolverine production lines to Conjurer manufacture in 3142, granting Clan Wolf a manufacturing capacity that exceeded their most ambitious projections.</p>
 
-capabilities:Starting as befitting its status as a second-line 'Mech, most Conjurers uses a standard engine, though it is constructed on an endo steel chassis and uses eight and a half tons of ferro-fibrous armor. Its jump jets enable it to leap up to 180 meters at a time. However Clan Nova Cat’s Conjurer program in the 3060s saw refits and various new builds at times only loosely based on the original. It is noteworthy that the Conjurer is, for all intents and purposes, the Wolverine IIC and was even reported as such by ComStar in early sightings, presumably for its obvious heritage; it was designed off the WVR-7H Wolverine II variant of the original Wolverine, taking the concept and rebuilding it with advanced technology in the fashion of a IIC rebuild. However the Clans would not retain the name of the Not-Named Clan for the redesigned 'Mech.
+capabilities:<p>The Conjurer combines respectable speed with a potent short-to-medium range weapons suite, making it an effective skirmisher and raider. Powered by a standard Hermes 300 fusion engine, the design achieves a top speed of 96.6 kilometers per hour, a notable improvement over its Wolverine ancestor. Six BMP Mk. XXI jump jets provide a 180-meter jump capability, granting exceptional tactical mobility that allows the Conjurer to dominate broken terrain and exploit flanking opportunities.</p><p>The base configuration mounts a Kolibri Delta Series large pulse laser as its primary weapon, delivering accurate and devastating fire at medium range. Two Series 2b extended-range medium lasers provide supporting firepower, while a pair of Pattern J2 Streak SRM-2 launchers add close-range punch with the efficiency of Streak technology ensuring every missile finds its mark. This all-energy primary armament, supplemented by the ammunition-efficient Streak systems, gives the Conjurer excellent operational endurance, a quality particularly valued in the independent raiding operations for which second-line Clan units are frequently tasked.</p><p>The use of a standard fusion engine rather than the extra-light designs favored in frontline OmniMechs reflects the Conjurer's second-line status, but also grants superior survivability when absorbing torso damage. The endo steel chassis and ferro-fibrous armor maximize protection without sacrificing payload capacity, resulting in a well-balanced medium 'Mech that has consistently exceeded expectations throughout its long service history.</p>
 
-deployment:This variant mounts two ATM-6s, each of which is allocated a single ton of ammunition. A pair of ER medium lasers back up this model.
+deployment:<p>This configuration prioritizes missile-based firepower, mounting twin ATM-6 launchers as the primary weapons system with a single ton of ammunition allocated to each launcher. The limited ammunition supply restricts the variant's endurance in sustained engagements but provides excellent burst-damage capability across all range brackets when loaded with appropriate ATM munitions. Two extended-range medium lasers provide supplementary energy firepower that remains effective after the missile stores are depleted. The variant retains the base Conjurer's standard engine, endo steel construction, ferro-fibrous armor, and jump jets, making it functionally identical to the original in terms of mobility and protection. Built alongside the other Nova Cat Conjurer variants at the Irece Alpha facility, the Conjurer 5 fills a fire-support role within Clan Nova Cat second-line formations that complements the more direct-fire oriented configurations.</p>
 
-history:Even with an established infrastructure, rebuilding a destroyed Touman for any Clan is a hard task. Rebuilding was a Herculean effort for the Nova Cats, whose infrastructure could barely maintain current units in the field operating, let alone replace units destroyed during the Ghost Bear-Combine battle. The Nova Cats' ongoing reliance on the Draconis Combine may not be sustainable. It harmed their self-esteem and threatened to demoralize them in the long run. If Khan Santin West and his Nova Cats were to survive as a Clan, they would have to conquer this hurdle. Nova Cat scientists, technicians, and Galaxy Commanders looked for a different way to restore their depleted Touman. They updated existing BattleMechs instead of replacing the massive number of lost OmniMechs. The Hellhound was the first such candidate because of its proven battle record and the implications of its moniker. Everyone agreed that retooling this 'Mech would help to shore up the Nova Cats' tattered forces. The Hellhound's performance profile needed to be refined to satisfy new Nova Cat warfare doctrines, which meant the Cats needed assistance from their longtime friend and ally, Clan Diamond Shark. Through the Chatterweb, Khan West contacted Shark Khan Barbara Sennet and offered three Carrack Merchant-class warships and the rights to the new Hellhound in exchange for all of the materials and components needed to create it. Khan West has asked assistance in restoring the Cats' infrastructure, including the construction of new factories on Irece and Avon. The Diamond Sharks enthusiastically agreed to the deal.
+history:<p>The Conjurer emerged during the early years of Clan civilization, when the descendants of Kerensky's Exodus fleet were establishing their military doctrines and rebuilding their arsenals with newly developed technology. The design was created in 2829 as part of the broader Clan effort to upgrade proven Star League designs, with the WVR-7H Wolverine II serving as the foundation for the rebuild. ComStar intelligence initially reported the design as a modified Wolverine before recognizing it as a distinct Clan variant and assigning the reporting name Hellhound.</p><p>For centuries, the Conjurer served as a reliable second-line combatant across the Clan homeworlds. With the advent of OmniMech technology, frontline Galaxies transitioned to more flexible designs, but the Conjurer retained a valued role in garrison and second-line formations. Its standard engine construction and logistical simplicity made it particularly well-suited for independent operations, and warriors assigned to the design found it an effective platform for reconnaissance and special operations. When the Clans invaded the Inner Sphere, Great House military analysts came to respect the Conjurer's combat capabilities, noting that its combination of speed, firepower, and ruggedness made it a more dangerous opponent than its second-line designation might suggest.</p><p>The Conjurer's fortunes shifted dramatically following Clan Nova Cat's Abjurement from Clan society and resettlement in the Draconis Combine. Facing the need to rebuild their depleted touman, the Nova Cats negotiated a complex exchange with Clan Diamond Shark, trading three Carrack-class merchant vessels and manufacturing rights to the Hellhound in return for raw materials and access to factory facilities on Irece and Avon. The Nova Cat variants that emerged from this arrangement demonstrated considerable innovation, and the Diamond Sharks' own Spina Galaxies began fielding their version of the design. The Nova Cat rebuilds honored the sacrifice of allied Draconis Combine units, particularly the Second Arkab Legion and the Ryuken-ni, who had fought alongside the Clan during the Ghost Bear-Combine War.</p><p>The Wolf Empire's conquest of Thermopolis in 3142 opened an entirely new chapter in the Conjurer's production history. Clan Wolf converted the existing Kallon Industries Wolverine manufacturing lines to produce the Conjurer, initially assembling a stopgap variant from available Inner Sphere components, including spare engines and autocannons from the Shockwave production line, supplemented by MASC systems already being manufactured at the facility. This Conjurer 8, originally intended as a temporary measure while full Clan-specification manufacturing was established, proved popular enough with warriors that it continued production alongside standard Clan-technology models. The first Conjurer 8 units saw combat during a raid on Asellus Australis, where they engaged the First Nova Cat Regulars in what served as an effective shakedown for the new variant.</p>
 
-manufacturer:Irece Alpha 
+manufacturer:Irece Alpha
+
 primaryfactory:Irece
-systemmanufacturer:CHASSIS:Puma Type Medium Endo Steel
-systemmanufacturer:ENGINE:Consolidated Fusion 300 XL
-systemmanufacturer:ARMOR:Alpha Plate Special Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:JNE II Integrated
-systemmanufacturer:TARGETING:Build 4 CAT Advanced TTS
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Puma
+systemmode:CHASSIS:Puma Type Medium Endo Steel
+systemmanufacturer:ENGINE:Consolidated Fusion
+systemmode:ENGINE:Consolidated Fusion 350 XL
+systemmanufacturer:ARMOR:Alpha Plate
+systemmode:ARMOR:Alpha Plate Special Ferro-Fibrous
+systemmanufacturer:JUMP_JET:BMP
+systemmode:JUMP_JET:BMP Mk. XXI
+systemmanufacturer:COMMUNICATIONS:JNE
+systemmode:COMMUNICATIONS:JNE II Integrated
+systemmanufacturer:TARGETING:Build 4 CAT
+systemmode:TARGETING:Build 4 CAT Advanced TTS

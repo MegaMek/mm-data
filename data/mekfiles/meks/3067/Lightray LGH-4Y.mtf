@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,62 +15,63 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cd49-770a-9b07-eb356de1827d
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Lightray
 model:LGH-4Y
 mul id:4520
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3064
-Rules Level:2
+techbase:Inner Sphere
+era:3064
+source:TR:3067,TR:J
+published:RS:J
+rules level:2
 role:Skirmisher
-source:TR:3067
 
-
-
-
-quirk:hyper_actuator
 quirk:bad_rep_is
 quirk:exp_actuator
+quirk:hyper_actuator
 
+mass:55
+engine:385 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:55
-Engine:385 XL Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:7
+jump mp:0
 
-Heat Sinks:10 Double
-Walk MP:7
-Jump MP:0
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:18
+RA armor:18
+LT armor:19
+RT armor:19
+CT armor:26
+HD armor:9
+LL armor:26
+RL armor:26
+RTL armor:7
+RTR armor:7
+RTC armor:10
 
-Armor:Ferro-Fibrous
-LA Armor:18
-RA Armor:18
-LT Armor:19
-RT Armor:19
-CT Armor:26
-HD Armor:9
-LL Armor:26
-RL Armor:26
-RTL Armor:7
-RTR Armor:7
-RTC Armor:10
-
-Weapons:4
-1 ISLargePulseLaser, Right Arm
-2 ISSRM2, Right Torso, Ammo:50
-2 ISERMediumLaser, Left Torso
-1 ISERSmallLaser, Center Torso
+Weapons:6
+Large Pulse Laser, Right Arm
+ER Medium Laser, Left Torso
+ER Medium Laser, Left Torso
+SRM 2, Right Torso
+SRM 2, Right Torso
+ER Small Laser, Center Torso
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -83,11 +84,11 @@ Lower Arm Actuator
 Hand Actuator
 ISLargePulseLaser
 ISLargePulseLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 
 Left Torso:
@@ -96,27 +97,27 @@ Fusion Engine
 Fusion Engine
 ISERMediumLaser
 ISERMediumLaser
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISSRM2
-ISSRM2
-ISSRM2 Ammo
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+SRM 2
+SRM 2
+IS Ammo SRM-2
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -130,13 +131,13 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 ISERSmallLaser
-Endo-Steel
+IS Endo Steel
 
 Head:
 Life Support
 Sensors
 Cockpit
-Ferro-Fibrous
+IS Ferro-Fibrous
 Sensors
 Life Support
 -Empty-
@@ -151,8 +152,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -165,8 +166,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 -Empty-
 -Empty-
@@ -174,16 +175,27 @@ Ferro-Fibrous
 -Empty-
 -Empty-
 
-overview:The Lightray was designed by Martinson Armaments to be a heavy scout 'Mech and was put into production in 3064.
+overview:<p>The Lightray is a Word of Blake medium BattleMech designed by Martinson Armaments at their Australia facility on Terra. Commissioned by the Precentor Martial in the early 3060s, the fifty-five-ton design originated as a heavy scout platform capable of extreme speeds while carrying meaningful armor protection and weaponry. Martinson Armaments, already experienced with BattleMech production through the Spartan and Initiate designs, produced the first Lightrays in 3064.</p><p>The Lightray's incorporation of an advanced targeting computer, acquired through a Word of Blake intelligence operation, significantly enhanced the design's combat effectiveness and became its defining feature. Produced exclusively on Terra, the Lightray became a signature medium-weight design of the Word of Blake Militia during the late Civil War era and throughout the Jihad.</p>
 
-capabilities:The Lightray is built on a lightweight Geometric 33B Endo Steel chassis to help maximize the available weight for weapons and equipment and features a gigantic LTV 385 XL engine, the largest that can possibly be carried by a 'Mech its size. The engine allows the scout 'Mech to outpace most other medium designs with a top speed of 118 kilometers per hour, though it lacks the added maneuverability that could be provided by jump jets. The Lightray carries ten and a half tons of Strasbourg Armaments Type 4 Ferro-Fibrous armor, giving the 'Mech a great deal of protection.
+capabilities:<p>The Lightray's defining characteristic is its exceptional speed for a fifty-five-ton BattleMech. Powered by an enormous LTV 385 XL extralight engine (the largest that can possibly be fitted to a chassis of its weight class) the design achieves a top speed of nearly 120 kilometers per hour in open terrain. This extraordinary mobility makes it one of the fastest medium 'Mechs ever fielded, easily outpacing most designs in its weight category. The trade-off for this speed is the absence of jump jets, limiting the Lightray's maneuverability in close terrain.</p><p>The 'Mech's armament centers on a Tronel XIII large pulse laser linked to a Scope 3580 targeting computer, making it devastatingly accurate even at high speeds. Two Diverse Optics extended-range medium lasers and a single extended-range small laser supplement this primary weapon, all benefiting from the targeting computer's enhanced accuracy. While the Lightray carries fewer weapons than many medium designs, its hit rate is significantly higher than its peers. The Geometric 33B endo steel frame and over ten tons of Strasbourg Armaments ferro-fibrous armor provide solid protection, ensuring the 'Mech can survive the engagements its speed brings it into.</p>
 
-deployment:This design was actually the original Lightray produced in 3064, designed before the Word of Blake ROM stole the Targeting Computer technology from House Davion. Instead of the TC, it used two SRM-2 packs and had a ton of ammunition.
+deployment:<p>This variant is the original Lightray configuration produced in 3064, predating the ROM intelligence operation that secured targeting computer technology from the Federated Suns. Without the targeting computer, the available weight was instead allocated to a pair of SRM-2 launchers and a single ton of ammunition, supplementing the same laser array found on later models. MechWarriors quickly noted the variant’s limited effective engagement range, and the design was soon superseded once the retooled LGH-4W entered production.</p>
+
+history:<p>The Lightray’s history is inextricably linked to the Word of Blake and its ultimately ill-fated campaign for dominance of the Inner Sphere. Born from the Word of Blake Militia’s need for a capable medium scout ’Mech, the design was commissioned in the early 3060s when the Precentor Martial tasked Martinson Armaments (already an established Word of Blake defense contractor operating from their Australia facility on Terra) with creating a fast, well-armored platform.</p><p>Production began in 3064, initially yielding the LGH-4Y model without the advanced targeting computer that would later define the design. Almost immediately, the intelligence operation that would transform the Lightray was underway. Taking advantage of the chaos created by the FedCom Civil War, Word of Blake ROM agents stole targeting computer technology from the Federated Suns, itself reverse-engineered from captured Clan equipment. The Precentor Martial wasted no time ordering the Lightray production lines retooled, and the LGH-4W with its integrated targeting computer became the standard production model from 3065 onward.</p><p>The Lightray saw its primary service during the Jihad, when the Word of Blake unleashed its forces across the Inner Sphere. As a Blakist-exclusive design produced solely on Terra, the Lightray equipped Militia divisions across multiple fronts, with its high speed and accurate weaponry proving well-suited to the hit-and-run tactics employed by Word of Blake forces. Later variants incorporating C3i and improved C3 computers reflected the Blakists’ emphasis on networked warfare doctrines.</p><p>The design’s fortunes declined sharply with the fall of the Word of Blake at the conclusion of the Jihad. With Martinson Armaments’ Terra-based production facilities falling under Republic of the Sphere control, Lightray production appears to have ceased entirely. The Republic showed no interest in continuing manufacture of the distinctly Blakist design, and the factory’s production lines were not reactivated for the Lightray. Surviving examples continued to serve in scattered former-Blakist units and the occasional mercenary command, but the design effectively became extinct as a production ’Mech following the establishment of the Republic.</p>
 
 manufacturer:Martinson Armaments
-primaryfactory:Australia, Terra
-systemmanufacturer:CHASSIS:Geometric 33B Endo Steel
-systemmanufacturer:ENGINE:LTV 385 XL
-systemmanufacturer:ARMOR:Strasbourg Armaments Type 4 Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:Blow 107 Net (Improved)
-systemmanufacturer:TARGETING:Scope 3580 with Targeting Computer
+
+primaryfactory:Terra
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Geometric
+systemmode:CHASSIS:33B Endo Steel
+systemmanufacturer:ENGINE:LTV
+systemmode:ENGINE:385 XL
+systemmanufacturer:ARMOR:Strasbourg Armaments
+systemmode:ARMOR:Type 4 Ferro-Fibrous
+systemmanufacturer:COMMUNICATIONS:Blow
+systemmode:COMMUNICATIONS:107 Net (Improved)
+systemmanufacturer:TARGETING:Scope
+systemmode:TARGETING:3580

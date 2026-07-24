@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee9d-76b6-a759-9ddf7017b462
+</UUID>
 
 <UnitType>
 Warship
@@ -44,10 +39,6 @@ Enterprise Super Carrier
 <year>
 2745
 </year>
-
-<originalBuildYear>
-2745
-</originalBuildYear>
 
 <type>
 IS Level 4
@@ -93,9 +84,13 @@ cargobay:288117.5:2:9::-1:0
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -413,15 +408,19 @@ ISAMS Ammo:120
 </structural_integrity>
 
 <capabilities>
-The Enterprise was envisioned as a colossal vessel, initially planned to be a million tons in size and capable of accommodating three fighter wings. After multiple design revisions, it grew to be 60% larger, with the ability to house nearly a thousand fighters. It boasted an impressive arsenal, including large pulse lasers and anti-missile systems to defend against fighter swarms and incoming missiles. The ship's advanced command and control system allowed it to track and engage up to 2500 objects during combat. Additionally, the Enterprise featured an extensive fighter bay system, capable of launching an entire wing every ten seconds at peak combat performance.
+<p>On paper, the Enterprise was a terrifying instrument of war. Its internal hangars could accommodate nine hundred and seventy-two aerospace fighters organized into eighteen full wings, with fifty-four fighter bay doors enabling the launch of an entire wing every ten seconds at peak combat performance. The most complex command and control system ever designed for a Star League vessel occupied the ship's core, capable of simultaneously tracking up to twenty-five hundred objects during combat. A formidable array of capital weapons provided both striking power and defensive reach, with Heavy and Medium Naval PPCs complemented by naval lasers, naval autocannons, and AR-10 launchers capable of firing multiple missile types. Eighty large pulse lasers and eighty anti-missile systems provided comprehensive layered protection against massed fighter attacks and incoming missile salvos.</p><p>The design carried significant vulnerabilities alongside its ambition. At 1.6 million tons, the Enterprise's ferro-carbide armor protection of just over fifteen hundred tons was thin relative to its enormous displacement, leaving large sections of the hull inadequately shielded against concentrated capital weapon fire. A safe thrust of two gravities and maximum of three made the vessel sluggish for a capital asset of such strategic importance, and the sheer complexity of integrating so many disparate systems created risks that no amount of testing could fully mitigate. The carrier was entirely dependent on its fighter wings for offensive projection at range, and any sustained degradation of launch capability would have left the vessel dangerously exposed.</p>
 </capabilities>
 
 <overview>
-The Enterprise, a highly ambitious project of the Star League black navy, aimed to counter the potential threat posed by aircraft carriers in space warfare. Designed as the ultimate WarShip carrier, it sought to invalidate the existing WarShips of member states. However, despite its grand aspirations, the Enterprise encountered significant challenges and ultimately became a symbol of unrealized potential.
+<p>The Enterprise-class super carrier was the most ambitious WarShip project ever undertaken by the Star League Defense Force. Commissioned through the SLDF's black navy in 2745 and assigned to Daussault-Shimmon Enterprises on New Earth, the design called for a vessel capable of carrying an unprecedented number of aerospace fighters into battle while serving as a mobile command platform that could project overwhelming force across entire star systems. Its architects envisioned a warfighting capability so comprehensive that no rival naval force could hope to contest the Star League's dominance of deep-space combat for generations to come. The completed vessel never achieved powered flight, making the Enterprise one of the most costly and embarrassing failures in the history of interstellar naval construction. The program's collapse became a cautionary reference point for naval procurement authorities across the Inner Sphere.</p>
 </overview>
 
+<deployment>
+<p>The Enterprise never achieved operational status. When the vessel launched from its construction dock near Saturn in 2749, the assembled observers watched anticipation turn to dismay. The hull could not generate sufficient thrust to leave the construction berth under its own power, and tugs were forced to drag it clear of dry dock. After four hours of waiting for the propulsion problem to be rectified, the viewing audience dispersed. Test runs were rescheduled for a date that would never arrive. Investigators determined that the main engines were fundamentally incompatible with the thruster network, each system having been designed to conflicting specifications by separate contractors. Even if the main engines could somehow be made functional, the vessel would never be able to maneuver. The failure prompted the early retirement of the project's supervising officer, Admiral Ursula Verlander. The Enterprise was towed to the asteroid belt, stripped of salvageable components, and left as scrap.</p>
+</deployment>
+
 <history>
-The concept for the Enterprise emerged from concerns within the Star League black navy about the potential impact of aircraft carriers on space warfare. The initial specifications called for a million-ton ship, but numerous revisions were made throughout the design process, involving multiple engineering firms. The final vessel, named after the long line of Terran aircraft carriers, was eagerly anticipated by the SLDF navy. However, the Enterprise faced a major setback during its launch. The ship's propulsion system failed, preventing it from leaving its berth. Despite efforts to rectify the issue, the ship remained immobile. Investigations revealed incompatibilities between the engines and the thruster network, rendering the vessel incapable of maneuvering effectively. Following the propulsion failure, Admiral Verlander, the project's lead, took early retirement, preserving the careers of other program supporters. With the project deemed unviable, the Enterprise was eventually towed to the asteroid belt, where it was dismantled and salvaged by scavengers from the Sol system. The Enterprise serves as a reminder of the risks and uncertainties inherent in groundbreaking WarShip designs. While it embodied the grand ambitions and innovative defensive capabilities of the Star League, its propulsion failure marked the end of its journey and relegated it to a symbol of unfulfilled potential in the annals of space warfare.
+<p>The Enterprise program originated in the black navy's conviction that aerospace fighters would eventually do to WarShips what aircraft carriers had done to surface battleships in the mid-twentieth century on Terra. Rather than leave matters to chance, the SLDF's head of naval architecture received orders to design a carrier that would decisively tip the balance in the Star League's favor. The concept called for a vessel large enough to carry multiple fighter wings, serve as a mobile command platform for deep-space operations, and project enough firepower to discourage any attempt to close within engagement range. The first draft of specifications was ambitious but arguably achievable, calling for a million-ton vessel carrying three fighter wings.</p><p>The project fell victim to the scope creep and bureaucratic dysfunction that plagued many late Star League military programs. Specifications changed repeatedly, and each major revision brought in a new set of engineers from different firms. Over a dozen separate companies ultimately received payment for complete sets of schematics, each building on or contradicting the work of their predecessors. By the time construction began at the Daussault-Shimmon Enterprises yards, the design had ballooned by sixty percent in mass and tripled in fighter capacity. The resulting vessel was an engineering marvel on paper but an organizational catastrophe in practice, with critical systems designed by teams that had never coordinated with one another.</p><p>The vessel's catastrophic propulsion failure at its 2749 launch exposed the fundamental dysfunction at the heart of the project. The SLDF quietly canceled the program, and the political fallout contributed to a much broader reassessment of the black navy's procurement practices. The Enterprise became a byword for the dangers of unchecked military ambition, and the debacle exposed the institutional overreach that increasingly characterized the Star League's troubled twilight years. The class name itself, borrowed from a storied line of Terran aircraft carriers, took on an ironic quality that persisted in naval circles for centuries afterward.</p>
 </history>
 
 <manufacturer>
@@ -433,12 +432,22 @@ New Earth
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Daussault-Shimmon Enterprises
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Ferro-Carbide
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Carrier
@@ -459,6 +468,10 @@ Carrier
 <source>
 XTR:Boondoggles
 </source>
+
+<published>
+XTR:Boondoggles
+</published>
 
 <tonnage>
 1600000.0

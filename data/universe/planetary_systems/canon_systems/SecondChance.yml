@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Second Chance
-sucsId: 2269
+sucsId: 2270
 xcood: -22.763
 ycood: -129.785
 spectralType: M1V
@@ -50,6 +50,12 @@ planet:
         capital: Hurst
       - name: Shepherd
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2610-12-05'
         faction:
           source: canon
@@ -91,6 +97,16 @@ planet:
         population: 1139607363.0
       - date: '2750-01-01'
         population: 1147130973.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Tikonov Commonality
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 1149767061.0
       - date: '2766-07-30'
@@ -100,6 +116,10 @@ planet:
       - date: '2780-03-02'
         hpg: B
         population: 1138644488.0
+      - date: '2786-12-31'
+        # administration:
+        #   - Tikonov Commonality
+        #   - Region 4
       - date: '2790-01-01'
         population: 1129936782.0
       - date: '2800-01-01'
@@ -111,6 +131,12 @@ planet:
       - date: '2821-03-13'
         faction:
           source: canon
+          value:
+            - FWL
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
       - date: '2830-01-01'
@@ -184,6 +210,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 970618624.0
       - date: '3100-01-01'
@@ -200,15 +232,25 @@ planet:
           value:
             - OP
         population: 1042246360.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - OP
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
         population: 1060116010.0
       - date: '3145-01-01'
         population: 1069272323.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Oriente Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Marsh's Belt

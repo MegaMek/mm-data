@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac65-73f8-a5a4-09fd3540b226
+</UUID>
 
 <UnitType>
 Dropship
@@ -33,9 +28,9 @@ Dropship
 Saturn Patrol Ship
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 7416
@@ -45,10 +40,6 @@ Saturn Patrol Ship
 2243
 </year>
 
-<originalBuildYear>
-2243
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -57,14 +48,20 @@ IS Level 4
 Transport
 </role>
 
+<quirks>
+atmo_instability
+obsolete:2300
+imp_com
+</quirks>
+
 <motion_type>
 Spheroid
 </motion_type>
 
 <transporters>
-steeragequarters:140.0:0
-2ndclassquarters:14.0:0
-cargobay:33.0:2:5
+steeragequarters:140.0:0:-1::-1:0
+2ndclassquarters:14.0:0:-1::-1:0
+cargobay:33.0:2:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -95,9 +92,13 @@ cargobay:33.0:2:5
 40
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 110
@@ -167,9 +168,53 @@ IS Ammo MG - Full:200
 15
 </structural_integrity>
 
+<capabilities>
+<p>The Saturn is a 1,200-ton military spheroid DropShuttle built to primitive construction standards. Despite its age, the design was remarkably well-armed for its era, mounting prototype autocannons and machine guns that provided credible firepower against the modest threats of the twenty-third century. Thirty-three tons of primitive armor give the small hull respectable protection for its size, while the drive system provides impressive acceleration of up to eight gravities, making the Saturn one of the fastest vessels of its era. This speed was essential for a patrol craft that needed to intercept threats across vast stretches of empty space and respond quickly to distress calls from colonial convoys. The crew complement includes a substantial marine detachment for boarding operations and rescue missions. The Saturn's most significant limitation is its lack of modern sensors and fire control systems, which were primitive even by the standards of later centuries. Its small size and primitive construction also limit its endurance and damage tolerance compared to the purpose-built warships that would eventually replace it.</p>
+</capabilities>
+
+<overview>
+<p>The Saturn is a primitive patrol vessel first launched in 2243, originally designed by Dramm-Chance Interstellar Technologies as a deep space escort for vulnerable colonization ships. One of the earliest dedicated military spacecraft built in significant numbers, the Saturn was intended to ward off space debris and provide rescue services for the Terran Alliance's expanding colonization efforts. As the Alliance grew, the Saturn's role expanded from escort duty to anti-piracy patrols, and the class was eventually built in the thousands, forming the backbone of the Alliance's early space military throughout the Outer Reaches Rebellion and beyond.</p>
+</overview>
+
+<deployment>
+<p>The standard Saturn Patrol Ship serves in its baseline escort and patrol configuration, providing convoy protection, anti-piracy patrol, and search and rescue capability. Built in the thousands, these vessels formed the first true deep space military force in human history, operating from the Terran Alliance's colonial outposts across the expanding sphere of human settlement.</p>
+</deployment>
+
+<history>
+<p>The Saturn holds a unique place in military history as one of the first spacecraft designed and built specifically for combat operations in significant numbers. Launched in 2243, the design was initially conceived as an escort for the colonization ships carrying humanity to the stars, protecting these vulnerable transports from space debris and providing rescue capability in case of emergency.</p><p>As the Terran Alliance's colonization efforts expanded, so did the challenges of maintaining order across the growing sphere of human settlement. Pirates and separatist movements emerged to threaten colonial commerce, and the Saturn's weaponry was quickly turned from warding off debris to engaging human opponents. The class played a significant role during the Outer Reaches Rebellion, where Saturn patrol ships formed the core of the Alliance's military response to colonial unrest.</p><p>The Alliance's contraction following the Demarcation Declaration left many Saturns stranded beyond the Alliance's reduced borders, where they were lost to attrition without logistical support from Terra. Those that remained in Alliance service continued operating through the twenty-third century as the backbone of its diminished space forces. As newer and more technologically advanced DropShips entered service, the obsolete Saturns were progressively sold off as military surplus or reassigned as training vessels, with the last examples removed from active service by the end of the twenty-third century.</p>
+</history>
+
+<manufacturer>
+Dramm-Chance Interstellar Technologies
+</manufacturer>
+
+<primaryFactory>
+Jupiter
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 XTR:Primitives V
 </source>
+
+<published>
+XTR:Primitives V
+</published>
 
 <tonnage>
 1200.0
@@ -214,11 +259,4 @@ XTR:Primitives V
 <escape_pod>
 2
 </escape_pod>
-
-
-<quirks>
-imp_com
-atmo_instability
-obsolete:2300
-</quirks>
 

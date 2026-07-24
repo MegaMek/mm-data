@@ -17,6 +17,11 @@
 
 key: CBS
 name: Clan Blood Spirit
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CBS
 capital: York (Clan)
 yearsActive:
   - start: 2807
@@ -93,3 +98,5 @@ factionLeaders:
     gender: "MALE"
     startYear: 3083
     endYear: 3084
+usesMercenaries:
+  2500: false

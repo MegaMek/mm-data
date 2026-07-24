@@ -152,6 +152,19 @@
                 </option>
             </subforceOption>
         </subforces>
+
+        <!-- Hell's Horses canonically pair ProtoMek detachments with their elite Keshik
+             formations, not just FL clusters. Mirrors the Cluster node's ProtoMek attachment
+             so a rating="Keshik" cluster, which matches this force node instead of the
+             generic Cluster, still gets its ProtoMek detachment. -->
+        <attachedForces>
+            <subforceOption>
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="3">%STAR%</option>
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="2">%BINARY%</option>
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="1">%TRINARY%</option>
+                <option ifDateBetween="3071,3080" weight="4" />
+            </subforceOption>
+        </attachedForces>
     </force>
 
     <force echelon="%GALAXY%" eschName="Galaxy">
@@ -238,7 +251,10 @@
 
         <subforces>
             <subforce flags="+navalFluff" role="command">%STAR%</subforce>
-            <subforce flags="+navalFluff">%STAR%</subforce>
+            <!-- Second warship star only through 3075: the fleet had two stars in 3058-3067, but the
+                 Wars of Reaving cut it to a single ~5-ship star by 3079. Attaching it later would
+                 leave an empty star (no 3076+ ship block) that collapses into a stray default WarShip. -->
+            <subforce flags="+navalFluff" ifDateBetween=",3075">%STAR%</subforce>
             <subforce unitType="Jumpship" num="2">%STAR%</subforce>
             <subforce unitType="Dropship" role="assault">%STAR%</subforce>
         </subforces>
@@ -259,6 +275,13 @@
         <name ifFlags="horde">Horde Cluster</name>
         <name ifFlags="ranger">Rangers</name>
         <name ifFlags="adhoc">BattleMek Cluster</name>
+
+        <!-- Cavalry clusters are fast light-to-heavy recon/rapid-response (jump infantry, mobile
+             hovercraft/VTOL). The cluster picker suppresses Heavy for cavalry, but the trinary-level
+             star rolls still skew Heavy, so reshape the final element mix lighter for this type.
+             Assault and Strike clusters are left to the existing recipes (already canon). -->
+        <weightTarget ifFlags="cavalry" unitType="Mek" spread="8">A:2,H:18,M:35,L:45</weightTarget>
+        <weightTarget ifFlags="cavalry" unitType="Tank" spread="8">A:2,H:13,M:45,L:40</weightTarget>
         <co>%STAR_COL%</co>
 
         <!-- If toplevel, flags are assigned after weight distribution. If toplevel,
@@ -471,10 +494,10 @@
              part of the rearming process after the long war with Clan Wolf (TRO:Prototypes, p. 88). -->
         <attachedForces ifRating="Keshik|FL">
             <subforceOption>
-                <option ifYearBetween="3060," unitType="ProtoMek" weight="3">%STAR%</option>
-                <option ifYearBetween="3060," unitType="ProtoMek" weight="2">%BINARY%</option>
-                <option ifYearBetween="3060," unitType="ProtoMek" weight="1">%TRINARY%</option>
-                <option ifYearBetween="3071,3080" weight="4" />
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="3">%STAR%</option>
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="2">%BINARY%</option>
+                <option ifDateBetween="3060," unitType="ProtoMek" weight="1">%TRINARY%</option>
+                <option ifDateBetween="3071,3080" weight="4" />
             </subforceOption>
         </attachedForces>
     </force>
@@ -512,7 +535,7 @@
             </subforceOption>
             <subforceOption ifWeightClass="H">
                 <option weightClass="A,H,M" ifAugmented="1"
-                        flags="mekTankStar" weight="3">%STAR%
+                        flags="+mekTankStar" weight="3">%STAR%
                 </option>
                 <option weightClass="A,H,L" flags="+mekTankStar"
                         ifAugmented="1">%STAR%
@@ -746,13 +769,13 @@
                         weight="2">%STAR%
                 </option>
                 <option weightClass="A" unitType="Mek"
-                        ifRating="strike" weight="2">%STAR%
+                        ifFlags="strike" weight="2">%STAR%
                 </option>
                 <option weightClass="H" unitType="Mek"
-                        ifRating="strike" weight="3">%STAR%
+                        ifFlags="strike" weight="3">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRating="strike" weight="2">%STAR%
+                        ifFlags="strike" weight="2">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -796,13 +819,13 @@
                         weight="2">%STAR%
                 </option>
                 <option weightClass="H" unitType="Mek"
-                        ifRole="strike" weight="2">%STAR%
+                        ifFlags="strike" weight="2">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRole="strike" weight="3">%STAR%
+                        ifFlags="strike" weight="3">%STAR%
                 </option>
                 <option weightClass="L" unitType="Mek"
-                        ifRole="strike" weight="2">%STAR%
+                        ifFlags="strike" weight="2">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -840,10 +863,10 @@
                         weight="4">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRole="strike" weight="2">%STAR%
+                        ifFlags="strike" weight="2">%STAR%
                 </option>
                 <option weightClass="L" unitType="Mek"
-                        ifRole="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -1115,13 +1138,13 @@
                         weight="4">%STAR%
                 </option>
                 <option weightClass="A" unitType="Mek"
-                        ifRating="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
                 <option weightClass="H" unitType="Mek"
-                        ifRating="strike" weight="6">%STAR%
+                        ifFlags="strike" weight="6">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRating="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -1165,13 +1188,13 @@
                         weight="4">%STAR%
                 </option>
                 <option weightClass="H" unitType="Mek"
-                        ifRole="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRole="strike" weight="6">%STAR%
+                        ifFlags="strike" weight="6">%STAR%
                 </option>
                 <option weightClass="L" unitType="Mek"
-                        ifRole="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -1209,10 +1232,10 @@
                         weight="8">%STAR%
                 </option>
                 <option weightClass="M" unitType="Mek"
-                        ifRole="strike" weight="4">%STAR%
+                        ifFlags="strike" weight="4">%STAR%
                 </option>
                 <option weightClass="L" unitType="Mek"
-                        ifRole="strike" weight="8">%STAR%
+                        ifFlags="strike" weight="8">%STAR%
                 </option>
 
                 <option unitType="BattleArmor"
@@ -1549,10 +1572,10 @@
         <name>Trinary {greek}</name>
         <co>%NOVA_CAPTAIN%</co>
 
-        <changeEschelon ifRole="testTrinary">
-            <option role="-testTrinary">%TRINARY%</option>
-            <option role="-testTrinary" ifFlags="adHoc">%BINARY%</option>
-            <option role="-testTrinary"
+        <changeEschelon ifFlags="testTrinary">
+            <option flags="-testTrinary">%TRINARY%</option>
+            <option flags="-testTrinary" ifFlags="adhoc">%BINARY%</option>
+            <option flags="-testTrinary"
                     ifDateBetween="3071,">%BINARY%
             </option>
         </changeEschelon>
@@ -1575,10 +1598,10 @@
         <name>Trinary {greek}</name>
         <co>%STAR_CAPTAIN%</co>
 
-        <changeEschelon ifRole="testTrinary">
-            <option role="-testTrinary">%TRINARY%</option>
-            <option role="-testTrinary" ifFlags="adHoc">%BINARY%</option>
-            <option role="-testTrinary"
+        <changeEschelon ifFlags="testTrinary">
+            <option flags="-testTrinary">%TRINARY%</option>
+            <option flags="-testTrinary" ifFlags="adhoc">%BINARY%</option>
+            <option flags="-testTrinary"
                     ifDateBetween="3071,">%BINARY%
             </option>
         </changeEschelon>
@@ -1602,10 +1625,10 @@
         <name>Trinary {greek}</name>
         <co>%STAR_CAPTAIN%</co>
 
-        <changeEschelon ifRole="testTrinary">
-            <option role="-testTrinary">%TRINARY%</option>
-            <option role="-testTrinary" ifFlags="adHoc">%BINARY%</option>
-            <option role="-testTrinary"
+        <changeEschelon ifFlags="testTrinary">
+            <option flags="-testTrinary">%TRINARY%</option>
+            <option flags="-testTrinary" ifFlags="adhoc">%BINARY%</option>
+            <option flags="-testTrinary"
                     ifDateBetween="3071,">%BINARY%
             </option>
         </changeEschelon>
@@ -1902,14 +1925,14 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="8">Artillery Fire</option>
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1927,7 +1950,7 @@
 
         <subforces>
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%POINT%</option>
+                <option weightClass="A,A,A,A,H">%POINT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%POINT%
                 </option>
@@ -1988,14 +2011,14 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="8">Artillery Fire</option>
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -2013,7 +2036,7 @@
 
         <subforces>
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%POINT%</option>
+                <option weightClass="A,A,A,A,H">%POINT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%POINT%
                 </option>
@@ -2106,10 +2129,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="8" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="12" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -2121,15 +2144,15 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
                 <option weight="2" ifRating="!Keshik|FL">Artillery Fire</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="12" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="6" ifWeightClass="M">Medium Battle</option>
-                <option weight="2" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -2147,7 +2170,7 @@
 
         <subforces generate="group">
             <subforceOption ifWeightClass="A" ifUnitType="Mek">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -2157,45 +2180,35 @@
                 <option weightClass="A,A,H,H,M">%ELEMENT%</option>
             </subforceOption>
             <subforceOption ifWeightClass="H" ifUnitType="Mek">
-                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
-                <option weightClass="A,A,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,H,H"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="H,H,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="H,H,H,H,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,H,H,H" weight="2">%ELEMENT%</option>
+
+                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="M" ifUnitType="Mek">
-                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,M,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="M,M,M,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="L" ifUnitType="Mek">
-                <option weightClass="H,M,M,L,L"
-                        ifFlags="!horde|ranger">%ELEMENT%
-                </option>
-                <option weightClass="M,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,L,L,L,L"
-                        ifFlags="!horde|ranger">%ELEMENT%
-                </option>
-                <option weightClass="M,M,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,L,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="L,L,L,L,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,L,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="M,M,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
+</subforceOption>
             <subforce ifUnitType="ProtoMek"
                       generate="" num="5">%POINT%
             </subforce>
@@ -2222,6 +2235,12 @@
             </subforce>
             <subforce fluffName="CHH Gold Knight"
                       chassis="Lola III Destroyer">%ELEMENT%
+            </subforce>
+            <!-- Stampede: the ex-Ice Hellion York Pack Leader, claimed as isorla at Vantaa in 3072
+                 and renamed (see CIH.xml). Joins the fleet from 3072; carries on in the post-Reaving
+                 star below (still in service 3145). -->
+            <subforce fluffName="CHH Stampede" ifDateBetween="3072,3075"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
             </subforce>
         </subforces>
 

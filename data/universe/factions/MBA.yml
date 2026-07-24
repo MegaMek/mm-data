@@ -17,6 +17,10 @@
 
 key: MBA
 name: Mercenary Bonding Authority
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes: [ ]  # no SUCS equivalent
 capital: Twycross
 yearsActive:
   - start: 3133
@@ -31,3 +35,5 @@ color:
   blue: 169
 fallBackFactions:
   - CDS
+usesMercenaries:
+  2500: false

@@ -1,0 +1,174 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Balawat
+sucsId: 3112
+xcood: -51.567
+ycood: -506.59
+spectralType: G2V
+planet:
+  - name: Balawat I
+    type: ICE_GIANT
+    orbitalDist: 0.64
+    sysPos: 1
+    icon: iceg6
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.77
+    diameter: 30000
+    density: 1.8
+    dayLength: 10
+    yearLength: 1.4
+    smallMoons: 6
+  - name: Balawat II
+    type: TERRESTRIAL
+    orbitalDist: 1.12
+    sysPos: 2
+    icon: barren7
+    pressure: HIGH
+    atmosphere: TOXIC_POISON
+    composition: Nitrogen and Carbon Dioxide, plus trace amounts of Argon
+    gravity: 0.68
+    diameter: 7500
+    density: 6.3337
+    dayLength: 26
+    yearLength: 1.7
+    temperature: 195
+    water: 0
+    smallMoons: 1
+  - name: Balawat III
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 1.6
+    sysPos: 3
+    icon: gasg10
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.25
+    diameter: 17500
+    density: 5
+    dayLength: 13
+    yearLength: 2.4
+    smallMoons: 6
+  - name: Balawat
+    type: TERRESTRIAL
+    orbitalDist: 2.56
+    sysPos: 4
+    icon: green29
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.73
+    diameter: 12900
+    density: 4
+    dayLength: 22
+    yearLength: 4.3
+    temperature: 30
+    water: 29
+    lifeForm: FISH
+    event:
+      - date: '2750-01-01'
+        population: 56925.0
+        socioIndustrial: C-D-D-D-F
+      - date: '2760-01-01'
+        population: 215302.0
+      - date: '2770-01-01'
+        population: 620456.0
+      - date: '2780-01-01'
+        population: 1435745.0
+      - date: '2790-01-01'
+        population: 1938131.0
+      - date: '2800-01-01'
+        population: 1488806.0
+      - date: '2810-01-01'
+        population: 1135224.0
+      - date: '2820-01-01'
+        population: 840386.0
+      - date: '2830-01-01'
+        population: 648747.0
+      - date: '2840-01-01'
+        population: 460547.0
+      - date: '2850-01-01'
+        population: 348583.0
+      - date: '2860-01-01'
+        population: 249911.0
+      - date: '2870-01-01'
+        population: 170552.0
+      - date: '2880-01-01'
+        population: 118127.0
+      - date: '2890-01-01'
+        population: 82424.0
+      - date: '2900-01-01'
+        population: 57088.0
+      - date: '2910-01-01'
+        population: 41950.0
+      - date: '2920-01-01'
+        population: 32464.0
+      - date: '2930-01-01'
+        population: 25309.0
+      - date: '2940-01-01'
+        population: 18280.0
+      - date: '2950-01-01'
+        population: 13700.0
+      - date: '2960-01-01'
+        population: 9798.0
+      - date: '2970-01-01'
+        population: 7164.0
+      - date: '2980-01-01'
+        population: 5544.0
+      - date: '2990-01-01'
+        population: 4354.0
+      - date: '3000-01-01'
+        population: 3907.0
+      - date: '3010-01-01'
+        population: 3328.0
+      - date: '3020-01-01'
+        population: 2773.0
+      - date: '3030-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Balawat V
+    type: ASTEROID_BELT
+    orbitalDist: 4.48
+    sysPos: 5
+    icon: asteroid3
+    yearLength: 9.6
+    temperature: -64
+  - name: Balawat VI
+    type: GAS_GIANT
+    orbitalDist: 8.32
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 3.39
+    diameter: 140000
+    density: 1.7
+    dayLength: 9
+    yearLength: 24
+    ring: true
+    smallMoons: 13
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-M1
+        size: medium
+        icon: rock1
+primarySlot: 4

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,55 +15,57 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c374-7de0-b185-5fd524dcc826
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Banshee
 model:BNC-8S
 mul id:250
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3070
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3070
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Brawler
 
-quirk:rugged_1
 quirk:bad_rep_is
+quirk:rugged_1
 
+mass:95
+engine:380 XL Engine
+structure:IS Standard
+myomer:Triple-Strength
+cockpit:Standard Cockpit
+gyro:XL Gyro
 
-Mass:95
-Engine:380 XL Engine
-Structure:Standard
-Myomer:Triple-Strength
-Gyro:XL Gyro
+heat sinks:13 IS Double
+walk mp:4
+jump mp:0
 
-Heat Sinks:13 Double
-Walk MP:4
-Jump MP:0
+armor:Standard(Inner Sphere)
+LA armor:32
+RA armor:32
+LT armor:29
+RT armor:29
+CT armor:44
+HD armor:9
+LL armor:39
+RL armor:39
+RTL armor:10
+RTR armor:10
+RTC armor:15
 
-Armor:Standard
-LA Armor:32
-RA Armor:32
-LT Armor:29
-RT Armor:29
-CT Armor:44
-HD Armor:9
-LL Armor:39
-RL Armor:39
-RTL Armor:10
-RTR Armor:10
-RTC Armor:15
-
-Weapons:10
-1 ISERMediumLaser, Right Arm
-1 ISSNPPC, Right Arm
-1 ISC3SlaveUnit, Left Arm
-1 ISERLargeLaser, Right Torso
-1 ISGuardianECM, Right Torso
-2 ISMediumLaser, Right Torso
-1 ISERSmallLaser, Right Torso
-1 ISERMediumLaser, Right Torso
-1 ISLBXAC10, Left Torso, Ammo:20
-1 ISSmallLaser, Head
+Weapons:9
+ER Medium Laser, Right Arm
+Snub-Nose PPC, Right Arm
+LB 10-X AC, Left Torso
+ER Large Laser, Right Torso
+Medium Laser, Right Torso
+ER Small Laser, Right Torso
+Medium Laser, Right Torso
+ER Medium Laser, Right Torso
+Small Laser, Head
 
 Left Arm:
 Shoulder
@@ -104,8 +106,8 @@ ISLBXAC10
 ISLBXAC10
 ISLBXAC10
 ISLBXAC10
-ISLBXAC10 Ammo
-ISLBXAC10 Ammo
+IS LB 10-X AC Ammo
+IS LB 10-X AC Ammo
 
 Right Torso:
 Fusion Engine
@@ -113,11 +115,11 @@ Fusion Engine
 Fusion Engine
 ISERLargeLaser
 ISERLargeLaser
-ISGuardianECM
-ISGuardianECM
-ISMediumLaser
+ISGuardianECMSuite
+ISGuardianECMSuite
+Medium Laser
 ISERSmallLaser
-ISMediumLaser
+Medium Laser
 ISERMediumLaser
 Triple Strength Myomer
 
@@ -139,7 +141,7 @@ Head:
 Life Support
 Sensors
 Cockpit
-ISSmallLaser
+Small Laser
 Sensors
 Life Support
 -Empty-
@@ -177,24 +179,23 @@ Triple Strength Myomer
 -Empty-
 -Empty-
 
-overview:The Banshee, introduced in 2445 by the Terran Hegemony, is a 'Mech that was designed specifically for close-assault operations during the early years of BattleMech warfare.
+overview:<p>The Banshee is one of the oldest assault BattleMechs still in active service, with its primitive prototype first walking off the assembly line on New Earth in 2445. Entering full production in 2475, the ninety-five-ton design was marketed by the Terran Hegemony as a close-assault platform, a designation that would haunt it for centuries. Its massive engine gave the Banshee impressive speed for its weight class but consumed so much internal volume that its weaponry was woefully inadequate for the intended role. Critics correctly noted that the Banshee actually mounted better long-range firepower than several contemporary assault designs, including the later Atlas, but the Hegemony's marketing had already poisoned its reputation.</p><p>Despite this, the Banshee was produced in enormous numbers, ensuring its presence on battlefields across the Inner Sphere well into the thirty-first century. The revolutionary BNC-3S variant born from the Federated Suns-Lyran alliance in the 3020s finally transformed the Banshee from the weakest of its class into one of the most feared assault 'Mechs of the late Succession Wars, and continued innovation has kept the design relevant into the modern era.</p>
 
-capabilities:A contemporary of the Mackie and Emperor, the Banshee is undeniably fast for one of the heaviest 'Mechs ever produced, and with fifteen tons of armor it is better protected than most other assault 'Mechs. However the use of a massive GM 380 fusion engine left little room for weaponry, and even at the time of its introduction the Banshee was considered undergunned compared to its privately-built competition. As critics noted, what use was impressive armor and mobility if a better-armed enemy could overwhelm and destroy it? The result was a mediocre 'Mech which even the lowly Rifleman could beat as long as it prevented the Banshee's mass from coming into play.
+capabilities:<p>The defining characteristic of the BNC-3E is its GM 380 fusion engine, which propels the ninety-five-ton chassis to a top speed of nearly sixty-five kilometers per hour, a remarkable feat for an assault 'Mech that only the similarly maligned Charger could later match. Fifteen tons of Starshield armor provide solid protection, exceeding many contemporaries in raw coverage. However, the engine's massive tonnage leaves the Banshee critically underarmed. A single Magna Hellstar PPC and Imperator-A autocannon/5 would constitute respectable firepower on a medium 'Mech but are grossly insufficient for a machine of this weight class.</p><p>Compounding the armament problem, both primary weapons suffer from minimum range limitations that create a dangerous dead zone as the Banshee closes with its target. A lone head-mounted Magna Mark I small laser does little to address this vulnerability. The 'Mech's true close-range capability lies in its sheer physical mass, at ninety-five tons with fully articulated arms and hands, the Banshee can devastate lighter opponents through physical attacks. Sixteen heat sinks manage the modest heat load without difficulty, though this surplus cooling capacity only reinforces how much potential firepower the design wastes.</p><p>The Dalban communications and targeting systems are reliable if unremarkable, well-suited to the Banshee's straightforward tactical profile. In practice, the BNC-3E functions best as a second-line brawler, leveraging its speed and mass to physically engage enemies that better-armed 'Mechs have already weakened.</p>
 
-deployment:The variant of the Banshee was created by the Word of Blake after they took over Hesperus II in 3070. It turns the 'Mech into a brawler with the inclusion of Triple Strength Myomer and a Hatchet. It returns to the XL engine of the 5S and keeps the ubiquitous Small Laser. The LB-X Autocannon/10 is retained from the 6S, though it moves to the other side. An ER Large Laser is added for use at long range and a Snub-Nose PPC is effective at medium range, though it is more damaging up close. An XL Gyro frees up tonnage for four medium lasers, two standard and two extended range models, as well an ER Small Laser. The inclusion of only thirteen double heat sinks ensures that the myomer activates easily. A C3 slave unit allows the 8S to share targeting telemetry, though the fact that it is not one of the Word's improved versions suggests that this 'Mech is not intended for use by Word of Blake Militia, but rather their mercenaries or even important planetary garrisons. Finally, eighteen tons of armor and a Guardian ECM Suite radically improve the defenses of the venerable Banshee.
+deployment:<p>Created by the Word of Blake after their seizure of Hesperus II in 3070, this variant transforms the Banshee into a dedicated brawler. Triple-strength myomer and a hatchet make the 'Mech devastating in physical combat, while an LB 10-X autocannon, ER large laser, and Snub-Nose PPC provide ranged firepower. An eclectic mix of standard and extended-range medium lasers, plus an ER small laser, round out the weapons payload. An XL Gyro frees tonnage for equipment, while a C3 slave unit enables targeting data sharing and a Guardian ECM Suite bolsters electronic defenses. The inclusion of only thirteen double heat sinks is deliberate, ensuring the myomer activates readily. Eighteen tons of armor make this one of the most heavily protected Banshee variants ever produced.</p>
 
-history: The Hegemony soldiered on though, producing five thousand Banshees in a decade before its poor combat performance finally forced them to stop production in 2455 and the 'Mech was relegated to training and militia units for the next few centuries. Even during the Succession Wars the 'Mech's poor reputation meant many commanders saw it as a liability rather than an asset; unless they were fighting on a backwater Periphery world or as part of a poorly-equipped outfit, most Banshees were placed in second-line reserves to provide fire support or fulfill the role of brawlers so that better-armed 'Mechs need not engage in hand-to-hand combat. In this way fully a third of the original Banshee production run remained operational by the dawn of the thirty-first century and could be found throughout the Inner Sphere and Periphery, with the lion's share residing within the Lyran Commonwealth. Though a few attempts had been made over the years to improve the Banshee, Defiance Industries was the first to produce a variant which markedly improved on the original and was suggested by many of its original critics. With help from the Federated Suns and access to blueprints from the original Hesperus II factories, the BNC-3S proved to be such a success the Lyrans began fielding them in front line units, surprising their enemies who ignored them to focus on "real" threats with thoroughly unexpected firepower. Under the Federated Commonwealth improvements would continue to be made, though not at the same priority level as other projects, and the much-improved BNC-5S was active in time to meet the Clan Invasion.
+history:<p>The Banshee's origins trace to the earliest days of BattleMech development. Hegemony Weapons Research on New Earth produced the primitive BNC-1E prototype in 2445, just fifteen years after the Mackie first walked. Five tons lighter than the Mackie but mounting a comparable primary weapons loadout, the Banshee boasted heavier armor protection and a true anthropomorphic design with fully articulated arms. Its signature death's head cockpit proved effective at causing panic among opposing MechWarriors in the early years of 'Mech combat. The production BNC-3E followed in 2475, achieving a significant speed increase over the primitive model but sacrificing the medium lasers to accommodate the larger engine. Over five thousand units were built in a decade before poor battlefield performance forced a halt to production in 2485.</p><p>The Banshee's reputation as an undergunned liability saw it relegated to militia and training units throughout the Star League era. Diplass BattleMechs on Apollo and the original Witten Industries facility on Hesperus II had produced units during the Star League period, but most surviving Banshees owed their longevity to the design's ruggedness rather than any institutional commitment. During the Succession Wars, commanders treated the Banshee as expendable, useful for backwater garrison duty or as a brawler to spare better-armed 'Mechs from close combat. A third of the original production run survived to the thirty-first century through this ignominious service, with the lion's share residing within the Lyran Commonwealth.</p><p>The Free Worlds League made the first significant attempt to improve the design in 2579 with the BNC-3M, replacing the autocannon with a second PPC, though crippling heat problems limited its effectiveness. The Marik BNC-3Q of 2915 took a different approach, mounting a massive autocannon/20 at the cost of all long-range capability. Neither variant fundamentally altered the Banshee's poor standing among MechWarriors. Even the Magistracy of Canopus tried their hand with the BNC-3MC around the War of 3039, upgrading to an autocannon/10, but the result remained underwhelming.</p><p>The true resurrection of the Banshee came in the 3020s, when the burgeoning alliance between the Federated Suns and Lyran Commonwealth produced the revolutionary BNC-3S. By replacing the oversized GM 380 engine with a lighter Pitban 285, Defiance Industries freed enormous tonnage for additional weaponry, transforming the design from the weakest of its class into one of the most feared assault 'Mechs of the late Succession Wars. The Lyrans immediately assigned the new variant to front-line units, where enemies who dismissed it as just another Banshee received a deadly surprise. Only the resurgence of advanced technologies and the unveiling of brand-new designs finally unseated the BNC-3S as the most potent assault 'Mech of its era.</p><p>The rediscovery of Star League technology enabled further evolution. The BNC-5S restored the original top speed through an XL engine while mounting dual ER PPCs and a Gauss rifle, creating a formidable long-range combatant for the Clan Invasion. Defiance's constant refinement produced the 6S and 7S variants through the Civil War era. When the Word of Blake seized Hesperus II in 3070, they continued production with their own BNC-8S, incorporating triple-strength myomer and a hatchet. Defiance engineers who had relocated to the Kwangjong-ni manufacturing annex responded with their own designs, including the targeting computer-equipped BNC-9S and the experimental BNC-11X survivability prototype. HDF Manufacturing on Falsterbo in the Hanseatic League also produced both the BNC-3S and BNC-5S, adding a second source outside Lyran space. The latest evolution, the BNC-12S, marries Clan-grade components to the proven Banshee frame, demonstrating that this ancient design's story is far from over.</p>
 
-manufacturer:Defiance Industries,Defiance Manufacturing Annex
-primaryfactory:Hesperus II,Kwangjong-ni
+manufacturer:Defiance Industries|Defiance Manufacturing Annex
 
-systemmanufacturer:CHASSIS:Foundation
-systemmode:CHASSIS:210
-systemmanufacturer:ENGINE:Edasich Motors
-systemmode:ENGINE:380 XL
-systemmanufacturer:ARMOR:Longanecker
-systemmode:ARMOR:PlastiSteel
-systemmanufacturer:COMMUNICATIONS:Angst
-systemmode:COMMUNICATIONS:Clear Channel 3
-systemmanufacturer:TARGETING:Angst
-systemmode:TARGETING:Clear View 2A
+primaryfactory:Hesperus II|Kwangjong-ni
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:Unknown (380 XL)
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

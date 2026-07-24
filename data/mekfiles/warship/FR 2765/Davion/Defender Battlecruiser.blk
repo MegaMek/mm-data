@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee10-74df-8bf1-7e2cca0f9123
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Defender Battlecruiser
 2360
 </year>
 
-<originalBuildYear>
-2360
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,14 +53,14 @@ Aerodyne
 </motion_type>
 
 <transporters>
-smallcraftbay:20.0:10:1
-cargobay:67892.0:2:2
-dropshuttlebay:2.0:1:3:f1
-dropshuttlebay:2.0:1:4:f2
-dropshuttlebay:2.0:1:5:f4
-dropshuttlebay:2.0:1:6:f5
-1stclassquarters:600.0:0
-crewquarters:1890.0:0
+smallcraftbay:20.0:10:1::-1:0
+cargobay:67892.0:2:2::-1:0
+dropshuttlebay:2.0:1:3::1:0
+dropshuttlebay:2.0:1:4::2:0
+dropshuttlebay:2.0:1:5::4:0
+dropshuttlebay:2.0:1:6::5:0
+1stclassquarters:600.0:0:-1::-1:0
+crewquarters:1890.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -96,9 +87,13 @@ crewquarters:1890.0:0
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 60
@@ -291,15 +286,19 @@ IS Ammo AC/5:80
 </structural_integrity>
 
 <capabilities>
-The Defender-class battlecruisers were known for their impressive maneuverability and firepower. With their advanced maneuvering drives, they could outmaneuver the Terran Hegemony's Dreadnoughts. They were armed with a heavy battery of naval autocannons, allowing them to engage enemy WarShips effectively. However, their limited aftward firepower and reduced armor protection were drawbacks. The internal cargo space and shuttle bays were also limited, affecting their operating range and logistical capabilities.
+<p>The Defender's defining feature was its enormous maneuvering drive, unsurpassed in sheer size until the launch of the massive Farragut-class decades later. This powerplant granted the battlecruiser a safe thrust of five gravities and a maximum of eight, enabling it to outmaneuver the slower Dreadnought-class vessels it was specifically designed to engage. The ship's primary armament centered on a formidable battery of naval autocannons, with NAC/20s and NAC/35s concentrated in the nose, fore, and broadside arcs to deliver devastating firepower during approach and beam engagements. Eighty-two conventional autocannons and nearly fifty machine guns provided additional firepower and point defense coverage throughout the vessel. However, the massive drive consumed so much internal volume that the aft quarter and stern arcs mounted only those conventional autocannon batteries and machine guns, entirely lacking capital-grade weaponry and leaving the vessel critically vulnerable to pursuit from astern. This significant gap in capital weaponry covering the aft-facing arcs required Defender crews to rely constantly on their superior speed and agile maneuvering to keep their strongest weapons bearing on the enemy at all times, a tactical constraint that shaped every engagement the class fought throughout its long career.</p>
 </capabilities>
 
 <overview>
-The Defender-class battlecruisers were part of the ambitious program of the Federated Suns to challenge the Terran Hegemony's Dreadnought-class. These battlecruisers were designed to outmaneuver and outgun the enemy with their large maneuvering drives and heavy naval autocannons. However, their size and design limitations hindered their overall effectiveness.
+<p>The Defender-class battlecruiser holds the distinction of being the Federated Suns' first indigenous WarShip design. Commissioned from the Challenge Systems yards on Galax in 2360, the nearly million-ton vessel was conceived to challenge the Terran Hegemony's naval dominance through superior speed and concentrated firepower rather than sheer tonnage. The design centered on an enormous maneuvering drive that granted acceleration figures unmatched by any contemporary capital vessel, giving Federated Suns naval commanders a WarShip fast enough to dictate the terms of engagement against heavier opponents. As a pre-docking collar design, the Defender carried its attached craft in internal shuttle bays rather than on external hardpoints, reflecting the shipbuilding conventions of its era. The ambitious program marked the Federated Suns' emergence as a credible naval power and established Challenge Systems as a premier shipbuilder in the Davion sphere.</p>
 </overview>
 
+<deployment>
+<p>The FSS Golden Lion remains the most celebrated vessel of the class, serving as flagship of the Federated Suns Navy's Crucis Fleet under Fleet Admiral Alexi Viscoff as late as 2765. When the First Succession War erupted, the ancient battlecruiser was pressed into action under Admiral Kenneth Jones, leading a naval task force that struck behind enemy lines with devastating effect. Jones's fleet hit eleven Kurita-occupied systems from Imbrial III to New Valencia in quick succession, sowing chaos across the Draconis Combine's rear areas. The Golden Lion met its end at the Battle of Cholame in 2790, when Admiral Jones unwittingly selected the system as a rendezvous point only to discover that the Combine's invasion armada had chosen the same location as its own staging ground. The resulting six-week battle destroyed nearly three-quarters of Jones's fleet, though the Davion forces took an equal number of Kurita WarShips with them before the end.</p>
+</deployment>
+
 <history>
-The launch of the Defender-class battlecruisers initially shocked the Inner Sphere, showcasing the growing martial power of the Terran Hegemony. However, the Hegemony soon introduced more advanced and heavily armed ships, such as the Monsoon-class, which outclassed and outnumbered the Defenders. Despite their limitations, the Defender-class ships served in various conflicts, including the Reunification War and the Succession Wars. Some of them earned fame, like the FSS Golden Lion, for their roles in pivotal battles. However, none of the ancient Defenders survived the First Succession War.
+<p>The Defender program emerged from the shock that gripped the Inner Sphere following James McKenna's bombardment of Strand Rock on 2 June 2315, which demonstrated the devastating power of the Terran Hegemony's battleships. While the nascent Great House states scrambled to establish the infrastructure needed to build their own WarShip fleets, the Federated Suns embarked on an ambitious program to construct a vessel capable of engaging the Hegemony's Dreadnought-class on favorable terms. The resulting design pushed contemporary technology to its limits, building a battlecruiser around a drive system of unprecedented size.</p><p>The designers achieved their goal of producing a ship that could take on and defeat the best the Hegemony had to offer, but their triumph was short-lived. Within a decade, and before the second Defender had even slipped its moors, the Hegemony launched its Monsoon-class, which employed far heavier armor and weaponry as well as the newly matured docking collar technology that would come to dominate WarShip design. Between the Monsoon and Aegis classes, and the Hegemony's far greater production capacity for both, the big Davion battlecruisers found themselves outnumbered and outclassed by the 2380s.</p><p>The half-dozen Defenders built would nonetheless live long service lives despite their early obsolescence. Several were lost during the Reunification War, and the entire class was demobilized multiple times as the costs of maintaining their aging hulls continued to increase. The few surviving ships were reactivated one final time just before the Amaris Coup, destined to continue serving into the Succession Wars. By 2765, only two Defenders remained operational, forming part of the Federated Suns Navy's venerable Crucis Fleet. None of these ancient WarShips survived the carnage and nuclear devastation of the First Succession War, their centuries-long careers finally ending in the fires that consumed the Star League's legacy and reshaped the Inner Sphere forever.</p>
 </history>
 
 <manufacturer>
@@ -314,9 +313,19 @@ Galax
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Battlecruiser

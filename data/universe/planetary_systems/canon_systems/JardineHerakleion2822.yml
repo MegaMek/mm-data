@@ -16,7 +16,8 @@
 # affiliated with Microsoft.
 
 id: Jardine (Herakleion 2822+)
-sucsId: 1236
+sucsId: 1237
+# ComStar/Word of Blake hidden world - appears as ABN to players, requires special code handling
 xcood: -200.944
 ycood: -91.199
 spectralType: F4V
@@ -116,6 +117,8 @@ planet:
       - name: Whitemouth 2
       - name: Whitemouth 3
     event:
+      - date: '2108-12-05'
+        name: Jardine
       - date: '2217-07-20'
         faction:
           source: canon
@@ -135,6 +138,12 @@ planet:
         population: 1908429.0
       - date: '2270-01-01'
         population: 3549332.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 6106977.0
       - date: '2290-01-01'
@@ -147,6 +156,12 @@ planet:
         population: 14897796.0
       - date: '2310-01-01'
         population: 21513117.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 29430978.0
       - date: '2330-01-01'
@@ -205,6 +220,12 @@ planet:
         population: 243025906.0
       - date: '2570-01-01'
         population: 247313406.0
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2580-01-01'
         population: 251158236.0
       - date: '2590-01-01'
@@ -264,8 +285,24 @@ planet:
           source: canon
           value:
             - CS
+      - date: '2821-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
+      - date: '2822-01-01'
+        name: Herakleion
+        message: Jardine renamed to Herakleion
       - date: '2830-01-01'
         population: 327803636.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CS
+        # Hidden world per The Five
       - date: '2840-01-12'
         population: 336774901.0
         socioIndustrial: C-B-C-C-C
@@ -322,6 +359,13 @@ planet:
           source: canon
           value:
             - WOB
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - WOB
+        # Hidden world per The Five
       - date: '3060-01-01'
         population: 310913506.0
       - date: '3068-02-24'
@@ -332,11 +376,19 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Jardine
-      - date: '2822-01-01'
-        name: Herakleion
-        message: Jardine renamed to Herakleion
+      - date: '3068-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - WOB
+        # Hidden world per The Five
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Chernobog
     type: GIANT_TERRESTRIAL
     orbitalDist: 3.92

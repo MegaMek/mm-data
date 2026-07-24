@@ -1,0 +1,73 @@
+# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# The Jihad, including the WOB-FWL alliance, the Blake Protectorate presence in League
+# space, and Devlin Stone's allied coalition from 3073.
+
+wars:
+  - name: Word of Blake Jihad
+    start: 3067-12-05
+    end: 3081-04-02
+    parties:
+      - factions: [WOB, LA]
+      - factions: [WOB, FS]
+      - factions: [WOB, MERC]
+        start: 3067-10-15
+      - factions: [WOB, DC]
+        start: 3068-01-01
+      - factions: [WOB, CS]
+        start: 3068-01-21
+      - factions: [WOB, CC]
+        start: 3070-01-07
+      - factions: [WOB, Stone]
+        start: 3073-11-25
+      - factions: [WOB, CNC]
+        start: 3073-11-25
+      - factions: [WOB, CJF]
+        start: 3073-11-25
+      - factions: [WOB, CW]
+        start: 3073-11-25
+      - factions: [WOB, CGB]
+        start: 3074-12-15
+      - factions: [WOB, CSR]
+        start: 3076-02-16
+alliances:
+  - start: 3052-07-01
+    end: 3081-04-02
+    parties:
+      - factions: [WOB, FWL]
+  - start: 3073-11-25
+    end: 3081-04-02
+    parties:
+      - factions: [Stone, CNC]
+        start: 3071-10-31
+      - factions: [Stone, CNC, CJF, CW, LA, FS, DC, CS]
+      - factions: [Stone, CNC, CJF, CW, LA, FS, DC, CS, CGB]
+        start: 3075-09-21
+      - factions: [Stone, CNC, CJF, CW, LA, FS, DC, CS, CGB, CSR]
+        start: 3076-02-16
+containedFactions:
+  - host: FWL
+    contained: WOB
+    start: 3052-07-01
+    end: 3081-04-02
+    fraction: 0.1
+  - host: Stone
+    contained: CS
+    start: 3073-11-25
+    end: 3081-04-02
+    opponents: [WOB]

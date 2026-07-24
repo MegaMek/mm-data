@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ee7a-71f6-b7f1-20860a303d54
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ New Syrtis Carrier
 2557
 </year>
 
-<originalBuildYear>
-2557
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,19 +53,19 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:60.0:3:1
-smallcraftbay:12.0:1:2
-asfbay:60.0:3:3
-smallcraftbay:12.0:1:4
-cargobay:50310.0:4:6
-cargobay:50310.0:4:7
+asfbay:60.0:3:1::-1:0
+smallcraftbay:12.0:1:2::-1:0
+asfbay:60.0:3:3::-1:0
+smallcraftbay:12.0:1:4::-1:0
+cargobay:50310.0:4:6::-1:0
+cargobay:50310.0:4:7::-1:0
 dockingcollar
 dockingcollar
-crewquarters:5313.0:0
-1stclassquarters:1930.0:0
-2ndclassquarters:420.0:0
-steeragequarters:2850.0:0
-infantrybay:10.0:2:13:Foot
+crewquarters:5313.0:0:-1::-1:0
+1stclassquarters:1930.0:0:-1::-1:0
+2ndclassquarters:420.0:0:-1::-1:0
+steeragequarters:2850.0:0:-1::-1:0
+infantrybay:10.0:2:13:Foot:-1:0
 </transporters>
 
 <SafeThrust>
@@ -101,9 +92,13 @@ infantrybay:10.0:2:13:Foot
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 80
@@ -312,15 +307,19 @@ IS Ammo MG - Full:200
 </structural_integrity>
 
 <capabilities>
-The New Syrtis-class carrier, also referred to as a "Fighter Cruiser," was a groundbreaking WarShip dedicated to operating large aerospace fighter formations. Unlike traditional capital ships with limited fighter capacity, the New Syrtis featured six full wings of aerospace fighters, totaling 120 ships, and four squadrons of small craft. This allowed for absolute domination of local space, defending the carrier and engaging enemy DropShips and WarShips. The New Syrtis possessed powerful anti-ship and local defensive armaments, including naval lasers, PPCs, autocannons, missiles, and close-in defensive turrets. With a crew of over two thousand, including dedicated aerospace personnel, the carrier accommodated two full crews for each fighter and small craft, enabling 24-7 flight operations. Spacious accommodations, ample fuel reserves, and the capability to house additional marine or engineering forces further enhanced the New Syrtis's capabilities.
+<p>Displacing 920,000 tons, the New Syrtis was designed to dominate local space through sheer aerospace superiority. Six full wings of aerospace fighters, totaling one hundred and twenty craft, operated from two massive flight decks supported by four squadrons of small craft. The vessel maintained two complete flight crews for every fighter and small craft aboard, enabling continuous flight operations around the clock. The carrier's fuel bunkers provided more than eight days of sustained combat operations, ensuring endurance during prolonged engagements. A four-platoon marine company served as the vessel's permanent security detachment, with berthing capacity for an additional battalion of marines or combat engineers.</p><p>Though primarily a fighter platform, the New Syrtis mounted substantial defensive armament in recognition that the vessel could not always remain beyond the reach of hostile fire. Capital-grade naval autocannons and particle projector cannons formed the backbone of broadside batteries, while naval lasers and missile launchers provided long-range engagement capability. Every firing arc carried layered close-defense batteries of missiles, lasers, and rapid-fire weapons designed to shred inbound fighters and assault craft. Two docking collars and over one hundred thousand tons of cargo capacity supported extended independent operations. The vessel's acceleration of two gravities standard was adequate for a vessel of its displacement, though the class relied on its fighter screen rather than speed for protection.</p>
 </capabilities>
 
 <overview>
-The New Syrtis-class carrier, developed as part of the Federated Suns' WarShip building program, was a revolutionary addition to their fleet. First Prince Alexander Davion recognized the need for a dedicated WarShip capable of operating large aerospace fighter formations, and thus initiated the development of the New Syrtis-class carrier. Designed to project House Davion's power and assume immediate control of local space, the New Syrtis became a formidable force with its impressive fighter complement and powerful armament. Despite its expensive maintenance and limited action prior to the Star League era, the New Syrtis-class proved its worth in combat.
+<p>The New Syrtis-class carrier was commissioned by the Federated Suns in the mid-twenty-sixth century to address a critical gap in House Davion's naval capability. Built by Challenge Systems of Galax, the class was designed around a then-radical concept: a WarShip whose primary offensive power came not from its own guns but from massed aerospace fighter formations launched from its flight decks. At 920,000 tons, the carrier dwarfed most vessels in the Federated Suns fleet and demanded enormous shipyard resources to construct, yet the investment was considered justified by the overwhelming aerospace superiority a single vessel could project across an entire star system. The New Syrtis earned a reputation as the backbone of Davion naval power, anchoring task forces wherever House Davion's interests required a decisive show of force.</p>
 </overview>
 
+<deployment>
+<p>The FSS Chesterton fell victim to one of the most notable ambushes of the Reunification War. During Case AMBER at Panpour in late 2577, Taurian Concordat forces caught the carrier with most of her crew and her entire aerospace group off-ship. The surprise attack left the vessel effectively defenseless, and the Chesterton was captured intact, a humiliating loss that however demonstrated the vulnerability of even the most powerful vessels when caught unprepared.</p><p>The FSS Midale fought her final engagement at the Battle of Clovis in May 2787, during the opening months of the First Succession War. Alongside a pair of Davion-class destroyers, the carrier held off Coordinator Minoru Kurita's invasion flotilla for six hours near Clovis' lunar orbit, crippling one enemy destroyer and damaging a carrier before being overwhelmed and destroyed. The sacrifice bought precious time for the planet's ground defenders.</p><p>The FSS Novaya Zemlya was lost during the desperate AFFS naval offensive of 2790, as Admiral Kenneth Jones led his fleet toward the fateful engagement at Cholame. The campaign succeeded in destroying six Draconis Combine WarShips, but the Novaya Zemlya was among four AFFS vessels that did not survive the fighting.</p><p>The FSS New Syrtis herself served as flagship of Admiral Mark Creuset's Coreward Fleet in the Capellan March by 2765, leading a substantial squadron that included cruisers, destroyers, a frigate, and a corvette. The lead ship's ultimate fate remains unrecorded.</p><p>The FSS Pleiades earned the distinction of being the last New Syrtis-class carrier to remain in service. The vessel survived the First Succession War and continued to serve into the Second, but her career ended not through enemy action but structural failure. During a jump into the Novaya Zemlya system, the vessel literally broke its back, forcing its retirement and marking the end of the class.</p>
+</deployment>
+
 <history>
-The New Syrtis-class carrier was developed following the Davion Civil War when the Federated Suns sought to rebuild their military. First Prince Alexander Davion recognized the need to upgrade their WarShip fleet, leading to the development of the Block II Davion-class destroyer, the Robinson-class transport, and the New Syrtis-class carrier. In 2546, the WarShip building program commenced, and the New Syrtis-class carrier was introduced in 2557. It marked a significant departure from traditional WarShips, as it was specifically designed to operate large aerospace fighter formations. This strategic decision was based on the recognition that naval battles during the Age of War often relied on fighter superiority and that the success of invasions was often determined by aerospace dominance. The New Syrtis-class carriers quickly proved their worth in combat, demonstrating their ability to project House Davion's power and assume control of local space. Despite limited action prior to the rise of the Star League, the New Syrtis-class earned a reputation for performing admirably in engagements, showcasing both its offensive and defensive capabilities. Battles during the Case AMBER operation, where New Syrtis carriers were involved, further highlighted their effectiveness against the Taurian navy. During the Star League era, New Syrtis-class carriers played a significant role in the Federated Suns' naval forces. They were active in all four of the Federated Suns' naval fleets, including the Coreward Fleet, where the flagship FSS New Syrtis, under the command of Admiral Mark Creuset, led the charge. These carriers were crucial assets, projecting House Davion's power and supporting operations throughout the realm. However, with the end of the Star League era and the onset of the Succession Wars, the fragile industry of the Federated Suns faced significant challenges. The financial strain and the inability to maintain these technologically advanced and temperamental vessels resulted in the retirement of the New Syrtis-class carriers. The few remaining carriers were mothballed and survived until the 3060s, but attempts to reactivate them against the Clan threat proved futile due to extensive damage to their ancient jump cores and maneuvering drives. Eventually, these carriers were decommissioned and scrapped, marking the end of the New Syrtis-class in active service. Nonetheless, their legacy as formidable fighters and power projection platforms remains a significant part of the Federated Suns' naval history.
+<p>The New Syrtis-class carrier entered service in 2557 as the culmination of First Prince Alexander Davion's post-Civil War naval modernization program. Challenge Systems of Galax constructed the vessels alongside the Block II Davion-class destroyer and the Robinson-class transport, all part of a broader effort to rebuild the Federated Suns' naval capability from the ground up. The concept of a dedicated fighter carrier was revolutionary. Despite centuries of naval combat demonstrating that aerospace superiority often decided battles, no state had previously committed to building a WarShip around that principle. Fleets had instead relied on converted DropShips to supplement the modest fighter complements carried by their capital ships.</p><p>The class received its baptism of fire during the Reunification War's Case AMBER operations against the Taurian Concordat. Of the five vessels that saw combat, one was destroyed, one scuttled, and a third captured, yet the class was considered to have performed admirably. The carriers demonstrated their ability to project overwhelming aerospace superiority while proving capable of withstanding prolonged exposure to directed naval gunfire. The capture of one vessel during a surprise attack highlighted the importance of maintaining security protocols even in supposedly rear areas, a lesson that resonated through subsequent Federated Suns naval doctrine.</p><p>Four New Syrtis carriers remained in service by 2765, distributed across the Federated Suns Navy's fleet structure. The Crucis Fleet maintained two carriers as its core striking power, while the remaining pair were assigned to separate fleet commands. These vessels served as the flagships around which task forces were organized, their massive fighter complements providing the aerospace umbrella under which the rest of the fleet operated.</p><p>The First Succession War devastated the surviving carriers along with the rest of the Inner Sphere's naval assets. The class fought in several engagements during the Draconis Combine's invasion of the Federated Suns, where their fighter wings proved invaluable in contested orbital spaces. Attrition steadily reduced their numbers through the brutal fighting of the late twenty-eighth century. The final vessel endured into the Second Succession War before mechanical failure brought its long career to an end, closing a chapter of Federated Suns naval history that had spanned more than two centuries of continuous service.</p>
 </history>
 
 <manufacturer>
@@ -332,12 +331,22 @@ Galax
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Challenge Systems
 ENGINE:Unknown
 ARMOR:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Standard
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Carrier

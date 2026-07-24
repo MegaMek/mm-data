@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa21-714a-a161-1273bab9dd40
+</UUID>
 
 <UnitType>
 ConvFighter
@@ -33,9 +28,9 @@ ConvFighter
 Planetlifter Tactical Support
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 4840
@@ -45,10 +40,6 @@ Planetlifter Tactical Support
 3082
 </year>
 
-<originalBuildYear>
-3082
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -57,12 +48,13 @@ IS Level 3
 None
 </role>
 
+<quirks>
+imp_com
+</quirks>
+
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 4
@@ -92,9 +84,13 @@ Aerodyne
 22
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 22
@@ -117,8 +113,6 @@ ISTankCockpitCommandConsole
 
 <Aft Equipment>
 IS Vehicular Stealth
-IS Vehicular Stealth
-IS Vehicular Stealth
 ISArrowIV
 </Aft Equipment>
 
@@ -130,32 +124,24 @@ ISArrowIVAmmo
 ISArrowIVAmmo
 </Fuselage Equipment>
 
-<source>
-TR:Proto
-</source>
-
-<tonnage>
-50.0
-</tonnage>
-
 <capabilities>
-Depending on the variant they Planetlifter may or may not be armed.
+<p>The Planetlifter TSA retains the vehicular stealth armor and Angel ECM suite that defined its predecessor, providing meaningful signature reduction against enemy sensors. However, Imstar's own testing with Cheetah aerospace fighters soon proved that the craft remained an easy target for dedicated interceptors. While opponents unaware of the Planetlifter's renewed capabilities would often ignore the craft, once the Arrow IV missiles launched it immediately became a priority target. This problem appears insurmountable, restricting the TSA to situations of aerospace superiority.</p><p>Given this restriction, the mobility of an airborne Arrow IV launcher proves highly desirable, as different sectors of the battlefield can be swiftly supplied with artillery support. The tactical oversight provided by the command console is typically needed in the same area receiving fire support, making the combined package efficient despite its operational limitations. The reduced missile magazine compared to the Support variant is offset by the command functionality that makes each shot more effective.</p>
 </capabilities>
 
 <overview>
-A typical example of the conventional support aircraft available to planetary garrisons and militias across the Inner Sphere, the Free Worlds League-produced Planetlifter is able to quickly transport combat elements more cheaply than a DropShip flight.
+<p>The Planetlifter Tactical Support Aircraft was Imstar Aerospace's refined evolution of their earlier combat Planetlifter concept. Where the original Support variant attempted to combine artillery firepower with a broad tactical oversight role in a single platform, the Tactical Support version accepted a reduced missile magazine in exchange for enhanced command and control capabilities. The addition of a cockpit command console created an operational profile that complemented the Arrow IV battery rather than conflicting with it, as both roles required the aircraft to operate behind the front lines under conditions of friendly aerospace superiority, creating no new vulnerabilities beyond those already inherent in the design.</p>
 </overview>
 
 <deployment>
-This variant uses Vehicular Stealth Armor and an Angel ECM Suite to hide from enemy forces, while also mounting an Arrow IV launcher to provide fire support. For tactical coordination, the Planetlifter Tactical Support Aircraft carries a Look-Down Radar and a Cockpit Command Console. Unfortunately the designers had to remove the VSTOL equipment from the standard version to make room for all this equipment, and the armor is still limited by the conventional airframe. Simulations show that once enemy aerospace fighters know that the TSA is in the area, it is quickly destroyed. The Planetlifter Tactical Support Aircraft entered production in 3072 and the entire production runs have been purchased by the Marik Commonwealth. The TSAs are assigned in Squadron-size groups to aerospace fighter wings that specialize in ground support.
+<p>Despite considerable interest, the Planetlifter TSA was not produced in significant numbers until 3082, apparently due to chronic shortages of stealth armor and Angel ECM suites that constrained Imstar's production capacity. Since then, the Marik Commonwealth has acquired the entire output, attaching TSA units in squadron-sized formations to existing aerospace fighter wings that support ground operations. Imstar has requested permission to sell the craft on the open market, but the Commonwealth has thus far maintained its exclusive purchasing arrangement.</p>
 </deployment>
 
 <history>
-For this reason, Planetlifters are placed under the direct command of a planet's garrison commander, allowing for enhanced strategic mobility between battlefields. First produced in 2598 (though similar designs have in fact existed since the early 2300s), the Planetlifter is a very rugged aircraft, though it is only protected by three tons of armor. Its VSTOL capability allows the craft to operate away from established airfields, usually one of the first targets in a planetary invasion. The aircraft can take off and land from any area with at least 400 feet of open space.
+<p>The Tactical Support variant emerged from lessons learned during testing of the original Planetlifter Support Aircraft. Combat simulations proved that the craft's fragility made it untenable in contested airspace regardless of its weapons load, leading Imstar's designers to embrace the limitation rather than fight it. By accepting that the platform would only operate under friendly air cover, they could optimize the design for the command and fire support roles it would actually perform in the field.</p><p>Production delays plagued the program for years. The stealth armor and Angel ECM components that made the TSA viable were in high demand across the Inner Sphere during the post-Jihad rebuilding era, and Imstar lacked the industrial clout to secure priority allocation from suppliers. The Marik Commonwealth's willingness to commit to bulk purchases finally gave Imstar the leverage to stabilize its supply chain, though output remained modest compared to the company's far simpler Planetlifter transport production runs. A downgraded variant, the Planetlifter Support, surrendered the advanced electronics and stealth armor in favor of a much larger missile magazine.</p>
 </history>
 
 <manufacturer>
-Imstar Aerospace
+Imstar AeroSpace
 </manufacturer>
 
 <primaryFactory>
@@ -170,7 +156,15 @@ COMMUNICATIONS:IMB Hi-Def ComCon with Angel ECM Suite
 TARGETING:Imstar SkyWatch with LDR Array
 </systemManufacturers>
 
-<quirks>
-imp_com
-</quirks>
+<source>
+TR:Proto
+</source>
+
+<published>
+RS:Proto
+</published>
+
+<tonnage>
+50.0
+</tonnage>
 

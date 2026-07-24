@@ -17,7 +17,15 @@
 
 key: SP
 name: Sarna Protectorate
-capital: Terra
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes: []  # no SUCS equivalent
+capital: Sarna
+yearsActive:
+  - start: 3062
+    end: 3066
 tags:
   - MINOR
   - IS

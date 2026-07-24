@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,163 +15,191 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-dfd1-7fd5-be4e-21bfbdde441e
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Hellspawn
 model:HSN-7D2 (Halperin)
 mul id:1478
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3072
-Rules Level:4
+techbase:Inner Sphere
+era:3072
+source:XTR:Pirates
+published:XTR:Pirates
+rules level:4
 role:Striker
-Source:XTR:Pirates
-
-
 
 quirk:bad_rep_is
 
+mass:45
+engine:270 XL Engine
+structure:IS Endo Steel
+myomer:Standard
+cockpit:Standard Cockpit
+gyro:Compact Gyro
 
-Mass:45
-Engine:270 XL Engine
-Structure:Endo-Steel
-Gyro:Compact Gyro
-Myomer:Standard
+heat sinks:12 IS Double
+walk mp:6
+jump mp:6
 
-Heat Sinks:12 Double
-Walk MP:6
-Jump MP:6
+armor:Standard(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:16
+RT armor:16
+CT armor:20
+HD armor:9
+LL armor:22
+RL armor:22
+RTL armor:6
+RTR armor:6
+RTC armor:7
 
-Armor:Standard Armor
-LA Armor:14
-RA Armor:14
-LT Armor:16
-RT Armor:16
-CT Armor:20
-HD Armor:9
-LL Armor:22
-RL Armor:22
-RTL Armor:6
-RTR Armor:6
-RTC Armor:7
-
-Weapons:12
-1 ISAngelECM, Center Torso
-1 ISERSmallLaser (R), Right Torso (R)
-1 ISERSmallLaser (R), Left Torso (R)
-1 ISERMediumLaser, Left Arm
-1 ISERMediumLaser, Left Arm
-1 ISRocketLauncher20, Left Arm
-1 ISRocketLauncher20, Right Arm
-1 IS Coolant Pod, Left Torso
-1 IS Coolant Pod, Left Torso
-1 IS Coolant Pod, Right Torso
-1 ISERMediumLaser, Right Arm
-1 ISERMediumLaser, Right Arm
+Weapons:8
+Rocket Launcher 20, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+Rocket Launcher 20, Right Arm
+ER Medium Laser, Right Arm
+ER Medium Laser, Right Arm
+ER Small Laser, Left Torso
+ER Small Laser, Right Torso
 
 Left Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-ISRocketLauncher20
-ISRocketLauncher20
-ISRocketLauncher20
+RL20
+RL20
+RL20
 ISERMediumLaser
 ISERMediumLaser
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 
 Right Arm:
 Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
-ISRocketLauncher20
-ISRocketLauncher20
-ISRocketLauncher20
+RL20
+RL20
+RL20
 ISERMediumLaser
 ISERMediumLaser
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 
 Left Torso:
-Engine
-Engine
-Engine
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+Fusion Engine
+Fusion Engine
+Fusion Engine
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 Jump Jet
 Jump Jet
 ISERSmallLaser (R)
-IS Coolant Pod
-IS Coolant Pod
-Endo-Steel
+Coolant Pod
+Coolant Pod
+IS Endo Steel
 
 Right Torso:
-Engine
-Engine
-Engine
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+Fusion Engine
+Fusion Engine
+Fusion Engine
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 Jump Jet
 Jump Jet
 ISERSmallLaser (R)
-IS Coolant Pod
-Endo-Steel
-Endo-Steel
+Coolant Pod
+IS Endo Steel
+IS Endo Steel
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Jump Jet
 Jump Jet
-ISAngelECM
-ISAngelECM
+ISAngelECMSuite
+ISAngelECMSuite
 
 Head:
 Life Support
 Sensors
 Cockpit
-Endo-Steel
+IS Endo Steel
 Sensors
 Life Support
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-overview:The flagship design of GM's Talcott production facility, the Hellspawn was designed in response to a call from the Armed Forces of the Federated Commonwealth for a modern, highly mobile, fire-support BattleMech to compete with the older Dervish.
+overview:<p>The Hellspawn was developed by General Motors in response to a 3056 call from the Armed Forces of the Federated Commonwealth for a modern, highly mobile fire support BattleMech to replace the aging Dervish. As the flagship design of GM's newly opened production facility on Talcott, the Hellspawn was awarded its contract by the Department of the Quartermaster in October 3060 and first entered service in 3062.</p><p>At 45 tons, the Hellspawn carries the same primary firepower as the Dervish in a package ten tons lighter, trading armor protection and structural durability for dramatically increased speed and maneuverability. The design incorporates advanced technologies including an endo steel chassis, extralight engine, and integrated Guardian ECM suite, positioning it as a next-generation fire support platform for Federated Suns forces. Despite its technological sophistication, the Hellspawn has earned a mixed reputation, praised for its agility but criticized for its fragility.</p>
 
-capabilities:The Hellspawn is built on a GM Fury-M Endo Steel chassis that weighs half as much as a standard chassis. The Hellspawn carries a GM 270 XL engine that gives it a top speed of 97.2 km/h and also weighs half as much as a standard engine while making the 'Mech susceptible to a combat kill from a side torso loss. For protection from enemy electronic warfare equipment such as C3 or Artemis IV, the Hellspawn is equipped with a Guardian ECM Suite. To enhance the 'Mech's mobility it has six Rawlings 80 jump jets that allow the 'Mech to jump up to one hundred and eighty meters. Finally, the Hellspawn has six and a half tons of armor that is barely adequate when compared to other medium 'Mechs.
+capabilities:<p>The Hellspawn is built on a GM Fury-M endo steel chassis powered by a GM 270 XL extralight engine, achieving a top speed of 97.2 kph, significantly faster than the Dervish it was designed to replace. Six Rawlings 80 jump jets provide an impressive 180 meters of jumping capability, making the Hellspawn one of the most mobile fire support platforms in active service. A Dalban SuperMicronics communications system integrated with a Guardian ECM suite provides protection against enemy electronic warfare systems such as C3 networks and Artemis IV fire control.</p><p>Twin Federated 10-Shot LRM-10 launchers deliver effective ranged fire support, while three RAMTech 800P medium pulse lasers provide accurate close-range defense that actually improves upon the Dervish's short-range capability while reducing ammunition dependency. However, the design's most significant weakness is its armor protection. Six and a half tons of StarGuard III armor represents less than seventy percent of the chassis' theoretical maximum, leaving the Hellspawn dangerously vulnerable to concentrated fire. The decision to forgo CASE protection for the left torso ammunition bins compounds this fragility, and the XL engine amplifies the vulnerability further, any side torso breach results in a catastrophic combat kill, leading some pilots to label the 'Mech a deathtrap.</p>
 
-deployment:The personal 'Mech of Crucis March Militia deserter-turned-bandit Greta Halperin, her Hellspawn introduced in 3072 had been extensively modified with experimental technologies to turn it into a deadly first strike backstabber. Both LRM launchers are swapped for two single shot Rocket Launcher 20s and each arm mounted Pulse Laser is replaced with a pair of ER Medium Lasers. The torso mounted pulse laser is dropped entirely for two rear facing ER Small Lasers, while two additional tons of armor improve the Hellspawns weak armor. Two extra heat sinks enhanced by a trio of Coolant Pods allow Halperin to Alpha Strike repeatedly until her targets are destroyed, while switching the Guardian for an advanced Angel ECM Suite prevents any chance of her high-ranked marks calling for help.
+deployment:<p>Extensively modified with experimental technologies, this variant was optimized as a first-strike ambush platform. Both LRM-10 launchers were replaced with single-shot Rocket Launcher 20s for devastating opening salvos, while each arm-mounted medium pulse laser gave way to pairs of extended-range medium lasers. The torso-mounted pulse laser was removed entirely in favor of two rear-facing ER small lasers, and two additional tons of armor improved the chassis' notoriously weak protection. Extra double heat sinks enhanced by coolant pods enable repeated alpha strikes, while an advanced Angel ECM suite replaced the standard Guardian system to prevent targets from calling for reinforcements.</p>
+
+history:<p>The Hellspawn's development was driven by the devastation inflicted upon the Armed Forces of the Federated Commonwealth during the Clan Invasion and its aftermath. Department of the Quartermaster reports estimated that the AFFC would require as long as two decades to return to its pre-3049 readiness levels, a timeline that failed to account for the conflicts of subsequent years. In 3056, the AFFC released requirements for several new combat units with contracts to be awarded by 3060, and General Motors responded with the Hellspawn from its newly opened Talcott production lines, winning the contract in October of that year.</p><p>The Hellspawn was first shipped to the Crucis Lancers in September 3062, allowing them to retire their ancient Dervishes to garrison units or scrap heaps. Distribution quickly expanded, with units from the Deneb Light Cavalry to the Robinson Rangers receiving the new design. The Second Ceti Hussars and Davion Light Guards employed Hellspawns to particularly devastating effect on New Syrtis, ravaging the lightest elements of the Fourth Donegal Guards' reconnaissance force using combined direct fire and Thunder munitions.</p><p>Despite its combat successes, the Hellspawn has struggled to fully escape its poor reputation among MechWarriors, a consequence of its thin armor, exposed ammunition bins, and vulnerable XL engine that has made many pilots wary of the assignment. General Motors has continued developing improved variants to address these criticisms, with proposals ranging from enhanced fire control systems to completely redesigned weapons loadouts emphasizing close combat capability. The Jihad and its aftermath saw several of these variants enter production, as the desperate demand for any available combat units overrode lingering concerns about the chassis' survivability limitations.</p>
 
 manufacturer:General Motors
+
 primaryfactory:Talcott
-systemmanufacturer:CHASSIS:GM Fury-M Endo
-systemmanufacturer:ENGINE:GM 270 XL
-systemmanufacturer:ARMOR:StarGuard III
-systemmanufacturer:COMMUNICATIONS:Dalban SuperMicronics with Guardian ECM
-systemmanufacturer:TARGETING:GME HiTrak-3
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:GM
+systemmode:CHASSIS:Fury-M Endo
+systemmanufacturer:ENGINE:GM
+systemmode:ENGINE:270 XL
+systemmanufacturer:ARMOR:StarGuard
+systemmode:ARMOR:III
+systemmanufacturer:JUMP_JET:Rawlings
+systemmode:JUMP_JET:80
+systemmanufacturer:COMMUNICATIONS:Dalban
+systemmode:COMMUNICATIONS:SuperMicronics with Angel ECM
+systemmanufacturer:TARGETING:GME
+systemmode:TARGETING:HiTrak-3

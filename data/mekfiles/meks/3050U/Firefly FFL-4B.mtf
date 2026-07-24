@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,50 +15,50 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c494-7b88-a771-5787a26b3b97
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Firefly
 model:FFL-4B
 mul id:1088
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3047
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3047
+source:TR:3050,TR:SW
+published:RS:SW
+rules level:2
 role:Striker
-
-
 
 quirk:no_arms
 
+mass:30
+engine:150 Fusion Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:30
-Engine:150 Fusion Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:10 Single
+walk mp:5
+jump mp:4
 
-Heat Sinks:10 Single
-Walk MP:5
-Jump MP:4
-
-Armor:Standard Armor
-LA Armor:10
-RA Armor:10
-LT Armor:11
-RT Armor:11
-CT Armor:15
-HD Armor:8
-LL Armor:14
-RL Armor:14
-RTL Armor:3
-RTR Armor:3
-RTC Armor:5
+armor:Standard(Inner Sphere)
+LA armor:10
+RA armor:10
+LT armor:11
+RT armor:11
+CT armor:15
+HD armor:8
+LL armor:14
+RL armor:14
+RTL armor:3
+RTR armor:3
+RTC armor:5
 
 Weapons:5
-1 ISMediumLaser, Center Torso
-1 ISMediumLaser, Left Torso
-1 ISMediumLaser, Right Torso
-1 ISLRM5, Right Torso, Ammo:24
-1 ISAntiMissileSystem, Left Arm, Ammo:12
+Anti-Missile System, Left Arm
+Medium Laser, Left Torso
+Medium Laser, Right Torso
+LRM 5, Right Torso
+Medium Laser, Center Torso
 
 Left Arm:
 Shoulder
@@ -91,8 +91,8 @@ Upper Arm Actuator
 Left Torso:
 Heat Sink
 Heat Sink
-ISMediumLaser
-ISLRM5 Ammo
+Medium Laser
+IS Ammo LRM-5
 ISAMS Ammo
 ISCASE
 -Empty-
@@ -105,8 +105,8 @@ ISCASE
 Right Torso:
 Heat Sink
 Heat Sink
-ISMediumLaser
-ISLRM5
+Medium Laser
+LRM 5
 -Empty-
 -Empty-
 -Empty-
@@ -127,7 +127,7 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-ISMediumLaser
+Medium Laser
 -Empty-
 
 Head:
@@ -172,19 +172,29 @@ Jump Jet
 -Empty-
 -Empty-
 
-overview:The Firefly is a well-armed recon 'Mech that tips the scales at thirty tons, with a maximum ground speed of 86.4 km/h, the and ability to jump up to 120 meters. As a scout 'Mech, the Firefly gives average performance with its energy weapon-heavy arsenal and is useful in both a recon and guerrilla fighter role.
+overview:<p>Entering service in 2669, the Firefly was one of the standard light BattleMechs of the Star League Defense Force in its later years. Designed by the Coventry/Earthwerks Combine on Terra, the thirty-ton Firefly was built not as a scout but as a light support 'Mech, its superior armor and armament allowing it to serve as the anvil against which the rest of its lance could crush enemy reconnaissance forces. The design also proved highly effective when deployed independently in urban environments, where its jump capability gave it a decisive edge against infantry and light combat vehicles.</p><p>Although a small number entered service with each of the Great House militaries, all Inner Sphere examples were believed destroyed during the devastation of the early Succession Wars. The Firefly endured, however, among the Star League exiles who had accompanied General Kerensky on the Exodus, seeing continued production on Strana Mechty and extensive service through Operation KLONDIKE and the founding of the Clans. The design returned to the Inner Sphere with Wolf's Dragoons in the early thirty-first century, its reappearance raising uncomfortable questions about the mercenary unit's mysterious origins long before the truth was revealed.</p>
 
-capabilities: Although it was slow in comparison to other 'Mechs of its weight class, it was powerfully armed and armored, and it frequently served as an anvil against which opposing forces' recon units were smashed. 
+capabilities:<p>Though too slow to serve as a true scout when measured against other thirty-ton designs, the Firefly compensates with impressive durability and firepower for its weight class. The base chassis mounts nearly the maximum armor protection available for a 'Mech of its tonnage, giving it a survivability advantage that few light designs can match. Four Lexington Lifters jump jets provide 120 meters of leaping capability, granting the Firefly excellent tactical mobility in broken terrain and urban landscapes despite its modest ground speed of 86 kilometers per hour.</p><p>The standard armament centers on three Martell medium lasers supplemented by a Coventry Five-Tube LRM-5 launcher, providing effective engagement capability at both close and extended ranges. Various models add small lasers, anti-missile systems, or electronic warfare equipment depending on the intended tactical role. This combination of heavy armor, respectable firepower, and jump capability makes the Firefly an effective light brawler, though its lack of speed relative to dedicated scouts means it must rely on terrain and ambush tactics rather than raw velocity to survive on the battlefield.</p><p>The Earthwerks Firefly chassis has proven remarkably adaptable across centuries of service, supporting configurations ranging from the original Star League specification with advanced technologies like XL engines and double heat sinks to the stripped-down Succession Wars variants that served Wolf's Dragoons faithfully with far simpler components.</p>
 
-deployment:The Firefly is armed with a Coventry Five-Tube LRM-5 for long-range firepower and to attempt to keep enemies at a distance. If facing a determined enemy that is intent on closing, the Firefly carries three Martell medium lasers, which can cause a considerable amount of damage. Finally, to protect against missile attacks, the Firefly carries a SureFire 444 anti-missile system in the left arm, with a "false" AMS in the right arm.
+deployment:<p>Developed as a Wolf's Dragoons field modification in the late 3040s in preparation for the anticipated Clan invasion, this variant trades some offensive capability for improved survivability. Retaining the three Martell medium lasers and Coventry Five-Tube LRM-5 of the earlier model, it replaces the four small lasers with a Surefire 444 anti-missile system to defend against incoming missile fire, with CASE protecting the AMS ammunition bay. ComStar analysts noted that the unprotected LRM ammunition suggested the modification was a 'Mech bay conversion rather than a full factory rebuild, a telling indicator of the Dragoons' limited production capabilities at the time.</p>
 
-history:The Firefly, which entered service in the late 27th century, was one of the SLDF's primary light 'Mechs in its later years. Cases occurred in all House forces, but not in the numbers deployed by the SLDF, and all were presumed destroyed by the end of the Second Succession War, save for tales of anomalous examples in the Periphery. The design reappeared with Wolf's Dragoons in the early 31st century, raising eyebrows, yet the secret of the Firefly's origin was exposed when the Dragoons' Clan origins were revealed. In the 3040s, the advent of a small number of Fireflys with the Com Guard forces elicited a similar reaction.
+history:<p>The Firefly's service history spans over five centuries and encompasses some of the most decisive conflicts in human history. Originally manufactured by the Coventry/Earthwerks Combine on Terra, the design entered SLDF service in 2669 and quickly established itself as a reliable light support platform. When the Star League collapsed and General Kerensky led the Exodus in 2784, significant numbers of Fireflys accompanied the departing SLDF forces, while the Combine's Terra factory was destroyed in 2779 during the opening salvos of the Succession Wars.</p><p>Among the exiles, the Firefly thrived. Strana Mechty MechWorks established new production of the FFL-3SLE variant, and the design served on both sides of the Exodus Civil War and throughout Operation KLONDIKE. Even the most degraded examples fielded by the Pentagon Powers proto-states performed creditably thanks to the inherent robustness of the Firefly's design. When the Clans eventually activated Wolf's Dragoons for their intelligence-gathering mission to the Inner Sphere, the Firefly was among the designs selected, though deliberately downgraded to Succession Wars technology levels to avoid revealing the Dragoons' true origins.</p><p>Acting as the backbone of the Dragoons' light 'Mech formations, the Firefly served with distinction through the Third and Fourth Succession Wars. Cut off from Clan Homeworld resupply, however, the Dragoons' Firefly inventory steadily dwindled over the decades. The late 3040s saw the first upgrades as the Dragoons prepared for the anticipated Clan invasion, producing the FFL-4B field modification. The design's wider distribution began when ComStar unveiled refitted FFL-4C models with their Com Guards, and the Invading Clans fielded upgraded Firefly C variants among their second-line forces.</p><p>By the time of the Word of Blake Jihad and the devastation of Outreach in 3067, fewer than half a dozen Fireflys remained in Dragoon service, though rumors persisted of advanced models produced at an unknown facility. New production of the FFL-4D was established at both Arc-Royal MechWorks and Blackwell Corporation on Outreach shortly before the Jihad consumed both worlds in conflict. The design's fortunes were finally reversed nearly a century later when Wolf's Dragoons, seeking to diversify their logistics, contracted with Ceres Metals Industries on Lockton to produce the new FFL-5A model, restoring the Firefly to prominence among the Dragoons' light combat units and making it available to other mercenary commands for the first time.</p>
 
-manufacturer:Refit
+manufacturer:Field Refit
+
 primaryfactory:Various
-systemmanufacturer:CHASSIS:Earthwerks Firefly
-systemmanufacturer:ENGINE:GM 150
-systemmanufacturer:ARMOR:StarSlab/1
-systemmanufacturer:JUMP_JET:Lexington Lifters
-systemmanufacturer:COMMUNICATIONS:Datcom 18
-systemmanufacturer:TARGETING:Radcom TXX
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Earthwerks
+systemmode:CHASSIS:Firefly
+systemmanufacturer:ENGINE:GM
+systemmode:ENGINE:150
+systemmanufacturer:ARMOR:StarSlab
+systemmode:ARMOR:1 with CASE
+systemmanufacturer:JUMP_JET:Lexington
+systemmode:JUMP_JET:Lifters
+systemmanufacturer:COMMUNICATIONS:Datcom
+systemmode:COMMUNICATIONS:18
+systemmanufacturer:TARGETING:Radcom
+systemmode:TARGETING:TXX

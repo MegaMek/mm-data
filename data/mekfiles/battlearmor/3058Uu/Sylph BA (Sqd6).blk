@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a34a-7fb7-8dd7-3a0514c1d3be
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Sylph Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd6)
 </Model>
 
@@ -44,10 +39,6 @@ Sylph Battle Armor
 <year>
 3060
 </year>
-
-<originalBuildYear>
-3060
-</originalBuildYear>
 
 <type>
 Clan Level 3
@@ -60,9 +51,6 @@ Scout
 <motion_type>
 VTOL
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 1
@@ -79,12 +67,70 @@ VTOL
 <Point Equipment>
 CLBAMicroPulseLaser:RA
 CLBAMicroBomb:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 BABattleClaw:LA
 </Point Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAVTOL
+</slotless_equipment>
+
+<capabilities>
+<p>The Sylph mounts a fixed micro pulse laser in the right arm and a battle claw in the left, providing both ranged firepower and the ability to engage in anti-BattleMech swarming attacks or ride OmniMechs into combat. A single-use cluster bomb rack attached to the jump pack supplements this armament with a burst of area-effect ordnance. The suit's defining feature is its advanced VTOL propulsion system, adapted from standard battle armor jump jets. Computer-controlled directional exhaust ports regulate hovering and provide exceptional agility in flight, though pilots must manage a complex pedal and leg harness system to maintain stability. Any lapse in concentration risks an unrecoverable death spiral. The price of flight is significant: the Sylph carries roughly half the armor protection of an Elemental suit and a comparatively light weapons package, making it vulnerable in direct engagements against heavier battle armor.</p>
+</capabilities>
+
+<overview>
+<p>The Sylph is a light Clan battle armor suit developed by Clan Cloud Cobra as the first fully airborne infantry design in known space. Fielded in 3060, the suit was conceived to extend the Cloud Cobras' aerospace dominance into the battle armor domain, giving their touman an infantry capability no other Clan possessed. The Sylph's VTOL-capable propulsion system allows sustained flight at speeds exceeding fifty kilometers per hour, though this mobility comes at the cost of reduced armor protection and a limited weapon payload. The design earned its operators a level of respect typically reserved for fighter pilots within Clan Cloud Cobra's warrior caste.</p>
+</overview>
+
+<deployment>
+<p>ComStar and Word of Blake formations organized captured Clan battle armor into six-trooper Level I units. Sylph suits acquired through salvage or covert procurement fit this organizational structure, though the demanding pilot training requirements limited the number of troopers qualified to operate them effectively within Com Guard and Militia doctrine.</p>
+</deployment>
+
+<history>
+<p>Clan Cloud Cobra began development of the Sylph as part of a broader effort to extend their aerospace doctrine into the infantry domain. Khan Din Steiner ordered the program, but the Cloud Cobra scientist caste drove much of the early work out of religious conviction, viewing the creation of an airborne warrior as a spiritual imperative tied to their air-elemental faith. The name itself was drawn from mythological spirits of the air.</p><p>Progress proved difficult. Integrating a functional VTOL propulsion system into a battle armor chassis was something no Clan had accomplished before, and the Cloud Cobra scientists encountered persistent problems with the jump pack and thruster assembly. Several test pilots were killed during the secretive development phase. The scientists pushed through these setbacks, though the final production model achieved only limited flight capabilities rather than the full sustained flight originally envisioned.</p><p>The Sylph entered service in 3060 and quickly became a fixture within the Cloud Cobra touman. The Clan had invested heavily in the program even before production began, graduating sibkos of mixed Elemental and fighter pilot bloodlines specifically to operate the suit. Pilots who completed the demanding training regimen earned respect comparable to aerospace fighter pilots. Many Sylph operators now hail from sibkos employing a mix of Elemental and pilot genes, an interesting indicator of the Cloud Cobras' assessment of the technology's potential.</p><p>Adoption beyond the Cloud Cobras came slowly. Clan Snow Raven and Clan Diamond Shark each secured small numbers through Trials of Possession, limiting their use to trial deployments. Clan Star Adder proved more enthusiastic, integrating Sylphs into their Alpha and Beta Galaxies with reports of Tau Provisional Galaxy fielding them as well. The Blood Spirits attempted to acquire the design for years, but the Cloud Cobras refused every request.</p><p>The Snow Ravens eventually developed their own branch of Sylph technology. During the Jihad, CSR Battle Armor Facility Alpha on Ramora produced the experimental XR variant, which traded the VTOL system for myomer boosters and a ground-speed focus. This led to the production Enhanced Sylph, a refined ground-mobile design optimized for anti-infantry operations and urban combat in the Outworlds Alliance. The Sylph's VTOL technology also influenced other programs, with Snow Raven scientists adapting its propulsion concepts into the Extended Jump Jet system for ProtoMechs.</p>
+</history>
+
+<manufacturer>
+Clan Cloud Cobra
+</manufacturer>
+
+<primaryFactory>
+Brim
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3058U
@@ -110,35 +156,3 @@ biped
 1
 </weightclass>
 
-<overview>
-The Sylph was created by Clan Cloud Cobra to augment their vast aerospace forces with a fully-airborne Battle Armor suit.
-</overview>
-
-<capabilities>
-The centerpiece of the Sylph suit's design is its advanced propulsion system, adapted from the jump jets standard on other battle suits, which can maintain a steady air speed of 53 km/h. In addition to the normal controls found in other suits the Sylph utilizes a complex system of pedals and leg harness when in flight; any loss in concentration will more likely than not send the Sylph into an uncontrollable death spiral. The ability to hover is regulated by computer controls which divert thrust from the main jets through dozens of directional exhaust ports, which also gives the suit its incredible agility. The price for this however is that the Sylph mounts half as much armor as the Elemental suit and carries only a lightweight weapons package.
-</capabilities>
-
-<deployment>
-The weaponry on the Sylph is more limited than the Elemental suit, with a fixed Micro Pulse Laser in the right arm and a Battle Claw in the left. Backing up the laser is a relatively primitive one-shot cluster Bomb Rack attached to the suit's jump pack.
-</deployment>
-
-<history>
-Naming it after elemental spirits representing air, development of the suit was driven as much by the Cloud Cobra's faith as it was by Khan Din Steiner's orders. Despite their scientist caste's vast knowledge of aircraft, the Clan had a great deal of trouble getting the VTOL capabilities of the Sylph to function, with a number of test pilots dying during its secretive development. As it is, the Sylph only possesses limited flight capabilities, but even this remains an impressive accomplishment. First deployed in 3060 the Sylph has since become a staple of the Cloud Cobra touman. The training necessary to pilot a Sylph is far more intensive for other suits, but those who succeed are given as much respect as pilots. Another interesting byproduct of the Sylph is that the Cobras obviously invested heavily in the design before it was even completed, having already graduated sibkos of mixed Elemental and fighter pilot bloodlines specifically to operate the suits. Outside of the Cloud Cobras the other Clans have adopted the suit with more caution. Both Clan Snow Raven and Clan Diamond Shark obtained a handful of suits through Trials of Possession, though they've since limited their use to test deployments, while Clan Star Adder began deploying the suits with their Alpha and Beta Galaxies.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Brim
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Gangtok
-sucsId: 934
+sucsId: 935
 xcood: 135.199
 ycood: -472.324
 spectralType: M5V
@@ -62,6 +62,12 @@ planet:
         size: medium
         icon: rock10
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2654-05-15'
         faction:
           source: canon
@@ -93,6 +99,15 @@ planet:
         population: 82462843.0
       - date: '2750-01-01'
         population: 85620635.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Brinton Union
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - TC
       - date: '2760-01-01'
         population: 90166754.0
       - date: '2769-03-22'
@@ -133,9 +148,15 @@ planet:
         socioIndustrial: D-D-B-D-D
       - date: '3022-02-01'
         faction:
-          source: This is the earliest the directorate could have taken over
+          source: assumption
           value:
             - ARD
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ARC
       - date: '3026-01-01'
         faction:
           source: canon
@@ -143,9 +164,10 @@ planet:
             - ARC
         population: 4712361.0
         socioIndustrial: D-D-B-D-D
-      - date: '3151-01-01'
+      - date: '3030-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - ABN
   - name: Virasana

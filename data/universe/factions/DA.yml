@@ -17,11 +17,17 @@
 
 key: DA
 name: Duchy of Andurien
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: FWLM
+sucsCodes:
+  - DA
 capital: Andurien
 yearsActive:
   - start: 3030
     end: 3040
-  - start: 3079
+  - start: 3075
 tags:
   - LENIENT
   - MINOR

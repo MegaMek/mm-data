@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a459-7866-a8ca-32cf817a3627
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -32,7 +28,7 @@ BattleArmor
 Rottweiler Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd5)
 </Model>
 
@@ -40,34 +36,9 @@ Rottweiler Battle Armor
 8664
 </mul id:>
 
-<chassis>
-quad
-</chassis>
-
-<weightclass>
-2
-</weightclass>
-
-<Trooper Count>
-5
-</Trooper Count>
-
-<cruiseMP>
-5
-</cruiseMP>
-
-<Armor>
-7
-</Armor>
-
-<Squad Equipment>
-ISBASmallLaser:Body
-ISBAFiredrakeIncendiaryNeedler:Body
-ISImprovedSensors:Body
-IS BA Stealth (Basic):Body
-IS BA Stealth (Basic):Body
-IS BA Stealth (Basic):Body
-</Squad Equipment>
+<year>
+3065
+</year>
 
 <type>
 IS Level 2
@@ -77,17 +48,13 @@ IS Level 2
 Scout
 </role>
 
-<year>
-3065
-</year>
-
 <motion_type>
 Leg
 </motion_type>
 
-<source>
-TR:3075
-</source>
+<cruiseMP>
+5
+</cruiseMP>
 
 <armor_type>
 31
@@ -97,20 +64,44 @@ TR:3075
 3
 </armor_tech>
 
-<overview>
-The Rottweiler is a battle armor suit that Lyran Alliance scientists designed as a fast scout.
-</overview>
+<Squad Equipment>
+ISBASmallLaser:Body
+ISBAFireDrakeNeedler:Body
+ISImprovedSensors:Body
+IS BA Stealth (Basic):Body
+IS BA Stealth (Basic):Body
+IS BA Stealth (Basic):Body
+</Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
 
 <capabilities>
-Their efforts resulted in a top speed of 54 km/h. The Rottweiler is an electronics marvel. It has stealth armor that enables the suit to evade detection and makes targeting it more difficult along with advanced sensors so that the unit is never surprised. It mounts enough armor to stop a Clan Medium Pulse Laser. The Rottweiler also incorporates a hatch in its front that mimics a mouth and can carry up to five kilograms of equipment.
+<p>The Rottweiler's quad chassis propels the one-ton suit to speeds of 54 kph, making it one of the fastest battle armor designs in service. Rather than the turret mount used by the Fenrir, the engineering team opted for a fixed dorsal weapon position carrying a standard support laser and a Firedrake incendiary needler for anti-personnel work. This arrangement allows the pilot to lie flat inside the chassis, reducing fatigue on extended scouting missions.</p><p>Standard stealth armor defeats most targeting systems while providing protection comparable to heavier suits despite the Rottweiler's lighter mass. An advanced sensor suite gives the suit exceptional situational awareness, and a frontal hatch mimicking the design's canine namesake can carry up to five kilograms of mission equipment. The trade-off for this sensor and speed package is limited offensive punch against armored targets.</p>
 </capabilities>
 
+<overview>
+<p>The Rottweiler is a medium quad battle armor suit developed by TharHes Industries for the Lyran Alliance Armed Forces. Fielded in 3065, the design built on lessons learned from the earlier Fenrir program, prioritizing speed and sensor capability over raw firepower. Its low profile and advanced electronics package earned it a respected place among Lyran reconnaissance formations, where its ability to operate well ahead of heavier units proved consistently valuable across multiple theaters of operation.</p>
+</overview>
+
 <deployment>
-The Rottweiler does not use a turret mount like the Fenrir, as the engineering team opted for a fixed Small Laser instead. This increased pilot comfort as he or she can now lay flat, enabling a Rottweiler squad to go on extended missions due to lessened fatigue. For use against unarmored infantry, the battlesuit carries a "Firedrake" incendiary needler
+<p>Five-trooper Points of Rottweilers appeared in limited numbers among Clan formations that acquired the design through salvage or trade during the late Jihad and Republic eras. Clan commanders organized captured suits into standard Points, though the Rottweiler's reconnaissance focus sat uncomfortably with Clan doctrines that favored direct engagement. Those warriors assigned to Rottweiler Points typically employed them as forward screening elements for heavier Stars.</p>
 </deployment>
 
 <history>
-The Fenrir showed how fast a quadruped battlesuit could move, so the team decided to push the envelope with the Rottweiler.
+<p>The Rottweiler grew out of a Lyran Alliance effort to push quad battle armor beyond what the Fenrir had demonstrated. TharHes Industries on Eutin led the program, directing their engineers to build a suit that could outrun any competing design while hugging the ground closely enough to frustrate enemy targeting solutions. The result entered service in 3065 as the fastest quad battlesuit in production.</p><p>Lyran commanders had initially greeted quad battle armor with skepticism, but the Rottweiler gradually won converts among LAAF reconnaissance formations during border operations against the Free Worlds League. Mixed groups of Rottweilers and Fenrir armor screened ahead of main assault forces, marking targets and feeding positional data to artillery commanders.</p><p>The Jihad forced TharHes to develop three new configurations between 3069 and 3072. One filled an urban warfare gap left by the destruction of Gray Death Battle Armor production on Glengarry. A defensive variant with remote sensors and a longer-ranged weapon proved critical during the liberation of Donegal in 3071, where mixed squads detected and ambushed a Blakist probing force. Rottweilers remained a staple of Lyran reconnaissance doctrine into the ilClan era.</p>
 </history>
 
 <manufacturer>
@@ -125,7 +116,39 @@ Eutin
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<chassis>
+quad
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+7
+</armor>
+
+<Trooper Count>
+5
+</Trooper Count>
+
+<weightclass>
+2
+</weightclass>
+

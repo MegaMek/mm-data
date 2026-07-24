@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Unkador
-sucsId: 2630
+sucsId: 2631
 xcood: 369.847
 ycood: -77.834
 spectralType: M1V
@@ -60,6 +60,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2739-08-22'
         faction:
           source: canon
@@ -73,6 +79,17 @@ planet:
         hpg: B
       - date: '2750-01-01'
         population: 308133.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 3
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 962225.0
       - date: '2770-01-01'
@@ -117,6 +134,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Pýlos
     type: GAS_GIANT
     orbitalDist: 0.5

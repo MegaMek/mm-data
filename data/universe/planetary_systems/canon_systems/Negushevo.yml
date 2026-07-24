@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Negushevo
-sucsId: 1806
+sucsId: 1807
 xcood: -286.954
 ycood: -273.801
 spectralType: F3V
@@ -99,6 +99,12 @@ planet:
         size: medium
         icon: rock17
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2736-10-26'
         faction:
           source: canon
@@ -112,6 +118,15 @@ planet:
         population: 85047.0
       - date: '2750-01-01'
         population: 335671.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 1002398.0
       - date: '2770-01-01'
@@ -185,6 +200,12 @@ planet:
           source: canon
           value:
             - RCM
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RCM
       - date: '3080-01-01'
         population: 97157041.0
       - date: '3090-01-01'
@@ -205,9 +226,13 @@ planet:
         population: 106583493.0
       - date: '3145-01-01'
         population: 107482565.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Rim Commonality
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Bin Jamal Port

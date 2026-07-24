@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,53 +15,52 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c4e1-7f55-972e-a969b07c0cc7
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Grand Dragon
 model:DRG-7K
 mul id:1260
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3063
-Source:TR:3050
-Rules Level:2
+techbase:Inner Sphere
+era:3063
+source:TR:3050,TR:3050U
+published:RS:3050Uu-I
+rules level:2
 role:Skirmisher
 
-
-
 quirk:ext_twist
-quirk:low_profile
 quirk:stable
+quirk:low_profile
 
+mass:60
+engine:360 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:60
-Engine:360 XL Fusion Engine
-Structure:Endo-Steel
-Myomer:ISMASC
+heat sinks:15 IS Double
+walk mp:6
+jump mp:0
 
-Heat Sinks:15 Double
-Walk MP:6
-Jump MP:0
+armor:Standard(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:16
+RT armor:16
+CT armor:27
+HD armor:9
+LL armor:18
+RL armor:18
+RTL armor:8
+RTR armor:8
+RTC armor:12
 
-Armor:Standard Armor
-LA Armor:14
-RA Armor:14
-LT Armor:16
-RT Armor:16
-CT Armor:27
-HD Armor:9
-LL Armor:18
-RL Armor:18
-RTL Armor:8
-RTR Armor:8
-RTC Armor:12
-
-Weapons:6
-1 ISERMediumLaser, Left Arm
-1 ISERMediumLaser, Left Arm
-1 ISERMediumLaser, Left Arm
-1 ISERPPC, Right Arm
-1 ISMRM10, Center Torso, Ammo:24
-1 ISC3SlaveUnit, Left Torso
+Weapons:5
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+ER PPC, Right Arm
+MRM 10, Center Torso
 
 Left Arm:
 Shoulder
@@ -92,83 +91,110 @@ ISERPPC
 -Empty-
 
 Left Torso:
-Engine
-Engine
-Engine
-ISDouble Heat Sink
-ISDouble Heat Sink
-ISDouble Heat Sink
+Fusion Engine
+Fusion Engine
+Fusion Engine
+ISDoubleHeatSink
+ISDoubleHeatSink
+ISDoubleHeatSink
 ISC3SlaveUnit
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Right Torso:
-Engine
-Engine
-Engine
-ISMRM10 Ammo
+Fusion Engine
+Fusion Engine
+Fusion Engine
+IS MRM 10 Ammo
 ISMASC
 ISMASC
 ISMASC
 ISCASE
-Endo-Steel
-Endo-Steel
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
 Gyro
 Gyro
-Engine
-Engine
-Engine
-ISMRM10
-ISMRM10
+Fusion Engine
+Fusion Engine
+Fusion Engine
+MRM 10
+MRM 10
 
 Head:
 Life Support
 Sensors
 Cockpit
-Endo-Steel
+IS Endo Steel
 Sensors
 Life Support
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Steel
-Endo-Steel
+IS Endo Steel
+IS Endo Steel
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-overview:The Grand Dragon is the successful follow-up to the Dragon BattleMech.
- 
-capabilities:Protected by ten tons of armor, the Grand Dragon uses thirteen double heat sinks for excellent heat management and uses a 16.5 ton Hermes 360 XL engine to achieve a moderate cruising speed of 64 km/h. Originally the Grand Dragon used the same Alshain Type 56-60H chassis as was found in the Dragon 'Mech it replaced. However, when the new Nykvarn plant was being set up an innovative engineering team came up with a way to increase the Grand Dragon's rotation from 250° to 300° by using an alternative assembly method for the hip and torso structure. This improvement was responsible for Nykvarn being awarded the honor of restarting Grand Dragon production, with all new Grand Dragons using this Nykvarn Type 58-66SH chassis
+overview:<p>The Grand Dragon emerged from Luthien Armor Works' efforts to modernize the venerable Dragon chassis using newly recovered Star League technology. What began as a simple field modification replacing the autocannon with a particle projection cannon evolved into a full production model by 3040. Over the following fifteen years, LAW systematically converted Dragon production lines at Luthien, Dieron, Saffel, and Yorii to Grand Dragon manufacture, completely phasing out the original by 3055.</p><p>The Grand Dragon represented the Combine's technological renaissance following the recovery of the Helm Memory Core. The design incorporated an extralight engine, double heat sinks, and extended-range energy weapons while maintaining the Dragon's characteristic speed and versatility. Production continued until the Word of Blake's devastating 3068 attacks on LAW facilities, though rapid establishment of new factories on Nykvarn, Abiy Adi, and Savinsville ensured the Grand Dragon's continued service.</p>
 
-deployment:The 7K variant first built in 3063 uses an Endo Steel chassis to free up weight and carries an XL Engine for power, which is linked to a MASC system. This allows the Grand Dragon to move at speeds of up to 129.6 km/h in short bursts. The 'Mech is armed with an ER PPC as its primary weapon. For support, the 'Mech carries an MRM-10 as its secondary weapon. The 'Mech also carries three ER Medium Lasers as close combat weapons, all of which are carried in the left arm to allow for the greatest range of fire. Finally, the 'Mech has a C3 slave unit that allows it to share targeting information with friendly units. The use of Medium Range Missiles was considered controversial when it was introduced, since a constant stream of glitches and field upgrades guaranteed maintenance issues. Those who pilot these 'Mechs tend to be veteran pilots who have adapted to the 'Mech's quirks.
+capabilities:<p>The Grand Dragon's combat effectiveness stems from its successful integration of advanced technology without sacrificing the original Dragon's core strengths. The Hermes 360 XL engine pushes the sixty-ton chassis to a maximum speed of 97 kilometers per hour, making it one of the faster heavy 'Mechs in DCMS service. This mobility combines with the Lord's Light 2 Extended-Range PPC to create a highly effective skirmisher capable of dictating engagement ranges. The Telos DecaCluster LRM-10 provides supplementary firepower, while three Victory 23R medium lasers handle close defense.</p><p>Thirteen double heat sinks manage the thermal load efficiently, allowing sustained fire with the primary weapons. CASE-protected ammunition storage demonstrates LAW's attention to survivability. Most significantly, the Nykvarn facility's engineering team developed an enhanced hip and torso assembly that increased torso rotation from 250 degrees to nearly 300 degrees, substantially improving the 'Mech's ability to engage targets across wider firing arcs. This modification became standard on all Grand Dragons produced after the Jihad.</p>
 
-history:The 'Mech was originally a simple variant of the Dragon with some modifications, chiefly replacing the autocannon with a particle projection cannon, introduced around the end of the Fourth Succession War. In 3040 this DRG-1G variant was turned into a production model, with several of the Dragon's production lines turned over to building Grand Dragons. As it reached Draconis Combine Mustered Soldiery units the Grand Dragon became well-liked for its all-around effectiveness in terms of speed, heat management and weaponry. Luthien Armor Works went ahead with phasing in the Grand Dragon, retooling their Dragon factories on Luthien, Saffel, Yorii and Dieron to build the new 'Mechs exclusively, by 3055 all Dragon production had ceased in favor of the Grand Dragon. Just like the Dragon, the Grand Dragon quickly became a favorite in the DCMS, with nearly every line unit fielding a company of either design. Production of the Grand Dragon continued unabated until the Jihad, when the Word of Blake devastated LAW's factories in 3068. It took two years for LAW to get new Grand Dragon factories up and running, the first on Nykvarn followed by Abiy Adi and Savinsville, and ensure the continued use of the 'Mech in years to come.
+deployment:<p>Introduced in 3063, the DRG-7K pushes Grand Dragon performance through incorporation of MASC and an Endo Steel chassis. The system allows burst speeds up to 129 kilometers per hour, making the 7K one of the fastest heavy 'Mechs in existence. The controversial MRM-10 replaces the traditional LRM launcher, providing improved close-range damage at the cost of indirect fire capability. Three ER medium lasers concentrate in the left arm, while a C3 slave unit enables network integration. The constant glitches required by early MRM systems guaranteed maintenance headaches, but veterans who master the 7K find it devastatingly effective.</p>
 
-manufacturer:Luthien Armor Works,Luthien Armor Works,Luthien Armor Works,Luthien Armor Works,Luthien Armor Works
-primaryfactory:Dieron,Luthien,Nykvarn,Saffel,Yorii
-systemmanufacturer:CHASSIS:Nykvarn Type 58-66SH Endo
-systemmanufacturer:ENGINE:Hermes 360 XL with MASC
-systemmanufacturer:ARMOR:Starshield with CASE
-systemmanufacturer:COMMUNICATIONS:Sipher CommSys 3
-systemmanufacturer:TARGETING:Eagle Eye SY10-10
+history:<p>The Grand Dragon's development traces back to the waning years of the Fourth Succession War, when DCMS commanders began experimenting with field modifications to their Dragon 'Mechs. The most successful of these swapped the autocannon for a particle projection cannon, creating what would become the DRG-1G configuration. Initial reception proved enthusiastic enough that LAW formalized the design for production in 3040.</p><p>Acceptance within the DCMS came rapidly as the Grand Dragon reached line units throughout the 3040s and 3050s. The 'Mech's effective combination of speed, firepower, and heat management made it popular with MechWarriors who appreciated its versatility. Nearly every DCMS line unit eventually fielded a company of Dragons or Grand Dragons. The Grand Dragon also saw extensive use during the Clan Invasion, where its mobility proved valuable against technologically superior Clan opponents.</p><p>The Jihad brought severe disruption when Word of Blake forces struck LAW's primary facilities between 3068 and 3070. LAW's resilience proved equal to the challenge, as the company established new manufacturing capacity within two years. The Nykvarn facility earned the honor of restarting Grand Dragon production, followed by rebuilt facilities on Abiy Adi and Savinsville. Post-Jihad variants continued the chassis's evolution, incorporating C3 networks, improved missiles, and eventually Clan-grade technology.</p>
+
+manufacturer:Luthien Armor Works, Luthien Armor Works, Luthien Armor Works, Luthien Armor Works
+
+primaryfactory:Dieron, Luthien, Saffel, Yorii
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Nykvarn
+systemmode:CHASSIS:Type 58-66SH Endo
+systemmanufacturer:ENGINE:Hermes
+systemmode:ENGINE:360 XL
+systemmanufacturer:ARMOR:Starshield
+systemmode:ARMOR:Standard with CASE
+systemmanufacturer:COMMUNICATIONS:Sipher
+systemmode:COMMUNICATIONS:CommSys 3
+systemmanufacturer:TARGETING:Eagle Eye
+systemmode:TARGETING:SY10-10

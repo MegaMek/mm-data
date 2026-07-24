@@ -17,6 +17,11 @@
 
 key: CIH
 name: Clan Ice Hellion
+# Pinned explicitly so Faction2.getRankSystem() does not iterate fallBackFactions; CLAN tag
+# factions all use the shared CLAN rank table.
+rankSystem: CLAN
+sucsCodes:
+  - CIH
 capital: Hector
 yearsActive:
   - start: 2807
@@ -105,3 +110,5 @@ factionLeaders:
     gender: "MALE"
     startYear: 3072
     endYear: 3074
+usesMercenaries:
+  2500: false

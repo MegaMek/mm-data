@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a263-77ed-b83a-c4306e20b7a2
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -32,49 +28,17 @@ BattleArmor
 Gray Death Scout Suit
 </Name>
 
-<model>
+<Model>
 (Sqd6)
-</model>
+</Model>
 
 <mul id:>
 8889
 </mul id:>
 
-<Trooper Count>
-6
-</Trooper Count>
-
-<chassis>
-biped
-</chassis>
-
-<weightclass>
-1
-</weightclass>
-
-<cruiseMP>
-1
-</cruiseMP>
-
-<jumpingMP>
-3
-</jumpingMP>
-
-<Armor>
-4
-</Armor>
-
-<armor_type>
-28
-</armor_type>
-
-<Squad Equipment>
-ISBAActiveProbe:Body
-ISBAJumpBooster:Body
-BAArmoredGlove:LA
-BAArmoredGlove:RA
-InfantryAssaultRifle:RA:APM
-</Squad Equipment>
+<year>
+3052
+</year>
 
 <type>
 IS Level 2
@@ -84,52 +48,115 @@ IS Level 2
 Scout
 </role>
 
-<year>
-3052
-</year>
-
 <motion_type>
 Jump
 </motion_type>
 
-<source>
-TR:3058U
-</source>
+<cruiseMP>
+1
+</cruiseMP>
+
+<armor_type>
+28
+</armor_type>
 
 <armor_tech>
 3
 </armor_tech>
 
-<overview>
-Gray Death Scout is a radical take on battle armor, almost taking the "battle" out of battle armor.
-</overview>
+<Squad Equipment>
+ISBALightActiveProbe:Body
+BAJumpBooster:Body
+BAArmoredGlove:LA
+BAArmoredGlove:RA
+InfantryAssaultRifle:APM:RA
+</Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
 
 <capabilities>
-Though Gray Death Scout armor has no integral weapons, its Armored Gloves allow soldiers to wield standard small arms and perform other functions as normal. While this does not allow for very much damage potential against hardened targets, a scout squad can be a serious threat to unarmored infantry. The armored gloves, in combination with the suit's strength enhancements, allows the trooper to ride on OmniMechs via their handholds or perform anti-'Mech attacks. That the trooper's natural dexterity is otherwise unaffected by the suit is an added bonus for placing Satchel Charges in exposed 'Mech joints
+<p>The Gray Death Scout Suit carries no integral weapons, relying on the trooper's ability to wield conventional small arms through its Armored Gloves. This design choice freed mass for a Light Active Probe and long-range communication systems that give the suit exceptional battlefield awareness. A Jump Booster pushes the suit's maximum jump range to 120 meters, far exceeding most battle armor designs of its era. Improved Stealth armor provides solid protection while dramatically reducing the suit's sensor signature.</p><p>At 750 kilograms, the Scout is among the lightest operational battle armor designs. The gloves preserve enough manual dexterity for satchel charge placement and handling of infantry weapons, making even an unarmed Scout trooper dangerous to careless BattleMech pilots. The lack of integral weapons is the suit's most significant limitation, leaving troopers dependent on carried arms for any engagement beyond anti-BattleMech attacks.</p>
 </capabilities>
 
+<overview>
+<p>The Gray Death Scout Suit is a light battle armor design created by Gray Death Legion technicians on Glengarry. Developed alongside the Gray Death Standard from NAIS-supplied Inner Sphere Standard prototypes, the Scout took a radical approach by sacrificing weapons and heavy armor in favor of enhanced sensors, communications, and mobility. First fielded in 3052, the suit earned a reputation as one of the most capable reconnaissance platforms available to Inner Sphere forces, filling a niche that heavier combat-oriented battle armor could not address.</p>
+</overview>
+
 <deployment>
-The Gray Death Scout's intelligence-gathering capabilities are enhanced with the inclusion of long-range communication systems and a Light Active Probe; the suit's sensors mimic the capabilities of a portable radar and infrared remote sensor. The suit was also the first to incorporate a Jump Booster which pushed its maximum jump range to 120 meters. However it is only protected by 200kg of standard armor and a single blast from a medium laser can obliterate both the armor and trooper.
+<p>ComStar and Word of Blake formations organized Gray Death Scout Suits into six-trooper Level I units. The additional troopers allowed Level I commanders to split their formation into paired fire teams while maintaining continuous sensor coverage. Com Guard units valued the Scout's intelligence-gathering capability for supporting their doctrine of information superiority on the battlefield. Word of Blake Militia formations that acquired the suits used them in a similar fashion during the Jihad.</p>
 </deployment>
 
 <history>
-When the New Avalon Institute of Science sent prototypes of its Inner Sphere Standard to the Gray Death Legion, the mercenaries were duly impressed with many of its features. They also had a number of criticisms, sending a long list of improvements back to NAIS while Legion technicians went about with their own tinkering. By late 3051 the Legion had created two distinct suits from the original prototype: a Gray Death Standard similar in form and function of the Inner Sphere Standard, and a light "scout armor" suit. By stripping off more than half of the prototype's armor and its integrated weaponry, the technicians were able to improve the Scout's jumping and sensor capabilities, creating a suit suitable for deep reconnaissance missions. The Gray Death Scout armor made its combat debut in 3052, fighting alongside the Gray Death Standard to defeat Clan Jade Falcon forces on Pandora. After the end of the Clan Invasion the Legion continued to build new Scout suits to replace their losses and sell a small number to other mercenary commands. They also sold small numbers of Scout suits to the Lyran Alliance, although the Legion would pay for this support when they were destroyed during the FedCom Civil War on Hesperus II in 3065. Afterwards, survivors of the Legion created Gray Death Technologies and used financial aide from Defiance Industries to start producing both the Scout and Standard suits on Glengarry, selling them to the Lyran Alliance Armed Forces and other mercenaries. Production of the Gray Death Scout halted in 3074 following the destruction of Gray Death Technologies by Word of Blake forces. The remnants of the company were then absorbed by Defiance Industries, which transferred production of all Gray Death suits to Furillo in the later years of the Jihad.
+<p>When the New Avalon Institute of Science distributed prototypes of its Inner Sphere Standard battle armor to elite units in 3050, the Gray Death Legion proved an inspired choice of recipient. The mercenary command had long emphasized infantry operations, particularly anti-BattleMech tactics, and their experienced technicians brought a practical perspective that pure laboratory researchers lacked. By late 3051, Legion engineers had split the NAIS prototype into two distinct derivatives. While one became the Gray Death Standard, the other took a far more radical direction.</p><p>The Scout Suit stripped away more than half the prototype's armor and all integrated weaponry. In their place, Legion technicians installed enhanced sensor arrays, long-range communications gear, and an improved jump pack. The mechanical claws gave way to fully articulated armored gloves that preserved a trooper's natural dexterity for handling infantry weapons and placing satchel charges. The result was a suit built for deep reconnaissance rather than direct combat, a concept without equivalent among existing battle armor designs.</p><p>The Scout made its combat debut on Pandora in 3052, fighting alongside the Gray Death Standard against Clan Jade Falcon forces near the town of Vandmaal. In thick jungle terrain, Scout-equipped troopers leveraged their advanced sensors and enhanced mobility to locate and outmaneuver Clan positions. Springing from concealment, the Legion's armored infantry destroyed two OmniMechs and crippled three more with well-placed satchel charges.</p><p>Following the Truce of Tukayyid, the Gray Death Legion continued limited production on Glengarry. Most suits replaced the Legion's own combat losses, though small numbers were sold to other mercenary commands and the Lyran Alliance Armed Forces. The Legion's destruction on Hesperus II in 3065 during the FedCom Civil War ended this arrangement. Surviving support staff established Gray Death Technologies on Glengarry with backing from Defiance Industries, continuing Scout Suit production for the LAAF and mercenary buyers.</p><p>The Word of Blake's assault on Glengarry in 3074 destroyed the GDT factory. Defiance Industries absorbed the remnants of the company and relocated all Gray Death battle armor production to Furillo. The Scout Suit's original design was preserved through this transition and remains in production. Its influence extended beyond the Gray Death line: the Jump Booster system pioneered on the Scout was later adopted by Clan Nova Cat engineers for the Clan Battle Armor design, and the emphasis on stealth and sensor capability shaped an entire generation of light battle armor across the Inner Sphere.</p>
 </history>
 
-
 <manufacturer>
-Defiance Industries,Gray Death Technologies
+Gray Death Technologies|Defiance Industries
 </manufacturer>
 
 <primaryFactory>
-Furillo,Glengarry
+Glengarry|Furillo
 </primaryFactory>
 
 <systemManufacturers>
 CHASSIS:Unknown
 ENGINE:Unknown
 ARMOR:Unknown
-JUMPJET:Unknown
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3058U
+</source>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+3
+</jumpingMP>
+
+<armor>
+4
+</armor>
+
+<Trooper Count>
+6
+</Trooper Count>
+
+<weightclass>
+1
+</weightclass>
+

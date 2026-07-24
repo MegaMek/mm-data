@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a783-75d2-b4d9-cc0e916186de
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -75,10 +70,6 @@ BADavidLightGaussRifle:RA
 ISBAFireDrakeNeedler:LA
 BABasicManipulator:LA
 BABasicManipulator:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 IS BA Stealth (Basic):LA
 IS BA Stealth (Basic):RA
 IS BA Stealth (Basic):Body
@@ -96,9 +87,59 @@ IS BA Stealth (Basic):Body
 <Trooper 4 Equipment>
 </Trooper 4 Equipment>
 
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Firedrake configuration mounts a Firedrake Support Needler with thirty rounds of ammunition in the modular weapon mount, complementing the suit's fixed David Light Gauss Rifle. The needler excels at suppressing and eliminating conventional infantry, making this the preferred loadout for operations where unarmored troops are the primary threat. Basic Manipulators on each arm and Basic Stealth armor are standard across all Infiltrator configurations.</p><p>A Parafoil allows precision aerial insertion, and the suit's 90-meter jump range provides solid tactical mobility. Ground speed reaches 32 km/h. The combination of Light Gauss Rifle for ranged anti-armor work and needler for close-in anti-infantry makes the Firedrake configuration well balanced for general-purpose operations.</p>
+</capabilities>
+
+<overview>
+<p>The Gray Death Infiltrator Suit is a medium battle armor design manufactured by Defiance Industries on Furillo. Introduced in 3102 as a successor to the aging Infiltrator Mk. I, the suit fills the scout and skirmisher role with a highly mobile platform built for precision aerial insertion and modular mission flexibility. Nicknamed the Quokka, it can be configured with five distinct equipment packages for roles ranging from direct combat to sensor deployment and target designation.</p>
+</overview>
+
+<deployment>
+<p>LCAF commanders fielded four-trooper squads of the anti-infantry configuration for general-purpose operations where both armored and unarmored threats were expected. The dual-weapon loadout gave squad leaders tactical options against a wide range of targets without requiring mission-specific reconfigurations. Lyran garrison regiments stationed along contested borders adopted this loadout as their default Infiltrator configuration, valuing its balanced capability over the specialized alternatives.</p>
+</deployment>
+
+<history>
+<p>The Gray Death Infiltrator Suit entered service in 3102 as a Defiance Industries product manufactured on Furillo. Designed as a successor to the aging Infiltrator Mk. I, the new suit filled the scout and skirmisher role that the LCAF had long struggled to address with available battle armor designs. Nicknamed the Quokka, the suit incorporated a Parafoil system for precision aerial insertion, giving drop commanders a level of accuracy previously unavailable with standard battle armor deployment methods.</p><p>Defiance built the Infiltrator around a modular weapon mount philosophy, offering five distinct equipment packages that allowed the suit to fill roles from anti-infantry work to sensor deployment and target designation. This flexibility made the Quokka attractive to LCAF commanders who needed a single platform that could be reconfigured for different mission profiles without maintaining separate suit types in their logistics chain. Production at Furillo continued through the Dark Age and into the ilClan era.</p>
+</history>
+
+<manufacturer>
+Defiance Industries
+</manufacturer>
+
+<primaryFactory>
+Furillo
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-TR:3145:LC
+TR:3145:LC,TR:3150
 </source>
+
+<published>
+RS:3150
+</published>
 
 <chassis>
 biped
@@ -120,36 +161,3 @@ biped
 2
 </weightclass>
 
-<overview>
-Manufactured on Furillo by Defiance Industries, the Gray Death Infiltrator Suit was the successor to the Infiltrator Mk. I, and while intended to fill a range of battlefield roles, it performed best as a scout or skirmisher.
-</overview>
-
-<capabilities>
-The Gray Death Infiltrator Suit is capable of making swarm and leg attacks as well as being able to travel by mechanized transport. Each suit had a Basic Manipulator mounted on each arm and had more than a third of a ton of basic stealth armor for protection.
-</capabilities>
-
-<deployment>
-Each Gray Death Infiltrator Suit had a "David" Light Gauss Rifle with fifteen rounds of ammunition installed on the right arm. The left arm of each suit was fitted with a Modular Weapon Mount, which was capable of mounting a Firedrake Support Needler and thirty rounds of ammunition, a Light TAG system with sixty rounds of ammunition, a package of Improved Sensors, a Remote Sensor Dispenser with six sensors or a Mine Dispenser and two mines.
-</deployment>
-
-<history>
- Nicknamed the Quokka, the Gray Death Infiltrator Suit was configured to be highly mobile and incorporated a Parafoil to allow it to make precise aerial drops.
-</history>
-
-
-<manufacturer>
-Defiance Industries
-</manufacturer>
-
-<primaryFactory>
-Furillo
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

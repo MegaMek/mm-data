@@ -42,7 +42,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -153,6 +153,17 @@
                 <option weightClass="M,L,L" role="-command"
                 >%CLUSTER%
                 </option>
+                <!-- Larger 4-cluster galaxies (canon: Ice Hellion galaxies run 3-5 clusters).
+                     Kept light/medium to preserve the speed doctrine. -->
+                <option weightClass="M,M,M,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="M,M,L,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,M,M,L" role="-command"
+                >%CLUSTER%
+                </option>
             </subforceOption>
             <subforceOption ifWeightClass="A|H">
                 <option weightClass="A,H" role="-command"
@@ -185,8 +196,27 @@
                 <option weightClass="H,M,L" role="-command"
                         weight="2">%CLUSTER%
                 </option>
+                <!-- Larger 4-cluster galaxies (canon: 3-5 clusters). Delta carries the heavier
+                     front-line equipment, so its larger forms keep more heavy weight. -->
+                <option weightClass="H,H,M,L" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,H,M,M" role="-command"
+                >%CLUSTER%
+                </option>
+                <option weightClass="H,M,M,L" role="-command"
+                >%CLUSTER%
+                </option>
             </subforceOption>
         </subforces>
+
+        <!-- Cage's Pride is the fixed flagship of Alpha Galaxy - the one Ice Hellion WarShip that
+             does NOT rotate among the Galaxies (per the circa-3058 source); lost at Vantaa in 3072. -->
+        <attachedForces>
+            <subforce ifName="Alpha Galaxy" unitType="Warship" flags="+navalFluff"
+                      name="Alpha Naval Star" ifDateBetween=",3072">%STAR%
+            </subforce>
+        </attachedForces>
 
         <attachedForces>
             <subforce ifRating="SL|PG|Sol" ifDateBetween="3063,"
@@ -213,48 +243,84 @@
         </subforces>
     </force>
 
+    <!-- The fleet is organized into two Warship Stars (Alpha = capital ships, Bravo = lighter
+         combatants and transports) plus JumpShip support. The Ice Hellion fleet was annihilated
+         3071-3074 (Operation ICE STORM and the Wars of Reaving), so the star attaches are date-gated
+         to drop out as they are wiped: Alpha (gone 3072) and Bravo (gone 3074); after 3074 only the
+         JumpShip star remains, which avoids an empty warship star collapsing into a stray hull. -->
     <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce name="CIH Cage&apos;s Pride" role="command"
+            <subforce flags="+navalFluff" role="command" ifDateBetween=",3072">%STAR%</subforce>
+            <subforce flags="+navalFluff" ifDateBetween=",3074">%STAR%</subforce>
+            <subforce unitType="Jumpship" num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Per-ship loss dates from Clan Ice Hellion Naval Forces (Sarna). Ships with no recorded loss
+         (Impaler, Radiant, Hellion's Pride, Coterie, Maker) end at the 3074 fleet disbandment. The
+         sole survivor, the ex-Smoke Jaguar Potemkin Osis' Pride, passed to Clan Goliath Scorpion
+         (see CGS.xml). Largest hull commands each star (tonnage sort). -->
+    <force echelon="%STAR%" eschName="Naval Star" ifUnitType="Warship" ifFlags="navalFluff">
+        <name>Warship Star {phonetic}</name>
+        <co>%STAR_CMDR%</co>
+
+        <!-- Alpha Galaxy's fixed flagship (does not rotate): the McKenna Cage's Pride, lost at
+             Vantaa 3072. Attached from the Alpha Galaxy node, padded with JumpShip escorts. -->
+        <subforces ifName="Alpha Naval Star">
+            <subforce fluffName="CIH Cage&apos;s Pride" role="command" ifDateBetween=",3072"
                       chassis="McKenna Battleship">%ELEMENT%
             </subforce>
-            <subforce name="CIH Coterie"
-                      chassis="Potemkin Troop Cruiser">%ELEMENT%
-            </subforce>
-            <subforce name="CIH Taney"
+            <subforceOption>
+                <option num="3" unitType="Jumpship">%ELEMENT%</option>
+                <option num="4" unitType="Jumpship">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <!-- Star Alpha: the heavy combatants of the rotating Naval Reserve. -->
+        <subforces ifRole="command" ifName="!Alpha Naval Star">
+            <subforce fluffName="CIH Taney" ifDateBetween=",3071"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce name="CIH Chaos Sailor"
+            <subforce fluffName="CIH Chaos Sailor" ifDateBetween=",3072"
                       chassis="Aegis Heavy Cruiser">%ELEMENT%
             </subforce>
-            <subforce name="CIH Pack Leader" ifDateBetween="2950,"
-                      chassis="York Destroyer-Carrier">%ELEMENT%
-            </subforce>
-            <subforce name="CIH Moore&apos;s Honor"
+            <subforce fluffName="CIH Moore&apos;s Honor" ifDateBetween=",3071"
                       chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Cold Hunter"
+            <!-- Pack Leader was claimed by Clan Hell's Horses as isorla at Vantaa in 3072 and
+                 renamed Stampede (see CHH.xml), so it leaves the touman after 3071. -->
+            <subforce fluffName="CIH Pack Leader" ifDateBetween="2950,3071"
+                      chassis="York Destroyer-Carrier">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CIH Cold Hunter" ifDateBetween=",3072"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Impaler"
+        </subforces>
+
+        <!-- Star Bravo: lighter destroyers, corvettes, and transports. -->
+        <subforces ifRole="!command" ifName="!Alpha Naval Star">
+            <subforce fluffName="CIH Impaler" ifDateBetween=",3074"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Radiant"
+            <subforce fluffName="CIH Radiant" ifDateBetween=",3074"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
-            <subforce name="CIH Swift Bait" ifDateBetween="2965,"
+            <subforce fluffName="CIH Swift Bait" ifDateBetween="2965,3071"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Hellion&apos;s Pride" ifDateBetween="2965,"
+            <subforce fluffName="CIH Hellion&apos;s Pride" ifDateBetween="2965,3074"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Whelp" ifDateBetween="2965,"
+            <subforce fluffName="CIH Whelp" ifDateBetween="2965,3072"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
-            <subforce name="CIH Maker" ifDateBetween="2950,"
+            <subforce fluffName="CIH Coterie" ifDateBetween=",3074"
+                      chassis="Potemkin Troop Cruiser">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CIH Maker" ifDateBetween="2950,3074"
                       chassis="Carrack Transport">%ELEMENT%
             </subforce>
         </subforces>
@@ -287,6 +353,22 @@
         <name ifWeightClass="L">Attack Cluster</name>
         <name ifRating="SL|PG|Sol">Hector Cavaliers</name>
         <co>%STAR_COL%</co>
+
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Ice Hellion doctrine
+             (Clan Ice Hellion Touman, Sarna) is the lightest, fastest Clan: light-to-medium
+             OmniMeks, speed over armor. Heavy/assault machines survive mainly as fast garrison
+             units (Gargoyle, Linebacker). The galaxy/cluster structure already routes the elite
+             front line to light-medium galaxies and pushes heavies into second-line garrison;
+             these element targets reinforce the speed bias within each weight band - minimal
+             assault, light-dominant Attack (L) clusters, medium-led Lancer (M) clusters. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:45,H:38,M:15,L:2</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:8,H:45,M:37,L:10</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:18,M:55,L:25</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:7,M:37,L:55</weightTarget>
+        <!-- Aero trended heavier over time (Visigoth, Sabutai) after dogfighting losses; medium-heavy. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:40,M:42,L:18</weightTarget>
+        <!-- Vehicles: speed bias (hovercraft/VTOL, incl. the freeborn Flurry Clusters) - light/medium. -->
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:38,L:50</weightTarget>
 
         <weightClass>
             <option weight="1">H</option>
@@ -1285,10 +1367,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="8">Battle</option>
+                <option weight="8" ifWeightClass="H|A">Battle</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Battle</option>
                 <option weight="30" ifWeightClass="M">Medium Battle</option>
-                <option weight="12" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1300,14 +1382,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="20">Battle</option>
+                <option weight="20" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="12" ifWeightClass="M">Medium Battle</option>
-                <option weight="8" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="2" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1325,7 +1407,7 @@
 
         <subforces generate="group" ifUnitType="Mek">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H">%ELEMENT%</option>
                 <option weightClass="A,H,H,H,H"
                         weight="2">%ELEMENT%
@@ -1389,10 +1471,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="8">Battle</option>
+                <option weight="8" ifWeightClass="H|A">Battle</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Battle</option>
                 <option weight="30" ifWeightClass="M">Medium Battle</option>
-                <option weight="12" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1404,14 +1486,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="20">Battle</option>
+                <option weight="20" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="12" ifWeightClass="M">Medium Battle</option>
-                <option weight="8" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="2" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1446,7 +1528,7 @@
 
         <subforces generate="group">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H">%ELEMENT%</option>
                 <option weightClass="A,H,H,H,H"
                         weight="2">%ELEMENT%
@@ -1504,11 +1586,11 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="12" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="2" ifWeightClass="L">Light Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="L|M|H">Pursuit</option>
@@ -1548,14 +1630,14 @@
             <formation>
                 <option weight="32">Fire</option>
                 <option weight="6">Fire Support</option>
-                <option weight="4">Direct Fire</option>
+                <option weight="4" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="4">Light Fire</option>
                 <option weight="2" role="+anti_aircraft">Anti-Air</option>
                 <option weight="8">Artillery Fire</option>
-                <option weight="16">Battle</option>
+                <option weight="16" ifWeightClass="H|A">Battle</option>
                 <option weight="8" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="12" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="4" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1573,7 +1655,7 @@
 
         <subforces>
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%POINT%</option>
+                <option weightClass="A,A,A,A,H">%POINT%</option>
                 <option weightClass="A,A,H,H,H">%POINT%</option>
                 <option weightClass="A,H,H,H,H"
                         weight="2">%POINT%
@@ -1701,10 +1783,10 @@
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="8">Battle</option>
+                <option weight="8" ifWeightClass="H|A">Battle</option>
                 <option weight="2" ifWeightClass="H|A">Heavy Battle</option>
                 <option weight="30" ifWeightClass="M">Medium Battle</option>
-                <option weight="12" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="6" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -1716,14 +1798,14 @@
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="20">Battle</option>
+                <option weight="20" ifWeightClass="H|A">Battle</option>
                 <option weight="4" ifIndex="0,1">Battle</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="12" ifWeightClass="M">Medium Battle</option>
-                <option weight="8" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="2" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="1" ifWeightClass="H|A">Heavy Striker/Cavalry</option>

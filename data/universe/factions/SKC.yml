@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,11 +17,18 @@
 
 key: SKC
 name: Styk Commonality
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes:
+  - SKC
+nameChanges:
+  3063: Styk Protectorate
 capital: Styk
 yearsActive:
   - start: 3057
     end: 3063
-successor: SKP
 tags:
   - MINOR
   - IS

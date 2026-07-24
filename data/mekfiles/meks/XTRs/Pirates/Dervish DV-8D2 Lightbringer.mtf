@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,55 +15,52 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-dfcf-75db-a034-3e48cb6efb7f
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Dervish
 model:DV-8D2 'Lightbringer'
 mul id:882
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3071
-Rules Level:4
+techbase:Inner Sphere
+era:3071
+source:XTR:Pirates
+published:XTR:Pirates
+rules level:4
 role:Striker
-Source:XTR:Pirates
-
-
 
 quirk:easy_maintain
 quirk:hyper_actuator
 
+mass:55
+engine:275 XL Engine
+structure:IS Standard
+myomer:Standard
 
-Mass:55
-Engine:275 XL Engine
-Structure:Standard
-Myomer:Standard
+heat sinks:11 IS Double
+walk mp:5
+jump mp:8
 
-Heat Sinks:11 Double
-Walk MP:5
-Jump MP:8
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:13
+RA armor:13
+LT armor:19
+RT armor:19
+CT armor:21
+HD armor:9
+LL armor:17
+RL armor:17
+RTL armor:5
+RTR armor:5
+RTC armor:5
 
-Armor:Ferro-Fibrous
-LA Armor:13
-RA Armor:13
-LT Armor:19
-RT Armor:19
-CT Armor:21
-HD Armor:9
-LL Armor:17
-RL Armor:17
-RTL Armor:5
-RTR Armor:5
-RTC Armor:5
-
-Weapons:9
-1 ISERMediumLaser, Left Arm
-1 ISERMediumLaser, Right Arm
-1 ISERMediumLaser, Right Arm
-1 ISERMediumLaser, Left Arm
-1 ISSNPPC, Left Arm
-1 ISSNPPC, Right Arm
-1 Spikes, Head
-1 IS Coolant Pod, Right Torso
-1 IS Coolant Pod, Left Torso
+Weapons:6
+Snub-Nose PPC, Left Arm
+ER Medium Laser, Left Arm
+ER Medium Laser, Left Arm
+Snub-Nose PPC, Right Arm
+ER Medium Laser, Right Arm
+ER Medium Laser, Right Arm
 
 Left Arm:
 Shoulder
@@ -73,10 +70,10 @@ ISSNPPC
 ISSNPPC
 ISERMediumLaser
 ISERMediumLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 
 Right Arm:
@@ -87,53 +84,53 @@ ISSNPPC
 ISSNPPC
 ISERMediumLaser
 ISERMediumLaser
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 
 Left Torso:
-Engine
-Engine
-Engine
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-IS Coolant Pod
-Ferro-Fibrous
-Ferro-Fibrous
+Fusion Engine
+Fusion Engine
+Fusion Engine
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Coolant Pod
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
-Engine
-Engine
-Engine
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-ImprovedJump Jet
-IS Coolant Pod
-Ferro-Fibrous
-Ferro-Fibrous
+Fusion Engine
+Fusion Engine
+Fusion Engine
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Coolant Pod
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
-Engine
-Engine
-Engine
+Fusion Engine
+Fusion Engine
+Fusion Engine
 Gyro
 Gyro
 Gyro
 Gyro
-Engine
-Engine
-Engine
-Ferro-Fibrous
-Ferro-Fibrous
+Fusion Engine
+Fusion Engine
+Fusion Engine
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Head:
 Life Support
@@ -142,36 +139,63 @@ Cockpit
 Spikes
 Sensors
 Life Support
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Left Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-ImprovedJump Jet
-ImprovedJump Jet
+Improved Jump Jet
+Improved Jump Jet
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
 Right Leg:
 Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-ImprovedJump Jet
-ImprovedJump Jet
+Improved Jump Jet
+Improved Jump Jet
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
+-Empty-
 
-overview:At the higher end of the medium class, the Dervish is a highly mobile fire support BattleMech. Commissioned in 2520 by the Lyran Commonwealth
+overview:<p>The Dervish was designed in 2520 by Coventry Defense Conglomerate as a simple, missile-armed fire support 'Mech for the Lyran Commonwealth militia market. Originally built with exclusively ballistic and missile armament to ease maintenance for militia technicians, the design gained immediate acceptance and was soon licensed to manufacturers across the Inner Sphere. The Terran Hegemony later funded a comprehensive modernization to the DV-6M standard in 2610, cementing the chassis as a staple of the Star League Defense Force.</p><p>A 55-ton medium design, the Dervish earned a reputation as a mobile fire support platform, sometimes dismissed as a "poor man's Archer," though its pilots strongly dispute this characterization. Achernar BattleMechs on New Avalon became the primary manufacturer through the Succession Wars, and the design has remained in continuous production for over six centuries, making it one of the most enduring BattleMech designs in service.</p>
 
-capabilities:The Dervish has a maximum speed of 86.4 km/h, letting it keep up with and support most Succession Wars-era medium and light models. Five jump jets also gives the 'Mech a jumping capability of 150 meters, allowing it to move through rough terrain with ease; these were originally an afterthought in the design but have proven their worth. While regarded by some as a poor man's Archer, the Dervish's speed and weaponry nevertheless allow it to provide quick fire support and free larger 'Mechs for other duties. The design's major flaws lie in its lack of hand actuators and in its armoring. Having no hands limits its usefulness outside of combat and restricts its capability when confronted in close quarters. As for the armor, while sufficient to handle small and medium weapons, it is inadequate against heavier firepower. Commanders cannot overcome the first issue but they can affect the second, albeit at an apparent cost of firepower. The conundrum faced here is that the tradeoff becomes counterintuitive given the 'Mech's primary role in the field.
+capabilities:<p>The Dervish relies on mobility and long-range firepower to accomplish its fire support mission. Twin Federated 10-Shot LRM-10 launchers, deeply embedded in the 'Mech's torso for protection, provide effective ranged fire support comparable to heavier designs. Supporting Federated 2-Shot SRM launchers are self-contained within the paddle-like forearms, originally serving as the only auxiliary weapons before designers added a ChisComp 39 medium laser atop each launcher to reduce ammunition dependency. Five Swingline X-100 jump jets (originally an afterthought in the design) have proven invaluable, granting 150 meters of jumping capability that allows the Dervish to exploit terrain, close with opponents, or extract from difficult engagements.</p><p>The design's primary weaknesses lie in its armor protection and lack of hand actuators. Seven and a half tons of Maximillian 105 armor provides adequate protection against light and medium weapons but proves insufficient against concentrated heavy firepower. The absence of hands limits the 'Mech's utility outside combat and restricts close-quarters fighting capability. Commanders face an uncomfortable tradeoff between adding armor and sacrificing the very firepower that defines the Dervish's role. Despite these limitations, the chassis is renowned for being easy to maintain and durable in extended campaigns, qualities that have kept it in frontline and garrison service across centuries of warfare.</p>
 
-deployment:The Lightbringer is a heavily customized 'Mech designed for close combat in the Solaris arenas. A deadly close-in fighter, the Lightbringer has recently been seen fighting in grudge matches across the Free Worlds League. After removing the standard armament and jump jets from a DV-8D, Nikos Matapoulous installed eight improved jump jets in the legs and torso, and each arm is now equipped with a pair of ER medium lasers and a snub-nose PPC. A helmet of spikes, arranged in a crown, protects the 'Mech's head from melee attacks, and a pair of coolant pods helps shed the massive heat load from the Lightbringer's arsenal.
+deployment:<p>A heavily customized Dervish designed for close combat in the Solaris arenas, the Lightbringer strips the standard armament and jump jets from a DV-8D chassis before installing eight improved jump jets for superior aerial mobility. Each arm mounts a pair of extended-range medium lasers and a snub-nose PPC, delivering devastating firepower at close range. A crown of head-mounted spikes provides protection against melee attacks, while coolant pods help manage the considerable heat generated by the energy-heavy weapons loadout. The Lightbringer has been observed fighting in grudge matches across the Free Worlds League.</p>
 
-history:The Dervish was among the first 'Mechs mass produced by the Great Houses and has served as a workhorse for their armies since its introduction. It was eventually commissioned into the Star League Defense Force during the Reunification War, with the Terran Hegemony providing funds to allow their original model Dervishes be upgraded to the DV-6M standard in 2610. Its service in the SLDF ensured the widespread proliferation of the design; even ComStar Explorer Corps missions into the Deep Periphery have found examples of original-model Dervishes among the forces of Nueva Castile. Over the course of the Succession Wars however the 'Mech's numbers decreased due to loss or lack of parts, and all but one of Achernar's factories was destroyed. Though it could still be found throughout the Inner Sphere by the end of the Third Succession War, only the Federated Suns maintained production of the venerable design. The 'Mech remained one of the Suns' most common medium-weight machines, being particularly popular with the Avalon Hussars, and was earmarked for use by several newly forming Federated Commonwealth regiments after the Fourth Succession War. However, interest in the design began to wane in later years, and while the 7D refit of 3047 with its use of lostech generated higher sales, Achernar was forced to heavily lobby House Davion to keep buying them. Ironically the run-up to the FedCom Civil War and the conflict itself was enough to increase demand and prevent the company from retooling its Dervish lines. In the wake of the civil war the Federated Suns continued purchasing upgraded Dervishes while the Lyran Alliance adopted the Griffin. Older models can be found in militia and reserve units in other armies, while small mercenary outfits have found the 'Mech to be durable and easy to maintain. During the Jihad a number of manufacturers began manufacturing "retrotech" 'Mechs using details of the original production standard of primitive 'Mech designs; one of the designs that was reintroduced to service as a part of this retrotech manufacturing production was the original Dervish, with companies such as Sword of the Prophet Enterprises of Algedi producing primitive Dervishes; production at some sites continued beyond 3079.
+history:<p>The Dervish's origins trace to 2520 when Coventry Defense Conglomerate recognized a growing demand for simple, easy-to-maintain BattleMechs among Lyran Commonwealth militia units. The original DV-1S proved so successful that when unauthorized copies appeared in the Draconis Combine, Coventry chose to license production to manufacturers throughout the Inner Sphere during the mid-2500s. By the dawn of the Star League, First Lord Ian Cameron directed Coventry to revisit the design using modern technologies, and thousands of League-subsidized refits brought existing Dervishes up to the improved DV-6M standard during the years leading to the Reunification War.</p><p>Service in the Star League Defense Force ensured the Dervish's widespread proliferation, with examples eventually turning up as far as the Deep Periphery among the forces of Nueva Castile. The most celebrated engagement involving the chassis occurred on 23 March 2789 during the First Succession War, when elements of the Tenth Robinson Chevaliers (their "Whirling Dervishes") conducted a guerrilla campaign on New Rhodes III against Kurita's Second Sword of Light. Operating from the thick forests surrounding the planet's capital, a force of Dervishes and Enforcers destroyed supply dumps with repeated hit-and-fade attacks, significantly disrupting the Kurita drive toward New Avalon. The resulting boost to morale on both New Rhodes III and New Avalon, where smuggled tapes of the attacks were broadcast, cemented the Dervish's legendary status.</p><p>Over the course of the Succession Wars, attrition and parts shortages reduced the Dervish's numbers, and all but one of Achernar's factories was destroyed. The Federated Suns maintained the sole remaining production line, making the 'Mech particularly popular with the Avalon Hussars and earmarking it for newly forming Federated Commonwealth regiments after the Fourth Succession War. The DV-7D upgrade of 3047 incorporated recovered Star League technology, boosting sales, though Achernar was forced to lobby House Davion heavily to maintain orders. Ironically, the run-up to the FedCom Civil War and the conflict itself generated enough demand to keep the production lines running.</p><p>In the civil war's aftermath, the Federated Suns continued purchasing upgraded Dervishes while the Lyran Alliance shifted to the Griffin. Older models found homes in militia and reserve units across the Inner Sphere, while smaller mercenary outfits valued the 'Mech for its durability and ease of maintenance. During the Jihad, the disruption of supply lines prompted a revival of retrotech manufacturing, with companies such as Sword of the Prophet Enterprises on Algedi producing primitive DV-1S models for militia forces desperate for any available BattleMechs.</p><p>The fall of New Avalon in 3146 interrupted development of the latest Dervish variant, but the Draconis Combine seized the opportunity, reverse-engineering Achernar's captured work over three years to produce the DV-11DK, the first Combine-built Dervish variant. Pairing Combine-manufactured ClanTech missile launchers with captured Davion laser technology, the 11DK represents the latest chapter in the Dervish's remarkable six-century service history.</p>
 
 manufacturer:Field Refit
+
 primaryfactory:Various
-systemmanufacturer:CHASSIS:Dorwinion Standard 55TES
-systemmanufacturer:ENGINE:Core Tek 275 XL
-systemmanufacturer:ARMOR:Maximillian 105 with CASE
-systemmanufacturer:JUMP_JET:Swingline X-100
-systemmanufacturer:COMMUNICATIONS:Achernar Electronics HID-21
-systemmanufacturer:TARGETING:Federated Hunter Mk. II
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Dorwinion
+systemmode:CHASSIS:Standard 55TES
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:275 XL
+systemmanufacturer:ARMOR:Unknown
+systemmanufacturer:JUMP_JET:Unknown
+systemmode:JUMP_JET:Unknown (Improved)
+systemmanufacturer:COMMUNICATIONS:Achernar Electronics
+systemmode:COMMUNICATIONS:HID-21
+systemmanufacturer:TARGETING:Federated Hunter
+systemmode:TARGETING:Mk. II

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e0c0-73e1-a493-eea53cab642f
+</UUID>
 
 <UnitType>
 ProtoMek
@@ -45,10 +40,6 @@ Minotaur
 3064
 </year>
 
-<originalBuildYear>
-3064
-</originalBuildYear>
-
 <type>
 Clan Level 2
 </type>
@@ -61,9 +52,6 @@ Missile Boat
 Biped
 </motion_type>
 
-<transporters>
-</transporters>
-
 <cruiseMP>
 5
 </cruiseMP>
@@ -72,9 +60,29 @@ Biped
 5
 </jumpingMP>
 
+<interface_cockpit>
+false
+</interface_cockpit>
+
 <engine_type>
 0
 </engine_type>
+
+<clan_engine>
+false
+</clan_engine>
+
+<armor_type>
+42
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+2
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -90,12 +98,13 @@ Biped
 </armor>
 
 <Body Equipment>
-Clan Ammo Protomech LRM-12 (10)
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
-ProtomechJumpJet
+Clan Ammo ProtoMech LRM-12 (10)
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+ProtoMechJumpJet
+EIInterface
 </Body Equipment>
 
 <Head Equipment>
@@ -117,43 +126,52 @@ ProtomechJumpJet
 CLLRM12
 </Main Gun Equipment>
 
+<capabilities>
+<p>The Minotaur twin ER Medium Lasers give it the most potent energy weapon suite of any first-generation ProtoMek, delivering a combined damage output that can threaten medium-weight BattleMeks at respectable range. As energy-only armament, the weapons have no ammunition dependency, allowing the Minotaur to fight indefinitely without resupply. Three jump jets provide ninety meters of jumping distance, partially compensating for the design slow thirty-two-kilometer-per-hour cruising speed. Thirty-six points of armor make the Minotaur the most heavily protected first-generation ProtoMek, capable of surviving hits that would destroy lighter designs outright.</p><p>The Minotaur primary weakness is its glacial ground speed. At thirty-two kilometers per hour, it is easily outpaced by virtually every combat unit on the battlefield, including most assault-class BattleMeks. The jump jets help somewhat, but ninety meters of leaping distance is barely adequate for clearing terrain obstacles. An entire Point of Minotaurs working together can concentrate enough firepower to rapidly destroy light and medium targets, but getting into effective range against mobile opponents requires careful positioning and terrain exploitation. The design is at its best in defensive operations where it can select strong positions and force enemies to come to it, leveraging its firepower and armor from prepared fighting positions.</p>
+</capabilities>
+
+<overview>
+<p>The Minotaur is a nine-ton first-generation ProtoMek developed by Clan Smoke Jaguar as the heaviest and most powerful design in the original ProtoMek program on Huntress. Built to serve as the assault element of ProtoMek formations, the Minotaur sacrifices speed for devastating firepower and thick armor protection, mounting two ER Medium Lasers that deliver as much damage as many light BattleMeks. Combined with thirty-six points of armor sufficient to withstand a heavy autocannon hit, the Minotaur represented the upper limit of what first-generation ProtoMek technology could achieve. Its intended role as a defensive strongpoint leverages its impressive combat power while minimizing the impact of its slow ground speed.</p>
+</overview>
+
+<deployment>
+<p>The Minotaur 3 converts the chassis into a mobile fire support platform by mounting an LRM-12 launcher with five jump jets and an upgraded engine. Cruising speed increases to fifty-four kilometers per hour, and the jump jets provide one hundred and fifty meters of leaping distance, making the Minotaur 3 dramatically more mobile than the base model. Thirty-four points of armor provide reasonable protection. The LRM-12 delivers heavier per-salvo bombardment than the Gorgon LRM-10, though ammunition endurance is limited. This variant is designed to deliver concentrated fire support while using its mobility to reposition between salvos.</p>
+</deployment>
+
+<history>
+<p>The Minotaur was developed as the capstone of the original Smoke Jaguar ProtoMek program, representing the maximum weight and combat power that first-generation ProtoMek technology could support. Jaguar scientists designed it specifically for the defensive role, recognizing that the ProtoMek concept was best suited to creating multiple small, lethal defensive positions rather than attempting to match BattleMeks in open maneuver warfare. The decision to mount two ER Medium Lasers was considered ambitious for the weight class, but testing proved that the nine-ton chassis could handle the thermal load with proper heat sink integration.</p><p>During the Battle of Huntress in 3060, Minotaur Points served as the backbone of Jaguar defensive positions around key installations. Their ability to absorb significant punishment while delivering devastating return fire made them the most feared ProtoMek design among Task Force Serpent personnel. Several Inner Sphere light Mek pilots reported being caught by surprise when what appeared to be a trivially small target returned fire with medium laser energy that could penetrate their armor in two or three exchanges. The Minotaur combination of small size and BattleMek-grade firepower represented a genuinely new tactical challenge.</p><p>After the Jaguar Annihilation, the Minotaur became one of the most widely produced ProtoMek designs. Clan Wolf established an early production line at Csesztreg Industriplex Epsilon, while Clan Hell Horses produced Minotaurs at Industriplex Upsilon on Niles. The design straightforward combat philosophy appealed to Clans across the political spectrum, from the aggressive Blood Spirits to the more cautious Diamond Sharks. The Minotaur lack of specialized equipment meant it could be manufactured more easily than probe or ECM-equipped designs.</p><p>The Minotaur has inspired the broadest range of variants of any first-generation ProtoMek, reflecting the diverse tactical philosophies of its many operators. The Minotaur 2 mounts an LB-X AC/2 for long-range cluster fire. The Minotaur 3 carries an LRM-12 with jump jets and a faster engine for mobile fire support. The Minotaur 4 mounts a ProtoMek AC/2 with enhanced mobility. The Minotaur P2, from Clan Goliath Scorpion, adds a Magnetic Clamp System with dual Improved Heavy Small Lasers and an SRM-4. The experimental Minotaur XP pushes the armor to forty-five points with Improved Heavy Small Lasers and an SRM-5.</p><p>The Wars of Reaving produced the Minotaur Z variant, equipped with a Magnetic Clamp System and an Improved Medium Heavy Laser for Society asymmetric operations. The destruction and restructuring of multiple Clans during the Reaving disrupted production at several facilities, but the Minotaur manufacturing base was broad enough to survive the upheaval. The design remains the standard heavy ProtoMek across the surviving Homeworld Clans, its combination of firepower and protection still unmatched in the first-generation weight range.</p>
+</history>
+
+<manufacturer>
+Yoma Aerospace Plant
+</manufacturer>
+
+<primaryFactory>
+Babylon (Corsen)
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+ENGINE:45 Fusion
+</systemModels>
+
 <source>
 TR:3060
 </source>
+
+<published>
+RS:3060u
+</published>
 
 <tonnage>
 9.0
 </tonnage>
 
-<capabilities>
-Weighing more than any other ProtoMech, it trades speed for armor and weaponry. Intended for defensive operations, the Minotaur's lack of speed isn't an obstacle to completing its mission, and its impressive firepower means an entire Point working together can quickly take down a single target. The drawback to this power however is a slow cruising speed of 32 km/h, which is somewhat compensated by a jumping capacity of 90 meters thanks to its Jump Jets.
-</capabilities>
-
-<overview>
-The Minotaur is the "assault class" of the first generation ProtoMechs.
-</overview>
-
-<deployment>
-This variation of the Minotaur was redesigned as a fire support model, armed with an LRM 12 Launcher as its "main gun." Improvements to the design include an increase of its maximum speed to 80 km/h, increase range to its jumping capacity, and additional armor protection.
-</deployment>
-
-<history>
-Clan Smoke Jaguar struggled following the Battle of Tukayyid. Guerrilla attacks and uprisings in their Inner Sphere occupation zone had depleted supplies. Smoke Jaguar scientists discovered that their Clan worlds might soon lose BattleMech ores if nothing was done. The Clan's greatest scientists developed a revolutionary warfare unit that combined BattleMechs and Elemental Battle Armor. The smaller units would weigh one-tenth of BattleMechs and be half their height. With their smaller engines, the Smoke Jaguars could produce more of them for less material. ProtoMechs were designed to make a Point of five work as well as a BattleMech while using half the construction resources. Smoke Jaguar geneticists also started breeding pilots. To fit in a ProtoMech's torso, this new breed would need to be smaller than Elementals. Smoke Jaguar scientists and geneticists began working on ProtoMechs in secret, knowing that their Khans would not consider full-scale manufacturing unless they were proven useful in battle. Smoke Jaguar Khan Lincoln Osis discovered ProtoMechs during the Battle of Huntress. His Clan's dire requirements and the ProtoMechs' good performance against desperate odds mitigated his indignation at being uninformed about the secret endeavor. The Clans couldn't ignore the ProtoMech's premiere, even though the war was lost. After the Great Refusal and the demise of the Smoke Jaguars, numerous Clans raided Huntress to steal its technology. Clan Coyote and Clan Blood Spirit were the first to adopt the ProtoMech and enthusiastically develop it, especially the Spirits, who were resource-poor. Huntress salvaged ProtoMechs for most Clans. The Blood Spirits started a formal training program first. The Inner Sphere was uninterested in ProtoMech development. The machine needed somebody to control it, and even if it could be reproduced, the moral and ethical issues would hinder broad use. Inner Sphere scientists also lacked the technological ability to reproduce ProtoMech's distinctive internal structure, armoring, and heat sinks, which would have resulted in bigger, less-effective units.
-</history>
-
-<manufacturer>
-Unknown
-</manufacturer>
-
-<primaryFactory>
-Unknown
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unspecified
-ENGINE:Unspecified
-ARMOR:Unspecified
-JUMPJET:Unspecified
-COMMUNICATIONS:Unspecified
-TARGETING:Unspecified
-</systemManufacturers>

@@ -109,6 +109,14 @@ planet:
         size: medium
         icon: rock16
     event:
+      - date: '2108-12-05'
+        name: Aer
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2724-12-22'
         faction:
           source: canon
@@ -124,6 +132,16 @@ planet:
         population: 722891.0
       - date: '2750-01-01'
         population: 2468084.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Capella Commonality
+        #   - Region 3
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 6614351.0
       - date: '2770-01-01'
@@ -138,8 +156,17 @@ planet:
         population: 89929907.0
       - date: '2820-01-01'
         population: 3826424.0
+      - date: '2822-01-01'
+        name: Finnalon
+        message: Aer renamed to Finnalon
       - date: '2830-01-01'
         population: 248157.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '2840-01-01'
         population: 30406.0
       - date: '2841-09-23'
@@ -150,11 +177,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Aer
-      - date: '2822-01-01'
-        name: Finnalon
-        message: Aer renamed to Finnalon
   - name: Tegliacci's Belt
     type: ASTEROID_BELT
     orbitalDist: 3.64

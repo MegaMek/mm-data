@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Noisiel
-sucsId: 1887
+sucsId: 1888
 xcood: -308.362
 ycood: 148.073
 spectralType:
@@ -129,6 +129,12 @@ planet:
         size: medium
         icon: oddmoon3
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2740-10-10'
         faction:
           source: canon
@@ -142,6 +148,16 @@ planet:
           value: B
       - date: '2750-01-01'
         population: 287454.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 1061590.0
       - date: '2770-01-01'
@@ -207,6 +223,17 @@ planet:
           source: canon
           value:
             - FC
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Alarion Operational Area
+        #   - Region 1
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FC
       - date: '3041-01-01'
         socioIndustrial:
           source: canon
@@ -222,12 +249,24 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
       - date: '3060-01-01'
         population: 168798189.0
       - date: '3070-01-01'
         population: 170472880.0
       - date: '3080-01-01'
         population: 171361648.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Buena Province
       - date: '3090-01-01'
         population: 171019267.0
       - date: '3100-01-01'
@@ -248,6 +287,9 @@ planet:
         population: 171670377.0
       - date: '3145-01-01'
         population: 171842133.0
+      - date: '3152-12-31'
+        # administration:
+        #   - Bolan Province
   - name: New Machecoul-Saint-Même
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.28

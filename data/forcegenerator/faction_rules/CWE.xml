@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<!--
+    The Wolf Empire is Clan Wolf's Inner Sphere nation (declared 1 Jan 3142, faction
+    active 3143+). Alaric Ward conquered 60+ worlds from the Free Worlds League and
+    Lyran Commonwealth, capital Gienah, and by 3151 won the ilClan Trial and took Terra
+    (115 systems), founding the Reborn Star League. This ruleset inherits the mature
+    Clan Wolf (CW) file via parent="CW": clusters, trinaries, stars, weight composition,
+    and the Naval Reserve all come from CW. CWE overrides only the touman, replacing CW's
+    Invasion/Jihad galaxy roster with the Dark Age roster.
+
+    Naval: inherited from CW. At 3143+ every Refusal-War/Jihad loss is already date-gated
+    out, leaving the Dark Age survivors (Dire Wolf, Bloody Fang, Rogue, Jerome Winson,
+    Victoria Ward) plus McKenna's Pride (gated 3077, in CW). No CWE naval block needed.
+
+    Weight: inherited from CW (balanced-elite). Measure before adding any target; the
+    Wolf Empire trends as a strong, well-rounded power, not a one-note assault Clan.
+
+    Galaxy names (incl. nicknames and the non-greek Rufus/Lupus) are set literally in the
+    touman; the inherited CW galaxy node's {greek} template only fills in when no name is
+    set, so no override is needed. Remaining nicety (not done - high machinery, low value):
+    per-galaxy Keshik command-unit names (Golden Keshik, Silver Keshik, etc.).
+-->
+<ruleset faction="CWE" parent="CW" ratingSystem="CLAN"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <defaults>
+        <echelon>%CLUSTER%</echelon>
+        <rankSystem>%RANK_CLAN%</rankSystem>
+        <rating>FL</rating>
+    </defaults>
+
+    <toc>
+        <unitType>
+            <option>null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+        </unitType>
+
+        <echelon>
+            <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
+            <option ifUnitType="Warship">%CLUSTER%</option>
+            <option ifUnitType="Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
+            <option>%TRINARY%,%BINARY%,%STAR%</option>
+        </echelon>
+
+        <rating>
+            <option ifUnitType="Tank|VTOL">SL:Second Line,PG:Garrison,Sol:Solahma</option>
+            <option ifUnitType="Infantry">PG:Garrison,Sol:Solahma</option>
+            <option ifEschelon="%TOUMAN%"></option>
+            <option ifEschelon="%GALAXY%">FL:Front Line,SL:Second Line,Sol:Solahma</option>
+            <option>Keshik,FL:Front Line,SL:Second Line,PG:Garrison,Sol:Solahma</option>
+        </rating>
+    </toc>
+
+    <!-- Dark Age touman roster (Clan Wolf Touman, 3145 table). Front-line: Alpha (Wolf
+    Spirits, command), Beta (Shadow Wolves), Gamma (Wolf Hussars), Delta (Snarling Wolves).
+    Second-line/garrison: Epsilon (Gray Wolves), Zeta, Kappa (Werewolves, formed 3063),
+    Lambda, Mu, Sigma, Tau. Lupus (front-line) and Rufus (garrison) form 3151 on Gienah
+    after the Terra conquest. Theta/Iota/Upsilon were destroyed in the ilClan Trial and are
+    excluded. The galaxy name is set literally here (ForceNode applies the inherited node's
+    {greek} template only when no name is set), so nicknames and non-greek names render. -->
+
+    <force echelon="%TOUMAN%" eschName="Touman">
+        <co>%KHAN%</co>
+        <xo>%SAKHAN%</xo>
+
+        <subforces>
+            <subforce name="Alpha Galaxy (The Wolf Spirits)" rating="FL"
+                      role="command">%GALAXY%
+            </subforce>
+            <subforce name="Beta Galaxy (The Shadow Wolves)" rating="FL">%GALAXY%</subforce>
+            <subforce name="Gamma Galaxy (The Wolf Hussars)" rating="FL">%GALAXY%</subforce>
+            <subforce name="Delta Galaxy (The Snarling Wolves)" rating="FL">%GALAXY%</subforce>
+            <subforce name="Lupus Galaxy" rating="FL"
+                      ifDateBetween="3151,">%GALAXY%
+            </subforce>
+
+            <subforce name="Epsilon Galaxy (The Gray Wolves)" rating="SL">%GALAXY%</subforce>
+            <subforce name="Zeta Galaxy" rating="SL">%GALAXY%</subforce>
+            <subforce name="Kappa Galaxy (The Werewolves)" rating="SL">%GALAXY%</subforce>
+            <subforce name="Lambda Galaxy" rating="SL">%GALAXY%</subforce>
+            <subforce name="Mu Galaxy" rating="SL">%GALAXY%</subforce>
+            <subforce name="Sigma Galaxy" rating="SL">%GALAXY%</subforce>
+            <subforce name="Tau Galaxy" rating="SL">%GALAXY%</subforce>
+            <subforce name="Rufus Galaxy" rating="SL"
+                      ifDateBetween="3151,">%GALAXY%
+            </subforce>
+        </subforces>
+
+        <attachedForces>
+            <subforce unitType="Warship">%CLUSTER%</subforce>
+        </attachedForces>
+    </force>
+</ruleset>

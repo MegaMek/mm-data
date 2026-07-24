@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Oporto (Veil 3075+)
-sucsId: 1943
+sucsId: 1944
 xcood: -449.954
 ycood: 307.611
 spectralType: G1V
@@ -79,6 +79,14 @@ planet:
       - name: Krabbe B
       - name: Krabbe C
     event:
+      - date: '2108-12-05'
+        name: Oporto
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2603-09-14'
         faction:
           source: canon
@@ -122,6 +130,15 @@ planet:
         population: 29862823.0
       - date: '2750-01-01'
         population: 11495562.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Finmark Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 5053465.0
       - date: '2770-01-01'
@@ -133,6 +150,12 @@ planet:
             - IND
       - date: '2780-01-01'
         population: 1040314.0
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2790-01-01'
         population: 566992.0
       - date: '2800-01-01'
@@ -161,6 +184,21 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
+      - date: '3075-01-01'
+        name: Veil
+        message: Oporto renamed to Veil
       - date: '3087-12-10'
         faction:
           source: canon
@@ -172,6 +210,12 @@ planet:
         hpg: X
       - date: '3090-01-01'
         population: 68171.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RT
       - date: '3100-01-01'
         population: 183098.0
       - date: '3110-01-01'
@@ -180,20 +224,16 @@ planet:
         population: 270433.0
       - date: '3130-01-01'
         population: 332129.0
+      - date: '3135-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
       - date: '3140-01-01'
         population: 412206.0
       - date: '3145-01-01'
         population: 460597.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - ABN
-      - date: '2108-12-05'
-        name: Oporto
-      - date: '3075-01-01'
-        name: Veil
-        message: Oporto renamed to Veil
   - name: T4
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.8

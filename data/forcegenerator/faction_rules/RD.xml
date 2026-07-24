@@ -121,6 +121,7 @@ but have a smaller aerospace arm than most other Clans. -->
             </subforce>
 
             <subforce unitType="Warship" name="Dominion Fleet">%CLUSTER%</subforce>
+            <subforce unitType="Warship" name="Transport Flotilla">%CLUSTER%</subforce>
         </subforces>
     </force>
 
@@ -133,9 +134,6 @@ but have a smaller aerospace arm than most other Clans. -->
         <co>%GALAXY_CMDR%</co>
 
         <subforces>
-            <subforce fluffName="CGB Rasalhague" ifDateBetween="3069,"
-                      chassis="Leviathan II Battleship" unitType="Warship">%ELEMENT%
-            </subforce>
             <subforce num="2">%CLUSTER%</subforce>
         </subforces>
         <subforces ifDateBetween=",3078">
@@ -184,22 +182,46 @@ but have a smaller aerospace arm than most other Clans. -->
         </subforces>
     </force>
 
-    <force echelon="%GALAXY%" eschName="Fleet" ifUnitType="Warship">
-        <name>Naval Reserve</name>
-        <co>%GALAXY_CMDR%</co>
+    <!-- WarShip organization per Clan Ghost Bear / Rasalhague Dominion Naval Forces (Sarna).
+         Galaxy flagships attach as Naval Stars from the galaxy node (ifName below): Alpha fields the
+         Cameron Dieron's Run, Beta the Black Lion Bear's Den (both lost at Alshain 3067). The Touman
+         fields the Dominion Fleet (the Nightlord Ursa Major and the destroyer screen, later the
+         Leviathan III Alshain) and a Transport Flotilla. Largest hull commands each formation.
+         Late-era survivors per canon: Rasalhague (Valkyrie Galaxy), Den Mother + Yggdrasil at 3145,
+         plus Alshain (joint Snow Raven build) by 3150; Ursa Major lost 3100 at Rasalhague. -->
+    <force echelon="%CLUSTER%" eschName="Naval Star" ifUnitType="Warship">
+        <name>Naval Star</name>
+        <co>%STAR_CMDR%</co>
 
-        <subforces>
+        <subforces ifName="Alpha Naval Star">
             <subforce fluffName="CGB Dieron&apos;s Run" ifDateBetween=",3067"
                       chassis="Cameron Battlecruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CGB Ursa Major" ifDateBetween="2932,3100"
-                      chassis="Nightlord Battleship">%ELEMENT%
-            </subforce>
+            <subforceOption>
+                <option num="4" unitType="Jumpship">%ELEMENT%</option>
+                <option num="5" unitType="Jumpship">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <subforces ifName="Beta Naval Star">
             <subforce fluffName="CGB Bear&apos;s Den" ifDateBetween=",3066"
                       chassis="Black Lion II Battlecruiser">%ELEMENT%
             </subforce>
-            <subforce fluffName="CGB Shining Claw" ifDateBetween=",3059"
-                      chassis="Congress Frigate">%ELEMENT%
+            <subforceOption>
+                <option num="4" unitType="Jumpship">%ELEMENT%</option>
+                <option num="5" unitType="Jumpship">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <subforces ifName="Dominion Fleet">
+            <subforce fluffName="CGB Ursa Major" ifDateBetween="2932,3100"
+                      chassis="Nightlord Battleship">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CGB Rasalhague" ifDateBetween="3069,"
+                      chassis="Leviathan II Battleship">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CGB Alshain" ifDateBetween="3150,"
+                      chassis="Leviathan III Battleship">%ELEMENT%
             </subforce>
             <subforce fluffName="CGB Ursa Minor" ifDateBetween=",2946"
                       chassis="Riga Frigate">%ELEMENT%
@@ -213,12 +235,6 @@ but have a smaller aerospace arm than most other Clans. -->
             <subforce fluffName="CGB White Fang" ifDateBetween=",3066"
                       chassis="Essex II Destroyer">%ELEMENT%
             </subforce>
-            <subforce fluffName="CGB Fire Fang" ifDateBetween=",3059"
-                      chassis="Whirlwind Destroyer">%ELEMENT%
-            </subforce>
-            <subforce fluffName="CGB Ursus" ifDateBetween=",3059"
-                      chassis="Whirlwind Destroyer">%ELEMENT%
-            </subforce>
             <subforce fluffName="CGB Blizzard" ifDateBetween=",3066"
                       chassis="Lola III Destroyer">%ELEMENT%
             </subforce>
@@ -228,17 +244,39 @@ but have a smaller aerospace arm than most other Clans. -->
             <subforce fluffName="CGB Black Ghost" ifDateBetween=",3066"
                       chassis="Fredasa (Corvette-Raider)">%ELEMENT%
             </subforce>
+            <subforce fluffName="CGB Shining Claw" ifDateBetween=",3059"
+                      chassis="Congress Frigate">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CGB Fire Fang" ifDateBetween=",3059"
+                      chassis="Whirlwind Destroyer">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CGB Ursus" ifDateBetween=",3059"
+                      chassis="Whirlwind Destroyer">%ELEMENT%
+            </subforce>
+            <!-- JumpShip support keeps the fleet a 5-6 vessel naval star and prevents an empty
+                 warship formation (e.g. 3101-3149, after Ursa Major is lost and before Alshain
+                 enters service) from collapsing into a stray default WarShip. -->
+            <subforceOption>
+                <option num="3" unitType="Jumpship">%ELEMENT%</option>
+                <option num="4" unitType="Jumpship">%ELEMENT%</option>
+            </subforceOption>
+        </subforces>
+
+        <subforces ifName="Transport Flotilla">
             <subforce fluffName="CGB Great Bear" ifDateBetween="3055,3078"
                       chassis="Leviathan Heavy Transport">%ELEMENT%
             </subforce>
-            <subforce fluffName="CGB Ursine Boatman" ifDateBetween=",3078"
-                      chassis="Volga Transport">%ELEMENT%
+            <subforce fluffName="CGB Leviathan" ifDateBetween="3055,3077"
+                      chassis="Leviathan Heavy Transport">%ELEMENT%
             </subforce>
-            <subforce fluffName="CGB Den Mother" ifDateBetween=",3100"
+            <subforce fluffName="CGB Den Mother"
                       chassis="Carrack Transport">%ELEMENT%
             </subforce>
             <subforce fluffName="CGB Yggdrasil"
                       chassis="Carrack Transport">%ELEMENT%
+            </subforce>
+            <subforce fluffName="CGB Ursine Boatman" ifDateBetween=",3078"
+                      chassis="Volga Transport">%ELEMENT%
             </subforce>
         </subforces>
     </force>
@@ -270,6 +308,18 @@ but have a smaller aerospace arm than most other Clans. -->
                 <option />
             </subforceOption>
         </subforces>
+
+        <!-- Per Clan Ghost Bear Naval Forces (Sarna, 3061): Alpha fields the flagship Dieron's Run,
+             Beta the primary naval flagship Bear's Den. Each front-line galaxy attaches its Naval
+             Star (the naval node above, branched by ifName) with JumpShip support. -->
+        <attachedForces>
+            <subforce ifName="Alpha Galaxy" unitType="Warship"
+                      name="Alpha Naval Star">%CLUSTER%
+            </subforce>
+            <subforce ifName="Beta Galaxy" unitType="Warship"
+                      name="Beta Naval Star">%CLUSTER%
+            </subforce>
+        </attachedForces>
     </force>
 
     <force echelon="%CLUSTER%" eschName="Cluster" ifUnitType="BattleArmor">
@@ -309,7 +359,15 @@ but have a smaller aerospace arm than most other Clans. -->
         <name ifRating="PG">Provisional Garrison Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Inherits Ghost Bear doctrine: heaviest-Clan weight (+1 modifier) and direct assaults
+             with heavy/assault Meks. Assault clusters roll a real share (weight 2), and the
+             per-cluster targets push assault density past the trinary rolls. Aerospace and Battle
+             Armor are left as-is (already canon). Matches the CGB tuning. -->
+        <weightTarget ifWeightClass="A" unitType="Mek" spread="8">A:55,H:40,M:5,L:0</weightTarget>
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:35,H:52,M:11,L:2</weightTarget>
+
         <weightClass>
+            <option weight="2">A</option>
             <option weight="4">H</option>
             <option weight="2">M</option>
             <option ifRole="!command" weight="1">L</option>
@@ -322,21 +380,22 @@ but have a smaller aerospace arm than most other Clans. -->
         used to tag trinaries for the possibility of a supernova.-->
 
         <subforces>
+            <!-- Rebalanced for Assault Cluster Assault-density: A,A 1->2, A,H 2->3, H,H 3->2, A,L removed.
+                 Total weight stays at 10. The A,L "Light Trinary in Assault Cluster" option produced ~9% Assault
+                 outliers; dropping it eliminates that path. Heavier weights on A,A and A,H, reduced H,H so the
+                 unbiased baseline pulls toward Assault even before the weight-emphasis toggle. -->
             <subforceOption ifWeightClass="H|A">
                 <option weightClass="A,A" unitType="Mek"
-                        flags="+testTrinary" weight="1">%TRINARY%
+                        flags="+testTrinary" weight="2">%TRINARY%
                 </option>
                 <option weightClass="A,H" unitType="Mek"
-                        flags="+testTrinary" weight="2">%TRINARY%
+                        flags="+testTrinary" weight="3">%TRINARY%
                 </option>
                 <option weightClass="A,M" unitType="Mek"
                         flags="+testTrinary" weight="2">%TRINARY%
                 </option>
-                <option weightClass="A,L" unitType="Mek"
-                        flags="+testTrinary" weight="1">%TRINARY%
-                </option>
                 <option weightClass="H,H" unitType="Mek"
-                        flags="+testTrinary" weight="3">%TRINARY%
+                        flags="+testTrinary" weight="2">%TRINARY%
                 </option>
                 <option weightClass="H,M" unitType="Mek"
                         flags="+testTrinary" weight="1">%TRINARY%
@@ -566,7 +625,7 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <attachedForces ifRating="FL">
             <subforceOption>
-                <option unitType="AeroSpaceFighter" name="Tango Fighter Star"
+                <option unitType="AeroSpaceFighter" weightClass="H" name="Tango Fighter Star"
                         weight="1">%STAR%
                 </option>
                 <option weight="5" />
@@ -575,7 +634,7 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <attachedForces ifRating="Keshik">
             <subforceOption>
-                <option unitType="AeroSpaceFighter" name="Tango Fighter Star"
+                <option unitType="AeroSpaceFighter" weightClass="H" name="Tango Fighter Star"
                         weight="2">%STAR%
                 </option>
                 <option unitType="Mek" name="Tango Support Star"
@@ -746,10 +805,10 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="16" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="16" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -761,14 +820,14 @@ but have a smaller aerospace arm than most other Clans. -->
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="15" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="3" ifWeightClass="M">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="8" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -786,7 +845,7 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <subforces generate="group" ifUnitType="Mek">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H"
                         weight="2">%ELEMENT%
                 </option>
@@ -796,48 +855,35 @@ but have a smaller aerospace arm than most other Clans. -->
                 <option weightClass="A,A,H,H,M">%ELEMENT%</option>
             </subforceOption>
             <subforceOption ifWeightClass="H">
-                <option weightClass="A,H,H,H,M"
-                        ifFlags="!hussar">%ELEMENT%
-                </option>
-                <option weightClass="A,A,H,M,M"
-                        ifFlags="!hussar">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,H" ifFlags="!hussar"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="H,H,H,H,M" ifFlags="!hussar"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="H,H,H,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,H,M,L"
-                        ifFlags="hussar">%ELEMENT%
-                </option>
-            </subforceOption>
+
+                <option weightClass="H,H,H,H,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,H,H,H" weight="2">%ELEMENT%</option>
+
+                <option weightClass="A,H,H,H,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="M">
-                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
-                <option weightClass="H,H,M,M,L">%ELEMENT%</option>
-                <option weightClass="H,H,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,M,M,M,M"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="M,M,M,M,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,M,M" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,H,M,M,M">%ELEMENT%</option>
+</subforceOption>
             <subforceOption ifWeightClass="L">
-                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,M,L,L">%ELEMENT%</option>
-                <option weightClass="H,L,L,L,L">%ELEMENT%</option>
-                <option weightClass="M,M,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
-                <option weightClass="M,L,L,L,L"
-                        weight="2">%ELEMENT%
-                </option>
+
                 <option weightClass="L,L,L,L,L">%ELEMENT%</option>
-            </subforceOption>
+
+                <option weightClass="M,L,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="M,M,L,L,L" weight="2">%ELEMENT%</option>
+
+                <option weightClass="H,M,M,L,L">%ELEMENT%</option>
+</subforceOption>
         </subforces>
     </force>
 
@@ -865,10 +911,10 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <ruleGroup>
             <formation ifIndex="0">
-                <option weight="30">Battle</option>
+                <option weight="30" ifWeightClass="H|A">Battle</option>
                 <option weight="16" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="4" ifWeightClass="M">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="16" ifWeightClass="H|A">Assault</option>
                 <option weight="8" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="6" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -880,14 +926,14 @@ but have a smaller aerospace arm than most other Clans. -->
             <formation ifIndex="!0">
                 <option weight="20">Fire</option>
                 <option weight="3">Fire Support</option>
-                <option weight="2">Direct Fire</option>
+                <option weight="2" ifWeightClass="H|A">Direct Fire</option>
                 <option weight="2" ifWeightClass="L|M">Light Fire</option>
                 <option weight="1" role="+anti_aircraft">Anti-Air</option>
-                <option weight="24">Battle</option>
+                <option weight="24" ifWeightClass="H|A">Battle</option>
                 <option weight="6" ifIndex="0,1">Battle</option>
                 <option weight="15" ifWeightClass="H|A">Heavy Battle</option>
-                <option weight="3" ifWeightClass="M">Medium Battle</option>
-                <option weight="1" ifWeightClass="L">Light Battle</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
                 <option weight="8" ifWeightClass="H|A">Assault</option>
                 <option weight="4" ifWeightClass="L|M|H">Striker/Cavalry</option>
                 <option weight="4" ifWeightClass="H|A">Heavy Striker/Cavalry</option>
@@ -905,7 +951,7 @@ but have a smaller aerospace arm than most other Clans. -->
 
         <subforces generate="group">
             <subforceOption ifWeightClass="A">
-                <option weightClass="A,A,A,H,H">%ELEMENT%</option>
+                <option weightClass="A,A,A,A,H">%ELEMENT%</option>
                 <option weightClass="A,A,H,H,H">%ELEMENT%</option>
                 <option weightClass="A,H,H,H,H"
                         weight="2">%ELEMENT%

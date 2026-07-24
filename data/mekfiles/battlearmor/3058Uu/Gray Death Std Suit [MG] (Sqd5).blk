@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a275-7665-80c1-e908c91c8567
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -45,10 +40,6 @@ Gray Death Standard Suit
 3052
 </year>
 
-<originalBuildYear>
-3052
-</originalBuildYear>
-
 <type>
 IS Level 2
 </type>
@@ -60,9 +51,6 @@ Ambusher
 <motion_type>
 Leg
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -81,16 +69,73 @@ CLBAMG:RA
 BAAPMount:LA
 InfantryAssaultRifle:APM:LA
 ISImprovedSensors:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 BABattleClaw:LA
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<capabilities>
+<p>The Machine Gun configuration emphasizes anti-infantry volume of fire. The weapon's high rate of fire makes it devastating against conventional troops and effective at suppressing soft targets in prepared positions. The Battle Claw, Anti-Personnel Weapon Mount, and Improved Sensors are retained, as are the 450 kilograms of standard armor and 32.4 km/h ground speed.</p><p>Ammunition dependency is the Machine Gun's primary limitation, requiring troopers to manage their expenditure across an engagement. The weapon is less effective against hardened targets than the Small Laser or SRM options, making this configuration best suited for operations where the primary threat is conventional infantry rather than armored opponents.</p>
+</capabilities>
+
+<overview>
+<p>The Gray Death Standard Suit is a medium battle armor design created by Gray Death Legion technicians alongside the Scout Suit. Derived from NAIS-supplied Inner Sphere Standard prototypes, the Standard retained the original design's combat focus while incorporating improvements suggested by the Legion's experienced infantry troops. Fielded in 3052, the suit offered a flexible combination of solid protection, modular firepower through interchangeable weapon mounts, and proven reliability that made it a mainstay of Lyran battle armor formations for decades after the Legion's dissolution.</p>
+</overview>
+
+<deployment>
+<p>Five-trooper Clan Points equipped with the ballistic configuration typically drew garrison and rear-area security assignments. The weapon's effectiveness against conventional infantry made it well suited to maintaining order on occupied worlds, a duty that frontline warriors considered beneath them. Solahma and second-line warriors assigned to these Points accepted the role as necessary, if unglamorous, service to the Clan.</p>
+</deployment>
+
+<history>
+<p>The Gray Death Standard emerged alongside the Scout Suit in late 3051, the second of two derivatives created by Gray Death Legion technicians from NAIS-supplied Inner Sphere Standard prototypes. Where the Scout stripped the prototype down for reconnaissance, the Standard took a more conservative approach: enhancing the original design's capabilities while retaining its fundamental role as a medium battle armor platform. Legion engineers responded to their troops' assessments by adding an anti-personnel weapon, improved sensors, and a more capable sensor suite while keeping the modular weapon mount that gave troopers flexibility in the field.</p><p>The Standard made its combat debut alongside the Scout on Pandora in 3052 against Clan Jade Falcon forces. Near Vandmaal, Gray Death Standard troopers proved decisive in the jungle fighting, reinforcing conventional infantry against BattleMech opposition. The suit's thick armor gave troopers the confidence to close with Clan OmniMechs, and the combination of battle claw and modular weaponry made each trooper a genuine threat. Word of the mercenaries' success spread quickly through AFFC channels.</p><p>Production on Glengarry remained limited, focused on the Legion's own needs with occasional sales to other mercenary units and the LAAF. The Gray Death Legion was destroyed on Hesperus II in 3065, one of many casualties of the FedCom Civil War. Surviving personnel founded Gray Death Technologies with Defiance Industries' financial support, establishing a dedicated factory on Glengarry. As the only battle armor manufacturer within the Lyran Alliance, GDT found a ready market for the Standard among LAAF commands and mercenaries alike.</p><p>In 3068, Word of Blake forces raided the Glengarry factory, looting equipment and slaughtering the Brewer's Legion security force. GDT managed to restart limited production by 3073, but Precentor Berith's second attack in 3074 was thorough enough to render the facility inoperable. Defiance Industries completed its buyout of Gray Death Technologies and moved production to Furillo, where it resumed by the early 3080s. The Standard's modular weapon mount accepted a Light Recoilless Rifle starting in 3069, expanding the suit's engagement options without requiring structural changes to the chassis.</p><p>The Standard has remained in continuous production longer than any other Gray Death design. Its combination of solid protection, modular firepower, and proven reliability ensured demand even as newer and more specialized battle armor entered the market. Across the Lyran Commonwealth and among mercenary commands throughout the Inner Sphere, the Gray Death Standard remains a common sight on battlefields where powered infantry are called to fight.</p>
+</history>
+
+<manufacturer>
+Gray Death Technologies|Defiance Industries
+</manufacturer>
+
+<primaryFactory>
+Glengarry|Furillo
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3058U
 </source>
+
+<published>
+RS:3058Uu-C
+</published>
 
 <chassis>
 biped
@@ -112,35 +157,3 @@ biped
 2
 </weightclass>
 
-<overview>
-The Gray Death Standard battle armor was developed by the technicians of the Gray Death Legion after the New Avalon Institute of Science sent them prototype battle armor suits, the progenitors of what eventually became the Inner Sphere Standard, for field testing.
-</overview>
-
-<capabilities>
-The Legion decided to remove the suits' jump jets to make room for dedicated anti-infantry firepower, superior sensor systems, and reinforced myomer bundles to improve ground speed. While losing the ability to leap over obstacles, these changes made the suit easier to maintain and cheaper to build than the Inner Sphere Standard.
-</capabilities>
-
-<deployment>
-The battle armor retains the Modular Weapon Mount of the Inner Sphere Standard in its right arm, allowing it to carry either a single-tube SRM launcher with four reloads, a Flamer, a Small Laser, or a Machine Gun. Starting in 3069 the mount could also accept a Light Recoilless Rifle. On its left arm is an Anti-Personnel Weapon Mount for dealing with conventional infantry. The left arm also ends in a Battle Claw, allowing it to make anti-'Mech attacks or be transported into battle via OmniMech handholds. The Gray Death Standard carries 450kg of standard armoring, enough to survive a full burst from an Inner Sphere Large Pulse Laser and keep the trooper inside alive, and Improved Sensors for detecting hidden opponents, including mimicking the function of a portable radar sensor. It can also maintain an impressive top speed of 32.4 km/h over open ground.
-</deployment>
-
-<history>
-The new armor, as well as the Gray Death Scout suit, debuted during the Clan Invasion in battle against Clan Jade Falcon for control of Pandora. The Gray Death Standard played a decisive role in the Gray Death Legion's victory over the Falcons. Afterwards the Legion continued to build limited numbers of Standard suits, largely to replenish their own losses but also to sell small numbers to other mercenary commands. Following its creation, the Legion also sold limited numbers of Gray Death Standard suits to the Lyran Alliance. The Gray Death Legion was effectively destroyed in battle on Hesperus II in 3065, one of the many casualties of the FedCom Civil War, but the suits they created would live on. Surviving members of the Legion's support staff created Gray Death Technologies and, with financial aid from Defiance Industries, established a dedicated factory on Glengarry to continued production. As the only dedicated battle armor manufacturer within the realm, Gray Death Technologies continued to sell its Standard suits to the Lyran Alliance Armed Forces and various mercenaries. Disaster struck again during the Jihad when the Word of Blake attacked Glengarry in 3073 and sacked the factory. The destruction was not complete however and the survivors were able to restart production on a new variant of the Gray Death Standard. When Precentor Berith attacked again a year later he was more thorough in destroying the factory and rendered GDT incapable of building any battle suits. By that point Gray Death Technologies was bought up by Defiance Industries, which decided to move manufacturing of the Gray Death Standard to Furillo and put a hold on new suits. Production of the Gray Death Strike suit resumed in late 3080, although sale of the latter was restricted to the Lyran Alliance (and Defiance Industries' own security forces).
-</history>
-
-<manufacturer>
-Defiance Industries,Gray Death Technologies
-</manufacturer>
-
-<primaryFactory>
-Furillo,Glengarry
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

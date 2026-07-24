@@ -17,10 +17,24 @@
 
 key: VSM
 name: Vesper Marches
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: AFFS
+sucsCodes:
+  - VM
 capital: Melissia
+yearsActive:
+  - start: 3151
 tags:
   - MINOR
   - IS
+ratingLevels:
+  - F
+  - D
+  - C
+  - B
+  - A
 color:
   red: 235
   green: 162

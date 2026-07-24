@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,27 +15,22 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac02-7648-83f7-192b6e494573
+</UUID>
 
 <UnitType>
 Dropship
 </UnitType>
 
 <Name>
-Arondight Pocket Warship
+Arondight Pocket WarShip
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 3734
@@ -44,10 +39,6 @@ Arondight Pocket Warship
 <year>
 3075
 </year>
-
-<originalBuildYear>
-3075
-</originalBuildYear>
 
 <type>
 IS Level 3
@@ -62,12 +53,12 @@ Spheroid
 </motion_type>
 
 <transporters>
-smallcraftbay:2.0:2:2
-2ndclassquarters:0.0:0
-steeragequarters:120.0:0
-crewquarters:210.0:0
-1stclassquarters:60.0:0
-cargobay:478.0:2:6
+smallcraftbay:2.0:2:2::-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+steeragequarters:120.0:0:-1::-1:0
+crewquarters:210.0:0:-1::-1:0
+1stclassquarters:60.0:0:-1::-1:0
+cargobay:478.0:2:6::-1:0
 </transporters>
 
 <SafeThrust>
@@ -94,9 +85,13 @@ cargobay:478.0:2:6
 19
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 353
@@ -210,6 +205,46 @@ ISAMS Ammo:72
 20
 </structural_integrity>
 
+<capabilities>
+<p>The SCC variant was developed in direct response to the demonstrated ineffectiveness of capital missiles against heavy anti-missile defenses. The nose-mounted Kraken-T tele-operated missile launcher is replaced with two additional Heavy Sub-Capital Cannons, bringing the nose battery to three Heavy SCCs alongside two Gauss rifles, four ER medium lasers, and three anti-missile systems. The broadside arcs each retain four Light Sub-Capital Cannons, four Piranha sub-capital missile launchers, four rotary AC/5s, five ER medium lasers, and five anti-missile systems. The aft arc maintains a Screen Launcher, two Gauss rifles, four ER medium lasers, and three anti-missile systems. Two hundred double heat sinks manage the thermal load across all arcs. The vessel carries two small craft bays and approximately 381 tons of cargo, with a crew of 99 operating the ship at a safe thrust of 5g.</p>
+</capabilities>
+
+<overview>
+<p>The Arondight is the first purpose-built Pocket WarShip developed by the Armed Forces of the Federated Suns, entering service in 3075. Unlike earlier AFFS Pocket WarShip conversions based on existing DropShip hulls, the Arondight was designed from the ground up as a dedicated anti-WarShip combatant. Federated-Boeing Interstellar incorporated feedback from experienced mercenary naval specialists during the design process, drawing on their extensive combat experience with converted Pocket WarShip platforms. The resulting vessel is fast, heavily armored, and carries a devastating mix of capital and conventional weaponry that makes it a credible threat to vessels many times its tonnage.</p>
+</overview>
+
+<deployment>
+<p>The standard Arondight represents the original production configuration as designed by Federated-Boeing Interstellar. Entering service in 3075, it was the first purpose-built Pocket WarShip fielded by the Armed Forces of the Federated Suns, incorporating direct feedback from the Medusans mercenary unit and their operational experience with Pocket WarShip Excaliburs. The base configuration centers its offensive capability around capital-grade missile systems supplemented by extensive conventional weaponry, providing a balanced approach that gives the standard Arondight flexibility against both WarShip-class targets and conventional aerospace threats. This makes it the preferred configuration for general fleet escort duties within the AFFS naval arm.</p>
+</deployment>
+
+<history>
+<p>The Arondight emerged from a late Jihad-era AFFS requirement for a purpose-built Pocket WarShip capable of engaging enemy WarShips and other capital-grade threats. Previous AFFS Pocket WarShips had been conversions of existing designs, which imposed significant compromises on combat performance. Federated-Boeing Interstellar received the development contract and wisely consulted with experienced mercenary naval units, whose combat experience with converted Pocket WarShips proved invaluable in shaping the new design's specifications.</p><p>The prototype Arondight launched in 3075 and rapidly proved its worth during the closing stages of the Jihad. However, combat experience during the assault on Towne revealed a critical vulnerability when heavy anti-missile defenses rendered capital missile launchers largely ineffective against prepared opponents. The loss of an AFFS vessel to concentrated sub-capital cannon fire from Blakist Pocket WarShips, while its own missiles were systematically intercepted, prompted Federated-Boeing to develop the SCC variant in 3077, which replaced missile launchers with additional cannon armament. A further refit variant followed in 3082, incorporating lessons from the full breadth of Jihad-era naval combat.</p>
+</history>
+
+<manufacturer>
+Clyde Shipyards|Federated-Boeing Interstellar Ltd. (Formerly Universal Air)|Salvatore Inc.
+</manufacturer>
+
+<primaryFactory>
+Firgrove|Delavan|Layover
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 TR:3085
 </source>
@@ -257,3 +292,4 @@ TR:3085
 <escape_pod>
 7
 </escape_pod>
+

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a88c-7765-b21a-089fedd5db18
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Krise PA(L)
 </Name>
 
-<model>
+<Model>
 (Sqd5)
 </Model>
 
@@ -52,6 +47,10 @@ IS Level 2
 <role>
 None
 </role>
+
+<quirks>
+easy_pilot
+</quirks>
 
 <motion_type>
 Jump
@@ -74,9 +73,70 @@ BASalvageArm:LA
 BABasicManipulator:RA
 BACuttingTorch:RA
 BASearchlight:LA
-ISBAExtendedLifeSupport:Body
+BAExtendedLifeSupport:Body
 ISImprovedSensors:Body
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<slotless_equipment>
+BAJumpJet
+</slotless_equipment>
+
+<capabilities>
+<p>The Krise weighs four hundred kilograms and carries a comprehensive set of emergency response tools. A cutting torch mounted on the right arm handles structural breaching and debris removal, while a salvage arm on the left limb manages heavier extraction tasks. Improved sensors detect life signs through dense material, and a searchlight assists operations in low-visibility conditions. Extended life support allows the operator to work in contaminated or oxygen-deprived environments for prolonged periods.</p><p>Jump jets provide a ninety-meter jump range alongside a thirty-kilometer-per-hour ground speed, giving the suit solid mobility for reaching disaster sites. Standard armor offers adequate protection for emergency work but cannot withstand sustained heat exposure the way Clan fire-resistant plating can. Brief contact with intense flames risks permanent damage to internal systems. The Krise carries no weapons, and its design emphasis on ease of use makes it accessible to emergency personnel who lack formal powered armor training.</p>
+</capabilities>
+
+<overview>
+<p>The Krise is an Inner Sphere light exoskeleton designed for civilian emergency response operations. Produced by Gortex Multi-E on Kittery, the suit entered service in the late thirty-first century as a purpose-built rescue platform intended primarily for Federated Suns emergency response teams. Carrying no weapons, the Krise was equipped with a comprehensive array of search and rescue tools. Its straightforward controls allowed operators with minimal powered armor training to employ it effectively in the field.</p>
+</overview>
+
+<deployment>
+<p>Clan organizations that obtained Krise exoskeletons organized them into five-member Points consistent with standard Clan doctrine. The suit's simple controls and civilian focus made it accessible even to lower-caste operators, and Points of Krise-equipped personnel supplemented dedicated Clan rescue assets during large-scale emergencies on occupied worlds.</p>
+</deployment>
+
+<history>
+<p>The Clan Invasion triggered rapid advances in battle armor technology across the Inner Sphere, and these breakthroughs filtered down into civilian exoskeleton development. Gortex Multi-E, the Federated Suns' leading manufacturer of emergency services equipment, applied these lighter frame designs to create a purpose-built rescue exoskeleton. Christened the Krise, the suit was designed to assist emergency response teams in locating and extracting survivors from rubble, cave-ins, and natural disasters.</p><p>The Krise proved immediately popular with civilian agencies. Simple to operate and equipped with the tools needed for common rescue scenarios, the suit filled a gap that conventional equipment could not match. Emergency response teams across the Federated Suns adopted it quickly, and production runs sold out three years in advance. The suit's standard armor offered adequate protection for its intended role, though it lacked the fire resistance found on Clan-manufactured rescue exoskeletons and remained vulnerable to concentrated heat exposure that could permanently damage internal systems.</p>
+</history>
+
+<manufacturer>
+Gortex Multi-E
+</manufacturer>
+
+<primaryFactory>
+Kittery
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:VAr
@@ -102,35 +162,3 @@ biped
 0
 </weightclass>
 
-<overview>
-The Krise was created by Federated Suns-based emergency equipment manufacturer Gortex Multi-E to expand their line of rescue equipment offerings.
-</overview>
-
-<capabilities>
-The suit was designed for basic Search and Rescue, however a major flaw in the design was the fact that it couldn't handle the intense heat from fires. Despite the failing in this area, the Krise was accepted by the Federated Suns
-</capabilities>
-
-<deployment>
-The suit was able to move up to 30 km/h and utilized built-in Jump Jets for increased mobility. The Krise was also equipped with a Salvage Arm and a Search Light in its left arm and a Cutting Torch fitted to its right. It also benefits from Extended Life Support and Improved Sensors in its main body.
-</deployment>
-
-<history>
-This exoskeleton came into existence thanks to the advancements of military Battle Armors.
-</history>
-
-<manufacturer>
-Gortex Multi-E
-</manufacturer>
-
-<primaryFactory>
-Kittery
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

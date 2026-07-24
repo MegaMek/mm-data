@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>Low-Atmosphere Air Intercept</name>
     <shortBriefing>Intercept and destroy hostile air forces.</shortBriefing>
-    <detailedBriefing><![CDATA[A hostile aircraft force is inbound, and we have an opportunity to intercept and cripple their strength before they can achieve their objective. Your mission is to engage and destroy at least 50% of the enemy force, ensuring their airpower is severely diminished.
+    <detailedBriefing><![CDATA[A hostile aircraft force is inbound, and we have an opportunity to intercept and cripple their strength before they can achieve their objective. Your mission is to engage and destroy at least 33% of the enemy force, ensuring their airpower is severely diminished.
 
 Expect high-speed engagements, aggressive maneuvers, and coordinated enemy tactics. Control the airspace, dictate the terms of engagement, and eliminate their ability to regroup. Do not allow them to disengage intact—press the attack and ensure their losses are irreversible.
 
@@ -120,10 +120,10 @@ The victor will control the battlefield at the end of the engagement, securing d
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

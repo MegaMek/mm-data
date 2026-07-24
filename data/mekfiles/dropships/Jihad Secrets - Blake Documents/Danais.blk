@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa85-7c5d-986e-4e4d8637672e
+</UUID>
 
 <UnitType>
 Dropship
@@ -33,9 +28,9 @@ Dropship
 Danais
 </Name>
 
-<model>
+<Model>
 
-</model>
+</Model>
 
 <mul id:>
 823
@@ -44,10 +39,6 @@ Danais
 <year>
 2728
 </year>
-
-<originalBuildYear>
-2728
-</originalBuildYear>
 
 <type>
 IS Level 2
@@ -62,11 +53,11 @@ Spheroid
 </motion_type>
 
 <transporters>
-smallcraftbay:2.0:2:1
-1stclassquarters:10.0:0
-2ndclassquarters:70.0:0
-crewquarters:28.0:0
-cargobay:1693.0:2:5
+smallcraftbay:2.0:2:1::-1:0
+1stclassquarters:10.0:0:-1::-1:0
+2ndclassquarters:70.0:0:-1::-1:0
+crewquarters:28.0:0:-1::-1:0
+cargobay:1693.0:2:5::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ cargobay:1693.0:2:5
 41
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 105
@@ -122,6 +117,46 @@ cargobay:1693.0:2:5
 <structural_integrity>
 7
 </structural_integrity>
+
+<capabilities>
+<p>The Danais is a 3,200-ton civilian spheroid DropShip designed exclusively for cargo transport and light passenger service. The vessel is entirely unarmed, relying on escort vessels or the relative safety of established trade routes for protection. Its Union-derived hull provides a structural integrity rating of seven, adequate for routine commercial operations but offering little resilience against hostile fire. Twenty-three tons of standard armor provide basic protection against micrometeorites and incidental damage rather than deliberate attack. The drive system provides modest acceleration typical of civilian freighters, with maximum thrust of 2.5 gravities and fuel reserves sufficient for nearly ninety days of continuous operation, giving the Danais excellent endurance for extended trade runs. The interior is dominated by a single 1,700-ton cargo bay with two access doors for efficient loading and unloading, supplemented by two Small Craft bays and ten passenger cabins. The minimal crew requirement of just four personnel keeps operating costs low, making the Danais economically attractive for small shipping concerns and independent traders. The design"s primary limitation is its complete lack of defensive armament, leaving it wholly dependent on external protection in hostile space.</p>
+</capabilities>
+
+<overview>
+<p>The Danais is a small civilian cargo DropShip originally conceived during the late Star League era as an unarmed light freighter. First produced in 2728 by the Falcon"s Roost Orbital Assembly Plant and Irian Naval Systems, the design was based loosely on the highly successful Union-class hull, adapted for commercial cargo operations rather than military transport. Particularly, the Danais was one of the few Star League-era DropShip designs permitted for production in the Periphery states, a distinction that contributed to its remarkably wide distribution. The class proved so successful that it remained ubiquitous more than two and a half centuries after its introduction, a sign of the soundness of its fundamental design.</p>
+</overview>
+
+<deployment>
+<p>The standard Danais serves in its baseline unarmed cargo carrier configuration, transporting commercial goods and a small number of passengers between worlds. These ubiquitous freighters operate across all regions of the Inner Sphere and Periphery, valued for their low crew requirements, excellent fuel endurance, and economical operating costs.</p>
+</deployment>
+
+<history>
+<p>The Danais was developed during the height of the Star League as a practical commercial freighter that could serve the growing interstellar trade networks connecting the member states and their Periphery neighbors. Its designers at the Falcon"s Roost Orbital Assembly Plant drew inspiration from the proven Union-class hull, adapting its reliable spheroid configuration for civilian cargo operations. Irian Naval Systems also produced the type, ensuring widespread availability across the Inner Sphere.</p><p>Uniquely among Star League-era designs, the Danais was approved for production in Periphery states, a concession that reflected both the design"s purely civilian nature and the Star League"s recognition that even the Periphery territories required basic commercial transport capacity. This policy decision ensured the Danais became one of the most widely distributed DropShip classes in human space, with examples operating from the core worlds to the most distant Periphery settlements.</p><p>The fall of the Star League and the devastation of the Succession Wars only increased the Danais"s importance. As more advanced vessels were destroyed or fell into disrepair, the simple and robust Danais continued operating, its minimal crew requirements and straightforward systems making it easier to maintain than more complex designs. During the Succession Wars, many Danais vessels were converted into armed blockade runners and smugglers, giving rise to the Trojan-class militarized refit. These conversions were individually executed rather than standardized, resulting in considerable variation among Trojan vessels. The unconverted Danais remained a common sight on trade routes throughout the Inner Sphere and Periphery well into the thirty-first century, with the class maintaining communication and commerce between worlds even during the darkest periods of interstellar conflict.</p>
+</history>
+
+<manufacturer>
+Boeing Interstellar|Bowie Industries - Port Sydney|Di Tron Heavy Industries|Earthwerks Ltd.|Falcon's Roost Orbital Assembly Plant|Federated-Boeing Interstellar - Port Simon Shipyards|Irian Technologies - Irian Naval Systems of Clipperton|Matabushi, Inc|Taurus Territorial Industries|Vandenberg Mechanized Industries
+</manufacturer>
+
+<primaryFactory>
+New Earth|Alarion|Terra|Ares|Sudeten|Galax|Clipperton|Avon|Sterope|Illiushin
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 JSBD
@@ -170,3 +205,4 @@ JSBD
 <escape_pod>
 4
 </escape_pod>
+

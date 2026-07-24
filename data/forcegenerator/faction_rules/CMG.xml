@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<!--
+    Clan Mongoose (CMG) - a Golden Century Clan, active 2807-2868, Absorbed by
+    Clan Smoke Jaguar in 2868. The Mongoose touman specialized in speed and
+    aggression, imitating its namesake with fast, deadly strikes. Canon (Op.
+    KLONDIKE source) notes a predominance of medium-class 'Mechs, giving an
+    innate mix of speed and firepower.
+
+    Structure follows the early-Kerensky Clan pattern (modeled on Clan Blood
+    Spirit): the file owns Touman/Galaxy/Cluster/Trinary and delegates the Star
+    fill to the generic CLAN baseline via asParent. Front-line and Keshik
+    clusters run four Mek trinaries and one infantry; second-line and garrison
+    clusters swap a Mek trinary for a vehicle trinary, since Clans field combat
+    vehicles only in reserve formations. No Elementals exist before 2869.
+
+    Weight identity: medium-dominant with fast heavies for the speed+firepower
+    mix, real light presence for the darting strikes, assault a clear minority.
+    Cluster picker rolls M~50/H~33/L~17 (no Assault cluster), yielding a faction
+    blend of roughly L18/M46/H31/A6.
+-->
+<ruleset faction="CMG" ratingSystem="CLAN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <defaults>
+        <echelon>%CLUSTER%</echelon>
+        <rankSystem>%RANK_CLAN%</rankSystem>
+        <rating>FL</rating>
+    </defaults>
+
+    <toc>
+        <unitType>
+            <option>null,Mek,Tank,VTOL,Infantry,AeroSpaceFighter,Conventional Fighter,Warship,Dropship,Jumpship</option>
+        </unitType>
+
+        <echelon>
+            <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
+            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option ifUnitType="AeroSpaceFighter">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option>%TRINARY%,%BINARY%,%STAR%</option>
+        </echelon>
+
+        <rating>
+            <option ifUnitType="Tank|VTOL">Keshik,FL:Front Line,SL:Second Line,Sol:Solahma,PG:Provisional Garrison</option>
+            <option ifEschelon="%TOUMAN%"></option>
+            <option ifEschelon="%GALAXY%">FL:Front Line,SL:Second Line</option>
+            <option>Keshik,FL:Front Line,SL:Second Line,Sol:Solahma,PG:Provisional Garrison</option>
+        </rating>
+    </toc>
+
+    <force echelon="%TOUMAN%" eschName="Touman">
+        <co>%KHAN%</co>
+        <xo title="Aide" position="0">%SAKHAN%</xo>
+
+        <subforces>
+            <subforce rating="Keshik" role="command"
+                      name="Mongoose Keshik">%CLUSTER%
+            </subforce>
+            <subforce rating="FL" name="Alpha Galaxy">%GALAXY%</subforce>
+            <subforce rating="FL" name="Beta Galaxy">%GALAXY%</subforce>
+            <subforce rating="SL"
+                      name="Epsilon Provisional Galaxy">%GALAXY%
+            </subforce>
+            <subforce rating="SL"
+                      name="Kappa Provisional Galaxy">%GALAXY%
+            </subforce>
+        </subforces>
+    </force>
+
+    <force echelon="%GALAXY%" eschName="Galaxy">
+        <name>{greek} Galaxy</name>
+        <co position="0">%GALAXY_CMDR%</co>
+
+        <subforces ifRating="FL">
+            <subforceOption>
+                <option num="4">%CLUSTER%</option>
+                <option num="3">%CLUSTER%</option>
+            </subforceOption>
+        </subforces>
+
+        <subforces ifRating="SL">
+            <subforceOption>
+                <option num="3">%CLUSTER%</option>
+                <option num="2">%CLUSTER%</option>
+            </subforceOption>
+        </subforces>
+    </force>
+
+    <!-- Mongoose clusters: front-line runs four Mek trinaries plus infantry;
+         second-line/garrison swaps one for a vehicle trinary (no Elementals
+         before 2869). Aerospace is integrated as one binary per front-line
+         cluster (second-line clusters field no organic air), matching the
+         Kerensky baseline rather than a dedicated fighter cluster.
+         Medium-dominant with fast heavies. -->
+    <force echelon="%CLUSTER%" eschName="Cluster">
+        <name ifRating="Keshik">Mongoose Keshik</name>
+        <name ifRating="FL" ifWeightClass="A|H">Assault Cluster</name>
+        <name ifRating="FL" ifWeightClass="M">Battle Cluster</name>
+        <name ifRating="FL" ifWeightClass="L">Striker Cluster</name>
+        <name ifRating="SL">Garrison Cluster</name>
+        <co>%STAR_COL%</co>
+
+        <!-- Per-cluster-type weight targets (budget allocator). Clan Mongoose
+             specialized in speed and aggression: a predominance of medium 'Mechs
+             plus fast heavies for the speed+firepower mix, light 'Mechs for the
+             namesake darting strikes, assault a clear minority. Picker rolls
+             M~50/H~33/L~17 (no Assault cluster), so the M and H cluster targets
+             dominate the faction blend, giving roughly L18/M46/H31/A6. -->
+        <weightTarget ifWeightClass="A|H" unitType="Mek" spread="8">A:10,H:46,M:36,L:8</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:5,H:20,M:55,L:20</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:2,H:10,M:38,L:50</weightTarget>
+        <!-- Early second-line armor runs medium/light, cheaper than the Meks. -->
+        <weightTarget unitType="Tank" spread="8">A:2,H:20,M:43,L:35</weightTarget>
+        <!-- No assault-class fighters exist (caps at Heavy). Speed clan:
+             medium/light interceptor lean. -->
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:45,L:20</weightTarget>
+
+        <weightClass>
+            <option ifRating="Keshik" weight="1">H</option>
+            <option ifRating="!Keshik" weight="3">M</option>
+            <option ifRating="!Keshik" weight="2">H</option>
+            <option ifRating="!Keshik" weight="1">L</option>
+        </weightClass>
+
+        <subforces>
+            <subforceOption ifWeightClass="H|A">
+                <option weightClass="A,H,H" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+                <option weightClass="H,H,H" unitType="Mek" weight="3"
+                >%TRINARY%
+                </option>
+                <option weightClass="H,H,M" unitType="Mek" weight="3"
+                >%TRINARY%
+                </option>
+                <option weightClass="A,H,M" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option weightClass="M,M,M" unitType="Mek" weight="3"
+                >%TRINARY%
+                </option>
+                <option weightClass="H,M,M" unitType="Mek" weight="3"
+                >%TRINARY%
+                </option>
+                <option weightClass="H,H,M" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+                <option weightClass="M,M,L" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option weightClass="M,M,L" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+                <option weightClass="M,L,L" unitType="Mek" weight="3"
+                >%TRINARY%
+                </option>
+                <option weightClass="H,M,L" unitType="Mek" weight="2"
+                >%TRINARY%
+                </option>
+                <option weightClass="L,L,L" unitType="Mek" weight="1"
+                >%TRINARY%
+                </option>
+            </subforceOption>
+
+            <!-- Vehicles only in second-line and garrison clusters - Clans are
+                 Mek-centric and field combat vehicles in their reserve
+                 formations, not the front line. FL and Keshik clusters take an
+                 extra Mek trinary in the vehicle's place. The Tank weightTarget
+                 above reshapes vehicle weights, so a nominal weight suffices. -->
+            <subforceOption>
+                <option ifRating="SL|Sol|PG" weightClass="M" unitType="Tank"
+                        weight="3">%TRINARY%
+                </option>
+                <option ifRating="SL|Sol|PG" weightClass="L" unitType="Tank"
+                        weight="2">%TRINARY%
+                </option>
+                <option ifRating="SL|Sol|PG" weightClass="H" unitType="Tank"
+                        weight="1">%TRINARY%
+                </option>
+                <option ifRating="FL|Keshik" weightClass="M" unitType="Mek"
+                        weight="2">%TRINARY%
+                </option>
+                <option ifRating="FL|Keshik" weightClass="H" unitType="Mek"
+                        weight="1">%TRINARY%
+                </option>
+            </subforceOption>
+
+            <!-- A single aerospace binary attached per front-line cluster
+                 (Kerensky-style integrated air support, not a dedicated fighter
+                 cluster). A full aero trinary is too much air for a secondary
+                 arm, so a binary keeps aero present but secondary. Air is a
+                 front-line asset - second-line and garrison clusters hold
+                 ground and field no organic aerospace. The empty fallback leaves
+                 a few front-line clusters without air. -->
+            <subforceOption ifRating="FL|Keshik">
+                <option weightClass="H" unitType="AeroSpaceFighter"
+                        weight="2">%BINARY%
+                </option>
+                <option weightClass="M" unitType="AeroSpaceFighter"
+                        weight="3">%BINARY%
+                </option>
+                <option weightClass="L" unitType="AeroSpaceFighter"
+                        weight="2">%BINARY%
+                </option>
+                <option weight="2" />
+            </subforceOption>
+
+            <subforceOption>
+                <option unitType="Infantry" weight="2">%TRINARY%</option>
+            </subforceOption>
+        </subforces>
+    </force>
+
+    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="Mek">
+        <name ifRole="command">Trinary [Command]</name>
+        <name ifWeightClass="H|A"
+        >{ordinal:distinct} Trinary [Assault]
+        </name>
+        <name ifWeightClass="M">{ordinal:distinct} Trinary [Battle]</name>
+        <name ifWeightClass="L">{ordinal:distinct} Trinary [Striker]</name>
+        <co>%STAR_CAPTAIN%</co>
+
+        <weightClass>
+            <option weight="1">A</option>
+            <option weight="2">H</option>
+            <option weight="3">M</option>
+            <option weight="1">L</option>
+        </weightClass>
+
+        <subforces>
+            <subforceOption ifWeightClass="A">
+                <option weightClass="A,A,H" weight="2">%STAR%</option>
+                <option weightClass="A,H,H" weight="3">%STAR%</option>
+                <option weightClass="A,H,M" weight="2">%STAR%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="H">
+                <option weightClass="H,H,H" weight="2">%STAR%</option>
+                <option weightClass="H,H,M" weight="3">%STAR%</option>
+                <option weightClass="A,H,M" weight="2">%STAR%</option>
+                <option weightClass="H,M,M" weight="2">%STAR%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option weightClass="M,M,M" weight="3">%STAR%</option>
+                <option weightClass="H,M,M" weight="2">%STAR%</option>
+                <option weightClass="H,M,L" weight="2">%STAR%</option>
+                <option weightClass="M,M,L" weight="2">%STAR%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option weightClass="M,L,L" weight="3">%STAR%</option>
+                <option weightClass="M,M,L" weight="2">%STAR%</option>
+                <option weightClass="L,L,L" weight="2">%STAR%</option>
+            </subforceOption>
+        </subforces>
+    </force>
+
+    <force echelon="%STAR%" eschName="Star" ifUnitType="Mek">
+        <name>{phonetic} {name:parent} Star</name>
+        <co>%STAR_CMDR%</co>
+
+        <weightClass>
+            <option weight="1">A</option>
+            <option weight="2">H</option>
+            <option weight="3">M</option>
+            <option weight="1">L</option>
+        </weightClass>
+
+        <ruleGroup>
+            <formation ifIndex="0">
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="20" ifWeightClass="H|A">Battle</option>
+                <option weight="20" ifWeightClass="L">Light Battle</option>
+                <option weight="12" ifWeightClass="L|M|H">Striker/Cavalry</option>
+                <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
+                <option weight="4" ifWeightClass="H|A">Assault</option>
+                <option weight="4" ifWeightClass="L">Light Striker/Cavalry</option>
+                <option weight="2" ifWeightClass="L|M|H">Pursuit</option>
+            </formation>
+
+            <formation ifIndex="!0">
+                <option weight="20">Fire</option>
+                <option weight="20" ifWeightClass="M">Medium Battle</option>
+                <option weight="16" ifWeightClass="H|A">Battle</option>
+                <option weight="16" ifWeightClass="L">Light Battle</option>
+                <option weight="10" ifWeightClass="L|M|H">Striker/Cavalry</option>
+                <option weight="6" ifWeightClass="H|A">Heavy Battle</option>
+                <option weight="3" ifWeightClass="H|A">Assault</option>
+                <option weight="12" ifWeightClass="L|M" role="+recon">Recon</option>
+            </formation>
+        </ruleGroup>
+
+        <subforces>
+            <asParent />
+        </subforces>
+    </force>
+</ruleset>

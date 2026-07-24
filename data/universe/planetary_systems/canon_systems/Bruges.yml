@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Bruges
-sucsId: 2986
+sucsId: 3150
 xcood: -787.026
 ycood: 886.42
 spectralType: M5V
@@ -47,6 +47,12 @@ planet:
       - name: Lesser Van de Pavert
       - name: Greater Van de Pavert
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2891-07-22'
         faction:
           source: canon
@@ -89,6 +95,15 @@ planet:
           source: canon
           value:
             - HL
+      - date: '3025-12-31'
+        # administration:
+        #   - Region 3
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - HL
       - date: '3030-01-01'
         population: 139476.0
       - date: '3040-05-24'
@@ -123,6 +138,12 @@ planet:
             - CEI
       - date: '3145-01-01'
         population: 139095.0
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - SE
   - name: Istar's Rock
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.14

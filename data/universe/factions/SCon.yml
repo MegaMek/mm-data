@@ -17,7 +17,15 @@
 
 key: SCon
 name: Stewart Confederation
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: FWLM
+sucsCodes: []  # no SUCS equivalent
 capital: Stewart
+yearsActive:
+  - start: 2259
+    end: 3082
 successor: FWL
 tags:
   - MINOR

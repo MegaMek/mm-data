@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Jenet
-sucsId: 1245
+sucsId: 1246
 xcood: 191.664
 ycood: -253.952
 spectralType: G2V
@@ -92,6 +92,12 @@ planet:
       - name: P-3
       - name: P-4
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2669-12-06'
         faction:
           source: canon
@@ -123,6 +129,17 @@ planet:
         population: 366880477.0
       - date: '2750-01-01'
         population: 379616853.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 385537267.0
       - date: '2770-01-01'
@@ -169,6 +186,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Espinoza's Belt I
     type: ASTEROID_BELT
     orbitalDist: 1.6

@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Vihtijarvi
-sucsId: 2686
+sucsId: 2687
 xcood: -354.452
 ycood: 146.518
 spectralType: G1V
@@ -96,6 +96,12 @@ planet:
         capital: Vihermaa
       - name: Kauhava 2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2627-05-22'
         faction:
           source: canon
@@ -135,6 +141,16 @@ planet:
         population: 198224928.0
       - date: '2750-01-01'
         population: 201003537.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Protectorate of Donegal
+        #   - Alarion Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
       - date: '2760-01-01'
         population: 202533482.0
       - date: '2770-01-01'
@@ -196,12 +212,23 @@ planet:
         population: 139417679.0
       - date: '3036-01-01'
         socioIndustrial: C-D-B-C-C
-      - date: '3040-11-25'
-        population: 140748458.0
-        socioIndustrial: B-C-A-C-B
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-11-25'
+        population: 140748458.0
+        socioIndustrial: B-C-A-C-B
+      - date: '3040-12-31'
+        # administration:
+        #   - Donegal March
+        #   - Alarion Operational Area
+        #   - Region 1
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3050-01-01'
@@ -211,14 +238,34 @@ planet:
           source: canon
           value:
             - LA
+      - date: '3057-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - LA
+      - date: '3058-12-31'
+        # administration:
+        #   - Alarion Province
       - date: '3059-01-01'
         socioIndustrial: B-C-A-C-C
       - date: '3060-01-01'
         population: 143908015.0
       - date: '3070-01-01'
         population: 145601627.0
+      - date: '3075-12-31'
+        # administration:
+        #   - Alarion Province
+        #   - Kaumberg Archonette
       - date: '3080-01-01'
         population: 146917956.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Buena Province
+        #   - Kaumberg Archonette
+      - date: '3085-12-31'
+        # administration:
+        #   - Buena Province
       - date: '3090-01-01'
         population: 147743005.0
       - date: '3094-01-01'
@@ -237,6 +284,9 @@ planet:
         population: 149019074.0
       - date: '3145-01-01'
         population: 148899906.0
+      - date: '3152-12-31'
+        # administration:
+        #   - Bolan Province
   - name: Vamana
     type: ICE_GIANT
     orbitalDist: 1.6

@@ -17,6 +17,12 @@
 
 key: UHC
 name: United Hindu Collective
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: AFFS
+sucsCodes:
+  - UHC
 capital: Basantapur
 yearsActive:
   - start: 2240

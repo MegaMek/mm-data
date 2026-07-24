@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,6 +15,8 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c8e8-7081-bec1-3449dd6fb4d1
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Thunder
 model:THR-3L
 mul id:3216
@@ -22,17 +24,15 @@ mul id:3216
 Config:Biped
 techbase:Inner Sphere
 era:3066
-source:TR:3055U
+source:TR:3055U,TR:J
+published:RS:J
 rules level:3
 role:Missile Boat
 
-
-
 quirk:cowl
 
-
 mass:70
-engine:350 XL Engine(IS)
+engine:350 XL Engine
 structure:IS Standard
 myomer:Triple-Strength
 
@@ -171,14 +171,27 @@ IS Stealth
 -Empty-
 -Empty-
 
-overview:The Thunder is a product of the aftermath of the Fourth Succession War.
-capabilities:The 3L variant of the Thunder is intended for artillery fire support. The 'Mech is armed with an Arrow IV artillery missile launcher and carries a pair of ER Medium Lasers and a Streak SRM-6 for close range protection. The 'Mech is also outfitted with Triple Strength Myomer, allowing it to travel at speeds of 97.2 km/h when operating at the correct temperature. The 'Mech is also armored with Stealth Armor, making it a much harder target to hit.
-history:The 'Mech was built to make the most of new technologies that had made their way to the Capellan Confederation at the beginning of the 3050s. This was done by building the 'Mech around a Magna 350 XL Engine to maximize the available weight in the 'Mech. The Thunder also uses double heat sinks to make it capable of handling a high heat load from its weapons systems. The 'Mech is well protected with thirteen and a half tons of armor. Its weapons payload, and the design in general, uses a mix of advanced and off the shelf parts. This balanced mix makes the Thunder a valuable asset on the modern battlefield.
-manufacturer:Ceres Metals Industries
-primaryfactory:Sian, Capella and St. Ives
-systemmanufacturer:CHASSIS:Hollis Mk III
-systemmanufacturer:ENGINE:Magna 350 XL
-systemmanufacturer:ARMOR:Ceres Heavy with CASE
-systemmanufacturer:COMMUNICATIONS:Ceres Metals Model 21-Rs
-systemmanufacturer:TARGETING:C-Apple Churchill
+overview:<p>The Thunder is a seventy-ton heavy BattleMech introduced in 3055 by Ceres Metals Industries for the Capellan Confederation Armed Forces. Designed to deliver overwhelming short-range firepower without sacrificing maneuverability, the Thunder became one of the most prolifically produced BattleMechs in the Confederation, serving as a mobile line breaker capable of crippling opponents at close quarters.</p><p>Produced at multiple Ceres Metals facilities across Capellan space, the Thunder filled a critical need for the resource-strapped Confederation by combining advanced technology with economical production. The design has earned a fearsome reputation among opponents who must face its devastating primary armament, though its short effective range and ammunition dependency have drawn persistent criticism from within Capellan ranks as well.</p>
 
+capabilities:<p>The Thunder's primary weapon is the devastating Kali Yama Big Bore Autocannon/20, mounted with three tons of ammunition. Capable of crippling lighter 'Mechs with a single salvo, the autocannon gives the design its fearsome reputation as a line breaker. A Sian/Ceres Jaguar LRM-5 in the left torso provides limited indirect fire capability, while three Ceres Arms Model W medium pulse lasers offer accurate close-range support. CASE protects against catastrophic ammunition detonation.</p><p>The Magna 350 XL fusion engine propels the seventy-ton chassis to an impressive 86 kilometers per hour, permitting the Thunder to engage enemy units half its size in maneuver warfare. Eleven double heat sinks manage the considerable thermal output, and thirteen and a half tons of Durallex heavy armor provide solid protection. However, the design's reliance on an XL engine creates a significant vulnerability, as damage to either side torso can prove immediately crippling. The short effective range of the Thunder's primary weapons forces pilots to close aggressively, and the autocannon's appetite for ammunition limits sustained combat endurance.</p>
+
+deployment:<p>This variant reconfigures the Thunder for a fire-support role, replacing the primary autocannon with an Arrow IV missile artillery system. Retaining the stealth armor and triple-strength myomer of the THR-2L, the variant carries a pair of extended-range medium lasers and a Streak SRM-6 for self-defense at close range. The 3L was specifically designed to replace the aging C-3 Catapult in Capellan line regiments, providing mobile artillery support that is far more difficult for enemy spotters and counter-battery fire to locate thanks to its stealth protection.</p>
+
+history:<p>The Thunder's development traces directly to the devastation inflicted on the Capellan Confederation during the Fourth Succession War. With the Federated Commonwealth occupying several key industrial worlds, Ceres Metals Industries found itself among the Confederation's few remaining heavy manufacturers. The company worked aggressively to expand its production capacity at facilities on Capella, Sian, and St. Ives, driven by the urgent need to rebuild the shattered Capellan Armed Forces.</p><p>By the early 3050s, new technologies derived from analysis of salvaged Clan OmniMech components had begun reaching the Inner Sphere. Ceres Metals acquired this knowledge through the Free Worlds League and applied it to the Thunder's design. When the THR-1L entered service in 3055, Chancellor Romano Liao personally awarded the design team a citation. Production initially centered on the Capella facility before expanding to Sian and eventually St. Ives.</p><p>The Thunder quickly proved its worth in combat. During the Battle of Denbar, a pair of Thunders and their powerful autocannons were credited with saving elements of the Hustang Warriors from destruction after they were ambushed by the reconstituted Blackwind Lancers' Second Battalion. The Thunders forced two lances of lighter 'Mechs to withdraw after inflicting heavy casualties, losing only one of their number disabled in the exchange. Thunders soon served throughout the CCAF, with rumors of a few lances deployed in Free Capellan units as well.</p><p>As the design matured, Ceres Metals introduced upgraded variants. The stealth-armored THR-2L entered production around 3062, followed by the Arrow IV-equipped THR-3L intended to replace the aging Catapult in line regiments. The Magistracy of Canopus also became a significant customer, making the Thunder a popular purchase in the Magistracy Armed Forces. However, both the MAF and CCAF expressed growing dissatisfaction with the Thunder's short effective range, ammunition vulnerability, and limited survivability in extended engagements.</p><p>The Jihad brought severe disruption to the Thunder's production network. The Word of Blake's Eighth Division violently ended production at the St. Ives facility, while the Sian plant eventually shifted priorities to other designs. In 3078, the MAF opted not to renew its Thunder contract, citing high cost and low survivability. Eager to retain a valued customer, Ceres Metals invited MAF officers to provide input on a new variant, with CCAF representatives participating as well. The resulting THR-C4 entered service with both nations in 3083, featuring a Thunderbolt launcher, improved jump jets, and enhanced protection. The Capella facility continues to produce the Thunder, and the design remains a mainstay of the Capellan Armed Forces.</p>
+
+manufacturer:Ceres Metals Industries|Ceres Metals Industries|Ceres Metals Industries
+
+primaryfactory:Capella|Sian|St. Ives
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Hollis
+systemmode:CHASSIS:Mk III
+systemmanufacturer:ENGINE:Magna
+systemmode:ENGINE:350 XL
+systemmanufacturer:ARMOR:Ceres
+systemmode:ARMOR:Heavy Stealth with CASE
+systemmanufacturer:COMMUNICATIONS:Ceres Metals
+systemmode:COMMUNICATIONS:Model 21-Rs
+systemmanufacturer:TARGETING:C-Apple
+systemmode:TARGETING:Churchill

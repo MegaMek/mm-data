@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Millungera
-sucsId: 1706
+sucsId: 1707
 xcood: -282.593
 ycood: -72.162
 spectralType: K5V
@@ -61,6 +61,12 @@ planet:
         size: large
         icon: rock12
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2626-08-18'
         faction:
           source: canon
@@ -102,6 +108,12 @@ planet:
         population: 343222668.0
       - date: '2750-01-01'
         population: 352283691.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 359707721.0
       - date: '2770-01-01'
@@ -164,6 +176,9 @@ planet:
         population: 350878954.0
       - date: '3020-01-01'
         population: 350370321.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Tamarind
       - date: '3030-01-01'
         population: 351989212.0
       - date: '3040-01-01'
@@ -176,9 +191,21 @@ planet:
         population: 361044250.0
       - date: '3070-01-01'
         population: 364162620.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DT
       - date: '3079-03-04'
         faction:
           source: canon
+          value:
+            - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -201,9 +228,13 @@ planet:
         population: 385831415.0
       - date: '3145-01-01'
         population: 388619426.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Sharp

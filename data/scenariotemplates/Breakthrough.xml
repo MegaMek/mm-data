@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -22,17 +22,25 @@
     <shortBriefing>Break through or destroy enemy.</shortBriefing>
     <detailedBriefing><![CDATA[Your objective is to break through enemy lines and reach the far side of the engagement zone. At least 50% of your forces must reach the destination, and only fully operational units will count.
 
-If the enemy resistance proves too strong, you have an alternative path to victory: destroy at least 50% of enemy forces to force them into disarray and open the way.
+If the enemy resistance proves too strong, you have an alternative path to victory: destroy at least 33% of enemy forces to force them into disarray and open the way.
 
 Be advised: the enemy will control the field when this is over. Move fast, strike hard, and don’t look back.]]></detailedBriefing>
     <battlefieldControl>ENEMY</battlefieldControl>
+    <isSuitedForAmbushes>true</isSuitedForAmbushes>
+    <isSuitedForBungledPatrols>true</isSuitedForBungledPatrols>
     <mapParameters>
-        <allowedTerrainTypes />
+        <allowedTerrainTypes>
+            <allowedTerrainType>Plains</allowedTerrainType>
+            <allowedTerrainType>Steppe</allowedTerrainType>
+            <allowedTerrainType>Savannah</allowedTerrainType>
+            <allowedTerrainType>Tundra</allowedTerrainType>
+            <allowedTerrainType>SnowField</allowedTerrainType>
+        </allowedTerrainTypes>
         <allowRotation>false</allowRotation>
         <baseHeight>50</baseHeight>
         <baseWidth>17</baseWidth>
         <heightScalingIncrement>0</heightScalingIncrement>
-        <mapLocation>AllGroundTerrain</mapLocation>
+        <mapLocation>SpecificGroundTerrain</mapLocation>
         <useStandardAtBSizing>true</useStandardAtBSizing>
         <additionalMapSheetTall>1</additionalMapSheetTall>
         <additionalMapSheetWide>0</additionalMapSheetWide>
@@ -153,10 +161,10 @@ Be advised: the enemy will control the field when this is over. Move fast, strik
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% the following forces. +2 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% the following forces. +2 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>Destroy</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimit>0</timeLimit>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>

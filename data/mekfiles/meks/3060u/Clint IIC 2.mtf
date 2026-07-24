@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-cbad-7f55-9383-fe0a2b9c21f9
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Clint IIC
 model:2
 mul id:653
 
 Config:Biped
-TechBase:Clan
-Era:3073
-Source:TR:3060
-Rules Level:2
+techbase:Clan
+era:3073
+source:TR:3060
+published:RS:3060u
+rules level:2
 role:Striker
 
 quirk:imp_target_long
 quirk:imp_target_med
 
+mass:40
+engine:240 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:40
-Engine:240 XL (Clan) Engine(IS)
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 Clan Double
+walk mp:6
+jump mp:8
 
-Heat Sinks:10 Double
-Walk MP:6
-Jump MP:8
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:12
-RA Armor:12
-LT Armor:15
-RT Armor:15
-CT Armor:18
-HD Armor:8
-LL Armor:19
-RL Armor:19
-RTL Armor:5
-RTR Armor:5
-RTC Armor:6
+armor:Ferro-Fibrous(Clan)
+LA armor:12
+RA armor:12
+LT armor:15
+RT armor:15
+CT armor:18
+HD armor:8
+LL armor:19
+RL armor:19
+RTL armor:5
+RTR armor:5
+RTC armor:6
 
 Weapons:5
 Medium Pulse Laser, Right Arm
@@ -64,13 +66,13 @@ Shoulder
 Upper Arm Actuator
 Lower Arm Actuator
 Hand Actuator
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
+Clan Ferro-Fibrous
 -Empty-
 
 Right Arm:
@@ -90,29 +92,29 @@ CLMediumPulseLaser
 Left Torso:
 Fusion Engine
 Fusion Engine
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
 CLMediumPulseLaser
-Endo Steel
-Endo Steel
-Endo Steel
+Clan Endo Steel
+Clan Endo Steel
+Clan Endo Steel
 
 Right Torso:
 Fusion Engine
 Fusion Engine
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Clan Improved Jump Jet
-Endo Steel
-Endo Steel
-Endo Steel
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
+Clan Endo Steel
+Clan Endo Steel
+Clan Endo Steel
 -Empty-
 
 Center Torso:
@@ -127,7 +129,7 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 CLMediumPulseLaser
-Endo Steel
+Clan Endo Steel
 
 Head:
 Life Support
@@ -148,8 +150,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Clan Improved Jump Jet
-Clan Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
 -Empty-
 -Empty-
 -Empty-
@@ -162,8 +164,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Clan Improved Jump Jet
-Clan Improved Jump Jet
+Improved Jump Jet
+Improved Jump Jet
 -Empty-
 -Empty-
 -Empty-
@@ -171,19 +173,29 @@ Clan Improved Jump Jet
 -Empty-
 -Empty-
 
-overview:The Clan refit of the prototyle Clint the SLDF took into exile. Primarily designed as a cheap recon unit, with the capabilities of a well-armed, low-end medium weight 'Mech, and in this regard it served well.
+overview:<p>When the Star League Defense Force departed the Inner Sphere in 2784, they brought several prototype Clints in the original configuration mounting the Armstrong Buster autocannon. These prototypes were placed in a Brian Cache on Circe, where they languished throughout the Exodus Civil War until Clan Snow Raven claimed them following the annihilation of Clan Wolverine and the nuclear attack on their capital of Dehra Dun.</p><p>Snow Raven scientists worked to correct the stress problems on the 'Mech's frame caused by the heavier autocannon, and by 2830 had transformed the poorly regarded prototype into a well-armed reconnaissance 'Mech. The design was formally introduced in 2842 and became known as the Clint IIC, serving the Ravens through the Golden Century before production ceased in 2917.</p>
 
-capabilities:It is capable of ranging far beyond supply lines thanks to its four tons of ammunition, though it only uses 10 single heat sinks and seven tons of standard armor.
+capabilities:<p>The Ravens' key modification was replacing the large Pitban 240 fusion plant with a locally produced Type 81 XL engine. While offering the same output as the Pitban, the Type 81 was much lighter, allowing technicians to reinforce the arm and shoulder skeleton that repeatedly failed on the prototypes. Additional spare mass was used to increase armor protection to seven tons and expand ammunition capacity to four tons.</p><p>During the Golden Century, the design was further modified, replacing the Armstrong Buster cannon with a Type KOV LB 10-X autocannon that allowed selectable ammunition loads, and upgrading the lasers to Series 2d extended-range medium variants. All other systems remained as in the original Andoran Industries model, and many retained their SLDF designations. Ironically, the Clint IIC still uses the original Sloane 220 Lockover targeting system, proof of that component's exceptional quality.</p><p>The Clint IIC serves as an effective light 'Mech hunter, capable of ranging far beyond supply lines thanks to its generous ammunition reserves. However, the design retains only ten single heat sinks, limiting sustained fire capability, and its seven tons of standard armor provide adequate but not exceptional protection for a medium 'Mech of its era.</p>
 
-deployment:Developed during the Jihad in 3073, the Clint IIC 2 was fitted with an all-energy weapons configuration. The 'Mech mounts five medium pulse lasers divided amongst its center torso, left torso, and right arm; one in each of the torso locations, and the remaining three in the arm. This variant has been provided eight improved jump jets to greatly enhance its mobility in tactical situations. To cope with the new levels of heat, 10 double heat sinks are used instead of the single versions. Additionally, an ECM suite has been allocated to the head. Lastly, ferro-fibrous armor now protects the design in place of the original standard armor.
+deployment:<p>Developed during the Jihad in 3073, the Clint IIC 2 adopts an all-energy weapons configuration to eliminate ammunition dependency. Five medium pulse lasers distributed across the center torso, left torso, and right arm provide devastating close-range firepower, while eight improved jump jets greatly enhance tactical mobility beyond the standard configuration. Ten double heat sinks replace the original singles to manage the increased thermal load, and ferro-fibrous armor provides improved protection. An ECM suite mounted in the head offers electronic warfare capability, making this variant particularly effective in disrupting enemy targeting and communications.</p>
 
-history:When General Aleksandr Kerensky led most of the Star League Defense Force into exile in 2784, they brought prototypes of the Clint BattleMech with them. After the annihilation of Clan Wolverine, Clan Snow Raven revisited these prototypes and was able to begin mass-production of the 'Mech in 2830 and introduced them in 2842. They ensured that it kept up with advances in Clan technology, eventually becoming the design that is now known as the Clint IIC. Production ceased in 2917, and in the late 30th century, the Ravens decided to decommission many less-effective designs of all sorts. It seemed fortuitous, then, when Clan Blood Spirit offered to trade some of their WarShips to the Ravens in exchange for ground units. The Ravens were only too happy to get rid of vehicles that were going to be stockpiled anyways, so many Clint IICs found their way into Clan Blood Spirit, but most of them were subsequently destroyed during the Spirits' conflict with the Adders and Burrocks. The waning fortunes of the Clint IIC were reversed in 3052, when the Ravens restarted production of the 'Mech to trade to the invading Clans for resources from the Inner Sphere.
+history:<p>Clan Snow Raven used the Clint IIC extensively during the Golden Century, deploying it in many clashes with other Clans. The most notable engagement was the defense of the Hellgate agrodomes in 2897, where the speed and maneuverability of the Clint IIC provided the Ravens with a significant advantage. However, battlefield inexperience cost them the fight, prompting the Clan to abandon the mining colony to the Steel Vipers only two years later.</p><p>With the Ravens' acquisition of OmniMech technology, many of their second-line 'Mechs were relegated to rear-echelon duty, including the Clint IIC. Following a policy of quality rather than quantity, by the late thirtieth century the Ravens faced the choice of decommissioning or mothballing the venerable design. The Blood Spirits' offer in 2977 to trade several of their WarShips for Snow Raven 'Mech surplus came at an opportune time, and most Clint IICs were transferred to the Spirits, becoming part of their Omicron Galaxy.</p><p>Following the destruction of several Blood Spirit Galaxies in their battles with Clan Star Adder and Clan Burrock, few Clints remained in Spirit service. The waning fortunes of the Clint IIC were reversed in 3052, when the Snow Ravens built the first new units since production ceased in 2917, seeking to exploit the invading Clans' need for equipment to replace their war losses. Clans Wolf and Ghost Bear acquired the largest numbers of the design, trading resources from the Inner Sphere for manufacturing output. The Ravens have refused to trade the design to either the Steel Vipers or Jade Falcons due to ongoing feuds with those Clans.</p>
 
-manufacturer:Eden Rose [Potemkin Class]/Facility 12-D (Refit), Snow Raven Industrial Complex Alpha (Refit)
-primaryfactory:Eden Rose [Potemkin Class], Unknown
-systemmanufacturer:CHASSIS:SR 2830/b
-systemmanufacturer:ENGINE:Type 81 Fusion 240 XL
-systemmanufacturer:ARMOR:Alpha Compound Ferro-Fibrous
-systemmanufacturer:JUMP_JET:Andoran Model JJII-Improved
-systemmanufacturer:COMMUNICATIONS:Raldon R1 with ECM
-systemmanufacturer:TARGETING:Sloane 220 Lockover System
+manufacturer:Clan Snow Raven Industrial Complex Chi|Snow Raven Industrial Complex Alpha|Eden Rose [Potemkin Class]/Facility 12-D
+
+primaryfactory:Lum|Dante|Dante
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Snow Raven
+systemmode:CHASSIS:SR 2830/b
+systemmanufacturer:ENGINE:Snow Raven
+systemmode:ENGINE:Type 81 Fusion 240 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Chilton
+systemmode:JUMP_JET:Improved
+systemmanufacturer:COMMUNICATIONS:Raldon
+systemmode:COMMUNICATIONS:R1 with ECM
+systemmanufacturer:TARGETING:Sloane
+systemmode:TARGETING:220 Lockover System

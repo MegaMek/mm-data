@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,14 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-#Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a3b3-7320-a6dc-72e27612e598
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -32,41 +28,17 @@ BattleArmor
 Corona Heavy Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd5)
-</model>
+</Model>
 
 <mul id:>
 8613
 </mul id:>
 
-<chassis>
-biped
-</chassis>
-
-<weightclass>
-3
-</weightclass>
-
-<Trooper Count>
-5
-</Trooper Count>
-
-<cruiseMP>
-2
-</cruiseMP>
-
-<Armor>
-8
-</Armor>
-
-<Point Equipment>
-CLBAMediumPulseLaser:Body
-BABattleClaw:LA
-BABasicManipulator:RA
-BAAPMount:RA
-InfantryAssaultRifle:RA:APM
-</Point Equipment>
+<year>
+3060
+</year>
 
 <type>
 Clan Level 2
@@ -76,17 +48,13 @@ Clan Level 2
 Ambusher
 </role>
 
-<year>
-3060
-</year>
-
 <motion_type>
 Leg
 </motion_type>
 
-<source>
-TR:3075
-</source>
+<cruiseMP>
+2
+</cruiseMP>
 
 <armor_type>
 28
@@ -96,21 +64,44 @@ TR:3075
 2
 </armor_tech>
 
-<overview>
-The Corona is a battle armor design that was created by Clan Star Adder following the Trials to determine which Clans would take part in Operation REVIVAL.
-</overview>
+<Point Equipment>
+CLBAMediumPulseLaser:Body
+BABattleClaw:LA
+BABasicManipulator:RA
+BAAPMount:RA
+InfantryAssaultRifle:APM:RA
+</Point Equipment>
 
-<history>
-Khan Cassius N'Buta understood that the Clans would be forever altered by their contact with the Inner Sphere, so he created a team of warriors and scientists to create new technologies and designs to help the Adders keep their edge.
-</history>
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
 
 <capabilities>
-The Corona was constructed in this think tank, but it took 10 years for new strategies to be developed to make advantage of it because it wasn't exactly like the Elemental combat armour. The design team made the choice to centre the battlesuit around a weapon that could remotely threaten 'Mechs. Despite a fifty percent increase in mass overall, the weight of the heavy weapon required to mount led to a twenty percent reduction in armour and the loss of the jump pack. Despite not being able to jump, the Corona can be transported to the battlefield on omniMechs and has a ground speed that is twice as fast as the Elemental suit's. However, due to its size, it is unable to launch anti-'Mech strikes. They began producing the Corona after Clan Burrock was absorbed by Adder, but it took them years before they really deployed it in battle.
+<p>The Corona is built around a single Medium Pulse Laser, a weapon that gives each trooper the ability to engage BattleMechs and vehicles at ranges well beyond what standard Clan battle armor can achieve. This firepower comes at significant cost. The suit masses 1,500 kilograms, fifty percent heavier than the Elemental, and designers were forced to eliminate the jump pack entirely to accommodate the weapon system. Armor protection was reduced by roughly twenty percent compared to the Elemental as well.</p><p>The Corona compensates with a ground speed of 21 km/h, double the Elemental's pace, allowing troopers to reposition quickly across the battlefield. OmniMech delivery remains possible, giving commanders tactical flexibility despite the lack of jump capability. An anti-personnel weapon mount provides a secondary option against unarmored infantry. The Corona's bulk does prevent it from executing anti-BattleMech swarming attacks, limiting its role to ranged fire support rather than close assault.</p>
 </capabilities>
 
+<overview>
+<p>Clan Star Adder developed the Corona in the wake of the Trials that selected the Clans for Operation REVIVAL. Anticipating that contact with the Inner Sphere would reshape Clan warfare, the Adders invested in new combat technologies to maintain their competitive position. The Corona emerged as a heavy battle armor suit designed around ranged firepower, filling a gap in Clan doctrine that existing designs could not address. Heavier and faster than its predecessor but lacking jump capability, the Corona traded mobility for the ability to threaten BattleMechs at distances no other Clan battle armor could match. Produced at Facility C-BA-32 on Sheridan, the suit earned a reputation as a capable if unconventional addition to Clan mechanized formations.</p>
+</overview>
+
 <deployment>
-The entire Corona is constructed around a single Medium Pulse Laser. Even longer than the range of its missiles, this weapon is extremely accurate and has a significantly wider field of fire than any heavy weapon the Elemental suit can mount. A Corona Point is a major danger to any adversary and the laser can support other units. If a Corona unit encounters unarmored infantry, it is equipped with an anti-personnel weapon mount that can be mounted with a light weapon to deal with the threat.
+<p>Clan Star Adder fielded the Corona in five-trooper Points, the standard Clan organizational unit for battle armor. Corona Points were assigned to front-line formations where they provided ranged fire support to heavier OmniMech Stars. Delivered to the battlefield aboard OmniMechs, a full Point of Coronas could suppress targets at distances that forced opponents to close range or accept attrition, a tactical dynamic Adder commanders refined through sustained operational experience.</p>
 </deployment>
+
+<history>
+<p>The Corona traces its origins to a decision by Khan Cassius N'Buta, who understood that the Clan Invasion would fundamentally alter Clan society. He assembled a select group of warriors and scientists and tasked them with developing technologies to maintain the Star Adders' competitive edge. The Corona was one product of this initiative, but its radical departure from standard Clan battle armor doctrine delayed widespread acceptance for nearly a decade while new tactics were developed.</p><p>Production began in earnest after the Adder Absorption of Clan Burrock. The suit saw its first combat deployments with Xi, Rho, and Tau Provisional Galaxies before spreading to Beta and Alpha Galaxies, where Coronas were concentrated in Assault and Armored Cavalry Clusters. Early operational testing on York against the Blood Spirits proved costly at first, but continued use refined both tactics and commander confidence in the design. Clan Star Adder proved reluctant to share the Corona with other Clans. Intelligence reports confirmed Clan Cloud Cobra as one of the few outside operators, with the Steel Vipers and Coyotes rumored to field small numbers in their Keshiks.</p>
+</history>
 
 <manufacturer>
 Facility C-BA-32
@@ -119,3 +110,48 @@ Facility C-BA-32
 <primaryFactory>
 Sheridan
 </primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
+<source>
+TR:3075
+</source>
+
+<published>
+RS:3075u-CE
+</published>
+
+<chassis>
+biped
+</chassis>
+
+<jumpingMP>
+0
+</jumpingMP>
+
+<armor>
+8
+</armor>
+
+<Trooper Count>
+5
+</Trooper Count>
+
+<weightclass>
+3
+</weightclass>
+

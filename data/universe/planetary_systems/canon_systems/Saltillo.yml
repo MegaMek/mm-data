@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Saltillo
-sucsId: 2218
+sucsId: 2219
 xcood: -310.742
 ycood: -82.508
 spectralType: G1V
@@ -69,6 +69,12 @@ planet:
       - name: Catazajá
       - name: Niagara Falls
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2716-04-18'
         faction:
           source: canon
@@ -86,6 +92,12 @@ planet:
         population: 1037119.0
       - date: '2750-01-01'
         population: 2606237.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 5527782.0
       - date: '2770-01-01'
@@ -146,6 +158,9 @@ planet:
         population: 145569694.0
       - date: '3020-01-01'
         population: 147325275.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Tamarind
       - date: '3030-01-01'
         population: 149191010.0
       - date: '3040-07-30'
@@ -157,9 +172,21 @@ planet:
         population: 154099541.0
       - date: '3070-01-01'
         population: 155773743.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DT
       - date: '3079-09-08'
         faction:
           source: canon
+          value:
+            - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -181,9 +208,13 @@ planet:
         population: 166768160.0
       - date: '3145-01-01'
         population: 167503557.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Guarida de Domínguez

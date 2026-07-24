@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Islington
-sucsId: 2865
+sucsId: 2866
 xcood: -383.416
 ycood: -368.844
 spectralType: K6V
@@ -44,6 +44,12 @@ planet:
       - name: New Grove Place
         capital: Haifa
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2772-06-16'
         hpg: X
       - date: '2780-12-26'
@@ -84,6 +90,12 @@ planet:
           source: canon
           value:
             - MH
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
       - date: '3030-01-01'
         population: 60879523.0
       - date: '3040-01-01'
@@ -121,10 +133,18 @@ planet:
           source: canon
           value:
             - MOC
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
+            - MOC
+      - date: '3152-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
             - MOC
   - name: Onuris
     type: ICE_GIANT

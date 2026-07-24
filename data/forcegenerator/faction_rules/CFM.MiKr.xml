@@ -312,6 +312,16 @@
         <name ifWeightClass="L">Striker Force</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Kindraa Mick-Kreese (Clan Fire
+             Mandrill Touman, Sarna) is the Elemental/BattleArmor specialist Kindraa ("infantry-
+             heavy"). BA emphasis is structural (dedicated BA cluster); the Mek mix is balanced,
+             medium-led with a solid heavy core to support the Elemental assault. -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:10,H:44,M:38,L:8</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:4,H:26,M:50,L:20</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:12,M:44,L:43</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:44,L:21</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:40,L:48</weightTarget>
+
         <weightClass>
             <option weight="1">L</option>
             <option weight="2">M</option>
@@ -469,6 +479,13 @@
         <name ifWeightClass="M">Vanguard Battle Cluster</name>
         <name ifWeightClass="L">Vanguard Striker Cluster</name>
         <co>%STAR_COL%</co>
+
+        <!-- Kindraa Mick-Kreese second-line: same balanced Elemental-support doctrine (see FL note). -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:10,H:44,M:38,L:8</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:4,H:26,M:50,L:20</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:12,M:44,L:43</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:35,M:44,L:21</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:12,M:40,L:48</weightTarget>
 
         <weightClass>
             <option weight="1">L</option>

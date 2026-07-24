@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Takata (New Start 3130+)
-sucsId: 2466
+sucsId: 2467
 xcood: 366.201
 ycood: 301.521
 spectralType: G5V
@@ -87,6 +87,14 @@ planet:
       - name: New Tome
       - name: So's Heights
     event:
+      - date: '2108-12-05'
+        name: Takata
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2341-10-01'
         faction:
           source: canon
@@ -94,6 +102,12 @@ planet:
             - DC
         population: 61234.0
         socioIndustrial: D-F-C-D-C
+      - date: '2341-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2350-01-01'
         population: 197533.0
       - date: '2360-01-01'
@@ -140,6 +154,16 @@ planet:
         population: 187739461.0
       - date: '2570-01-01'
         population: 192097418.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Ningxia Prefecture
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2580-01-01'
         population: 195590525.0
       - date: '2590-01-01'
@@ -222,16 +246,25 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3151-01-01'
+      - date: '3025-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
-            - DC
-      - date: '2108-12-05'
-        name: Takata
+            - ABN
       - date: '3130-01-01'
         name: New Start
         message: Takata renamed to New Start
+      - date: '3130-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Ningxia Prefecture
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
   - name: Nova Kusatsu-shi
     type: GAS_GIANT
     orbitalDist: 2.52

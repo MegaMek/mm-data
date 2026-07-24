@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Milnerton
-sucsId: 1707
+sucsId: 1708
 xcood: -85.306
 ycood: -232.471
 spectralType: G8V
@@ -75,7 +75,7 @@ planet:
         faction:
           source: canon
           value:
-            - DO
+            - FoO
         population: 49546.0
         socioIndustrial: D-D-A-D-C
       - date: '2250-01-01'
@@ -89,6 +89,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FoO
       - date: '2280-01-01'
         population: 2568449.0
       - date: '2290-01-01'
@@ -97,6 +103,15 @@ planet:
         population: 9647429.0
       - date: '2310-01-01'
         population: 16529195.0
+      - date: '2317-12-31'
+        # administration:
+        #   - Federation of Oriente
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 26433801.0
       - date: '2330-01-01'
@@ -250,6 +265,9 @@ planet:
         population: 547808996.0
       - date: '3020-01-01'
         population: 537916471.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Oriente
       - date: '3030-05-25'
         population: 536648920.0
         socioIndustrial: B-C-B-B-C
@@ -268,8 +286,20 @@ planet:
           source: canon
           value:
             - DO
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 569434692.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DO
       - date: '3086-12-25'
         faction:
           source: canon
@@ -277,6 +307,12 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 572174549.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - OP
       - date: '3100-01-01'
         population: 576654961.0
       - date: '3107-01-01'
@@ -293,9 +329,13 @@ planet:
         population: 612313312.0
       - date: '3145-01-01'
         population: 615259482.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Oriente Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Johnson

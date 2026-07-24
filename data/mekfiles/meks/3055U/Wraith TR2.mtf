@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,44 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-c911-7442-a0a5-4f8f5c97c1ec
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Wraith
 model:TR2
 mul id:3589
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3057
-Source:TR:3055U
-Rules Level:2
+techbase:Inner Sphere
+era:3057
+source:TR:3055U,TR:CI
+published:RS:CI
+rules level:2
 role:Skirmisher
 
-
-
-quirk:ubiquitous_is
 quirk:difficult_maintain
+quirk:ubiquitous_is
 
+mass:55
+engine:385 XL Engine
+structure:IS Endo Steel
+myomer:Standard
 
-Mass:55
-Engine:385 XL Engine
-Structure:Endo Steel
-Myomer:Standard
+heat sinks:10 IS Double
+walk mp:7
+jump mp:7
 
-Heat Sinks:10 Double
-Walk MP:7
-Jump MP:7
-
-Armor:Ferro-Fibrous(Inner Sphere)
-LA Armor:14
-RA Armor:14
-LT Armor:18
-RT Armor:18
-CT Armor:23
-HD Armor:8
-LL Armor:20
-RL Armor:20
-RTL Armor:5
-RTR Armor:5
-RTC Armor:7
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:18
+RT armor:18
+CT armor:23
+HD armor:8
+LL armor:20
+RL armor:20
+RTL armor:5
+RTR armor:5
+RTC armor:7
 
 Weapons:3
 Medium Pulse Laser, Left Arm
@@ -66,11 +66,11 @@ Lower Arm Actuator
 Hand Actuator
 ISMediumPulseLaser
 ISMediumPulseLaser
-Endo Steel
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 
 Right Arm:
@@ -81,11 +81,11 @@ Hand Actuator
 ISERPPC
 ISERPPC
 ISERPPC
-Endo Steel
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Left Torso:
 Fusion Engine
@@ -94,12 +94,12 @@ Fusion Engine
 Jump Jet
 Jump Jet
 Jump Jet
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
 Fusion Engine
@@ -108,12 +108,12 @@ Fusion Engine
 Jump Jet
 Jump Jet
 Jump Jet
-Endo Steel
-Endo Steel
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo Steel
+IS Endo Steel
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -127,13 +127,13 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 Jump Jet
-Ferro-Fibrous
+IS Ferro-Fibrous
 
 Head:
 Life Support
 Sensors
 Cockpit
-Ferro-Fibrous
+IS Ferro-Fibrous
 Sensors
 Life Support
 -Empty-
@@ -148,8 +148,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -162,8 +162,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo Steel
-Endo Steel
+IS Endo Steel
+IS Endo Steel
 -Empty-
 -Empty-
 -Empty-
@@ -171,19 +171,29 @@ Endo Steel
 -Empty-
 -Empty-
 
-overview:The Wraith is a 'Mech that, when properly employed, can wreak havoc on an enemy with its astounding speed and maneuverability. 
+overview:<p>The Wraith was introduced in 3055 by Curtiss Militech, a little-known military technologies division of Curtiss Hydroponics, a Free Worlds League water purification company. Seeking to diversify into more profitable markets, Curtiss formed the division to leverage recovered technology and produce state-of-the-art military hardware. The resulting TR1 Wraith defied skeptics who dismissed it as little more than a walking water cooler. Built around one of the largest extralight engines ever fitted to a medium chassis, the fifty-five-ton Wraith prioritized speed and agility above all else, filling the role of a fast raider and scout hunter.</p><p>Its pulse laser armament complemented its jump-heavy combat doctrine, and the design proved surprisingly resilient for its weight class. Following the destruction of the Curtiss Militech factory on Paradise during the Jihad, the Wraith's production rights were acquired by Hellespont Industries on Sian, ensuring the design's continued service within the Capellan Confederation.</p>
 
-capabilities:It is built around a massive LTV 385 XL engine that allows it to reach speeds of just under 119 km/h. The 'Mech is also fitted with seven CurtissJet 55 jump jets which allow it to jump up to two hundred and ten meters, giving it the ability to outmaneuver most BattleMechs in existence, and also allowing the Wraith to quickly traverse any rough terrain. The 'Mech's speed, firepower, and decent armor make the Wraith a considerable threat to many 'Mechs – some being almost twice its weight.
+capabilities:<p>Speed and maneuverability are the keystones of the Wraith's design. Weapons and armor came secondary to cramming the massive LTV 385 XL engine into a medium chassis, granting the 'Mech a top speed approaching 119 kilometers per hour. Seven CurtissJet jump jets provide an impressive 210-meter jump capability, allowing the Wraith to outmaneuver most BattleMechs in existence and traverse difficult terrain with ease.</p><p>The Wraith's armament centers on Tronel pulse lasers, a deliberate choice that compensates for the accuracy penalties inherent in its jump-intensive combat style. A Tronel XIII large pulse laser serves as the primary weapon, backed by a pair of Tronel XII medium pulse lasers for close engagements. This all-energy loadout eliminates ammunition dependence, a significant logistical advantage for a design intended to operate independently on extended raids.</p><p>The 'Mech carries over eight tons of Kallon FWL Special ferro-fibrous armor, respectable protection for a medium design, though the cramped internal layout resulting from the oversized engine and endo steel structure makes battlefield repairs notoriously difficult. Curtiss addressed early maintenance concerns by providing a liberal warranty and producing replacement parts alongside each unit, though this did little to endear the design to field technicians.</p>
 
-deployment:A simple modification of the Wraith, the TR2 simply replaces the Large Pulse Laser with an ER PPC, turning the 'Mech into a highly capable sniper.
+deployment:<p>This variant is a common field modification that replaces the Tronel XIII large pulse laser with an extended-range PPC, transforming the Wraith from a close-range brawler into a highly capable sniper. The modification requires no structural changes to the chassis, making it popular among independent repair shops and mercenary technical crews. The resulting configuration sacrifices the pulse laser's accuracy advantage but gains the ability to engage targets at extreme range while maintaining full mobility.</p>
 
-history:The Wraith marked Curtiss Militech's entry into BattleMech production. When the design was announced, many felt that the design would be little more than a walking water cooler. What the critics got was a shock. Following the destruction of its sole factory, Curtiss Hydroponics announced its withdrawal from the military market altogether and the sale of its Curtiss Militech assets. By 3085, Hellespont Industrials have expressed interest in the Wraith; and by 3145 Production had been ongoing at one of Hellespont Industrials locations in the Sian Commonality for Capellan use.
+history:<p>Curtiss Hydroponics had been a household name in the Free Worlds League for generations, manufacturing water purification systems that served communities across the nation. By the mid-3050s, however, spiraling costs and declining profits left the company searching for new revenue streams. The formation of Curtiss Militech, a military technologies division devoted to producing state-of-the-art BattleMech hardware using recovered technology, was met with open skepticism from the defense industry. Analysts who had scoffed at the idea of a water purification company entering the military market were forced to reconsider when the TR1 Wraith debuted in 3055, a design far removed from the "water cooler on legs" many had predicted.</p><p>The Wraith found an immediate audience among independent MechWarriors and mercenary commands who valued its exceptional speed and ammunition-independent weapons loadout. Early operational experience revealed that the design was more difficult to employ effectively than its raw specifications suggested. Commanders frequently compared the Wraith to the Charger, noting that while both designs possessed impressive speed and durability for their weight class, the Wraith's short-ranged pulse lasers left it ill-suited to line combat or traditional scouting roles. It lacked the reach to engage lighter scout hunters at range, yet carried too little firepower to serve as a frontline combatant.</p><p>Over time, tactical doctrine evolved to match the Wraith's unique capabilities. Commanders began assigning the design to skirmisher and fast raider roles, where its speed allowed it to strike and withdraw before heavier opponents could respond. Free Worlds League units along the Marik-Steiner border struggled to find a niche for the design, but Curtiss found greater success selling on the general market. The Capellan Confederation, Draconis Combine, and Word of Blake all purchased the Wraith, as did numerous mercenary commands. Individual pilots quickly discovered that replacing the large pulse laser with an extended-range PPC transformed the design into a highly capable sniper, and this TR2 field modification became widespread. The Word of Blake developed the TR3 variant, mounting an improved C3 computer to make the Wraith a fast, mobile network node for their C3i-equipped formations.</p><p>The Jihad brought catastrophe to the Wraith's production. On 26 February 3080, forces from the Principality of Regulus bombarded Paradise with thousands of cobalt-laced strategic nuclear weapons, destroying the Curtiss Militech factory and rendering the planet uninhabitable. The attack killed over a hundred million civilians and left Curtiss Hydroponics in severe financial distress. The parent company announced its complete withdrawal from the military market and put the Curtiss Militech assets up for sale. No Free Worlds League company expressed interest in the Wraith's production rights, and Curtiss flatly refused to sell to the Regulans, whose destruction of Paradise had directly caused the company's ruin.</p><p>Hellespont Industries on Sian proved a willing buyer, and production began at the Hellespont 'Mech Works facility by 3087. The transition replaced existing Stinger production and scaled back Assassin manufacture to accommodate the new line. Under Capellan ownership, the Wraith became firmly associated with the Confederation Armed Forces. Hellespont engineers eventually leveraged their experience with Capellan manufacturing partners like Ceres Arms to develop new variants incorporating advanced pulse lasers and supercharger technology. The design's cultural integration into the CCAF was reflected in its informal Mandarin phoneticization, though the preferred pronunciation varied between units. The Death Commandos and Warrior Houses favored one reading while most line formations used another, a distinction that observers at the Capellan court noted extended even to the Chancellor and senior nobility.</p><p>On the arena circuits of Solaris VII, the Wraith's speed and agility made it a natural fit for gladiatorial combat. Custom modifications like the TR2-X Alexander and TR2-P Pocahontas pushed the chassis to its experimental limits, incorporating Clan technology and partial wings that would later inspire Hellespont's own Wing Wraith development program. The Wraith's journey from a water purification company's unlikely debut design to a mainstay of the Capellan military stands as one of the more remarkable manufacturing stories of the post-Clan Invasion era.</p>
 
-manufacturer:Refit
-primaryfactory:Refit
-systemmanufacturer:CHASSIS:Curtiss Wraith
-systemmanufacturer:ENGINE:LTV 385 XL
-systemmanufacturer:ARMOR:Kallon FWL Special Ferro-Fibrous
-systemmanufacturer:JUMP_JET:CurtissJet 55
-systemmanufacturer:COMMUNICATIONS:CurtissComm Mk I
-systemmanufacturer:TARGETING:Dynatec 2780
+manufacturer:Field Refit
+
+primaryfactory:Various
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Curtiss
+systemmode:CHASSIS:Wraith
+systemmanufacturer:ENGINE:LTV
+systemmode:ENGINE:385 XL
+systemmanufacturer:ARMOR:Kallon
+systemmode:ARMOR:FWL Special Ferro-Fibrous
+systemmanufacturer:JUMP_JET:CurtissJet
+systemmode:JUMP_JET:55
+systemmanufacturer:COMMUNICATIONS:CurtissComm
+systemmode:COMMUNICATIONS:Mk I
+systemmanufacturer:TARGETING:Dynatec
+systemmode:TARGETING:2780

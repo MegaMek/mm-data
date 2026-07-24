@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Ottumwa
-sucsId: 1958
+sucsId: 1959
 xcood: 398.587
 ycood: 33.295
 spectralType: M6V
@@ -61,6 +61,12 @@ planet:
       - name: Gill H
       - name: Gill I
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2276-11-04'
         faction:
           source: canon
@@ -76,6 +82,12 @@ planet:
         population: 602794.0
       - date: '2310-01-01'
         population: 1285252.0
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2320-01-01'
         population: 2467535.0
       - date: '2330-01-01'
@@ -91,6 +103,12 @@ planet:
             - FS
       - date: '2360-01-01'
         population: 15476066.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 21152743.0
       - date: '2380-01-01'
@@ -135,6 +153,17 @@ planet:
         population: 136543662.0
       - date: '2570-01-01'
         population: 139038982.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Region 1
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2580-01-01'
         population: 141242404.0
       - date: '2590-01-01'
@@ -188,6 +217,11 @@ planet:
         population: 148216793.0
       - date: '2820-01-01'
         population: 147774803.0
+      - date: '2821-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Region 2
       - date: '2830-01-01'
         population: 147908424.0
       - date: '2840-01-01'
@@ -232,14 +266,25 @@ planet:
         population: 143291549.0
       - date: '3020-01-01'
         population: 143218367.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Bremond PDZ
       - date: '3030-01-01'
         population: 144013898.0
-      - date: '3040-04-02'
-        population: 145592235.0
-        socioIndustrial: C-F-B-D-D
       - date: '3040-01-19'
         faction:
           source: canon
+          value:
+            - FC
+      - date: '3040-04-02'
+        population: 145592235.0
+        socioIndustrial: C-F-B-D-D
+      - date: '3040-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3046-01-01'
@@ -253,10 +298,21 @@ planet:
           source: canon
           value:
             - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '3070-01-01'
         population: 149292849.0
       - date: '3080-01-01'
         population: 150582304.0
+      - date: '3081-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Woodbine Operational Area
+        #   - Milligan PDZ
       - date: '3090-01-01'
         population: 151640078.0
       - date: '3093-01-01'
@@ -271,10 +327,20 @@ planet:
         population: 160438358.0
       - date: '3132-08-07'
         hpg: X
+      - date: '3135-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Milligan Operational Area
+        #   - Milligan PDZ
       - date: '3140-01-01'
         population: 162180483.0
       - date: '3145-01-01'
         population: 163189125.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Draconis March
+        #   - Tancredi Operational Area
+        #   - Milligan PDZ
   - name: Boone
     type: TERRESTRIAL
     orbitalDist: 0.14

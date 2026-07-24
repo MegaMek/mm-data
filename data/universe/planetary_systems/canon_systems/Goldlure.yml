@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Goldlure
-sucsId: 977
+sucsId: 978
 xcood: 269.002
 ycood: 108.124
 spectralType: G4V
@@ -69,6 +69,12 @@ planet:
         size: medium
         icon: rock7
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2692-02-07'
         faction:
           source: canon
@@ -94,6 +100,16 @@ planet:
         socioIndustrial: C-D-B-C-D
       - date: '2750-01-01'
         population: 157025451.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Galedon Military District
+        #   - Matsuida Prefecture
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2760-01-01'
         population: 163484683.0
       - date: '2770-01-01'
@@ -138,6 +154,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: L1 Belt
     type: ASTEROID_BELT
     orbitalDist: 0.9

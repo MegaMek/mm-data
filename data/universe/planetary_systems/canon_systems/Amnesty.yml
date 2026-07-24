@@ -1,0 +1,334 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+id: Amnesty
+sucsId: 3106
+xcood: -49.225
+ycood: -428.668
+spectralType: G2V
+planet:
+  - name: Amnesty I
+    type: ICE_GIANT
+    orbitalDist: 0.36
+    sysPos: 1
+    icon: iceg6
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.97
+    diameter: 40000
+    density: 1.7
+    dayLength: 16
+    yearLength: 1
+    smallMoons: 7
+    satellite:
+      - name: 1-L1
+        size: large
+        icon: rock1
+  - name: Amnesty
+    type: TERRESTRIAL
+    orbitalDist: 0.63
+    sysPos: 2
+    icon: green15
+    pressure: STANDARD
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.7
+    diameter: 12300
+    density: 4
+    dayLength: 20
+    yearLength: 1.1
+    temperature: 29
+    water: 43
+    lifeForm: REPTILE
+    smallMoons: 1
+    event:
+      - date: '2750-01-01'
+        population: 48383.0
+        socioIndustrial: C-D-B-C-D
+      - date: '2760-01-01'
+        population: 215106.0
+      - date: '2770-01-01'
+        population: 705413.0
+      - date: '2780-01-01'
+        population: 1830411.0
+      - date: '2790-01-01'
+        population: 3921374.0
+      - date: '2800-01-01'
+        population: 7202544.0
+      - date: '2810-01-01'
+        population: 10275498.0
+      - date: '2820-01-01'
+        population: 3553057.0
+      - date: '2830-01-01'
+        population: 989730.0
+      - date: '2840-01-01'
+        population: 248429.0
+      - date: '2850-01-01'
+        population: 63549.0
+      - date: '2860-01-01'
+        population: 14788.0
+      - date: '2870-01-01'
+        population: 4238.0
+      - date: '2880-01-01'
+        population: 1054.0
+      - date: '2890-01-01'
+        population: 0.0
+        socioIndustrial: X-X-X-X-X
+  - name: Amnesty III
+    type: ICE_GIANT
+    orbitalDist: 0.9
+    sysPos: 3
+    icon: iceg16
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.14
+    diameter: 50000
+    density: 1.6
+    dayLength: 20
+    yearLength: 1.3
+    ring: true
+    smallMoons: 4
+    satellite:
+      - name: 3-L1
+        size: large
+        icon: rock1
+      - name: 3-L2
+        size: large
+        icon: rock2
+  - name: Amnesty IV
+    type: GAS_GIANT
+    orbitalDist: 1.44
+    sysPos: 4
+    icon: gasg29
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.71
+    diameter: 80000
+    density: 1.5
+    dayLength: 11
+    yearLength: 2
+    smallMoons: 15
+    satellite:
+      - name: 4-L1
+        size: large
+        icon: rock1
+      - name: 4-L2
+        size: large
+        icon: rock2
+      - name: 4-L3
+        size: large
+        icon: rock3
+      - name: 4-L4
+        size: large
+        icon: rock4
+      - name: 4-L5
+        size: large
+        icon: rock5
+  - name: Amnesty V
+    type: GAS_GIANT
+    orbitalDist: 2.52
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.96
+    diameter: 130000
+    density: 1.6
+    dayLength: 12
+    yearLength: 4.1
+    smallMoons: 13
+    satellite:
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-M1
+        size: medium
+        icon: rock1
+      - name: 5-M2
+        size: medium
+        icon: rock2
+      - name: 5-M3
+        size: medium
+        icon: rock3
+  - name: Amnesty VI
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 4.68
+    sysPos: 6
+    icon: gasg19
+    pressure: HIGH
+    atmosphere: TOXIC_POISON
+    composition: Methane and Carbon Dioxide, plus trace amounts of Argon
+    gravity: 1.99
+    diameter: 17500
+    density: 8
+    dayLength: 17
+    yearLength: 10.2
+    temperature: -143
+    water: 89
+    satellite:
+      - name: 6-M1
+        size: medium
+        icon: rock1
+      - name: 6-M2
+        size: medium
+        icon: rock2
+  - name: Amnesty VII
+    type: GIANT_TERRESTRIAL
+    orbitalDist: 9
+    sysPos: 7
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.96
+    diameter: 13500
+    density: 5
+    dayLength: 15
+    yearLength: 27
+    smallMoons: 2
+  - name: Amnesty VIII
+    type: GAS_GIANT
+    orbitalDist: 17.64
+    sysPos: 8
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.85
+    diameter: 130000
+    density: 1
+    dayLength: 12
+    yearLength: 74.1
+    ring: true
+    smallMoons: 13
+    satellite:
+      - name: 8-L1
+        size: large
+        icon: rock1
+      - name: 8-M1
+        size: medium
+        icon: rock1
+  - name: Amnesty IX
+    type: GAS_GIANT
+    orbitalDist: 69.48
+    sysPos: 9
+    icon: gasg29
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 3.19
+    diameter: 160000
+    density: 1.4
+    dayLength: 15
+    yearLength: 579.1
+    ring: true
+    smallMoons: 18
+  - name: Amnesty X
+    type: GAS_GIANT
+    orbitalDist: 138.6
+    sysPos: 10
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.19
+    diameter: 140000
+    density: 1.1
+    dayLength: 12
+    yearLength: 1631.7
+    ring: true
+    smallMoons: 16
+    satellite:
+      - name: 10-G1
+        size: giant
+        icon: oddmoon1
+      - name: 10-G2
+        size: giant
+        icon: oddmoon2
+      - name: 10-L1
+        size: large
+        icon: rock1
+      - name: 10-M1
+        size: medium
+        icon: rock1
+      - name: 10-M2
+        size: medium
+        icon: rock2
+      - name: 10-M3
+        size: medium
+        icon: rock3
+      - name: 10-M4
+        size: medium
+        icon: rock4
+  - name: Amnesty XI
+    type: GAS_GIANT
+    orbitalDist: 276.84
+    sysPos: 11
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.54
+    diameter: 120000
+    density: 0.9
+    dayLength: 11
+    yearLength: 4606.2
+    ring: true
+    smallMoons: 20
+    satellite:
+      - name: 11-L1
+        size: large
+        icon: rock1
+      - name: 11-L2
+        size: large
+        icon: rock2
+  - name: Amnesty XII
+    type: GAS_GIANT
+    orbitalDist: 553.32
+    sysPos: 12
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.03
+    diameter: 110000
+    density: 1.3
+    dayLength: 15
+    yearLength: 13015.6
+    ring: true
+    smallMoons: 22
+    satellite:
+      - name: 12-L1
+        size: large
+        icon: rock1
+      - name: 12-L2
+        size: large
+        icon: rock2
+      - name: 12-L3
+        size: large
+        icon: rock3
+      - name: 12-L4
+        size: large
+        icon: rock4
+      - name: 12-L5
+        size: large
+        icon: rock5
+primarySlot: 2

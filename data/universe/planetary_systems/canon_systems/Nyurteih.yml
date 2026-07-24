@@ -1,0 +1,215 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# NOTE: Coordinates derived from lore (~100 LY anti-spinward of RWR border).
+
+id: Nyurteih
+xcood: -800.0
+ycood: 350.0
+spectralType: K8V
+planet:
+  - name: Nyurteih
+    type: TERRESTRIAL
+    orbitalDist: 0.24
+    sysPos: 1
+    icon: green8
+    pressure: HIGH
+    atmosphere: BREATHABLE
+    composition: Nitrogen and Oxygen, plus trace gases
+    gravity: 0.86
+    diameter: 11400
+    density: 5.2795
+    dayLength: 18
+    yearLength: 0.8
+    temperature: 19
+    water: 35
+    lifeForm: AMPHIBIAN
+    event:
+      - date: '2750-01-01'
+        population: 48966.0
+        socioIndustrial: C-F-B-D-F
+      - date: '2760-01-01'
+        population: 109682.0
+      - date: '2770-01-01'
+        population: 209654.0
+      - date: '2780-01-01'
+        population: 354136.0
+      - date: '2783-01-01'
+        socioIndustrial: D-F-C-D-F
+      - date: '2790-01-01'
+        population: 541518.0
+      - date: '2800-01-01'
+        population: 758045.0
+      - date: '2810-01-01'
+        population: 994370.0
+      - date: '2820-01-01'
+        population: 1240220.0
+      - date: '2830-01-01'
+        population: 194466.0
+      - date: '2840-01-01'
+        population: 7028.0
+      - date: '2847-01-01'
+        socioIndustrial: X-X-X-X-X
+  - name: Nyurteih II
+    type: DWARF_TERRESTRIAL
+    orbitalDist: 0.42
+    sysPos: 2
+    icon: barren7
+    pressure: Vacuum
+    atmosphere: NONE
+    gravity: 0.09
+    diameter: 1600
+    density: 4
+    dayLength: 20
+    yearLength: 0.8
+    temperature: -5
+    water: 0
+    smallMoons: 3
+  - name: Nyurteih III
+    type: GAS_GIANT
+    orbitalDist: 0.6
+    sysPos: 3
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.42
+    diameter: 170000
+    density: 1
+    dayLength: 13
+    yearLength: 0.9
+    smallMoons: 17
+    satellite:
+      - name: 3-L1
+        size: large
+        icon: rock1
+      - name: 3-M1
+        size: medium
+        icon: rock1
+      - name: 3-M2
+        size: medium
+        icon: rock2
+  - name: Nyurteih IV
+    type: ASTEROID_BELT
+    orbitalDist: 0.96
+    sysPos: 4
+    icon: asteroid2
+    yearLength: 1.2
+    temperature: -96
+  - name: Nyurteih V
+    type: GAS_GIANT
+    orbitalDist: 1.68
+    sysPos: 5
+    icon: gasg1
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 1.2
+    diameter: 70000
+    density: 1.2
+    dayLength: 12
+    yearLength: 2.3
+    smallMoons: 21
+    satellite:
+      - name: 5-G1
+        size: giant
+        icon: oddmoon1
+      - name: 5-G2
+        size: giant
+        icon: oddmoon2
+      - name: 5-L1
+        size: large
+        icon: rock1
+      - name: 5-M1
+        size: medium
+        icon: rock1
+  - name: Nyurteih VI
+    type: GAS_GIANT
+    orbitalDist: 6
+    sysPos: 6
+    icon: gasg8
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 3.2
+    diameter: 150000
+    density: 1.5
+    dayLength: 16
+    yearLength: 14.7
+    smallMoons: 18
+    satellite:
+      - name: 6-L1
+        size: large
+        icon: rock1
+      - name: 6-M1
+        size: medium
+        icon: rock1
+  - name: Nyurteih VII
+    type: GAS_GIANT
+    orbitalDist: 11.76
+    sysPos: 7
+    icon: gasg15
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 0.8
+    diameter: 70000
+    density: 0.8
+    dayLength: 13
+    yearLength: 40.3
+    ring: true
+    smallMoons: 16
+  - name: Nyurteih VIII
+    type: GAS_GIANT
+    orbitalDist: 23.28
+    sysPos: 8
+    icon: gasg22
+    pressure: VERY_HIGH
+    atmosphere: TOXIC_POISON
+    composition: Hydrogen and Helium, plus trace gases
+    gravity: 2.79
+    diameter: 140000
+    density: 1.4
+    dayLength: 14
+    yearLength: 112.3
+    smallMoons: 17
+    satellite:
+      - name: 8-G1
+        size: giant
+        icon: oddmoon1
+      - name: 8-G2
+        size: giant
+        icon: oddmoon2
+      - name: 8-L1
+        size: large
+        icon: rock1
+      - name: 8-L2
+        size: large
+        icon: rock2
+      - name: 8-L3
+        size: large
+        icon: rock3
+      - name: 8-M1
+        size: medium
+        icon: rock1
+      - name: 8-M2
+        size: medium
+        icon: rock2
+      - name: 8-M3
+        size: medium
+        icon: rock3
+primarySlot: 1

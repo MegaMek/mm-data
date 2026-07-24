@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: New Athens
-sucsId: 1815
+sucsId: 1816
 xcood: 59.751
 ycood: -129.939
 spectralType: M9V
@@ -55,6 +55,12 @@ planet:
         size: medium
         icon: rock17
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2693-02-15'
         faction:
           source: canon
@@ -78,6 +84,16 @@ planet:
         socioIndustrial: C-D-A-C-C
       - date: '2750-01-01'
         population: 603546349.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Sarna Commonality
+        #   - Region 5
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '2760-01-01'
         population: 638175129.0
       - date: '2770-01-01'
@@ -124,6 +140,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Bowman
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.07

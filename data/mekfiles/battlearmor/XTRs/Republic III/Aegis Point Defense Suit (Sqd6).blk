@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a9ac-773f-a095-41f74af5a0d6
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Aegis Point Defense Suit
 </Name>
 
-<model>
+<Model>
 (Sqd6)
 </Model>
 
@@ -45,10 +40,6 @@ Aegis Point Defense Suit
 3132
 </year>
 
-<originalBuildYear>
-3132
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -57,12 +48,13 @@ IS Level 3
 Scout
 </role>
 
+<quirks>
+imp_com
+</quirks>
+
 <motion_type>
 Leg
 </motion_type>
-
-<transporters>
-</transporters>
 
 <cruiseMP>
 3
@@ -87,10 +79,6 @@ IS BA Stealth (Improved):LA
 BAAPMount:LA
 InfantryAssaultRifle:APM
 ISBAAPDS:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 </Squad Equipment>
 
 <Trooper 1 Equipment>
@@ -112,28 +100,44 @@ LegAttack
 </Trooper 6 Equipment>
 
 <capabilities>
-On its left arm is an Anti-Personnel Weapon Mount, typically equipped with a submachine gun, just above the wrist. Both arms end in fully functional Basic Manipulators slaved directly to the operator's own hands, giving it superior flexibility in holding and manipulating objects than other battle armor suits. While this comes at the cost of armor protection and hand-to-hand combat (hand injuries being the most common type for Achileus operators), the capability is invaluable in supporting the battlefield infiltration mission. Integral jump jets in the Achileus allow it to make leaps of 90 meters at a time, giving it good maneuverability. Its 360kg of Improved Stealth armor, while allowing the wearer to survive a couple of shots from a Small Laser, are more notable for their stealth features. Combining the aspects of an electronic and infrared-suppressing Sneak Suit, this stealth system can run indefinitely and protect the suit from being detected by a number of sensors, including Beagle Active Probes.
+<p>The Aegis mounts a Battle Armor Advanced Point Defense System with eighteen charges, giving it the ability to intercept incoming missile salvos that would otherwise threaten the BattleMech or vehicle it accompanies. This system occupies nearly all of the suit's available payload, leaving only an Anti-Personnel Weapon Mount as its sole offensive armament. The suit retains the Angerona's Improved Stealth Armor but sacrifices the camouflage system to accommodate the APDS hardware.</p><p>Ground speed and armor protection remain identical to the standard Angerona, providing adequate mobility to keep pace with the heavy and assault BattleMechs it typically escorts. The Aegis is not designed for independent combat operations. Its value lies entirely in its ability to shield larger assets from missile fire, and troopers operating the suit depend on their escorted unit for protection against direct engagement. The design quirk of improved communications equipment aids coordination between the Aegis squad and the BattleMech pilot they support.</p>
 </capabilities>
 
 <overview>
-Based on the Angerona, this suit introduced in 3132 is a testbed for the RISC Advanced Point Defense System for use on battle armor.
+<p>The Aegis Point Defense Suit is a specialized battle armor platform developed by Rhodes Foundry Ltd. on Devil's Rock for the Republic of the Sphere. Introduced in 3132, the Aegis was built on Angerona Scout Suit chassis and repurposed to carry a miniaturized point defense system capable of intercepting incoming missile fire. Designed to operate as an escort for heavy and superheavy BattleMechs, the Aegis fills a unique niche in the Republic's battle armor inventory as a dedicated anti-missile screen rather than a conventional infantry combatant.</p>
 </overview>
 
 <deployment>
-The Aegis is frequently used to thicken the anti-missile defenses of the Ares BattleMech. Ground speed and armor protection remains the same as the standard Angerona, but the camo system was removed to make room for the APDS. The Aegis suit retains the anti-personnel weapon mount as its only offensive option.
+<p>ComStar-tradition Level I formations equipped with the Aegis leveraged their six-trooper strength to provide comprehensive missile defense coverage around high-value assets. The larger formation allowed commanders to maintain a point defense screen even after sustaining casualties, preserving the escort mission's effectiveness longer than smaller formations could manage.</p>
 </deployment>
 
 <history>
-During the early 3080s, the VIII Hastati Sentinels were given a squad of Angerona suits to test out. The 8th Hastati were called to the world of Shipka to handle Capellan backed militants who were terrorizing the planet's Foxborough continent. The Sentinels had sent in two battle armor squads into an area to scout for the enemy. The Capellans were equipped with Ying Long suits, and had ambushed one of the Hastati's squads of Purifier Battle Armor while investigating a town. The other Squad, equipped with Angeronas, watched its fellow soldiers get wiped out. Then they regrouped, stalked the militants in full stealth and cut down the two squads of Ying Longs. Only three of the militants managed to escape the Republic Angeronas. The suit's performance on Skipka helped to increase its popularity among Republic troops.
+<p>The Republic Institute for Strategic Combat had long pursued ambitious weapons projects, with results that ranged from impractical to genuinely dangerous. The Aegis emerged from one of the institute's more grounded efforts: the Rhodes Project, a program aimed at solving the vulnerability of Ares superheavy BattleMechs to indirect missile bombardment.</p><p>A technician working on the Ares' Omni capabilities stumbled upon a routine report on an existing point defense technology and recognized that it could be miniaturized for battle armor deployment. A two-tiered project at Devil's Rock followed. Rhodes Foundry first developed a compact defensive package small enough to fit a battle armor suit, then sourced a proven chassis for the platform itself. StarCorps Industries, the Republic's longtime partner and supplier of the Angerona, provided a batch of stripped-down Angerona frames. These skeletal suits were refitted with the new system at Devil's Rock, producing a design so different in role and performance from its parent chassis that it received a new designation.</p><p>The Aegis proved its worth during the false-flag actions of the 3130s and saw its first serious combat test escorting an Ares against resurgent Com Guard forces, where its defensive systems intercepted a full Thunderbolt missile volley aimed at the superheavy BattleMech.</p>
 </history>
 
 <manufacturer>
-Rhodes Foundry
+Rhodes Foundry Ltd.
 </manufacturer>
 
 <primaryFactory>
 Devil's Rock
 </primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 XTR:RotS 3
@@ -158,9 +162,4 @@ biped
 <weightclass>
 2
 </weightclass>
-
-
-<quirks>
-imp_com
-</quirks>
 

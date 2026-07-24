@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,20 +15,24 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-d2ef-7748-89a7-936918ecc200
+generator:MegaMek Suite 0.51.01 on 2026-07-20
 chassis:Tomahawk
 model:(Prime)
 mul id:6298
 
-Config:Biped Omnimech
+Config:Biped OmniMek
 techbase:Clan
 era:3063
-source:TR:3145:C
+source:TR:3145:C,TR:3145
+published:RS:3145
 rules level:2
 role:Juggernaut
 
+
 mass:100
-engine:300 XL (Clan) Engine(IS)
-structure:IS Standard
+engine:300 XL (Clan) Engine
+structure:Clan Standard
 myomer:Standard
 
 heat sinks:18 Clan Double
@@ -172,18 +176,25 @@ CLDoubleHeatSink (OMNIPOD)
 -Empty-
 -Empty-
 
-overview:The Tomahawk is an assault-class OmniMech designed by Clan Wolf in 3063. The 'Mech ultimately failed to enter production and remained a prototype, presumably due at least in part to the Clan's troubles during the Jihad.
+overview:<p>The Tomahawk is a 100-ton assault-class OmniMech designed by Clan Wolf in 3065. Conceived as a next-generation heavy assault platform to complement the Clan's existing stable of frontline OmniMechs, the Tomahawk represented an ambitious attempt to create the most devastating battlefield unit available to any military force. Several prototypes were constructed and tested by Omega Galaxy, demonstrating impressive firepower potential despite persistent system errors and integration issues that plagued early production models. The design was never approved for serial production, with the onset of the Jihad and the subsequent loss of Clan Wolf's Homeworld manufacturing infrastructure effectively ending the prototype program. The Tomahawk nonetheless served as the direct predecessor to the mass-produced Tomahawk II, which incorporated significant structural improvements to resolve the original design's shortcomings.</p>
 
-deployment:The Prime configuration is similar in its weapon layout to the later Tomahawk II. The Tomahawk's main weapons focus on pair of Gauss Rifles and ER Large Lasers, which are mounted in its arms. The close-range weaponry includes pair of Medium Pulse Lasers and Streak 4 launchers found in the side torsos. Other features include three additional Double Heat Sinks, an Anti-Missile System, and an ECM Suite.
+capabilities:<p>The Tomahawk was designed to deliver overwhelming firepower from a heavily armored assault chassis. Built around a standard internal structure and powered by a 300-rated extra-light fusion engine, the design achieves a maximum speed of 54 kilometers per hour, adequate for an assault platform intended to anchor battle lines rather than pursue lighter opponents. The chassis provides 56 tons of available pod space, offering tremendous flexibility in weapons configuration across its various loadouts.</p><p>The Primary configuration exemplifies the design's intent, mounting paired Gauss rifles and extended-range large lasers in the arms for devastating long-range engagements, supplemented by medium pulse lasers and Streak SRM-4 launchers for close defense. An anti-missile system and ECM suite provide additional protection and electronic warfare capability. The Tomahawk's lack of endo-composite structure, later addressed in its successor, means the design carries slightly less armor protection than might otherwise be possible, though this compromise was acceptable given the prototype's role as a proof-of-concept platform. The absence of jump jets limits tactical mobility, requiring careful positioning to maximize the design's formidable direct-fire capability.</p>
 
-history:One of these prototypes was piloted by Nathan Wolf in a Circle of Equals on Tamar when he attained the rank of Star Colonel. Although he was victorious against a Thor, it was noted that the Tomahawk still suffered from numerous system errors and gremlins and was not yet ready for mass production. Still, Nathan retained the 'Mech for his subsequent assignment to Omega Galaxy and successfully piloted it in combat on Novo Cressidas in the Star's End system on 11 April 3064. After the Jihad, the design was revisited and improved, and became the Tomahawk II which did enter line production.
+deployment:<p>The Primary configuration epitomizes the Tomahawk's design philosophy of delivering maximum long-range firepower. Paired Gauss rifles provide devastating kinetic impact at extreme ranges, complemented by two extended-range large lasers for sustained energy fire. Close defense is handled by medium pulse lasers and Streak SRM-4 launchers, while an anti-missile system and ECM suite enhance survivability against missile attacks and electronic warfare threats. Three additional double heat sinks manage the weapons' thermal output. This configuration established the loadout template that would later be refined in the Tomahawk II's own Primary configuration.</p>
 
-manufacturer:Clan Wolf
-primaryfactory:Unknown
-systemmanufacturer:CHASSIS:Unspecified
-systemmanufacturer:ENGINE:Unspecified
-systemmanufacturer:ARMOR:Unspecified
-systemmanufacturer:JUMP_JET:Unspecified
-systemmanufacturer:COMMUNICATIONS:Unspecified
-systemmanufacturer:TARGETING:Unspecified
+history:<p>The Tomahawk's origins trace to Clan Wolf's drive for battlefield supremacy in the mid-thirty-first century. By 3065, Clan Wolf had established a prototype program at the W-7 Facilities on Tranquil in the Clan Homeworlds, producing a small number of test units for evaluation by Omega Galaxy. Early trials revealed significant promise alongside persistent technical difficulties, system errors and integration gremlins prevented the design from being cleared for frontline deployment despite its impressive combat performance during field testing.</p><p>One of the first prototypes saw combat in a Circle of Equals on Tamar in September 3065, successfully defeating a Summoner despite the acknowledged system issues. The same prototype subsequently deployed with Omega Galaxy to Novo Cressidas in the Star's End system in April 3064, demonstrating the design's combat potential in an operational environment. These deployments provided valuable data that would later inform the development of the improved Tomahawk II.</p><p>The onset of the Jihad proved catastrophic for the Tomahawk program. Clan Wolf's attention and resources were diverted to more pressing matters, and the eventual loss of Homeworld manufacturing infrastructure effectively terminated any possibility of serial production. The design remained in prototype status, its small number of operational units gradually lost to combat attrition. Following the Jihad, Clan Wolf's engineers revisited the Tomahawk concept, incorporating endo-composite structure and other improvements that culminated in the Tomahawk II, a design that would finally realize the original Tomahawk's potential as a dominant assault platform.</p>
 
+manufacturer:W-7 Facilities
+
+primaryfactory:Tranquil
+
+fluffdate:2026-02-28 17:47:08
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:Standard
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:300 XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Standard
+systemmanufacturer:COMMUNICATIONS:Unknown
+systemmanufacturer:TARGETING:Unknown

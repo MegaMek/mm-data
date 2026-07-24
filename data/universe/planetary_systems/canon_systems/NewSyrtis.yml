@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: New Syrtis
-sucsId: 1854
+sucsId: 1855
 xcood: 231.063
 ycood: -296.899
 spectralType:
@@ -145,6 +145,12 @@ planet:
         socioIndustrial: D-D-B-D-D
       - date: '2270-01-01'
         population: 86143.0
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2280-01-01'
         population: 254746.0
       - date: '2290-01-01'
@@ -169,6 +175,12 @@ planet:
         population: 23147382.0
       - date: '2360-01-01'
         population: 33049481.0
+      - date: '2366-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '2370-01-01'
         population: 45046631.0
       - date: '2380-01-01'
@@ -213,6 +225,18 @@ planet:
         population: 272380791.0
       - date: '2570-01-01'
         population: 276827363.0
+      - date: '2571-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - Region 2
+        # capitalType: District Capital
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2580-01-01'
         population: 279252943.0
       - date: '2590-01-01'
@@ -311,16 +335,28 @@ planet:
         population: 248796090.0
       - date: '3020-01-01'
         population: 249572687.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Taygeta Operational Area
+        #   - New Syrtis PDZ
+        # capitalType: District Capital
       - date: '3030-01-01'
         population: 250458005.0
+      - date: '3040-01-19'
+        faction:
+          source: canon
+          value:
+            - FC
       - date: '3040-03-17'
         population: 252722301.0
         socioIndustrial:
           source: canon
           value: B-B-C-B-D
-      - date: '3040-01-19'
+      - date: '3040-12-31'
         faction:
-          source: canon
+          source: SUCS
+          version: 2026.03.02
           value:
             - FC
       - date: '3048-01-01'
@@ -338,6 +374,12 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
+          value:
+            - FS
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -371,14 +413,31 @@ planet:
           value:
             - CC
         population: 262250069.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Sian Commonality
+        #   - Region 13
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CC
       - date: '3147-12-25'
         faction:
           source: canon
           value:
             - FS
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Capellan March
+        #   - Sirdar Operational Area
+        #   - New Syrtis PDZ
+        # capitalType: District Capital
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FS
   - name: Zisimides

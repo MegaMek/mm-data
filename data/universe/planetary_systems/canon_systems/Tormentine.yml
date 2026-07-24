@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tormentine
-sucsId: 2567
+sucsId: 2568
 xcood: -380.518
 ycood: -158.529
 spectralType: F0V
@@ -101,6 +101,12 @@ planet:
         capital: Nova Sainte-Angèle-de-Mérici
       - name: P2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2750-10-28'
         faction:
           source: canon
@@ -108,6 +114,12 @@ planet:
             - FWL
         population: 54649.0
         socioIndustrial: C-D-B-F-F
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2752-04-22'
         hpg: B
       - date: '2760-01-01'
@@ -183,6 +195,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 98321759.0
       - date: '3100-01-01'
@@ -199,12 +217,27 @@ planet:
           value:
             - DTA
         population: 102252511.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DTA
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
         population: 103964070.0
       - date: '3145-01-01'
         population: 104799118.0
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3150-08-30'
         faction:
           source: canon
@@ -215,9 +248,10 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Threlfall's Belt A

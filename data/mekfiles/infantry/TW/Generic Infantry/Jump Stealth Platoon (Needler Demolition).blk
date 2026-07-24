@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-bfe9-7020-8735-194408341cd2
+</UUID>
 
 <UnitType>
 Infantry
@@ -41,10 +36,6 @@ Jump Stealth Platoon
 2500
 </year>
 
-<originalBuildYear>
-2500
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -53,14 +44,16 @@ IS Level 3
 Jump
 </motion_type>
 
-<transporters>
-</transporters>
+<Troopers Equipment>
+Demolition Charge
+Sneak Suit (Camo/IR/ECM)
+</Troopers Equipment>
 
 <Field Guns Equipment>
 </Field Guns Equipment>
 
 <overview>
-Commando Battlefield Infiltration Units
+<p>Stealth demolition jump platoons are specialized sabotage formations equipped with sneak suits, jump packs, and Shredder heavy needler rifles. Trained for covert destruction of infrastructure, supply depots, and military installations, these platoons infiltrate under stealth, use jump mobility to bypass perimeter defenses, and carry demolition charges to their targets. The needler rifles provide lethal anti-personnel suppression during withdrawal without the noise signature of ballistic weapons.</p>
 </overview>
 
 <source>
@@ -79,14 +72,6 @@ TR:3085
 Needler Rifle (Shredder Heavy)
 </Primary>
 
-<antimek>
-8
-</antimek>
-
-<armorKit>
-Sneak Suit (Camo/IR/ECM)
-</armorKit>
-
 <sneakcamo>
 true
 </sneakcamo>
@@ -102,3 +87,4 @@ true
 <specialization>
 2
 </specialization>
+

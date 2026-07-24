@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ac47-7a62-abda-f8447616784d
+</UUID>
 
 <UnitType>
 Dropship
@@ -45,10 +40,6 @@ Vengeance
 3080
 </year>
 
-<originalBuildYear>
-3080
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -62,14 +53,14 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:18.0:4:1
-smallcraftbay:3.0:2:2
-infantrybay:4.0:1:3:Foot
-2ndclassquarters:0.0:0
-1stclassquarters:70.0:0
-crewquarters:189.0:0
-steeragequarters:560.0:0
-cargobay:358.0:1:8
+asfbay:18.0:4:1::-1:0
+smallcraftbay:3.0:2:2::-1:0
+infantrybay:4.0:1:3:Foot:-1:0
+2ndclassquarters:0.0:0:-1::-1:0
+1stclassquarters:70.0:0:-1::-1:0
+crewquarters:189.0:0:-1::-1:0
+steeragequarters:560.0:0:-1::-1:0
+cargobay:358.0:1:8::-1:0
 </transporters>
 
 <SafeThrust>
@@ -96,9 +87,13 @@ cargobay:358.0:1:8
 20
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 1
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 400
@@ -203,9 +198,53 @@ ISSmallNavalCommScannerSuite
 17
 </structural_integrity>
 
+<capabilities>
+<p>The Danai Centrella prototype is a radical conversion of the Vengeance hull into a Pocket WarShip. The fighter complement was reduced from forty to eighteen aerospace fighters to make room for three Piranha-class sub-capital missile launchers, one per forward arc, and massively expanded missile batteries. Each forward arc mounts four standard LRM-20 racks and two Enhanced LRM-20 launchers, all linked to Artemis IV fire control. Medium X-Pulse lasers provide close-range defense on each wing, while eight anti-missile systems across all arcs create a layered defensive screen.</p><p>A Small Naval Comm Scanner Suite provides enhanced detection capability. The hull was extensively reinforced, with structural integrity nearly doubled to 17 and armor coverage increased from 620 to 1,198 points through application of advanced materials. Double heat sinks replaced the original singles. The vessel carries four infantry bays and quarters for one hundred twelve marines, enabling boarding operations. The crew of three hundred thirty-six serves as a threefold increase over the original design.</p>
+</capabilities>
+
+<overview>
+<p>The Vengeance class is the largest dedicated aerospace fighter carrier in common use among the Successor States. Introduced in 2682 during the height of the Star League, this 11,400-ton Aerodyne was designed to serve as a mobile fighter base capable of deploying up to forty aerospace fighters in support of fleet operations. Manufactured by Kallon Industries, Salvatore Incorporated, and Tomori Trans Industrial, the Vengeance earned a reputation as a critical strategic asset wherever it deployed.</p><p>Its distinctive flat, boxy hull spreads across forty-seven relatively compact decks rather than the large open cargo spaces found on most DropShips. Despite its Aerodyne classification, the broad profile prevents atmospheric operations, limiting the vessel to space-based deployments. This restriction has never diminished its value, as the fighter wings it commands can project power across an entire star system, making the Vengeance one of the most sought-after carrier designs in the Inner Sphere.</p>
+</overview>
+
+<deployment>
+<p>The Danai Centrella prototype emerged from Magistracy of Canopus shipyards in 3080, representing that nation's ambition to field Pocket WarShip capability without access to full WarShip production facilities. Named for the Magistrix, the prototype was designed to operate independently in the deep Periphery, where it could engage threats beyond the reach of conventional DropShips. The Magistracy deployed the vessel during the turbulent post-Jihad era, when piracy surged across the Periphery and the need for independent patrol vessels capable of decisive action grew acute.</p>
+</deployment>
+
+<history>
+<p>The Vengeance class fighter carrier entered service in 2682, during the final decades of the Star League. Designed to serve as a dedicated mobile fighter base, the Vengeance could deploy an entire aerospace fighter regiment from a single vessel. Three manufacturers produced the design: Kallon Industries, Salvatore Incorporated, and Tomori Trans Industrial, ensuring widespread distribution across the Star League Defense Force and member state navies.</p><p>The Succession Wars devastated Vengeance fleets across the Inner Sphere. As a high-priority target, the carrier attracted concentrated attacks that its relatively thin armor struggled to withstand. The loss of advanced manufacturing capability during the wars forced all three production lines to simplify components, and replacement vessels could not keep pace with attrition. By the end of the Third Succession War, functioning Vengeance carriers had become prized strategic assets, with some Successor States resorting to cannibalization of damaged hulls to keep their remaining carriers operational.</p><p>The recovery of Star League-era technology following the Helm Memory Core's rediscovery enabled significant upgrades to the Vengeance design. The 3056 refit introduced upgraded energy weapons, an advanced ballistic weapon in the nose, and enhanced missile tracking systems across all batteries. These improvements addressed the original design's chief weakness in engagement range while freeing tonnage for additional cargo capacity and maintaining the vessel's core identity as a fighter platform.</p><p>The Jihad-era arms race prompted the Magistracy of Canopus to develop a Vengeance Pocket WarShip conversion. This radical redesign halved the fighter complement, replacing bays with sub-capital weaponry, expanded missile armament, defensive countermeasures, and infantry quarters for boarding operations. The prototype, designated the Danai Centrella in honor of the Magistrix, demonstrated the viability of converting existing carrier hulls into sub-capital combatants. The production DC variant refined this concept, optimizing the weapons layout and reducing crew requirements through increased automation.</p><p>The Vengeance continues to serve in naval forces across the Inner Sphere and Periphery. Its enduring value lies not in its own armament but in the devastating power of the fighter wing it deploys, making the Vengeance a force multiplier that remains relevant from the Star League through the Dark Age.</p>
+</history>
+
+<manufacturer>
+Kallon Weapon Industries|Salvatore Inc.|Tomori Trans Industrial
+</manufacturer>
+
+<primaryFactory>
+Loyalty|Layover|Chatham
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Warrior-ATP
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
 XTR:Periphery
 </source>
+
+<published>
+XTR:Periphery
+</published>
 
 <tonnage>
 11400.0
@@ -250,3 +289,4 @@ XTR:Periphery
 <escape_pod>
 33
 </escape_pod>
+

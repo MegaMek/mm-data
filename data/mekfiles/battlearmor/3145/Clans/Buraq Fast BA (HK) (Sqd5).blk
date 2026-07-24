@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a5e9-7afe-8b5e-cee794f4c5c4
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -53,6 +48,10 @@ Clan Level 3
 Scout
 </role>
 
+<quirks>
+imp_com
+</quirks>
+
 <motion_type>
 Leg
 </motion_type>
@@ -73,7 +72,7 @@ Leg
 CLBAMyomerBooster:Body
 BASearchlight:Body
 CLImprovedSensors:Body
-CLBearhunter Superheavy AC:Body
+Machine Gun (Bearhunter AC):Body
 </Point Equipment>
 
 <Trooper 1 Equipment>
@@ -91,9 +90,53 @@ CLBearhunter Superheavy AC:Body
 <Trooper 5 Equipment>
 </Trooper 5 Equipment>
 
+<capabilities>
+<p>The hunter-killer Buraq replaces the standard model's machine guns with a Bearhunter superheavy autocannon, trading anti-infantry suppression for the ability to threaten armored targets at close range. The Bearhunter delivers punishing damage against battle armor and light vehicles, giving the hunter-killer a capability the standard configuration lacks entirely. Improved sensors complement the heavier weapon, allowing troopers to detect concealed units and guide their approach through difficult terrain.</p><p>The myomer booster and searchlight carry over from the standard model, preserving the Buraq's characteristic speed. Armor protection remains the same minimal 175 kilograms, meaning hunter-killer troopers must close rapidly and strike before heavier opponents can respond effectively. Within a Buraq Star, the single hunter-killer Point serves as the formation's teeth, engaging priority targets identified by the standard and support elements.</p>
+</capabilities>
+
+<overview>
+<p>The Buraq is a Clan medium-weight quad battlesuit developed by Clan Hell's Horses in the early thirty-second century. Manufactured at Csesztreg Industriplex Gamma, the design prioritizes speed above all other characteristics, using myomer-enhanced mobility to fulfill scouting, interdiction, and anti-piracy roles along the Horses' Periphery frontier. Named for a mythological steed of ancient Terra, the four-legged suit matches its namesake in raw velocity, closing ground faster than nearly any other battlesuit in service. Clan Hell's Horses typically deploy mixed Stars of Buraq variants, combining different weapon fits into cohesive reconnaissance formations that range far ahead of heavier Cluster elements.</p>
+</overview>
+
+<deployment>
+<p>Within a Buraq Star, the single hunter-killer Point provided the formation's primary anti-armor capability. Five troopers armed with Bearhunter superheavy autocannons could cripple light vehicles and threaten exposed BattleMech components in concentrated volleys. During operations aligned with the Mongol Doctrine, hunter-killer Points often led punitive strikes, using their improved sensors to locate hidden defenders before closing to engage.</p>
+</deployment>
+
+<history>
+<p>Clan Hell's Horses developed the Buraq at Csesztreg Industriplex Gamma, fielding the quad battlesuit in 3104. The design addressed a persistent challenge along the Horses' Periphery border, where pirate bands exploited the vast distances of the Barrens to raid settlements and vanish before conventional forces could respond. Ranger Clusters needed a fast scout capable of ranging far ahead of heavier formations to locate hidden bases, storage depots, and landing zones.</p><p>The Buraq proved effective in this role. Kappa Galaxy's Eighty-fifth BattleMech Cluster employed Buraqs during anti-piracy sweeps on Icar in 3122, tracking Sarkon's Bloody-Handed pirates across the Barrens to their hideout on Crellacor. Star Captain Mellysa Ravenwater's Point discovered the pirate headquarters in a cave network beneath the Rishlin Estuary outside Loriaq, leading to the destruction of the encampment.</p><p>The suit also found a grimmer purpose under the Mongol Doctrine. The 666th Mechanized Assault Cluster used Buraqs as advance elements during punitive operations on Timkovichi in August 3142, where a hunter-killer Point under Star Colonel Tricky Brown engaged and crippled a concealed Kell Hound Jaguar before the engagement escalated into an artillery exchange that devastated the settlement of Greywalk.</p>
+</history>
+
+<manufacturer>
+Csesztreg Industriplex Gamma
+</manufacturer>
+
+<primaryFactory>
+Csesztreg
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
+
 <source>
-TR:3145:C
+TR:3145:C,TR:3145
 </source>
+
+<published>
+RS:3145
+</published>
 
 <chassis>
 quad
@@ -114,32 +157,4 @@ quad
 <weightclass>
 2
 </weightclass>
-
-<overview>
-The Buraq is a Clan Medium weight Quad battle armor, which was designed by Clan Hell's Horses during the early thirty-second century.
-</overview>
-
-<history>
-The horse-like Buraq was named for the mystical steed from ancient times, and like its mystical namesake, the battle armor is noted for its high ground speed. Typically, Clan Hell's Horses have used full stars consisting of different variants of the battle armor. These Buraq Stars work as a team in their appointed mission assignments. They've been utilized on the Horses' Periphery borders to help scout and pin down pirates terrorizing their worlds.
-</history>
-
-<capabilities>
-The Buraq's main feature is its Myomer Booster, which enables the Armor to reach its notable high speeds. Operators of the Buraq must rely on their speed for protection, as the Armor's hull is only protected by 175 kgs worth of Standard Armor.
-</capabilities>
-
-<deployment>
-The Hunter-Killer features the short-ranged but powerful Bearhunter Superheavy Autocannon. This variant retains the Myomer Booster and searchlight of the standard model, but also comes with Improved Sensors.
-</deployment>
-
-<manufacturer>
-Csesztreg Industriplex Gamma
-</manufacturer>
-
-<primaryFactory>
-Csesztreg
-</primaryFactory>
-
-<quirks>
-imp_com
-</quirks>
 

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-aa42-7ad9-b259-848293eeb8f3
+</UUID>
 
 <UnitType>
 ConvFighter
@@ -45,10 +40,6 @@ Planetlifter Support Aircraft
 3072
 </year>
 
-<originalBuildYear>
-3072
-</originalBuildYear>
-
 <type>
 IS Level 4
 </type>
@@ -60,9 +51,6 @@ None
 <motion_type>
 Aerodyne
 </motion_type>
-
-<transporters>
-</transporters>
 
 <SafeThrust>
 4
@@ -92,9 +80,13 @@ Aerodyne
 22
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 7
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 22
@@ -117,10 +109,6 @@ ISTankCockpitCommandConsole
 
 <Aft Equipment>
 IS Vehicular Stealth
-IS Vehicular Stealth
-IS Vehicular Stealth
-IS Vehicular Stealth
-IS Vehicular Stealth
 ISArrowIV
 </Aft Equipment>
 
@@ -133,19 +121,19 @@ ISArrowIVAmmo
 </Fuselage Equipment>
 
 <capabilities>
-Depending on the variant they Planetlifter may or may not be armed.
+<p>The refit centered on three key modifications: the installation of vehicular stealth armor aided by a prototype Angel ECM suite, replacement of the VSTOL equipment and turbine engine with a standard fusion plant, and the addition of an Arrow IV missile battery--one of the only artillery-class weapons capable of airborne firing. An expanded cockpit command console and look-down radar system provided outstanding tactical oversight capabilities, allowing the Planetlifter to serve as an airborne command post while directing friendly ground forces.</p><p>Despite these enhancements, the Planetlifter's conventional airframe imposed hard limits on survivability. The stealth systems delayed detection but could not compensate for the craft's fundamental fragility under direct fire. Combat simulations consistently demonstrated that once hostile forces identified the modified Planetlifter's capabilities, it became a priority target that its thin armor could not survive. Using the tactical electronics effectively also required deactivating the stealth armor, further exposing the craft at its most valuable moments.</p>
 </capabilities>
 
 <overview>
-A typical example of the conventional support aircraft available to planetary garrisons and militias across the Inner Sphere, the Free Worlds League-produced Planetlifter is able to quickly transport combat elements more cheaply than a DropShip flight.
+<p>The Planetlifter Support Aircraft was Imstar Aerospace's rather spirited attempt to transform their venerable Planetlifter transport platform into a direct combat asset. Conceived during the upheavals of the Jihad era, the project reflected both the desperation and ingenuity of Free Worlds League manufacturers struggling to adapt existing production lines to wartime demands. Once seen as a promising aerospace contender after winning the Agamemnon-class WarShip contract, many expected Imstar would spectacularly break new ground with an original design. Instead, the company's experimental refit team under Raymond Opasinski targeted the unlikely Planetlifter for conversion into an airborne artillery and tactical support platform.</p>
 </overview>
 
 <deployment>
-A downgrade of the Planetlifter Tactical Support Aircraft, the Planetlifter Support trades the stealth armor and advanced electronics for a larger Arrow IV magazine.
+<p>Imstar was unable to land a single contract for the Planetlifter Support Aircraft. The combination of artillery capability and tactical support systems that made the craft theoretically valuable also guaranteed it would attract concentrated enemy attention that its conventional airframe simply could not survive. Prospective buyers consistently concluded that the platform was too fragile for its intended role, preferring to invest in purpose-built aerospace fighters or dedicated ground-based artillery instead.</p>
 </deployment>
 
 <history>
-For this reason, Planetlifters are placed under the direct command of a planet's garrison commander, allowing for enhanced strategic mobility between battlefields. First produced in 2598 (though similar designs have in fact existed since the early 2300s), the Planetlifter is a very rugged aircraft, though it is only protected by three tons of armor. Its VSTOL capability allows the craft to operate away from established airfields, usually one of the first targets in a planetary invasion. The aircraft can take off and land from any area with at least 400 feet of open space.
+<p>The Planetlifter Support Aircraft's development was shaped by the Jihad's disruption of Free Worlds League industry. Imstar, once seen as a promising aerospace contender after winning the Agamemnon-class WarShip contract, found itself unable to expand beyond its two core products--the Cheetah aerospace fighter and the Planetlifter conventional transport. The upheavals throughout the Free Worlds League during and after the Jihad played an important part in their inability to diversify, pushing Imstar's engineers to look inward for innovation rather than outward for entirely new designs.</p><p>The procurement of vehicular stealth armor--attributed to Word of Blake assistance--was critical to the concept, but could not overcome the fundamental mismatch between an artillery platform's high-value target profile and a transport airframe's inherent vulnerability. Combat simulations repeatedly confirmed this fatal flaw. The project ultimately served as a stepping stone toward the more refined Planetlifter Tactical Support variant, which would address some of the original's shortcomings by accepting a narrower operational focus.</p>
 </history>
 
 <manufacturer>
@@ -167,6 +155,10 @@ TARGETING:Unknown
 <source>
 XTR:Corps
 </source>
+
+<published>
+XTR:Corps
+</published>
 
 <tonnage>
 50.0

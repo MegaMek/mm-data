@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Reinhardstein
-sucsId: 2131
+sucsId: 2132
 xcood: 192.122
 ycood: -111.27
 spectralType: G6V
@@ -87,6 +87,12 @@ planet:
         size: large
         icon: rock16
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2638-11-29'
         faction:
           source: canon
@@ -124,6 +130,17 @@ planet:
         population: 365348737.0
       - date: '2750-01-01'
         population: 374809951.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Crucis March
+        #   - Markesan Operational Area
+        #   - Region 1
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FS
       - date: '2760-01-01'
         population: 382639150.0
       - date: '2770-01-01'
@@ -170,6 +187,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: KB1 Belt
     type: ASTEROID_BELT
     orbitalDist: 1.44

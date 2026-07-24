@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,44 +15,46 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
+uuid:019f583e-df0c-7909-b7b8-bffd5cc36882
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:Pariah (Septicemia)
 model:D-Z
 mul id:5815
 
-Config:Biped Omnimech
-TechBase:Clan
-Era:3072
-source:WoR
-Rules Level:4
+Config:Biped OmniMek
+techbase:Clan
+era:3072
+source:WoR,WoRS
+published:WoRS
+rules level:4
 role:Skirmisher
 
 quirk:ext_twist
-quirk:multi_trac
 quirk:bad_rep_clan
+quirk:multi_trac
 
+mass:55
+engine:275 XL (Clan) Engine
+structure:Clan Endo Steel
+myomer:Standard
 
-Mass:55
-Engine:275 XL (Clan) Engine(IS)
-Structure:Clan Endo Steel
-Myomer:Standard
+heat sinks:11 Clan Double
+base chassis heat sinks:11
+walk mp:5
+jump mp:5
 
-Heat Sinks:11 Double
-Base Chassis Heat Sinks:11
-Walk MP:5
-Jump MP:5
-
-Armor:Ferro-Fibrous(Clan)
-LA Armor:18
-RA Armor:18
-LT Armor:18
-RT Armor:18
-CT Armor:23
-HD Armor:8
-LL Armor:24
-RL Armor:24
-RTL Armor:7
-RTR Armor:7
-RTC Armor:7
+armor:Ferro-Fibrous(Clan)
+LA armor:18
+RA armor:18
+LT armor:18
+RT armor:18
+CT armor:23
+HD armor:8
+LL armor:24
+RL armor:24
+RTL armor:7
+RTR armor:7
+RTC armor:7
 
 Weapons:2
 ER PPC, Left Torso
@@ -89,13 +91,13 @@ Clan Ferro-Fibrous
 Left Torso:
 Fusion Engine
 Fusion Engine
-CLERPPC (omnipod)
-CLERPPC (omnipod)
-CLTargeting Computer (omnipod)
-CLTargeting Computer (omnipod)
-CLTargeting Computer (omnipod)
-CLTargeting Computer (omnipod)
-NovaCEWS (omnipod)
+CLERPPC (OMNIPOD)
+CLERPPC (OMNIPOD)
+CLTargeting Computer (OMNIPOD)
+CLTargeting Computer (OMNIPOD)
+CLTargeting Computer (OMNIPOD)
+CLTargeting Computer (OMNIPOD)
+NovaCEWS (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -103,16 +105,16 @@ NovaCEWS (omnipod)
 Right Torso:
 Fusion Engine
 Fusion Engine
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-CLUltraAC20 (omnipod)
-Clan Ultra AC/20 Ammo (omnipod)
-Clan Ultra AC/20 Ammo (omnipod)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+CLUltraAC20 (OMNIPOD)
+Clan Ultra AC/20 Ammo (OMNIPOD)
+Clan Ultra AC/20 Ammo (OMNIPOD)
 
 Center Torso:
 Fusion Engine
@@ -125,7 +127,7 @@ Gyro
 Fusion Engine
 Fusion Engine
 Fusion Engine
-Jump Jet (omnipod)
+Jump Jet (OMNIPOD)
 -Empty-
 
 Head:
@@ -147,8 +149,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Jump Jet (omnipod)
-Jump Jet (omnipod)
+Jump Jet (OMNIPOD)
+Jump Jet (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -161,8 +163,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Jump Jet (omnipod)
-Jump Jet (omnipod)
+Jump Jet (OMNIPOD)
+Jump Jet (OMNIPOD)
 -Empty-
 -Empty-
 -Empty-
@@ -170,18 +172,27 @@ Jump Jet (omnipod)
 -Empty-
 -Empty-
 
-overview:The backbone of The Society's military forces, the Septicemia was a utilitarian medium-class workhorse. Devoid of the more experimental technology utilized by the Cephalus and Osteon to allow it to be built in higher volumes, the Septicemia saves weight with an XL Engine, Endo Steel chassis, and nine tons of Ferro-Fibrous armor. While the location of its weaponry in its torsos hampers its ability to carry Battle Armor, this was intentional to try and ensure hand actuators were retained to maximize its physical combat abilities.
+overview:<p>The backbone of The Society's military forces, the Septicemia was a utilitarian medium-class workhorse designed for mass production. Devoid of the more experimental technology utilized by the Cephalus and Osteon to allow it to be built in higher volumes, the Septicemia saves weight with an XL Engine, Endo Steel chassis, and nine tons of Ferro-Fibrous armor. While the location of its weaponry in its torsos hampers its ability to carry Battle Armor, this was intentional to try and ensure hand actuators were retained to maximize its physical combat abilities against Clan opponents.</p>
 
-capabilities:Based on the D configuration, this version mounts an ER PPC and Ultra AC/20, both of which are tied into a Targeting Computer. It also has five jump jets. The Small Lasers of the D configuration are replaced by a Nova CEWS
+capabilities:<p>With an armor layout geared to resist most common Clan weaponry, the Septicemia's speed and pod space proved more than adequate. Its overall weapon selection focused on the presumption of mutually supporting fields of fire, while most configurations attempted to wield hand actuators to encourage their MechWarriors to engage in physical combat. Every aspect of the Septicemia was geared toward engaging the Clans using methods of warfare they found distasteful and dishonorable. While many Clans had begun taking a more Spheroid approach to warfare, many opponents still demonstrated limited adaptability when confronted with the exact opposite of their preferred combat dogma. This was amplified by the Trials of Reaving taking place, where Clans and warriors intent on proving they were not tainted adhered very strictly to the Clan tenets of warfare.</p><p>The extent to which the Clans grew to hate the design (especially Clan Diamond Shark, whose warriors were particularly vexed by it) led to its nickname: "Pariah".</p>
 
-deployment:Planning their OmniMech forces around a single mass-produced design intended to work in concert with two rarer but cutting-edge units, the Septicemia was built using proven technology with a focus towards mutual support on the battlefield, its every aspect intended to allow it to engage the Clan toumans using methods of warfare they found dezgra. Appearing during the Wars of Reaving when Clan warriors were even more intent on an exceedingly strict adherence of zellbrigen to avoid accusations of Taint, the Septicemia would prove frighteningly effective, earning it the nickname of "Pariah" by the Clan Diamond Shark forces that first faced it on Babylon in 3072.
+deployment:<p>Based on the D configuration, this version mounts an ER PPC and Ultra AC/20, both of which are tied into a Targeting Computer for enhanced accuracy at all ranges. The addition of a Nova CEWS provides electronic warfare and targeting data sharing with friendly units, enhancing the configuration's already potent command and fire coordination capabilities.</p>
 
-history:Despite its role in the Wars of Reaving, the Septicemia would see service after the conflict in the toumans of the four surviving Homeworld Clans. Avoiding extinction unlike the Cephalus and Osteon due to the capture of its production plant and lack of integrated Nova Combined Electronic Warfare System, while the other surviving Clans would push for a renaming of the Septicemia to excise its Taint (Void and Codex being popular suggestions), Khan Magnus DelVillar from Clan Stone Lion successfully campaigned against any moves to rename or remodel the design, citing that it would serve as a constant reminder of the dark crucible from which the Clans had emerged. 
+history:<p>Planning their OmniMech forces around a single mass-produced design intended to work in concert with two rarer but cutting-edge units, the Septicemia was built using proven technology with a focus towards mutual support on the battlefield, its every aspect intended to allow it to engage the Clan toumans using methods of warfare they found dezgra. Appearing during the Wars of Reaving when Clan warriors were even more intent on an exceedingly strict adherence of zellbrigen to avoid accusations of Taint, the Septicemia would prove frighteningly effective, earning it the nickname of "Pariah" by the Clan Diamond Shark forces that first faced it on Babylon in 3072.</p><p>Despite its role in the Wars of Reaving, the Septicemia would see service after the conflict in the toumans of the four surviving Homeworld Clans. Avoiding extinction unlike the Cephalus and Osteon due to the capture of its production plant and lack of integrated Nova Combined Electronic Warfare System, while the other surviving Clans would push for a renaming of the Septicemia to excise its Taint (Void and Codex being popular suggestions), Khan Magnus DelVillar from Clan Stone Lion successfully campaigned against any moves to rename or remodel the design, citing that it would serve as a constant reminder of the dark crucible from which the Clans had emerged.</p>
 
 manufacturer:Kerensky Memorial Manufacturing
+
 primaryfactory:Strana Mechty
-systemmanufacturer:CHASSIS:55T Battle Epsilon-5 Profile Endo-Steel
-systemmanufacturer:ENGINE:275 Type II XL
-systemmanufacturer:ARMOR:Compound SJ8CW Ferro-Fibrous
-systemmanufacturer:COMMUNICATIONS:GBX Series Integrated II
-systemmanufacturer:TARGETING:Cat’s Eye MD7
+
+fluffdate:2026-02-21 18:07:19
+
+systemmanufacturer:CHASSIS:Unknown
+systemmode:CHASSIS:55T Battle Epsilon-5 Profile Endo-Steel
+systemmanufacturer:ENGINE:Unknown
+systemmode:ENGINE:275 Type II XL
+systemmanufacturer:ARMOR:Unknown
+systemmode:ARMOR:Compound SJ8CW Ferro-Fibrous
+systemmanufacturer:COMMUNICATIONS:GBX
+systemmode:COMMUNICATIONS:Series Integrated II
+systemmanufacturer:TARGETING:Cat's Eye
+systemmode:TARGETING:MD7

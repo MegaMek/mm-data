@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Oberon VI
-sucsId: 1916
+sucsId: 1917
 xcood: -111.419
 ycood: 473.251
 spectralType:
@@ -138,6 +138,12 @@ planet:
       - name: Fife
       - name: New South Tawton
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2684-11-23'
         faction:
           source: canon
@@ -168,6 +174,15 @@ planet:
         population: 39684.0
       - date: '2750-01-01'
         population: 39998.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Apollo Province
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RWR
       - date: '2760-01-01'
         population: 40170.0
       - date: '2770-01-01'
@@ -182,6 +197,12 @@ planet:
       - date: '2783-11-13'
         faction:
           source: canon
+          value:
+            - OC
+      - date: '2783-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - OC
       - date: '2790-01-01'
@@ -255,6 +276,12 @@ planet:
           source: canon
           value:
             - CW
+      - date: '3049-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CW
       - date: '3050-01-01'
         population: 3197893.0
       - date: '3060-01-01'
@@ -266,10 +293,28 @@ planet:
           source: canon
           value:
             - CHH
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CHH
       - date: '3080-01-01'
         population: 64510288.0
+      - date: '3085-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 65262964.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - NOC
       - date: '3100-01-01'
         population: 65708265.0
       - date: '3100-02-07'
@@ -285,15 +330,16 @@ planet:
         population: 66275792.0
       - date: '3130-01-01'
         population: 66941875.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - NOC
       - date: '3140-01-01'
         population: 67709379.0
       - date: '3145-01-01'
         population: 67939983.0
-      - date: '3151-01-01'
-        faction:
-          source: sucs
-          value:
-            - NOC
   - name: Oberon VII
     type: TERRESTRIAL
     orbitalDist: 27.44

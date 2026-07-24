@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kanto
-sucsId: 1293
+sucsId: 1294
 xcood: 330.78
 ycood: 283.811
 spectralType: F8V
@@ -91,6 +91,12 @@ planet:
         size: medium
         icon: oddmoon2
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2695-04-04'
         faction:
           source: canon
@@ -113,6 +119,16 @@ planet:
         population: 126200775.0
       - date: '2750-01-01'
         population: 140199248.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Pesht Military District
+        #   - Ningxia Prefecture
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DC
       - date: '2760-01-01'
         population: 146091377.0
       - date: '2770-01-01'
@@ -159,6 +175,12 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - ABN
   - name: Ninsurta's Dawn
     type: DWARF_TERRESTRIAL
     orbitalDist: 6.24

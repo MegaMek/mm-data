@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -20,7 +20,7 @@
 <ScenarioTemplate>
     <name>Low-Atmosphere DropShip Escort</name>
     <shortBriefing>Escort DropShip, defeat enemy forces.</shortBriefing>
-    <detailedBriefing><![CDATA[An allied DropShip is under threat, with enemy air assets moving to intercept before it can reach safety. This vessel is critical to our operations, and its loss is not an option. Your mission is to protect the DropShip and destroy at least 50% of the attacking enemy forces.
+    <detailedBriefing><![CDATA[An allied DropShip is under threat, with enemy air assets moving to intercept before it can reach safety. This vessel is critical to our operations, and its loss is not an option. Your mission is to protect the DropShip and destroy at least 33% of the attacking enemy forces.
 
 Expect aggressive aerial engagements, fast-moving strike craft, and possible long-range missile attacks. Use superior positioning, coordinated fire, and defensive tactics to neutralize threats before they can bring down our DropShip. Every enemy unit destroyed increases the DropShip’s chance of survival—hit them hard and make them pay for their assault.
 
@@ -28,6 +28,7 @@ The victor will control the battlefield at the end of the engagement, ensuring w
     <battlefieldControl>VICTOR</battlefieldControl>
     <isHostileFacility>false</isHostileFacility>
     <isAlliedFacility>false</isAlliedFacility>
+    <isSuitedForAmbushes>true</isSuitedForAmbushes>
     <mapParameters>
         <allowedTerrainTypes />
         <allowRotation>false</allowRotation>
@@ -166,10 +167,10 @@ The victor will control the battlefield at the end of the engagement, ensuring w
                 </failureEffect>
             </failureEffects>
             <additionalDetails />
-            <description>Destroy or rout 50% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
+            <description>Destroy or rout 33% of the following forces. +1 SVP if succeeded, -1 SVP if failed.</description>
             <destinationEdge>NONE</destinationEdge>
             <objectiveCriterion>ForceWithdraw</objectiveCriterion>
-            <percentage>50</percentage>
+            <percentage>33</percentage>
             <timeLimitAtMost>true</timeLimitAtMost>
             <timeLimitType>None</timeLimitType>
         </scenarioObjective>

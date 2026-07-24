@@ -88,10 +88,19 @@
         <name ifRating="SL">Firebrand Cluster</name>
         <co>%STAR_COL%</co>
 
+        <!-- Per-cluster-type weight targets (budget allocator). Kindraa Mattila-Carrol ("Up and
+             Coming", Clan Fire Mandrill Touman, Sarna) is the young, growing, mobile Kindraa.
+             Medium-led and lighter than the assault Kindraa, with little assault. -->
+        <weightTarget ifWeightClass="H" unitType="Mek" spread="8">A:6,H:40,M:40,L:14</weightTarget>
+        <weightTarget ifWeightClass="M" unitType="Mek" spread="8">A:2,H:20,M:54,L:24</weightTarget>
+        <weightTarget ifWeightClass="L" unitType="Mek" spread="8">A:1,H:8,M:42,L:49</weightTarget>
+        <weightTarget unitType="AeroSpaceFighter" spread="8">A:0,H:32,M:46,L:22</weightTarget>
+        <weightTarget unitType="Tank" spread="8">A:0,H:10,M:40,L:50</weightTarget>
+
         <weightClass>
-            <option weight="2">H</option>
+            <option weight="1">H</option>
             <option weight="2">M</option>
-            <option weight="1">L</option>
+            <option weight="2">L</option>
         </weightClass>
 
         <subforces>

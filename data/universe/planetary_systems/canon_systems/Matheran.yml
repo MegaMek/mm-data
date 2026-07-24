@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Matheran
-sucsId: 1625
+sucsId: 1626
 xcood: -65.658
 ycood: -170.427
 spectralType: G9V
@@ -65,7 +65,7 @@ planet:
         faction:
           source: canon
           value:
-            - DO
+            - FoO
         population: 54680.0
         socioIndustrial: D-D-B-D-C
       - date: '2250-01-01'
@@ -79,6 +79,12 @@ planet:
           source: canon
           value:
             - FWL
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FoO
       - date: '2280-01-01'
         population: 3289692.0
       - date: '2290-01-01'
@@ -89,6 +95,15 @@ planet:
         population: 23211410.0
       - date: '2311-01-01'
         socioIndustrial: D-D-C-D-C
+      - date: '2317-12-31'
+        # administration:
+        #   - Federation of Oriente
+      - date: '2317-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2320-01-01'
         population: 38087474.0
       - date: '2330-01-01'
@@ -259,6 +274,15 @@ planet:
             - FWL
       - date: '3020-01-01'
         population: 822881899.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Oriente
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3030-01-01'
         population: 827030123.0
       - date: '3036-01-01'
@@ -278,8 +302,20 @@ planet:
           source: canon
           value:
             - DO
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 863627135.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DO
       - date: '3086-12-31'
         faction:
           source: canon
@@ -287,6 +323,12 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 865356118.0
+      - date: '3095-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - OP
       - date: '3100-01-01'
         population: 866048680.0
       - date: '3110-11-06'
@@ -300,9 +342,13 @@ planet:
         population: 887617688.0
       - date: '3145-01-01'
         population: 892602291.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Oriente Protectorate
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Loy's Frontier

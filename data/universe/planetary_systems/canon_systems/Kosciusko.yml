@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Kosciusko
-sucsId: 1400
+sucsId: 1401
 xcood: -302.714
 ycood: -91.031
 spectralType: F9V
@@ -99,6 +99,12 @@ planet:
       - name: Atchison
       - name: Lamb
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2608-03-10'
         faction:
           source: canon
@@ -142,6 +148,12 @@ planet:
         population: 350702759.0
       - date: '2750-01-01'
         population: 351485409.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 351123632.0
       - date: '2770-01-01'
@@ -199,6 +211,9 @@ planet:
         population: 280551160.0
       - date: '3020-01-01'
         population: 278006329.0
+      - date: '3025-12-31'
+        # administration:
+        #   - Duchy of Tamarind
       - date: '3030-01-01'
         population: 278208426.0
       - date: '3040-01-01'
@@ -211,9 +226,21 @@ planet:
         population: 286251434.0
       - date: '3070-01-01'
         population: 288983781.0
+      - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - DT
       - date: '3079-11-22'
         faction:
           source: canon
+          value:
+            - DTA
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -236,9 +263,13 @@ planet:
         population: 311366466.0
       - date: '3145-01-01'
         population: 312989789.0
-      - date: '3151-01-01'
+      - date: '3145-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3145-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Muhamad's World

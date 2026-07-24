@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Huntington
-sucsId: 1155
+sucsId: 1156
 xcood: -395.483
 ycood: -186.677
 spectralType: G1V
@@ -90,6 +90,12 @@ planet:
       - name: Ashtabula Archipelago
       - name: Nova Mauban Archipelago
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2721-06-19'
         faction:
           source: canon
@@ -105,6 +111,12 @@ planet:
         population: 475152.0
       - date: '2750-01-01'
         population: 1188865.0
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 2504672.0
       - date: '2770-01-01'
@@ -178,8 +190,20 @@ planet:
           source: canon
           value:
             - MH
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '3080-01-01'
         population: 68682246.0
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - MH
       - date: '3090-01-01'
         population: 68985113.0
       - date: '3096-01-01'
@@ -203,9 +227,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Duchy of Tamarind-Abbey
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: Krieger

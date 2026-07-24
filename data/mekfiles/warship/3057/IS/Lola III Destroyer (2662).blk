@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-##Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-ed06-7ed7-aad9-0a38f3f3638c
+</UUID>
 
 <UnitType>
 Warship
@@ -45,10 +40,6 @@ Lola III Destroyer
 2662
 </year>
 
-<originalBuildYear>
-2662
-</originalBuildYear>
-
 <type>
 IS Level 3
 </type>
@@ -62,11 +53,11 @@ Aerodyne
 </motion_type>
 
 <transporters>
-asfbay:6.0:1:1
-smallcraftbay:4.0:1:2
-cargobay:116383.5:1:3
-1stclassquarters:380.0:0
-crewquarters:1274.0:0
+asfbay:6.0:1:1::-1:0
+smallcraftbay:4.0:1:2::-1:0
+cargobay:116383.5:1:3::-1:0
+1stclassquarters:380.0:0:-1::-1:0
+crewquarters:1274.0:0:-1::-1:0
 </transporters>
 
 <SafeThrust>
@@ -93,9 +84,13 @@ crewquarters:1274.0:0
 11
 </armor_type>
 
-<armor_tech>
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
 5
-</armor_tech>
+</armor_tech_level>
 
 <armor>
 48
@@ -186,15 +181,19 @@ Ammo Barracuda:20
 </structural_integrity>
 
 <capabilities>
-The Lola-class destroyers are known for their exceptional firepower and durability. Equipped with powerful naval lasers, they have extensive range and are capable of inflicting significant damage. Small-caliber autocannons provide additional firepower within the broadside arcs, while missile systems like the Barracuda and White Shark offer engagement capabilities at various ranges. These destroyers also carry a squadron of heavy aerospace fighters for defense against enemy fighters. With their remarkable armament, Lola-class vessels excel as escort ships and act as effective deterrents against pirate threats. The Lola-class destroyers incorporate advanced technology, including the innovative baffled-deadspace system. Although later replaced by more sophisticated armor compounds, this system initially boosted armor protection at a lower cost. The ship's larger-than-normal engines compensate for the increased weight but result in cramped crew quarters. However, the Clan Lola variant utilizes advanced computers to reduce the required crew size and alleviate some of the space constraints.
+<p>The Lola III's weapons suite emphasized energy firepower across multiple arcs. Sixteen NL55 naval lasers provided the primary punch, distributed with two in the nose, six across the forward flanks, and four covering the aft arc, ensuring devastating laser fire in virtually every engagement geometry. Eight NAC/10 naval autocannons mounted in broadside and aft quarter batteries delivered sustained kinetic damage against capital targets, while capital missile launchers provided long-range striking power: two White Shark tubes on the forward flanks and five Barracuda tubes distributed across the broadsides and stern. Two NL45 naval lasers supplemented the broadside batteries. The 742 double heat sinks generating 1,484 points of effective dissipation managed this substantial weapons suite without degradation during sustained engagements.</p><p>Boeing's D-Span ferro-carbide armor employed baffled-deadspace technology, using layered voids within the plating to absorb and dissipate weapon impacts more effectively than solid armor of equivalent mass. The spartan accommodations reflected the Lola lineage's consistent prioritization of combat capability over crew comfort: no gravity decks and no docking collars kept the mass budget devoted to weapons and propulsion. With a safe thrust of four and maximum thrust of six, the Lola III was among the faster destroyer-class vessels of its era. The Clan refit introduced around 2841 added a lithium-fusion battery and mobile HPG while expanding fighter capacity from six to ten and small craft bays from four to ten, sacrificing approximately nine thousand tons of cargo capacity for improved operational flexibility.</p>
 </capabilities>
 
 <overview>
-The Lola-class WarShip is a heavily armed and armored destroyer designed for escort duty in the Periphery and picket duty in the Terran Hegemony. Named after Rear Admiral Adelaide Lola, the first Lola III entered service in 2662. It features an innovative baffled-deadspace system that enhances armor protection at a relatively low cost.
+<p>The Lola III was the third and final generation of the Lola escort destroyer lineage, designed by Boeing Interstellar at its Galax orbital yards and commissioned in 2662. The six hundred eighty thousand ton destroyer was conceived as the SLDF's standard fleet escort and patrol vessel, a role that demanded the ability to screen capital ships, hunt commerce raiders, and operate independently in patrol squadrons along the vast frontier of the Star League. The design corrected the engineering deficiencies that had plagued the Lola II while incorporating advanced armor technology that gave the class superior protection for its mass. Fast enough to outrun most threats it could not outfight, the Lola III earned a reputation as the most successful and prolific destroyer design in the history of interstellar warfare.</p>
 </overview>
 
+<deployment>
+<p>The SLS Rex was among the first Lola IIIs to fall in combat, destroyed on July 2, 2767 at Epsilon Indi by Caspar capital drones during the Amaris Crisis, an early demonstration of the lethal effectiveness of automated warships against conventional escorts.</p><p>ComStar's CSV Ranger participated in Task Force Serpent's assault on Huntress before being destroyed in March 3068 during Case White, one of many Com Guard vessels lost to the Word of Blake. Wolf's Dragoons recovered two Lola IIIs from the Bristol Cache in 3053: the Nelson and the Darius. Both vessels were destroyed on December 20, 3067 during the Word of Blake assault on Outreach that shattered the Dragoons' military infrastructure.</p><p>The SLS Hunter survived into the Republic era as the RSS Triumphus, one of the longest-serving Lola IIIs in history. After participating in Task Force EARTHBOUND's assault on Terra during the Jihad, the Triumphus served the Republic of the Sphere for decades before being destroyed at the Battle for Terra in 3151, nearly five centuries after the first Lola III entered service.</p>
+</deployment>
+
 <history>
-Introduced in 2662, the Lola-class destroyers quickly gained a reputation for reliability and cost-effectiveness. Serving as escort and picket ships for over seven centuries in the Terran Hegemony, these vessels became a mainstay of the Hegemony Navy. However, as technology advanced, the Lola-class ships faced obsolescence and were eventually relegated to reserve fleets or converted for training purposes. During the Amaris Crisis, several Lola-class destroyers were seized by Stephan Amaris loyalists, including three undergoing refitting at the time of Terra's occupation. Surviving the conflict, a significant number of Lola-class destroyers joined Aleksandr Kerensky's Exodus fleet, serving as vital cargo and DropShip carriers. After the fleet settled in the Pentagon Cluster, the Lola-class destroyers, along with other Avatars, were mothballed and placed in long-term storage. In the early 31st century, as the Clans prepared for their invasion of the Inner Sphere, the Lola-class destroyers were reactivated and underwent extensive upgrades by Clan technicians. These upgrades focused on enhancing offensive capabilities, defensive systems, and overall combat performance. The Lola-class destroyers continued to serve as formidable escort and patrol vessels, playing crucial roles in Clan military operations. Today, Lola-class destroyers remain prominently featured in most Clan fleets, reflecting their enduring role and adaptability in various combat scenarios. Their history of reliable service, innovative design, and potent firepower continues to make them a valued asset in the ongoing conflicts of the Inner Sphere and the Periphery.
+<p>The Lola-class destroyer lineage began in 2345, when Boeing Interstellar launched the first Lola I from its Terra shipyard. Named for Rear Admiral Adelaide Lola, an early champion of professional standards within the Terran Hegemony's WarShip Sub-Command, the class established a design philosophy centered on heavy protection and broadside firepower at the expense of crew comfort. The Lola I served the Hegemony faithfully for nearly three centuries, escorting convoys through the Periphery and standing picket at critical approach points. Multiple Star League member states eventually received Lola I transfers, with the Draconis Combine fielding five, the Lyran Commonwealth operating four, the Capellan Confederation maintaining two, and the Rim Worlds Republic accumulating the largest foreign fleet with twenty-one destroyers.</p><p>In 2622, Blue Nose Clipperships of Mars began producing the Lola II under license from Boeing Interstellar. The second-generation design replaced conventional point defense weapons with heavier naval-grade armament, adding capital missile capability that the Lola I had entirely lacked. A rushed development cycle introduced chronic fuel system problems and other engineering deficiencies that plagued the class throughout its operational life. The Star League Navy ordered all remaining Lola IIs decommissioned in 2660, ending the class's active service after less than four decades. The scrapping program proved less thorough than intended: several hulls surfaced in Periphery rebel hands during the Second Periphery Uprising, and many more were diverted into the classified M-5 Caspar Capital Drone conversion program beginning in 2710, giving the Lola II hull a far more consequential second career than its brief conventional service.</p><p>Boeing Interstellar answered the Lola II's failure with the Lola III, launched from the company's Galax orbital yards in 2662. The third-generation destroyer proved an unqualified success. Production continued at a remarkable pace, with Boeing's facilities eventually laying down approximately 470 keels. This made the Lola III the most numerous destroyer class ever constructed, and every SLDF numbered fleet maintained multiple vessels in its order of battle. The class became the standard escort for convoys, battlegroups, and independent patrol squadrons across the breadth of Star League territory.</p><p>The Amaris Crisis and the Succession Wars consumed Lola-class destroyers at a devastating rate. The few surviving Lola Is were pressed into front-line combat during the First Succession War, where Draconis Combine and Free Worlds League vessels fought doggedly but were destroyed without exception. No Lola I is known to have survived beyond the first years of the conflict. The Lola III fared better through sheer numbers. Despite heavy losses during the Liberation of Terra, substantial quantities survived: many accompanied Kerensky's Exodus fleet to the Deep Periphery, while others remained in Inner Sphere service with the Great Houses, ComStar, and eventually the Word of Blake.</p><p>Clan technicians upgraded surviving Lola IIIs around 2841 with improved jump capability and expanded fighter and small craft complements. The refitted vessels served across virtually every Clan touman as the most common destroyer in Clan naval service. In the Inner Sphere, ComStar, Wolf's Dragoons, and Clan Nova Cat all operated Lola IIIs recovered from caches or inherited from the SLDF. The Jihad and Wars of Reaving devastated Lola III numbers as they did all WarShip classes, and by the mid-thirty-second century only a handful remained operational. The RSS Triumphus, originally commissioned as the SLS Hunter, was among the last to fall, destroyed at the Battle for Terra in 3151. Nearly five centuries separated the first Lola I's commissioning from the last Lola III's destruction, a span of continuous service unmatched by any other destroyer lineage in human history.</p>
 </history>
 
 <manufacturer>
@@ -206,12 +205,22 @@ Terra
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
+CHASSIS:Boeing Interstellar
 ENGINE:Unknown
-ARMOR:Unknown
+ARMOR:Boeing
+JUMP_JET:Unknown
 COMMUNICATIONS:Unknown
 TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:D-Span Ferro-Carbide
+JUMP_JET:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <use>
 Destroyer

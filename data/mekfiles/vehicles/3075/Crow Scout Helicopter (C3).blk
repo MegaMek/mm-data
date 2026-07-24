@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,19 +15,14 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-
-<BlockVersion>
-1
-</BlockVersion>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-e5d6-7740-90ff-2013e094d650
+</UUID>
 
 <UnitType>
 VTOL
 </UnitType>
-
-<blockversion>
-1
-</blockversion>
 
 <Name>
 Crow Scout Helicopter
@@ -45,10 +40,6 @@ Crow Scout Helicopter
 3070
 </year>
 
-<source>
-TR:3075
-</source>
-
 <type>
 IS Level 2
 </type>
@@ -57,21 +48,29 @@ IS Level 2
 Scout
 </role>
 
-<tonnage>
-15.0
-</tonnage>
-
 <motion_type>
 VTOL
 </motion_type>
+
+<cruiseMP>
+13
+</cruiseMP>
 
 <engine_type>
 0
 </engine_type>
 
-<cruiseMP>
-13
-</cruiseMP>
+<armor_type>
+0
+</armor_type>
+
+<armor_tech_rating>
+0
+</armor_tech_rating>
+
+<armor_tech_level>
+5
+</armor_tech_level>
 
 <internal_type>
 -1
@@ -108,24 +107,20 @@ ISERSmallLaser
 <Rotor Equipment>
 </Rotor Equipment>
 
-<armor_type>
-0
-</armor_type>
-
 <capabilities>
-The most obvious advantage of the Crow is its 216 km/h top speed. The incredibly fast vehicle can often get in and out of trouble spots before its enemies can effectively bring their weapons to bear. In order to fulfill its duties as a scout, the Crow carries a suite of advanced electronics, though the cost of those pushed the vehicle's price tag far above what Procurement officials expect out of a fifteen-ton VTOL. For scout duties, it has a Wunderland Beagle Active Probe, while a Forward-1 TAG allows the Crow to spot for indirect bombardments. An Apple-Churchill Guardian ECM Suite protects it from enemy spotting devices. The Crow's speed is its best armor. It mounts a meager one and a half tons of standard armor.
+<p>The C3 variant replaces the standard Forward-1 TAG designator with a C3 slave computer, integrating the aircraft into lance command networks without otherwise altering its technical profile. Maximum speed, armor protection, and airframe construction remain identical to the base reconnaissance model. The Exostar extended-range small lasers provide the same engagement capability, and the Scuti Dualcom communications system with its Apple-Churchill Guardian ECM suite continues to deliver electronic suppression. The Wunderland Beagle Active Probe retains full target acquisition functionality. The trade-off exchanges guided munitions designation capability for lance-wide sharing of targeting data, a substitution considered tactically favorable by DCMS commanders operating integrated C3 formations. Commanders note that the aircraft's speed advantage persists regardless of electronics configuration. All logistical characteristics, including the composite rotor blade supply dependency on New Samarkand, carry forward from the standard model without modification.</p>
 </capabilities>
 
 <overview>
-The Crow Scout VTOL is a military-grade, scout combat vehicle that is based upon the civilian Soar.
+<p>The Crow (C3) is a Draconis Combine-exclusive variant of the Crow Scout Helicopter, developed by Yan Manufacturing to address Forward-1 TAG equipment shortages during the early Jihad years. By substituting a C3 slave computer for the standard target designation system, the variant adapts the Crow for integration into lance-level command networks without altering the airframe's performance profile. The C3 configuration retains the full electronic warfare suite of the base reconnaissance model, making it a capable networked asset for DCMS formations organized around C3 master equipment. The variant entered service in 3070 and has not been made available through commercial channels.</p>
 </overview>
 
 <deployment>
-Due to shortage of TAGs, some Crows come equipped with a C3 slave unit instead
+<p>The C3 variant serves exclusively within Draconis Combine formations, assigned to units operating C3 master-equipped lances where its network contribution offsets the absence of TAG designation capability. Early production went to elite regiments including the Genyosha and the Ryuken, with subsequent distribution extending to regular DCMS line units as production output permitted. The variant is not available through commercial channels and has not been observed in non-Combine service.</p>
 </deployment>
 
 <history>
-Yan Manufacturing designed the Crow to replace the many scout BattleMechs the Draconis Combine lost during the Combine-Ghost Bear War. The Yan team kept many of the strengths of the search-and-rescue vehicle the Crow is descended from, though they improved it using military-grade technologies. Yan initially had trouble selling the Crow to the DCMS. Finally, Yan agreed to give the unit to them as long as the Combine supplied the electronics. In exchange, Yan is free to sell the unit to mercenary units.
+<p>Yan Manufacturing introduced the C3 configuration in response to intermittent supply constraints on Forward-1 TAG equipment during the Jihad period. Rather than allow production gaps in Crow output, Yan's engineers identified the C3 slave computer as a functionally compatible substitute requiring minimal airframe modification. The DCMS supported the substitution, finding the variant's ability to integrate with existing C3 master networks a practical advantage for formations already organized around network-centric doctrine. Yan produced the configuration across multiple production runs as supply conditions dictated, without establishing it as a dedicated parallel line. The variant entered service in 3070 alongside the broader entry of Crow production into wide DCMS distribution. Distribution remained exclusively within the Combine, consistent with standing policy restricting C3 equipment from commercial export. Reports from elite units fielding the variant have been positive, with network integration described as a meaningful upgrade for lances already equipped with C3 master systems.</p>
 </history>
 
 <manufacturer>
@@ -137,13 +132,32 @@ New Samarkand
 </primaryFactory>
 
 <systemManufacturers>
-CHASSIS:Unknown
-ENGINE:DAV 100 fusion
-ARMOR:Starslab/3
-COMMUNICATIONS:Scuti Dualcom with Apple-Churchill Guardian ECM Suite
-TARGETING:Skyhunter IV with Forward-1 TAG and Wunderland Beagle Active Probe
+CHASSIS:Yan Manufacturing
+ENGINE:Unknown
+ARMOR:Brooks, Inc.
+JUMP_JET:N/A
+COMMUNICATIONS:Scuti
+TARGETING:Unknown
 </systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:DAV 100 Fusion
+ARMOR:StarSlab/3
+JUMP_JET:N/A
+COMMUNICATIONS:Dualcom w/ Apple-Churchill Guardian ECM
+TARGETING:Skyhunter IV w/ C3 Slave and Wunderland Beagle Active Probe
+</systemModels>
 
 <source>
 TR:3075
 </source>
+
+<published>
+RS:3075u-CE
+</published>
+
+<tonnage>
+15.0
+</tonnage>
+

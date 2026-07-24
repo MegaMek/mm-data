@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,522 +17,692 @@
 
 # All events in this yml are considered 'minor' events
 events:
-  # This is the internal identification enum for the event.
-  # Only acceptable values are in the PrisonerEvent enum.
-  - prisonerEvent: BREAKOUT
+  # This is the internal identification enum for the event. Should be unique among entries in this file.
+  - randomEventType: "BREAKOUT"
     responseEntries:
       # Can only include values from the ResponseQuality enum. Must include three responses whose
       # index matches the response options presented to the player.
       - quality: RESPONSE_NEUTRAL
+        # The randomEventType of the event that follows this. Must be in the same yml file. Defaults to ""
+        followOnEvent: ""
+        # Can only include skill values from the SkillType class. Defaults to "", if not present.
+        skillCheckSkill: Small Arms
+        # Can only include values from the SkillAttribute class. Defaults to "NO_ATTRIBUTE", if not present.
+        abilityCheckType: NO_ATTRIBUTE
         # The effects caused by successfully resolving the event.
         effectsSuccess:
           # Can only include values from the EventResultEffect enum.
           # Any response with the UNIQUE enum requires separate code support.
           # Defaults to NONE, if not present.
           - effect: INJURY_PERCENT
-            # TRUE to affect guards, otherwise false. Used by some EventResultEffect values.
-            # Defaults to FALSE, if not present.
-            isGuard: TRUE
+            # Include one or more RandomEventEffectedPersonnelType
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             # Intensity of the effect. Affects different effects differently. See EventResultEffect
             # for more information. Defaults to 0, if not present.
             magnitude: 20
             # Can only include skill values from the SkillType class. Used by the 'SKILL'
             # EventResultEffect. Defaults to "", if not present.
-            skillType: SKILL_NONE
+            affectedSkill: ""
           - effect: PRISONER_CAPACITY
             magnitude: -25
         # The effects caused by failing to resolve the event successfully.
         effectsFailure:
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -10
         effectsFailure:
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -10
         effectsFailure:
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 40
           - effect: PRISONER_CAPACITY
             magnitude: -50
 
-  - prisonerEvent: RIOT
+  - randomEventType: "RIOT"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Melee Weapons
         effectsSuccess:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
         effectsFailure:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -50
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Negotiation
         effectsSuccess:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
         effectsFailure:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
 
-  - prisonerEvent: MURDER
+  - randomEventType: "MURDER"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Investigation
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -5
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -10
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Acting
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -10
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Melee Weapons
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -10
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
 
-  - prisonerEvent: FIRE
+  - randomEventType: "FIRE"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Administration
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -50
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -50
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 40
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 40
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -50
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Investigation
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 40
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -15
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 40
           - effect: ESCAPE_PERCENT
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -50
 
-  - prisonerEvent: POISON
+  - randomEventType: "POISON"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Investigation
         effectsSuccess:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             magnitude: 1
         effectsFailure:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             # Magnitude 2, as the problem wasn't resolved
             magnitude: 2
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Investigation
         effectsSuccess:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             # Magnitude 2, as the problem wasn't resolved
             magnitude: 2
           - effect: INJURY
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 3
         effectsFailure:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             # Magnitude 2, as the problem wasn't resolved
             magnitude: 2
           - effect: INJURY
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 3
           - effect: PRISONER_CAPACITY
             magnitude: -15
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Investigation
         effectsSuccess:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             magnitude: 1
         effectsFailure:
           # 'Poison' (xd6 Fatigue) 10% of personnel
           - effect: UNIQUE
+            affectedPersonnelTypes:
+              - CAMP_FOLLOWERS
+              - COMBAT_PERSONNEL
+              - SUPPORT_PERSONNEL
             # Magnitude 2, as the problem wasn't resolved
-            magnitude: 1
+            magnitude: 2
 
-  - prisonerEvent: HOSTAGE
+  - randomEventType: "HOSTAGE"
     responseEntries:
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Acting
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 2
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: DEATH
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 3
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: DEATH
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Leadership
         effectsSuccess:
           - effect: PRISONER_CAPACITY
             magnitude: -10
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: DEATH
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
 
-  - prisonerEvent: BOMB
+  - randomEventType: "BOMB"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -15
         effectsFailure:
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Investigation
         effectsSuccess:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -25
         effectsFailure:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Administration
         effectsSuccess:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -15
         effectsFailure:
           - effect: ESCAPE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
 
-  - prisonerEvent: EXECUTION
+  - randomEventType: "EXECUTION"
     responseEntries:
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Investigation
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -25
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Administration
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -15
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -15
       - quality: RESPONSE_NEGATIVE
         effectsSuccess:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -5
         effectsFailure:
           - effect: DEATH
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -15
 
-  - prisonerEvent: ABANDONED_TO_DIE
+  - randomEventType: "ABANDONED_TO_DIE"
     responseEntries:
       - quality: RESPONSE_POSITIVE
+        skillCheckSkill: Administration
         effectsSuccess:
           # Generate 2d6 new prisoners & xd6 crime
           - effect: UNIQUE
@@ -548,6 +718,7 @@ events:
           - effect: PRISONER_CAPACITY
             magnitude: -15
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Administration
         effectsSuccess:
           # Generate 2d6 new prisoners & xd6 crime
           - effect: UNIQUE
@@ -563,6 +734,7 @@ events:
           - effect: PRISONER_CAPACITY
             magnitude: -15
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Negotiation
         effectsSuccess:
           # Generate 2d6 new prisoners & xd6 crime
           - effect: UNIQUE
@@ -578,86 +750,109 @@ events:
           - effect: PRISONER_CAPACITY
             magnitude: -15
 
-  - prisonerEvent: UNITED
+  - randomEventType: "UNITED"
     responseEntries:
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Interest/Military
         effectsSuccess:
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -5
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -10
       - quality: RESPONSE_NEGATIVE
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: PRISONER_CAPACITY
             magnitude: -5
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -10
       - quality: RESPONSE_NEUTRAL
+        skillCheckSkill: Small Arms
         effectsSuccess:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 1
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 1
           - effect: PRISONER_CAPACITY
             magnitude: -5
         effectsFailure:
           - effect: DEATH_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 10
           - effect: INJURY_PERCENT
-            isGuard: FALSE
+            affectedPersonnelTypes:
+              - PRISONERS
             magnitude: 20
           - effect: DEATH_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 5
           - effect: INJURY_PERCENT
-            isGuard: TRUE
+            affectedPersonnelTypes:
+              - SECURITY_GUARD
             magnitude: 10
           - effect: PRISONER_CAPACITY
             magnitude: -10

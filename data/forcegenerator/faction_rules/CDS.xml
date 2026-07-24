@@ -168,6 +168,25 @@ but with more independence.-->
         </subforces>
     </force>
 
+    <!-- Lambda and Rho Spina galaxies specifically trade some aerospace for a higher
+    concentration of Elementals, relying on the naval fleet for air support. Same cluster
+    structure as a normal Spina galaxy, but each cluster is stamped spinaElemental so its
+    flex trinary favors Battle Armor over aerospace. The other Spina galaxies (omega,
+    sigma, zeta) use the generic galaxy node below and keep the standard aero mix. -->
+    <force echelon="%GALAXY%" eschName="Galaxy" ifFlags="lambda|rho">
+        <name>{greek} Galaxy</name>
+        <co>%GALAXY_CMDR%</co>
+
+        <subforces>
+            <subforce role="command" flags="+spinaElemental">%CLUSTER%</subforce>
+            <subforceOption>
+                <option flags="combined,spinaElemental" weight="2">%CLUSTER%</option>
+                <option flags="+spinaElemental" weight="1">%CLUSTER%</option>
+            </subforceOption>
+            <subforce flags="cruiser,spinaElemental" role="cavalry">%CLUSTER%</subforce>
+        </subforces>
+    </force>
+
     <force echelon="%GALAXY%" eschName="Galaxy">
         <name>{greek} Galaxy</name>
         <co>%GALAXY_CMDR%</co>
@@ -529,6 +548,9 @@ but with more independence.-->
         in combined clusters where the chance is 1:2.-->
 
         <subforces ifRating="Keshik|FL|SL">
+            <!-- Fifth trinary: normally Mek or aerospace. In Lambda/Rho Spina clusters
+                 (spinaElemental) the aerospace options are replaced by Battle Armor, so these
+                 galaxies field more Elementals and lean on the naval fleet for air support. -->
             <subforceOption ifWeightClass="A">
                 <option weightClass="A" unitType="Mek"
                         weight="4">%TRINARY%
@@ -537,13 +559,19 @@ but with more independence.-->
                         weight="2">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
-                        weight="3">%TRINARY%
+                        ifFlags="!spinaElemental" weight="3">%TRINARY%
                 </option>
                 <option weightClass="M" unitType="AeroSpaceFighter"
-                        weight="2">%TRINARY%
+                        ifFlags="!spinaElemental" weight="2">%TRINARY%
                 </option>
                 <option weightClass="L" unitType="AeroSpaceFighter"
-                        weight="1">%TRINARY%
+                        ifFlags="!spinaElemental" weight="1">%TRINARY%
+                </option>
+                <option unitType="BattleArmor" ifFlags="spinaElemental"
+                        ifDateBetween="2900," weight="6">%TRINARY%
+                </option>
+                <option unitType="Infantry" ifFlags="spinaElemental"
+                        ifDateBetween=",2899" weight="6">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
                         ifFlags="combined" weight="3">%TRINARY%
@@ -566,13 +594,19 @@ but with more independence.-->
                         weight="2">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
-                        weight="3">%TRINARY%
+                        ifFlags="!spinaElemental" weight="3">%TRINARY%
                 </option>
                 <option weightClass="M" unitType="AeroSpaceFighter"
-                        weight="2">%TRINARY%
+                        ifFlags="!spinaElemental" weight="2">%TRINARY%
                 </option>
                 <option weightClass="L" unitType="AeroSpaceFighter"
-                        weight="1">%TRINARY%
+                        ifFlags="!spinaElemental" weight="1">%TRINARY%
+                </option>
+                <option unitType="BattleArmor" ifFlags="spinaElemental"
+                        ifDateBetween="2900," weight="6">%TRINARY%
+                </option>
+                <option unitType="Infantry" ifFlags="spinaElemental"
+                        ifDateBetween=",2899" weight="6">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
                         ifFlags="combined" weight="3">%TRINARY%
@@ -595,13 +629,19 @@ but with more independence.-->
                         weight="2">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
-                        weight="2">%TRINARY%
+                        ifFlags="!spinaElemental" weight="2">%TRINARY%
                 </option>
                 <option weightClass="M" unitType="AeroSpaceFighter"
-                        weight="3">%TRINARY%
+                        ifFlags="!spinaElemental" weight="3">%TRINARY%
                 </option>
                 <option weightClass="L" unitType="AeroSpaceFighter"
-                        weight="2">%TRINARY%
+                        ifFlags="!spinaElemental" weight="2">%TRINARY%
+                </option>
+                <option unitType="BattleArmor" ifFlags="spinaElemental"
+                        ifDateBetween="2900," weight="7">%TRINARY%
+                </option>
+                <option unitType="Infantry" ifFlags="spinaElemental"
+                        ifDateBetween=",2899" weight="7">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
                         ifFlags="combined" weight="2">%TRINARY%
@@ -621,13 +661,19 @@ but with more independence.-->
                         weight="4">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
-                        weight="1">%TRINARY%
+                        ifFlags="!spinaElemental" weight="1">%TRINARY%
                 </option>
                 <option weightClass="M" unitType="AeroSpaceFighter"
-                        weight="2">%TRINARY%
+                        ifFlags="!spinaElemental" weight="2">%TRINARY%
                 </option>
                 <option weightClass="L" unitType="AeroSpaceFighter"
-                        weight="3">%TRINARY%
+                        ifFlags="!spinaElemental" weight="3">%TRINARY%
+                </option>
+                <option unitType="BattleArmor" ifFlags="spinaElemental"
+                        ifDateBetween="2900," weight="6">%TRINARY%
+                </option>
+                <option unitType="Infantry" ifFlags="spinaElemental"
+                        ifDateBetween=",2899" weight="6">%TRINARY%
                 </option>
                 <option weightClass="H" unitType="AeroSpaceFighter"
                         ifFlags="combined" weight="1">%TRINARY%

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -17,10 +17,39 @@
 
 key: SL
 name: Star League
+# rankSystem is set explicitly so Faction2.getRankSystem() doesn't fall through to
+# fallBackFactions. Without this, SL inherits whichever of LA / FS / CC / FWL / ... is
+# loaded first by the registry — observed in MekHQ Force Generator logs as the SL
+# rank-authority faction resolving to CCAF (Capellan) for support personnel.
+rankSystem: SLDF
+sucsCodes:
+  - SL
+  - SLDF
 capital: Terra
 yearsActive:
   - start: 2571
     end: 2780
+  # Second Star League: First Whitting Conference (November 3058) through the Fourth
+  # Whitting Conference dissolution vote on 28 November 3067. Without this span the SL
+  # entries in the faction diplomacy data (Operation Bulldog, Second Star League alliance)
+  # reference an inactive faction. The Third Star League has its own code (SL3).
+  - start: 3058
+    end: 3067
+# NOTE: TH (Terran Hegemony) is intentionally NOT listed here. TH.fallBackFactions
+# already contains SL, so adding TH here would create a SL <-> TH cycle that crashes
+# RATGenerator.findModelAvailabilityRecord with StackOverflowError. The bidirectional
+# Faction.isLineageCompatible check used by Academy.java still resolves TH <-> SL
+# correctly via the existing TH -> SL relationship.
+fallBackFactions:
+  - LA
+  - FS
+  - CC
+  - FWL
+  - DC
+  - MOC
+  - OA
+  - RWR
+  - TC
 tags:
   - PLAYABLE
   - IS
@@ -39,6 +68,8 @@ eraMods:
   - -1
   - -1
 ratingLevels:
+  - F
+  - D
   - C
   - B
   - A
@@ -112,3 +143,6 @@ factionLeaders:
     gender: "MALE"
     startYear: 2767
     endYear: 2779
+aresConventionsSignatory:
+  2412: true
+  2786: false

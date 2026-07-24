@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a8ed-7690-bade-0abcf677a860
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -72,13 +67,67 @@ Leg
 <Squad Equipment>
 BAArmoredGlove:LA
 BAArmoredGlove:RA
-ISBAExtendedLifeSupport:Body
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
+BAExtendedLifeSupport:Body
 BASearchlight:Body
 </Squad Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<capabilities>
+<p>The Armored Glove configuration replaces the standard industrial drill with a pair of armored gloves, sacrificing raw cutting power for manual dexterity. Operators can handle delicate tasks, manipulate small objects, and perform fine detail work that the drill configuration cannot manage. At four hundred kilograms, the suit provides a single point of standard armor protection and mounts a searchlight for visibility in darkened tunnels. The exoskeleton lacks jump capability, limiting operators to ground-level movement at walking pace. Communication equipment and a basic life support system allow extended underground operation, though the suit's survivability in a serious cave-in remains limited by its minimal armor coverage.</p>
+</capabilities>
+
+<overview>
+<p>The Tunnel Rat mining exoskeleton is a civilian-grade suit designed by General Motors for underground mining operations. Introduced in 3055 as part of GM's renewed push into the mining equipment market, the Tunnel Rat gave individual miners a pressurized, armored frame capable of withstanding the hazards of subterranean work. Modular plug-in ports in both arms allowed operators to swap between specialized tools as job requirements changed. The suit earned a reputation for rugged dependability in confined, hazardous environments. The Tunnel Rat II incorporated a more dependable power source and improved electronics, though it remained otherwise identical to the original in both capability and configuration.</p>
+</overview>
+
+<deployment>
+<p>Mining crews across the Inner Sphere deployed Tunnel Rat operators wearing the Armored Glove configuration for tasks requiring manual precision. Delicate vein work, sample collection, and equipment maintenance in confined shaft environments all benefited from the glove's combination of protection and dexterity.</p>
+</deployment>
+
+<history>
+<p>General Motors had been a major supplier of mining exoskeletons during the Star League era, but the Succession Wars destroyed the technological base needed to produce such equipment. GM's exoskeleton lines shut down entirely, and the knowledge to rebuild them was lost for centuries. The recovery of the Helm Memory Core in the early thirty-first century changed everything. As power armor technology became accessible again, GM moved quickly to reclaim its position in the civilian mining market.</p><p>The Mole series of mining exoskeletons debuted in 3052, but it was the Tunnel Rat in 3055 that established GM as the dominant provider of dedicated underground mining suits. Produced at GM's Kathil facility, the Tunnel Rat filled a critical gap in the mining industry. Strip mining and shaft sinking relied on heavy machinery, but individual miners still worked smaller veins by hand with explosives and hand-held tools. The Tunnel Rat allowed a single operator to work longer, dig faster, and survive accidents that would kill an unprotected miner. Both models saw wide distribution throughout the Inner Sphere, primarily in harsh environments run by larger mining corporations. The suits remained among the most costly equipment available to mining concerns, keeping them out of reach for many smaller operations.</p>
+</history>
+
+<manufacturer>
+General Motors
+</manufacturer>
+
+<primaryFactory>
+Kathil
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:VAr
@@ -104,35 +153,3 @@ biped
 0
 </weightclass>
 
-<overview>
-The Tunnel Rat mining exoskeleton was part of GM's ambition to reenter the mining industry.
-</overview>
-
-<capabilities>
-The suit was given modular plug-ins to allow tools to be attached for various jobs. The suit is notable for its communication and sturdy life support features.
-</capabilities>
-
-<deployment>
-The suit is notable for its moderate upgrade in its armor and electronics.
-</deployment>
-
-<history>
-This was made possible with the recovery of the Helm Memory Core. GM had originally produced the mining suits during the late Star League Era, however, the Succession Wars caused the company to lose the technological knowledge to produce such suits. The company's ambitions to expand its offerings once again in the mining market became reality when power armor technology was recovered. Utilized for the mining industry, the Tunnel Rat was created as a suit able to withstand the harsh elements of underground mining.
-</history>
-
-<manufacturer>
-General Motors
-</manufacturer>
-
-<primaryFactory>
-Kathil
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

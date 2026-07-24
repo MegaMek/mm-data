@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,42 +15,46 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-generator:Mordel.Net Code Release 2.24.13 on 14-Jun-2024
+uuid:019f583e-dcf0-754f-b460-63ee9c38850a
+generator:MegaMek Suite 0.51.01 on 2026-07-12
 chassis:'Wing' Wraith
 model:TR6
-source:Shrap17
 
 Config:Biped
-TechBase:Inner Sphere
-Era:3150
-Rules Level:3
+techbase:Inner Sphere
+era:3143
+source:Shrap17
+published:ShrapRS
+rules level:3
+role:Skirmisher
 
-Mass:55
-Engine:330 XL Engine(IS)
-Structure:IS Endo-Composite
-Myomer:Standard
 
-Heat Sinks:13 Double
-Walk MP:6
-Jump MP:6
+mass:55
+engine:330 XL Engine
+structure:IS Endo-Composite
+myomer:Standard
 
-Armor:Ferro-Fibrous (IS)
-LA Armor:14
-RA Armor:14
-LT Armor:18
-RT Armor:18
-CT Armor:23
-HD Armor:8
-LL Armor:20
-RL Armor:20
-RTL Armor:5
-RTR Armor:5
-RTC Armor:7
+heat sinks:13 IS Double
+walk mp:6
+jump mp:6
+
+armor:Ferro-Fibrous(Inner Sphere)
+LA armor:14
+RA armor:14
+LT armor:18
+RT armor:18
+CT armor:23
+HD armor:8
+LL armor:20
+RL armor:20
+RTL armor:5
+RTR armor:5
+RTC armor:7
 
 Weapons:3
+Medium X-Pulse Laser, Left Arm
+Medium X-Pulse Laser, Left Arm
 Large X-Pulse Laser, Right Arm
-Medium X-Pulse Laser, Left Arm
-Medium X-Pulse Laser, Left Arm
 
 Left Arm:
 Shoulder
@@ -59,12 +63,12 @@ Lower Arm Actuator
 Hand Actuator
 ISMediumXPulseLaser
 ISMediumXPulseLaser
-Endo-Composite
-Endo-Composite
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo-Composite
+IS Endo-Composite
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Arm:
 Shoulder
@@ -73,11 +77,11 @@ Lower Arm Actuator
 Hand Actuator
 ISLargeXPulseLaser
 ISLargeXPulseLaser
-Endo-Composite
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
-Ferro-Fibrous
+IS Endo-Composite
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 -Empty-
 
 Left Torso:
@@ -91,8 +95,8 @@ ISPartialWing
 Jump Jet
 Jump Jet
 Jump Jet
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Right Torso:
 Fusion Engine
@@ -105,8 +109,8 @@ ISPartialWing
 Jump Jet
 Jump Jet
 Jump Jet
-Ferro-Fibrous
-Ferro-Fibrous
+IS Ferro-Fibrous
+IS Ferro-Fibrous
 
 Center Torso:
 Fusion Engine
@@ -120,13 +124,13 @@ Fusion Engine
 Fusion Engine
 Fusion Engine
 Supercharger
-Ferro-Fibrous
+IS Ferro-Fibrous
 
 Head:
 Life Support
 Sensors
 Cockpit
-Ferro-Fibrous
+IS Ferro-Fibrous
 Sensors
 Life Support
 -Empty-
@@ -141,8 +145,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Composite
-Endo-Composite
+IS Endo-Composite
+IS Endo-Composite
 -Empty-
 -Empty-
 -Empty-
@@ -155,8 +159,8 @@ Hip
 Upper Leg Actuator
 Lower Leg Actuator
 Foot Actuator
-Endo-Composite
-Endo-Composite
+IS Endo-Composite
+IS Endo-Composite
 -Empty-
 -Empty-
 -Empty-
@@ -164,20 +168,29 @@ Endo-Composite
 -Empty-
 -Empty-
 
+overview:<p>The "Wing" Wraith series represents Hellespont Industries' most ambitious development of the Wraith platform, incorporating partial wing technology to enhance the design's already impressive mobility. Inspired by experimental arena modifications pioneered on Solaris VII, particularly the TR2-X Alexander developed by Zellbrigen Stables in 3076, Hellespont engineers began exploring partial wing integration shortly after acquiring the Wraith production rights from Curtiss Hydroponics.</p><p>The TR4-X prototype demonstrated the concept's viability but was judged insufficiently armed for military service. Iterative development through the TR4 production model eventually yielded the TR6 and TR7, which entered service with the Capellan Confederation Armed Forces. The Wing Wraith trades some of the original design's raw ground speed for enhanced jump capability and atmospheric performance, establishing a distinct tactical niche as a raider capable of exploiting vertical terrain advantages that even standard jump-capable 'Mechs cannot match.</p>
 
-overview:The Wraith is a 'Mech that, when properly employed, can wreak havoc on an enemy with its astounding speed and maneuverability. Initially developed by Curtiss Militech, it later became a key asset for the Capellan Confederation following the company's financial distress post-Jihad. The Wraith's speed, firepower, and decent armor make it a considerable threat to many 'Mechs, some being almost twice its weight.
+capabilities:<p>The Wing Wraith is built on a redesigned Hellespont Wraith Endo-Composite chassis fitted with a Magna 330 XL engine. While this powerplant is smaller than the original TR1's massive 385-rated engine, the partial wing system compensates by improving jump performance and heat dissipation in atmosphere. The Hellespont Leaper jump jets, working in concert with the partial wings, provide a 240-meter jump capability that exceeds even the original Wraith's impressive mobility, particularly effective in atmospheric conditions where the wings provide additional lift and stability.</p><p>The TR6, the most representative production variant, carries a Ceres Arms Model SX large X-pulse laser as its primary weapon, supported by a pair of Ceres Arms Model X medium X-pulse lasers. This loadout deliberately echoes the original TR1's pulse-heavy philosophy while extending effective engagement ranges. Hellespont Lite ferro-fibrous armor provides solid protection, and the Ceres Metals Model 666 communications suite and Ceres Bullseye targeting system represent significant electronics upgrades over the original Curtiss-manufactured systems.</p><p>The partial wings impose a more demanding maintenance schedule compared to conventional jump jet configurations, making the Wing Wraith less popular as an export than the simpler TR5. However, the shared parts commonality between the TR5 and TR6 makes producing both variants economically practical for Hellespont.</p>
 
-capabilities:The “Wing” Wraith enhances the base design’s accurate and ammunition-independent loadout with improved heat dissipation and jump range. Despite the advantages of the partial-wing technology, the TR6 suffers from slower ground speed and a demanding maintenance schedule, making it a less popular export than the more straightforward TR5. However, both variants share parts and construction processes, making continued production a low-cost endeavor.
+deployment:<p>This variant represents the culmination of Hellespont's effort to combine partial wing technology with the original Wraith's pulse-heavy combat doctrine. Mounting Ceres Arms large and medium X-pulse lasers, it engages effectively at longer ranges than the TR1 while maintaining comparable accuracy. Standard Hellespont Leaper jump jets paired with partial wings provide a 240-meter jump capability with superior atmospheric performance. The shared parts commonality with the TR5 makes producing both variants economically viable, though this variant's demanding maintenance schedule has limited its appeal as an export compared to the simpler TR5. Hellespont noted a sharp uptick in orders from Clan Sea Fox and purchase inquiries from the Magistracy Armed Forces as the design proved itself in combat.</p>
 
-deployment:The TR6 incorporates the improved heat dissipation and jump range of the “Wing” Wraith but suffers from slower ground speed and a more demanding maintenance schedule. It is designed for Capellan use and excels as a raider and scout hunter.
+history:<p>The Wing Wraith's origins trace directly to the experimental work done on Solaris VII in the late thirty-first century. The TR2-X Alexander, a custom arena 'Mech developed by Zellbrigen Stables beginning in 3076, was the first design to demonstrate that partial wing technology could dramatically enhance the Wraith chassis's already exceptional mobility. Built from a salvaged TR2 chassis with Clan-manufactured components and experimental wing assemblies reportedly based on Jade Falcon designs, the Alexander achieved jump distances exceeding 270 meters in arena competition. When Hellespont Industries acquired the Wraith production rights following the destruction of the Curtiss Militech factory during the Jihad, their engineers took particular interest in the Alexander's wing configuration.</p><p>The TR4-X prototype emerged as Hellespont's first production-ready attempt to integrate partial wings into a military-grade Wraith. Retaining the original 385-rated XL engine while adding wing systems, the prototype demonstrated the concept's viability but carried only a light PPC, extended-range medium laser, and extended-range small laser, an armament judged wholly insufficient for frontline service. Development continued with the TR4, which drew further inspiration from the Alexander by incorporating a snub-nose PPC and supercharger while downsizing the engine to a 330-rated XL to create space for additional equipment. The TR4 entered limited production during the Capellan Crusades era, serving as the bridge between the experimental TR4-X and the more refined variants that followed.</p><p>Capellan procurement officials, while pleased with the partial wing concept, requested variants with armament closer to the original Wraith's pulse laser doctrine. This led to the parallel development of the TR5 and TR6, both entering mass production in the 3140s. The TR6 paired Ceres Arms X-pulse lasers with the partial wing configuration, while the TR5 used improved jump jets instead of wings to achieve comparable mobility. Both variants shared extensive parts commonality, making dual production economically practical for Hellespont.</p><p>The TR6's first major combat deployment proved uneven. When the Victoria Rangers assaulted Victoria in 3144, results varied sharply between regiments. Commanders in the First Rangers wisely kept their Wing Wraiths away from restrictive urban tunnel fighting. The Second Rangers' Wing Wraiths, which should have excelled in urban terrain, were instead unable to maneuver freely during pincer operations and sustained heavy damage. Most troubling, morale problems in the Fourth Rangers led to technicians ignoring updated maintenance manuals and treating the new design as if it were a century-old TR1, resulting in progressive structural failures in the wing assemblies and two injurious crashes within a month of deployment.</p><p>Subsequent engagements demonstrated the Wing Wraith's true potential when properly employed. During House Davion's Operation Cerberus, Wing Wraiths of the Second St. Ives Cheveau-Legers were detached as a raiding party to harry the flanks of the Second Davion Auxiliaries, screening retreating Confederation DropShips. Working alongside Agroteras, the Wing Wraiths demonstrated exceptional compatibility with Canopian imports, leapfrogging along the enemy's path and luring outriders away to be destroyed piecemeal. The ranging units remained in the field for days, nipping at Davion flanks until the regiment's DropShips were loaded and ready for extraction. As CCAF regiments retreated, Hellespont executives noted a silver lining in the form of increased Sea Fox orders and purchase inquiries from the Magistracy Armed Forces.</p><p>The TR7 emerged as the most advanced expression of the Wing Wraith concept, designed specifically at the request of the Death Commandos for covert operations and headhunting missions. Combining stealth armor, an Angel ECM suite, Clan-manufactured weapons, and the signature partial wings, the TR7 represented a significant investment per unit. Its inclusion of a spacious head module with open cargo space, requested specifically by the Death Commandos, generated considerable speculation given that unit's well-earned reputation for unconventional and deniable operations.</p>
 
-history:The Wing Wraith project, spearheaded by Hellespont Industries, dates back to the Capellan Crusades, but it wasn’t until the 3140s that the mass-produced TR6 variant saw production. The Wraith’s assets were acquired by the Capellan Confederation after Curtiss Hydroponics, the original manufacturer, was forced to sell its military holdings to remain solvent following the Jihad. The destruction of Curtiss Militech’s homeworld, Paradise, by the Regulans during the Jihad significantly contributed to the financial distress that led to this sale. Hellespont Industries capitalized on this opportunity, integrating advanced partial-wing technology into the Wraith design to enhance its maneuverability and heat dissipation capabilities.<p>The TR6’s first major combat deployment occurred during the Victoria Rangers’ assault on Victoria in 3144. However, the results were underwhelming due to the Wraiths being reassigned to unsuitable roles, leading to significant damage and operational issues. Despite this setback, the TR6 found its stride during House Davion’s Operation Cerberus. On Narellan, Wraiths from the Second St. Ives Cheveau-Légers conducted effective raiding operations against the Second Davion Auxiliaries, showcasing their capability in hit-and-run tactics alongside Canopian Agroteras. This success spurred increased orders from various factions, including the Sea Foxes and the Magistracy Armed Forces, solidifying the Wing Wraith’s reputation as a valuable raider and scout hunter in the Capellan Confederation's arsenal.</p>
+manufacturer:Hellespont 'Mech Works
 
-manufacturer:Hellespont Industries
 primaryfactory:Sian
-systemmanufacturer:CHASSIS:Hellespont Wraith Endo-Composite
-systemmanufacturer:ENGINE:Magna 330 XL
-systemmanufacturer:ARMOR:Hellespont Stealth
-systemmanufacturer:JUMP_JET:Hellespont Leapers with Partial Wing
-systemmanufacturer:COMMUNICATIONS:Ceres Metals Model 666
-systemmanufacturer:TARGETING:Ceres Bullseye
+
+fluffdate:2026-02-26 19:50:04
+
+systemmanufacturer:CHASSIS:Hellespont
+systemmode:CHASSIS:Wraith Endo-Composite
+systemmanufacturer:ENGINE:Magna
+systemmode:ENGINE:330 XL
+systemmanufacturer:ARMOR:Hellespont
+systemmode:ARMOR:Lite Ferro-Fibrous
+systemmanufacturer:JUMP_JET:Hellespont
+systemmode:JUMP_JET:Leapers
+systemmanufacturer:COMMUNICATIONS:Ceres Metals
+systemmode:COMMUNICATIONS:Model 666
+systemmanufacturer:TARGETING:Ceres
+systemmode:TARGETING:Bullseye

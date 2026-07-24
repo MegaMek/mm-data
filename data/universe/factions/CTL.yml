@@ -16,8 +16,17 @@
 # affiliated with Microsoft.
 
 key: CTL
-name: Chesterton Trade Federation
+name: Chesterton Trade League
+# Phase 2 pin: canonical-parent rank system, set explicitly so Faction2.getRankSystem()
+# does not recurse through fallBackFactions. Adjust if BattleTech canon for this
+# faction warrants a different rank table.
+rankSystem: CCAF
+sucsCodes:
+  - CTF
 capital: Terra
+yearsActive:
+  - start: 2193
+    end: 2220
 successor: CC
 tags:
   - MINOR

@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,15 +15,10 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-#building block data file
-<BlockVersion>
-1
-</BlockVersion>
-
-# Write the version number just in case...
-<Version>
-MAM0
-</Version>
+#Saved from version 0.51.01 on 2026-07-12
+<UUID>
+019f583e-a354-72cc-be64-f07d76d82b23
+</UUID>
 
 <UnitType>
 BattleArmor
@@ -33,7 +28,7 @@ BattleArmor
 Undine Battle Armor
 </Name>
 
-<model>
+<Model>
 (Sqd6)
 </Model>
 
@@ -54,7 +49,7 @@ Ambusher
 </role>
 
 <motion_type>
-umu
+UMU
 </motion_type>
 
 <cruiseMP>
@@ -73,12 +68,70 @@ umu
 CLBAERMicroLaser:RA
 CLBALRM5 (OS):Body
 BABattleClaw:RA
-SwarmMek
-SwarmWeaponMek
-StopSwarm
-LegAttack
 BASearchlight:Body
 </Point Equipment>
+
+<Trooper 1 Equipment>
+</Trooper 1 Equipment>
+
+<Trooper 2 Equipment>
+</Trooper 2 Equipment>
+
+<Trooper 3 Equipment>
+</Trooper 3 Equipment>
+
+<Trooper 4 Equipment>
+</Trooper 4 Equipment>
+
+<Trooper 5 Equipment>
+</Trooper 5 Equipment>
+
+<Trooper 6 Equipment>
+</Trooper 6 Equipment>
+
+<slotless_equipment>
+BAUMU
+</slotless_equipment>
+
+<capabilities>
+<p>The Undine centers its offensive capability on a single one-shot LRM-5 launcher loaded with amphibious multi-purpose missiles, allowing it to engage targets both above and below the waterline. An ER Micro Laser mounted in the right arm provides close-range firepower, while a battle claw on the left arm enables material manipulation and limited melee capability. A searchlight rounds out the suit's equipment for low-visibility underwater operations.</p><p>Three underwater maneuvering units propel the Undine at speeds exceeding thirty kilometers per hour when submerged, making it among the fastest underwater combatants in any arsenal. On land, the suit is limited to a walking pace. Two hundred kilograms of standard armor provide adequate protection, though this amounts to roughly twenty percent less coverage than the Elemental. The Undine cannot perform standard anti-BattleMech swarming attacks, restricting it to leg attacks against partially submerged targets. This narrow tactical profile limits the suit's utility outside aquatic environments.</p>
+</capabilities>
+
+<overview>
+<p>The Undine battle armor is a medium-weight underwater combat suit developed by Clan Goliath Scorpion. A direct descendant of the Water Elemental mining suit that spawned all Clan battle armor, the Undine was the first purpose-built military adaptation of the original exoskeleton's aquatic design. Entering service in 3059, the suit gave its operators unmatched combat capability in underwater and amphibious environments. Armed with a dual-purpose weapon system effective both above and below the waterline, the Undine filled a niche that no other Clan battle armor addressed. Its specialized nature limited broader adoption, but for those who mastered underwater warfare, the Undine had no equal.</p>
+</overview>
+
+<deployment>
+<p>Six-trooper formations of Undine suits saw limited adoption outside standard Clan organization. Those units that fielded the suit in oversized formations did so to maximize underwater patrol coverage, using the additional troopers to establish wider security perimeters around critical submarine infrastructure and deep-sea industrial sites.</p>
+</deployment>
+
+<history>
+<p>Clan Goliath Scorpion had long sought to leverage their underwater expertise into a military advantage. Well before Operation Revival, Scorpion scientists began developing a specialized missile capable of functioning as both a conventional LRM and an underwater torpedo, paired with a combat suit designed to exploit this dual-purpose weapon. Adapting the ancestral Water Elemental mining suit for combat proved straightforward, but the missile/torpedo hybrid eluded engineers for years. When the Scorpions failed to secure a place in the Invasion, the project stalled.</p><p>A breakthrough in 3059 finally allowed the Scorpions to complete the design, christened the Undine after mythical water spirits. The suit gave the Goliath Scorpions unchallenged dominance in underwater Trials, though its specialized nature meant most Clans showed little interest in acquiring it. That changed in 3068, when Clan Diamond Shark aggressively pursued the Undine through multiple Trials of Possession. The Scorpions defended fiercely, but the Sharks eventually prevailed on Roche. Curiously, the Diamond Sharks never fielded the suits after winning them. The Federated Suns later acquired Undine suits through Diamond Shark trade channels and used the design as inspiration for their own Hauberk amphibious battle armor.</p>
+</history>
+
+<manufacturer>
+Clan Goliath Scorpion|W-7 Facilities
+</manufacturer>
+
+<primaryFactory>
+Dagda (Riva)|Weingarten
+</primaryFactory>
+
+<systemManufacturers>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemManufacturers>
+
+<systemModels>
+CHASSIS:Unknown
+ENGINE:Unknown
+ARMOR:Unknown
+COMMUNICATIONS:Unknown
+TARGETING:Unknown
+</systemModels>
 
 <source>
 TR:3058U
@@ -104,35 +157,3 @@ biped
 2
 </weightclass>
 
-<overview>
-The Undine battle armor is a combat upgrade to the original "water elementals," the underwater exoskeletons that inspired Clan Wolf's Elemental battle armor.
-</overview>
-
-<capabilities>
-With its unique weaponry and revolutionary underwater motor system, the Undine is the perfect unit for amphibious warfare, though it comes with some drawbacks. Undines cannot perform typical anti-'Mech swarming attacks and can only make leg attacks against partially-submerged 'Mechs. The suit also only carries 200kg of armor, 20% less than the Elemental. Although the Goliath Scorpions won a number of defensive underwater Trials thanks largely to the Undine, its specialized nature and the rarity of underwater offensive operations meant most Clans simply were not interested in acquiring the suit for many years.
-</capabilities>
-
-<deployment>
-The Undine carries an ER Micro Pulse Laser in its right arm and a Battle Claw in its left, however the centerpiece of the suit's weaponry is its LRM-5 launcher loaded with a single round of special amphibious missiles. A Searchlight provides additional illumination while an Underwater Maneuvering Unit allows the Undine to achieve speeds of over 32 km/h when submerged.
-</deployment>
-
-<history>
- Clan Goliath Scorpion had been working for some time on a specialized missile which could also function as a torpedo, a separate weapon much-used by the Clans to protect their extensive underwater facilities, along with a battle suit designed to take advantage of this capability. While the modifications to the original suit for underwater combat were straightforward, developing a missile/torpedo hybrid proved elusive, and when the Goliath Scorpions failed to win a spot in Operation Revival the project languished in limbo for some years - at least until the Inner Sphere began developing their own battle suits which were rapidly matching or exceeding the venerable Elemental. While the other Clans went about developing specialized suits of their own, a breakthrough in 3059 allowed the Goliath Scorpions to complete development of their underwater combat suit. They christened it Undine after the mystical water spirits. It was not until 3068 that Clan Diamond Shark began to aggressively pursue acquiring the Undine and the Goliath Scorpions would not give it up without a fight. It took several Trials before the Sharks finally won on Roche, when a Star of their submarines defeated a Nova of Scorpion submarines and Undine; however since acquiring the suits no Diamond Shark units have been seen actually employing them, much to observers' curiosity.
-</history>
-
-<manufacturer>
-Unknown,W-7 Facilities
-</manufacturer>
-
-<primaryFactory>
-Dagda,Weingarten
-</primaryFactory>
-
-<systemManufacturers>
-CHASSIS:Unknown
-ENGINE:Unknown
-ARMOR:Unknown
-JUMPJET:Unknown
-COMMUNICATIONS:Unknown
-TARGETING:Unknown
-</systemManufacturers>

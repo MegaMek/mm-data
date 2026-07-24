@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tanis (Radulov 2600-)
-sucsId: 2934
+sucsId: 2935
 xcood: -57.373
 ycood: 1603.16
 spectralType:
@@ -96,6 +96,23 @@ planet:
         size: large
         icon: rock13
     event:
+      - date: '2108-12-05'
+        name: Radulov
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
+      - date: '2571-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
+      - date: '2600-01-01'
+        name: Tanis
+        message: Radulov renamed to Tanis
       - date: '2749-09-04'
         faction:
           source: canon
@@ -165,7 +182,13 @@ planet:
         faction:
           source: canon
           value:
-            - CLAN
+            - CCC
+      - date: '3025-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCC
       - date: '3030-01-01'
         population: 27313.0
       - date: '3040-01-01'
@@ -174,32 +197,60 @@ planet:
         socioIndustrial: A-C-D-A-C
       - date: '3050-01-01'
         population: 19593.0
+      - date: '3052-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CB
+            - CCC
       - date: '3059-12-12'
         faction:
           source: canon
           value:
             - CCC
+      - date: '3059-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CB
+            - CCC
       - date: '3060-01-01'
         population: 15206.0
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCC
+            - CSA
       - date: '3067-12-20'
         faction:
           source: canon
           value:
             - CSA
             - CCC
+      - date: '3067-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - CCC
+            - CSA
       - date: '3070-01-01'
         population: 12436.0
-      - date: '3072-12-31'
-        faction:
-          source: canon
-          value:
-            - CB
       - date: '3072-02-04'
         faction:
           source: canon
           value:
             - CB
             - SOC
+      - date: '3072-12-31'
+        faction:
+          source: canon
+          value:
+            - CB
       - date: '3073-11-05'
         faction:
           source: canon
@@ -228,11 +279,6 @@ planet:
             - ABN
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2108-12-05'
-        name: Radulov
-      - date: '2600-01-01'
-        name: Tanis
-        message: Radulov renamed to Tanis
   - name: Ross
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.08

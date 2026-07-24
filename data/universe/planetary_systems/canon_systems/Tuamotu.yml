@@ -16,7 +16,7 @@
 # affiliated with Microsoft.
 
 id: Tuamotu
-sucsId: 2598
+sucsId: 2599
 xcood: -235.214
 ycood: -185.686
 spectralType: F3V
@@ -100,6 +100,12 @@ planet:
       - name: Ventron
       - name: Umeå stadsförs.
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - UND
       - date: '2626-01-19'
         faction:
           source: canon
@@ -139,6 +145,15 @@ planet:
         population: 441942866.0
       - date: '2750-01-01'
         population: 452413981.0
+      - date: '2750-12-31'
+        # administration:
+        #   - Principality of Regulus
+      - date: '2750-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - FWL
       - date: '2760-01-01'
         population: 458672589.0
       - date: '2770-01-01'
@@ -216,6 +231,12 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - IND
       - date: '3090-01-01'
         population: 315187024.0
       - date: '3100-01-01'
@@ -232,6 +253,12 @@ planet:
           value:
             - RF
         population: 326544486.0
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.03.02
+          value:
+            - RF
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -243,9 +270,13 @@ planet:
           source: canon
           value:
             - FWL
-      - date: '3151-01-01'
+      - date: '3151-12-31'
+        # administration:
+        #   - Regulan Fiefs
+      - date: '3151-12-31'
         faction:
-          source: sucs
+          source: SUCS
+          version: 2026.03.02
           value:
             - FWL
   - name: P-1 Belt
