@@ -1,0 +1,179 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# =============================================================================
+# Saxarba 2.0 - IN-PROGRESS high-resolution (168x144) tileset
+# =============================================================================
+#
+# WORK IN PROGRESS. This tileset exists so the renderer work can proceed before
+# the art is finished. It is fully playable today.
+#
+# HOW IT WORKS
+# ------------
+# Section 1 lists terrain that has finished 168x144 art.
+# Section 2 includes the stock 1x saxarba.tileset, which supplies EVERY hex that
+# section 1 does not cover. That include IS the placeholder mechanism - missing
+# 2x terrain simply renders with the existing 84x72 art, so there are no magenta
+# gaps and nothing is unplayable while the migration runs.
+#
+# Adding art: drop the files in, move the matching lines up into section 1, and
+# tick the entry off the checklist in section 3. Nothing else needs to change.
+#
+# ORDER IS LOAD-BEARING - DO NOT MOVE THE INCLUDE ABOVE SECTION 1
+# ---------------------------------------------------------------
+# HexTileset resolves entries in file order (HexTileset.java:252-270 for bases,
+# :224-239 for supers). The first match wins, so overrides MUST precede the
+# include. See also the "theme shadowing" note above the rough entries below.
+#
+# THE hexsize DIRECTIVE
+# ---------------------
+# 'hexsize <width> <height>' declares the source resolution of every entry that
+# follows it, and is inherited by included files (which may override it).
+#
+# This directive is NOT IMPLEMENTED YET - see
+# docs/issues/features/high-resolution-hex-tiles.md. The tileset parser ignores
+# unrecognised directives (HexTileset.java:304-352 has no else branch), so these
+# lines are inert today and this file loads correctly in current builds. Until
+# the code lands, the 168x144 tiles below are treated as "large tiling textures"
+# and will render wrongly - that is expected, and is exactly what the Phase 0
+# spike is built to fix.
+#
+# =============================================================================
+
+
+# =============================================================================
+# SECTION 1 - MIGRATED TO 168x144
+# =============================================================================
+
+hexsize 168 144
+
+# --- Grass base levels: 14 of 14 done -----------------------------------------
+# Replaces saxarba.tileset:552-565 (saxarba/theme_grass/base_grass_*.png).
+# Unthemed bases are safe to place first: baseMatch scores an unthemed entry at
+# 0.001 against a themed hex (HexTileset.java:528-530), so exact themed matches
+# further down still win.
+base -3 "" "" "Saxarba 2.0/grass_levels_144/base_grass_-3.png"
+base -2 "" "" "Saxarba 2.0/grass_levels_144/base_grass_-2.png"
+base -1 "" "" "Saxarba 2.0/grass_levels_144/base_grass_-1.png"
+base 0 "" "" "Saxarba 2.0/grass_levels_144/base_grass_0.png"
+base 1 "" "" "Saxarba 2.0/grass_levels_144/base_grass_1.png"
+base 2 "" "" "Saxarba 2.0/grass_levels_144/base_grass_2.png"
+base 3 "" "" "Saxarba 2.0/grass_levels_144/base_grass_3.png"
+base 4 "" "" "Saxarba 2.0/grass_levels_144/base_grass_4.png"
+base 5 "" "" "Saxarba 2.0/grass_levels_144/base_grass_5.png"
+base 6 "" "" "Saxarba 2.0/grass_levels_144/base_grass_6.png"
+base 7 "" "" "Saxarba 2.0/grass_levels_144/base_grass_7.png"
+base 8 "" "" "Saxarba 2.0/grass_levels_144/base_grass_8.png"
+base 9 "" "" "Saxarba 2.0/grass_levels_144/base_grass_9.png"
+base 10 "" "" "Saxarba 2.0/grass_levels_144/base_grass_10.png"
+
+
+# --- THEME SHADOWING GUARD - READ BEFORE EDITING ------------------------------
+# 'super' matching does NOT work like 'base' matching. An empty theme "" becomes
+# null (Hex.java:110-114), and superMatch SKIPS the theme test entirely when the
+# entry's theme is null (HexTileset.java:437). An unthemed super therefore
+# matches EVERY theme at 1.0, and the first match consumes the terrain
+# (HexTileset.java:232-237).
+#
+# So the unthemed 2x rough entries further down would otherwise steal rough from
+# lunar, volcano, mars and desert hexes and paint them with grass rough. The four
+# pairs below re-assert those themes with their ORIGINAL 1x art so they resolve
+# before the unthemed entries are reached.
+#
+# DELETE each pair below only when that theme gets its own 2x rough art.
+# Copied verbatim from saxarba.tileset:227-244.
+hexsize 84 72
+super * "rough:1" "lunar" "saxarba/theme_lunar/rough_lunar_a.png;saxarba/theme_lunar/rough_lunar_b.png;saxarba/theme_lunar/rough_lunar_c.png;saxarba/theme_lunar/rough_lunar_d.png"
+super * "rough:2" "lunar" "saxarba/theme_lunar/ultra_rough_lunar.png"
+super * "rough:1" "volcano" "saxarba/theme_volcano/rough_volcano_a.png;saxarba/theme_volcano/rough_volcano_b.png;saxarba/theme_volcano/rough_volcano_c.png;saxarba/theme_volcano/rough_volcano_d.png"
+super * "rough:2" "volcano" "saxarba/theme_volcano/ultra_rough_volcano.png"
+super * "rough:1" "mars" "saxarba/theme_mars/rough_mars_a.png;saxarba/theme_mars/rough_mars_b.png;saxarba/theme_mars/rough_mars_c.png;saxarba/theme_mars/rough_mars_d.png"
+super * "rough:2" "mars" "saxarba/theme_mars/ultra_rough_mars.png"
+super * "rough:1" "desert" "saxarba/misc/rough_a.png;saxarba/misc/rough_b.png;saxarba/misc/rough_c.png;saxarba/misc/rough_d.png"
+super * "rough:2" "desert" "saxarba/misc/ultra_rough.png"
+
+
+# --- Rough grass: 7 of 7 done -------------------------------------------------
+# Replaces saxarba.tileset:231-232 (tropical) and :247-248 (default).
+# The new art adds two extra ultra variants (_b, _c) that the 1x set did not
+# have, so rough:2 now randomises across three tiles instead of always using one.
+hexsize 168 144
+super * "rough:1" "tropical" "Saxarba 2.0/rough_grass_144/rough_grass_a.png;Saxarba 2.0/rough_grass_144/rough_grass_b.png;Saxarba 2.0/rough_grass_144/rough_grass_c.png;Saxarba 2.0/rough_grass_144/rough_grass_d.png"
+super * "rough:2" "tropical" "Saxarba 2.0/rough_grass_144/ultra_rough_grass.png;Saxarba 2.0/rough_grass_144/ultra_rough_grass_b.png;Saxarba 2.0/rough_grass_144/ultra_rough_grass_c.png"
+super * "rough:1" "" "Saxarba 2.0/rough_grass_144/rough_grass_a.png;Saxarba 2.0/rough_grass_144/rough_grass_b.png;Saxarba 2.0/rough_grass_144/rough_grass_c.png;Saxarba 2.0/rough_grass_144/rough_grass_d.png"
+super * "rough:2" "" "Saxarba 2.0/rough_grass_144/ultra_rough_grass.png;Saxarba 2.0/rough_grass_144/ultra_rough_grass_b.png;Saxarba 2.0/rough_grass_144/ultra_rough_grass_c.png"
+
+
+# =============================================================================
+# SECTION 2 - PLACEHOLDER FALLBACK (everything else, at 84x72)
+# =============================================================================
+# Supplies every hex not overridden above, using the stock 1x art. Keep this
+# LAST. As families migrate, their entries move into section 1 and are simply
+# shadowed here - this include never needs editing.
+
+hexsize 84 72
+include "saxarba.tileset"
+
+
+# =============================================================================
+# SECTION 3 - MIGRATION CHECKLIST
+# =============================================================================
+# File counts are from the current 1x saxarba art and indicate rough effort, not
+# a strict tile-for-tile target. Ordered by suggested priority: the terrain a
+# player looks at most, first.
+#
+# [x] Grass base levels -3..10 .................... 14 tiles   DONE
+# [x] Rough grass (incl. 2 new ultra variants) ..... 7 tiles   DONE
+#
+# [ ] Water .......................... saxarba/water/            14
+# [ ] Structured Water ............... Structured_Water/        320
+#     Art staged at Saxarba 2.0/Structured_Water but still 84x72.
+#     Largest single set - consider splitting across the 5 .tileinc files.
+# [ ] Transitions .................... saxarba/Transitions/     251
+#     Blends between terrain families; best done AFTER the families it blends.
+# [ ] Roads .......................... saxarba/roads/           162
+# [ ] Vegetation / L1 foliage ........ saxarba/vegetation/       23
+#                                      saxarba/L1Foliage/        14
+# [ ] Misc (incl. desert rough) ...... saxarba/misc/             69
+# [ ] Bridges ........................ saxarba/bridges/          64
+#
+#     Themes - each needs its own base levels + rough before its guard pair
+#     above can be deleted:
+# [ ] Lunar .......................... saxarba/theme_lunar/     142
+# [ ] Volcano ........................ saxarba/theme_volcano/    63
+# [ ] Mars ........................... saxarba/theme_mars/       49
+# [ ] Tropical ....................... saxarba/theme_tropical/   38
+# [ ] Snow ........................... saxarba/theme_snow/       24
+# [ ] Fungus ......................... saxarba/theme_fungus/     23
+#
+#     Structures - large, mostly overlay art, lowest visual priority per tile:
+# [ ] Buildings (SMV) ................ saxarba/SMV_Buildings/   571
+# [ ] Buildings light/medium/heavy/hard ......................  142 each
+# [ ] Sealed / hangar / fortress variants ....................  138 each
+# [ ] Fuel tanks ..................... saxarba/fuel_tanks/      276
+# [ ] Seaport ........................ saxarba/SMV_Seaport/      83
+# [ ] Landing pads ................... saxarba/SMV_LandingPads/  57
+# [ ] Gun emplacements ............... saxarba/gun_emplacement/  40
+#
+#     Symbols and fluff - flat art, scales acceptably, do last:
+# [ ] Letters ........................ saxarba/SMV_Letters/     217
+# [ ] Ground symbols ................. saxarba/SMV_GroundSymbols/ 195
+# [ ] Fluff .......................... saxarba/SMV_Fluff/        47
+#
+# NOTE: Inclines, High_Incline, Cliff, Structured_Pavement, UlyssesSprites and
+# the StandardIncludes are SHARED with other tilesets. Converting those to 2x
+# affects classic/isometric/atmospheric too and should be its own decision.
