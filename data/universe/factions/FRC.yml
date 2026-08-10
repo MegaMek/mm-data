@@ -1,0 +1,44 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+key: FRC
+name: Free Capella
+# The anti-Confederation exile movement of Mandrinn Tormano Liao, opposed to Chancellor Sun-Tzu
+# Liao. Backed from the Federated Commonwealth and folded back into the Confederation after
+# Tormano's fall, which is why the span closes in 3070.
+yearsActive:
+  - start: 3057
+    end: 3070
+tags:
+  - IS
+  - MINOR
+  - REBEL
+# The Blackwind Lancers, Borodin's Vindicators and the Free Republic Revolutionaries all have
+# camo art under this folder already.
+camos: Capellan Confederation/Free Capella
+nameGenerator: CC
+ratingLevels:
+  - F
+  - D
+  - C
+  - B
+  - A
+# A Capellan splinter, so equipment availability, formation sizes and ranks all come from the
+# Confederation rather than the generic Inner Sphere pool.
+fallBackFactions:
+  - CC
+rankSystem: CCAF
