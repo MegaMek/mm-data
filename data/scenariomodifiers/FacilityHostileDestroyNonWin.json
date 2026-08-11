@@ -1,0 +1,58 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+"modifierName": "Destroy",
+"additionalBriefingText": "This facility will be destroyed if 75% of turrets are destroyed.",
+"benefitsPlayer": false,
+"blockFurtherEvents": false,
+"eventTiming": "PreForceGeneration",
+"forceDefinition": null,
+"skillAdjustment": null,
+"qualityAdjustment": null,
+"eventRecipient": null,
+"battleDamageIntensity": null,
+"ammoExpenditureIntensity": null,
+"unitRemovalCount": null,
+"allowedMapLocations": null,
+"useAmbushLogic": null,
+"switchSides": null,
+"numExtraEvents": null,
+"bvBudgetAdditiveMultiplier": null,
+"reinforcementDelayReduction": null,
+"objectives": [ {
+"objectiveCriterion": "ForceWithdraw",
+"description": "Destroy or cripple 75% of the following unit(s) to render the facility inoperative:",
+"destinationEdge": "NONE",
+"percentage": 75,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": 0,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Base Defenses" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "FacilityRemoved",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [],
+"additionalDetails": [ ]
+} ],
+"linkedModifiers": {}
+}

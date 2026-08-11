@@ -1,0 +1,65 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+"modifierName": "Engage",
+"additionalBriefingText": "The forces at this facility must be engaged for the specified duration.",
+"benefitsPlayer": false,
+"blockFurtherEvents": false,
+"eventTiming": "PreForceGeneration",
+"forceDefinition": null,
+"skillAdjustment": null,
+"qualityAdjustment": null,
+"eventRecipient": null,
+"battleDamageIntensity": null,
+"ammoExpenditureIntensity": null,
+"unitRemovalCount": null,
+"allowedMapLocations": null,
+"useAmbushLogic": null,
+"switchSides": null,
+"numExtraEvents": null,
+"bvBudgetAdditiveMultiplier": null,
+"reinforcementDelayReduction": null,
+"objectives": [ {
+"objectiveCriterion": "Custom",
+"description": "Engage any hostile units for the specified number of turns.",
+"destinationEdge": "NONE",
+"percentage": 1,
+"fixedAmount": null,
+"timeLimitType": "ScaledToPrimaryUnitCount",
+"timeLimitAtMost": false,
+"timeLimit": null,
+"timeLimitScaleFactor": 1,
+"associatedForceNames": ["Base Defenses" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ],
+"linkedModifiers": {
+"FacilityHostileDestroy.json": "If destroyed, this facility will be considered to have been sufficiently distracted.",
+"FacilityHostileCapture.json": "If captured, this facility will be considered to have been sufficiently distracted."
+}
+}

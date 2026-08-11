@@ -1,0 +1,85 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+"modifierName": "Capture",
+"additionalBriefingText": "This facility can be captured if 75% of the designated buildings remain intact with 75% of the hostile forces destroyed, crippled or forced to withdraw.",
+"benefitsPlayer": false,
+"blockFurtherEvents": false,
+"eventTiming": "PostForceGeneration",
+"forceDefinition": null,
+"skillAdjustment": null,
+"qualityAdjustment": null,
+"eventRecipient": null,
+"battleDamageIntensity": null,
+"ammoExpenditureIntensity": null,
+"unitRemovalCount": null,
+"allowedMapLocations": null,
+"useAmbushLogic": null,
+"switchSides": null,
+"numExtraEvents": null,
+"bvBudgetAdditiveMultiplier": null,
+"reinforcementDelayReduction": null,
+"objectives": [ {
+"objectiveCriterion": "Preserve",
+"description": "Leave intact at least 75% of the following force(s) and unit(s) in order to be able to take control of this facility:",
+"destinationEdge": "NONE",
+"percentage": 25,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": 0,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Base Defenses" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "FacilityCaptured",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "FacilityRemains",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": ["Crippled turrets are considered intact for the purposes of this objective."]
+}, {
+"objectiveCriterion": "ForceWithdraw",
+"description": "Destroy, cripple or force the withdrawal of 75% of the following force(s) and unit(s) to take control of the facility:",
+"destinationEdge": "NONE",
+"percentage": 75,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": 0,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["OpFor" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "FacilityCaptured",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "FacilityRemains",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ],
+"linkedModifiers": {}
+}

@@ -1,0 +1,71 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+"modifierName": null,
+"additionalBriefingText": "One of your employer's Aces is close and is moving to support. Watch and learn.",
+"benefitsPlayer": true,
+"blockFurtherEvents": false,
+"eventTiming": "PreForceGeneration",
+"forceDefinition": {
+"forceAlignment": 1,
+"generationMethod": 5,
+"forceMultiplier": 1.0,
+"deploymentZones": [],
+"destinationZone": 5,
+"retreatThreshold": 0,
+"allowedUnitType": -2,
+"canReinforceLinked" : false,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Allied Mek Ace",
+"syncedForceName": "Player",
+"syncDeploymentType" : "SameEdge",
+"syncRetreatThreshold": false,
+"arrivalTurn": 2,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize" : true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 4,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude" : 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [
+],
+"subjectToRandomRemoval": true,
+"fixedMul": "AlliedTBTAce.mul",
+"forceRoleStrings": []
+},
+"skillAdjustment": null,
+"qualityAdjustment": null,
+"eventRecipient" : null,
+"battleDamageIntensity": null,
+"ammoExpenditureIntensity": null,
+"unitRemovalCount": null,
+"allowedMapLocations": [
+"AllGroundTerrain", "SpecificGroundTerrain"],
+"useAmbushLogic": null,
+"switchSides": null,
+"numExtraEvents": null,
+"bvBudgetAdditiveMultiplier": null,
+"reinforcementDelayReduction" : null,
+"objectives": [],
+"linkedModifiers": {}
+}

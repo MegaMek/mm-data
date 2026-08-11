@@ -1,0 +1,68 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+    "contractTypeName": "Sabotage",
+    "briefing": "Disrupt planetary operations.",
+    "alliedFacilityCount": 0.0,
+    "hostileFacilityCount": 0.0,
+    "allowEarlyVictory": true,
+    "allowedScenarios": null,
+    "forbiddenScenarios": null,
+    "objectiveParameters": [
+        {
+            "objectiveType": "AnyScenarioVictory",
+            "objectiveCount": -1.0,
+            "objectiveScenarios": [],
+            "objectiveScenarioModifiers": [
+                "EnemyHotDrop.json",
+                "BadEvent.json"
+            ]
+        },
+        {
+            "objectiveType": "FacilityDestruction",
+            "objectiveCount": -1.0,
+            "objectiveScenarios": [],
+            "objectiveScenarioModifiers": []
+        },
+        {
+            "objectiveType": "SpecificScenarioVictory",
+            "objectiveCount": -0.5,
+            "objectiveScenarios": [
+                "Deep Raid.json",
+                "Deep Raid Defense.json",
+                "Frontline Disruption.json",
+                "Supply Denial.json"
+            ],
+            "objectiveScenarioModifiers": []
+        }
+    ],
+    "globalScenarioModifiers": [],
+    "scenarioOdds": [
+        38,
+        48,
+        48,
+        58
+    ],
+    "deploymentTimes": [
+        2,
+        3,
+        3,
+        3,
+        4
+    ]
+}

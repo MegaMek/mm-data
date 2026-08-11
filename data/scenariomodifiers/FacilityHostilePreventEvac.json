@@ -1,0 +1,93 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https: //creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https: //www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+{
+"modifierName": "Prevent Evac",
+"additionalBriefingText": "Prevent at least 75% of the designated units from leaving the area.",
+"benefitsPlayer": false,
+"blockFurtherEvents": false,
+"eventTiming": "PostForceGeneration",
+"forceDefinition": {
+"forceAlignment": 2,
+"generationMethod": 2,
+"forceMultiplier": 1.0,
+"deploymentZones": [10],
+"destinationZone": 7,
+"retreatThreshold": 50,
+"allowedUnitType": -1,
+"canReinforceLinked": true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Evacuating Convoy",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 1,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 3,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+"CIVILIAN", "SUPPORT", "SUPPORT", "CARGO", "CARGO", "CARGO", "APC", "APC"]
+},
+"skillAdjustment": null,
+"qualityAdjustment": null,
+"eventRecipient" : null,
+"battleDamageIntensity": null,
+"ammoExpenditureIntensity": null,
+"unitRemovalCount": null,
+"allowedMapLocations": null,
+"useAmbushLogic" : null,
+"switchSides": null,
+"numExtraEvents": null,
+"bvBudgetAdditiveMultiplier": null,
+"reinforcementDelayReduction": null,
+"objectives" : [ {
+"objectiveCriterion": "PreventReachMapEdge",
+"description": "Prevent 75% the following enemy unit(s) and force(s) from escaping. +1 SVP if succeeded, -1 SVP if failed:",
+"destinationEdge": "SOUTH",
+"percentage": 75,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": false,
+"timeLimit": null,
+"timeLimitScaleFactor": 2,
+"associatedForceNames": ["Evacuating Units" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ],
+"linkedModifiers": {}
+}
