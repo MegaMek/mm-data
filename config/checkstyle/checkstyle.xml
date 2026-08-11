@@ -25,9 +25,12 @@
         <property name="severity" value="error" />
     </module>
 
+    <!-- A "name:" field holds a formation's canon name, which is allowed to carry the trademarked
+         spelling - the SLDF really did field BattleMech Divisions. Everything else, identifiers and
+         file paths included, uses MegaMek's own spelling. -->
     <module name="RegexpSingleline">
         <property name="id" value="ForbiddenWords" />
-        <property name="format" value="^(?!.*(bg\.battletech|MechWarrior Copyright|MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks|BattleMech Manual)).*\b(?i)(mech|mechwarrior|battlemech|aerotech|protomech|'mech|`Mech|TripodMech|BipedMech|QuadMech|LandAirMech|OmniMech|'Mechs)\b.*$" />
+        <property name="format" value="^(?!.*(bg\.battletech|MechWarrior Copyright|MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks|BattleMech Manual))(?!\s*name:).*\b(?i)(mech|mechwarrior|battlemech|aerotech|protomech|'mech|`Mech|TripodMech|BipedMech|QuadMech|LandAirMech|OmniMech|'Mechs)\b.*$" />
         <property name="ignoreCase" value="true" />
         <property name="message" value="Forbidden word found" />
         <property name="severity" value="error" />
