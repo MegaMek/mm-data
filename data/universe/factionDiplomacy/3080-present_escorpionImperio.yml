@@ -28,20 +28,21 @@ alliances:
     start: 3141-03-03
     parties:
       - factions: [CGS, NC, UC, HL]
+# The host is CGS, not the retired CEI code: the Escorpion Imperio and Scorpion Empire faction files
+# were consolidated into CGS, which displays as "Escorpion Imperio" from 3080 and "Scorpion Empire"
+# from 3141 via its nameChanges. CEI survives only as an alias for old campaign saves, so it must not
+# be used in current data. There is deliberately no CGS-inside-CGS entry - the Goliath Scorpions are
+# the host here, not a faction contained within it.
 containedFactions:
-  - host: CEI
-    contained: CGS
-    start: 3080-01-01
-    fraction: 1.0
-  - host: CEI
+  - host: CGS
     contained: NC
     start: 3080-01-01
     fraction: 0.3
-  - host: CEI
+  - host: CGS
     contained: UC
     start: 3080-01-01
     fraction: 0.3
-  - host: CEI
+  - host: CGS
     contained: HL
     start: 3141-01-01
     fraction: 0.5

@@ -22,6 +22,7 @@ wars:
   - name: Hanseatic Crusade
     start: 3141-01-03
     end: 3142-03-31
+    # Only one entry: CEI is a retired alias of CGS, so a separate [CEI, HL] line would declare the
+    # same war between the same two factions twice.
     parties:
-      - factions: [CEI, HL]
       - factions: [CGS, HL]

@@ -1,0 +1,81 @@
+name: "Report a Data Problem"
+description: >
+  A unit, planet, sprite or other data file is wrong, missing or out of date. This repository holds
+  the data only - if the program misbehaves with correct data, report it against MegaMek instead.
+type: "Bug"
+labels:
+  - Bug
+
+body:
+  - type: dropdown
+    id: data-area
+    attributes:
+      label: "What kind of data?"
+      options:
+        - "Unit stats or equipment"
+        - "Unit fluff"
+        - "Quirks"
+        - "Sprite or image"
+        - "Planetary system"
+        - "Something else"
+    validations:
+      required: true
+
+  - type: input
+    id: affected-entry
+    attributes:
+      label: "Which entry?"
+      description: "The exact unit, planet or file name."
+      placeholder: "Example: Marauder MAD-3R"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-is-wrong
+    attributes:
+      label: "What's wrong"
+      placeholder: "The data currently says..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-it-should-be
+    attributes:
+      label: "What it should be"
+      placeholder: "It should say..."
+    validations:
+      required: true
+
+  - type: input
+    id: source-reference
+    attributes:
+      label: "Source"
+      description: >
+        Book, edition and page. Errata count - say which errata document it is and the date on it.
+        Canon data is not changed without a source.
+      placeholder: "Example: TRO: 3039, revised, p. 142"
+    validations:
+      required: true
+
+  - type: upload
+    id: report-files
+    attributes:
+      label: "Screenshots or files"
+      description: >
+        A photograph of the page, a screenshot of the unit in MegaMek, or the data file itself.
+        GitHub will not accept a bare `.mtf` or `.blk`, so put those in a ZIP first.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.pdf,.txt,.csv,.zip,.xml,.yml"
+
+  - type: checkboxes
+    id: final-checks
+    attributes:
+      label: "Before you submit"
+      options:
+        - label: "This report only contains one issue or request, and I haven't already reported it"
+          required: true
+        - label: >
+            This is a data problem, not a program bug - if the program misbehaves with correct data,
+            it belongs in MegaMek
+          required: true

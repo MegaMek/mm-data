@@ -667,8 +667,9 @@ forces).
     </war>
     <!-- Referenced by the Scorpion Empire alliance comment (the Hanseatic Crusade PDF states the
     war started January 3rd of 3141 and lasted 15 months) but previously had no war entry. -->
+    <!-- Only one parties entry: CEI is a retired alias of CGS, so a separate CEI,HL line would
+    declare the same war between the same two factions twice. -->
     <war name="Hanseatic Crusade" start="3141-01-03" end="3142-03-31">
-        <parties>CEI,HL</parties>
         <parties>CGS,HL</parties>
     </war>
     <war name="Buena-Lyran War" start="3147-06-06" end="3148-01-30">
@@ -834,27 +835,26 @@ forces).
         <inner>FRR</inner>
         <fraction>0.5</fraction>
     </location>
-    <!-- Clan Goliath Scorpion contained within Escorpion Imperio after Abjuration (Dec 3078) and conquest of Nueva Castile/Umayyad (3080) -->
-    <location start="3080-01-01">
-        <outer>CEI</outer>
-        <inner>CGS</inner>
-        <fraction>1.0</fraction>
-    </location>
+    <!-- The outer faction is CGS, not the retired CEI code: the Escorpion Imperio and Scorpion Empire
+    faction files were consolidated into CGS, which displays as "Escorpion Imperio" from 3080 and
+    "Scorpion Empire" from 3141. CEI survives only as an alias for old campaign saves and must not be
+    used in current data. There is deliberately no CGS-inside-CGS entry - after the consolidation the
+    Goliath Scorpions are the host here, not a faction contained within it. -->
     <!-- Nueva Castile contained within Escorpion Imperio after conquest -->
     <location start="3080-01-01">
-        <outer>CEI</outer>
+        <outer>CGS</outer>
         <inner>NC</inner>
         <fraction>0.3</fraction>
     </location>
     <!-- Umayyad Caliphate contained within Escorpion Imperio after conquest -->
     <location start="3080-01-01">
-        <outer>CEI</outer>
+        <outer>CGS</outer>
         <inner>UC</inner>
         <fraction>0.3</fraction>
     </location>
     <!-- Hanseatic League contained within Scorpion Empire after conquest (Jan 3141 - Mar 3142) -->
     <location start="3141-01-01">
-        <outer>CEI</outer>
+        <outer>CGS</outer>
         <inner>HL</inner>
         <fraction>0.5</fraction>
     </location>

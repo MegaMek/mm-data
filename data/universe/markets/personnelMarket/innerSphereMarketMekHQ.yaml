@@ -1,4 +1,4 @@
-# MegaMek Data (C) 2025 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
 # To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 #
 # NOTICE: The MegaMek organization is a non-profit group of volunteers
@@ -15,33 +15,12 @@
 # <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
 # affiliated with Microsoft.
 
-- weight: 84 # How many 'tickets' does this profession have in the pool? Affects how likely the profession is to be selected
-  profession: ADMINISTRATOR_COMMAND # what profession will be generated if this entry is selected?
+- weight: 336 # How many 'tickets' does this profession have in the pool? Affects how likely the profession is to be selected
+  profession: ADMINISTRATOR # what profession will be generated if this entry is selected?
   count: 1 # The maximum number of personnel spawned whenever this profession is selected. The actual number will be between 1 and this value
   introductionYear: 0 # What year is the earliest this profession will appear in the market?
   extinctionYear: -1 # What year will this profession stop appearing in the market? Should be 15 years after the unit type goes extinct.
   fallbackProfession: SOLDIER # If this entry is selected prior to its introduction year, what profession should we use instead?
-
-- weight: 84
-  profession: ADMINISTRATOR_LOGISTICS
-  count: 1
-  introductionYear: 0
-  extinctionYear: -1
-  fallbackProfession: SOLDIER
-
-- weight: 84
-  profession: ADMINISTRATOR_TRANSPORT
-  count: 1
-  introductionYear: 0
-  extinctionYear: -1
-  fallbackProfession: SOLDIER
-
-- weight: 84
-  profession: ADMINISTRATOR_HR
-  count: 1
-  introductionYear: 0
-  extinctionYear: -1
-  fallbackProfession: SOLDIER
 
 - weight: 111
   profession: DOCTOR
