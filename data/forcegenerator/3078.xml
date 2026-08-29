@@ -2013,7 +2013,7 @@
             </model>
         </chassis>
         <chassis name='Assassin' unitType='Mek'>
-            <availability>IS:1-,FS:1,FS.CMM:1-,LA:1,CC:3-,MERC:1-,CS:3-,WOB:2-,CGB.FRR:0,Periphery:2-,FVC:1,TC:3-,CDP:3-,OA:1-,MOC:3-</availability>
+            <availability>IS:1-,FS:1,FS.CMM:1-,LA:1,CC:3-,MERC:1-,CS:3-,WOB:2-,CGB.FRR:0,Periphery:2-,FVC:1,TC:3-,CDP:3-,MOC:3-,OA:1-</availability>
             <model name='ASN-21'>
                 <availability>IS:1-,CGB.FRR:0,Periphery:0</availability>
             </model>
@@ -3968,10 +3968,10 @@
                 <availability>DC:5,CLAN.IS:5,CJF:4,CWIE:4,CW:4,CLAN.HW:5,CSL:5,CSA:4</availability>
             </model>
             <model name='E'>
-                <availability>DC:2,CLAN.IS:2+,CHH:3+,CJF!Second Line:1,CLAN.HW:2+,CBS:1+,CSL:3+</availability>
+                <availability>DC:2+,CLAN.IS:2+,CHH:3+,CJF!Second Line:1,CLAN.HW:2+,CBS:1+,CSL:3+</availability>
             </model>
             <model name='H'>
-                <availability>DC:3,CLAN.IS:3+,CHH:4+,CJF!Second Line:3,CWIE:2+,CW!Front Line:4,CLAN.HW:3+,CSL:4+,CSA!Keshik:6!Front Line:3</availability>
+                <availability>DC:3+,CLAN.IS:3+,CHH:4+,CJF!Second Line:3,CWIE:2+,CW!Front Line:4,CLAN.HW:3+,CSL:4+,CSA!Keshik:6!Front Line:3</availability>
             </model>
             <model name='Prime'>
                 <availability>DC:7,CLAN.IS:6,CJF:5,CW:5,CLAN.HW:6,CGS:4,CSL:6,CSA:5</availability>
@@ -5354,9 +5354,9 @@
             </model>
         </chassis>
         <chassis name='Cronus' unitType='Mek'>
-            <availability>CS:3,HL:3,Periphery.MW:4,Periphery.ME:4,FWL:3,WOB:3,MERC:4,Periphery:4</availability>
+            <availability>FWL:3,MERC:4,CS:3,WOB:3,Periphery:4,Periphery.MW:4,Periphery.ME:4,HL:3</availability>
             <model name='CNS-3M'>
-                <availability>General:4</availability>
+                <availability>IS:4,Periphery:4</availability>
             </model>
             <model name='CNS-5M'>
                 <availability>CS:0,PIR:4,IS:8</availability>
@@ -14590,7 +14590,7 @@
             </model>
         </chassis>
         <chassis name='Marshal' unitType='Mek'>
-            <availability>CC:5,MOC:5,FVC:4,Periphery.HR:4,Periphery.CM:4,Periphery.ME:3,MH:4,Periphery:2,TC:7</availability>
+            <availability>CC:5,Periphery:2,Periphery.HR:4,Periphery.CM:4,Periphery.ME:3,FVC:4,TC:7,MOC:5,MH:4</availability>
             <model name='MHL-2L'>
                 <availability>CC:5,MOC:4,PIR:4,TC:4</availability>
             </model>
@@ -14598,7 +14598,7 @@
                 <availability>MOC:3</availability>
             </model>
             <model name='MHL-X1'>
-                <availability>General:8</availability>
+                <availability>IS:8,Periphery:8</availability>
             </model>
         </chassis>
         <chassis name='Marten Scout VTOL' unitType='VTOL'>
@@ -22914,17 +22914,17 @@
             </model>
         </chassis>
         <chassis name='Uni' unitType='Mek'>
-            <availability>IS:4,FS:2,LA:5,CGS:3:3080,Periphery:3,Periphery.Deep:0,HL:3,PIR:5</availability>
+            <availability>IS:4,FS:2,LA:5,CGB.FRR:4,CGS:3:3080,Periphery:3,Periphery.Deep:0,HL:3,PIR:5</availability>
             <model name='ATAE-70 CargoMech'>
                 <roles>cargo,civilian</roles>
-                <availability>LA:8,FS:8,MERC:8,CGS:2+</availability>
+                <availability>LA:8,FS:8,MERC:8,CGB.FRR:8,CGS:2+</availability>
             </model>
             <model name='ATAE-70 MilitiaMech'>
                 <availability>IS:2-,CGS:3-,Periphery:3-,TC:2-,MOC:2-,HL:8,PIR:8</availability>
             </model>
             <model name='ATAE-70T CargoMech'>
                 <roles>cargo,support</roles>
-                <availability>IS:8,LA:8,CGS:8,Periphery:3+,TC:8,MOC:8,HL:2+:3076,PIR:2+</availability>
+                <availability>IS:8,LA:8,CGB.FRR:3+,CGS:8,Periphery:3+,TC:8,MOC:8,HL:2+:3076,PIR:2+</availability>
             </model>
         </chassis>
         <chassis name='Union C' unitType='Dropship'>
