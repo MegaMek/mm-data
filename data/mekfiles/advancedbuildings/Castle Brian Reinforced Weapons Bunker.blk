@@ -1,0 +1,567 @@
+#Castle Brian Reinforced Weapons Bunker.
+#Capital scale Construction Factor and armor from the source are converted to standard scale here
+#(x10), because MegaMek buildings have no capital scale. Classified as Fortress: Castle Brian is not
+#an implemented building class, and Fortress is the closest, halving damage taken.
+#Quarters, infantry compartments, industrial elevators and the subterranean level cannot be
+#represented - the building loader reads no transporters and no basements.
+
+<UnitType>
+BuildingEntity
+</UnitType>
+
+<Name>
+Castle Brian Reinforced Weapons Bunker
+</Name>
+
+<Model>
+(Standard)
+</Model>
+
+<year>
+2750
+</year>
+
+<originalBuildYear>
+2750
+</originalBuildYear>
+
+<type>
+IS Level 2
+</type>
+
+<motion_type>
+None
+</motion_type>
+
+<cruiseMP>
+0
+</cruiseMP>
+
+<armor>
+1500
+</armor>
+
+<Level 0 0.0,0.0,0.0 Equipment>
+Machine Gun (F)
+Machine Gun (F)
+Machine Gun (F)
+Machine Gun (F)
+IS Machine Gun Ammo:Shots600#
+Flamer (F)
+Field Kitchen
+FUSION PowerGenerator:SIZE:150.0
+</Level 0 0.0,0.0,0.0 Equipment>
+
+<Level 1 0.0,0.0,0.0 Equipment>
+ISAC20 (F)
+IS Ammo AC/20:Shots100#
+ISSRM6 (F)
+ISSRM6 (F)
+ISSRM6 (F)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+ISTAG (F)
+ISMediumPulseLaser (F)
+ISMediumPulseLaser (F)
+ISMediumPulseLaser (F)
+ISMediumPulseLaser (F)
+</Level 1 0.0,0.0,0.0 Equipment>
+
+<Level 2 0.0,0.0,0.0 Equipment>
+ISAntiMissileSystem (F)
+ISAntiMissileSystem (F)
+ISAntiMissileSystem (F)
+ISAntiMissileSystem (F)
+ISAMS Ammo:Shots120#
+</Level 2 0.0,0.0,0.0 Equipment>
+
+<Level 3 0.0,0.0,0.0 Equipment>
+</Level 3 0.0,0.0,0.0 Equipment>
+
+<Level 4 0.0,0.0,0.0 Equipment>
+ISERPPC (ST)
+ISERPPC (ST)
+ISERPPC (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+IS LB 10-X AC Ammo:Shots300#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots720#
+</Level 4 0.0,0.0,0.0 Equipment>
+
+<Level 0 1.0,0.0,-1.0 Equipment>
+Machine Gun (FL)
+Machine Gun (FL)
+Machine Gun (FL)
+Machine Gun (FL)
+IS Machine Gun Ammo:Shots600#
+Flamer (FL)
+Field Kitchen
+</Level 0 1.0,0.0,-1.0 Equipment>
+
+<Level 1 1.0,0.0,-1.0 Equipment>
+ISAC20 (FL)
+IS Ammo AC/20:Shots100#
+ISSRM6 (FL)
+ISSRM6 (FL)
+ISSRM6 (FL)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+ISTAG (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+</Level 1 1.0,0.0,-1.0 Equipment>
+
+<Level 2 1.0,0.0,-1.0 Equipment>
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAMS Ammo:Shots120#
+</Level 2 1.0,0.0,-1.0 Equipment>
+
+<Level 3 1.0,0.0,-1.0 Equipment>
+</Level 3 1.0,0.0,-1.0 Equipment>
+
+<Level 4 1.0,0.0,-1.0 Equipment>
+ISERPPC (ST)
+ISERPPC (ST)
+ISERPPC (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+IS LB 10-X AC Ammo:Shots300#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots720#
+</Level 4 1.0,0.0,-1.0 Equipment>
+
+<Level 0 0.0,1.0,-1.0 Equipment>
+</Level 0 0.0,1.0,-1.0 Equipment>
+
+<Level 1 0.0,1.0,-1.0 Equipment>
+</Level 1 0.0,1.0,-1.0 Equipment>
+
+<Level 2 0.0,1.0,-1.0 Equipment>
+</Level 2 0.0,1.0,-1.0 Equipment>
+
+<Level 3 0.0,1.0,-1.0 Equipment>
+</Level 3 0.0,1.0,-1.0 Equipment>
+
+<Level 4 0.0,1.0,-1.0 Equipment>
+ISLBXAC2 (ST)
+ISLBXAC2 (ST)
+ISLBXAC2 (ST)
+IS LB 2-X AC Ammo:Shots675#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots120#
+</Level 4 0.0,1.0,-1.0 Equipment>
+
+<Level 0 1.0,1.0,-2.0 Equipment>
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+IS Heavy Machine Gun Ammo:Shots600#
+Flamer (FR)
+Communications Equipment:SIZE:20.0
+MASH Operation Theater:SIZE:10.0
+Mobile Field Base
+</Level 0 1.0,1.0,-2.0 Equipment>
+
+<Level 1 1.0,1.0,-2.0 Equipment>
+ISLRM15 (FR)
+ISLRM15 (FR)
+ISLRM15 (FR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots480#
+ISERLargeLaser (FR)
+ISERLargeLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISSRM6 (FR)
+ISSRM6 (FR)
+ISSRM6 (FR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+</Level 1 1.0,1.0,-2.0 Equipment>
+
+<Level 2 1.0,1.0,-2.0 Equipment>
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAMS Ammo:Shots120#
+</Level 2 1.0,1.0,-2.0 Equipment>
+
+<Level 3 1.0,1.0,-2.0 Equipment>
+</Level 3 1.0,1.0,-2.0 Equipment>
+
+<Level 4 1.0,1.0,-2.0 Equipment>
+ISLongTom (ST)
+ISLongTom (ST)
+ISLongTom (ST)
+ISLongTomAmmo:Shots300#
+ISThumper (ST)
+ISThumper (ST)
+ISThumper (ST)
+ISThumperAmmo:Shots300#
+ISArrowIV (ST)
+ISArrowIV (ST)
+ISArrowIV (ST)
+ISArrowIVAmmo:Shots90#
+</Level 4 1.0,1.0,-2.0 Equipment>
+
+<Level 0 2.0,-1.0,-1.0 Equipment>
+Machine Gun (FL)
+Machine Gun (FL)
+Machine Gun (FL)
+Machine Gun (FL)
+IS Machine Gun Ammo:Shots600#
+Flamer (FL)
+Field Kitchen
+</Level 0 2.0,-1.0,-1.0 Equipment>
+
+<Level 1 2.0,-1.0,-1.0 Equipment>
+ISAC20 (FL)
+IS Ammo AC/20:Shots100#
+ISSRM6 (FL)
+ISSRM6 (FL)
+ISSRM6 (FL)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+ISTAG (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+ISMediumPulseLaser (FL)
+</Level 1 2.0,-1.0,-1.0 Equipment>
+
+<Level 2 2.0,-1.0,-1.0 Equipment>
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAntiMissileSystem (FL)
+ISAMS Ammo:Shots120#
+</Level 2 2.0,-1.0,-1.0 Equipment>
+
+<Level 3 2.0,-1.0,-1.0 Equipment>
+</Level 3 2.0,-1.0,-1.0 Equipment>
+
+<Level 4 2.0,-1.0,-1.0 Equipment>
+ISERPPC (ST)
+ISERPPC (ST)
+ISERPPC (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+IS LB 10-X AC Ammo:Shots300#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots720#
+</Level 4 2.0,-1.0,-1.0 Equipment>
+
+<Level 0 2.0,0.0,-2.0 Equipment>
+Communications Equipment:SIZE:20.0
+MASH Operation Theater:SIZE:10.0
+Mobile Field Base
+</Level 0 2.0,0.0,-2.0 Equipment>
+
+<Level 1 2.0,0.0,-2.0 Equipment>
+</Level 1 2.0,0.0,-2.0 Equipment>
+
+<Level 2 2.0,0.0,-2.0 Equipment>
+</Level 2 2.0,0.0,-2.0 Equipment>
+
+<Level 3 2.0,0.0,-2.0 Equipment>
+</Level 3 2.0,0.0,-2.0 Equipment>
+
+<Level 4 2.0,0.0,-2.0 Equipment>
+ISLBXAC2 (ST)
+ISLBXAC2 (ST)
+ISLBXAC2 (ST)
+IS LB 2-X AC Ammo:Shots675#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots120#
+</Level 4 2.0,0.0,-2.0 Equipment>
+
+<Level 0 1.0,2.0,-3.0 Equipment>
+</Level 0 1.0,2.0,-3.0 Equipment>
+
+<Level 1 1.0,2.0,-3.0 Equipment>
+ISERLargeLaser (FR)
+ISERLargeLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISMediumPulseLaser (FR)
+ISSRM6 (FR)
+ISSRM6 (FR)
+ISSRM6 (FR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+Heavy Machine Gun (FR)
+IS Heavy Machine Gun Ammo:Shots600#
+Flamer (FR)
+</Level 1 1.0,2.0,-3.0 Equipment>
+
+<Level 2 1.0,2.0,-3.0 Equipment>
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAntiMissileSystem (FR)
+ISAMS Ammo:Shots120#
+</Level 2 1.0,2.0,-3.0 Equipment>
+
+<Level 3 1.0,2.0,-3.0 Equipment>
+</Level 3 1.0,2.0,-3.0 Equipment>
+
+<Level 4 1.0,2.0,-3.0 Equipment>
+ISCruiseMissile120 (ST)
+ISCruiseMissile120 (ST)
+ISCruiseMissile120Ammo:Shots60#
+</Level 4 1.0,2.0,-3.0 Equipment>
+
+<Level 0 3.0,-1.0,-2.0 Equipment>
+Machine Gun (RL)
+Machine Gun (RL)
+Machine Gun (RL)
+Machine Gun (RL)
+IS Machine Gun Ammo:Shots600#
+Flamer (RL)
+Field Kitchen
+</Level 0 3.0,-1.0,-2.0 Equipment>
+
+<Level 1 3.0,-1.0,-2.0 Equipment>
+ISAC20 (RL)
+IS Ammo AC/20:Shots100#
+ISSRM6 (RL)
+ISSRM6 (RL)
+ISSRM6 (RL)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+ISTAG (RL)
+ISMediumPulseLaser (RL)
+ISMediumPulseLaser (RL)
+ISMediumPulseLaser (RL)
+ISMediumPulseLaser (RL)
+</Level 1 3.0,-1.0,-2.0 Equipment>
+
+<Level 2 3.0,-1.0,-2.0 Equipment>
+ISAntiMissileSystem (RL)
+ISAntiMissileSystem (RL)
+ISAntiMissileSystem (RL)
+ISAntiMissileSystem (RL)
+ISAMS Ammo:Shots120#
+</Level 2 3.0,-1.0,-2.0 Equipment>
+
+<Level 3 3.0,-1.0,-2.0 Equipment>
+</Level 3 3.0,-1.0,-2.0 Equipment>
+
+<Level 4 3.0,-1.0,-2.0 Equipment>
+ISERPPC (ST)
+ISERPPC (ST)
+ISERPPC (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+IS LB 10-X AC Ammo:Shots300#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots720#
+</Level 4 3.0,-1.0,-2.0 Equipment>
+
+<Level 0 3.0,0.0,-3.0 Equipment>
+Machine Gun (RR)
+Machine Gun (RR)
+Machine Gun (RR)
+Machine Gun (RR)
+IS Machine Gun Ammo:Shots600#
+Flamer (RR)
+</Level 0 3.0,0.0,-3.0 Equipment>
+
+<Level 1 3.0,0.0,-3.0 Equipment>
+ISAC20 (RR)
+IS Ammo AC/20:Shots100#
+ISSRM6 (RR)
+ISSRM6 (RR)
+ISSRM6 (RR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+ISTAG (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+</Level 1 3.0,0.0,-3.0 Equipment>
+
+<Level 2 3.0,0.0,-3.0 Equipment>
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAMS Ammo:Shots120#
+</Level 2 3.0,0.0,-3.0 Equipment>
+
+<Level 3 3.0,0.0,-3.0 Equipment>
+</Level 3 3.0,0.0,-3.0 Equipment>
+
+<Level 4 3.0,0.0,-3.0 Equipment>
+ISERPPC (ST)
+ISERPPC (ST)
+ISERPPC (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+ISLBXAC10 (ST)
+IS LB 10-X AC Ammo:Shots300#
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISLRM15 (ST)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots720#
+</Level 4 3.0,0.0,-3.0 Equipment>
+
+<Level 0 2.0,1.0,-3.0 Equipment>
+Heavy Machine Gun (RR)
+Heavy Machine Gun (RR)
+Heavy Machine Gun (RR)
+Heavy Machine Gun (RR)
+IS Heavy Machine Gun Ammo:Shots600#
+Flamer (RR)
+Field Kitchen
+</Level 0 2.0,1.0,-3.0 Equipment>
+
+<Level 1 2.0,1.0,-3.0 Equipment>
+ISLRM15 (RR)
+ISLRM15 (RR)
+ISLRM15 (RR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS LRM 15 Ammo:Shots480#
+ISERLargeLaser (RR)
+ISERLargeLaser (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+ISMediumPulseLaser (RR)
+ISSRM6 (RR)
+ISSRM6 (RR)
+ISSRM6 (RR)
+ISArtemisIV
+ISArtemisIV
+ISArtemisIV
+IS SRM 6 Ammo:Shots450#
+</Level 1 2.0,1.0,-3.0 Equipment>
+
+<Level 2 2.0,1.0,-3.0 Equipment>
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAntiMissileSystem (RR)
+ISAMS Ammo:Shots120#
+</Level 2 2.0,1.0,-3.0 Equipment>
+
+<Level 3 2.0,1.0,-3.0 Equipment>
+</Level 3 2.0,1.0,-3.0 Equipment>
+
+<Level 4 2.0,1.0,-3.0 Equipment>
+ISLongTom (ST)
+ISLongTom (ST)
+ISLongTom (ST)
+ISLongTomAmmo:Shots300#
+ISThumper (ST)
+ISThumper (ST)
+ISThumper (ST)
+ISThumperAmmo:Shots300#
+ISArrowIV (ST)
+ISArrowIV (ST)
+ISArrowIV (ST)
+ISArrowIVAmmo:Shots90#
+</Level 4 2.0,1.0,-3.0 Equipment>
+
+<height>
+5
+</height>
+
+<cf>
+1000
+</cf>
+
+<building_class>
+2
+</building_class>
+
+<building_type>
+4
+</building_type>
+
+<source>
+TO:AR - Castle Brian
+</source>
+
+<coords>
+0.0,0.0,0.0
+1.0,0.0,-1.0
+0.0,1.0,-1.0
+1.0,1.0,-2.0
+2.0,-1.0,-1.0
+2.0,0.0,-2.0
+1.0,2.0,-3.0
+3.0,-1.0,-2.0
+3.0,0.0,-3.0
+2.0,1.0,-3.0
+</coords>
