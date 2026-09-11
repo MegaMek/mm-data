@@ -16,127 +16,150 @@
 # affiliated with Microsoft.
 
 {
-    "name": "Crowd Control",
-    "stratConScenarioType": "NONE",
-    "shortBriefing": "Solve the rioter problem. Permanently.",
-    "detailedBriefing": "Civilian protesters are assembling in one of our settlements. Unrest and civil disobedience will not be tolerated. Deploy security elements to establish a secure perimeter, enforce a curfew, and deal with the agitators.\n\nYou are authorized to use lethal measures to disperse crowds and conduct targeted arrests of those inciting violence. Give them a whiff of grapeshot they won't forget.\n\nThe victor will control the battlefield; ensure order is reestablished.",
-    "isHostileFacility": false,
-    "isAlliedFacility": false,
-    "isSuitedForAmbushes": false,
-    "isSuitedForBungledPatrols": false,
-    "battlefieldControl": "VICTOR",
-    "mapParameters": {
-        "baseWidth": 0,
-        "baseHeight": 0,
-        "widthScalingIncrement": 5,
-        "heightScalingIncrement": 5,
-        "additionalMapSheetTall": 1,
-        "additionalMapSheetWide": 0,
-        "allowRotation": false,
-        "useStandardAtBSizing": true,
-        "mapLocation": "SpecificGroundTerrain",
-        "allowedTerrainTypes": [
-            "Urban",
-            "ColdUrban",
-            "HotUrban"
-        ]
-    },
-    "scenarioModifiers": [
-"Rookies.json"
-    ],
-    "scenarioForces": {
-        "Player": {
-            "forceAlignment": 0,
-            "generationMethod": 0,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                6
-            ],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": true,
-            "contributesToUnitCount": true,
-            "forceName": "Player",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 1,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        },
-        "Civilians": {
-            "forceAlignment": 2,
-            "generationMethod": 6,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                10
-            ],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": 3,
-            "canReinforceLinked": false,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "Civilians",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 5,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        }
-    },
-    "scenarioObjectives": [
-        {
-            "objectiveCriterion": "ForceWithdraw",
-            "description": "",
-            "destinationEdge": "NONE",
-            "percentage": 20,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": true,
-            "timeLimit": null,
-            "timeLimitScaleFactor": null,
-            "associatedForceNames": [
-                "Civilians",
-                "OpFor"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 1
-                }
-            ],
-            "failureEffects": [],
-            "additionalDetails": []
-        }
-    ]
+"name": "Crowd Control",
+"stratConScenarioType": "NONE",
+"shortBriefing": "Solve the rioter problem. Permanently.",
+"detailedBriefing": "Civilian protesters are assembling. Unrest and civil disobedience will not be tolerated. You are authorized to use lethal measures.\n\nGive them a whiff of grapeshot they won't forget.",
+"isHostileFacility": false,
+"isAlliedFacility": false,
+"isSuitedForAmbushes": false,
+"isSuitedForBungledPatrols": false,
+"battlefieldControl": "VICTOR",
+"mapParameters": {
+"baseWidth": 0,
+"baseHeight": 0,
+"widthScalingIncrement": 5,
+"heightScalingIncrement": 5,
+"additionalMapSheetTall": 0,
+"additionalMapSheetWide": 0,
+"allowRotation": false,
+"useStandardAtBSizing": true,
+"mapLocation": "AllGroundTerrain",
+"allowedTerrainTypes": ["ColdUrban", "HotUrban", "Urban"]
+},
+"scenarioModifiers": [
+],
+"scenarioForces": {
+"Player": {
+"forceAlignment": 0,
+"generationMethod": 0,
+"forceMultiplier": 1.0,
+"deploymentZones": [2, 4, 6, 8
+],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": true,
+"contributesToUnitCount": true,
+"forceName": "Player",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"Civilians": {
+"forceAlignment": 2,
+"generationMethod": 3,
+"forceMultiplier": 0.1,
+"deploymentZones": [10],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": 3,
+"canReinforceLinked": false,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Civilians",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 12,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+"CIVILIAN"
+]
+}
+},
+"scenarioObjectives": [ {
+"objectiveCriterion": "Destroy",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 33,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Civilians" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+}, {
+"effectType": "ContractMoraleUpdate",
+"effectScaling": "Fixed",
+"howMuch": -1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+}, {
+"effectType": "ContractMoraleUpdate",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "Preserve",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ]
 }

@@ -8,6 +8,18 @@ etc. are all here and normalized.
 This will officially release with the 0.50.07 Version of the MegaMek Suite. Upon release, if you have concerns about
 your assets within this package, please email <megamekteam@gmail.com>
 
+## Formatting
+
+Text files must end with a newline and carry no trailing whitespace, which is what `.editorconfig` already asks your
+editor for. The build checks this on every pull request and lists every violation in one go. Before you push:
+
+```
+./gradlew spotlessApply
+```
+
+That fixes every data file you changed. `./gradlew spotlessCheck` reports the same violations without changing
+anything.
+
 ## File Headers
 
 When adding files to this repository, ensure the following header is at the top with respect to the file format.

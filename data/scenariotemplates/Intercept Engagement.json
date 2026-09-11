@@ -16,164 +16,204 @@
 # affiliated with Microsoft.
 
 {
-    "name": "Intercept Engagement",
-    "stratConScenarioType": "NONE",
-    "shortBriefing": "Break through or destroy intercepting force.",
-    "detailedBriefing": "One of your forces has been intercepted by a large enemy contingent, cutting off their path to safety. The enemy intends to encircle and destroy your units before they can regroup. Your mission is to break through their lines and reach safety or destroy at least 50% of their forces to render them combat ineffective.\n\nThe enemy holds the advantage in numbers and positioning, but they are not unbeatable. A direct breakthrough will require speed, coordination, and decisive strikes against their weakest points. If a clean escape is not possible, you must shift to a battle of attrition—eliminating 50% of their forces will ensure they can no longer threaten your retreat.\n\nThe enemy will control the battlefield at the end of the engagement, meaning no recovery of fallen assets will be possible. Time is against you—break out before they close the trap, or break them so thoroughly that they can no longer fight.",
-    "isHostileFacility": false,
-    "isAlliedFacility": false,
-    "isSuitedForAmbushes": true,
-    "isSuitedForBungledPatrols": true,
-    "battlefieldControl": "ENEMY",
-    "mapParameters": {
-        "baseWidth": 0,
-        "baseHeight": 0,
-        "widthScalingIncrement": 5,
-        "heightScalingIncrement": 5,
-        "additionalMapSheetTall": 1,
-        "additionalMapSheetWide": 0,
-        "allowRotation": false,
-        "useStandardAtBSizing": true,
-        "mapLocation": "SpecificGroundTerrain",
-        "allowedTerrainTypes": [
-            "Hills",
-            "ColdHills",
-            "HotHillsDry",
-            "HotHillsWet"
-        ]
-    },
-    "scenarioModifiers": [],
-    "scenarioForces": {
-        "Player": {
-            "forceAlignment": 0,
-            "generationMethod": 0,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                6
-            ],
-            "destinationZone": 6,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": true,
-            "contributesToUnitCount": true,
-            "forceName": "Player",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 1,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        },
-        "OpFor": {
-            "forceAlignment": 2,
-            "generationMethod": 1,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "OpFor",
-            "syncedForceName": "Player",
-            "syncDeploymentType": "OppositeArc",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 2,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 5,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": [
-                "RAIDER",
-                "CAVALRY"
-            ]
-        }
-    },
-    "scenarioObjectives": [
-        {
-            "objectiveCriterion": "ReachMapEdge",
-            "description": "",
-            "destinationEdge": "NORTH",
-            "percentage": 50,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": true,
-            "timeLimit": 0,
-            "timeLimitScaleFactor": null,
-            "associatedForceNames": [
-                "Player"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "failureEffects": [
-                {
-                    "effectType": "ScenarioDefeat",
-                    "effectScaling": "Fixed",
-                    "howMuch": 1
-                }
-            ],
-            "additionalDetails": [
-                "Crippled units do not count towards this objective."
-            ]
-        },
-        {
-            "objectiveCriterion": "Destroy",
-            "description": "",
-            "destinationEdge": "NONE",
-            "percentage": 50,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": true,
-            "timeLimit": 0,
-            "timeLimitScaleFactor": null,
-            "associatedForceNames": [
-                "OpFor"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "failureEffects": [
-                {
-                    "effectType": "ScenarioDefeat",
-                    "effectScaling": "Fixed",
-                    "howMuch": 1
-                }
-            ],
-            "additionalDetails": []
-        }
-    ]
+"name": "Intercept Engagement",
+"stratConScenarioType": "NONE",
+"shortBriefing": "Break through or destroy intercepting force.",
+"detailedBriefing": "One of your forces has been intercepted by a large enemy contingent, cutting off their path to safety. You must escape the growing encirclement.\n\n[Objective Note: you only need to accomplish one of the two objectives.]",
+"isHostileFacility": false,
+"isAlliedFacility": false,
+"isSuitedForAmbushes": true,
+"isSuitedForBungledPatrols": true,
+"battlefieldControl": "ENEMY",
+"mapParameters": {
+"baseWidth": 0,
+"baseHeight": 0,
+"widthScalingIncrement": 5,
+"heightScalingIncrement": 5,
+"additionalMapSheetTall": 1,
+"additionalMapSheetWide": 0,
+"allowRotation": false,
+"useStandardAtBSizing": true,
+"mapLocation": "AllGroundTerrain",
+"allowedTerrainTypes": ["ColdHills", "Hills", "HotHillsDry", "HotHillsWet"]
+},
+"scenarioModifiers": [
+],
+"scenarioForces": {
+"Player": {
+"forceAlignment": 0,
+"generationMethod": 0,
+"forceMultiplier": 1.0,
+"deploymentZones": [10],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": true,
+"contributesToUnitCount": true,
+"forceName": "Player",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"OpFor": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 0.5,
+"deploymentZones": [10],
+"destinationZone": 6,
+"retreatThreshold": 33,
+"allowedUnitType": -2,
+"canReinforceLinked": true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "OpFor",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 1,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"Northern Encirclement": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 0.75,
+"deploymentZones": [2],
+"destinationZone": 6,
+"retreatThreshold": 33,
+"allowedUnitType": -2,
+"canReinforceLinked": true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Northern Encirclement",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": -3,
+"maxWeightClass": 2,
+"minWeightClass": 1,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+"RAIDER", "CAVALRY"]
+},
+"Southern Encirclement": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 0.75,
+"deploymentZones": [6],
+"destinationZone": 6,
+"retreatThreshold": 33,
+"allowedUnitType": -2,
+"canReinforceLinked": true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Southern Encirclement",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": -3,
+"maxWeightClass": 2,
+"minWeightClass": 1,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+"RAIDER", "CAVALRY"]
+}
+},
+"scenarioObjectives": [ {
+"objectiveCriterion": "ReachMapEdge",
+"description": "",
+"destinationEdge": "NORTH",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 2
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "ReachMapEdge",
+"description": "",
+"destinationEdge": "SOUTH",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 2
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ]
 }

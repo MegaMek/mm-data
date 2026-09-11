@@ -16,134 +16,195 @@
 # affiliated with Microsoft.
 
 {
-    "name": "Screening Action",
-    "stratConScenarioType": "NONE",
-    "shortBriefing": "Hold the line as a rearguard and stop the enemy from breaking through.",
-    "detailedBriefing": "The main body is pulling back, and you are the rearguard. A superior enemy force is pressing to break through and turn our withdrawal into a rout. You cannot stop them all—but you must stop enough of them, long enough, for the rest to get clear.\n\nHold the line and deny them the breakthrough. This is a delaying fight, not a stand-up battle; trading ground for time is acceptable, letting them stream past you is not. Keep your formation between them and the open road behind you.\n\nPrevent the bulk of the enemy from breaking through. Buy the time, then get out yourself.",
-    "isHostileFacility": false,
-    "isAlliedFacility": false,
-    "isSuitedForAmbushes": false,
-    "isSuitedForBungledPatrols": false,
-    "battlefieldControl": "ENEMY",
-    "mapParameters": {
-        "baseWidth": 0,
-        "baseHeight": 0,
-        "widthScalingIncrement": 5,
-        "heightScalingIncrement": 5,
-        "additionalMapSheetTall": 1,
-        "additionalMapSheetWide": 0,
-        "allowRotation": false,
-        "useStandardAtBSizing": true,
-        "mapLocation": "SpecificGroundTerrain",
-        "allowedTerrainTypes": [
-            "Hills",
-            "ColdHills",
-            "HotHillsDry",
-            "HotHillsWet"
-        ]
-    },
-    "scenarioModifiers": [],
-    "scenarioForces": {
-        "Player": {
-            "forceAlignment": 0,
-            "generationMethod": 0,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                10
-            ],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": true,
-            "contributesToUnitCount": true,
-            "forceName": "Player",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 1,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        },
-        "OpFor": {
-            "forceAlignment": 2,
-            "generationMethod": 1,
-            "forceMultiplier": 1.25,
-            "deploymentZones": [
-                6
-            ],
-            "destinationZone": 2,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "OpFor",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 5,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": [
-                "RAIDER",
-                "CAVALRY"
-            ]
-        }
-    },
-    "scenarioObjectives": [
-        {
-            "objectiveCriterion": "PreventReachMapEdge",
-            "description": "",
-            "destinationEdge": "NORTH",
-            "percentage": 50,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": false,
-            "timeLimit": null,
-            "timeLimitScaleFactor": 2,
-            "associatedForceNames": [
-                "OpFor"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "failureEffects": [
-                {
-                    "effectType": "ScenarioDefeat",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "additionalDetails": []
-        }
-    ]
+"name": "Screening Action",
+"stratConScenarioType": "NONE",
+"shortBriefing": "Hold the line as a rearguard and stop the enemy from breaking through.",
+"detailedBriefing": "The main body is pulling back, and you are the rearguard. A superior enemy force is pressing to break through and turn our withdrawal into a rout. You cannot stop them all but you must stop enough of them, long enough, for the rest to get clear.",
+"isHostileFacility": false,
+"isAlliedFacility": false,
+"isSuitedForAmbushes": false,
+"isSuitedForBungledPatrols": false,
+"battlefieldControl": "ENEMY",
+"mapParameters": {
+"baseWidth": 0,
+"baseHeight": 0,
+"widthScalingIncrement": 5,
+"heightScalingIncrement": 5,
+"additionalMapSheetTall": 0,
+"additionalMapSheetWide": 0,
+"allowRotation": false,
+"useStandardAtBSizing": true,
+"mapLocation": "AllGroundTerrain",
+"allowedTerrainTypes": ["ColdHills", "Hills", "HotHillsDry", "HotHillsWet"]
+},
+"scenarioModifiers": [
+],
+"scenarioForces": {
+"Player": {
+"forceAlignment": 0,
+"generationMethod": 0,
+"forceMultiplier": 1.0,
+"deploymentZones": [11],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": true,
+"contributesToUnitCount": true,
+"forceName": "Player",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"Retreating Forces": {
+"forceAlignment": 1,
+"generationMethod": 1,
+"forceMultiplier": 0.5,
+"deploymentZones": [],
+"destinationZone": 6,
+"retreatThreshold": 100,
+"allowedUnitType": -2,
+"canReinforceLinked" : false,
+"contributesToBV": false,
+"contributesToUnitCount": true,
+"forceName": "Retreating Forces",
+"syncedForceName": "Player",
+"syncDeploymentType" : "SameEdge",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize" : true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude" : 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [
+],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": []
+},
+"OpFor": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 1.25,
+"deploymentZones": [],
+"destinationZone": 5,
+"retreatThreshold": 100,
+"allowedUnitType": -2,
+"canReinforceLinked" : false,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "OpFor",
+"syncedForceName": "Player",
+"syncDeploymentType" : "SameEdge",
+"syncRetreatThreshold": false,
+"arrivalTurn": -3,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize" : true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude" : 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [
+],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": []
+}
+},
+"scenarioObjectives": [ {
+"objectiveCriterion": "ReachMapEdge",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Retreating Forces" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "Destroy",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 33,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["OpFor" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "Preserve",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 50,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ]
 }

@@ -16,154 +16,140 @@
 # affiliated with Microsoft.
 
 {
-    "name": "Decoy Interception",
-    "stratConScenarioType": "NONE",
-    "shortBriefing": "Intercept enemy, act as decoy.",
-    "detailedBriefing": "Your mission is to intercept and engage enemy forces to draw them away from their primary objective. Our intelligence indicates that they are moving to screen a greater strategic move. Destroy to OpFor before their allies can achieve their objective.",
-    "isHostileFacility": false,
-    "isAlliedFacility": false,
-    "isSuitedForAmbushes": false,
-    "isSuitedForBungledPatrols": false,
-    "battlefieldControl": "VICTOR",
-    "mapParameters": {
-        "baseWidth": 0,
-        "baseHeight": 0,
-        "widthScalingIncrement": 5,
-        "heightScalingIncrement": 5,
-        "additionalMapSheetTall": 0,
-        "additionalMapSheetWide": 0,
-        "allowRotation": false,
-        "useStandardAtBSizing": true,
-        "mapLocation": "SpecificGroundTerrain",
-        "allowedTerrainTypes": [
-            "ColdHills",
-            "Hills",
-            "HotHillsDry",
-            "HotHillsWet"
-        ]
-    },
-    "scenarioModifiers": [],
-    "scenarioForces": {
-        "Player": {
-            "forceAlignment": 0,
-            "generationMethod": 0,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                2,
-                4,
-                6,
-                8
-            ],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": false,
-            "contributesToBV": true,
-            "contributesToUnitCount": true,
-            "forceName": "Player",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 1,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": false,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        },
-        "OpFor": {
-            "forceAlignment": 2,
-            "generationMethod": 1,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [],
-            "destinationZone": 5,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": false,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "OpFor",
-            "syncedForceName": "Player",
-            "syncDeploymentType": "OppositeEdge",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 1,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 5,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": [
-                "RECON",
-                "RAIDER",
-                "CAVALRY"
-            ]
-        }
-    },
-    "scenarioObjectives": [
-        {
-            "objectiveCriterion": "Custom",
-            "description": "Destroy the OpFor within 12 turns. +1 SVP if succeeded, -1 SVP if failed.",
-            "destinationEdge": "NONE",
-            "percentage": 1,
-            "fixedAmount": null,
-            "timeLimitType": "Fixed",
-            "timeLimitAtMost": true,
-            "timeLimit": 12,
-            "timeLimitScaleFactor": 2,
-            "associatedForceNames": [
-                "OpFor"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 1
-                }
-            ],
-            "failureEffects": [
-                {
-                    "effectType": "ScenarioDefeat",
-                    "effectScaling": "Fixed",
-                    "howMuch": 1
-                }
-            ],
-            "additionalDetails": []
-        },
-        {
-            "objectiveCriterion": "ForceWithdraw",
-            "description": "",
-            "destinationEdge": "NONE",
-            "percentage": 50,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": true,
-            "timeLimit": null,
-            "timeLimitScaleFactor": null,
-            "associatedForceNames": [
-                "OpFor"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [],
-            "failureEffects": [],
-            "additionalDetails": []
-        }
-    ]
+"name": "Decoy Interception",
+"stratConScenarioType": "NONE",
+"shortBriefing": "Reinforce allied forces.",
+"detailedBriefing": "Enemy forces have engaged our picket line. Move in to destroy them.",
+"isHostileFacility": false,
+"isAlliedFacility": false,
+"isSuitedForAmbushes": false,
+"isSuitedForBungledPatrols": false,
+"battlefieldControl": "VICTOR",
+"mapParameters": {
+"baseWidth": 0,
+"baseHeight": 0,
+"widthScalingIncrement": 5,
+"heightScalingIncrement": 5,
+"additionalMapSheetTall": 1,
+"additionalMapSheetWide": 0,
+"allowRotation": false,
+"useStandardAtBSizing": true,
+"mapLocation": "AllGroundTerrain",
+"allowedTerrainTypes": ["ColdHills", "Hills", "HotHillsDry", "HotHillsWet"]
+},
+"scenarioModifiers": [
+],
+"scenarioForces": {
+"Player": {
+"forceAlignment": 0,
+"generationMethod": 0,
+"forceMultiplier": 1.0,
+"deploymentZones": [2],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": true,
+"contributesToUnitCount": true,
+"forceName": "Player",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"OpFor": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 1.0,
+"deploymentZones": [10],
+"destinationZone": 1,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "OpFor",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 3,
+"minWeightClass": 1,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+"RECON", "RAIDER", "CAVALRY"]
+}
+},
+"scenarioObjectives": [ {
+"objectiveCriterion": "PreventReachMapEdge",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["OpFor" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "Preserve",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ]
 }

@@ -16,171 +16,175 @@
 # affiliated with Microsoft.
 
 {
-    "name": "Rolling Thunder",
-    "stratConScenarioType": "NONE",
-    "shortBriefing": "Punch through a defense in depth, breaking each line in turn.",
-    "detailedBriefing": "The enemy has laid out their defense in depth—a forward line to blunt you and a second echelon waiting behind it. A single hard push will not carry the day; you have to break through layer by layer and keep the momentum going.\n\nDo not let the forward line pin you long enough for the rear echelon to reposition. Hit the first line hard, punch through, and drive on to the far edge before they can consolidate. Stalling in the middle is how a fighting advance turns into a grave.\n\nBreak all the way through and get the force off the far edge.",
-    "isHostileFacility": false,
-    "isAlliedFacility": false,
-    "isSuitedForAmbushes": false,
-    "isSuitedForBungledPatrols": false,
-    "battlefieldControl": "ENEMY",
-    "mapParameters": {
-        "baseWidth": 0,
-        "baseHeight": 0,
-        "widthScalingIncrement": 5,
-        "heightScalingIncrement": 5,
-        "additionalMapSheetTall": 2,
-        "additionalMapSheetWide": 0,
-        "allowRotation": false,
-        "useStandardAtBSizing": true,
-        "mapLocation": "SpecificGroundTerrain",
-        "allowedTerrainTypes": [
-            "Plains",
-            "Steppe",
-            "Savannah",
-            "Tundra",
-            "SnowField"
-        ]
-    },
-    "scenarioModifiers": [],
-    "scenarioForces": {
-        "Player": {
-            "forceAlignment": 0,
-            "generationMethod": 0,
-            "forceMultiplier": 1.0,
-            "deploymentZones": [
-                6
-            ],
-            "destinationZone": 2,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": true,
-            "contributesToUnitCount": true,
-            "forceName": "Player",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 1,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": []
-        },
-        "Rearguard": {
-            "forceAlignment": 2,
-            "generationMethod": 1,
-            "forceMultiplier": 0.6,
-            "deploymentZones": [
-                2
-            ],
-            "destinationZone": 6,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "Rearguard",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 5,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": [
-                "FIRE_SUPPORT",
-                "SR_FIRE_SUPPORT"
-            ]
-        },
-        "Vanguard": {
-            "forceAlignment": 2,
-            "generationMethod": 1,
-            "forceMultiplier": 0.6,
-            "deploymentZones": [
-                10
-            ],
-            "destinationZone": 6,
-            "retreatThreshold": 50,
-            "allowedUnitType": -2,
-            "canReinforceLinked": true,
-            "contributesToBV": false,
-            "contributesToUnitCount": false,
-            "forceName": "Vanguard",
-            "syncedForceName": null,
-            "syncDeploymentType": "None",
-            "syncRetreatThreshold": false,
-            "arrivalTurn": 0,
-            "maxWeightClass": 4,
-            "minWeightClass": 0,
-            "contributesToMapSize": true,
-            "actualDeploymentZone": -1,
-            "fixedUnitCount": 0,
-            "generationOrder": 4,
-            "allowAeroBombs": false,
-            "startingAltitude": 0,
-            "useArtillery": false,
-            "deployOffBoard": false,
-            "objectiveLinkedForces": [],
-            "subjectToRandomRemoval": true,
-            "fixedMul": null,
-            "forceRoleStrings": [
-                "SR_FIRE_SUPPORT",
-                "CAVALRY"
-            ]
-        }
-    },
-    "scenarioObjectives": [
-        {
-            "objectiveCriterion": "ReachMapEdge",
-            "description": "",
-            "destinationEdge": "NORTH",
-            "percentage": 50,
-            "fixedAmount": null,
-            "timeLimitType": "None",
-            "timeLimitAtMost": false,
-            "timeLimit": null,
-            "timeLimitScaleFactor": 2,
-            "associatedForceNames": [
-                "Player"
-            ],
-            "associatedUnitIDs": [],
-            "successEffects": [
-                {
-                    "effectType": "ScenarioVictory",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "failureEffects": [
-                {
-                    "effectType": "ScenarioDefeat",
-                    "effectScaling": "Fixed",
-                    "howMuch": 2
-                }
-            ],
-            "additionalDetails": []
-        }
-    ]
+"name": "Rolling Thunder",
+"stratConScenarioType": "NONE",
+"shortBriefing": "Punch through a defense in depth, breaking each line in turn.",
+"detailedBriefing": "The enemy has laid out their defense in depth a forward line to blunt you and a second echelon waiting behind it. A single hard push will not carry the day; you have to break through layer by layer and keep the momentum going.",
+"isHostileFacility": false,
+"isAlliedFacility": false,
+"isSuitedForAmbushes": false,
+"isSuitedForBungledPatrols": false,
+"battlefieldControl": "ENEMY",
+"mapParameters": {
+"baseWidth": 0,
+"baseHeight": 0,
+"widthScalingIncrement": 5,
+"heightScalingIncrement": 5,
+"additionalMapSheetTall": 1,
+"additionalMapSheetWide": 0,
+"allowRotation": false,
+"useStandardAtBSizing": true,
+"mapLocation": "AllGroundTerrain",
+"allowedTerrainTypes": ["Plains", "Savannah", "SnowField", "Steppe", "Tundra"]
+},
+"scenarioModifiers": [
+],
+"scenarioForces": {
+"Player": {
+"forceAlignment": 0,
+"generationMethod": 0,
+"forceMultiplier": 1.0,
+"deploymentZones": [2, 4, 6, 8
+],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": false,
+"contributesToBV": true,
+"contributesToUnitCount": true,
+"forceName": "Player",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 1,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": false,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+},
+"Rearguard": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 0.65,
+"deploymentZones": [],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked" : true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Rearguard",
+"syncedForceName": "Player",
+"syncDeploymentType" : "OppositeEdge",
+"syncRetreatThreshold": false,
+"arrivalTurn": -3,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize" : true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 5,
+"allowAeroBombs": false,
+"startingAltitude" : 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [
+],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": []
+},
+"Vanguard": {
+"forceAlignment": 2,
+"generationMethod": 1,
+"forceMultiplier": 0.65,
+"deploymentZones": [10],
+"destinationZone": 5,
+"retreatThreshold": 50,
+"allowedUnitType": -2,
+"canReinforceLinked": true,
+"contributesToBV": false,
+"contributesToUnitCount": false,
+"forceName": "Vanguard",
+"syncedForceName": null,
+"syncDeploymentType": "None",
+"syncRetreatThreshold": false,
+"arrivalTurn": 0,
+"maxWeightClass": 4,
+"minWeightClass": 0,
+"contributesToMapSize": true,
+"actualDeploymentZone": -1,
+"fixedUnitCount": 0,
+"generationOrder": 4,
+"allowAeroBombs": false,
+"startingAltitude": 0,
+"useArtillery": false,
+"deployOffBoard": false,
+"objectiveLinkedForces": [],
+"subjectToRandomRemoval": true,
+"fixedMul": null,
+"forceRoleStrings": [
+]
+}
+},
+"scenarioObjectives": [ {
+"objectiveCriterion": "Destroy",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 33,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Rearguard", "Vanguard"
+],
+"associatedUnitIDs": [
+],
+"successEffects" : [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+}, {
+"objectiveCriterion": "Preserve",
+"description": "",
+"destinationEdge": "NONE",
+"percentage": 66,
+"fixedAmount": null,
+"timeLimitType": "None",
+"timeLimitAtMost": true,
+"timeLimit": null,
+"timeLimitScaleFactor": null,
+"associatedForceNames": ["Player" ],
+"associatedUnitIDs": [],
+"successEffects": [ {
+"effectType": "ScenarioVictory",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"failureEffects": [ {
+"effectType": "ScenarioDefeat",
+"effectScaling": "Fixed",
+"howMuch": 1
+} ],
+"additionalDetails": []
+} ]
 }

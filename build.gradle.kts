@@ -8,6 +8,7 @@
 plugins {
     checkstyle
     java
+    id("com.diffplug.spotless") version "8.10.1"
 }
 
 sourceSets {
@@ -30,6 +31,41 @@ tasks.withType(Checkstyle::class.java).configureEach {
         exclude("**/*.psd", "**/*.PSD")
     })
     configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+}
+
+// Hygiene checks for the text data files: trailing whitespace and a final newline, the two things .editorconfig
+// already asks every editor for. `./gradlew spotlessCheck` reports every violation in one run; `./gradlew
+// spotlessApply` fixes them all. The Checkstyle workflow runs the check as its first step on every PR.
+// Same setup as MegaMek, MegaMekLab and MekHQ, minus the Java import rules that do not apply here.
+spotless {
+    // Checked explicitly by CI rather than as part of `build`, so a plain build stays fast and works in a shallow
+    // checkout that has no origin/main to ratchet against.
+    isEnforceCheck = false
+
+    // Until the whole tree has been formatted once, only look at files that differ from origin/main. Pass
+    // -PspotlessFullTree to format everything (used for the one-time reformat and to measure it).
+    if (!project.hasProperty("spotlessFullTree")) {
+        ratchetFrom("origin/main")
+    }
+
+    format("data") {
+        // Every text format in the tree except .blk (below). Images, fonts, sounds and archives are left alone.
+        target(
+            "data/**/*.txt", "data/**/*.yml", "data/**/*.yaml", "data/**/*.json", "data/**/*.xml",
+            "data/**/*.csv", "data/**/*.mtf", "data/**/*.board", "data/**/*.mms",
+            "data/**/*.tileinc", "data/**/*.mul", "data/**/*.xsd", "data/**/*.md",
+            "*.md", "*.kts", "config/**/*.xml"
+        )
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+
+    // The BLK writer in MegaMek ends every unit file with a blank line (6,719 of the 6,722 in the tree), so the
+    // final-newline rule would fight MegaMekLab on every saved unit. Only trailing whitespace is checked here.
+    format("blk") {
+        target("data/**/*.blk")
+        trimTrailingWhitespace()
+    }
 }
 
 var stagingFolder = File(project.layout.buildDirectory.get().toString(), "staging")
