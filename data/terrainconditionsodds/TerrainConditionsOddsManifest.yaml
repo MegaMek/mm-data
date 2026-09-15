@@ -1,0 +1,658 @@
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+# for a given key the chance is value / sum(odds values)
+# example 10 / sum(100) = 0.1 or 10%
+# mekhq.log contains TerrainConditionsOddsManifest validations to help find errors; runs once on startup
+# every biome map type (see StratConBiomeManifest) should appear exactly once per condition type
+
+terrainConditionsOdds:
+  - type: Light
+    name: standard
+    terrain:
+      - AGRICULTURE
+      - ArcticDesert
+      - ArcticDesertFacility
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdSea
+      - ColdUrban
+      - ColdUrbanFacility
+      - Convoy
+      - Desert
+      - DesertFacility
+      - DropZone
+      - FarmlandFacility
+      - Forest
+      - ForestFacility
+      - FrozenFacility
+      - FrozenSea
+      - GrayLunar
+      - GrayLunarFacility
+      - HILLS
+      - Hills
+      - HillsFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotSea
+      - HotUrban
+      - HotUrbanFacility
+      - Jungle
+      - JungleFacility
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - NEUTRAL
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Sea
+      - SnowField
+      - SnowFieldFacility
+      - Steppe
+      - SteppeFacility
+      - Swamp
+      - SwampFacility
+      - TemperateFacility
+      - Tundra
+      - TundraFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      LIGHT_DAY: 680
+      LIGHT_DUSK: 180
+      LIGHT_FULL_MOON: 60
+      LIGHT_GLARE: 10
+      LIGHT_MOONLESS: 60
+      LIGHT_PITCH_BLACK: 1
+      LIGHT_SOLAR_FLARE: 9
+  - type: Light
+    name: dark
+    terrain:
+      - ColdMountain
+      - ColdMountainFacility
+      - Glacier
+      - GlacierFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      LIGHT_DAY: 540
+      LIGHT_DUSK: 200
+      LIGHT_FULL_MOON: 115
+      LIGHT_GLARE: 10
+      LIGHT_MOONLESS: 115
+      LIGHT_PITCH_BLACK: 10
+      LIGHT_SOLAR_FLARE: 10
+  - type: Wind
+    name: standard
+    terrain:
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdMountain
+      - ColdMountainFacility
+      - ColdUrban
+      - ColdUrbanFacility
+      - Forest
+      - ForestFacility
+      - FrozenFacility
+      - HILLS
+      - Hills
+      - HillsFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - HotUrban
+      - HotUrbanFacility
+      - Jungle
+      - JungleFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - NEUTRAL
+      - Swamp
+      - SwampFacility
+      - TemperateFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      WIND_CALM: 730
+      WIND_LIGHT_GALE: 140
+      WIND_MOD_GALE: 90
+      WIND_STORM: 5
+      WIND_STRONG_GALE: 32
+      WIND_TORNADO_F1_TO_F3: 2
+      WIND_TORNADO_F4: 1
+  - type: Wind
+    name: high
+    terrain:
+      - AGRICULTURE
+      - ArcticDesert
+      - ArcticDesertFacility
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - ColdSea
+      - Convoy
+      - Desert
+      - DesertFacility
+      - DropZone
+      - FarmlandFacility
+      - FrozenSea
+      - Glacier
+      - GlacierFacility
+      - GrayLunar
+      - GrayLunarFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - HotSea
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Sea
+      - SnowField
+      - SnowFieldFacility
+      - Steppe
+      - SteppeFacility
+      - Tundra
+      - TundraFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      WIND_CALM: 500
+      WIND_LIGHT_GALE: 200
+      WIND_MOD_GALE: 180
+      WIND_STORM: 10
+      WIND_STRONG_GALE: 100
+      WIND_TORNADO_F1_TO_F3: 7
+      WIND_TORNADO_F4: 3
+  - type: Weather
+    name: standard
+    terrain:
+      - AGRICULTURE
+      - Convoy
+      - DropZone
+      - FarmlandFacility
+      - Forest
+      - ForestFacility
+      - HILLS
+      - Hills
+      - HillsFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotUrban
+      - HotUrbanFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - NEUTRAL
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Steppe
+      - SteppeFacility
+      - TemperateFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      WEATHER_CLEAR: 670
+      WEATHER_DOWNPOUR: 20
+      WEATHER_GUSTING_RAIN: 20
+      WEATHER_HEAVY_HAIL: 0
+      WEATHER_HEAVY_RAIN: 40
+      WEATHER_HEAVY_SNOW: 20
+      WEATHER_ICE_STORM: 5
+      WEATHER_LIGHTNING_STORM: 5
+      WEATHER_LIGHT_HAIL: 0
+      WEATHER_LIGHT_RAIN: 70
+      WEATHER_LIGHT_SNOW: 60
+      WEATHER_MOD_RAIN: 40
+      WEATHER_MOD_SNOW: 20
+      WEATHER_SLEET: 30
+  - type: Weather
+    name: 'hot wet'
+    terrain:
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - HotSea
+      - Jungle
+      - JungleFacility
+    odds:
+      WEATHER_CLEAR: 460
+      WEATHER_DOWNPOUR: 50
+      WEATHER_GUSTING_RAIN: 80
+      WEATHER_HEAVY_HAIL: 0
+      WEATHER_HEAVY_RAIN: 100
+      WEATHER_HEAVY_SNOW: 0
+      WEATHER_ICE_STORM: 0
+      WEATHER_LIGHTNING_STORM: 10
+      WEATHER_LIGHT_HAIL: 0
+      WEATHER_LIGHT_RAIN: 160
+      WEATHER_LIGHT_SNOW: 10
+      WEATHER_MOD_RAIN: 120
+      WEATHER_MOD_SNOW: 0
+      WEATHER_SLEET: 10
+  - type: Weather
+    name: wet
+    terrain:
+      - Sea
+      - Swamp
+      - SwampFacility
+    odds:
+      WEATHER_CLEAR: 450
+      WEATHER_DOWNPOUR: 60
+      WEATHER_GUSTING_RAIN: 60
+      WEATHER_HEAVY_HAIL: 0
+      WEATHER_HEAVY_RAIN: 80
+      WEATHER_HEAVY_SNOW: 10
+      WEATHER_ICE_STORM: 10
+      WEATHER_LIGHTNING_STORM: 10
+      WEATHER_LIGHT_HAIL: 0
+      WEATHER_LIGHT_RAIN: 120
+      WEATHER_LIGHT_SNOW: 60
+      WEATHER_MOD_RAIN: 100
+      WEATHER_MOD_SNOW: 20
+      WEATHER_SLEET: 20
+  - type: Weather
+    name: snowy
+    terrain:
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdMountain
+      - ColdMountainFacility
+      - ColdSea
+      - ColdUrban
+      - ColdUrbanFacility
+      - FrozenFacility
+      - FrozenSea
+      - Glacier
+      - GlacierFacility
+      - SnowField
+      - SnowFieldFacility
+      - Tundra
+      - TundraFacility
+    odds:
+      WEATHER_CLEAR: 460
+      WEATHER_DOWNPOUR: 5
+      WEATHER_GUSTING_RAIN: 10
+      WEATHER_HEAVY_HAIL: 0
+      WEATHER_HEAVY_RAIN: 30
+      WEATHER_HEAVY_SNOW: 60
+      WEATHER_ICE_STORM: 40
+      WEATHER_LIGHTNING_STORM: 5
+      WEATHER_LIGHT_HAIL: 0
+      WEATHER_LIGHT_RAIN: 60
+      WEATHER_LIGHT_SNOW: 120
+      WEATHER_MOD_RAIN: 30
+      WEATHER_MOD_SNOW: 100
+      WEATHER_SLEET: 80
+  - type: Weather
+    name: dry
+    terrain:
+      - ArcticDesert
+      - ArcticDesertFacility
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - Desert
+      - DesertFacility
+      - GrayLunar
+      - GrayLunarFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      WEATHER_CLEAR: 950
+      WEATHER_DOWNPOUR: 0
+      WEATHER_GUSTING_RAIN: 0
+      WEATHER_HEAVY_HAIL: 0
+      WEATHER_HEAVY_RAIN: 0
+      WEATHER_HEAVY_SNOW: 0
+      WEATHER_ICE_STORM: 0
+      WEATHER_LIGHTNING_STORM: 0
+      WEATHER_LIGHT_HAIL: 0
+      WEATHER_LIGHT_RAIN: 20
+      WEATHER_LIGHT_SNOW: 10
+      WEATHER_MOD_RAIN: 10
+      WEATHER_MOD_SNOW: 0
+      WEATHER_SLEET: 10
+  - type: Fog
+    name: standard
+    terrain:
+      - AGRICULTURE
+      - ArcticDesert
+      - ArcticDesertFacility
+      - Convoy
+      - DropZone
+      - FarmlandFacility
+      - Forest
+      - ForestFacility
+      - HILLS
+      - Hills
+      - HillsFacility
+      - Jungle
+      - JungleFacility
+      - NEUTRAL
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Steppe
+      - SteppeFacility
+      - TemperateFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      FOG_HEAVY: 50
+      FOG_LIGHT: 50
+      FOG_NONE: 900
+  - type: Fog
+    name: heavy
+    terrain:
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdMountain
+      - ColdMountainFacility
+      - ColdSea
+      - ColdUrban
+      - ColdUrbanFacility
+      - FrozenFacility
+      - FrozenSea
+      - Glacier
+      - GlacierFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - Sea
+      - SnowField
+      - SnowFieldFacility
+      - Swamp
+      - SwampFacility
+      - Tundra
+      - TundraFacility
+    odds:
+      FOG_HEAVY: 100
+      FOG_LIGHT: 100
+      FOG_NONE: 800
+  - type: Fog
+    name: none
+    terrain:
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - Desert
+      - DesertFacility
+      - GrayLunar
+      - GrayLunarFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - HotSea
+      - HotUrban
+      - HotUrbanFacility
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      FOG_HEAVY: 10
+      FOG_LIGHT: 10
+      FOG_NONE: 980
+  - type: BlowingSand
+    name: standard
+    terrain:
+      - AGRICULTURE
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdMountain
+      - ColdMountainFacility
+      - ColdSea
+      - ColdUrban
+      - ColdUrbanFacility
+      - Convoy
+      - DropZone
+      - FarmlandFacility
+      - Forest
+      - ForestFacility
+      - FrozenFacility
+      - FrozenSea
+      - HILLS
+      - Hills
+      - HillsFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - HotSea
+      - HotUrban
+      - HotUrbanFacility
+      - Jungle
+      - JungleFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - NEUTRAL
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Sea
+      - SnowField
+      - SnowFieldFacility
+      - Steppe
+      - SteppeFacility
+      - Swamp
+      - SwampFacility
+      - TemperateFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      BLOWING_SAND: 100
+      BLOWING_SAND_NONE: 900
+  - type: BlowingSand
+    name: heavy
+    terrain:
+      - ArcticDesert
+      - ArcticDesertFacility
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - Desert
+      - DesertFacility
+      - Glacier
+      - GlacierFacility
+      - GrayLunar
+      - GrayLunarFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - Tundra
+      - TundraFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      BLOWING_SAND: 300
+      BLOWING_SAND_NONE: 700
+  - type: EMI
+    name: standard
+    terrain:
+      - AGRICULTURE
+      - ColdFacility
+      - ColdForest
+      - ColdForestFacility
+      - ColdHills
+      - ColdHillsFacility
+      - ColdMountain
+      - ColdMountainFacility
+      - ColdSea
+      - ColdUrban
+      - ColdUrbanFacility
+      - Convoy
+      - DropZone
+      - FarmlandFacility
+      - Forest
+      - ForestFacility
+      - FrozenFacility
+      - FrozenSea
+      - Glacier
+      - GlacierFacility
+      - HILLS
+      - Hills
+      - HillsFacility
+      - HotFacility
+      - HotForest
+      - HotForestFacility
+      - HotHillsWet
+      - HotHillsWetFacility
+      - HotMountainsWet
+      - HotMountainsWetFacility
+      - HotSea
+      - HotUrban
+      - HotUrbanFacility
+      - Jungle
+      - JungleFacility
+      - MOUNTAIN
+      - Mountain
+      - MountainFacility
+      - NEUTRAL
+      - Plains
+      - PlainsFacility
+      - Savannah
+      - SavannahFacility
+      - Sea
+      - SnowField
+      - SnowFieldFacility
+      - Steppe
+      - SteppeFacility
+      - Swamp
+      - SwampFacility
+      - TemperateFacility
+      - URBAN
+      - Urban
+      - UrbanFacility
+      - VEGETATION
+    odds:
+      EMI: 1
+      EMI_NONE: 999
+  - type: EMI
+    name: high
+    terrain:
+      - ArcticDesert
+      - ArcticDesertFacility
+      - BARREN
+      - Badlands
+      - BadlandsFacility
+      - Desert
+      - DesertFacility
+      - GrayLunar
+      - GrayLunarFacility
+      - HotHillsDry
+      - HotHillsDryFacility
+      - HotMountainsDry
+      - HotMountainsDryFacility
+      - LUNAR
+      - Mars
+      - MarsFacility
+      - Tundra
+      - TundraFacility
+      - VOLCANIC
+      - Volcano
+      - VolcanoFacility
+    odds:
+      EMI: 50
+      EMI_NONE: 950
