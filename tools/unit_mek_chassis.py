@@ -157,7 +157,8 @@ def mad_cat(g):
         # Tall narrow supports make the launchers float above the cockpit and low arms.
         g.box((side*14, -5, 42), (7, 8, 13), torso, 'edge')
         g.beam((side*14, -4, 40), (side*21, -3, 32), 5, 6, arm, 'metal')
-        forward(g, [(-5, 6, 10, side*21, 31), (7, 6, 9, side*21, 31)], arm, cut=.35)
+        forward(g, [(-5, 6, 10, side*21, 31), (7, 6, 9, side*21, 31)], arm+'@forearm', cut=.35)
+        forward(g, [(-5, 6, 10, side*21, 31), (1, 6, 9.5, side*21, 31)], arm+'@elbow', cut=.35)
 
 
 def marauder(g):
@@ -189,7 +190,10 @@ def marauder(g):
         g.beam((side*12, -2, 40), (side*21, 1, 33), 6.5, 6.5, arm, 'metal')
         # Long double-deck forearm pods held low and forward; their muzzles are equipment.
         forward(g, [(-4, 6, 8, side*21.5, 30.5), (2, 7.5, 10, side*21.5, 30.5),
-                    (16, 7.5, 10, side*21.5, 30.5)], arm, cut=.3)
+                    (16, 7.5, 10, side*21.5, 30.5)], arm+'@forearm', cut=.3)
+        forward(g, [(-4, 6, 8, side*21.5, 30.5), (1, 7.5, 10, side*21.5, 30.5),
+                    (6, 7.5, 10, side*21.5, 30.5)], arm+'@elbow', cut=.3)
+        g.box((side*21.5, 18, 30.5), (6, 4, 6.5), arm+'@hand', 'metal')
 
 
 def archer(g):
@@ -223,8 +227,10 @@ def archer(g):
                     (52, 6.5, 8, side*16.6, 0)], arm, cut=.6)
         g.beam((side*17.5, 0, 43), (side*20.5, -3, 35), 6, 6, arm, 'metal')
         forward(g, [(-6, 7, 8, side*21, 33), (4, 8, 9.5, side*21, 33),
-                    (11, 6.5, 8, side*21, 33)], arm, cut=.3)
-        g.box((side*21, 13, 33), (5.5, 4, 5.5), arm, 'metal')
+                    (11, 6.5, 8, side*21, 33)], arm+'@forearm', cut=.3)
+        g.box((side*21, 13, 33), (5.5, 4, 5.5), arm+'@hand', 'metal')
+        # Without a lower arm the upper arm ends in a capped elbow that carries the weapon.
+        g.box((side*20.7, -1.5, 34), (7.5, 7.5, 7), arm+'@elbow', 'edge', .3)
 
 
 def mackie(g):

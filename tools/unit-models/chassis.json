@@ -36,7 +36,9 @@
       "silhouette": "Tall twin missile towers, rounded forward canopy, low paired gun pods, narrow reverse knees and broad shin armor over split feet.",
       "sockets": {"HD":[42,21,36],"CT":[45,22,33],"LT":[36,25,34],"RT":[48,25,34],"LA":[21,29,33],"RA":[63,29,33],"LL":[31,39,12],"RL":[53,39,12]},
       "missileSockets": {"LT":[28,35,51],"RT":[56,35,51]},
-      "socketBanks": {"LA:laser":[[21,29,33],[21,29,29]],"RA:laser":[[63,29,33],[63,29,29]]},
+      "armSockets": {"LA":{"wrist":[21,29,33],"elbow":[21,35,33]},"RA":{"wrist":[63,29,33],"elbow":[63,35,33]}},
+      "socketBanks": {"LA:laser":[[21,29,33],[21,29,29]],"RA:laser":[[63,29,33],[63,29,29]],
+                      "LA@elbow:laser":[[21,35,33],[21,35,29]],"RA@elbow:laser":[[63,35,33],[63,35,29]]},
       "missileScale": 1.28, "missileColumns": 4, "missileBayHeight": 13,
       "rearSockets": {"CT":[42,46,38],"LT":[35,45,38],"RT":[49,45,38]},
       "slotSpacing": 3, "weaponScale": 0.95
@@ -49,7 +51,12 @@
       "missileSockets": {"LT":[31,41,50],"RT":[53,41,50]},
       "socketBanks": {"RT:ballistic":[[44,42,55]],"RT:ppc":[[44,42,55]],
                       "LA:ppc":[[20.5,20,33]],"RA:ppc":[[63.5,20,33]],
-                      "LA:laser":[[20.5,20,27.8],[18.8,20,33],[22.2,20,33]],"RA:laser":[[63.5,20,27.8],[61.8,20,33],[65.2,20,33]]},
+                      "LA:laser":[[20.5,20,27.8],[18.8,20,33],[22.2,20,33]],"RA:laser":[[63.5,20,27.8],[61.8,20,33],[65.2,20,33]],
+                      "LA@elbow:ppc":[[20.5,30,33]],"RA@elbow:ppc":[[63.5,30,33]],
+                      "LA@elbow:laser":[[20.5,30,27.8],[18.8,30,33],[22.2,30,33]],"RA@elbow:laser":[[63.5,30,27.8],[61.8,30,33],[65.2,30,33]],
+                      "LA@hand:hatchet":[[20.5,18,30.5]],"RA@hand:hatchet":[[63.5,18,30.5]]},
+      "armSockets": {"LA":{"wrist":[20.5,20,30.5],"elbow":[20.5,30,30.5],"hand":[20.5,26,36.4]},
+                     "RA":{"wrist":[63.5,20,30.5],"elbow":[63.5,30,30.5],"hand":[63.5,26,36.4]}},
       "rearSockets": {"CT":[42,50,40],"LT":[35,49,40],"RT":[49,49,40]},
       "slotSpacing": 3, "weaponScale": 0.9, "barrelLength": 9, "missileBayHeight": 8,
       "weaponOverrides": [{"location": "RT", "family": "ballistic", "length": 32, "note": "The dorsal autocannon runs the length of the body and past the nose."}]
@@ -61,6 +68,8 @@
       "sockets": {"HD":[42,16,37.6],"CT":[42,29.5,35],"LT":[33.5,25.8,40.5],"RT":[50.5,25.8,40.5],"LA":[21,27,38.6],"RA":[63,27,38.6],"LL":[33,33,14],"RL":[51,33,14]},
       "missileSockets": {"LT":[32.8,25.4,49],"RT":[51.2,25.4,49]},
       "socketBanks": {"RA:hatchet":[[63,23,33]],"LA:hatchet":[[21,23,33]]},
+      "armSockets": {"LA":{"hand":[21,27,38.6],"wrist":[21,25,33],"elbow":[21.3,35.5,34]},
+                     "RA":{"hand":[63,27,38.6],"wrist":[63,25,33],"elbow":[62.7,35.5,34]}},
       "rearSockets": {"HD":[42,44.6,50],"CT":[42,46.4,45],"LT":[34,46.4,45],"RT":[50,46.4,45]},
       "slotSpacing": 3, "weaponScale": 0.9, "missileScale": 1.26, "missileOrientation": "vertical", "missileSlope": 0.45,
       "missileBayHeight": 11, "missileBayColumns": 2, "missileBayWidth": 9.4
