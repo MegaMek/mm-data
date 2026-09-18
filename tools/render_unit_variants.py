@@ -183,7 +183,7 @@ def render_infantry(manifest, out):
             for count in counts:
                 name = title+' / '+str(count)
                 vehicles = (1 if count <= 4 else 2) if style and style != 'jump' else 0
-                detail = f'{vehicles} vehicles + {count-vehicles} troops' if vehicles else f'{count} troops'
+                detail = f'{vehicles} vehicle{"s" if vehicles != 1 else ""} + {count-vehicles} troops' if vehicles else f'{count} troops'
                 units.append({'name': name, 'model': title+'\n'+detail, 'equipment': [],
                               'angle': 2.7 if style == 'jump' else -.4})
                 assets[name] = {'asset': 'infantry/'+(style+'/' if style else '')+'squad-'+str(count)+'.g3dj'}
