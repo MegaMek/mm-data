@@ -160,6 +160,73 @@ def mad_cat(g):
         forward(g, [(-5, 6, 10, side*21, 31), (7, 6, 9, side*21, 31)], arm, cut=.35)
 
 
+def marauder(g):
+    # A hunched pod slung ahead of the hips: tall humped back falling to a low pointed nose.
+    g.beam((-9, -3, 29), (9, -3, 29), 8, 8, 'pelvis', 'metal', 6)
+    g.box((0, -3, 32.5), (11, 9, 5), 'CT', 'edge')
+    forward(g, [(-14, 14, 12, 0, 42), (-4, 19, 17, 0, 41.5),
+                (8, 16, 13, 0, 38.5), (18, 7, 6, 0, 35)], 'CT', cut=.55)
+    for side in (-1, 1):
+        # Glazing lies just above the sloped top of the nose.
+        points = [(side*.5, 9.5, 44.05), (side*3.4, 9.5, 44.05),
+                  (side*1.8, 16.5, 39.5), (side*.5, 16.5, 39.5)]
+        panel(g, list(reversed(points)) if side == -1 else points, 'HD', 'glass')
+    # Dorsal gun pedestal; the long barrel itself belongs to the variant's equipment.
+    g.box((2, -6, 51), (6, 7, 4), 'RT', 'metal')
+    for side, arm, leg, torso in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
+        hip, knee = (side*8.5, -3, 29), (side*11, -10, 21)
+        g.joint(leg, hip, 'pelvis')
+        g.joint(leg+'-shin', knee, leg)
+        g.beam(hip, knee, 7, 8, leg, 'paint')
+        g.beam((side*9, -10, 21), (side*13, -10, 21), 5.5, 5.5, leg+'-shin', 'metal')
+        upright(g, [(4, 6, 7, side*12.5, 0), (12, 8, 10, side*12, -2),
+                    (20.3, 6.5, 8, side*11, -8)], leg+'-shin', cut=.45)
+        g.box((side*12.5, 0, 2.5), (6, 6, 4.5), leg+'-shin', 'metal')
+        toes(g, side*12.5, 0, leg+'-shin', 4.6, 12)
+        g.beam((side*12.5, -2, 1.3), (side*12.5, -9, 1.3), 4, 2.6, leg+'-shin', 'paint', taper=.6)
+        # Armored shoulder housings flank the hump and carry the short upper arms.
+        g.box((side*11, -5, 42), (5, 13, 9), torso, 'edge', .3)
+        g.beam((side*12, -2, 40), (side*21, 1, 33), 6.5, 6.5, arm, 'metal')
+        # Long double-deck forearm pods held low and forward; their muzzles are equipment.
+        forward(g, [(-4, 6, 8, side*21.5, 30.5), (2, 7.5, 10, side*21.5, 30.5),
+                    (16, 7.5, 10, side*21.5, 30.5)], arm, cut=.3)
+
+
+def archer(g):
+    g.box((0, 0, 30), (17, 10, 6), 'pelvis', 'edge')
+    g.box((0, 0, 35), (12, 9, 5), 'CT', 'metal')
+    # Barrel chest: the variant's launchers fill the two upper bays under the raised hoods.
+    upright(g, [(34, 16, 12, 0, 0), (43, 27, 21, 0, 0), (53, 25, 19, 0, -.5)], cut=.35)
+    # No separate head: the centre is one solid mass. Its top slopes from the back down to the
+    # cockpit, while its underside runs level from the base of the cockpit straight back into the
+    # torso, so the window sits in front of the launchers and below them without drooping.
+    forward(g, [(-8, 11, 19, 0, 45.5), (3, 11, 18, 0, 45.5), (13, 9.5, 11.7, 0, 42.6),
+                (20, 7, 6.3, 0, 40.1)], 'HD', cut=.3)
+    panel(g, [(-2.3, 20.03, 42.3), (2.3, 20.03, 42.3),
+              (2.3, 20.03, 38.5), (-2.3, 20.03, 38.5)], 'HD', 'glass')
+    # Twin antennas stand on the back of the wedge, directly behind the cockpit.
+    for side in (-1, 1):
+        g.beam((side*2.4, -5, 54.6), (side*2.8, -7, 61.5), 1.1, 1.1, 'HD', 'metal', taper=.2)
+    for side, arm, leg, torso in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
+        x = side*8
+        g.joint(leg, (x, 0, 29), 'pelvis')
+        g.joint(leg+'-shin', (x*1.1, 0, 17), leg)
+        upright(g, [(18, 8, 9, x*1.1, 0), (29, 10.5, 10.5, x, 0)], leg, cut=.3)
+        g.box((x*1.1, 1, 17), (7.5, 8.5, 4), leg+'-shin', 'metal')
+        upright(g, [(4, 8, 9, x*1.15, 0), (15.5, 10.5, 10.5, x*1.1, 0)], leg+'-shin', cut=.4)
+        foot(g, x*1.15, 2.5, 11, 15, leg+'-shin')
+        # Tall bay housings rise above the centre and lean back with their launchers; doors shut.
+        upright(g, [(43.1, 10, 14, side*9.2, 5.9), (54.9, 10, 14, side*9.2, .6)], torso, cut=.2)
+        # Round shoulders, short upper arms, heavy forearms held forward and closed fists.
+        # Compact shoulders tucked against the bays: a solid machine, not a broad-shouldered one.
+        upright(g, [(42, 8, 10, side*17.2, 0), (48.5, 9.5, 11.5, side*17, 0),
+                    (52, 6.5, 8, side*16.6, 0)], arm, cut=.6)
+        g.beam((side*17.5, 0, 43), (side*20.5, -3, 35), 6, 6, arm, 'metal')
+        forward(g, [(-6, 7, 8, side*21, 33), (4, 8, 9.5, side*21, 33),
+                    (11, 6.5, 8, side*21, 33)], arm, cut=.3)
+        g.box((side*21, 13, 33), (5.5, 4, 5.5), arm, 'metal')
+
+
 def build_chassis(recipe):
     g = Geometry()
     hip = recipe['hip']
@@ -168,6 +235,7 @@ def build_chassis(recipe):
     for location in ('LT', 'RT', 'HD', 'LA', 'RA'):
         x, y, z = recipe['sockets'][location]
         g.joint(location, (x-42, 36-y, z), 'CT')
-    builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat}
+    builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
+                'marauder': marauder, 'archer': archer}
     builders[recipe['id']](g)
     return g

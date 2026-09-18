@@ -4,15 +4,16 @@ blender --background --factory-startup --python-exit-code 1 \
     --python tools/render_unit_variants.py -- --chassis warhammer mad-cat
 """
 import argparse
-import hashlib
 import json
 from math import ceil
 from pathlib import Path
 import re
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Vector
+from unit_model_geometry import content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS = ROOT / 'data/models/units'
@@ -39,7 +40,7 @@ def material(rgb, cache):
 def import_model(path, expected, colors):
     """The generated G3DJ subset: indexed colors and translated rigid nodes, Z / 54."""
     raw = path.read_bytes()
-    if hashlib.sha256(raw).hexdigest() != expected['sha256']:
+    if content_digest(path) != expected['sha256']:
         raise ValueError('Stale manifest for '+str(path))
     data = json.loads(raw)
     parts = {}

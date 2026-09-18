@@ -1,10 +1,12 @@
 """Validate generated geometry, source provenance, budgets and complete variant mount coverage. Stdlib only."""
 import argparse
-import hashlib
 import json
 import math
 from pathlib import Path
 import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from unit_model_geometry import content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -15,7 +17,7 @@ def require(condition, message):
 
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return content_digest(path)
 
 
 def validate(out, catalog_path):
@@ -27,6 +29,9 @@ def validate(out, catalog_path):
     require(sha(ROOT / 'tools/build_unit_models.py') == manifest['generatorSha256'], 'Generator changed')
     require(sha(ROOT / 'tools/unit_model_geometry.py') == manifest['geometrySha256'], 'Geometry writer changed')
     require(sha(ROOT / 'tools/unit_mek_chassis.py') == manifest['chassisBuilderSha256'], 'Chassis artwork changed')
+    require(sha(ROOT / 'tools/unit_weapon_shapes.py') == manifest['weaponShapesSha256'], 'Weapon shapes changed')
+    require(sha(ROOT / 'tools/unit-models/weapons.json') == manifest['weaponRulesSha256'], 'Weapon rules changed')
+    require(sha(ROOT / 'tools/unit_mount_layout.py') == manifest['mountLayoutSha256'], 'Mount layout changed')
     for name, reference in manifest['references'].items():
         require(sha(ROOT / 'data/images/units' / reference['sprite']) == reference['spriteSha256'], name+': reference sprite changed')
         if 'illustration' in reference:

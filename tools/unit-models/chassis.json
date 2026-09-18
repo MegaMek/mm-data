@@ -5,7 +5,8 @@
     {
       "name": "Atlas", "id": "atlas", "referenceVariant": "AS7-D",
       "sprite": "meks/Atlas.png", "illustration": "Mek/Atlas.png", "hip": [42,36,31],
-      "sockets": {"HD":[42,29,55],"CT":[42,29,40],"LT":[33,29,44],"RT":[51,29,43],"LA":[21,30,33],"RA":[63,30,33],"LL":[33,31,13],"RL":[51,31,13]},
+      "sockets": {"HD":[42,29,55],"CT":[42,29,40],"LT":[33,29,44],"RT":[51,29,43],"LA":[21,28.6,31],"RA":[63,28.6,31],"LL":[33,31,13],"RL":[51,31,13]},
+      "socketAim": {"LA":[0,0.12,-1],"RA":[0,0.12,-1]}, "protrusion": {"LA":"medium","RA":"medium"},
       "rearSockets": {"CT":[42,43,44],"LT":[34,43,44],"RT":[50,43,44]},
       "socketBanks": {"LT:missile":[[33,29,45],[33,30,36]]},
       "slotSpacing": 3, "weaponScale": 0.83, "missileColumns": 4,
@@ -39,6 +40,30 @@
       "missileScale": 1.28, "missileColumns": 4, "missileBayHeight": 13,
       "rearSockets": {"CT":[42,46,38],"LT":[35,45,38],"RT":[49,45,38]},
       "slotSpacing": 3, "weaponScale": 0.95
+    },
+    {
+      "name": "Marauder", "id": "marauder", "referenceVariant": "MAD-3R",
+      "sprite": "meks/Marauder.png", "illustration": "Mek/Marauder.png", "hip": [42,39,29],
+      "silhouette": "Hunched pod body falling to a low pointed nose, long dorsal autocannon over the right shoulder, double-deck forearm pods held low and forward, reverse knees and splayed toes.",
+      "sockets": {"HD":[42,20,37],"CT":[42,26,33],"LT":[35,27,38],"RT":[49,27,38],"LA":[20.5,20,30.5],"RA":[63.5,20,30.5],"LL":[31,38,16],"RL":[53,38,16]},
+      "missileSockets": {"LT":[31,41,50],"RT":[53,41,50]},
+      "socketBanks": {"RT:ballistic":[[44,42,55]],"RT:ppc":[[44,42,55]],
+                      "LA:ppc":[[20.5,20,33]],"RA:ppc":[[63.5,20,33]],
+                      "LA:laser":[[20.5,20,27.8],[18.8,20,33],[22.2,20,33]],"RA:laser":[[63.5,20,27.8],[61.8,20,33],[65.2,20,33]]},
+      "rearSockets": {"CT":[42,50,40],"LT":[35,49,40],"RT":[49,49,40]},
+      "slotSpacing": 3, "weaponScale": 0.9, "barrelLength": 9, "missileBayHeight": 8,
+      "weaponOverrides": [{"location": "RT", "family": "ballistic", "length": 32, "note": "The dorsal autocannon runs the length of the body and past the nose."}]
+    },
+    {
+      "name": "Archer", "id": "archer", "referenceVariant": "ARC-2R",
+      "sprite": "meks/Archer.png", "illustration": "Mek/Archer.png", "hip": [42,36,30],
+      "silhouette": "Compact, solid build with modest shoulders tucked against the bays; a tall missile bay in each side torso leaning back, each showing a full four-by-five face of tubes from top to bottom; no separate head - the centre is one solid mass whose top slopes from the back down to the cockpit while its underside runs level from the base of the cockpit straight back into the torso; twin antennas directly behind the cockpit, heavy forearms held forward with closed fists, thick straight legs.",
+      "sockets": {"HD":[42,16,37.6],"CT":[42,29.5,35],"LT":[33.5,25.8,40.5],"RT":[50.5,25.8,40.5],"LA":[21,27,38.6],"RA":[63,27,38.6],"LL":[33,33,14],"RL":[51,33,14]},
+      "missileSockets": {"LT":[32.8,25.4,49],"RT":[51.2,25.4,49]},
+      "socketBanks": {"RA:hatchet":[[63,23,33]],"LA:hatchet":[[21,23,33]]},
+      "rearSockets": {"HD":[42,44.6,50],"CT":[42,46.4,45],"LT":[34,46.4,45],"RT":[50,46.4,45]},
+      "slotSpacing": 3, "weaponScale": 0.9, "missileScale": 1.26, "missileOrientation": "vertical", "missileSlope": 0.45,
+      "missileBayHeight": 11, "missileBayColumns": 2, "missileBayWidth": 9.4
     }
   ]
 }
