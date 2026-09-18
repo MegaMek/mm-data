@@ -133,7 +133,7 @@ def launcher_grid(rule, mount, scale, maximum_columns=0, orientation='horizontal
     tubes = BOOK['tubes'][rule['tubes']]
     visible = min(MAXIMUM_TUBES, rule.get('tubeCount', max(1, mount['rackSize'])))
     widest = min(maximum_columns or 5, visible)
-    columns = next((c for c in range(widest, 1, -1) if visible % c == 0 and visible//c >= 2), None)
+    columns = next((across for across in range(widest, 1, -1) if visible % across == 0 and visible//across >= 2), None)
     if columns is None:
         # Five or seven tubes cannot fill a rectangle: two rows, with the short row centered under the long one.
         columns = visible if visible <= 3 else ceil(visible/2)
@@ -147,14 +147,14 @@ def launcher_grid(rule, mount, scale, maximum_columns=0, orientation='horizontal
             'height': long_side if vertical else short_side}
 
 
-def _opening(g, center, radius, shape, direction, group, material):
+def _opening(geometry, center, radius, shape, direction, group, material):
     x, y, z = center
     sides, turn = TUBE_SHAPES[shape]
     points = [(x+radius*cos(turn+2*pi*i/sides), y, z+radius*sin(turn+2*pi*i/sides)) for i in range(sides)]
-    g.face(list(reversed(points)) if direction == 1 else points, group, material)
+    geometry.face(list(reversed(points)) if direction == 1 else points, group, material)
 
 
-def _launcher(g, mount, rule, position, scale, options):
+def _launcher(geometry, mount, rule, position, scale, options):
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
@@ -162,7 +162,7 @@ def _launcher(g, mount, rule, position, scale, options):
                          options.get('orientation', 'horizontal'))
     slope = options.get('slope', 0)
     # A leaning bay is built upright, then sheared about the bay's center so stacked launchers share one face.
-    launcher = Geometry() if slope else g
+    launcher = Geometry() if slope else geometry
     launcher.box((x, y-direction*2.3*scale, z), (grid['width'], 6*scale, grid['height']), group, 'paint')
     front = y+direction*.76*scale
     if options.get('detail') == 'panel':
@@ -185,11 +185,11 @@ def _launcher(g, mount, rule, position, scale, options):
                          group, 'dark')
     if slope:
         origin = options.get('slopeOrigin', z)
-        for tri, node, material in launcher.faces:
-            g.face([(px, py-direction*slope*(pz-origin), pz) for px, py, pz in tri], node, material)
+        for triangle, node, material in launcher.faces:
+            geometry.face([(point_x, point_y-direction*slope*(point_z-origin), point_z) for point_x, point_y, point_z in triangle], node, material)
 
 
-def _barrel(g, mount, rule, position, scale):
+def _barrel(geometry, mount, rule, position, scale):
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
@@ -199,9 +199,9 @@ def _barrel(g, mount, rule, position, scale):
     sides = rule.get('sides', 4)
     count = rule.get('count', 1)
     for barrel in range(count):
-        bx = x+(barrel-(count-1)/2)*width*1.15
+        barrel_x = x+(barrel-(count-1)/2)*width*1.15
         muzzle = y+length*direction
-        g.beam((bx, y-2*direction*scale, z), (bx, muzzle, z), width, width, group, 'metal', sides,
+        geometry.beam((barrel_x, y-2*direction*scale, z), (barrel_x, muzzle, z), width, width, group, 'metal', sides,
                rule.get('taper', .85))
         tip_y, tip_width = muzzle, width*rule.get('taper', .85)
         for segment in rule.get('segments', []):
@@ -211,56 +211,56 @@ def _barrel(g, mount, rule, position, scale):
                 continue
             start, end = muzzle-direction*back, muzzle-direction*front
             segment_width = width*segment['width']
-            g.beam((bx, start, z), (bx, end, z), segment_width, segment_width, group, 'metal',
+            geometry.beam((barrel_x, start, z), (barrel_x, end, z), segment_width, segment_width, group, 'metal',
                    segment.get('sides', sides), segment.get('taper', 1))
             if (end-tip_y)*direction > 0:
                 tip_y, tip_width = end, segment_width*segment.get('taper', 1)
         half = tip_width*rule.get('tipSize', .22)
         face_y = tip_y+direction*.03
-        corners = [(bx-half, face_y, z+half), (bx+half, face_y, z+half),
-                   (bx+half, face_y, z-half), (bx-half, face_y, z-half)]
-        g.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
+        corners = [(barrel_x-half, face_y, z+half), (barrel_x+half, face_y, z+half),
+                   (barrel_x+half, face_y, z-half), (barrel_x-half, face_y, z-half)]
+        geometry.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
 
 
-def _pod(g, mount, rule, position, scale):
+def _pod(geometry, mount, rule, position, scale):
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
     width, depth, height = (value*scale for value in rule['size'])
-    g.box((x, y+direction*(depth/2-1*scale), z), (width, depth, height), group, 'edge')
+    geometry.box((x, y+direction*(depth/2-1*scale), z), (width, depth, height), group, 'edge')
     front = y+direction*(depth-1*scale)
     for stub in range(rule.get('stubs', 0)):
-        sx = x+(stub-(rule['stubs']-1)/2)*width*.42
-        g.beam((sx, front-direction*.3*scale, z), (sx, front+direction*1.8*scale, z), .8*scale, .8*scale,
+        stub_x = x+(stub-(rule['stubs']-1)/2)*width*.42
+        geometry.beam((stub_x, front-direction*.3*scale, z), (stub_x, front+direction*1.8*scale, z), .8*scale, .8*scale,
                group, 'metal', 4, .85)
     if not rule.get('stubs'):
         half = width*.3
         face_y = front+direction*.03
         corners = [(x-half, face_y, z+half), (x+half, face_y, z+half), (x+half, face_y, z-half), (x-half, face_y, z-half)]
-        g.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
+        geometry.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
 
 
-def _lamp(g, mount, rule, position, scale):
+def _lamp(geometry, mount, rule, position, scale):
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
     width, depth, height = (value*scale for value in rule['size'])
-    g.box((x, y+direction*(depth/2-scale), z), (width, depth, height), group, 'edge')
+    geometry.box((x, y+direction*(depth/2-scale), z), (width, depth, height), group, 'edge')
     # The lens fills the face, leaving a narrow bezel.
     face_y = y+direction*(depth-scale+.03)
     half_width, half_height = width*.4, height*.38
     corners = [(x-half_width, face_y, z+half_height), (x+half_width, face_y, z+half_height),
                (x+half_width, face_y, z-half_height), (x-half_width, face_y, z-half_height)]
-    g.face(corners if direction == 1 else list(reversed(corners)), group, 'lamp')
+    geometry.face(corners if direction == 1 else list(reversed(corners)), group, 'lamp')
 
 
-def _jet(g, mount, rule, position, scale):
+def _jet(geometry, mount, rule, position, scale):
     x, y, z = position
     half = rule['length']*scale/2
-    g.beam((x, y, z+half), (x, y, z-half), rule['width']*scale, rule['width']*scale, mount['location'], 'metal', 6)
+    geometry.beam((x, y, z+half), (x, y, z-half), rule['width']*scale, rule['width']*scale, mount['location'], 'metal', 6)
 
 
-def _gatling(g, mount, rule, position, scale):
+def _gatling(geometry, mount, rule, position, scale):
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
@@ -270,31 +270,31 @@ def _gatling(g, mount, rule, position, scale):
     if 'housing' in rule:
         # A turret housing takes the place of the drum, and the barrels start from its front.
         housing_width, housing_depth, housing_height = (value*scale for value in rule['housing'])
-        g.box((x, y+direction*(housing_depth/2-scale), z), (housing_width, housing_depth, housing_height),
+        geometry.box((x, y+direction*(housing_depth/2-scale), z), (housing_width, housing_depth, housing_height),
               group, 'edge')
         y += direction*(housing_depth-scale)
     else:
         # A drum at the root, a ring of barrels, and a clamp near the muzzles. Four barrels sit as a square block.
-        g.beam((x, y-2*direction*scale, z), (x, y+direction*min(length, 2.4*scale), z), width*1.15, width*1.15,
+        geometry.beam((x, y-2*direction*scale, z), (x, y+direction*min(length, 2.4*scale), z), width*1.15, width*1.15,
                group, 'metal', drum_sides)
     muzzle = y+length*direction
     barrel_width = width*rule.get('barrelWidth', .3)
     for barrel in range(rule['barrels']):
         angle = 2*pi*(barrel+.5)/rule['barrels'] if rule['barrels'] == 4 else 2*pi*barrel/rule['barrels']
-        bx, bz = x+cos(angle)*width*.32, z+sin(angle)*width*.32
-        g.beam((bx, y, bz), (bx, muzzle, bz), barrel_width, barrel_width, group, 'metal',
+        barrel_x, barrel_z = x+cos(angle)*width*.32, z+sin(angle)*width*.32
+        geometry.beam((barrel_x, y, barrel_z), (barrel_x, muzzle, barrel_z), barrel_width, barrel_width, group, 'metal',
                rule.get('barrelSides', 3))
     if length > 4*scale:
-        g.beam((x, muzzle-direction*2.2*scale, z), (x, muzzle-direction*1.2*scale, z), width*1.05, width*1.05,
+        geometry.beam((x, muzzle-direction*2.2*scale, z), (x, muzzle-direction*1.2*scale, z), width*1.05, width*1.05,
                group, 'edge', drum_sides)
 
 
-def _hatchet(g, mount, position, scale):
+def _hatchet(geometry, mount, position, scale):
     x, y, z = position
     group = mount['location']
-    g.beam((x, y, z-7), (x, y, z+8), 2, 2, group, 'metal')
+    geometry.beam((x, y, z-7), (x, y, z+8), 2, 2, group, 'metal')
     # The blade faces forward, edge leading, as the Mek would swing it.
-    g.prism([(x+1, y), (x+3, y+7), (x, y+9), (x-3, y+7), (x-1, y)], z+4, z+10, group, 'edge')
+    geometry.prism([(x+1, y), (x+3, y+7), (x, y+9), (x-3, y+7), (x-1, y)], z+4, z+10, group, 'edge')
 
 
 def _leaning(position):
@@ -304,43 +304,43 @@ def _leaning(position):
     return lambda distance: (x, y+distance*lean, z+distance*lean)
 
 
-def _blade(g, mount, position, scale):
+def _blade(geometry, mount, position, scale):
     group = mount['location']
     along = _leaning(position)
-    g.beam(along(-4), along(2), 1.8, 1.8, group, 'metal')
-    g.beam(along(2), along(3), 2, 7, group, 'metal')
-    g.beam(along(3), along(19), 1.4, 4.8, group, 'edge', 4, .2)
+    geometry.beam(along(-4), along(2), 1.8, 1.8, group, 'metal')
+    geometry.beam(along(2), along(3), 2, 7, group, 'metal')
+    geometry.beam(along(3), along(19), 1.4, 4.8, group, 'edge', 4, .2)
 
 
-def _mace(g, mount, position, scale):
+def _mace(geometry, mount, position, scale):
     group = mount['location']
     along = _leaning(position)
-    g.beam(along(-6), along(10), 2, 2, group, 'metal')
+    geometry.beam(along(-6), along(10), 2, 2, group, 'metal')
     # The head is a faceted drum that narrows toward its crown.
-    g.beam(along(10), along(12), 5, 5, group, 'edge', 8, 1.4)
-    g.beam(along(12), along(16), 7, 7, group, 'edge', 8, .7)
+    geometry.beam(along(10), along(12), 5, 5, group, 'edge', 8, 1.4)
+    geometry.beam(along(12), along(16), 7, 7, group, 'edge', 8, .7)
 
 
-def _lance(g, mount, position, scale):
+def _lance(geometry, mount, position, scale):
     x, y, z = position
     group = mount['location']
-    g.beam((x, y-3, z), (x, y+4, z), 3.4, 3.4, group, 'metal', 6)
-    g.beam((x, y+4, z), (x, y+21, z), 3, 3, group, 'edge', 6, .1)
+    geometry.beam((x, y-3, z), (x, y+4, z), 3.4, 3.4, group, 'metal', 6)
+    geometry.beam((x, y+4, z), (x, y+21, z), 3, 3, group, 'edge', 6, .1)
 
 
-def _tool(g, mount, position, scale):
+def _tool(geometry, mount, position, scale):
     x, y, z = position
     group = mount['location']
-    g.box((x, y+2, z), (5, 7, 5), group, 'edge', .25)
-    g.beam((x-.7, y+8, z), (x+.7, y+8, z), 7.5, 7.5, group, 'metal', 8)
+    geometry.box((x, y+2, z), (5, 7, 5), group, 'edge', .25)
+    geometry.beam((x-.7, y+8, z), (x+.7, y+8, z), 7.5, 7.5, group, 'metal', 8)
 
 
-def draw(g, mount, rule, position, scale, options=None):
+def draw(geometry, mount, rule, position, scale, options=None):
     """Adds one catalogued mount to a model at its socket, using its standard look."""
     options = options or {}
     aim = options.get('aim')
     if aim is None:
-        _draw_ahead(g, mount, rule, position, scale, options)
+        _draw_ahead(geometry, mount, rule, position, scale, options)
         return
     # Built facing straight ahead at the origin, then turned to the aim and moved to the socket.
     ahead = Geometry()
@@ -351,25 +351,25 @@ def draw(g, mount, rule, position, scale, options=None):
     # Aiming straight up or down leaves no sideways reference; the weapon then keeps the model's own right.
     right = normal(flat) if sum(value*value for value in flat) > 1e-6 else (1, 0, 0)
     up = cross(right, forward)
-    for tri, node, material in ahead.faces:
-        g.face([tuple(position[i]+right[i]*px+forward[i]*py+up[i]*pz for i in range(3))
-                for px, py, pz in tri], node, material)
+    for triangle, node, material in ahead.faces:
+        geometry.face([tuple(position[i]+right[i]*point_x+forward[i]*point_y+up[i]*point_z for i in range(3))
+                for point_x, point_y, point_z in triangle], node, material)
 
 
-def _draw_ahead(g, mount, rule, position, scale, options):
+def _draw_ahead(geometry, mount, rule, position, scale, options):
     look = rule['look']
     if look == 'launcher':
-        _launcher(g, mount, rule, position, scale, options)
+        _launcher(geometry, mount, rule, position, scale, options)
     elif look == 'barrel':
-        _barrel(g, mount, rule, position, scale)
+        _barrel(geometry, mount, rule, position, scale)
     elif look == 'gatling':
-        _gatling(g, mount, rule, position, scale)
+        _gatling(geometry, mount, rule, position, scale)
     elif look == 'pod':
-        _pod(g, mount, rule, position, scale)
+        _pod(geometry, mount, rule, position, scale)
     elif look == 'jet':
-        _jet(g, mount, rule, position, scale)
+        _jet(geometry, mount, rule, position, scale)
     elif look == 'lamp':
-        _lamp(g, mount, rule, position, scale)
+        _lamp(geometry, mount, rule, position, scale)
     else:
         {'hatchet': _hatchet, 'blade': _blade, 'mace': _mace, 'lance': _lance, 'tool': _tool}[look](
-            g, mount, position, scale)
+            geometry, mount, position, scale)

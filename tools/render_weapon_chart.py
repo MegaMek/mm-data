@@ -70,7 +70,7 @@ def make_materials():
     materials = {}
     for role, rgb in PALETTE.items():
         material = bpy.data.materials.new('MM weapon '+role)
-        linear = tuple(c/12.92 if c <= .04045 else ((c+.055)/1.055)**2.4 for c in rgb)
+        linear = tuple(channel/12.92 if channel <= .04045 else ((channel+.055)/1.055)**2.4 for channel in rgb)
         material.diffuse_color = (*linear, 1)
         material.use_nodes = True
         material.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value = (*linear, 1)
@@ -110,12 +110,12 @@ def render(out):
         origin = (right*((index % COLUMNS-(COLUMNS-1)/2)*SPACING_X)
                   - up*((index//COLUMNS-(rows-1)/2)*SPACING_Z-5))
         groups = defaultdict(list)
-        for tri, _, role in geometry.faces:
-            groups[role].append(tri)
+        for triangle, _, role in geometry.faces:
+            groups[role].append(triangle)
         for role, triangles in groups.items():
-            vertices = [Vector(p) for tri in triangles for p in tri]
+            vertices = [Vector(point) for triangle in triangles for point in triangle]
             mesh = bpy.data.meshes.new(name+' '+role)
-            mesh.from_pydata(vertices, [], [tuple(range(j, j+3)) for j in range(0, len(vertices), 3)])
+            mesh.from_pydata(vertices, [], [tuple(range(first, first+3)) for first in range(0, len(vertices), 3)])
             mesh.materials.append(materials[role])
             obj = bpy.data.objects.new(mesh.name, mesh)
             obj.location = origin
