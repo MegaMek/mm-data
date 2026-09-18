@@ -25,8 +25,28 @@ def scan(path):
         if line.startswith('include ') and fields:
             scan(HEXES / fields[0])
         elif line.startswith(('super ', 'base ')) and fields:
-            if any(t.startswith('building:') for t in fields[0].split(';')):
+            if any(t.split(':')[0] in ('building', 'fuel_tank', 'heavy_industrial')
+                   for t in fields[0].split(';')):
                 sources.update(fields[2].split(';'))
+
+
+def facade_family(source):
+    """The tileset's authored family takes precedence over construction strength."""
+    name = source.lower()
+    if 'fortress' in name or 'gun_emplacement' in name:
+        return 'fortress'
+    if 'hangar' in name:
+        return 'hangar'
+    if 'fuel_tanks/' in name:
+        return 'tank'
+    if 'heavy_industrial' in name:
+        return 'industrial'
+    if '/dropship/' in name or '/bsealed_' in name:
+        return 'heavy'
+    if 'reinforced' in name:
+        return 'hard'
+    strength = re.search(r'(?:^|[/_-])(light|medium|heavy|hard|hardened)(?:[/_.-]|$)', name)
+    return strength.group(1).replace('hardened', 'hard') if strength else 'medium'
 
 
 def rdp(points, epsilon):
@@ -117,6 +137,11 @@ for source in sorted(sources):
     prepared = Image.new('RGB', image.size)
     prepared.putdata([p[:3] for p in rgba])
     prepared.save(roof)
-    entries.append({'source':source,'asset':asset,'width':width,'height':height,'loops':loops})
+    # Opaque source pixels alone supply the wall palette; drop shadows and the
+    # RGB fringe extension are not part of the building's material.
+    colors = [p[:3] for p in image.getdata() if p[3] >= 245 and 30 < max(p[:3]) < 235]
+    palette = [sum(p[channel] for p in colors) / (255 * len(colors)) for channel in range(3)] if colors else [.5]*3
+    entries.append({'source':source,'asset':asset,'width':width,'height':height,'loops':loops,
+                    'facade':facade_family(source),'palette':palette})
 (ROOT/'tools/building-footprints.json').write_text(json.dumps(entries,separators=(',',':')))
 print(json.dumps({'sources':len(sources),'models':len(entries),'max_outline_vertices':max(sum(map(len,e['loops'])) for e in entries)}))

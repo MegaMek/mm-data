@@ -8,6 +8,7 @@ BOARD = ROOT / 'data/models/board'
 buildings = json.loads((BOARD / 'building-manifest.json').read_text())
 features = json.loads((BOARD / 'manifest.json').read_text())
 maximum = 0
+assert not {'tank', 'industrial'}.intersection(features), 'Generic structure models must not return'
 for asset in dict(features, **buildings):
     path = BOARD / (asset + '.g3dj')
     model = json.loads(path.read_text())
@@ -34,11 +35,28 @@ for asset in dict(features, **buildings):
             assert dependency.is_relative_to(BOARD.resolve()), dependency
             assert dependency.is_file(), dependency
     if asset in buildings:
+        facade = buildings[asset]['wall_texture']
+        wall = next(material for material in model['materials'] if material['id'] != 'roof')
+        assert (path.parent / wall['textures'][0]['filename']).resolve() == (BOARD / facade).resolve(), path
+        assert '/full-resolution/' not in facade, path
+        assert Image.open(BOARD / facade).size == (128, 128), path
+        assert (wall['id'] == 'shell') == buildings[asset]['full_height_facade'], path
         source = Image.open(BOARD / 'tileset' / buildings[asset]['source']).convert('RGBA')
         roof = Image.open(BOARD / (asset + '-roof.png')).convert('RGB')
         difference = ImageChops.difference(source.convert('RGB'), roof)
         mask = source.getchannel('A').point(lambda alpha: 255 if alpha >= 245 else 0)
         assert ImageChops.multiply(difference.convert('L'), mask).getbbox() is None, path
+
+for family in ('buildings', 'terrain'):
+    folder = BOARD / 'textures' / family
+    for original in (folder / 'full-resolution').glob('*.png'):
+        assert min(Image.open(original).size) > 128, original
+        assert Image.open(folder / original.name).size == (128, 128), original
+
+for name in ('bed', 'grass-rim', 'dirt-rim', 'sand-rim', 'rock-rim', 'concrete-rim', 'snow-rim'):
+    with Image.open(BOARD / 'textures' / (name + '.png')) as image:
+        assert image.size == (128, 128), name
+        assert image.convert('RGBA').getchannel('A').getextrema() == (255, 255), name
 
 sources = json.loads((BOARD / 'tileset/sources.json').read_text())['files']
 for name in sources:

@@ -5,8 +5,6 @@ models use Z up, one hex = 84 x 72 units, and one feature height = 1 unit.
 """
 import bpy
 import json
-import math
-import random
 from pathlib import Path
 from mathutils import Vector
 
@@ -28,10 +26,6 @@ def material(name, color):
     return mat
 
 
-WALL = material('concrete', (.38, .42, .43))
-ROOF = material('roof', (.22, .27, .29))
-TRIM = material('coping', (.65, .65, .58))
-METAL = material('steel', (.24, .33, .37))
 BRIDGE = material('Saxarba bridge', (1, 1, 1))
 BRIDGE.use_nodes = True
 bridge_texture = BRIDGE.node_tree.nodes.new('ShaderNodeTexImage')
@@ -53,28 +47,6 @@ def mesh_object(name, vertices, faces, materials, indices):
     return obj
 
 
-def prism(name, polygon, bottom=0, top=1, open_edges=()):
-    n = len(polygon)
-    vertices = [(x, y, bottom) for x, y in polygon] + [(x, y, top) for x, y in polygon]
-    faces = [tuple(range(n, 2*n)), tuple(reversed(range(n)))]
-    indices = [1, 0]
-    for i in range(n):
-        j = (i+1) % n
-        # Closed walls also cover steps between connected sections of unequal height.
-        faces.append((i, j, j+n, i+n))
-        indices.append(0)
-    # Coping is an actual flat ring. It adds two triangles per edge, not pixels.
-    start = len(vertices)
-    vertices += [(x*.955, y*.955, top+.008) for x, y in polygon]
-    vertices += [(x, y, top+.008) for x, y in polygon]
-    for i in range(n):
-        if i not in open_edges:
-            j = (i+1) % n
-            faces.append((start+i, start+n+i, start+n+j, start+j))
-            indices.append(2)
-    return mesh_object(name, vertices, faces, [WALL, ROOF, TRIM], indices)
-
-
 def export(name, objects, normalize=False, width=None):
     """Small explicit G3DJ exporter: Blender triangulates, runtime only loads."""
     vertices, shared, parts = [], {}, {}
@@ -87,7 +59,7 @@ def export(name, objects, normalize=False, width=None):
         normal_matrix = obj.matrix_world.to_3x3().inverted().transposed()
         for tri in mesh.loop_triangles:
             mat = mesh.materials[tri.material_index] if mesh.materials else None
-            role = 'bridge' if mat == BRIDGE else 'wall' if mat == WALL else 'roof' if mat == ROOF else 'surface'
+            role = 'bridge' if mat == BRIDGE else 'surface'
             indices = parts.setdefault(role, [])
             color = mat.diffuse_color[:3] if mat else (.35, .45, .25)
             if mat and mat.use_nodes:
@@ -123,9 +95,7 @@ def export(name, objects, normalize=False, width=None):
     materials = []
     for role in parts:
         entry = {'id':role,'diffuse':[1,1,1]}
-        if role in ('roof','wall'):
-            entry['textures'] = [{'id':'concrete','filename':'textures/concrete.png','type':'DIFFUSE'}]
-        elif role == 'bridge':
+        if role == 'bridge':
             entry['textures'] = [{'id':'bridge','filename':'tileset/saxarba/bridges/bridge_09.png','type':'DIFFUSE'}]
         materials.append(entry)
     model = {'version': [0, 1], 'id': name,
@@ -137,20 +107,13 @@ def export(name, objects, normalize=False, width=None):
     STATS[name] = {'triangles': sum(len(indices) for indices in parts.values())//3, 'vertices': len(vertices)//12}
 
 
-shapes = [
-    [(-26,-23),(26,-23),(26,23),(-26,23)],
-    [(-29,-14),(-18,-27),(19,-27),(30,-14),(30,15),(18,27),(-18,27),(-29,14)],
-    [(-28,-26),(27,-26),(27,-6),(7,-6),(7,26),(-28,26)],
-    [(29*math.cos(a*math.tau/12),27*math.sin(a*math.tau/12)) for a in range(12)],
-]
-round_shape = [(24*math.cos(a*math.tau/12),24*math.sin(a*math.tau/12)) for a in range(12)]
-export('tank', [prism('Tank', round_shape)])
-export('industrial', [prism('Factory', shapes[2],0,.75),
-                      prism('Tower', [(12,4),(21,4),(21,14),(12,14)], .3,1)])
 # A bridge arm runs from the centre towards north; instances rotate for each exit.
 # The deck is at z=0, with underside/girders below and rails just above it.
 def bridge_beam(name, left, right, bottom, top):
-    beam = prism(name, [(left,0),(right,0),(right,36),(left,36)], bottom, top, open_edges=range(4))
+    polygon = [(left,0),(right,0),(right,36),(left,36)]
+    vertices = [(x,y,z) for z in (bottom,top) for x,y in polygon]
+    faces = [(4,5,6,7),(3,2,1,0)] + [(i,(i+1)%4,(i+1)%4+4,i+4) for i in range(4)]
+    beam = mesh_object(name, vertices, faces, [BRIDGE], [0]*6)
     mesh = beam.data
     mesh.materials.clear()
     mesh.materials.append(BRIDGE)
@@ -231,48 +194,7 @@ for name, source in sources:
 if old_scene:
     bpy.context.window.scene = old_scene
 
-# Periodic procedural material maps. Noise coordinates wrap in both directions;
-# UVs repeat in world units on cliff faces instead of stretching the hex artwork.
-texture_dir = OUT / 'textures'
-texture_dir.mkdir(exist_ok=True)
-palette = {'dirt':(.36,.27,.18),'sand':(.63,.52,.34),'rock':(.38,.40,.39),
-           'concrete':(.48,.49,.46),'snow':(.77,.84,.87),'grass':(.28,.38,.16),
-           'bed':(.30,.29,.21)}
-for kind, base in palette.items():
-    # Retain art-directed albedos after the initial generation pass.
-    if (texture_dir/(kind+'.png')).exists() and kind in ('dirt','sand','rock','concrete'):
-        continue
-    size = 128
-    rng = random.Random(kind)
-    phases = [rng.random()*math.tau for _ in range(6)]
-    pixels = []
-    for y in range(size):
-        for x in range(size):
-            u,v = x/size*math.tau,y/size*math.tau
-            noise = sum(math.sin((i+2)*u+phases[i])*math.cos((i+1)*v+phases[5-i])/(i+2)
-                        for i in range(6))*.09
-            strata = math.sin(v*8+math.sin(u*2)*.7)*.035 if kind in ('dirt','sand','rock') else 0
-            grain = (rng.random()-.5)*.055
-            pixels.extend([max(0,min(1,c+noise+strata+grain)) for c in base]+[1])
-    image = bpy.data.images.new('MM '+kind, width=size,height=size,alpha=True)
-    image.pixels.foreach_set(pixels)
-    image.filepath_raw = str(texture_dir/(kind+'.png'))
-    image.file_format = 'PNG'
-    image.save()
-    # Surface cover descending over the exposed face, with a ragged alpha edge.
-    if kind != 'bed':
-        cover = []
-        for y in range(size):
-            for x in range(size):
-                index=(y*size+x)*4
-                edge=.34+.08*math.sin(x/size*math.tau*5)+.055*math.sin(x/size*math.tau*13)
-                alpha=max(0,min(1,(y/size-edge)*18))
-                cover.extend(pixels[index:index+3]+[alpha])
-        rim = bpy.data.images.new('MM '+kind+' cover',width=size,height=size,alpha=True)
-        rim.pixels.foreach_set(cover)
-        rim.filepath_raw=str(texture_dir/(kind+'-rim.png'))
-        rim.file_format='PNG'
-        rim.save()
+# Terrain, riverbed and rim textures are authored assets. Model rebuilds preserve them.
 
 (OUT/'manifest.json').write_text(json.dumps(STATS,indent=2))
 # Save only the authored library, never replace the user's open file.
