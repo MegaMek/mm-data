@@ -114,6 +114,8 @@ python tools/validate_unit_models.py
 Its generated input is `.work/mek-models/catalog.json`. The build has no external
 Python package dependency. Run without `--preview` for a faster asset-only build.
 The PowerShell command uses Blender's Python for validation too.
+The Blender build also rejects intersecting transport/trooper surfaces in every
+formation, so changing vehicle dimensions requires adjusting its layout too.
 
 `--preview` also writes `.work/mek-models/review/unit-models.blend`, `preview.png`,
 `front.png`, `side.png`, and `top.png`. The four orthographic views show the actual

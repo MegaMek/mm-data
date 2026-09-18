@@ -16,6 +16,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 from unit_model_geometry import Geometry, PALETTE, add
 from unit_mek_chassis import build_chassis
 
@@ -280,20 +281,23 @@ def infantry_vehicle(kind):
 
 
 def infantry_slots(count, vehicle=False):
-    """Art layout only; the live unit supplies the compressed slot count."""
+    """Each slot owns its position and heading; the live unit supplies only its count."""
     if not vehicle:
         positions = [(0, 0)] if count == 1 else [(-12, 9), (12, 9), (0, -10), (-17, -12), (17, -12), (0, 17)]
-        return [('trooper', position) for position in positions[:count]]
+        return [('trooper', position, ((i % 3)-1)*.12) for i, position in enumerate(positions[:count])]
     if count == 0:
         return []
     vehicles = 1 if count <= 4 else 2
     if count == 1:
-        positions = [(0, 0)]
+        placements = [((0, 0), .18)]
+    elif count == 2:
+        placements = [((-6, 3), .23), ((25, -14), -.45)]
     elif count <= 4:
-        positions = [(-8, 0), (26, 17), (26, -15), (-29, -27)]
+        placements = [((-10, 1), -.28), ((24, 25), .55), ((28, -20), -.35), ((-32, -24), .5)]
     else:
-        positions = [(-21, 1), (21, -1), (0, 28), (0, -31), (-36, -25), (36, 25)]
-    return [('vehicle' if i < vehicles else 'trooper', positions[i]) for i in range(count)]
+        placements = [((-24, 10), .30), ((24, -10), -.27), ((6, 32), .5),
+                      ((-4, -33), -.45), ((-42, -24), .5), ((42, 26), -.5)]
+    return [('vehicle' if i < vehicles else 'trooper', *placements[i]) for i in range(count)]
 
 
 def make_preview(examples, out, recipes):
@@ -495,8 +499,8 @@ def build(args):
         formations = {}
         for count in range(limit+1):
             geometry = Geometry()
-            for i, (_, (x, y)) in enumerate(infantry_slots(count)):
-                geometry.extend(library[i % len(library)], (x, y, 0), ((i % 3)-1)*.12, group='formation')
+            for i, (_, (x, y), angle) in enumerate(infantry_slots(count)):
+                geometry.extend(library[i % len(library)], (x, y, 0), angle, group='formation')
             relative = 'squad-'+str(count)+'.g3dj'
             export(geometry, kind+'/'+relative)
             formations[str(count)] = relative
@@ -526,10 +530,9 @@ def build(args):
                     export(vehicle, 'infantry/vehicles/'+style+'.g3dj')
                 choices = {}
                 for count in range(7):
-                    geometry, components = Geometry(), []
+                    geometry, components, placed = Geometry(), [], []
                     troop_index = 0
-                    for i, (role, (x, y)) in enumerate(infantry_slots(count, style != 'jump')):
-                        angle = 0 if role == 'vehicle' else ((i % 3)-1)*.12
+                    for role, (x, y), angle in infantry_slots(count, style != 'jump'):
                         if role == 'vehicle':
                             part = vehicle
                             asset = 'infantry/vehicles/'+style+'.g3dj'
@@ -537,7 +540,16 @@ def build(args):
                             part = troop_library[troop_index % len(poses)]
                             asset = 'infantry/'+('jump/' if style == 'jump' else '')+'poses/'+poses[troop_index % len(poses)]+'.g3dj'
                             troop_index += 1
+                        start = len(geometry.faces)
                         geometry.extend(part, (x, y, 0), angle, group='formation')
+                        if style != 'jump':
+                            vertices = [p for tri, _, _ in geometry.faces[start:] for p in tri]
+                            tree = BVHTree.FromPolygons(vertices,
+                                [tuple(range(j, j+3)) for j in range(0, len(vertices), 3)], all_triangles=True)
+                            for other_role, other in placed:
+                                if 'vehicle' in (role, other_role) and tree.overlap(other):
+                                    raise ValueError(f'{style} / {count} slots: transport intersects {role}')
+                            placed.append((role, tree))
                         components.append({'role': role, 'asset': asset, 'position': [x, y, 0], 'angle': angle})
                     relative = style+'/squad-'+str(count)+'.g3dj'
                     export(geometry, 'infantry/'+relative)
