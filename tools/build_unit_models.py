@@ -8,7 +8,7 @@ from collections import defaultdict
 from copy import deepcopy
 import hashlib
 import json
-from math import ceil, sqrt, pi
+from math import pi
 from pathlib import Path
 import re
 import sys
@@ -18,6 +18,8 @@ import bpy
 from mathutils import Vector
 from unit_model_geometry import Geometry, PALETTE, add
 from unit_mek_chassis import build_chassis
+import unit_weapon_shapes as weapons
+from unit_mount_layout import MountArea
 
 ROOT = Path(__file__).resolve().parents[1]
 SPRITES = ROOT / 'data/images/units'
@@ -41,72 +43,15 @@ def point(pixel):
     return (pixel[0]-42, 36-pixel[1], pixel[2])
 
 
-def module_size(mount, scale):
-    return max(.65, min(1.5, .62+sqrt(max(0, mount['tonnage']))*.18))*scale
-
-
-def missile_grid(mount, size, missile_columns):
-    rack = max(1, mount['rackSize'])
-    columns = min(missile_columns or 5, ceil(sqrt(rack)))
-    # Above 20 rounds is a launcher family symbol, not one extra mesh per round.
-    visible = min(20, rack)
-    rows = ceil(visible/columns)
-    return columns, rows, visible, (columns*1.6+1)*size, (rows*1.6+1)*size
-
-
-def module(g, mount, position, scale=1, barrel_length=None, missile_columns=0):
-    family = mount['family']
-    group = mount['location']
-    x, y, z = position
-    direction = -1 if mount['rear'] else 1
-    size = module_size(mount, scale)
-    if family == 'missile':
-        columns, rows, visible, width, height = missile_grid(mount, size, missile_columns)
-        g.box((x, y-direction*2.3*size, z), (width, 6*size, height), group, 'paint')
-        front = y+direction*.76*size
-        for i in range(visible):
-            cx = x+(i % columns-(columns-1)/2)*1.6*size
-            cz = z+(i//columns-(rows-1)/2)*1.6*size
-            # Flat recessed sockets avoid spending a cylinder on every missile.
-            corners = [(cx-.53*size, front, cz-.53*size), (cx+.53*size, front, cz-.53*size),
-                       (cx+.53*size, front, cz+.53*size), (cx-.53*size, front, cz+.53*size)]
-            g.face(list(reversed(corners)) if direction == 1 else corners, group, 'dark')
-    elif family == 'jump-jet':
-        g.beam((x, y, z+2*size), (x, y, z-2*size), 3*size, 3*size, group, 'metal', 6)
-    elif family == 'hatchet':
-        g.beam((x, y, z-7), (x, y, z+8), 2, 2, group, 'metal')
-        g.prism([(x, y-1), (x+7, y-3), (x+9, y), (x+7, y+3), (x, y+1)],
-                z+4, z+10, group, 'edge')
-    else:
-        length = {'laser': 4, 'ppc': 12, 'ballistic': 8, 'machine-gun': 5, 'flamer': 5,
-                  'sensor': 3, 'energy': 8}[family]*size
-        if group not in ('LA', 'RA') and family in ('laser', 'machine-gun', 'sensor'):
-            length = 2.5*size
-        if family == 'ppc' and barrel_length:
-            length = barrel_length
-        radius = {'laser': min(4, 1.8+mount['tonnage']*.55), 'ppc': 4.6, 'ballistic': 5, 'machine-gun': 1.8, 'flamer': 2.8,
-                  'sensor': 2, 'energy': 3.5}[family]*size
-        start = (x, y-2*direction*size, z)
-        end = (x, y+length*direction, z)
-        g.beam(start, end, radius, radius, group, 'metal',
-               6 if family in ('ppc', 'ballistic', 'energy') else 4, .85)
-        # One inset face replaces the old second capped tube (ten fewer triangles).
-        half = radius*.22
-        front = end[1]+direction*.03
-        corners = [(x-half, front, z+half), (x+half, front, z+half),
-                   (x+half, front, z-half), (x-half, front, z-half)]
-        g.face(corners if direction == 1 else list(reversed(corners)), group,
-               'glass' if family in ('laser', 'ppc') else 'dark')
-
-
-def assemble(base, recipe, unit):
+def assemble(base, recipe, unit, detail='full'):
     result = deepcopy(base)
     mounts = [m for m in unit['equipment'] if m['family'] != 'internal']
-    unresolved = [m for m in mounts if m['family'].startswith('unmapped') or m['location'] not in recipe['sockets']]
+    rules = {m['index']: weapons.rule_for(m, recipe) for m in mounts}
+    unresolved = [m for m in mounts if rules[m['index']] is None or m['location'] not in recipe['sockets']]
     if unresolved:
         return None, [{'equipment': m['internalName'], 'location': m['location'], 'family': m['family']} for m in unresolved]
     counts = defaultdict(int)
-    attachments = []
+    placements = []
     stacked_launchers = {}
     for loc, socket in recipe.get('missileSockets', {}).items():
         if loc+':missile' in recipe.get('socketBanks', {}):
@@ -115,15 +60,25 @@ def assemble(base, recipe, unit):
         if len(launchers) < 2:
             continue
         scale = recipe['weaponScale']*recipe.get('missileScale', 1)
-        heights = [missile_grid(m, module_size(m, scale), recipe.get('missileColumns', 0))[4] for m in launchers]
+        grids = [weapons.launcher_grid(rules[m['index']], m, scale, recipe.get('missileColumns', 0),
+                                       weapons.orientation_for(m, rules[m['index']], recipe)) for m in launchers]
         gap = .4
-        available = recipe['missileBayHeight']-gap*(len(launchers)-1)
+        # A crowded bay lays its launchers out side by side rather than shrinking one thin stack.
+        across = recipe.get('missileBayColumns', 1) if len(launchers) > 2 else 1
+        rows = [list(range(start, min(start+across, len(launchers)))) for start in range(0, len(launchers), across)]
+        heights = [max(grids[i]['height'] for i in row) for row in rows]
+        available = recipe['missileBayHeight']-gap*(len(rows)-1)
         if available <= 0:
             raise ValueError('Too many launchers for '+recipe['name']+' '+loc)
         fit = min(1, available/sum(heights))
-        cursor = socket[2]-(sum(heights)*fit+gap*(len(launchers)-1))/2
-        for mount, height in zip(launchers, heights):
-            stacked_launchers[mount['index']] = (cursor+height*fit/2, fit)
+        widest = max(grid['width'] for grid in grids)
+        if across > 1:
+            fit = min(fit, (recipe['missileBayWidth']-gap*(across-1))/(across*widest))
+        cursor = socket[2]-(sum(heights)*fit+gap*(len(rows)-1))/2
+        for row, height in zip(rows, heights):
+            for place, i in enumerate(row):
+                shift = (place-(len(row)-1)/2)*(widest*fit+gap)
+                stacked_launchers[launchers[i]['index']] = (cursor+height*fit/2, fit, shift)
             cursor += height*fit+gap
     for mount in mounts:
         loc = mount['location']
@@ -132,8 +87,10 @@ def assemble(base, recipe, unit):
         pixel = list(source.get(loc, recipe['sockets'][loc]))
         if mount['rear'] and loc not in source:
             pixel[1] += 9
-        bank = recipe.get('socketBanks', {}).get(loc+':'+mount['family']) if not mount['rear'] else None
-        key = (loc, mount['rear'], mount['family'] if bank else special)
+        rule = rules[mount['index']]
+        family = weapons.bank_family(mount, rule)
+        bank = recipe.get('socketBanks', {}).get(loc+':'+family) if not mount['rear'] else None
+        key = (loc, mount['rear'], family if bank else special)
         index = counts[key]
         counts[key] += 1
         if bank and index < len(bank):
@@ -142,21 +99,73 @@ def assemble(base, recipe, unit):
             # Stable sockets are keyed by actual mount identity; extra equipment uses a compact bank.
             pixel[0] += ((index+1)//2)*(1 if index % 2 else -1)*recipe['slotSpacing']
             pixel[2] -= (index//3)*3
+        if loc in ('LL', 'RL') and mount['family'] != 'jump-jet' and not mount['rear']:
+            # Leg weapons ride just below the hip like a low-slung belt, never down on the shin.
+            pixel = list(recipe.get('beltSockets', {}).get(loc, [pixel[0], pixel[1], recipe['hip'][2]-5]))
         if mount['index'] in stacked_launchers:
             pixel = list(source[loc])
+            pixel[0] += stacked_launchers[mount['index']][2]
             pixel[2] = stacked_launchers[mount['index']][0]
         if mount['family'] == 'jump-jet':
             pixel[1] += 9
             pixel[2] = min(pixel[2], 29)
-        position = point(pixel)
         scale = recipe['weaponScale']*(recipe.get('missileScale', 1) if special else 1)
         if mount['index'] in stacked_launchers:
             scale *= stacked_launchers[mount['index']][1]
-        module(result, mount, position, scale, recipe.get('barrelLength'), recipe.get('missileColumns', 0))
+        if mount['family'] == 'ppc' and recipe.get('barrelLength'):
+            # The recipe states this length in model units, so it is not scaled again.
+            rule['length'] = recipe['barrelLength']/scale
+        options = {'maximumColumns': recipe.get('missileColumns', 0), 'detail': detail,
+                   'orientation': weapons.orientation_for(mount, rule, recipe), 'aim': weapons.aim_for(mount, recipe),
+                   'slope': recipe.get('missileSlope', 0) if special else 0, 'slopeOrigin': source[loc][2]}
+        hard_point = point(recipe['rearSockets'].get(loc, recipe['sockets'][loc]) if mount['rear']
+                           else recipe['sockets'][loc])
+        placements.append({'mount': mount, 'rule': rule, 'position': list(point(pixel)), 'scale': scale,
+                           'options': options, 'hardPoint': hard_point,
+                           # A launcher in its bay and a weapon on an art-directed bank spot keep their place.
+                           'fixed': special, 'banked': bool(bank and index < len(bank))})
+    lay_out(recipe, placements)
+    attachments = []
+    for placement in placements:
+        mount = placement['mount']
+        weapons.draw(result, mount, placement['rule'], tuple(placement['position']), placement['scale'],
+                     placement['options'])
         attachments.append({'equipmentIndex': mount['index'], 'equipment': mount['internalName'],
-                            'location': loc, 'rear': mount['rear'], 'family': mount['family'],
-                            'position': list(position), 'rackSize': mount['rackSize']})
+                            'location': mount['location'], 'rear': mount['rear'], 'family': mount['family'],
+                            'position': placement['position'], 'rackSize': mount['rackSize']})
+        if placement.get('crowded'):
+            attachments[-1]['crowded'] = True
     return result, attachments
+
+
+def lay_out(recipe, placements):
+    """Moves any weapon that would overlap another in its location to a free spot in that location's area."""
+    def size_of(placement):
+        return weapons.footprint(placement['rule'], placement['mount'], placement['scale'], placement['options'])
+
+    def priority(placement):
+        size = size_of(placement)
+        return (not placement['fixed'], not placement['banked'], -(size[0]*size[1] if size else 0))
+
+    areas = {}
+    # Bay launchers reserve their space first, then art-directed bank spots, then the rest, largest first.
+    for placement in sorted(placements, key=priority):
+        mount = placement['mount']
+        size = size_of(placement)
+        if size is None or placement['options']['aim'] is not None:
+            continue
+        key = (mount['location'], mount['rear'])
+        if key not in areas:
+            areas[key] = MountArea.for_location(recipe, mount['location'],
+                                                (placement['hardPoint'][0], placement['hardPoint'][2]))
+        x, _, z = placement['position']
+        if placement['fixed']:
+            areas[key].block(x, z, *size)
+            continue
+        placement['position'][0], placement['position'][2], fit, crowded = areas[key].place(x, z, *size)
+        placement['scale'] *= fit
+        if crowded:
+            placement['crowded'] = True
 
 
 def fallback(kind):
@@ -360,6 +369,9 @@ def build(args):
     manifest = {'schema': 1, 'budget': 1000, 'catalogSha256': digest(catalog_path),
                 'recipesSha256': digest(recipes_path), 'generatorSha256': digest(Path(__file__)),
                 'geometrySha256': digest(Path(__file__).with_name('unit_model_geometry.py')),
+                'weaponShapesSha256': digest(Path(__file__).with_name('unit_weapon_shapes.py')),
+                'weaponRulesSha256': digest(weapons.RULES_PATH),
+                'mountLayoutSha256': digest(Path(__file__).with_name('unit_mount_layout.py')),
                 'chassisBuilderSha256': digest(Path(__file__).with_name('unit_mek_chassis.py')),
                 'references': {},
                 'models': {}, 'variants': {}, 'needsReview': [], 'coverage': {}}
@@ -382,7 +394,10 @@ def build(args):
         export(base, folder+'body.g3dj')
         descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj', 'variants': {}}
         for unit in units:
-            geometry, attachments = assemble(base, recipe, unit)
+            for detail in weapons.DETAIL_LEVELS:
+                geometry, attachments = assemble(base, recipe, unit, detail)
+                if geometry is None or len(geometry.faces) <= 1000:
+                    break
             if geometry is None or len(geometry.faces) > 1000:
                 manifest['needsReview'].append({'name': unit['name'], 'source': unit['source'],
                                                 'reason': attachments if geometry is None else 'triangle-budget'})
@@ -396,6 +411,8 @@ def build(args):
                 'sprite': unit['sprite'], 'spriteSha256': digest(SPRITES / unit['sprite']),
                 'source': unit['source'], 'sourceSha256': unit['sourceSha256'], 'variantKey': unit['variantKey'], 'attachments': attachments,
                 'differentSprite': unit['sprite'] != recipe['sprite']}
+            if detail != 'full':
+                manifest['variants'][unit['name']]['launcherDetail'] = detail
             if unit['model'] == recipe['referenceVariant']:
                 examples.append((unit['name'], geometry, recipe['sprite']))
         write_json(out / (folder+'model.json'), descriptor)

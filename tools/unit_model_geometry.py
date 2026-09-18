@@ -30,7 +30,11 @@ def normal(a):
 
 PALETTE = {'paint': (.72, .75, .72), 'edge': (.50, .54, .53),
            'metal': (.22, .26, .28), 'dark': (.065, .085, .095),
-           'glass': (.21, .67, .73), 'skin': (.64, .51, .40)}
+           'glass': (.21, .67, .73), 'skin': (.64, .51, .40),
+           # Weapon tips: red lasers, blue PPCs, green TAG, orange plasma. Cockpit glazing stays 'glass'.
+           'laser': (.86, .13, .11), 'ppc': (.20, .48, 1.0), 'tag': (.22, .80, .30), 'plasma': (.97, .55, .12),
+           # The lens of a searchlight.
+           'lamp': (.99, .94, .62)}
 
 
 class Geometry:
