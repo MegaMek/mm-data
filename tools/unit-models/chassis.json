@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "notes": "Silhouettes are authored against both the north-facing sprites and repository chassis illustrations in unit_mek_chassis.py. Sockets use the sprite-centered coordinate system: x-42, 36-y, z. Large forms take priority over surface detail; body dimensions are stylized, not physical measurements.",
+  "chassis": [
+    {
+      "name": "Atlas", "id": "atlas", "referenceVariant": "AS7-D",
+      "sprite": "meks/Atlas.png", "illustration": "Mek/Atlas.png", "hip": [42,36,31],
+      "sockets": {"HD":[42,29,55],"CT":[42,29,40],"LT":[33,29,44],"RT":[51,29,43],"LA":[21,30,33],"RA":[63,30,33],"LL":[33,31,13],"RL":[51,31,13]},
+      "rearSockets": {"CT":[42,43,44],"LT":[34,43,44],"RT":[50,43,44]},
+      "socketBanks": {"LT:missile":[[33,29,45],[33,30,36]]},
+      "slotSpacing": 3, "weaponScale": 0.83, "missileColumns": 4,
+      "silhouette": "Skull face, domed shoulders, long gauntlets and fists, heavy straight legs; asymmetric torso weapons."
+    },
+    {
+      "name": "Locust", "id": "locust", "referenceVariant": "LCT-1V",
+      "sprite": "meks/Locust.png", "illustration": "Mek/Locust.png", "hip": [42,37,31],
+      "silhouette": "Low narrow sloped cockpit, high side gun pods, antenna, circular hips and long thin reverse-jointed legs with split toes.",
+      "sockets": {"HD":[42,24,38],"CT":[42,24,33],"LT":[37,30,36],"RT":[47,30,36],"LA":[29,33,39],"RA":[55,33,39],"LL":[31,43,20],"RL":[53,43,20]},
+      "rearSockets": {"CT":[42,45,39],"LT":[38,43,39],"RT":[46,43,39]},
+      "slotSpacing": 2.5, "weaponScale": 0.80
+    },
+    {
+      "name": "Warhammer", "id": "warhammer", "referenceVariant": "WHM-6R",
+      "sprite": "meks/Warhammer.png", "illustration": "Mek/Warhammer.png", "hip": [42,36,29],
+      "silhouette": "Low inset head, slab shoulders, wide cannon gauntlets and long PPC barrels; shoulder launcher opposite a searchlight.",
+      "sockets": {"HD":[42,30,47],"CT":[42,29,39],"LT":[35,29,39],"RT":[49,29,39],"LA":[22,27,32],"RA":[62,27,32],"LL":[33,31,13],"RL":[51,31,13]},
+      "missileSockets": {"RT":[54.5,33,53]},
+      "socketBanks": {"LT:laser":[[35,29,41],[35,29,38]],"RT:laser":[[49,29,41],[49,29,38]],"LT:machine-gun":[[32,30,39]],"RT:machine-gun":[[52,30,39]]},
+      "rearSockets": {"CT":[42,42,41],"LT":[35,42,41],"RT":[49,42,41]},
+      "slotSpacing": 2.6, "weaponScale": 0.92, "barrelLength": 14, "missileBayHeight": 7
+    },
+    {
+      "name": "Mad Cat (Timber Wolf)", "id": "mad-cat", "referenceVariant": "Prime",
+      "sprite": "meks/MadCat.png", "illustration": "Mek/Mad Cat (Timber Wolf).png", "hip": [42,38,28],
+      "silhouette": "Tall twin missile towers, rounded forward canopy, low paired gun pods, narrow reverse knees and broad shin armor over split feet.",
+      "sockets": {"HD":[42,21,36],"CT":[45,22,33],"LT":[36,25,34],"RT":[48,25,34],"LA":[21,29,33],"RA":[63,29,33],"LL":[31,39,12],"RL":[53,39,12]},
+      "missileSockets": {"LT":[28,35,51],"RT":[56,35,51]},
+      "socketBanks": {"LA:laser":[[21,29,33],[21,29,29]],"RA:laser":[[63,29,33],[63,29,29]]},
+      "missileScale": 1.28, "missileColumns": 4, "missileBayHeight": 13,
+      "rearSockets": {"CT":[42,46,38],"LT":[35,45,38],"RT":[49,45,38]},
+      "slotSpacing": 3, "weaponScale": 0.95
+    }
+  ]
+}

@@ -19,6 +19,13 @@ directory with the game's data. Blender is an authoring dependency only.
 - `bridge`, `field`, sixteen foliage and six rock G3DJ
   files, all at or below 480 triangles. Rocks use 70–150 triangles. Counts and
   the imported Blender source names are in `manifest.json`.
+- `textures/foliage/`: eight shared 64 by 64 detail albedos for broad leaves,
+  pine needles, hanging willow leaves, palm fronds, ordinary bark, birch bark,
+  ringed palm bark and snow. Source material boundaries keep snow caps separate
+  from green foliage and preserve the birch's pale trunk and dark scars. Existing
+  vertex colors tint the pale maps; dominant-axis UVs follow the tree's original
+  proportions. Snow variants use their own authored geometry. Texture generation
+  prompts are recorded in `tools/board-foliage-texture-prompts.json`.
 - `textures/buildings/`: 128 by 128 runtime facade maps. Light buildings retain
   windows; medium uses concrete, hard reinforced concrete, and heavy armored
   panels. Fortresses/gun emplacements use massive sci-fi walls, hangars use
