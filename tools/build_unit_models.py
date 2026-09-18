@@ -16,6 +16,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 from unit_model_geometry import Geometry, PALETTE, add, content_digest
 from unit_mek_chassis import build_chassis
 import unit_weapon_shapes as weapons
@@ -185,7 +186,7 @@ def fallback(kind):
     return g
 
 
-def person(pose, armored=False):
+def person(pose, armored=False, jump=False):
     g = Geometry()
     kneel = pose == 'kneeling'
     advance = pose == 'advancing'
@@ -218,7 +219,94 @@ def person(pose, armored=False):
         # A compact jump pack / arm cannon follows the generic BA sprite's bulky shoulders.
         g.box((0, -3, torso_z+2), (7, 3, 7), 'soldier', 'edge')
         g.beam((4, 2, torso_z), (4, 8, torso_z), 2.4, 2.4, 'soldier', 'metal')
+    if jump:
+        # Eight triangles for a tapered backpack with a downward exhaust. Six jump
+        # troopers still fit the 1,000-triangle budget without changing their poses.
+        lo = [(-2.3, -1.4, torso_z-4), (0, -4.3, torso_z-4), (2.3, -1.4, torso_z-4)]
+        hi = [(x*.8, y, torso_z+2.5) for x, y, _ in lo]
+        g.face(list(reversed(lo)), 'soldier', 'dark')
+        g.face(hi, 'soldier', 'edge')
+        for i in range(3):
+            j = (i+1) % 3
+            g.face([lo[i], lo[j], hi[j], hi[i]], 'soldier', 'edge')
     return g
+
+
+def infantry_vehicle(kind):
+    """Small sprite-proportioned transports; +Y is forward, as for the troops."""
+    g = Geometry()
+    if kind == 'motorized':
+        g.box((0, 0, 4), (11, 21, 3), 'vehicle', 'paint')
+        g.box((0, 6.7, 6.5), (10, 8, 3), 'vehicle', 'paint', taper=.85)
+        g.box((0, -5, 6), (8, 3, 4), 'vehicle', 'dark')
+        for sign in (-1, 1):
+            for y in (-7, 7):
+                g.beam((sign*6-1.3, y, 3.5), (sign*6+1.3, y, 3.5),
+                       7.2, group='vehicle', material='dark', sides=6)
+            g.beam((sign*4.5, -6, 5), (sign*4.5, -6, 12), 1.2, group='vehicle')
+        g.beam((-4.5, -6, 12), (4.5, -6, 12), 1.2, group='vehicle')
+        windshield = [(-4, 0, 12), (4, 0, 12), (4, 2.5, 8), (-4, 2.5, 8)]
+        g.face(windshield, 'vehicle', 'glass')
+        g.face(list(reversed(windshield)), 'vehicle', 'glass')
+        g.box((0, 11, 4), (12, 1.5, 2), 'vehicle', 'metal')
+        for x in (-3.5, 3.5):
+            g.face([(x-.8, 10.72, 6.5), (x+.8, 10.72, 6.5),
+                    (x+.8, 10.72, 5.5), (x-.8, 10.72, 5.5)], 'vehicle', 'glass')
+        return g
+
+    # Shared enclosed APC hull, visibly different from the open motorized jeep.
+    g.box((0, 0, 8.5), (13, 25, 9), 'vehicle', 'paint', bevel=.35, taper=.78)
+    g.box((0, -1, 13.4), (5, 6, .8), 'vehicle', 'edge')
+    for sign in (-1, 1):
+        g.face([(sign*.4, 10.08, 12), (sign*3, 10.08, 12),
+                (sign*3, 10.68, 10), (sign*.4, 10.68, 10)][::sign], 'vehicle', 'glass')
+        x = sign*4
+        g.face([(x-.65, 11.96, 6), (x+.65, 11.96, 6),
+                (x+.65, 12.2, 5.2), (x-.65, 12.2, 5.2)], 'vehicle', 'glass')
+    g.face([(-3, -12.23, 5), (3, -12.23, 5), (3, -10.4, 11), (-3, -10.4, 11)],
+           'vehicle', 'metal')
+    if kind == 'wheeled':
+        for sign in (-1, 1):
+            for y in (-8, 0, 8):
+                g.beam((sign*6.5-1.3, y, 3.5), (sign*6.5+1.3, y, 3.5),
+                       7.2, group='vehicle', material='dark', sides=6)
+    elif kind == 'tracked':
+        profile = [(-10, 0), (10, 0), (13, 3), (10, 6), (-10, 6), (-13, 3)]
+        for sign in (-1, 1):
+            g.loft([[(x, y, z) for y, z in profile]
+                    for x in (sign*7.2-1.7, sign*7.2+1.7)], 'vehicle', 'dark')
+            x = sign*8.92
+            g.face([(x, -9, 1.5), (x, 9, 1.5), (x, 10.5, 3),
+                    (x, 9, 4.5), (x, -9, 4.5), (x, -10.5, 3)][::sign], 'vehicle', 'metal')
+    elif kind == 'hover':
+        g.box((0, 0, 2), (20, 29, 4), 'vehicle', 'dark', bevel=.5, taper=.9)
+        for x in (-4, 4):
+            g.beam((x, -11, 6.5), (x, -14, 6.5), 4.5, group='vehicle', material='metal', sides=6)
+            g.face([(x-1, -14.02, 5.5), (x+1, -14.02, 5.5),
+                    (x+1, -14.02, 7.5), (x-1, -14.02, 7.5)], 'vehicle', 'dark')
+    else:
+        raise ValueError('Unknown infantry transport '+kind)
+    return g
+
+
+def infantry_slots(count, vehicle=False):
+    """Each slot owns its position and heading; the live unit supplies only its count."""
+    if not vehicle:
+        positions = [(0, 0)] if count == 1 else [(-12, 9), (12, 9), (0, -10), (-17, -12), (17, -12), (0, 17)]
+        return [('trooper', position, ((i % 3)-1)*.12) for i, position in enumerate(positions[:count])]
+    if count == 0:
+        return []
+    vehicles = 1 if count <= 4 else 2
+    if count == 1:
+        placements = [((0, 0), .18)]
+    elif count == 2:
+        placements = [((-6, 3), .23), ((25, -14), -.45)]
+    elif count <= 4:
+        placements = [((-10, 1), -.28), ((24, 25), .55), ((28, -20), -.35), ((-36, -28), .5)]
+    else:
+        placements = [((-24, 10), .30), ((24, -10), -.27), ((6, 32), .5),
+                      ((-4, -33), -.45), ((-42, -24), .5), ((42, 26), -.5)]
+    return [('vehicle' if i < vehicles else 'trooper', *placements[i]) for i in range(count)]
 
 
 def make_preview(examples, out, recipes):
@@ -374,7 +462,7 @@ def build(args):
                 'mountLayoutSha256': digest(Path(__file__).with_name('unit_mount_layout.py')),
                 'chassisBuilderSha256': digest(Path(__file__).with_name('unit_mek_chassis.py')),
                 'references': {},
-                'models': {}, 'variants': {}, 'needsReview': [], 'coverage': {}}
+                'models': {}, 'variants': {}, 'formations': {}, 'needsReview': [], 'coverage': {}}
     examples = []
     def export(geometry, relative):
         manifest['models'][relative] = geometry.export(out / relative, relative)
@@ -428,18 +516,65 @@ def build(args):
         formations = {}
         for count in range(limit+1):
             geometry = Geometry()
-            for i in range(count):
-                # Vary stance/facing deterministically. Small squads stay centered in the hex.
-                positions = [(0, 0)] if count == 1 else [(-12, 9), (12, 9), (0, -10), (-17, -12), (17, -12), (0, 17)]
-                x, y = positions[i]
-                geometry.extend(library[i % len(library)], (x, y, 0), ((i % 3)-1)*.12, group='formation')
+            for i, (_, (x, y), angle) in enumerate(infantry_slots(count)):
+                geometry.extend(library[i % len(library)], (x, y, 0), angle, group='formation')
             relative = 'squad-'+str(count)+'.g3dj'
             export(geometry, kind+'/'+relative)
             formations[str(count)] = relative
             if count == (3 if armored else 6):
                 examples.append((kind+' formation', geometry, reference))
-        write_json(out / (kind+'/model.json'), {'schema': 1, 'kind': 'formation',
-                   'fallback': 'squad-1.g3dj', 'formations': formations})
+        descriptor = {'schema': 1, 'kind': 'formation', 'fallback': 'squad-1.g3dj', 'formations': formations}
+        if not armored:
+            descriptor['movementFormations'] = {}
+            for mode, style, sprite in (
+                    ('INF_MOTORIZED', 'motorized', 'motorized_infantry_platoon.png'),
+                    ('TRACKED', 'tracked', 'mecha_t_platoon.png'),
+                    ('WHEELED', 'wheeled', 'mecha_w_platoon.png'),
+                    ('HOVER', 'hover', 'mecha_h_platoon.png'),
+                    ('INF_JUMP', 'jump', 'jump_infantry_platoon.png')):
+                reference = 'Infantry/'+sprite
+                manifest['references']['infantry-'+style] = {
+                    'sprite': reference, 'spriteSha256': digest(SPRITES / reference)}
+                troop_library = [person(pose, jump=True) for pose in poses] if style == 'jump' else library
+                if style == 'jump':
+                    for pose, trooper in zip(poses, troop_library):
+                        export(trooper, 'infantry/jump/poses/'+pose+'.g3dj')
+                else:
+                    # Transports are twice the original dimensions, including height.
+                    vehicle = Geometry()
+                    for triangle, group, material in infantry_vehicle(style).faces:
+                        vehicle.face([(x*2, y*2, z*2) for x, y, z in triangle], group, material)
+                    export(vehicle, 'infantry/vehicles/'+style+'.g3dj')
+                choices = {}
+                for count in range(7):
+                    geometry, components, placed = Geometry(), [], []
+                    troop_index = 0
+                    for role, (x, y), angle in infantry_slots(count, style != 'jump'):
+                        if role == 'vehicle':
+                            part = vehicle
+                            asset = 'infantry/vehicles/'+style+'.g3dj'
+                        else:
+                            part = troop_library[troop_index % len(poses)]
+                            asset = 'infantry/'+('jump/' if style == 'jump' else '')+'poses/'+poses[troop_index % len(poses)]+'.g3dj'
+                            troop_index += 1
+                        start = len(geometry.faces)
+                        geometry.extend(part, (x, y, 0), angle, group='formation')
+                        if style != 'jump':
+                            vertices = [p for tri, _, _ in geometry.faces[start:] for p in tri]
+                            tree = BVHTree.FromPolygons(vertices,
+                                [tuple(range(j, j+3)) for j in range(0, len(vertices), 3)], all_triangles=True)
+                            for other_role, other in placed:
+                                if 'vehicle' in (role, other_role) and tree.overlap(other):
+                                    raise ValueError(f'{style} / {count} slots: transport intersects {role}')
+                            placed.append((role, tree))
+                        components.append({'role': role, 'asset': asset, 'position': [x, y, 0], 'angle': angle})
+                    relative = style+'/squad-'+str(count)+'.g3dj'
+                    export(geometry, 'infantry/'+relative)
+                    choices[str(count)] = relative
+                    manifest['formations']['infantry/'+relative] = {
+                        'movementMode': mode, 'slots': count, 'components': components}
+                descriptor['movementFormations'][mode] = choices
+        write_json(out / (kind+'/model.json'), descriptor)
     known = {r['name'] for r in recipes}
     pending = []
     for chassis, units in sorted(units_by_chassis.items()):

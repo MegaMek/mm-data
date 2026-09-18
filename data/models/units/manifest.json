@@ -3,7 +3,7 @@
   "budget": 1000,
   "catalogSha256": "042823b0c48b2e26eb71268bf4d1f1fd4da567e4b06a7998cb861374a0c0a538",
   "recipesSha256": "08aebcc45a31536a17d8ed56f3d6a9e7a54f1c2f111bb8ed38ddf264c23c4106",
-  "generatorSha256": "d694c6c2d6784389d6e17455f0d8ea7eb6db22548f871f4ed364242a62a52ef8",
+  "generatorSha256": "33fb1c1ff82ce6bed06e392508897f7b340607017a208efff2a11e76b3984070",
   "geometrySha256": "e80de02994a7c16dca0dcd8ebbad3e758ed24485368cba6e08ac9bf982f74f22",
   "weaponShapesSha256": "57702676097032642647a2d19665febb7e714404a0c29e65d7cfb175bc6cf2e7",
   "weaponRulesSha256": "984428db36fa450dcf047aba2317930b1063e09a04717b065a2a1d18b9f0d425",
@@ -45,6 +45,26 @@
       "spriteSha256": "4edac19f279444dd3d51c866d008d60b621583c63707056eec54ae234d5f7943",
       "illustration": "Mek/Archer.png",
       "illustrationSha256": "0d0792473958d84f5699f1c770cab0f969d7c99c37d459fe04b8f4d9791a8305"
+    },
+    "infantry-motorized": {
+      "sprite": "Infantry/motorized_infantry_platoon.png",
+      "spriteSha256": "12f25dee9440a3dded3d1bf2db04ae13bb4a85c5ce2b2b2d8a14bd15747d7ef8"
+    },
+    "infantry-tracked": {
+      "sprite": "Infantry/mecha_t_platoon.png",
+      "spriteSha256": "96bc1407746df2de7fb53eef03e90e7388964294124bf0e0b6a9cd168bf100b6"
+    },
+    "infantry-wheeled": {
+      "sprite": "Infantry/mecha_w_platoon.png",
+      "spriteSha256": "31fb7367211b80a12c05b4283a661b6441569c1accd553b091a1ff39a3a34e3e"
+    },
+    "infantry-hover": {
+      "sprite": "Infantry/mecha_h_platoon.png",
+      "spriteSha256": "bc2969c443426bc0bff9a7acdd4f8139028461b68f8175fd44bd2a355d5d0f9f"
+    },
+    "infantry-jump": {
+      "sprite": "Infantry/jump_infantry_platoon.png",
+      "spriteSha256": "f80fa6a574305e4d5f825c35729410a693a8437fdfddc70bc3479f9455ae16a1"
     }
   },
   "models": {
@@ -3872,6 +3892,758 @@
         ]
       ],
       "sha256": "b87bb97aa6680a7c506c54854f1f125ed7963d3e75fac788ecd045c8c7bbf500"
+    },
+    "infantry/vehicles/motorized.g3dj": {
+      "triangles": 172,
+      "vertices": 328,
+      "bounds": [
+        [
+          -14.6,
+          14.6
+        ],
+        [
+          -21.0,
+          23.5
+        ],
+        [
+          0.045334050718707886,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "ea27b1ead3055fc82542cfb2c56c64ab97fb6c426437802f3778013fcd75800f"
+    },
+    "infantry/motorized/squad-0.g3dj": {
+      "triangles": 0,
+      "vertices": 0,
+      "bounds": [],
+      "sha256": "d6bf5819dfbeb2d0a70f5a7c2f4d638951ac3da20462160aabf1354d641f5ba1"
+    },
+    "infantry/motorized/squad-1.g3dj": {
+      "triangles": 172,
+      "vertices": 328,
+      "bounds": [
+        [
+          -18.115622820887044,
+          18.115622820887044
+        ],
+        [
+          -23.229947700699444,
+          25.268681661630744
+        ],
+        [
+          0.045334050718707886,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "71f83f34bf58e01b55b20b3a785f299530af4942f5d7dcd64f964b1c368f2b48"
+    },
+    "infantry/motorized/squad-2.g3dj": {
+      "triangles": 330,
+      "vertices": 644,
+      "bounds": [
+        [
+          -24.99272221670276,
+          29.937790412827695
+        ],
+        [
+          -20.73132589699235,
+          28.61689056504857
+        ],
+        [
+          0.0,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "625036e9c748c9b9373805d2dd87bebe87e54bfeba98776f78d5b79b13c9c920"
+    },
+    "infantry/motorized/squad-3.g3dj": {
+      "triangles": 488,
+      "vertices": 960,
+      "bounds": [
+        [
+          -29.822349698195236,
+          33.43451204921751
+        ],
+        [
+          -23.173388137578378,
+          30.143078421594424
+        ],
+        [
+          0.0,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "480cbb520edd8ba9e2f8fbb0e5e8878e2010d8b7a88e1c7bb47448d2f2618725"
+    },
+    "infantry/motorized/squad-4.g3dj": {
+      "triangles": 646,
+      "vertices": 1276,
+      "bounds": [
+        [
+          -40.945279433299504,
+          33.43451204921751
+        ],
+        [
+          -30.941129415328348,
+          30.143078421594424
+        ],
+        [
+          0.0,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "b56c447eb3658ead33d2856605a75036876a7e6b17b6377fd87e04db89db0c26"
+    },
+    "infantry/motorized/squad-5.g3dj": {
+      "triangles": 818,
+      "vertices": 1604,
+      "bounds": [
+        [
+          -46.945279433299504,
+          43.660323240928335
+        ],
+        [
+          -35.92378853204759,
+          37.14768537501718
+        ],
+        [
+          0.0,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "16f10ec0a9a686282fb6132e7f2b82d9999941f2692a4179ca21041b9cba5d99"
+    },
+    "infantry/motorized/squad-6.g3dj": {
+      "triangles": 976,
+      "vertices": 1920,
+      "bounds": [
+        [
+          -46.945279433299504,
+          48.50878625216376
+        ],
+        [
+          -35.92378853204759,
+          37.14768537501718
+        ],
+        [
+          0.0,
+          24.84852813742386
+        ]
+      ],
+      "sha256": "a9c4609e5b831174918c9db165a1e2bdb99d804d620f9681a9dc8b9e786fa892"
+    },
+    "infantry/vehicles/tracked.g3dj": {
+      "triangles": 98,
+      "vertices": 176,
+      "bounds": [
+        [
+          -17.84,
+          17.84
+        ],
+        [
+          -26,
+          26
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "7997f20e61198c6d0216ade0eace29db5b1314191f7426c526bc9fbeb825931e"
+    },
+    "infantry/tracked/squad-0.g3dj": {
+      "triangles": 0,
+      "vertices": 0,
+      "bounds": [],
+      "sha256": "e786c4c1c834701831f7cfc6a4962713df7ca4166a1e26f8dd2b1d29d9fd6bde"
+    },
+    "infantry/tracked/squad-1.g3dj": {
+      "triangles": 98,
+      "vertices": 176,
+      "bounds": [
+        [
+          -22.167186640699992,
+          22.167186640699992
+        ],
+        [
+          -28.766662419470826,
+          28.766662419470826
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "acc33c212b5b8dc399d8e40c7b6f22635051fe9b364be4e0b64fca1cdb1e7b23"
+    },
+    "infantry/tracked/squad-2.g3dj": {
+      "triangles": 256,
+      "vertices": 492,
+      "bounds": [
+        [
+          -29.258677443010573,
+          29.937790412827695
+        ],
+        [
+          -26.3733261890661,
+          32.3733261890661
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "21b022fc767b71ef60ff317d9bed41343787af41d7a92b853cfc5863e6a700c6"
+    },
+    "infantry/tracked/squad-3.g3dj": {
+      "triangles": 414,
+      "vertices": 808,
+      "bounds": [
+        [
+          -34.29203366459868,
+          33.43451204921751
+        ],
+        [
+          -28.906571940521268,
+          30.906571940521268
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "653dcbcd16bc419e9e7ad321502f92d839c30e0053267b97ad0ad1ebe6107b97"
+    },
+    "infantry/tracked/squad-4.g3dj": {
+      "triangles": 572,
+      "vertices": 1124,
+      "bounds": [
+        [
+          -40.945279433299504,
+          33.43451204921751
+        ],
+        [
+          -30.941129415328348,
+          30.906571940521268
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "f2d12db6aa6ff0302eb6aafb95d59d116f76e52bc2bf15c4307d0f1508f7fbd7"
+    },
+    "infantry/tracked/squad-5.g3dj": {
+      "triangles": 670,
+      "vertices": 1300,
+      "bounds": [
+        [
+          -48.68851487963062,
+          48.09013930922246
+        ],
+        [
+          -39.805862878574345,
+          40.0990083958376
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "7c0c7aa09023bbf0c30204f9efc6b4d88fe1d827480ddd73c4aebbff86a71d63"
+    },
+    "infantry/tracked/squad-6.g3dj": {
+      "triangles": 828,
+      "vertices": 1616,
+      "bounds": [
+        [
+          -48.68851487963062,
+          48.50878625216376
+        ],
+        [
+          -39.805862878574345,
+          40.0990083958376
+        ],
+        [
+          0,
+          27.6
+        ]
+      ],
+      "sha256": "a10ff9b92ce3c0fc4a9b24367be099fabce70503c8c54f49e2251f6e5c02cee3"
+    },
+    "infantry/vehicles/wheeled.g3dj": {
+      "triangles": 170,
+      "vertices": 308,
+      "bounds": [
+        [
+          -15.6,
+          15.6
+        ],
+        [
+          -25.0,
+          25.0
+        ],
+        [
+          0.045334050718707886,
+          27.6
+        ]
+      ],
+      "sha256": "f4f0dfc76ad4ce8e2e313dd067a2e6e053208d610463c98ecb8978392126ece5"
+    },
+    "infantry/wheeled/squad-0.g3dj": {
+      "triangles": 0,
+      "vertices": 0,
+      "bounds": [],
+      "sha256": "3db7a96ba3cd9c76b4afc5b936483b741d2373d1b1f39f3f5ab8f6c52035ea9d"
+    },
+    "infantry/wheeled/squad-1.g3dj": {
+      "triangles": 170,
+      "vertices": 308,
+      "bounds": [
+        [
+          -19.457525660526816,
+          19.457525660526816
+        ],
+        [
+          -26.10889221515125,
+          26.10889221515125
+        ],
+        [
+          0.045334050718707886,
+          27.6
+        ]
+      ],
+      "sha256": "fd2856f3972c53797a2da5b055ab463d1ec9b3f46ef5935b3749e2a458792606"
+    },
+    "infantry/wheeled/squad-2.g3dj": {
+      "triangles": 328,
+      "vertices": 624,
+      "bounds": [
+        [
+          -26.422343658778512,
+          29.937790412827695
+        ],
+        [
+          -23.268069949006716,
+          29.268069949006716
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "5d15e854d0cd8cfdb918c0723b6ab9fd06fa11c39ffb683f66fa40962c5600e8"
+    },
+    "infantry/wheeled/squad-3.g3dj": {
+      "triangles": 486,
+      "vertices": 940,
+      "bounds": [
+        [
+          -31.336116433634235,
+          33.43451204921751
+        ],
+        [
+          -25.371854662764036,
+          30.143078421594424
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "72f929ade2a123c6d219338d51e43cabbedffb5b94820d8da30a2cc0e0618b00"
+    },
+    "infantry/wheeled/squad-4.g3dj": {
+      "triangles": 644,
+      "vertices": 1256,
+      "bounds": [
+        [
+          -40.945279433299504,
+          33.43451204921751
+        ],
+        [
+          -30.941129415328348,
+          30.143078421594424
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "a19a411623322e02413e7ff573587a4b5e560cca269f5d1a4d3c00e39eb516b0"
+    },
+    "infantry/wheeled/squad-5.g3dj": {
+      "triangles": 814,
+      "vertices": 1564,
+      "bounds": [
+        [
+          -46.945279433299504,
+          45.15755701067188
+        ],
+        [
+          -36.348153049167884,
+          37.14768537501718
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "e9d30ecdce0471ac76036eb4a9e8fd87d8c97e64bdfc4d2526ea19847cfc2dd6"
+    },
+    "infantry/wheeled/squad-6.g3dj": {
+      "triangles": 972,
+      "vertices": 1880,
+      "bounds": [
+        [
+          -46.945279433299504,
+          48.50878625216376
+        ],
+        [
+          -36.348153049167884,
+          37.14768537501718
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "84b2e4abaf74f128f025d8b5588447b79c72885e675f9a7be7cef458a4f2de84"
+    },
+    "infantry/vehicles/hover.g3dj": {
+      "triangles": 122,
+      "vertices": 220,
+      "bounds": [
+        [
+          -20.0,
+          20.0
+        ],
+        [
+          -29.0,
+          29.0
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "095bf5d7c5b362c08e184fa1713f08936cbd82c7bbd4b93a87473917058644f2"
+    },
+    "infantry/hover/squad-0.g3dj": {
+      "triangles": 0,
+      "vertices": 0,
+      "bounds": [],
+      "sha256": "9c67059cf7eb0bc3431efead37ae278c0a64d9938c4e9345117d2ab8ae68a772"
+    },
+    "infantry/hover/squad-1.g3dj": {
+      "triangles": 122,
+      "vertices": 220,
+      "bounds": [
+        [
+          -23.07843575085309,
+          23.07843575085309
+        ],
+        [
+          -30.321762825113762,
+          30.321762825113762
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "3da5580008e4b06151c7015b85e537db8c2ce5cbbf0d76c874987ecef722f007"
+    },
+    "infantry/hover/squad-2.g3dj": {
+      "triangles": 280,
+      "vertices": 536,
+      "bounds": [
+        [
+          -29.80490084727608,
+          29.937790412827695
+        ],
+        [
+          -27.516100690507756,
+          33.516100690507756
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "2d0209fb76f68367fc15cc54762d80c3c669da6b4bc3bc8d7a40374586bf8706"
+    },
+    "infantry/hover/squad-3.g3dj": {
+      "triangles": 438,
+      "vertices": 852,
+      "bounds": [
+        [
+          -34.47186608893358,
+          33.43451204921751
+        ],
+        [
+          -29.634164196653494,
+          31.634164196653494
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "c582d2c6eb979345d15bfcf20e65367e545cdb2b6e77ea242ecc22ebdd291575"
+    },
+    "infantry/hover/squad-4.g3dj": {
+      "triangles": 596,
+      "vertices": 1168,
+      "bounds": [
+        [
+          -40.945279433299504,
+          33.43451204921751
+        ],
+        [
+          -30.941129415328348,
+          31.634164196653494
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "e2791e7a087be040b74a7c7e3a3537077ef801055d561f2d79c2bc9aab3c9d9b"
+    },
+    "infantry/hover/squad-5.g3dj": {
+      "triangles": 718,
+      "vertices": 1388,
+      "bounds": [
+        [
+          -48.72161370907757,
+          48.3433152244056
+        ],
+        [
+          -40.61667036149914,
+          40.65996025125597
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "cd6ccba418b8095ef49fcaa8621a89d6dd1bea16d553570e668dbd570ba8f8ff"
+    },
+    "infantry/hover/squad-6.g3dj": {
+      "triangles": 876,
+      "vertices": 1704,
+      "bounds": [
+        [
+          -48.72161370907757,
+          48.50878625216376
+        ],
+        [
+          -40.61667036149914,
+          40.65996025125597
+        ],
+        [
+          0.0,
+          27.6
+        ]
+      ],
+      "sha256": "e7ff83df4667b81e2f6bb81aefe19cef58e295c1cf7282da36ad21563ef8f25e"
+    },
+    "infantry/jump/poses/standing.g3dj": {
+      "triangles": 166,
+      "vertices": 338,
+      "bounds": [
+        [
+          -4.327337194799499,
+          4.327337194799499
+        ],
+        [
+          -4.3,
+          4.5
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "220d877972ecb80e779f774ddf48839eba804799616c8a57bfbc901871d9b159"
+    },
+    "infantry/jump/poses/aiming.g3dj": {
+      "triangles": 166,
+      "vertices": 338,
+      "bounds": [
+        [
+          -4.327337194799499,
+          4.327337194799499
+        ],
+        [
+          -4.3,
+          9.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "4cc8dc9b877269c25ca0e97fb3ab8c9b361b5f5691b692419e47f20aadc37f55"
+    },
+    "infantry/jump/poses/kneeling.g3dj": {
+      "triangles": 166,
+      "vertices": 338,
+      "bounds": [
+        [
+          -4.327337194799499,
+          4.327337194799499
+        ],
+        [
+          -4.3,
+          9.0
+        ],
+        [
+          0.0,
+          17.0
+        ]
+      ],
+      "sha256": "8aee9dece052f499519271379c3d2742701c683a4e5769cc6f618286e0d73975"
+    },
+    "infantry/jump/poses/advancing.g3dj": {
+      "triangles": 166,
+      "vertices": 338,
+      "bounds": [
+        [
+          -4.327337194799499,
+          4.327337194799499
+        ],
+        [
+          -4.3,
+          9.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "7388d2ff347425011f4c3c4c3ae8875d4d3e1d6de61047ed051bff5550f78b9a"
+    },
+    "infantry/jump/squad-0.g3dj": {
+      "triangles": 0,
+      "vertices": 0,
+      "bounds": [],
+      "sha256": "2d180ea4e5f1d3a12a79073a640c6440cba4a5ba40179fa894792ea7e668e958"
+    },
+    "infantry/jump/squad-1.g3dj": {
+      "triangles": 166,
+      "vertices": 338,
+      "bounds": [
+        [
+          -4.0096419365877844,
+          4.58279353790939
+        ],
+        [
+          -4.269077134171624,
+          4.407782757697938
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "02bdcfaaa1de1cfb37e4d176d32938935cf70f80ca6626ee531c951f997f6175"
+    },
+    "infantry/jump/squad-2.g3dj": {
+      "triangles": 332,
+      "vertices": 676,
+      "bounds": [
+        [
+          -16.009641936587784,
+          16.327337194799497
+        ],
+        [
+          4.7,
+          18.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "aba82a98b69430b3aeaf6bb605a0fe4531406194d096bba7953e0d1f2dbf61a1"
+    },
+    "infantry/jump/squad-3.g3dj": {
+      "triangles": 498,
+      "vertices": 1014,
+      "bounds": [
+        [
+          -16.009641936587784,
+          16.327337194799497
+        ],
+        [
+          -14.269077134171624,
+          18.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "b06159a22aceb2358cdbd27adee444976c932a59014e7cd27cc71ee9aa364fab"
+    },
+    "infantry/jump/squad-4.g3dj": {
+      "triangles": 664,
+      "vertices": 1352,
+      "bounds": [
+        [
+          -21.009641936587784,
+          16.327337194799497
+        ],
+        [
+          -16.269077134171624,
+          18.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "1274ac7f09d1bd39b222ee51f6cac1c645480253b4ba3612b637b8edc1b6ef40"
+    },
+    "infantry/jump/squad-5.g3dj": {
+      "triangles": 830,
+      "vertices": 1690,
+      "bounds": [
+        [
+          -21.009641936587784,
+          21.327337194799497
+        ],
+        [
+          -16.3,
+          18.0
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "fc74794d37bafdae445249392e2d17bda902cd513fd4943803c51661aa84f7cb"
+    },
+    "infantry/jump/squad-6.g3dj": {
+      "triangles": 996,
+      "vertices": 2028,
+      "bounds": [
+        [
+          -21.009641936587784,
+          21.327337194799497
+        ],
+        [
+          -16.3,
+          26.234558240907095
+        ],
+        [
+          0.0,
+          21.0
+        ]
+      ],
+      "sha256": "339dddd753e59f176582855d9938698a6afc757e23968284cd125473b0b2db20"
     },
     "battle-armor/poses/standing.g3dj": {
       "triangles": 214,
@@ -21552,6 +22324,1263 @@
       ],
       "differentSprite": true,
       "launcherDetail": "reduced"
+    }
+  },
+  "formations": {
+    "infantry/motorized/squad-0.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 0,
+      "components": []
+    },
+    "infantry/motorized/squad-1.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 1,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "angle": 0.18
+        }
+      ]
+    },
+    "infantry/motorized/squad-2.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 2,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            -6,
+            3,
+            0
+          ],
+          "angle": 0.23
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            25,
+            -14,
+            0
+          ],
+          "angle": -0.45
+        }
+      ]
+    },
+    "infantry/motorized/squad-3.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 3,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        }
+      ]
+    },
+    "infantry/motorized/squad-4.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 4,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -36,
+            -28,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/motorized/squad-5.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 5,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/motorized/squad-6.g3dj": {
+      "movementMode": "INF_MOTORIZED",
+      "slots": 6,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/motorized.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/advancing.g3dj",
+          "position": [
+            42,
+            26,
+            0
+          ],
+          "angle": -0.5
+        }
+      ]
+    },
+    "infantry/tracked/squad-0.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 0,
+      "components": []
+    },
+    "infantry/tracked/squad-1.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 1,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "angle": 0.18
+        }
+      ]
+    },
+    "infantry/tracked/squad-2.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 2,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            -6,
+            3,
+            0
+          ],
+          "angle": 0.23
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            25,
+            -14,
+            0
+          ],
+          "angle": -0.45
+        }
+      ]
+    },
+    "infantry/tracked/squad-3.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 3,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        }
+      ]
+    },
+    "infantry/tracked/squad-4.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 4,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -36,
+            -28,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/tracked/squad-5.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 5,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/tracked/squad-6.g3dj": {
+      "movementMode": "TRACKED",
+      "slots": 6,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/tracked.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/advancing.g3dj",
+          "position": [
+            42,
+            26,
+            0
+          ],
+          "angle": -0.5
+        }
+      ]
+    },
+    "infantry/wheeled/squad-0.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 0,
+      "components": []
+    },
+    "infantry/wheeled/squad-1.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 1,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "angle": 0.18
+        }
+      ]
+    },
+    "infantry/wheeled/squad-2.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 2,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            -6,
+            3,
+            0
+          ],
+          "angle": 0.23
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            25,
+            -14,
+            0
+          ],
+          "angle": -0.45
+        }
+      ]
+    },
+    "infantry/wheeled/squad-3.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 3,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        }
+      ]
+    },
+    "infantry/wheeled/squad-4.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 4,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -36,
+            -28,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/wheeled/squad-5.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 5,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/wheeled/squad-6.g3dj": {
+      "movementMode": "WHEELED",
+      "slots": 6,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/wheeled.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/advancing.g3dj",
+          "position": [
+            42,
+            26,
+            0
+          ],
+          "angle": -0.5
+        }
+      ]
+    },
+    "infantry/hover/squad-0.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 0,
+      "components": []
+    },
+    "infantry/hover/squad-1.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 1,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "angle": 0.18
+        }
+      ]
+    },
+    "infantry/hover/squad-2.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 2,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            -6,
+            3,
+            0
+          ],
+          "angle": 0.23
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            25,
+            -14,
+            0
+          ],
+          "angle": -0.45
+        }
+      ]
+    },
+    "infantry/hover/squad-3.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 3,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        }
+      ]
+    },
+    "infantry/hover/squad-4.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 4,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            -10,
+            1,
+            0
+          ],
+          "angle": -0.28
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            24,
+            25,
+            0
+          ],
+          "angle": 0.55
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            28,
+            -20,
+            0
+          ],
+          "angle": -0.35
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -36,
+            -28,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/hover/squad-5.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 5,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        }
+      ]
+    },
+    "infantry/hover/squad-6.g3dj": {
+      "movementMode": "HOVER",
+      "slots": 6,
+      "components": [
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            -24,
+            10,
+            0
+          ],
+          "angle": 0.3
+        },
+        {
+          "role": "vehicle",
+          "asset": "infantry/vehicles/hover.g3dj",
+          "position": [
+            24,
+            -10,
+            0
+          ],
+          "angle": -0.27
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/standing.g3dj",
+          "position": [
+            6,
+            32,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/aiming.g3dj",
+          "position": [
+            -4,
+            -33,
+            0
+          ],
+          "angle": -0.45
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/kneeling.g3dj",
+          "position": [
+            -42,
+            -24,
+            0
+          ],
+          "angle": 0.5
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/poses/advancing.g3dj",
+          "position": [
+            42,
+            26,
+            0
+          ],
+          "angle": -0.5
+        }
+      ]
+    },
+    "infantry/jump/squad-0.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 0,
+      "components": []
+    },
+    "infantry/jump/squad-1.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 1,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "angle": -0.12
+        }
+      ]
+    },
+    "infantry/jump/squad-2.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 2,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            -12,
+            9,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            12,
+            9,
+            0
+          ],
+          "angle": 0.0
+        }
+      ]
+    },
+    "infantry/jump/squad-3.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 3,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            -12,
+            9,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            12,
+            9,
+            0
+          ],
+          "angle": 0.0
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/kneeling.g3dj",
+          "position": [
+            0,
+            -10,
+            0
+          ],
+          "angle": 0.12
+        }
+      ]
+    },
+    "infantry/jump/squad-4.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 4,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            -12,
+            9,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            12,
+            9,
+            0
+          ],
+          "angle": 0.0
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/kneeling.g3dj",
+          "position": [
+            0,
+            -10,
+            0
+          ],
+          "angle": 0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/advancing.g3dj",
+          "position": [
+            -17,
+            -12,
+            0
+          ],
+          "angle": -0.12
+        }
+      ]
+    },
+    "infantry/jump/squad-5.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 5,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            -12,
+            9,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            12,
+            9,
+            0
+          ],
+          "angle": 0.0
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/kneeling.g3dj",
+          "position": [
+            0,
+            -10,
+            0
+          ],
+          "angle": 0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/advancing.g3dj",
+          "position": [
+            -17,
+            -12,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            17,
+            -12,
+            0
+          ],
+          "angle": 0.0
+        }
+      ]
+    },
+    "infantry/jump/squad-6.g3dj": {
+      "movementMode": "INF_JUMP",
+      "slots": 6,
+      "components": [
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            -12,
+            9,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            12,
+            9,
+            0
+          ],
+          "angle": 0.0
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/kneeling.g3dj",
+          "position": [
+            0,
+            -10,
+            0
+          ],
+          "angle": 0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/advancing.g3dj",
+          "position": [
+            -17,
+            -12,
+            0
+          ],
+          "angle": -0.12
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/standing.g3dj",
+          "position": [
+            17,
+            -12,
+            0
+          ],
+          "angle": 0.0
+        },
+        {
+          "role": "trooper",
+          "asset": "infantry/jump/poses/aiming.g3dj",
+          "position": [
+            0,
+            17,
+            0
+          ],
+          "angle": 0.12
+        }
+      ]
     }
   },
   "needsReview": [],

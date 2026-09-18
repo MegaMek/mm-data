@@ -4,9 +4,9 @@ Indexed G3DJ meshes for the GPU board. All nonempty assets must be
 below **1,000 triangles**, including complete infantry formations. Blender is
 needed to rebuild and inspect the artwork, not to run the game.
 
-Runtime use is currently disabled in MegaMek by `GpuUnitModels.ENABLED = false`.
-The GPU board uses sprite-based units until that code switch is enabled. The
-assets and generation/review commands below remain available.
+Runtime use is controlled in MegaMek by `GpuUnitModels.ENABLED`, currently `true`.
+Set it to `false` to use sprite-based units in both GPU camera views. The assets
+and generation/review commands below remain available with either setting.
 
 The first authored chassis are **Atlas, Locust, Warhammer, and Mad Cat (Timber
 Wolf)**. Their **112 catalogued variants** share four source bodies and assemble
@@ -19,9 +19,9 @@ physical scale reconstructions or automatic single-image 3D reconstruction.
 
 The reference assemblies are **575 triangles for Atlas AS7-D**, **330 for Locust
 LCT-1V**, **448 for Warhammer WHM-6R**, and **594 for Mad Cat Prime**. Across all
-112 assembled Mek variants the range is **310–672 triangles**. Infantry and BA
-geometry is unchanged; the largest asset remains the 948-triangle infantry
-formation.
+112 assembled Mek variants the range is **310–672 triangles**. Foot infantry and
+BA geometry is unchanged. Six jump troopers are the largest complete asset at
+**996 triangles**; transport formations reach **976 triangles**.
 
 The exported catalog covers **4,295 Mek variants / 738 chassis**. The other
 **734 chassis** are listed in `chassis-queue.json` and currently use a fallback.
@@ -43,10 +43,21 @@ This is not a claim that all chassis have received bespoke models.
   formations. Zero is intentionally empty. Count is `ceil(sqrt(survivors))`,
   capped at six for infantry and four for BA: 28 infantry -> six figures;
   five BA -> three figures. Disabled weapons do not remove a living BA trooper.
+- `infantry/vehicles/`: reinforced open jeeps and a shared enclosed APC hull with
+  tracks, six wheels, or a hover skirt and rear thrusters. Transports use twice
+  the first prototype's dimensions. Each occupies one compressed formation slot.
+- `infantry/{motorized,tracked,wheeled,hover}/squad-0..6.g3dj`: one transport
+  replaces a troop at 1–4 slots; two replace troops at 5–6 slots. Thus 3 slots
+  show 1 vehicle + 2 troops; 4 show 1 + 3; 5 show 2 + 3; 6 show 2 + 4.
+  Zero slots remain empty. Vehicles and troops use a shared layout with clearance
+  for the largest hover skirt; no additional runtime entities are created.
+- `infantry/jump/`: the four existing poses with small back-mounted jump jets,
+  plus formations of 0–6 troopers. Each pack adds only eight triangles.
 - `manifest.json`: geometry/source hashes, triangle counts, attachment identities,
   reference sprites and illustrations, source unit paths, coverage, and any
   unresolved variants. Illustration hashes make a changed reference visible to
-  the validator, just like changed equipment and generator inputs.
+  the validator, just like changed equipment and generator inputs. Infantry
+  formation records identify every source component and placement for review.
 
 The existing `data/images/units/mekset.txt` accepts an optional fourth field:
 
@@ -63,6 +74,14 @@ tileset suffix rules. Aircraft/vehicle conversion modes without 3D assets keep
 their sprites. A missing/broken model tries the unit's generic descriptor and
 then the previous sprite rendering. Unidentified sensor contacts never carry a
 3D identity or troop count into the render snapshot.
+
+For conventional infantry, the immutable selection key is the unit's actual
+`EntityMovementMode` name. The infantry descriptor's optional `movementFormations`
+maps `INF_MOTORIZED`, `TRACKED`, `WHEELED`, `HOVER`, and `INF_JUMP` to their own
+0–6 formations. The existing numeric `formations` remain the fallback for foot
+infantry, unsupported movement types and older/custom descriptors. BA retains
+its existing pose library and count selection. Vehicle count is a visual slot
+replacement, not a simulation of the unit's actual transport inventory.
 
 Infantry/BA are currently generic pose libraries, not separate armor designs or
 weapon-specific infantry. Paint surfaces inherit the average hue of the already
@@ -95,6 +114,8 @@ python tools/validate_unit_models.py
 Its generated input is `.work/mek-models/catalog.json`. The build has no external
 Python package dependency. Run without `--preview` for a faster asset-only build.
 The PowerShell command uses Blender's Python for validation too.
+The Blender build also rejects intersecting transport/trooper surfaces in every
+formation, so changing vehicle dimensions requires adjusting its layout too.
 
 `--preview` also writes `.work/mek-models/review/unit-models.blend`, `preview.png`,
 `front.png`, `side.png`, and `top.png`. The four orthographic views show the actual
@@ -118,6 +139,12 @@ The renderer checks mesh hashes/counts and requires every catalogued variant of
 each requested chassis to exist before rendering it.
 Add `--bare` to render just the shared bodies, without any equipment modules;
 these previews default to `.work/mek-models/bare-chassis`.
+
+Add `--infantry` instead to review all infantry movement types and the 3/4/5/6-slot
+transport compositions. This writes `infantry.png`, `infantry-counts.png`, JPEG
+copies, `gallery.json`, and `infantry.blend` to `.work/mek-models/infantry`. The jump
+formation faces backward in the overview to expose the packs. All views import
+the exported game meshes and check their hashes and triangle counts.
 
 ## Add a chassis
 
@@ -158,9 +185,12 @@ when the view closes; instances own their paint tint.
 The validator checks hashes, finite vertices, normal lengths, triangle area and
 winding, indices, node/part references, budgets, descriptor dependencies, and
 one-to-one correspondence with every exported external equipment mount, including
-location, rear flag, rack size and equipment identity. The native smoke test
+location, rear flag, rack size and equipment identity. It also checks infantry
+slot composition and the total triangles contributed by its source components.
+The native smoke test
 loads the entire generated mesh catalog with libGDX, checks its triangle counts,
-renders both camera views, and exercises missing assets and empty formations.
+resolves every infantry movement/count combination, renders both camera views,
+and exercises missing assets and empty formations.
 
 Artwork uses MegaMek Data's existing sprites and chassis illustrations as
 references. Retain the repository's asset terms and existing BattleTech notices;

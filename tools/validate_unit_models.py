@@ -34,7 +34,8 @@ def validate(out, catalog_path):
     require(sha(ROOT / 'tools/unit_mount_layout.py') == manifest['mountLayoutSha256'], 'Mount layout changed')
     for name, reference in manifest['references'].items():
         require(sha(ROOT / 'data/images/units' / reference['sprite']) == reference['spriteSha256'], name+': reference sprite changed')
-        require(sha(ROOT / 'data/images/fluff' / reference['illustration']) == reference['illustrationSha256'], name+': reference illustration changed')
+        if 'illustration' in reference:
+            require(sha(ROOT / 'data/images/fluff' / reference['illustration']) == reference['illustrationSha256'], name+': reference illustration changed')
     maximum = 0
     for relative, expected in manifest['models'].items():
         path = (out / relative).resolve()
@@ -83,10 +84,26 @@ def validate(out, catalog_path):
     for descriptor_path in out.rglob('model.json'):
         descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
         targets = [descriptor['fallback'], *descriptor.get('variants', {}).values(), *descriptor.get('formations', {}).values()]
+        for mode, formations in descriptor.get('movementFormations', {}).items():
+            require(set(formations) == set(map(str, range(7))), mode+': missing formation size')
+            targets.extend(formations.values())
         for target in targets:
             path = (descriptor_path.parent / target).resolve()
             require(path.is_relative_to(out) and path.is_file(), 'Missing descriptor target '+str(path))
             require(path.relative_to(out).as_posix() in manifest['models'], 'Untracked model '+str(path))
+    for relative, formation in manifest.get('formations', {}).items():
+        slots = formation['slots']
+        components = formation['components']
+        vehicles = sum(c['role'] == 'vehicle' for c in components)
+        troopers = sum(c['role'] == 'trooper' for c in components)
+        expected_vehicles = (0, 1, 1, 1, 1, 2, 2)[slots] if formation['movementMode'] != 'INF_JUMP' else 0
+        require(vehicles == expected_vehicles and troopers == slots-vehicles,
+                relative+': transport/trooper composition mismatch')
+        require(sum(manifest['models'][c['asset']]['triangles'] for c in components)
+                == manifest['models'][relative]['triangles'], relative+': missing or duplicated formation geometry')
+        for component in components:
+            require(all(math.isfinite(v) for v in [*component['position'], component['angle']]),
+                    relative+': invalid placement')
     by_source = {u['source']: u for u in catalog['units']}
     for name, entry in manifest['variants'].items():
         unit = by_source[entry['source']]
