@@ -32,6 +32,9 @@ Hard limit: **1,000 triangles per model**, weapons included.
 Learned the hard way on the Archer, which took five rounds:
 
 - **Head or cockpit: height, and how far it projects.** Check this before anything else.
+- **The cockpit is a canopy, not skylights.** Model the glazing as a faceted glass shell standing proud of
+  the hull where the art has it, usually wrapped over the top and front of the nose, with a frame rib.
+  Flat glass strips laid on top of the hull read as roof windows and are wrong.
 - **Proportions of a solid miniature.** No bodybuilder shoulders wider than the design; keep it compact.
 - **No drooping parts.** A projecting cockpit is one solid mass whose underside runs level back into the
   torso; only its top slopes. Never leave a part hanging with empty space beneath it.
@@ -78,6 +81,9 @@ Conventions:
   Bay launchers and `socketBanks` spots keep their place; the rest give way, largest first. A location
   that still cannot be resolved is marked `crowded` in the manifest: state a `mountAreas` entry for it.
 - **Re-check every hard point after reshaping the body.** A changed head buried the Archer's rear laser.
+- **Always render a rear view.** A rear launcher's face stands less than one unit proud of its hard point,
+  so a rear hard point even slightly inside the hull buries it. Put rear hard points just behind the back
+  of the hull and confirm in a rear view that every rear weapon shows. The variant sheets only show the front.
 
 ## 4. Standard weapon looks
 

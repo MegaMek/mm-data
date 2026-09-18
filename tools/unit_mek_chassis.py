@@ -140,10 +140,11 @@ def mad_cat(g):
     # Four coarse sections form the projecting, rounded cockpit prow.
     forward(g, [(-10, 16, 14, 0, 39), (1, 20, 17, 0, 39),
                 (11, 13, 11, 0, 36), (15, 7, 7, 0, 34.5)], 'CT', cut=.65)
-    for side in (-1, 1):
-        points = [(side*.6, 2, 46.96), (side*3.9, 2, 46.96),
-                  (side*2.6, 10, 42.2), (side*.6, 10, 42.2)]
-        panel(g, list(reversed(points)) if side == -1 else points, 'HD', 'glass')
+    # The cockpit is a faceted bubble canopy wrapped over the top and front of the nose, not skylights:
+    # a glass shell standing proud of the hull, with a frame rib down its center.
+    forward(g, [(6, 12, 7, 0, 42), (11.5, 11.5, 8, 0, 39.2), (15.6, 6.8, 5.4, 0, 36.2)], 'HD', 'glass', .6)
+    g.beam((0, 6.2, 45.6), (0, 11.5, 43.3), 1.1, .6, 'HD', 'edge')
+    g.beam((0, 11.5, 43.3), (0, 15.7, 39), 1.1, .6, 'HD', 'edge')
     for side, arm, leg, torso in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
         hip, knee = (side*8, -3, 28), (side*10.5, -9, 21)
         g.joint(leg, hip, 'pelvis')
