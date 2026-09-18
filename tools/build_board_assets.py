@@ -47,7 +47,21 @@ def mesh_object(name, vertices, faces, materials, indices):
     return obj
 
 
-def export(name, objects, normalize=False, width=None):
+def tree_texture(name, mat):
+    """Use the source's material boundaries, especially its authored snow caps."""
+    role = mat.name.split('.')[0]
+    if role == 'Snow':
+        return 'snow'
+    if role in ('Wood', 'White', 'Black', 'Coconuts'):
+        return 'bark-birch' if name.startswith('birch') else 'bark-palm' if name.startswith('palm') else 'bark'
+    if role in ('Green', 'DarkGreen'):
+        return ('needles-pine' if name.startswith('pine') else
+                'leaves-willow' if name.startswith('willow') else
+                'fronds-palm' if name.startswith('palm') else 'leaves-broad')
+    raise ValueError(f'Unknown tree material: {name}: {mat.name}')
+
+
+def export(name, objects, normalize=False, width=None, foliage=False):
     """Small explicit G3DJ exporter: Blender triangulates, runtime only loads."""
     vertices, shared, parts = [], {}, {}
     bounds = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
@@ -59,7 +73,7 @@ def export(name, objects, normalize=False, width=None):
         normal_matrix = obj.matrix_world.to_3x3().inverted().transposed()
         for tri in mesh.loop_triangles:
             mat = mesh.materials[tri.material_index] if mesh.materials else None
-            role = 'bridge' if mat == BRIDGE else 'surface'
+            role = tree_texture(name, mat) if foliage else 'bridge' if mat == BRIDGE else 'surface'
             indices = parts.setdefault(role, [])
             color = mat.diffuse_color[:3] if mat else (.35, .45, .25)
             if mat and mat.use_nodes:
@@ -87,6 +101,17 @@ def export(name, objects, normalize=False, width=None):
                     (pos.x if abs(n.y) > abs(n.x) else pos.y)/24, pos.z)
                 if role == 'bridge':
                     uv = mesh.uv_layers.active.data[loop].uv
+                elif foliage:
+                    # Project in the tree's original proportions, before the runtime
+                    # expands its normalized Z. Dominant-axis mapping avoids stretched
+                    # leaves on steep faces; bark and willow retain vertical grain.
+                    point = Vector((pos.x, pos.y, pos.z * 30))
+                    if abs(normal.z) >= max(abs(normal.x), abs(normal.y)):
+                        uv = (point.x, point.y)
+                    else:
+                        uv = (point.x if abs(normal.y) > abs(normal.x) else point.y, point.z)
+                    repeat = 4 if role.startswith('bark') else 8 if name.startswith('birch') else 12
+                    uv = (uv[0] / repeat, uv[1] / repeat)
                 vertex = tuple(round(v, 6) for v in (*pos, *n, *color, 1, *uv))
                 if vertex not in shared:
                     shared[vertex] = len(vertices)//12
@@ -97,6 +122,8 @@ def export(name, objects, normalize=False, width=None):
         entry = {'id':role,'diffuse':[1,1,1]}
         if role == 'bridge':
             entry['textures'] = [{'id':'bridge','filename':'tileset/saxarba/bridges/bridge_09.png','type':'DIFFUSE'}]
+        elif foliage:
+            entry['textures'] = [{'id':role,'filename':f'textures/foliage/{role}.png','type':'DIFFUSE'}]
         materials.append(entry)
     model = {'version': [0, 1], 'id': name,
              'meshes': [{'attributes': ['POSITION','NORMAL','COLOR','TEXCOORD0'], 'vertices': vertices,
@@ -189,7 +216,8 @@ for name, source in sources:
             bpy.ops.object.modifier_apply(modifier=mod.name)
         obj.select_set(False)
     bpy.context.view_layer.update()
-    export(name,objects,normalize=True,width=12 if name.startswith('rock-') else None)
+    export(name,objects,normalize=True,width=12 if name.startswith('rock-') else None,
+           foliage=not name.startswith('rock-'))
     STATS[name]['source'] = str(path.relative_to(nature)).replace('\\', '/')
 if old_scene:
     bpy.context.window.scene = old_scene

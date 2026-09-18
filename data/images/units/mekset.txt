@@ -35,7 +35,10 @@
 # SteveRestless
 
 # The format goes as follows:
-# {chassis/exact} [model] [image filename]
+# {chassis/exact} [model] [image filename] [optional 3D descriptor relative to data/models]
+# Sprite-only exact entries inherit their chassis 3D descriptor. Missing chassis models
+# use the appropriate default_* descriptor. 3D descriptors select assembled variants
+# or small infantry/BA formations; ordinary three-field entries remain valid.
 
 # Use exact to specify the unit exactly, for example:
 # exact "Marauder MAD-3R" "marauder.png"
@@ -50,19 +53,19 @@
 # As of v0.29.61, mekset files can include other mekset files.
 
 # these 53 must be in here
-exact "default_ultra_light" "defaults/default_ultra_light.png"
-exact "default_light" "defaults/default_light.png"
-exact "default_medium" "defaults/default_medium.png"
-exact "default_heavy" "defaults/default_heavy.png"
-exact "default_assault" "defaults/default_assault.png"
-exact "default_super_heavy_mek" "defaults/default_super_heavy_mek.png"
-exact "default_quad" "defaults/default_quad.png"
-exact "default_quadvee" "defaults/default_quadvee.png"
+exact "default_ultra_light" "defaults/default_ultra_light.png" "units/fallback/biped.json"
+exact "default_light" "defaults/default_light.png" "units/fallback/biped.json"
+exact "default_medium" "defaults/default_medium.png" "units/fallback/biped.json"
+exact "default_heavy" "defaults/default_heavy.png" "units/fallback/biped.json"
+exact "default_assault" "defaults/default_assault.png" "units/fallback/biped.json"
+exact "default_super_heavy_mek" "defaults/default_super_heavy_mek.png" "units/fallback/biped.json"
+exact "default_quad" "defaults/default_quad.png" "units/fallback/quad.json"
+exact "default_quadvee" "defaults/default_quadvee.png" "units/fallback/quad.json"
 exact "default_quadvee_vehicle" "defaults/default_quadvee_vehicle.png"
-exact "default_lam_mek" "defaults/default_lam_mek.png"
+exact "default_lam_mek" "defaults/default_lam_mek.png" "units/fallback/biped.json"
 exact "default_lam_airmek" "defaults/default_lam_airmek.png"
 exact "default_lam_fighter" "defaults/default_lam_fighter.png"
-exact "default_tripod" "defaults/default_tripod.png"
+exact "default_tripod" "defaults/default_tripod.png" "units/fallback/tripod.json"
 exact "default_tracked" "defaults/default_tracked.png"
 exact "default_tracked_heavy" "defaults/default_tracked_heavy.png"
 exact "default_tracked_assault" "defaults/default_tracked_assault.png"
@@ -73,8 +76,8 @@ exact "default_vtol" "defaults/default_vtol.png"
 exact "default_naval" "defaults/default_naval.png"
 exact "default_umu" "defaults/default_umu.png"
 exact "default_hydrofoil" "defaults/default_hydrofoil.png"
-exact "default_infantry" "defaults/default_infantry_platoon.png"
-exact "default_ba" "defaults/default_ba.png"
+exact "default_infantry" "defaults/default_infantry_platoon.png" "units/infantry/model.json"
+exact "default_ba" "defaults/default_ba.png" "units/battle-armor/model.json"
 exact "default_proto" "defaults/default_proto.png"
 exact "default_gun_emplacement" "defaults/default_gun_emplacement.png"
 exact "default_wige" "vehicles/Hiryo.png"
@@ -1598,7 +1601,7 @@ exact "Assassin 'Servitor'" "meks/Assassin_99.png"
 exact "Assassin ASN-101" "meks/Assassin_101.png"
 #chassis "Assault" " .png"
 #ATLAS
-chassis "Atlas" "meks/Atlas.png"
+chassis "Atlas" "meks/Atlas.png" "units/meks/atlas/model.json"
 exact "Atlas AS7-A" "meks/Atlas_7A.png"
 exact "Atlas AS7-RS" "meks/Atlas_RS.png"
 exact "Atlas AS7-C" "meks/Atlas_7K.png"
@@ -3748,7 +3751,7 @@ chassis "Lobo" "meks/Lobo.png"
 exact "Lobo 2" "meks/Lobo_2.png"
 exact "Lobo 3" "meks/Lobo_3.png"
 #LOCUST
-chassis "Locust" "meks/Locust.png"
+chassis "Locust" "meks/Locust.png" "units/meks/locust/model.json"
 exact "Locust LCT-1E" "meks/Locust_1E.png"
 exact "Locust LCT-1M" "meks/Locust_1M.png"
 exact "Locust LCT-1P" "meks/locust_1p.png"
@@ -3860,7 +3863,7 @@ exact "Mackie MSK-8B" "meks/Mackie_8B.png"
 exact "Mackie MSK-9H" "meks/Mackie_8B.png"
 exact "Mackie MSK-9HKR 'Kill-Roy's Little Buddy'" "meks/Mackie_9HKR.png"
 #MAD CAT (TIMBER WOLF)
-chassis "Mad Cat (Timber Wolf)" "meks/MadCat.png"
+chassis "Mad Cat (Timber Wolf)" "meks/MadCat.png" "units/meks/mad-cat/model.json"
 exact "Mad Cat (Timber Wolf) A" "meks/MadCat_A.png"
 exact "Mad Cat (Timber Wolf) B" "meks/MadCat_B.png"
 exact "Mad Cat (Timber Wolf) C" "meks/MadCat_C.png"
@@ -5769,7 +5772,7 @@ exact "War Crow C" "meks/WarCrow_C.png"
 chassis "War Dog" "meks/Wardog.png"
 exact "War Dog WR-DG-03FC" "meks/Wardog_03.png"
 #WARHAMMER
-chassis "Warhammer" "meks/Warhammer.png"
+chassis "Warhammer" "meks/Warhammer.png" "units/meks/warhammer/model.json"
 exact "Warhammer WHM-4L" "meks/Warhammer_4L.png"
 exact "Warhammer WHM-5L" "meks/Warhammer_5L.png"
 exact "Warhammer WHM-6B" "meks/warhammer_6b.png"

@@ -46,6 +46,27 @@ for asset in dict(features, **buildings):
         difference = ImageChops.difference(source.convert('RGB'), roof)
         mask = source.getchannel('A').point(lambda alpha: 255 if alpha >= 245 else 0)
         assert ImageChops.multiply(difference.convert('L'), mask).getbbox() is None, path
+    elif asset not in ('bridge', 'field') and not asset.startswith('rock-'):
+        roles = {material['id'] for material in model['materials']}
+        leaf = ('needles-pine' if asset.startswith('pine') else
+                'leaves-willow' if asset.startswith('willow') else
+                'fronds-palm' if asset.startswith('palm') else 'leaves-broad')
+        bark = 'bark-birch' if asset.startswith('birch') else 'bark-palm' if asset.startswith('palm') else 'bark'
+        assert roles == {leaf, bark} | ({'snow'} if asset.endswith('-snow') else set()), (asset, roles)
+        for material in model['materials']:
+            assert material['textures'][0]['filename'] == f"textures/foliage/{material['id']}.png", path
+        for mesh in model['meshes']:
+            vertices = mesh['vertices']
+            for part in mesh['parts']:
+                assert part['indices'], (asset, part['id'])
+                for offset in range(0, len(part['indices']), 3):
+                    a, b, c = [vertices[index * 12 + 10:index * 12 + 12]
+                               for index in part['indices'][offset:offset + 3]]
+                    area = (b[0]-a[0])*(c[1]-a[1]) - (b[1]-a[1])*(c[0]-a[0])
+                    assert abs(area) > 1e-10, f'Collapsed foliage UV: {asset}: {part["id"]}'
+                if part['id'] == 'snow':
+                    assert all(min(vertices[index * 12 + 6:index * 12 + 9]) > .75
+                               for index in part['indices']), f'Snow must not inherit foliage tint: {asset}'
 
 for family in ('buildings', 'terrain'):
     folder = BOARD / 'textures' / family
@@ -57,6 +78,11 @@ for name in ('bed', 'grass-rim', 'dirt-rim', 'sand-rim', 'rock-rim', 'concrete-r
     with Image.open(BOARD / 'textures' / (name + '.png')) as image:
         assert image.size == (128, 128), name
         assert image.convert('RGBA').getchannel('A').getextrema() == (255, 255), name
+
+for path in (BOARD / 'textures/foliage').glob('*.png'):
+    with Image.open(path) as image:
+        assert image.size == (64, 64), path
+        assert image.convert('RGBA').getchannel('A').getextrema() == (255, 255), path
 
 sources = json.loads((BOARD / 'tileset/sources.json').read_text())['files']
 for name in sources:
