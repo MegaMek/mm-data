@@ -32,7 +32,12 @@ WALL = material('concrete', (.38, .42, .43))
 ROOF = material('roof', (.22, .27, .29))
 TRIM = material('coping', (.65, .65, .58))
 METAL = material('steel', (.24, .33, .37))
-ROAD = material('road deck', (1, 1, 1))
+BRIDGE = material('Saxarba bridge', (1, 1, 1))
+BRIDGE.use_nodes = True
+bridge_texture = BRIDGE.node_tree.nodes.new('ShaderNodeTexImage')
+bridge_texture.image = bpy.data.images.load(str(OUT / 'tileset/saxarba/bridges/bridge_09.png'), check_existing=True)
+BRIDGE.node_tree.links.new(bridge_texture.outputs['Color'],
+                          BRIDGE.node_tree.nodes.get('Principled BSDF').inputs['Base Color'])
 
 
 def mesh_object(name, vertices, faces, materials, indices):
@@ -82,7 +87,7 @@ def export(name, objects, normalize=False, width=None):
         normal_matrix = obj.matrix_world.to_3x3().inverted().transposed()
         for tri in mesh.loop_triangles:
             mat = mesh.materials[tri.material_index] if mesh.materials else None
-            role = 'road' if mat == ROAD else 'wall' if mat == WALL else 'roof' if mat == ROOF else 'surface'
+            role = 'bridge' if mat == BRIDGE else 'wall' if mat == WALL else 'roof' if mat == ROOF else 'surface'
             indices = parts.setdefault(role, [])
             color = mat.diffuse_color[:3] if mat else (.35, .45, .25)
             if mat and mat.use_nodes:
@@ -95,7 +100,7 @@ def export(name, objects, normalize=False, width=None):
             if normalize:
                 color = tuple(min(1,max(.12,c*1.15)) for c in color)
             normal = (normal_matrix @ tri.normal).normalized()
-            for index in tri.vertices:
+            for index, loop in zip(tri.vertices, tri.loops):
                 pos = obj.matrix_world @ mesh.vertices[index].co
                 if normalize:
                     span = high.z-low.z
@@ -108,10 +113,8 @@ def export(name, objects, normalize=False, width=None):
                     n = normal
                 uv = (pos.x/24, pos.y/24) if abs(n.z) > .5 else (
                     (pos.x if abs(n.y) > abs(n.x) else pos.y)/24, pos.z)
-                if role == 'road':
-                    # The opaque asphalt strip of the original north/south Saxarba road,
-                    # including its lane markings. Rails cover the outer shoulders.
-                    uv = ((41.5 + pos.x/12*7.5)/84, .5-pos.y/72)
+                if role == 'bridge':
+                    uv = mesh.uv_layers.active.data[loop].uv
                 vertex = tuple(round(v, 6) for v in (*pos, *n, *color, 1, *uv))
                 if vertex not in shared:
                     shared[vertex] = len(vertices)//12
@@ -122,8 +125,8 @@ def export(name, objects, normalize=False, width=None):
         entry = {'id':role,'diffuse':[1,1,1]}
         if role in ('roof','wall'):
             entry['textures'] = [{'id':'concrete','filename':'textures/concrete.png','type':'DIFFUSE'}]
-        elif role == 'road':
-            entry['textures'] = [{'id':'road','filename':'tileset/saxarba/roads/road09.png','type':'DIFFUSE'}]
+        elif role == 'bridge':
+            entry['textures'] = [{'id':'bridge','filename':'tileset/saxarba/bridges/bridge_09.png','type':'DIFFUSE'}]
         materials.append(entry)
     model = {'version': [0, 1], 'id': name,
              'meshes': [{'attributes': ['POSITION','NORMAL','COLOR','TEXCOORD0'], 'vertices': vertices,
@@ -146,12 +149,31 @@ export('industrial', [prism('Factory', shapes[2],0,.75),
                       prism('Tower', [(12,4),(21,4),(21,14),(12,14)], .3,1)])
 # A bridge arm runs from the centre towards north; instances rotate for each exit.
 # The deck is at z=0, with underside/girders below and rails just above it.
-deck = prism('Deck',[(-12,0),(12,0),(12,36),(-12,36)],-.14,0,open_edges=range(4))
-deck.data.materials.append(ROAD)
-deck.data.polygons[0].material_index = len(deck.data.materials)-1
-export('bridge', [deck,
-                  prism('Left rail',[(-12,0),(-10,0),(-10,36),(-12,36)],0,.13),
-                  prism('Right rail',[(10,0),(12,0),(12,36),(10,36)],0,.13)])
+def bridge_beam(name, left, right, bottom, top):
+    beam = prism(name, [(left,0),(right,0),(right,36),(left,36)], bottom, top, open_edges=range(4))
+    mesh = beam.data
+    mesh.materials.clear()
+    mesh.materials.append(BRIDGE)
+    uv = mesh.uv_layers.new(name='Saxarba bridge')
+    for face in mesh.polygons:
+        face.material_index = 0
+        for loop in face.loop_indices:
+            p = mesh.vertices[mesh.loops[loop].vertex_index].co
+            if abs(face.normal.x) > .5:
+                # Unwrap the source rail strip over the vertical rail/fascia faces.
+                # This retains its longitudinal bars and supports, without stretching asphalt up the side.
+                height = (p.z-bottom)/(top-bottom)
+                pixel_x = 31.5+2*height if p.x < 0 else 52.5-2*height
+            else:
+                # Original plan-view UVs, limited to opaque texel centres to avoid alpha fringes.
+                pixel_x = min(52.5, max(31.5, 42+p.x))
+            uv.data[loop].uv = (pixel_x/84, .5-p.y/72)
+    return beam
+
+
+export('bridge', [bridge_beam('Deck', -11, 11, -.14, 0),
+                  bridge_beam('Left rail', -11, -7.5, 0, .13),
+                  bridge_beam('Right rail', 7.5, 11, 0, .13)])
 
 # Crops have one elevation level in the rules. Authored crossed blades preserve
 # that height without lifting a farmland image into a solid block.

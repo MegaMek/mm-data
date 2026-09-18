@@ -17,11 +17,15 @@ directory with the game's data. Blender is an authoring dependency only.
 - `tank`, `industrial`, `bridge`, `field`, sixteen foliage and six rock G3DJ
   files, all at or below 480 triangles. Rocks use 70–150 triangles. Counts and
   the imported Blender source names are in `manifest.json`.
-- `textures/`: repeating geology, facade windows, cover rims and riverbed maps.
+- `textures/`: repeating geology, facade windows, grass cover and riverbed maps.
   Facade UVs repeat once per four stories; instance height preserves story size.
   Eight windows span 128 world units. The renderer limits repeating-material
   sampling to at most 128 texels across and uses a 96-unit cliff repeat length;
   full-resolution source images remain available for editing.
+- Non-grass cornices reuse each hex's selected ground artwork from `tileset/`.
+  The renderer folds an original-scale strip down the cliff and fades it into
+  the geology underneath. They follow the top surface's colour and texel size;
+  grass retains `textures/grass-rim.png`.
 - Animated water comes from this directory's own `tileset/saxarba/anim_water_N.gif`.
   The renderer constructs curved banks and actual depth; the static
   `Structured_Water` art is a shoreline reference, not a baked replacement.
@@ -44,6 +48,12 @@ Z is up; X/Y use the 84 by 72 pixel hex dimensions. Local height one scales to
 the game's feature height. Bridge decks sit at local Z=0, with rails above and
 girders below. Textures and meshes are shared; translucency changes instance
 materials, not the assets. Snow trees have their own snow geometry/materials.
+The 36-triangle bridge arm samples `tileset/saxarba/bridges/bridge_09.png`.
+Deck and rail tops retain the source artwork's layout, while vertical rail and
+fascia faces unwrap its guardrail strip, including bars and supports. Edit that
+independent image to change the bridge. There is no transverse coping over the
+roadway. Runtime places the deck slightly
+above the riverbank to avoid coplanar depth flicker at zero bridge elevation.
 Rubble rock footprints are at most 12 units wide before instance scaling;
 placement limits their height to 0.16–0.265 of a level. Snow rubble uses the
 pack's snow-covered rock geometry and materials.
