@@ -95,9 +95,9 @@ def label(scene, body, position, rotation, size, ink, align='CENTER'):
     scene.collection.objects.link(obj)
 
 
-def render(recipe, units, manifest, out, columns, caption='variants'):
+def render(recipe, units, manifest, out, columns, caption='variants', formations=False):
     rows = ceil(len(units)/columns)
-    cell_width, cell_height, header = 70, 83, 27
+    cell_width, cell_height, header = (90, 90, 27) if formations else (70, 83, 27)
     width, height = columns*cell_width, rows*cell_height+header
     scene = bpy.data.scenes.new(recipe['name']+' '+caption)
     scene.render.engine = 'CYCLES'
@@ -116,7 +116,7 @@ def render(recipe, units, manifest, out, columns, caption='variants'):
     camera.data.sensor_fit = 'HORIZONTAL'
     camera.data.ortho_scale = width
     camera.data.clip_end = 3000
-    direction = Vector((0, 350, 139)).normalized()
+    direction = Vector((0, 350, 270 if formations else 139)).normalized()
     rotation = (-direction).to_track_quat('-Z', 'Y')
     right = rotation @ Vector((1, 0, 0))
     up = rotation @ Vector((0, 1, 0))
@@ -147,13 +147,14 @@ def render(recipe, units, manifest, out, columns, caption='variants'):
         x = (i % columns-(columns-1)/2)*cell_width
         y = height/2-header-(i//columns+.5)*cell_height
         center = right*x+up*y
-        obj.location = center-Vector((0, 0, 27))
-        obj.rotation_euler.z = -.4
+        obj.location = center-Vector((0, 0, 10 if formations else 27))
+        obj.rotation_euler.z = unit.get('angle', -.4)
         obj['game_asset'] = variant['asset']
         obj['triangles'] = expected['triangles']
         scene.collection.objects.link(obj)
         label(scene, unit['model'], center-up*32, rotation.to_euler(), 3.3, ink)
-        label(scene, str(expected['triangles'])+' triangles', center-up*37, rotation.to_euler(), 2.6, ink)
+        label(scene, str(expected['triangles'])+' triangles', center-up*(42 if formations else 37),
+              rotation.to_euler(), 2.6, ink)
         entries.append({'name': unit['name'], 'variant': unit['model'], 'asset': variant['asset'],
                         'triangles': expected['triangles'], 'sha256': expected['sha256'],
                         'equipment': [{'name': m['name'], 'location': m['location'], 'rear': m['rear']}
@@ -172,11 +173,32 @@ def render(recipe, units, manifest, out, columns, caption='variants'):
     return {'chassis': recipe['name'], 'image': recipe['id']+'.png', 'variants': entries}
 
 
+def render_infantry(manifest, out):
+    groups = [('motorized', 'Motorized'), ('tracked', 'Tracked APC'), ('wheeled', 'Wheeled APC'),
+              ('hover', 'Hover APC'), ('jump', 'Jump infantry (rear)'), ('', 'Foot infantry')]
+    sheets = []
+    for sheet, counts in (('infantry', (6,)), ('infantry-counts', (3, 4, 5, 6))):
+        units, assets = [], {}
+        for style, title in (groups if len(counts) == 1 else groups[:4]):
+            for count in counts:
+                name = title+' / '+str(count)
+                vehicles = (1 if count <= 4 else 2) if style and style != 'jump' else 0
+                detail = f'{vehicles} vehicles + {count-vehicles} troops' if vehicles else f'{count} troops'
+                units.append({'name': name, 'model': title+'\n'+detail, 'equipment': [],
+                              'angle': 2.7 if style == 'jump' else -.4})
+                assets[name] = {'asset': 'infantry/'+(style+'/' if style else '')+'squad-'+str(count)+'.g3dj'}
+        sheets.append(render({'id': sheet, 'name': 'Infantry' if len(counts) == 1 else 'Infantry slot counts'},
+                             units, {'models': manifest['models'], 'variants': assets}, out,
+                             3 if len(counts) == 1 else 4, 'formations', formations=True))
+    return sheets
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--chassis', nargs='+', default=['warhammer', 'mad-cat'])
     parser.add_argument('--columns', type=int, default=5)
     parser.add_argument('--bare', action='store_true', help='Show the shared chassis without the equipment pass')
+    parser.add_argument('--infantry', action='store_true', help='Review movement types and 3-6 slot transport formations')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     if not bpy.app.background or not 1 <= args.columns <= 8:
@@ -188,10 +210,13 @@ def main():
         raise ValueError('Unknown chassis: '+', '.join(sorted(unknown)))
     catalog = json.loads((ROOT / '.work/mek-models/catalog.json').read_text(encoding='utf-8'))
     manifest = json.loads((MODELS / 'manifest.json').read_text(encoding='utf-8'))
-    args.output = (args.output or ROOT / '.work/mek-models' / ('bare-chassis' if args.bare else 'variants')).resolve()
+    args.output = (args.output or ROOT / '.work/mek-models' /
+                   ('infantry' if args.infantry else 'bare-chassis' if args.bare else 'variants')).resolve()
     args.output.mkdir(parents=True, exist_ok=True)
     sheets = []
-    if args.bare:
+    if args.infantry:
+        sheets = render_infantry(manifest, args.output)
+    elif args.bare:
         units = [{'name': known[k]['name'], 'model': known[k]['name'], 'equipment': []} for k in args.chassis]
         bodies = {'models': manifest['models'], 'variants': {
             known[k]['name']: {'asset': 'meks/'+k+'/body.g3dj'} for k in args.chassis}}
@@ -207,7 +232,8 @@ def main():
                 raise ValueError('Incomplete generated coverage for '+recipe['name'])
             sheets.append(render(recipe, units, manifest, args.output, args.columns))
     (args.output / 'gallery.json').write_text(json.dumps(sheets, indent=2)+'\n', encoding='utf-8')
-    bpy.ops.wm.save_as_mainfile(filepath=str(args.output / ('bare-chassis.blend' if args.bare else 'variants.blend')), check_existing=False)
+    filename = 'infantry.blend' if args.infantry else 'bare-chassis.blend' if args.bare else 'variants.blend'
+    bpy.ops.wm.save_as_mainfile(filepath=str(args.output / filename), check_existing=False)
     print(json.dumps({'sheets': len(sheets), 'variants': sum(len(s['variants']) for s in sheets),
                       'output': str(args.output)}))
 
