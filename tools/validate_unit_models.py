@@ -1,10 +1,12 @@
 """Validate generated geometry, source provenance, budgets and complete variant mount coverage. Stdlib only."""
 import argparse
-import hashlib
 import json
 import math
 from pathlib import Path
 import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from unit_model_geometry import content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -15,7 +17,7 @@ def require(condition, message):
 
 
 def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return content_digest(path)
 
 
 def validate(out, catalog_path):

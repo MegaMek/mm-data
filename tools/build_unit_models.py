@@ -16,7 +16,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Vector
-from unit_model_geometry import Geometry, PALETTE, add
+from unit_model_geometry import Geometry, PALETTE, add, content_digest
 from unit_mek_chassis import build_chassis
 import unit_weapon_shapes as weapons
 from unit_mount_layout import MountArea
@@ -26,7 +26,7 @@ SPRITES = ROOT / 'data/images/units'
 
 
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return content_digest(path)
 
 
 def slug(text):

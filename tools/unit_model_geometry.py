@@ -5,6 +5,19 @@ import hashlib
 import json
 
 
+# Git may check these out with either line ending, so their fingerprint must not depend on it.
+# Unit files (.mtf) are left out: the Java catalog fingerprints their raw bytes, and this must agree with it.
+TEXT_SUFFIXES = {'.py', '.json', '.g3dj', '.txt', '.md'}
+
+
+def content_digest(path):
+    """SHA-256 of a file's content. Text files are read with Unix line endings, whatever is on disk."""
+    raw = path.read_bytes()
+    if path.suffix.lower() in TEXT_SUFFIXES:
+        raw = raw.replace(b'\r\n', b'\n')
+    return hashlib.sha256(raw).hexdigest()
+
+
 def add(a, b):
     return tuple(x + y for x, y in zip(a, b))
 
@@ -153,4 +166,4 @@ class Geometry:
         bounds = [[min(p[i] for tri, _, _ in self.faces for p in tri),
                    max(p[i] for tri, _, _ in self.faces for p in tri)] for i in range(3)] if self.faces else []
         return {'triangles': len(self.faces), 'vertices': len(vertices)//10, 'bounds': bounds,
-                'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+                'sha256': content_digest(path)}
