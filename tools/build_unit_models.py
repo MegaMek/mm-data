@@ -290,9 +290,9 @@ def infantry_slots(count, vehicle=False):
     if count == 1:
         positions = [(0, 0)]
     elif count <= 4:
-        positions = [(-9, 4), (14, 13), (15, -8), (-10, -20)]
+        positions = [(-8, 0), (26, 17), (26, -15), (-29, -27)]
     else:
-        positions = [(-11, 10), (11, -10), (15, 18), (-15, -19), (28, -9), (-28, 10)]
+        positions = [(-21, 1), (21, -1), (0, 28), (0, -31), (-36, -25), (36, 25)]
     return [('vehicle' if i < vehicles else 'trooper', positions[i]) for i in range(count)]
 
 
@@ -519,14 +519,17 @@ def build(args):
                     for pose, trooper in zip(poses, troop_library):
                         export(trooper, 'infantry/jump/poses/'+pose+'.g3dj')
                 else:
-                    vehicle = infantry_vehicle(style)
+                    # Transports are twice the original dimensions, including height.
+                    vehicle = Geometry()
+                    for triangle, group, material in infantry_vehicle(style).faces:
+                        vehicle.face([(x*2, y*2, z*2) for x, y, z in triangle], group, material)
                     export(vehicle, 'infantry/vehicles/'+style+'.g3dj')
                 choices = {}
                 for count in range(7):
                     geometry, components = Geometry(), []
                     troop_index = 0
                     for i, (role, (x, y)) in enumerate(infantry_slots(count, style != 'jump')):
-                        angle = ((i % 3)-1)*.12
+                        angle = 0 if role == 'vehicle' else ((i % 3)-1)*.12
                         if role == 'vehicle':
                             part = vehicle
                             asset = 'infantry/vehicles/'+style+'.g3dj'
