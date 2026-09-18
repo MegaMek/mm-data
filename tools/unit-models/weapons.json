@@ -28,7 +28,11 @@
     "in the calves, at the back. Weapons sharing a location are laid out inside that location's mounting area",
     "(recipe key mountAreas, else a default around the hard point) so they never overlap; see unit_mount_layout.py.",
     "A searchlight is a box with a pale lens filling its face. The catalog does not export searchlights yet:",
-    "MekModelCatalog.java classes them as internal, so this look waits on a searchlight family from the exporter."
+    "MekModelCatalog.java classes them as internal, so this look waits on a searchlight family from the exporter.",
+    "ARM ACTUATORS decide how an arm weapon looks, per variant. With a hand actuator the weapon rides on the",
+    "forearm. With the hand missing it attaches at the wrist. With the lower arm missing it attaches at the",
+    "elbow. A body function tags optional arm parts LA@elbow, LA@forearm, LA@wrist, LA@hand (and RA@...), and the",
+    "recipe gives an armSockets entry per form; socketBanks may be keyed by form, e.g. LA@wrist:ppc."
   ],
   "protrusions": {"recessed": 0.06, "short": 0.4, "medium": 0.7, "long": 1},
   "tubes": {

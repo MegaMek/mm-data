@@ -227,6 +227,48 @@ def archer(g):
         g.box((side*21, 13, 33), (5.5, 4, 5.5), arm, 'metal')
 
 
+def mackie(g):
+    # Squat and very wide: a boxy torso under a glass bubble, with both arms simply guns held level.
+    g.box((0, 0, 31), (19, 11, 6), 'pelvis', 'edge')
+    g.box((0, 0, 35.5), (14, 10, 4), 'CT', 'metal')
+    upright(g, [(37, 24, 16, 0, 0), (43, 32, 21, 0, 0), (54, 30, 20, 0, 0)], cut=.2)
+    # A raised plate marks the center of the chest.
+    g.box((0, 10.4, 46), (12, 1.2, 9), 'CT', 'edge')
+    # The bubble cockpit sits on a collar at the front of the roof.
+    g.box((0, 3.5, 55), (15, 14, 2), 'HD', 'edge', .3)
+    upright(g, [(56, 13, 12, 0, 3.5), (61, 12, 11, 0, 3.5), (65, 7, 6, 0, 3.5)], 'HD', 'glass', .55)
+    # Twin guns hang from a block under the front of the torso.
+    g.box((0, 8, 35), (9, 5, 3.6), 'CT', 'metal')
+    # Right shoulder: a box searchlight. Left shoulder: a vented housing.
+    g.box((13, -2, 58.5), (7, 6, 7), 'RT', 'edge', .3)
+    panel(g, [(10.4, 1.03, 61.1), (15.6, 1.03, 61.1), (15.6, 1.03, 55.9), (10.4, 1.03, 55.9)], 'RT', 'lamp')
+    g.box((-13, -3, 57), (11, 8, 5), 'LT', 'edge')
+    panel(g, [(-17.6, 1.03, 58.8), (-8.4, 1.03, 58.8), (-8.4, 1.03, 55.4), (-17.6, 1.03, 55.4)], 'LT', 'dark')
+    for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
+        x = side*9.5
+        g.joint(leg, (x, 0, 30), 'pelvis')
+        g.joint(leg+'-shin', (x*1.08, 0, 17), leg)
+        upright(g, [(18, 9, 10, x*1.08, 0), (30, 12, 12, x, 0)], leg, cut=.25)
+        # One raised plate stands for the tiled thigh armor.
+        g.box((x, 6.3, 25), (9, 1.2, 8), leg, 'edge')
+        g.box((x*1.08, 1, 17), (8.5, 9.5, 4), leg+'-shin', 'metal')
+        upright(g, [(4, 9, 10, x*1.12, 0), (15.5, 11, 11, x*1.08, 0)], leg+'-shin', cut=.35)
+        foot(g, x*1.12, 3, 13, 17, leg+'-shin')
+        # A shoulder block, then an arm held level at shoulder height. How it ends follows the actuators.
+        g.box((side*19.5, 0, 46), (8, 11, 11), arm, 'edge', .3)
+        for part in ('elbow', 'forearm', 'wrist', 'hand'):
+            g.joint(arm+'@'+part, g.pivots[arm], arm)
+        # No lower arm: the gun housing starts at the elbow.
+        forward(g, [(-9, 9, 11, side*28.5, 45), (-1, 10, 12, side*28.5, 45), (6, 8.5, 10.5, side*28.5, 45)],
+                arm+'@elbow', cut=.35)
+        # A lower arm, then either a gun housing at the wrist or a closed fist.
+        forward(g, [(-7, 8, 9, side*28.5, 45), (8, 8, 9, side*28.5, 45)], arm+'@forearm', cut=.3)
+        forward(g, [(6, 9.5, 11.5, side*28.5, 45), (14, 8.5, 10.5, side*28.5, 45)], arm+'@wrist', cut=.35)
+        g.box((side*28.5, 10.5, 45), (7, 5, 7), arm+'@hand', 'metal')
+    # A round shield disc rings the right arm's gun, which always starts at the elbow.
+    g.beam((28.5, 5, 45), (28.5, 7, 45), 17, 17, 'RA@elbow', 'edge', 8)
+
+
 def build_chassis(recipe):
     g = Geometry()
     hip = recipe['hip']
@@ -236,6 +278,6 @@ def build_chassis(recipe):
         x, y, z = recipe['sockets'][location]
         g.joint(location, (x-42, 36-y, z), 'CT')
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
-                'marauder': marauder, 'archer': archer}
+                'marauder': marauder, 'archer': archer, 'mackie': mackie}
     builders[recipe['id']](g)
     return g

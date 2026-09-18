@@ -64,6 +64,20 @@
       "rearSockets": {"HD":[42,44.6,50],"CT":[42,46.4,45],"LT":[34,46.4,45],"RT":[50,46.4,45]},
       "slotSpacing": 3, "weaponScale": 0.9, "missileScale": 1.26, "missileOrientation": "vertical", "missileSlope": 0.45,
       "missileBayHeight": 11, "missileBayColumns": 2, "missileBayWidth": 9.4
+    },
+    {
+      "name": "Mackie", "id": "mackie", "referenceVariant": "MSK-6S",
+      "sprite": "meks/Mackie.png", "illustration": "Mek/Mackie.png", "hip": [42,36,31],
+      "silhouette": "Squat, very wide boxy torso under a glass bubble cockpit; both arms are guns held level at shoulder height, the right one ringed by a round shield disc; box searchlight on the right shoulder, vented housing on the left; twin guns slung under the front of the torso; heavy legs with raised thigh plates and broad feet.",
+      "sockets": {"HD":[42,28,56],"CT":[42,25.5,35],"LT":[31,25.4,44],"RT":[53,25.4,44],"LA":[13.5,30,45],"RA":[70.5,30,45],"LL":[32.5,32,14],"RL":[51.5,32,14]},
+      "armSockets": {"LA":{"elbow":[13.5,30,45],"wrist":[13.5,22,45],"hand":[13.5,32,51]},
+                     "RA":{"elbow":[70.5,30,45],"wrist":[70.5,22,45],"hand":[70.5,32,51]}},
+      "socketBanks": {"CT:laser":[[40,25.5,35],[44,25.5,35]],"LA@wrist:ppc":[[13.5,22,47.8],[13.5,22,42.2]]},
+      "rearSockets": {"CT":[42,46.6,46],"LT":[33,46.6,46],"RT":[51,46.6,46]},
+      "protrusion": {"CT":"medium"}, "mountAreas": {"LA":{"width":9,"height":12},"RA":{"width":9,"height":12}},
+      "weaponOverrides": [{"location": "LA", "family": "ppc", "length": 16, "note": "The left arm is one long cannon reaching well ahead of the body."},
+                          {"location": "RA", "family": "ballistic", "length": 17, "note": "The right arm's gun runs long through its shield disc."}],
+      "slotSpacing": 3, "weaponScale": 0.95
     }
   ]
 }

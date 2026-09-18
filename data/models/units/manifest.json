@@ -1,14 +1,14 @@
 {
   "schema": 1,
   "budget": 1000,
-  "catalogSha256": "042823b0c48b2e26eb71268bf4d1f1fd4da567e4b06a7998cb861374a0c0a538",
-  "recipesSha256": "08aebcc45a31536a17d8ed56f3d6a9e7a54f1c2f111bb8ed38ddf264c23c4106",
-  "generatorSha256": "33fb1c1ff82ce6bed06e392508897f7b340607017a208efff2a11e76b3984070",
+  "catalogSha256": "e06fe3ddab82f2013a4a69635eb176e85012a91dbda556f07518c2465621a5d1",
+  "recipesSha256": "fff8bee68a2dbc830f2f08824a800cf3cc447730ca727ef03e6caf97351399de",
+  "generatorSha256": "7f89e63e90d3cec388f3c8fde1f5bbeb57931b98e0b979c3b03c4d5f93585bd5",
   "geometrySha256": "e80de02994a7c16dca0dcd8ebbad3e758ed24485368cba6e08ac9bf982f74f22",
   "weaponShapesSha256": "eee408ae7bdf96d83ec08ce709b9d32d93c23bc305a8aa6bda1e7e4a54ce15c0",
-  "weaponRulesSha256": "984428db36fa450dcf047aba2317930b1063e09a04717b065a2a1d18b9f0d425",
+  "weaponRulesSha256": "bf051f6418bc74b226e1bcde5ddb4af1ebd68d9950d11dd66e92c6fe3b0fffca",
   "mountLayoutSha256": "6359878648a46449f875d080b1494b3c88588ff2f555d4bcad35edc460276a4a",
-  "chassisBuilderSha256": "1fa27e3428fac2169477d977b61358e142890b374b5352643a4f9613934ad1fb",
+  "chassisBuilderSha256": "f49b2911879e73890d36edad845183f14b0eac603c1d950c7a0dadde7fa2c153",
   "references": {
     "Atlas": {
       "sprite": "meks/Atlas.png",
@@ -45,6 +45,12 @@
       "spriteSha256": "4edac19f279444dd3d51c866d008d60b621583c63707056eec54ae234d5f7943",
       "illustration": "Mek/Archer.png",
       "illustrationSha256": "0d0792473958d84f5699f1c770cab0f969d7c99c37d459fe04b8f4d9791a8305"
+    },
+    "Mackie": {
+      "sprite": "meks/Mackie.png",
+      "spriteSha256": "4ce5a123752f2fa0368cf1cc8448bd9e34b0a2c3ecc61578c78450f9654ebb3d",
+      "illustration": "Mek/Mackie.png",
+      "illustrationSha256": "5aba0af46f69ecbbde4c7d8f70481bd1356a0a733402540cd9cff73870c46aff"
     },
     "infantry-motorized": {
       "sprite": "Infantry/motorized_infantry_platoon.png",
@@ -3639,6 +3645,139 @@
         ]
       ],
       "sha256": "3f5e5f78ed58e72c4e12d8c07fbb567eff30190c4d8b4748bd4523715136b6e7"
+    },
+    "meks/mackie/body.g3dj": {
+      "triangles": 564,
+      "vertices": 1024,
+      "bounds": [
+        [
+          -33.5,
+          37.0
+        ],
+        [
+          -10.5,
+          11.5
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "225471691850de4114a077ef8b8355b5748e0304a3bcca84166ab7f6687d5cc4"
+    },
+    "meks/mackie/variants/msk-5s-0feba046.g3dj": {
+      "triangles": 670,
+      "vertices": 1216,
+      "bounds": [
+        [
+          -33.5,
+          37.0
+        ],
+        [
+          -10.5,
+          23.32
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "25f30967cc453033370474f8b2e4a70f1ea3393f150c97dbc949c22d3f33e6fb"
+    },
+    "meks/mackie/variants/msk-6s-5578d8fc.g3dj": {
+      "triangles": 684,
+      "vertices": 1244,
+      "bounds": [
+        [
+          -33.5,
+          37.0
+        ],
+        [
+          -10.5,
+          23.32
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "b2825e886d8d8999081e8a594c174e6357f5899ed2162d679e047387a71109aa"
+    },
+    "meks/mackie/variants/msk-7a-a55f1105.g3dj": {
+      "triangles": 680,
+      "vertices": 1236,
+      "bounds": [
+        [
+          -32.5,
+          37.0
+        ],
+        [
+          -10.5,
+          22.18
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "4eaff202f82a61684cf7ae2587db4bb41c837dd829aef37ff559171895a2ecd0"
+    },
+    "meks/mackie/variants/msk-8b-e36fc0c0.g3dj": {
+      "triangles": 758,
+      "vertices": 1372,
+      "bounds": [
+        [
+          -33.25,
+          37.0
+        ],
+        [
+          -10.5,
+          31.32
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "4bddb2780341e4b4ebb6762b9ab7458185d1cfec58bba749719b0d1e4405afab"
+    },
+    "meks/mackie/variants/msk-9h-04386a25.g3dj": {
+      "triangles": 758,
+      "vertices": 1372,
+      "bounds": [
+        [
+          -33.25,
+          37.0
+        ],
+        [
+          -10.5,
+          31.32
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "7eb4cfa1eeb959775f78549ee9359e3d75e0742fa8085e109e8d002fd44454cd"
+    },
+    "meks/mackie/variants/msk-9hkr-kill-roy-s-little-buddy-bb5ccbd6.g3dj": {
+      "triangles": 844,
+      "vertices": 1520,
+      "bounds": [
+        [
+          -33.25,
+          37.0
+        ],
+        [
+          -10.5,
+          31.32
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "sha256": "b73f0f42082b63707b39f7022284a2be229131fbc3c89b1e093e71afae8bdb11"
     },
     "fallback/biped.g3dj": {
       "triangles": 284,
@@ -22324,6 +22463,429 @@
       ],
       "differentSprite": true,
       "launcherDetail": "reduced"
+    },
+    "Mackie MSK-5S": {
+      "asset": "meks/mackie/variants/msk-5s-0feba046.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie.png",
+      "spriteSha256": "4ce5a123752f2fa0368cf1cc8448bd9e34b0a2c3ecc61578c78450f9654ebb3d",
+      "source": "mekfiles/meks/XTRs/Primitives I/Mackie MSK-5S.mtf",
+      "sourceSha256": "23a857072ee388f315f51f3db161b4ba9c55a3ce38f494efbb1131dc9bc93e04",
+      "variantKey": "Mackie MSK-5S#2cf983e4c66219073de1bee098a1b35dfc169a22342b2ff82ed36d6273ae0bf7",
+      "attachments": [
+        {
+          "equipmentIndex": 3,
+          "equipment": "Primitive Prototype PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            6,
+            45
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 4,
+          "equipment": "Autocannon/5",
+          "location": "RA",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            28.5,
+            6,
+            45
+          ],
+          "rackSize": 5
+        },
+        {
+          "equipmentIndex": 6,
+          "equipment": "Large Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": false
+    },
+    "Mackie MSK-6S": {
+      "asset": "meks/mackie/variants/msk-6s-5578d8fc.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie_6S.png",
+      "spriteSha256": "e0219466cae5895c7afe245ee31368d11295858c50cb6a3e65957d7ee8d7f2ad",
+      "source": "mekfiles/meks/3075/Mackie MSK-6S.mtf",
+      "sourceSha256": "8b8e067c2529e4ee66aafdf18b91b89a5126b7aa70c4bc256d25e5cc142a3c35",
+      "variantKey": "Mackie MSK-6S#fc7081f0d0fde79edb075d6575c2a1399a0e36e8418fcb326791d426a09a9fba",
+      "attachments": [
+        {
+          "equipmentIndex": 1,
+          "equipment": "Primitive Prototype PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            6,
+            45
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 2,
+          "equipment": "Autocannon/10",
+          "location": "RA",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            28.5,
+            6,
+            45
+          ],
+          "rackSize": 10
+        },
+        {
+          "equipmentIndex": 5,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 6,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": true
+    },
+    "Mackie MSK-7A": {
+      "asset": "meks/mackie/variants/msk-7a-a55f1105.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie_7A.png",
+      "spriteSha256": "0a30164de132d62960338f6cc7c1bb4025feb153c738ecb76894a41f220c8977",
+      "source": "mekfiles/meks/3075/Mackie MSK-7A.mtf",
+      "sourceSha256": "83a18854ef5bd9c17cf65150c222cff0f3bdff9bfb5cf6dc7c5817614777cd60",
+      "variantKey": "Mackie MSK-7A#829f1a3ef9e299e0656c004ef66c1ec567a04385cd08802176d8c567d576d1fa",
+      "attachments": [
+        {
+          "equipmentIndex": 5,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            4,
+            51
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 6,
+          "equipment": "Autocannon/20",
+          "location": "RA",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            28.5,
+            6,
+            45
+          ],
+          "rackSize": 20
+        },
+        {
+          "equipmentIndex": 8,
+          "equipment": "Large Laser",
+          "location": "LT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -11,
+            10.600000000000001,
+            44
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 10,
+          "equipment": "Large Laser",
+          "location": "RT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            11,
+            10.600000000000001,
+            44
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": true
+    },
+    "Mackie MSK-8B": {
+      "asset": "meks/mackie/variants/msk-8b-e36fc0c0.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie_8B.png",
+      "spriteSha256": "d85de5ff043f185ace6f96e37829a4877212c4fd877d95d1359c26549c78aff7",
+      "source": "mekfiles/meks/3075/Mackie MSK-8B.mtf",
+      "sourceSha256": "0d10c138257261d5f0993786c6b52a36d8298c70b94c9221e4f23372da053468",
+      "variantKey": "Mackie MSK-8B#4e0749b63e093deaf181150a1de366d227d49760c60c54a0d0593aed14577cde",
+      "attachments": [
+        {
+          "equipmentIndex": 5,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            47.8
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 6,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            42.0
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 7,
+          "equipment": "Autocannon/20",
+          "location": "RA",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            28.5,
+            6,
+            45
+          ],
+          "rackSize": 20
+        },
+        {
+          "equipmentIndex": 18,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 19,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": true
+    },
+    "Mackie MSK-9H": {
+      "asset": "meks/mackie/variants/msk-9h-04386a25.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie_8B.png",
+      "spriteSha256": "d85de5ff043f185ace6f96e37829a4877212c4fd877d95d1359c26549c78aff7",
+      "source": "mekfiles/meks/3075/Mackie MSK-9H.mtf",
+      "sourceSha256": "22102ec493a9cce3cef2b7feac669526d0671d6f0cc47e21f5dcb496e096e6e2",
+      "variantKey": "Mackie MSK-9H#1c2e88ec62dc15c3b67b12c27d5002c389c8735f4560080cf4646001ffebfe4e",
+      "attachments": [
+        {
+          "equipmentIndex": 8,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            47.8
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 9,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            42.0
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 10,
+          "equipment": "Autocannon/20",
+          "location": "RA",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            28.5,
+            6,
+            45
+          ],
+          "rackSize": 20
+        },
+        {
+          "equipmentIndex": 18,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 19,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": true
+    },
+    "Mackie MSK-9HKR 'Kill-Roy's Little Buddy'": {
+      "asset": "meks/mackie/variants/msk-9hkr-kill-roy-s-little-buddy-bb5ccbd6.g3dj",
+      "chassis": "Mackie",
+      "sprite": "meks/Mackie_9HKR.png",
+      "spriteSha256": "a9da5e14264c80697dbcf04403645e8155e6439947e782a742342115623cc040",
+      "source": "mekfiles/meks/ER 2750/Mackie MSK-9HKR Kill Roys Little Buddy.mtf",
+      "sourceSha256": "941557d2cc2f8cdf20dd52fe48a611ae0183e359b413402afdeecf21b31ead68",
+      "variantKey": "Mackie MSK-9HKR 'Kill-Roy's Little Buddy'#10a9d859a9fafd6ab8e47985cbb6fa0b62120543ac48d8c8df1d3130e04d46a0",
+      "attachments": [
+        {
+          "equipmentIndex": 1,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            47.8
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 2,
+          "equipment": "PPC",
+          "location": "LA",
+          "rear": false,
+          "family": "ppc",
+          "position": [
+            -28.5,
+            14,
+            42.0
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 3,
+          "equipment": "ISLBXAC10",
+          "location": "LT",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            -11,
+            10.600000000000001,
+            44
+          ],
+          "rackSize": 10
+        },
+        {
+          "equipmentIndex": 7,
+          "equipment": "ISLBXAC10",
+          "location": "RT",
+          "rear": false,
+          "family": "ballistic",
+          "position": [
+            11,
+            10.600000000000001,
+            44
+          ],
+          "rackSize": 10
+        },
+        {
+          "equipmentIndex": 12,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            -2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        },
+        {
+          "equipmentIndex": 13,
+          "equipment": "Medium Laser",
+          "location": "CT",
+          "rear": false,
+          "family": "laser",
+          "position": [
+            2,
+            10.5,
+            35
+          ],
+          "rackSize": 0
+        }
+      ],
+      "differentSprite": true
     }
   },
   "formations": {
@@ -23587,8 +24149,8 @@
   "coverage": {
     "mekVariants": 4295,
     "mekChassis": 738,
-    "authoredChassis": 6,
-    "assembledVariants": 182,
-    "pendingChassis": 732
+    "authoredChassis": 7,
+    "assembledVariants": 188,
+    "pendingChassis": 731
   }
 }

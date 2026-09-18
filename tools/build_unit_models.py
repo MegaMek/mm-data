@@ -44,8 +44,38 @@ def point(pixel):
     return (pixel[0]-42, 36-pixel[1], pixel[2])
 
 
+# Which optional arm parts each arm form keeps. A body function tags such parts "LA@elbow", "RA@forearm"...
+ARM_PARTS = {'elbow': ('elbow',), 'wrist': ('forearm', 'wrist'), 'hand': ('forearm', 'hand')}
+
+
+def arm_form(unit, arm):
+    """How an arm ends, read from its actuators: with a hand, at the wrist, or at the elbow.
+
+    A hand carries its weapon on the forearm. Without a hand the weapon attaches at the wrist, and without a
+    lower arm it attaches at the elbow. Older catalogs do not list lower arms; those arms are taken as present.
+    """
+    if arm in unit.get('hands', []):
+        return 'hand'
+    return 'wrist' if arm in unit.get('lowerArms', ['LA', 'RA']) else 'elbow'
+
+
+def fit_arms(base, unit):
+    """The body with only the arm parts that suit this variant's actuators, folded into the arm itself."""
+    fitted = Geometry()
+    fitted.pivots = {group: pivot for group, pivot in base.pivots.items() if '@' not in group}
+    fitted.parents = {group: parent for group, parent in base.parents.items() if '@' not in group}
+    for triangle, group, material in base.faces:
+        if '@' in group:
+            arm, part = group.split('@')
+            if part not in ARM_PARTS[arm_form(unit, arm)]:
+                continue
+            group = arm
+        fitted.faces.append((triangle, group, material))
+    return fitted
+
+
 def assemble(base, recipe, unit, detail='full'):
-    result = deepcopy(base)
+    result = fit_arms(base, unit)
     mounts = [m for m in unit['equipment'] if m['family'] != 'internal']
     rules = {m['index']: weapons.rule_for(m, recipe) for m in mounts}
     unresolved = [m for m in mounts if rules[m['index']] is None or m['location'] not in recipe['sockets']]
@@ -91,6 +121,11 @@ def assemble(base, recipe, unit, detail='full'):
         rule = rules[mount['index']]
         family = weapons.bank_family(mount, rule)
         bank = recipe.get('socketBanks', {}).get(loc+':'+family) if not mount['rear'] else None
+        form = arm_form(unit, loc) if loc in ('LA', 'RA') else None
+        if form and not mount['rear'] and not special:
+            # An arm weapon attaches where the arm ends: on the forearm, at the wrist or at the elbow.
+            pixel = list(recipe.get('armSockets', {}).get(loc, {}).get(form, pixel))
+            bank = recipe.get('socketBanks', {}).get(loc+'@'+form+':'+family, bank)
         key = (loc, mount['rear'], family if bank else special)
         index = counts[key]
         counts[key] += 1
@@ -120,7 +155,7 @@ def assemble(base, recipe, unit, detail='full'):
                    'orientation': weapons.orientation_for(mount, rule, recipe), 'aim': weapons.aim_for(mount, recipe),
                    'slope': recipe.get('missileSlope', 0) if special else 0, 'slopeOrigin': source[loc][2]}
         hard_point = point(recipe['rearSockets'].get(loc, recipe['sockets'][loc]) if mount['rear']
-                           else recipe['sockets'][loc])
+                           else recipe.get('armSockets', {}).get(loc, {}).get(form, recipe['sockets'][loc]))
         placements.append({'mount': mount, 'rule': rule, 'position': list(point(pixel)), 'scale': scale,
                            'options': options, 'hardPoint': hard_point,
                            # A launcher in its bay and a weapon on an art-directed bank spot keep their place.
@@ -479,7 +514,9 @@ def build(args):
             'illustrationSha256': digest(ROOT / 'data/images/fluff' / recipe['illustration'])}
         base = build_chassis(recipe)
         folder = 'meks/'+recipe['id']+'/'
-        export(base, folder+'body.g3dj')
+        # The shared unarmed body takes the arm form of the reference variant.
+        reference_unit = next((u for u in units if u['model'] == recipe['referenceVariant']), units[0])
+        export(fit_arms(base, reference_unit), folder+'body.g3dj')
         descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj', 'variants': {}}
         for unit in units:
             for detail in weapons.DETAIL_LEVELS:

@@ -58,12 +58,19 @@ Every recipe needs eight (`HD CT LT RT LA RA LL RL`). Extras:
 | `missileOrientation` | `horizontal` or `vertical`, for the whole Mek or per location. |
 | `mountAreas` | The rectangle weapons in a location are laid out in: `{"center": [x, y, z], "width", "height"}`. |
 | `beltSockets` | Overrides where leg weapons sit. |
+| `armSockets` | Where an arm weapon attaches for each arm form: `{"LA": {"elbow": [...], "wrist": [...], "hand": [...]}}`. |
 | `weaponOverrides` | Per-weapon changes to the standard look, matched by `location`, `family`, `name`, `rear`. |
 
 Conventions:
 
 - **A weapon follows its limb.** When an arm is posed hanging down, give that hard point a `socketAim`
   so the barrel runs along the forearm. A barrel must never jut out at a right angle to the limb.
+- **Arm actuators decide how an arm weapon looks, per variant.** Check them when listing the loadouts.
+  With a **hand** actuator the weapon rides on the forearm. With the **hand missing** it attaches at the
+  **wrist**. With the **lower arm missing** it attaches at the **elbow**. Tag the optional arm parts in the
+  body function (`LA@elbow`, `LA@forearm`, `LA@wrist`, `LA@hand`, and the same for `RA`), give the recipe an
+  `armSockets` entry per form, and key form-specific banks like `"LA@wrist:ppc"`. The Mackie covers all
+  three forms across its six variants. The catalog needs the exporter's `lowerArms` field for this.
 - **Leg weapons ride just below the hip, like a low-slung belt.** The generator lifts them to hip height
   minus five automatically. **Jump jets stay in the calves, at the back.**
 - **Weapons in one location never overlap.** Each location has a mounting area; a weapon that would
