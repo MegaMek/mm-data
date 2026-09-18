@@ -14,8 +14,9 @@ directory with the game's data. Blender is an authoring dependency only.
   parts and courtyards; no runtime pixel extrusion or generic substitutions.
 - `building-manifest.json`: each building's source, outline, vertex and triangle
   counts. The largest building has 499 triangles.
-- `tank`, `industrial`, `bridge`, `field`, and five foliage G3DJ files, all at
-  or below 500 triangles. Counts are in `manifest.json`.
+- `tank`, `industrial`, `bridge`, `field`, sixteen foliage and six rock G3DJ
+  files, all at or below 480 triangles. Rocks use 70–150 triangles. Counts and
+  the imported Blender source names are in `manifest.json`.
 - `textures/`: repeating geology, facade windows, cover rims and riverbed maps.
   Facade UVs repeat once per four stories; instance height preserves story size.
   Eight windows span 128 world units. The renderer limits repeating-material
@@ -24,6 +25,8 @@ directory with the game's data. Blender is an authoring dependency only.
 - Animated water comes from this directory's own `tileset/saxarba/anim_water_N.gif`.
   The renderer constructs curved banks and actual depth; the static
   `Structured_Water` art is a shoreline reference, not a baked replacement.
+  Two nonadjacent water openings form a continuous channel. Elevation drops
+  use vertically scrolling, animated water on the waterfall face.
 - Exposed top edges reuse the single south-facing `08` patches under
   `tileset/High_Incline/`, oriented per edge. Edit these to change cliff-top
   detail without affecting 2D. The renderer avoids mixing their baked lighting
@@ -41,6 +44,9 @@ Z is up; X/Y use the 84 by 72 pixel hex dimensions. Local height one scales to
 the game's feature height. Bridge decks sit at local Z=0, with rails above and
 girders below. Textures and meshes are shared; translucency changes instance
 materials, not the assets. Snow trees have their own snow geometry/materials.
+Rubble rock footprints are at most 12 units wide before instance scaling;
+placement limits their height to 0.16–0.265 of a level. Snow rubble uses the
+pack's snow-covered rock geometry and materials.
 
 ## Rebuild
 
@@ -64,11 +70,12 @@ Use Blender's Append command to load their objects. The source scripts create
 their own scenes and do not replace the user's open scene.
 
 The nature pack must be present at
-`TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019/OBJ` to rebuild foliage;
+`TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019/Blends` to rebuild foliage
+and rubble. These sources match the user's Quaternius ZIP;
 runtime does not need that folder. Export converts Blender's linear colors to
 display-space vertex colors, preserving the green/snow material distinction.
 
-Validation checks all 3,024 model budgets and texture dependencies, building
+Validation checks all 3,041 model budgets and texture dependencies, building
 roof winding, unchanged opaque roof pixels, and independent copied files.
 Native Java integration tests additionally check transparency, lighting,
 water animation and representative model loading.
@@ -79,9 +86,10 @@ Roof/terrain/water art comes from the existing MegaMek data tileset; its license
 headers and original paths are retained. The repository license remains at
 `../../../LICENSE`.
 
-Trees are simplified derivatives of Quaternius's **Ultimate Nature Pack
-(June 2019)**: `CommonTree_1`, `PineTree_1`, `PalmTree_1`,
-`CommonTree_Snow_1`, and `PineTree_Snow_1`. The supplied CC0 notice is preserved
+Trees and rocks are simplified derivatives of Quaternius's **Ultimate Nature
+Pack (June 2019)**: `CommonTree_1/2/4`, `PineTree_1/3`, `BirchTree_2`,
+`Willow_2`, their corresponding snow models, `PalmTree_1/2`, and
+`Rock_1/3/6` with their snow models. The supplied CC0 notice is preserved
 in `QUATERNIUS-LICENSE.txt`.
 
 Tank, industrial, bridge and crop models were authored with the Blender script.

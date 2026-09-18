@@ -32,6 +32,7 @@ WALL = material('concrete', (.38, .42, .43))
 ROOF = material('roof', (.22, .27, .29))
 TRIM = material('coping', (.65, .65, .58))
 METAL = material('steel', (.24, .33, .37))
+ROAD = material('road deck', (1, 1, 1))
 
 
 def mesh_object(name, vertices, faces, materials, indices):
@@ -69,7 +70,7 @@ def prism(name, polygon, bottom=0, top=1, open_edges=()):
     return mesh_object(name, vertices, faces, [WALL, ROOF, TRIM], indices)
 
 
-def export(name, objects, normalize=False):
+def export(name, objects, normalize=False, width=None):
     """Small explicit G3DJ exporter: Blender triangulates, runtime only loads."""
     vertices, shared, parts = [], {}, {}
     bounds = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
@@ -81,7 +82,7 @@ def export(name, objects, normalize=False):
         normal_matrix = obj.matrix_world.to_3x3().inverted().transposed()
         for tri in mesh.loop_triangles:
             mat = mesh.materials[tri.material_index] if mesh.materials else None
-            role = 'wall' if mat == WALL else 'roof' if mat == ROOF else 'surface'
+            role = 'road' if mat == ROAD else 'wall' if mat == WALL else 'roof' if mat == ROOF else 'surface'
             indices = parts.setdefault(role, [])
             color = mat.diffuse_color[:3] if mat else (.35, .45, .25)
             if mat and mat.use_nodes:
@@ -98,14 +99,19 @@ def export(name, objects, normalize=False):
                 pos = obj.matrix_world @ mesh.vertices[index].co
                 if normalize:
                     span = high.z-low.z
-                    pos = Vector(((pos.x-(low.x+high.x)/2)/span*30,
-                                  (pos.y-(low.y+high.y)/2)/span*30, (pos.z-low.z)/span))
+                    horizontal = width/max(high.x-low.x, high.y-low.y) if width else 30/span
+                    pos = Vector(((pos.x-(low.x+high.x)/2)*horizontal,
+                                  (pos.y-(low.y+high.y)/2)*horizontal, (pos.z-low.z)/span))
                     # Normals for the exported anisotropic normalization.
-                    n = Vector((normal.x/30, normal.y/30, normal.z)).normalized()
+                    n = Vector((normal.x/horizontal, normal.y/horizontal, normal.z*span)).normalized()
                 else:
                     n = normal
                 uv = (pos.x/24, pos.y/24) if abs(n.z) > .5 else (
                     (pos.x if abs(n.y) > abs(n.x) else pos.y)/24, pos.z)
+                if role == 'road':
+                    # The opaque asphalt strip of the original north/south Saxarba road,
+                    # including its lane markings. Rails cover the outer shoulders.
+                    uv = ((41.5 + pos.x/12*7.5)/84, .5-pos.y/72)
                 vertex = tuple(round(v, 6) for v in (*pos, *n, *color, 1, *uv))
                 if vertex not in shared:
                     shared[vertex] = len(vertices)//12
@@ -116,6 +122,8 @@ def export(name, objects, normalize=False):
         entry = {'id':role,'diffuse':[1,1,1]}
         if role in ('roof','wall'):
             entry['textures'] = [{'id':'concrete','filename':'textures/concrete.png','type':'DIFFUSE'}]
+        elif role == 'road':
+            entry['textures'] = [{'id':'road','filename':'tileset/saxarba/roads/road09.png','type':'DIFFUSE'}]
         materials.append(entry)
     model = {'version': [0, 1], 'id': name,
              'meshes': [{'attributes': ['POSITION','NORMAL','COLOR','TEXCOORD0'], 'vertices': vertices,
@@ -138,7 +146,10 @@ export('industrial', [prism('Factory', shapes[2],0,.75),
                       prism('Tower', [(12,4),(21,4),(21,14),(12,14)], .3,1)])
 # A bridge arm runs from the centre towards north; instances rotate for each exit.
 # The deck is at z=0, with underside/girders below and rails just above it.
-export('bridge', [prism('Deck',[(-12,0),(12,0),(12,36),(-12,36)],-.14,0),
+deck = prism('Deck',[(-12,0),(12,0),(12,36),(-12,36)],-.14,0,open_edges=range(4))
+deck.data.materials.append(ROAD)
+deck.data.polygons[0].material_index = len(deck.data.materials)-1
+export('bridge', [deck,
                   prism('Left rail',[(-12,0),(-10,0),(-10,36),(-12,36)],0,.13),
                   prism('Right rail',[(10,0),(12,0),(12,36),(10,36)],0,.13)])
 
@@ -158,34 +169,43 @@ export('field',[mesh_object('Crop rows',vertices,faces,[crop],[0]*len(faces))])
 
 # Import the user's CC0 Quaternius source into the isolated asset scene. Keep the
 # authored colors, simplify only when a source exceeds the foliage budget.
-nature = ROOT / 'TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019/OBJ'
+nature = ROOT / 'TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019'
 old_scene = bpy.context.window.scene if bpy.context.window else None
 if bpy.context.window:
     bpy.context.window.scene = SCENE
-for name, source in [('tree','CommonTree_1'),('pine','PineTree_1'),
-                     ('tree-snow','CommonTree_Snow_1'),('pine-snow','PineTree_Snow_1'),
-                     ('palm','PalmTree_1')]:
-    path = nature / (source+'.obj')
+sources = [('tree','CommonTree_1'),('pine','PineTree_1'),
+           ('tree-snow','CommonTree_Snow_1'),('pine-snow','PineTree_Snow_1'),
+           ('palm','PalmTree_1'),('palm-bent','PalmTree_2')]
+for name, source in [('tree-broad','CommonTree_4'),('tree-slender','CommonTree_2'),
+                     ('birch','BirchTree_2'),('willow','Willow_2'),('pine-tall','PineTree_3')]:
+    family, number = source.rsplit('_', 1)
+    sources += [(name,source),(name+'-snow',family+'_Snow_'+number)]
+for number in (1,3,6):
+    sources += [('rock-'+str(number),'Rock_'+str(number)),
+                ('rock-'+str(number)+'-snow','Rock_Snow_'+str(number))]
+for name, source in sources:
+    path = nature / 'Blends' / (source+'.blend')
     if not path.exists():
-        # Fail explicitly; never silently substitute a green tree for snow.
-        candidates = sorted(nature.glob(('*Snow*' if 'snow' in name else '*Tree*')+'.obj'))
-        raise FileNotFoundError(str(path)+'; candidates: '+str([p.name for p in candidates[:12]]))
-    before = set(bpy.data.objects)
-    bpy.ops.wm.obj_import(filepath=str(path), forward_axis='NEGATIVE_Z', up_axis='Y')
-    objects = [o for o in bpy.data.objects if o not in before and o.type=='MESH']
+        raise FileNotFoundError(path)
+    with bpy.data.libraries.load(str(path), link=False) as (available, loaded):
+        loaded.objects = available.objects
+    objects = [obj for obj in loaded.objects if obj and obj.type == 'MESH']
     for obj in objects:
-        if obj.name not in COLLECTION.objects:
-            COLLECTION.objects.link(obj)
+        COLLECTION.objects.link(obj)
+    bpy.context.view_layer.update()
+    triangles = sum(len(p.vertices)-2 for obj in objects for p in obj.data.polygons)
+    budget = 150 if name.startswith('rock-') else 480
+    for obj in objects:
         bpy.context.view_layer.objects.active = obj
         obj.select_set(True)
-        triangles = sum(len(p.vertices)-2 for p in obj.data.polygons)
-        if triangles > 500:
-            mod = obj.modifiers.new('Game foliage budget', 'DECIMATE')
-            mod.ratio = 500/triangles
+        if triangles > budget:
+            mod = obj.modifiers.new('Game asset budget', 'DECIMATE')
+            mod.ratio = budget/triangles
             bpy.ops.object.modifier_apply(modifier=mod.name)
         obj.select_set(False)
     bpy.context.view_layer.update()
-    export(name,objects,normalize=True)
+    export(name,objects,normalize=True,width=12 if name.startswith('rock-') else None)
+    STATS[name]['source'] = str(path.relative_to(nature)).replace('\\', '/')
 if old_scene:
     bpy.context.window.scene = old_scene
 
