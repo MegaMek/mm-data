@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "notes": "Silhouettes are authored against both the north-facing sprites and repository chassis illustrations in unit_mek_chassis.py. Sockets use the sprite-centered coordinate system: x-42, 36-y, z. Large forms take priority over surface detail; body dimensions are stylized, not physical measurements.",
+  "chassis": [
+    {
+      "name": "Atlas", "id": "atlas", "referenceVariant": "AS7-D",
+      "sprite": "meks/Atlas.png", "illustration": "Mek/Atlas.png", "hip": [42,36,31],
+      "sockets": {"HD":[42,29,55],"CT":[42,29,40],"LT":[33,29,44],"RT":[51,29,43],"LA":[21,28.6,31],"RA":[63,28.6,31],"LL":[33,31,13],"RL":[51,31,13]},
+      "socketAim": {"LA":[0,0.12,-1],"RA":[0,0.12,-1]}, "protrusion": {"LA":"medium","RA":"medium"},
+      "rearSockets": {"CT":[42,43,44],"LT":[34,43,44],"RT":[50,43,44]},
+      "socketBanks": {"LT:missile":[[33,29,45],[33,30,36]]},
+      "slotSpacing": 3, "weaponScale": 0.83, "missileColumns": 4,
+      "silhouette": "Skull face, domed shoulders, long gauntlets and fists, heavy straight legs; asymmetric torso weapons."
+    },
+    {
+      "name": "Locust", "id": "locust", "referenceVariant": "LCT-1V",
+      "sprite": "meks/Locust.png", "illustration": "Mek/Locust.png", "hip": [42,37,31],
+      "silhouette": "Low narrow sloped cockpit, high side gun pods, antenna, circular hips and long thin reverse-jointed legs with split toes.",
+      "sockets": {"HD":[42,24,38],"CT":[42,24,33],"LT":[37,30,36],"RT":[47,30,36],"LA":[29,33,39],"RA":[55,33,39],"LL":[31,43,20],"RL":[53,43,20]},
+      "rearSockets": {"CT":[42,45,39],"LT":[38,43,39],"RT":[46,43,39]},
+      "slotSpacing": 2.5, "weaponScale": 0.80
+    },
+    {
+      "name": "Warhammer", "id": "warhammer", "referenceVariant": "WHM-6R",
+      "sprite": "meks/Warhammer.png", "illustration": "Mek/Warhammer.png", "hip": [42,36,29],
+      "silhouette": "Low inset head, slab shoulders, wide cannon gauntlets and long PPC barrels; shoulder launcher opposite a searchlight.",
+      "sockets": {"HD":[42,30,47],"CT":[42,29,39],"LT":[35,29,39],"RT":[49,29,39],"LA":[22,27,32],"RA":[62,27,32],"LL":[33,31,13],"RL":[51,31,13]},
+      "missileSockets": {"RT":[54.5,33,53]},
+      "socketBanks": {"LT:laser":[[35,29,41],[35,29,38]],"RT:laser":[[49,29,41],[49,29,38]],"LT:machine-gun":[[32,30,39]],"RT:machine-gun":[[52,30,39]]},
+      "rearSockets": {"CT":[42,42,41],"LT":[35,42,41],"RT":[49,42,41]},
+      "slotSpacing": 2.6, "weaponScale": 0.92, "barrelLength": 14, "missileBayHeight": 7
+    },
+    {
+      "name": "Mad Cat (Timber Wolf)", "id": "mad-cat", "referenceVariant": "Prime",
+      "sprite": "meks/MadCat.png", "illustration": "Mek/Mad Cat (Timber Wolf).png", "hip": [42,38,28],
+      "silhouette": "Tall twin missile towers, rounded forward canopy, low paired gun pods, narrow reverse knees and broad shin armor over split feet.",
+      "sockets": {"HD":[42,21,36],"CT":[45,22,33],"LT":[36,25,34],"RT":[48,25,34],"LA":[21,29,33],"RA":[63,29,33],"LL":[31,39,12],"RL":[53,39,12]},
+      "missileSockets": {"LT":[28,35,51],"RT":[56,35,51]},
+      "armSockets": {"LA":{"wrist":[21,29,33],"elbow":[21,35,33]},"RA":{"wrist":[63,29,33],"elbow":[63,35,33]}},
+      "socketBanks": {"LA:laser":[[21,29,33],[21,29,29]],"RA:laser":[[63,29,33],[63,29,29]],
+                      "LA@elbow:laser":[[21,35,33],[21,35,29]],"RA@elbow:laser":[[63,35,33],[63,35,29]]},
+      "missileScale": 1.28, "missileColumns": 4, "missileBayHeight": 13,
+      "rearSockets": {"CT":[42,47,38],"LT":[35,47.2,38],"RT":[49,47.2,38]},
+      "slotSpacing": 3, "weaponScale": 0.95
+    },
+    {
+      "name": "Marauder", "id": "marauder", "referenceVariant": "MAD-3R",
+      "sprite": "meks/Marauder.png", "illustration": "Mek/Marauder.png", "hip": [42,39,29],
+      "silhouette": "Hunched pod body falling to a low pointed nose, long dorsal autocannon over the right shoulder, double-deck forearm pods held low and forward, reverse knees and splayed toes.",
+      "sockets": {"HD":[42,20,37],"CT":[42,26,33],"LT":[35,27,38],"RT":[49,27,38],"LA":[20.5,20,30.5],"RA":[63.5,20,30.5],"LL":[31,38,16],"RL":[53,38,16]},
+      "missileSockets": {"LT":[31,41,50],"RT":[53,41,50]},
+      "socketBanks": {"RT:ballistic":[[44,42,55]],"RT:ppc":[[44,42,55]],
+                      "LA:ppc":[[20.5,20,33]],"RA:ppc":[[63.5,20,33]],
+                      "LA:laser":[[20.5,20,27.8],[18.8,20,33],[22.2,20,33]],"RA:laser":[[63.5,20,27.8],[61.8,20,33],[65.2,20,33]],
+                      "LA@elbow:ppc":[[20.5,30,33]],"RA@elbow:ppc":[[63.5,30,33]],
+                      "LA@elbow:laser":[[20.5,30,27.8],[18.8,30,33],[22.2,30,33]],"RA@elbow:laser":[[63.5,30,27.8],[61.8,30,33],[65.2,30,33]],
+                      "LA@hand:hatchet":[[20.5,18,30.5]],"RA@hand:hatchet":[[63.5,18,30.5]]},
+      "armSockets": {"LA":{"wrist":[20.5,20,30.5],"elbow":[20.5,30,30.5],"hand":[20.5,26,36.4]},
+                     "RA":{"wrist":[63.5,20,30.5],"elbow":[63.5,30,30.5],"hand":[63.5,26,36.4]}},
+      "rearSockets": {"CT":[42,50,40],"LT":[35,49,40],"RT":[49,49,40]},
+      "slotSpacing": 3, "weaponScale": 0.9, "barrelLength": 9, "missileBayHeight": 8,
+      "weaponOverrides": [{"location": "RT", "family": "ballistic", "length": 32, "note": "The dorsal autocannon runs the length of the body and past the nose."}]
+    },
+    {
+      "name": "Archer", "id": "archer", "referenceVariant": "ARC-2R",
+      "sprite": "meks/Archer.png", "illustration": "Mek/Archer.png", "hip": [42,36,30],
+      "silhouette": "Compact, solid build with modest shoulders tucked against the bays; a tall missile bay in each side torso leaning back, each showing a full four-by-five face of tubes from top to bottom; no separate head - the centre is one solid mass whose top slopes from the back down to the cockpit while its underside runs level from the base of the cockpit straight back into the torso; twin antennas directly behind the cockpit, heavy forearms held forward with closed fists, thick straight legs.",
+      "sockets": {"HD":[42,16,37.6],"CT":[42,29.5,35],"LT":[33.5,25.8,40.5],"RT":[50.5,25.8,40.5],"LA":[21,27,38.6],"RA":[63,27,38.6],"LL":[33,33,14],"RL":[51,33,14]},
+      "missileSockets": {"LT":[32.8,25.4,49],"RT":[51.2,25.4,49]},
+      "socketBanks": {"RA:hatchet":[[63,23,33]],"LA:hatchet":[[21,23,33]]},
+      "armSockets": {"LA":{"hand":[21,27,38.6],"wrist":[21,25,33],"elbow":[21.3,35.5,34]},
+                     "RA":{"hand":[63,27,38.6],"wrist":[63,25,33],"elbow":[62.7,35.5,34]}},
+      "rearSockets": {"HD":[42,44.6,50],"CT":[42,46.4,45],"LT":[34,46.4,45],"RT":[50,46.4,45]},
+      "slotSpacing": 3, "weaponScale": 0.9, "missileScale": 1.26, "missileOrientation": "vertical", "missileSlope": 0.45,
+      "missileBayHeight": 11, "missileBayColumns": 2, "missileBayWidth": 9.4
+    },
+    {
+      "name": "Mackie", "id": "mackie", "referenceVariant": "MSK-6S",
+      "sprite": "meks/Mackie.png", "illustration": "Mek/Mackie.png", "hip": [42,36,31],
+      "silhouette": "Squat, very wide boxy torso under a glass bubble cockpit; both arms are guns held level at shoulder height, the right one ringed by a round shield disc; box searchlight on the right shoulder, vented housing on the left; twin guns slung under the front of the torso; heavy legs with raised thigh plates and broad feet.",
+      "sockets": {"HD":[42,28,56],"CT":[42,25.5,35],"LT":[31,25.4,44],"RT":[53,25.4,44],"LA":[13.5,30,45],"RA":[70.5,30,45],"LL":[32.5,32,14],"RL":[51.5,32,14]},
+      "armSockets": {"LA":{"elbow":[13.5,30,45],"wrist":[13.5,22,45],"hand":[13.5,32,51]},
+                     "RA":{"elbow":[70.5,30,45],"wrist":[70.5,22,45],"hand":[70.5,32,51]}},
+      "socketBanks": {"CT:laser":[[40,25.5,35],[44,25.5,35]],"LA@wrist:ppc":[[13.5,22,47.8],[13.5,22,42.2]]},
+      "rearSockets": {"CT":[42,46.6,46],"LT":[33,46.6,46],"RT":[51,46.6,46]},
+      "protrusion": {"CT":"medium"}, "mountAreas": {"LA":{"width":9,"height":12},"RA":{"width":9,"height":12}},
+      "weaponOverrides": [{"location": "LA", "family": "ppc", "length": 16, "note": "The left arm is one long cannon reaching well ahead of the body."},
+                          {"location": "RA", "family": "ballistic", "length": 17, "note": "The right arm's gun runs long through its shield disc."}],
+      "slotSpacing": 3, "weaponScale": 0.95
+    }
+  ]
+}
