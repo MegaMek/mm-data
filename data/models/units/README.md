@@ -90,6 +90,21 @@ Rigid pivots are present for later limb animation. Movement uses the existing
 board animation; walk cycles, damage-specific meshes, and conversion animations
 are not supplied in this first library.
 
+Every Mek descriptor, the generic bodies included, names an `upperBodyNode`
+(`CT`). The game turns that one part about its pivot to show a torso twist
+while the legs keep the unit's own facing, so the head, side torsos and arms
+must hang from it, the hips and legs must not, and its pivot must sit on the
+center line at the waist (the recipe's `hip`). The validator enforces all
+three. A descriptor without the key still loads; the whole body then turns
+with the torso, as the flat sprite does.
+
+Every Mek body, the generic ones included, names the part for each game
+location after the game's own abbreviation (`HD CT LT RT LA RA LL RL`, `CL` on
+a tripod, `FLL FRL RLL RRL` on a quad). Sub-parts extend the name with `-` or
+`@` (`LL-shin`). The game hides the part of a lost arm and darkens the part of
+any other destroyed location by looking the abbreviation up, so a body missing
+one of these parts fails validation.
+
 ## Rebuild
 
 From the mm-data checkout, with the sibling MegaMek checkout:
@@ -139,6 +154,8 @@ The renderer checks mesh hashes/counts and requires every catalogued variant of
 each requested chassis to exist before rendering it.
 Add `--bare` to render just the shared bodies, without any equipment modules;
 these previews default to `.work/mek-models/bare-chassis`.
+Add `--turn 60` to either sheet to show every upper body turned one hexside to
+its right, which is how the game shows a torso twist.
 
 Add `--infantry` instead to review all infantry movement types and the 3/4/5/6-slot
 transport compositions. This writes `infantry.png`, `infantry-counts.png`, JPEG

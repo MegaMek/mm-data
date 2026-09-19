@@ -204,20 +204,38 @@ def lay_out(recipe, placements):
             placement['crowded'] = True
 
 
+# The part that carries everything above the waist. The game turns this part on its own to show a torso
+# twist, so the head, side torsos and arms must hang from it and the hips and legs must not.
+UPPER_BODY = 'CT'
+
+
+# Where each generic body stands its legs, keyed by the game's own location abbreviations. Left is -x, front is +y.
+FALLBACK_LEGS = {'biped': {'LL': (-10, 0), 'RL': (10, 0)},
+                 'tripod': {'LL': (-13, -9), 'RL': (13, -9), 'CL': (0, 11)},
+                 'quad': {'RLL': (-14, -10), 'RRL': (14, -10), 'FLL': (-14, 10), 'FRL': (14, 10)}}
+
+
 def fallback(kind):
+    """A generic body. Every part is named after the game location it stands for, as the recipes' parts are,
+    so the game can show a lost or destroyed location on any body without a lookup table."""
     g = Geometry()
-    g.box((0, 0, 34), (22, 18, 16), 'CT', 'paint', .45, .8)
+    g.joint(UPPER_BODY, (0, 0, 0))
+    g.joint('HD', (0, 0, 0), UPPER_BODY)
+    g.box((0, 0, 34), (11, 18, 16), 'CT', 'paint', .3, .85)
+    for side, torso in ((-1, 'LT'), (1, 'RT')):
+        g.joint(torso, (0, 0, 0), UPPER_BODY)
+        g.box((side*8, 0, 33.5), (6.5, 16, 14), torso, 'paint', .3, .9)
     g.box((0, 8, 43), (10, 10, 10), 'HD', 'paint', .4, .75)
     g.box((0, 13, 43), (7, 1, 3), 'HD', 'glass')
-    legs = [(-10, 0), (10, 0)] if kind == 'biped' else [(-13, -9), (13, -9), (0, 11)] if kind == 'tripod' else [(-14, -10), (14, -10), (-14, 10), (14, 10)]
-    for i, (x, y) in enumerate(legs):
-        g.beam((x, y, 31), (x*1.2, y, 17), 8, 9, 'leg-'+str(i), 'edge')
-        g.beam((x*1.2, y, 17), (x*1.25, y, 4), 8, 9, 'leg-'+str(i), 'paint')
-        g.box((x*1.25, y+3, 2), (9, 13, 4), 'leg-'+str(i), 'paint', .3)
+    for leg, (x, y) in FALLBACK_LEGS[kind].items():
+        g.beam((x, y, 31), (x*1.2, y, 17), 8, 9, leg, 'edge')
+        g.beam((x*1.2, y, 17), (x*1.25, y, 4), 8, 9, leg, 'paint')
+        g.box((x*1.25, y+3, 2), (9, 13, 4), leg, 'paint', .3)
     if kind != 'quad':
-        for sign in (-1, 1):
-            g.box((sign*18, 0, 37), (10, 12, 9), 'arm-'+str(sign), 'paint', .4)
-            g.box((sign*20, 2, 27), (8, 10, 14), 'arm-'+str(sign), 'edge', .3)
+        for side, arm in ((-1, 'LA'), (1, 'RA')):
+            g.joint(arm, (0, 0, 0), UPPER_BODY)
+            g.box((side*18, 0, 37), (10, 12, 9), arm, 'paint', .4)
+            g.box((side*20, 2, 27), (8, 10, 14), arm, 'edge', .3)
     return g
 
 
@@ -517,7 +535,8 @@ def build(args):
         # The shared unarmed body takes the arm form of the reference variant.
         reference_unit = next((u for u in units if u['model'] == recipe['referenceVariant']), units[0])
         export(fit_arms(base, reference_unit), folder+'body.g3dj')
-        descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj', 'variants': {}}
+        descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj',
+                      'upperBodyNode': UPPER_BODY, 'variants': {}}
         for unit in units:
             for detail in weapons.DETAIL_LEVELS:
                 geometry, attachments = assemble(base, recipe, unit, detail)
@@ -543,7 +562,8 @@ def build(args):
         write_json(out / (folder+'model.json'), descriptor)
     for kind in ('biped', 'quad', 'tripod'):
         export(fallback(kind), 'fallback/'+kind+'.g3dj')
-        write_json(out / ('fallback/'+kind+'.json'), {'schema': 1, 'kind': 'mek', 'fallback': kind+'.g3dj'})
+        write_json(out / ('fallback/'+kind+'.json'), {'schema': 1, 'kind': 'mek', 'fallback': kind+'.g3dj',
+                                                       'upperBodyNode': UPPER_BODY})
     poses = ('standing', 'aiming', 'kneeling', 'advancing')
     for armored, kind, limit, reference in ((False, 'infantry', 6, 'defaults/default_infantry_platoon.png'),
                                              (True, 'battle-armor', 4, 'defaults/default_ba.png')):

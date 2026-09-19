@@ -41,6 +41,11 @@ Learned the hard way on the Archer, which took five rounds:
 - **Launcher shape matches the miniature**: tall or wide, how many tubes across, and whether the face
   leans back (`missileSlope`). Missile bay doors are modelled shut.
 - **Antennas and sensors go where the miniature has them**, not where it is convenient.
+- **The upper body must turn cleanly at the waist.** The game twists everything that hangs from `CT`
+  (head, side torsos, arms) about the recipe's `hip` point while the hips and legs stay put. Keep that
+  point on the center line under the middle of the torso, keep hip and leg parts out of the upper body
+  groups, and render the body with `--bare --turn 60`: nothing above the waist may cut through the hips
+  or legs, and no gap may open between them.
 
 ## 3. Hard points
 
