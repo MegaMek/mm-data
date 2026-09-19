@@ -98,6 +98,13 @@ center line at the waist (the recipe's `hip`). The validator enforces all
 three. A descriptor without the key still loads; the whole body then turns
 with the torso, as the flat sprite does.
 
+Every Mek body, the generic ones included, names the part for each game
+location after the game's own abbreviation (`HD CT LT RT LA RA LL RL`, `CL` on
+a tripod, `FLL FRL RLL RRL` on a quad). Sub-parts extend the name with `-` or
+`@` (`LL-shin`). The game hides the part of a lost arm and darkens the part of
+any other destroyed location by looking the abbreviation up, so a body missing
+one of these parts fails validation.
+
 ## Rebuild
 
 From the mm-data checkout, with the sibling MegaMek checkout:

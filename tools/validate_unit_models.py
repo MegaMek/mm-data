@@ -20,16 +20,22 @@ def sha(path):
     return content_digest(path)
 
 
-LOWER_LOCATIONS = ('pelvis', 'LL', 'RL', 'leg')
+LOWER_LOCATIONS = ('pelvis', 'LL', 'RL', 'CL', 'FLL', 'FRL', 'RLL', 'RRL')
+# The game finds a location's part by its own abbreviation, so every body must carry one part per location.
+LOCATIONS = {'biped': {'HD', 'CT', 'LT', 'RT', 'LA', 'RA', 'LL', 'RL'},
+             'tripod': {'HD', 'CT', 'LT', 'RT', 'LA', 'RA', 'LL', 'RL', 'CL'},
+             'quad': {'HD', 'CT', 'LT', 'RT', 'FLL', 'FRL', 'RLL', 'RRL'}}
 
 
-def check_upper_body(path, name):
-    """The game turns the named part on its own to show a torso twist, so it must carry exactly the upper body."""
+def check_upper_body(path, name, layout='biped'):
+    """The game turns the named part on its own to show a torso twist, so it must carry exactly the upper body.
+    It also hides or darkens the part named after a lost or destroyed location, so each location needs its part."""
     model = json.loads(path.read_text(encoding='utf-8'))
-    found = []
+    found, names = [], set()
 
     def visit(node, offset, inside):
         here = [offset[i]+node.get('translation', (0, 0, 0))[i] for i in range(3)]
+        names.add(node['id'])
         if node['id'] == name:
             found.append(here)
         elif node['id'].startswith(LOWER_LOCATIONS):
@@ -44,6 +50,8 @@ def check_upper_body(path, name):
     for node in model['nodes']:
         visit(node, (0, 0, 0), False)
     require(len(found) == 1, str(path)+': missing upper body part '+name)
+    missing = LOCATIONS[layout]-names
+    require(not missing, str(path)+': no part for location '+', '.join(sorted(missing)))
     require(abs(found[0][0]) < 1e-6, str(path)+': the upper body must turn about the center line')
 
 
@@ -111,7 +119,8 @@ def validate(out, catalog_path):
     for descriptor_path in sorted(out.glob('fallback/*.json')):
         descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
         require('upperBodyNode' in descriptor, str(descriptor_path)+': no upper body part named')
-        check_upper_body(descriptor_path.parent / descriptor['fallback'], descriptor['upperBodyNode'])
+        check_upper_body(descriptor_path.parent / descriptor['fallback'], descriptor['upperBodyNode'],
+                         descriptor_path.stem)
     for descriptor_path in out.rglob('model.json'):
         descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
         targets = [descriptor['fallback'], *descriptor.get('variants', {}).values(), *descriptor.get('formations', {}).values()]
