@@ -98,7 +98,7 @@ def label(scene, body, position, rotation, size, ink, align='CENTER'):
 
 def render(recipe, units, manifest, out, columns, caption='variants', formations=False):
     rows = ceil(len(units)/columns)
-    cell_width, cell_height, header = (110, 100, 27) if formations else (70, 83, 27)
+    cell_width, cell_height, header = (130, 116, 27) if formations else (70, 83, 27)
     width, height = columns*cell_width, rows*cell_height+header
     scene = bpy.data.scenes.new(recipe['name']+' '+caption)
     scene.render.engine = 'CYCLES'
@@ -153,8 +153,8 @@ def render(recipe, units, manifest, out, columns, caption='variants', formations
         obj['game_asset'] = variant['asset']
         obj['triangles'] = expected['triangles']
         scene.collection.objects.link(obj)
-        label(scene, unit['model'], center-up*(38 if formations else 32), rotation.to_euler(), 3.3, ink)
-        label(scene, str(expected['triangles'])+' triangles', center-up*(48 if formations else 37),
+        label(scene, unit['model'], center-up*(45 if formations else 32), rotation.to_euler(), 3.3, ink)
+        label(scene, str(expected['triangles'])+' triangles', center-up*(55 if formations else 37),
               rotation.to_euler(), 2.6, ink)
         entries.append({'name': unit['name'], 'variant': unit['model'], 'asset': variant['asset'],
                         'triangles': expected['triangles'], 'sha256': expected['sha256'],
