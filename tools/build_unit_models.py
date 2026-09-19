@@ -204,8 +204,15 @@ def lay_out(recipe, placements):
             placement['crowded'] = True
 
 
+# The part that carries everything above the waist. The game turns this part on its own to show a torso
+# twist, so the head, side torsos and arms must hang from it and the hips and legs must not.
+UPPER_BODY = 'CT'
+
+
 def fallback(kind):
     g = Geometry()
+    g.joint(UPPER_BODY, (0, 0, 0))
+    g.joint('HD', (0, 0, 0), UPPER_BODY)
     g.box((0, 0, 34), (22, 18, 16), 'CT', 'paint', .45, .8)
     g.box((0, 8, 43), (10, 10, 10), 'HD', 'paint', .4, .75)
     g.box((0, 13, 43), (7, 1, 3), 'HD', 'glass')
@@ -216,6 +223,7 @@ def fallback(kind):
         g.box((x*1.25, y+3, 2), (9, 13, 4), 'leg-'+str(i), 'paint', .3)
     if kind != 'quad':
         for sign in (-1, 1):
+            g.joint('arm-'+str(sign), (0, 0, 0), UPPER_BODY)
             g.box((sign*18, 0, 37), (10, 12, 9), 'arm-'+str(sign), 'paint', .4)
             g.box((sign*20, 2, 27), (8, 10, 14), 'arm-'+str(sign), 'edge', .3)
     return g
@@ -517,7 +525,8 @@ def build(args):
         # The shared unarmed body takes the arm form of the reference variant.
         reference_unit = next((u for u in units if u['model'] == recipe['referenceVariant']), units[0])
         export(fit_arms(base, reference_unit), folder+'body.g3dj')
-        descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj', 'variants': {}}
+        descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj',
+                      'upperBodyNode': UPPER_BODY, 'variants': {}}
         for unit in units:
             for detail in weapons.DETAIL_LEVELS:
                 geometry, attachments = assemble(base, recipe, unit, detail)
@@ -543,7 +552,8 @@ def build(args):
         write_json(out / (folder+'model.json'), descriptor)
     for kind in ('biped', 'quad', 'tripod'):
         export(fallback(kind), 'fallback/'+kind+'.g3dj')
-        write_json(out / ('fallback/'+kind+'.json'), {'schema': 1, 'kind': 'mek', 'fallback': kind+'.g3dj'})
+        write_json(out / ('fallback/'+kind+'.json'), {'schema': 1, 'kind': 'mek', 'fallback': kind+'.g3dj',
+                                                       'upperBodyNode': UPPER_BODY})
     poses = ('standing', 'aiming', 'kneeling', 'advancing')
     for armored, kind, limit, reference in ((False, 'infantry', 6, 'defaults/default_infantry_platoon.png'),
                                              (True, 'battle-armor', 4, 'defaults/default_ba.png')):

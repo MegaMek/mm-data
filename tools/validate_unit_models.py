@@ -20,6 +20,33 @@ def sha(path):
     return content_digest(path)
 
 
+LOWER_LOCATIONS = ('pelvis', 'LL', 'RL', 'leg')
+
+
+def check_upper_body(path, name):
+    """The game turns the named part on its own to show a torso twist, so it must carry exactly the upper body."""
+    model = json.loads(path.read_text(encoding='utf-8'))
+    found = []
+
+    def visit(node, offset, inside):
+        here = [offset[i]+node.get('translation', (0, 0, 0))[i] for i in range(3)]
+        if node['id'] == name:
+            found.append(here)
+        elif node['id'].startswith(LOWER_LOCATIONS):
+            require(not inside, str(path)+': '+node['id']+' must not hang from '+name)
+        elif node['id'] != 'root':
+            # Anything that is not a hip or leg part belongs to the upper body, including any new group a
+            # future body adds, so nothing is left behind when the upper body turns.
+            require(inside, str(path)+': '+node['id']+' must hang from '+name)
+        for child in node.get('children', []):
+            visit(child, here, inside or node['id'] == name)
+
+    for node in model['nodes']:
+        visit(node, (0, 0, 0), False)
+    require(len(found) == 1, str(path)+': missing upper body part '+name)
+    require(abs(found[0][0]) < 1e-6, str(path)+': the upper body must turn about the center line')
+
+
 def validate(out, catalog_path):
     manifest = json.loads((out / 'manifest.json').read_text(encoding='utf-8'))
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
@@ -81,9 +108,18 @@ def validate(out, catalog_path):
             visit(node)
         require(ids == referenced, relative+': unreachable mesh part')
         maximum = max(maximum, triangles)
+    for descriptor_path in sorted(out.glob('fallback/*.json')):
+        descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
+        require('upperBodyNode' in descriptor, str(descriptor_path)+': no upper body part named')
+        check_upper_body(descriptor_path.parent / descriptor['fallback'], descriptor['upperBodyNode'])
     for descriptor_path in out.rglob('model.json'):
         descriptor = json.loads(descriptor_path.read_text(encoding='utf-8'))
         targets = [descriptor['fallback'], *descriptor.get('variants', {}).values(), *descriptor.get('formations', {}).values()]
+        require(descriptor['kind'] != 'mek' or 'upperBodyNode' in descriptor,
+                str(descriptor_path)+': no upper body part named')
+        if 'upperBodyNode' in descriptor:
+            for target in [descriptor['fallback'], *descriptor.get('variants', {}).values()]:
+                check_upper_body(descriptor_path.parent / target, descriptor['upperBodyNode'])
         for mode, formations in descriptor.get('movementFormations', {}).items():
             require(set(formations) == set(map(str, range(7))), mode+': missing formation size')
             targets.extend(formations.values())

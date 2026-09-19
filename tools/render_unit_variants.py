@@ -5,14 +5,14 @@ blender --background --factory-startup --python-exit-code 1 \
 """
 import argparse
 import json
-from math import ceil
+from math import ceil, radians
 from pathlib import Path
 import re
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
-from mathutils import Vector
+from mathutils import Matrix, Vector
 from unit_model_geometry import content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,8 +37,11 @@ def material(rgb, cache):
     return cache[key]
 
 
-def import_model(path, expected, colors):
-    """The generated G3DJ subset: indexed colors and translated rigid nodes, Z / 54."""
+def import_model(path, expected, colors, turn=0, upper_body='CT'):
+    """The generated G3DJ subset: indexed colors and translated rigid nodes, Z / 54.
+
+    A non-zero turn shows the upper body turned that many degrees to its right, as the game shows a torso twist.
+    """
     raw = path.read_bytes()
     if content_digest(path) != expected['sha256']:
         raise ValueError('Stale manifest for '+str(path))
@@ -51,10 +54,12 @@ def import_model(path, expected, colors):
             parts[part['id']] = (mesh['vertices'], part['indices'])
     vertices, faces, face_colors = [], [], []
 
-    def visit(node, parent):
+    def visit(node, parent, pivot=None):
         if 'rotation' in node or 'scale' in node:
             raise ValueError('Review importer only supports the generated translated nodes')
         offset = parent + Vector(node.get('translation', (0, 0, 0)))
+        if node['id'] == upper_body:
+            pivot = offset
         for part in node.get('parts', []):
             source, indices = parts[part['meshpartid']]
             for j in range(0, len(indices), 3):
@@ -62,11 +67,13 @@ def import_model(path, expected, colors):
                 for index in indices[j:j+3]:
                     v = source[index*10:index*10+10]
                     p = Vector(v[:3])+offset
+                    if pivot is not None and turn:
+                        p = Matrix.Rotation(radians(-turn), 3, 'Z') @ (p-pivot)+pivot
                     vertices.append((p.x, p.y, p.z*54))
                 faces.append((start, start+1, start+2))
                 face_colors.append(tuple(source[indices[j]*10+6:indices[j]*10+9]))
         for child in node.get('children', []):
-            visit(child, offset)
+            visit(child, offset, pivot)
 
     for node in data['nodes']:
         visit(node, Vector((0, 0, 0)))
@@ -96,7 +103,7 @@ def label(scene, body, position, rotation, size, ink, align='CENTER'):
     scene.collection.objects.link(obj)
 
 
-def render(recipe, units, manifest, out, columns, caption='variants', formations=False):
+def render(recipe, units, manifest, out, columns, caption='variants', formations=False, turn=0):
     rows = ceil(len(units)/columns)
     cell_width, cell_height, header = (110, 100, 27) if formations else (70, 83, 27)
     width, height = columns*cell_width, rows*cell_height+header
@@ -143,7 +150,7 @@ def render(recipe, units, manifest, out, columns, caption='variants', formations
     for i, unit in enumerate(units):
         variant = manifest['variants'][unit['name']]
         expected = manifest['models'][variant['asset']]
-        mesh = import_model(MODELS / variant['asset'], expected, colors)
+        mesh = import_model(MODELS / variant['asset'], expected, colors, turn)
         obj = bpy.data.objects.new(unit['name'], mesh)
         x = (i % columns-(columns-1)/2)*cell_width
         y = height/2-header-(i//columns+.5)*cell_height
@@ -200,6 +207,8 @@ def main():
     parser.add_argument('--columns', type=int, default=5)
     parser.add_argument('--bare', action='store_true', help='Show the shared chassis without the equipment pass')
     parser.add_argument('--infantry', action='store_true', help='Review movement types and 3-6 slot transport formations')
+    parser.add_argument('--turn', type=float, default=0,
+                        help='Show the upper body turned this many degrees to its right (60 is one hexside)')
     parser.add_argument('--output', type=Path)
     args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
     if not bpy.app.background or not 1 <= args.columns <= 8:
@@ -222,7 +231,7 @@ def main():
         bodies = {'models': manifest['models'], 'variants': {
             known[k]['name']: {'asset': 'meks/'+k+'/body.g3dj'} for k in args.chassis}}
         sheets.append(render({'id': 'bare-chassis', 'name': 'Bare chassis'}, units, bodies,
-                             args.output, min(args.columns, len(units)), 'unarmed chassis'))
+                             args.output, min(args.columns, len(units)), 'unarmed chassis', turn=args.turn))
     else:
         for key in args.chassis:
             recipe = known[key]
@@ -231,7 +240,7 @@ def main():
             units.sort(key=lambda u: (u['model'] != recipe['referenceVariant'], natural(u['model'])))
             if not units or any(u['name'] not in manifest['variants'] for u in units):
                 raise ValueError('Incomplete generated coverage for '+recipe['name'])
-            sheets.append(render(recipe, units, manifest, args.output, args.columns))
+            sheets.append(render(recipe, units, manifest, args.output, args.columns, turn=args.turn))
     (args.output / 'gallery.json').write_text(json.dumps(sheets, indent=2)+'\n', encoding='utf-8')
     filename = 'infantry.blend' if args.infantry else 'bare-chassis.blend' if args.bare else 'variants.blend'
     bpy.ops.wm.save_as_mainfile(filepath=str(args.output / filename), check_existing=False)
