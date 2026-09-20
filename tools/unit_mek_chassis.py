@@ -546,13 +546,13 @@ def battlemaster(g):
 
 def king_crab(g):
     # A broad low carapace, slit cockpit and open pincers: the guns inside them are live equipment.
-    g.box((0, -2, 29), (24, 13, 7), 'pelvis', 'metal')
-    g.box((0, -2, 36), (17, 11, 12), 'CT', 'edge')
+    g.box((0, -2, 29), (24, 13, 7), 'pelvis', 'metal', .35)
+    g.box((0, -2, 36), (17, 11, 12), 'CT', 'edge', .3)
 
     def shell_ring(x, rear, front, low, high, nose):
         # Long sloping roof, knife-edged prow and an undercut belly; no rounded forehead on top.
         return [(x, rear+4, low+4), (x, front-8, min(low+4, nose-4)), (x, front-2.3, nose-4),
-                (x, front+.25, nose+.5), (x, rear+6, high),
+                (x, front-2.3, nose+.5), (x, front-9, nose+2), (x, rear+6, high),
                 (x, rear, high-2.5), (x, rear, low+9)]
 
     # Three actual armor shells own the roof and flanks. The complete visor band is a fourth, detachable HD mesh.
@@ -566,13 +566,21 @@ def king_crab(g):
         # Back heat-exchanger recesses stay part of the hull, not optional searchlights or weapon barrels.
         g.box((side*13, -29, 50), (8, 3, 7), torso, 'metal')
         # Raised rear mounting shoulders support forward-firing weapons; these are not rear-firing ports.
-        g.box((side*16, -21, 55.5), (9, 12, 3), torso, 'edge')
+        g.box((side*16, -21, 55.5), (9, 12, 3), torso, 'edge', .3)
         # Short armor pad seats small dorsal guns without covering their forward muzzle.
         g.box((side*18, -7, 53.25), (7, 4, 1.5), torso, 'edge')
 
-    # The roof itself forms the brow. Only the visor end caps extend outside the closed torso side walls.
-    brow = [(-25.2, 7, 46.5), (-18, 20, 48), (-7, 26, 49), (0, 29, 50),
-            (7, 26, 49), (18, 20, 48), (25.2, 7, 46.5)]
+    brow = [(-25, 7, 46.5), (-18, 20, 48), (-7, 26, 49), (0, 29, 50),
+            (7, 26, 49), (18, 20, 48), (25, 7, 46.5)]
+    def lip_ring(p):
+        x, y, z = p
+        # The outer lip must clear the shell's closed side cap instead of sharing its plane.
+        if abs(x) == 25:
+            x *= 25.2/25
+        return [(x, y-3, z-.4), (x, y+.25, z-.8), (x, y+.25, z), (x, y-3, z+.7)]
+    for owner, points in (('LT', brow[:3]), ('CT', brow[2:5]), ('RT', brow[4:])):
+        g.loft([lip_ring(p) for p in points], owner)
+
     # HD is the whole thin front band, including every window and its frame. The hull is recessed behind it.
     g.joint('HD', (0, 23, 46), 'CT')
     rings = [[(x, y-1.8, z-4), (x, y+.15, z-4), (x, y+.15, z-1), (x, y-1.8, z-1)]
@@ -586,12 +594,17 @@ def king_crab(g):
         def window(t, below):
             return (a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t+.15, a[2]+(b[2]-a[2])*t-below)
         # Adjacent pieces, not glass layered over a nearly coplanar backing (which causes depth stripes).
-        for top, bottom, material in ((1, 1.55, 'dark'), (3.45, 4, 'dark'), (1.55, 3.45, 'glass')):
-            panel(g, [window(1, bottom), window(0, bottom), window(0, top), window(1, top)], 'HD', material)
+        for start, end, top, bottom, material in ((0, .12, 1, 4, 'dark'), (.88, 1, 1, 4, 'dark'),
+                (.12, .88, 1, 1.55, 'dark'), (.12, .88, 3.45, 4, 'dark'), (.12, .88, 1.55, 3.45, 'glass')):
+            panel(g, [window(end, bottom), window(start, bottom), window(start, top), window(end, top)], 'HD', material)
     # Compact recessed CT grille; no broad hanging jaw underneath the visor.
-    forward(g, [(14, 10, 5, 0, 41.5), (18.5, 7.5, 3.5, 0, 41.5)], 'CT', 'edge', 0)
+    forward(g, [(14, 10, 5, 0, 41.5), (18.5, 7.5, 3.5, 0, 41.5)], 'CT', 'edge', .25)
     panel(g, [(-2.7, 18.53, 42.4), (2.7, 18.53, 42.4),
               (2.7, 18.53, 40.6), (-2.7, 18.53, 40.6)], 'CT', 'metal')
+    for z in (40.85, 41.5, 42.15):
+        panel(g, [(-2.3, 18.59, z+.1), (2.3, 18.59, z+.1),
+                  (2.3, 18.59, z-.1), (-2.3, 18.59, z-.1)], 'CT', 'edge')
+
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         hip, knee, ankle = (side*10.5, -2, 29), (side*14, -10, 18.5), (side*15, -1, 5)
         g.joint(leg, hip, 'pelvis')
@@ -599,19 +612,14 @@ def king_crab(g):
         g.beam((side*8, -2, 29), (side*14, -2, 29), 10, 10, leg, 'edge', 6)
         g.beam(hip, knee, 10, 11, leg, 'paint', 4, .85)
         # The knee sits behind both hip and ankle; the shin slopes forward to the planted foot.
-        # One continuous shin includes the knee collar instead of two overlapping beveled blocks.
+        g.box((knee[0], knee[1], 19), (10, 10, 5), leg+'-shin', 'edge', .45)
         upright(g, [(5, 9, 9, ankle[0], -1), (13, 12, 13, side*15, -5.5),
-                    (16.5, 10, 10, knee[0], -10), (21.5, 10, 10, knee[0], -10)], leg+'-shin', cut=0)
+                    (18, 9, 9, knee[0], -9.5)], leg+'-shin', cut=.5)
         # Broad multi-toed armored feet, not the thin bird toes used by lighter reverse-knee Meks.
         g.joint(leg+'-foot', ankle, leg+'-shin')
         upright(g, [(0, 15, 18, ankle[0], 3), (4, 12, 14, ankle[0], 1)], leg+'-foot', cut=.65)
         for offset in (-4.3, 4.3):
-            # Flat toe inserts follow the front chamfers, including the foot's taper and slope.
-            points = []
-            for x, z in ((offset+1.5, .2), (offset-1.5, .2), (offset-1.5, 2.2), (offset+1.5, 2.2)):
-                half_width = 7.5-.375*z
-                points.append((ankle[0]+x, 12-z+.35*half_width-abs(x)+.08, z))
-            panel(g, points, leg+'-foot', 'metal')
+            g.box((ankle[0]+offset, 10.7, 1.1), (3, 2.5, 2.2), leg+'-foot', 'metal')
 
         shoulder, elbow = (side*22, -1, 44), (side*30, 0, 34)
         g.joint(arm, shoulder, 'CT')
@@ -623,7 +631,7 @@ def king_crab(g):
             g.joint(arm+'@'+form, elbow, arm if form == 'elbow' else arm+'-forearm')
         # With lower-arm actuators, a short armored cuff ends behind the open claw.
         forward(g, [(-4, 11, 12, side*30, 34), (3, 13, 13, side*30, 34),
-                    (8, 10, 10, side*30, 34)], arm+'@forearm', cut=0)
+                    (8, 10, 10, side*30, 34)], arm+'@forearm', cut=.4)
         # The alternate no-hand/no-lower-arm housings remain open at the gun end.
         for form, start in (('elbow', -3), ('wrist', 7)):
             for vertical in (-1, 1):
@@ -634,7 +642,7 @@ def king_crab(g):
         for vertical in (-1, 1):
             forward(g, [(6, 12, 4, side*30, 34+vertical*6),
                         (13, 13, 4, side*30, 34+vertical*7),
-                        (20, 9, 3, side*30, 34+vertical*4.5)], arm+'@hand', 'paint', 0)
+                        (20, 9, 3, side*30, 34+vertical*4.5)], arm+'@hand', 'paint', .3)
         g.box((side*35, 10, 34), (2.5, 6, 11), arm+'@hand', 'edge')
 
 
