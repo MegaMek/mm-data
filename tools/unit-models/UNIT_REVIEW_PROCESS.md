@@ -192,6 +192,18 @@ Use them sparingly. The limits:
 
 - **At most two on the front** and **at most two on the back**.
 - **Back vents only on torso locations.**
+- **Put them where the heat sinks are.** The mek catalog records a location for every heat sink that
+  takes a critical slot, so placement is a lookup rather than a judgement. Most sinks are engine ones
+  carrying no location at all - ignore those and count only the slotted ones, across every variant,
+  because the body is shared and no single loadout speaks for the chassis.
+
+| Chassis | Located sinks by location | Vents go |
+|---|---|---|
+| Rifleman | LT 25, RT 24, LL 12, RL 10, CT 5 | LT and RT |
+| BattleMaster | RT 37, LT 23, LA 20, RA 14, CT 7 | LT and RT |
+
+  Then keep them clear of that location's hard point: the Rifleman mounts a flush medium laser in
+  each side torso at z 37.9, so its vents sit low at 30.9-33.4 and the two never meet.
 
 Two things to get right, both learned the hard way on the Rifleman:
 
@@ -202,7 +214,50 @@ Two things to get right, both learned the hard way on the Rifleman:
   +/-6.4 flat. Geometry outside that band hangs off the chamfer and reads as stuck on.
 - Winding reverses on the back so the panels still face outward.
 
-## 6. Budget
+## 6. Torso locations must be real
+
+The guide requires actual drawable `HD`, `CT`, `LT` and `RT` surface, and forbids labelling a joined
+torso as `CT`. Two things enforce it:
+
+- **The compile step refuses a joined torso.** A centre section may not reach past 75 per cent of the
+  torso's half-width. Existence alone never caught this: a chassis can carry an `LT` shoulder pod - a
+  real `LT` face - while its entire torso skin stays `CT`, so the side blows off and the armour over
+  it remains. The Archer, Mad Cat, Marauder and King Crab all shipped in that state; the Archer's
+  centre reached 13.5 of a 14.2 half-width.
+- **`split_torso_locations()` is a migration helper, and runs once per body.** Its old guard skipped
+  any body that already had an `LT` face - which is every body with a shoulder, so the bodies that
+  most needed splitting were the ones that never got it.
+
+**A new body declares its seam:** `split_torso_locations(g, seam=4.2)`. The seam is a fact about the
+design - where the chest stops and the arm-carrying structure starts - not a fraction of whatever the
+shell happens to measure. Call it before any `LT`/`RT` accessory is authored, so the shoulder does not
+end up as the location's only geometry.
+
+## 7. Arms that flip
+
+A Mek with no lower arm or hand actuators can flip its arms to fire behind it, and the renderer shows
+it: the arms turn about each shoulder's own left-right axis, rising forward, over the shoulder and
+down to point rearward.
+
+**That axis never changes x.** So an arm that is flush with its shoulder at rest is flush at every
+angle of the turn, and an arm buried inside its shoulder sweeps through solid armour halfway over.
+The rule follows: **a shoulder ends where its arm begins.**
+
+Check it on any body with arms, before review:
+
+```
+right pod      x 12.75 .. 21.25
+right shoulder x  3.25 .. 12.75   -> flush, gap 0.00
+```
+
+Reducing a shoulder to meet its arm need not narrow the unit. On the Rifleman the shoulder went from
+`3.5..18.5` to `3.25..12.75` while the pod stayed at `12.75..21.25`: same overall width, and the pods
+read as separate objects hung on the shoulders rather than merging into one slab.
+
+Every chassis except the Rifleman still buries its arm joint, by 0.5 (Mackie) to 5.3 (Mad Cat). They
+render correctly at rest and will show the arm passing through the shoulder when flipped.
+
+## 8. Budget
 
 Bare unit before loadout: **target under 1,000 triangles**, hard cap 1,500. A thousand is available and
 may be spent on detail; there is no virtue in coming in far under. Equipment is counted separately and
@@ -211,7 +266,7 @@ never consumes the body allowance: each module targets under 100 triangles and m
 Report body, equipment and assembled totals separately. The exporter prints the body count and the
 manifest records it per asset.
 
-## 7. Calibration by tonnage
+## 9. Calibration by tonnage
 
 Legs are the easiest thing to overbuild. Check a new chassis against what is already in
 `unit_mek_chassis.py` before trusting your own eye:
@@ -225,9 +280,12 @@ Legs are the easiest thing to overbuild. Check a new chassis against what is alr
 A sixty-tonner with a wider stance and a bigger foot than either seventy-tonner is wrong, however good
 it looks in isolation.
 
-## 8. Per-chassis decisions
+## 10. Per-chassis decisions
 
 ### Rifleman (60 t, `rifleman`)
+
+**Signed off 2026-09-20 at 674 triangles. Preserved in `preserved/rifleman-final/`.** Treat it as the
+worked example for the rules below; change it only against a new reference, not on taste.
 
 - **No variant has a hand or a lower arm.** All 27 carry their weapons at the elbow, so each arm is a
   weapon pod rather than a limb. No forearm or fist is authored.
@@ -238,3 +296,7 @@ it looks in isolation.
   two-pronged array right of centre; the miniature and the approved artwork win.
 - Barrels are lengthened in the recipe (`weaponOverrides`, ballistic 21, laser 18) because the standard
   shapes read as stubs on a design whose identity is its guns.
+- The head runs the full length of the centre torso rather than perching on it, which needs an
+  `upright` loft: the front face has to move with height, and a `forward` loft can only taper. Chin
+  squared at z 31.5, cockpit standing 4.5 clear of the chest, crown falling back into the antenna.
+- **Shoulders stop at 12.75, where the arm pods start.** See the arm flip rule below.

@@ -237,11 +237,22 @@ def build_meks(recipes, output, export_asset, write_json):
         for location in ('HD', 'CT', 'LT', 'RT'):
             if not any(node == location for _, node, _ in body.faces):
                 raise ValueError(recipe['id']+': no drawable '+location+' surface')
+        # Existing is not enough. A chassis can carry an LT shoulder pod while its whole torso skin
+        # stays labelled CT, which is the joined torso the guide forbids: the side blows off and the
+        # armour over it remains. Catch it by reach - a centre section may not span the torso's width.
+        torso = [tri for tri, node, _ in body.faces if node in ('CT', 'LT', 'RT')]
+        half_width = max(abs(point[0]) for tri in torso for point in tri)
+        centre = [tri for tri, node, _ in body.faces if node == 'CT']
+        reach = max(abs(point[0]) for tri in centre for point in tri)
+        if reach > half_width*.75:
+            raise ValueError('%s: centre torso reaches %.1f of a %.1f half-width; the torso is joined'
+                             % (recipe['id'], reach, half_width))
         hardpoints, mounts = [], []
 
         def mount(identifier, location, pixel, *, rear=False, family='', form='', bay=False, node=None):
             if node is None:
                 node = location+'-forearm' if location in ('LA', 'RA') and form != 'elbow' else location
+                node = recipe.get('socketNodes', {}).get(location+':'+family, node)
             aim = (0, -1, 0) if rear else recipe.get('socketAim', {}).get(location+':'+family,
                                                recipe.get('socketAim', {}).get(location, (0, 1, 0)))
             size = recipe.get('mountAreas', {}).get(location, {})
@@ -283,7 +294,8 @@ def build_meks(recipes, output, export_asset, write_json):
             rear = recipe.get('rearSockets', {}).get(location, [pixel[0], pixel[1]+9, pixel[2]])
             mount(location+'-rear', location, rear, rear=True)
             # Exhaust is a separate rear mounting preference, never a front-facing gun socket.
-            mount(location+'-exhaust', location, [rear[0], rear[1], min(rear[2], 29)], family='jump-jet')
+            exhaust = recipe.get('exhaustSockets', {}).get(location, [rear[0], rear[1], min(rear[2], 29)])
+            mount(location+'-exhaust', location, exhaust, family='jump-jet')
             if recipe.get('barrelLength'):
                 mount(location+'-ppc', location, pixel, family='ppc')
         for location in ('LA', 'RA'):
@@ -342,7 +354,8 @@ def build_meks(recipes, output, export_asset, write_json):
                     joints[location+'Foot'] = location+'-foot'
         key = 'bodies/'+recipe['id']
         topology = recipe.get('topology', 'biped')
-        assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints)
+        assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints,
+                                   leg_bends=recipe.get('legBends'))
         descriptor = {
             'schema': 2, 'kind': 'mek', 'body': 'units/modular/'+key+'.json',
             'equipment': 'units/modular/equipment.json', 'mounts': mounts,

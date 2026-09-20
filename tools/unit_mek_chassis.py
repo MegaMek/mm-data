@@ -1,4 +1,4 @@
-"""Four deliberately simple silhouettes, authored against the repository's Mek illustrations.
+"""Recognizable bare silhouettes, authored against the repository's sprites and Mek illustrations.
 
 These are chassis anatomy, not equipment or game rules. The variant assembler adds
 the actual guns and launchers. +Y faces forward; all dimensions are authoring units.
@@ -100,14 +100,27 @@ def vent(g, face, center_x, half_width, low_z, high_z, rear=False, group='CT'):
         slat(base, base + span*.22, .16, 'edge')
 
 
-def split_torso_locations(body):
-    """Give joined torso shells real side locations without changing their visible silhouette."""
-    if all(any(node == location for _, node, _ in body.faces) for location in ('LT', 'RT')):
+def split_torso_locations(body, seam=None):
+    """Give joined torso shells real side locations without changing their visible silhouette.
+
+    Split once per body and no more. The test cannot be "does an LT face exist", because a shoulder
+    or a pod is an LT face and every chassis that has one would skip the split and keep its whole
+    torso skin labelled CT - a side torso would then blow off leaving the armour over it intact.
+    Splitting twice is just as wrong: the plane comes from the CT shell's own width, so a second pass
+    would cut the already-narrowed centre again.
+
+    Pass `seam` to state where the design's own division sits. The 0.38 fallback is a migration
+    measure for bodies authored before locations were separated; a new body function should give its
+    seam, because that is a fact about the design rather than a fraction of whatever the shell
+    happens to measure.
+    """
+    if getattr(body, 'torso_split', False):
         return
     shell = [tri for tri, node, _ in body.faces if node == 'CT']
     if not shell:
         return
-    edge = max(abs(p[0]) for tri in shell for p in tri) * .38
+    body.torso_split = True
+    edge = seam if seam is not None else max(abs(p[0]) for tri in shell for p in tri) * .38
 
     def clip(points, plane, sign):
         result = []
@@ -419,31 +432,45 @@ def mackie(g):
 
 
 def rifleman(g):
-    # Drawn to the overhead sprite: wide shoulders carrying the weapon pods well outboard at x 21.5,
-    # a broad torso, and the search radar as a pronged housing on the right shoulder rather than a
-    # blade on the centre line. No variant has a hand or a lower arm, so each arm is a pod whose guns
-    # leave the armour at its stepped face.
+    # Drawn to the overhead sprite for width and placement, to the miniature for form: wide shoulders
+    # carrying the weapon pods outboard, a broad torso, and the Garret communications array centred on
+    # the head rather than set on one shoulder. No variant has a hand or a lower arm, so each arm is a
+    # pod whose guns leave the armour at its stepped face.
     g.box((0, -1, 29.4), (16, 11, 6), 'pelvis', 'edge')
     torso = [(30.4, 18, 13, 0, -1), (36.4, 22, 15, 0, -1), (45.4, 20, 13.5, 0, -1.5)]
     upright(g, torso, cut=.3)
     # Give the shell real side locations before any LT/RT accessory is authored, or the side armour
-    # stays labelled CT and a destroyed side torso takes only its shoulder with it.
-    split_torso_locations(g)
+    # stays labelled CT and a destroyed side torso takes only its shoulder with it. The seam is the
+    # shoulder root at 4.2, where the chest stops and the arm-carrying structure begins.
+    split_torso_locations(g, seam=4.2)
     for side in (-1, 1):
-        # Two vents on the front, two on the back, inside the flat part of the torso skin.
-        vent(g, lofted_face(torso), side*4.5, 2.6, 30.9, 33.4)
-        vent(g, lofted_face(torso, rear=True), side*4.5, 2.6, 34.4, 36.9, rear=True)
+        # Vents follow the heat sinks. Across the Rifleman's variants the catalog puts 25 located
+        # sinks in the left torso and 24 in the right against 5 in the centre, so the vents belong
+        # on LT and RT. They sit low, clear of the flush medium laser those locations mount at 37.9.
+        location = 'LT' if side < 0 else 'RT'
+        vent(g, lofted_face(torso), side*5.7, 1.4, 30.9, 33.4, group=location)
+        vent(g, lofted_face(torso, rear=True), side*5.7, 1.4, 34.4, 36.9, rear=True, group=location)
     # The sprite puts the cockpit just left of the centre line, ahead of the torso and below the pods.
-    forward(g, [(3, 10, 9, -1, 37.9), (10, 9, 8, -1, 37.6), (15, 7, 5.6, -1, 37.1)], 'HD', cut=.3)
-    panel(g, [(-3.9, 15.05, 38.6), (1.9, 15.05, 38.6), (1.9, 15.05, 35.7), (-3.9, 15.05, 35.7)], 'HD', 'glass')
+    # The head runs the full length of the centre torso rather than perching on it, so it lofts
+    # upward like the torso does: the front face has to move with height, which a forward loft cannot
+    # do. Four sections, bottom to top - a narrow chin dropped to 31.5, just above the torso floor at
+    # 30.4; the cockpit standing 4.5 clear of the chest front at y 11; then the crown falling back
+    # behind the chest to y 4.5, which is the slope the line art runs up into the antenna mast.
+    # The cockpit's two sections share a front face so the glass lies flat on it instead of floating.
+    # A deep chamfer keeps the protrusion rounded; the old head was a box and read as one.
+    upright(g, [(31.5, 8, 12, 0, 5), (35.5, 10, 12, 0, 5),
+                (41, 10, 12, 0, 5), (45, 8, 7, 0, 1)], 'HD', cut=.45)
+    # The viewport runs most of the cockpit's standing height, 2.8 across by 8, stopping 1.3 above
+    # the chin so the armour closes under it as a frame rather than running off the bottom edge.
+    panel(g, [(-1.4, 11.05, 40.8), (1.4, 11.05, 40.8), (1.4, 11.05, 32.8), (-1.4, 11.05, 32.8)], 'HD', 'glass')
     # Search radar: a housing on the right shoulder with two forward prongs, as the sprite draws it.
-    # Garret T11-A communications array: a mast on the right shoulder carrying a crossbar that runs
-    # across the Mek with its tips swept forward. The miniature gives the form, and the two forward
-    # points the overhead sprite draws at the front of this housing are those swept tips.
-    g.box((9.5, 1, 47.9), (5.5, 5.5, 5), 'CT', 'edge')
-    g.box((9.5, 1.8, 51), (7, 6, 2.6), 'CT', 'edge', .3)
+    # Garret T11-A communications array: a mast on the centre line carrying a crossbar that runs
+    # across the Mek with its tips swept forward. The miniature sets both the form and the central
+    # mounting; the overhead sprite draws the block off to one side, and the miniature wins.
+    g.box((0, 1, 47.9), (5.5, 5.5, 5), 'CT', 'edge')
+    g.box((0, 1.8, 51), (7, 6, 2.6), 'CT', 'edge', .3)
     for reach in (-8, 8):
-        g.beam((9.5, .6, 52.4), (9.5 + reach, 4.6, 52.4), 2.6, 1.8, 'CT', 'edge')
+        g.beam((0, .6, 52.4), (reach, 4.6, 52.4), 2.6, 1.8, 'CT', 'edge')
     for side, arm, leg, torso_side in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
         x = side*7.5
         g.joint(leg, (x, 0, 29), 'pelvis')
@@ -454,8 +481,11 @@ def rifleman(g):
         g.box((x*1.05, 0, 16.5), (8, 9, 4), leg+'-shin', 'metal')
         upright(g, [(5, 8.5, 9.5, x*1.1, 0), (14, 9.5, 10, x*1.05, -.5)], leg+'-shin', cut=.35)
         foot(g, x*1.1, 2.5, 9.5, 13, leg+'-shin')
-        # A long shoulder reaching out to the pod, deep enough to sit under all of it.
-        upright(g, [(33.4, 14, 15, side*11, -1.5), (45.9, 15, 15.5, side*11, -1.5)], torso_side, cut=.25)
+        # The shoulder stops where the pod starts, at 12.75, instead of running out underneath it. An arm
+        # flip turns the pod about this joint's left-right axis, which never changes x, so a pod that is
+        # flush with the shoulder at rest stays flush all the way round rather than sweeping through it.
+        # Overall width is unchanged - the pod still ends at 21.25; only the seam between them moves.
+        upright(g, [(33.4, 9, 15, side*8.25, -1.5), (45.9, 9.5, 15.5, side*8, -1.5)], torso_side, cut=.25)
         if g.modular:
             g.joint(arm, (side*14, 0, 40.4), 'CT')
         # The miniature is primary on size and stance: the pods are slim and sit against the side
@@ -471,12 +501,16 @@ def battlemaster(g):
     g.box((0, -1, 31), (21, 14, 7), 'pelvis', 'edge')
     torso = [(32, 21, 16, 0, -1), (41, 28, 20, 0, -1), (51, 25, 17, 0, -1.5)]
     upright(g, torso, cut=.35)
-    # Real side locations before the pauldrons are authored, for the same reason.
-    split_torso_locations(g)
+    # Real side locations before the pauldrons are authored, for the same reason. The seam is 5.3,
+    # where the chest slab ends and the structure carrying the pauldrons begins; it also puts the
+    # side-torso vents wholly outboard of the centre section rather than straddling it.
+    split_torso_locations(g, seam=5.3)
     for side in (-1, 1):
-        # Two vents on the front, two on the back, inside the flat part of the torso skin.
-        vent(g, lofted_face(torso), side*5.5, 3.2, 33, 36.5)
-        vent(g, lofted_face(torso, rear=True), side*5.5, 3.2, 37.5, 41, rear=True)
+        # Same rule: 37 located sinks in the right torso and 23 in the left against 7 in the centre.
+        # Well inboard of the arm mounts at 14 and the shoulder missile bays at 15.
+        location = 'LT' if side < 0 else 'RT'
+        vent(g, lofted_face(torso), side*6.7, 1.3, 33, 36.5, group=location)
+        vent(g, lofted_face(torso, rear=True), side*6.7, 1.3, 37.5, 41, rear=True, group=location)
     # The cockpit is a compact rounded dome riding high on the chest with a wrapped visor band. It
     # is barely deeper than it is wide: a forward-projecting snout is the wrong read for this design.
     forward(g, [(1, 12, 10, 0, 47), (6, 13.5, 11.5, 0, 47), (11, 11, 9, 0, 46.5)], 'HD', cut=.6)
@@ -510,6 +544,96 @@ def battlemaster(g):
         g.box((side*25.5, -1, 36.5), (10.5, 10.5, 9.5), arm+'@elbow', 'edge', .3)
 
 
+def king_crab(g):
+    # A broad low carapace, slit cockpit and open pincers: the guns inside them are live equipment.
+    g.box((0, -2, 29), (24, 13, 7), 'pelvis', 'metal', .35)
+    g.box((0, -2, 34), (17, 11, 5), 'CT', 'edge', .3)
+
+    def shell_ring(x, rear, front, low, high):
+        depth = high-low
+        return [(x, rear+3, low+depth*.35), (x, front-4, low), (x, front, low+7),
+                (x, front-2, high-3), (x, front-9, high), (x, rear+4, high),
+                (x, rear, high-4), (x, rear, low+depth*.55)]
+
+    # Three individually closed shells share their cut edges; damage never uses empty side-torso nodes.
+    inner = (-30, 16, 36, 56)
+    mid = (-28, 12, 37, 55)
+    outer = (-22, 6, 40, 50)
+    g.loft([shell_ring(-7, *inner), shell_ring(7, *inner)], 'CT')
+    for side, torso in ((-1, 'LT'), (1, 'RT')):
+        rings = [shell_ring(side*7, *inner), shell_ring(side*18, *mid), shell_ring(side*24, *outer)]
+        g.loft(rings if side == 1 else list(reversed(rings)), torso)
+        # Back heat-exchanger recesses stay part of the hull, not optional searchlights or weapon barrels.
+        g.box((side*13, -29, 50), (8, 3, 7), torso, 'metal')
+        # Raised rear mounting shoulders support forward-firing weapons; these are not rear-firing ports.
+        g.box((side*16, -21, 55.5), (9, 12, 3), torso, 'edge', .3)
+
+    # A shallow pointed prow, with a wraparound visor tucked under its roof rather than a separate head box.
+    outline = [(-17, 5), (17, 5), (21, 12), (14, 21), (6, 24), (-6, 24), (-14, 21), (-21, 12)]
+    roof = lambda y: 55-(y-5)*.24
+    g.loft([[(x, y, roof(y)-4.2) for x, y in outline],
+            [(x, y, roof(y)-1.4) for x, y in outline],
+            [(x*.94, y-.5, roof(y)) for x, y in outline]], 'HD')
+    for index in range(2, 7):
+        a, b = outline[index], outline[(index+1) % len(outline)]
+        dx, dy = b[0]-a[0], b[1]-a[1]
+        length = (dx*dx+dy*dy)**.5
+
+        def window(t, above, offset):
+            x, y = a[0]+dx*t, a[1]+dy*t
+            return (x+dy/length*offset, y-dx/length*offset, roof(y)-4.2+above)
+
+        panel(g, [window(.03, .3, .04), window(.97, .3, .04),
+                  window(.97, 2.55, .04), window(.03, 2.55, .04)], 'HD')
+        panel(g, [window(.14, .65, .07), window(.86, .65, .07),
+                  window(.86, 2.2, .07), window(.14, 2.2, .07)], 'HD', 'glass')
+    forward(g, [(10, 11, 6, 0, 40), (16, 8, 4, 0, 39)], 'CT', 'edge', .25)
+    panel(g, [(-3.2, 16.03, 40.3), (3.2, 16.03, 40.3),
+              (3.2, 16.03, 38), (-3.2, 16.03, 38)], 'CT', 'metal')
+    for z in (38.45, 39.2, 39.95):
+        panel(g, [(-2.7, 16.06, z+.14), (2.7, 16.06, z+.14),
+                  (2.7, 16.06, z-.14), (-2.7, 16.06, z-.14)], 'CT', 'edge')
+
+    for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
+        hip, knee, ankle = (side*10.5, -2, 29), (side*14, -10, 18.5), (side*15, -1, 5)
+        g.joint(leg, hip, 'pelvis')
+        g.joint(leg+'-shin', knee, leg)
+        g.beam((side*8, -2, 29), (side*14, -2, 29), 10, 10, leg, 'edge', 6)
+        g.beam(hip, knee, 10, 11, leg, 'paint', 4, .85)
+        # The knee sits behind both hip and ankle; the shin slopes forward to the planted foot.
+        g.box((knee[0], knee[1], 19), (10, 10, 5), leg+'-shin', 'edge', .45)
+        upright(g, [(5, 9, 9, ankle[0], -1), (13, 12, 13, side*15, -5.5),
+                    (18, 9, 9, knee[0], -9.5)], leg+'-shin', cut=.5)
+        # Broad multi-toed armored feet, not the thin bird toes used by lighter reverse-knee Meks.
+        g.joint(leg+'-foot', ankle, leg+'-shin')
+        upright(g, [(0, 15, 18, ankle[0], 3), (4, 12, 14, ankle[0], 1)], leg+'-foot', cut=.65)
+        for offset in (-4.3, 4.3):
+            g.box((ankle[0]+offset, 10.7, 1.1), (3, 2.5, 2.2), leg+'-foot', 'metal')
+
+        shoulder, elbow = (side*22, -1, 44), (side*30, 0, 34)
+        g.joint(arm, shoulder, 'CT')
+        g.joint(arm+'-forearm', elbow, arm)
+        g.beam((side*20, -1, 44), (side*25, -1, 44), 10, 10, arm, 'edge', 6)
+        g.beam(shoulder, elbow, 7, 8, arm, 'metal')
+        for form in ('forearm', 'hand', 'wrist', 'elbow'):
+            g.joint(arm+'@'+form, elbow, arm if form == 'elbow' else arm+'-forearm')
+        # With lower-arm actuators, a short armored cuff ends behind the open claw.
+        forward(g, [(-4, 11, 12, side*30, 34), (3, 13, 13, side*30, 34),
+                    (8, 10, 10, side*30, 34)], arm+'@forearm', cut=.4)
+        # The alternate no-hand/no-lower-arm housings remain open at the gun end.
+        for form, start in (('elbow', -3), ('wrist', 7)):
+            for vertical in (-1, 1):
+                forward(g, [(start, 11, 3, side*30, 34+vertical*5.2),
+                            (16, 9, 2.5, side*30, 34+vertical*4.5)], arm+'@'+form, 'paint', 0)
+            g.box((side*35, (start+13)/2, 34), (2, 13-start, 9), arm+'@'+form, 'edge')
+        # Upper/lower pincer fingers frame a real equipment aperture, with a visible gap when bare.
+        for vertical in (-1, 1):
+            forward(g, [(6, 12, 4, side*30, 34+vertical*6),
+                        (13, 13, 4, side*30, 34+vertical*7),
+                        (20, 9, 3, side*30, 34+vertical*4.5)], arm+'@hand', 'paint', .3)
+        g.box((side*35, 10, 34), (2.5, 6, 11), arm+'@hand', 'edge')
+
+
 def build_chassis(recipe, modular=False):
     g = Geometry(modular=modular)
     hip = recipe['hip']
@@ -520,7 +644,7 @@ def build_chassis(recipe, modular=False):
         g.joint(location, (x-42, 36-y, z), 'CT')
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
                 'marauder': marauder, 'archer': archer, 'mackie': mackie,
-                'rifleman': rifleman,
+                'king-crab': king_crab, 'rifleman': rifleman,
                 'battlemaster': battlemaster}
     builders[recipe['id']](g)
     if modular:
