@@ -109,6 +109,35 @@
       "weaponOverrides": [{"location": "LA", "family": "ppc", "length": 16, "note": "The left arm is one long cannon reaching well ahead of the body."},
                           {"location": "RA", "family": "ballistic", "length": 17, "note": "The right arm's gun runs long through its shield disc."}],
       "slotSpacing": 3, "weaponScale": 0.95
+    },
+    {
+      "name": "Rifleman", "id": "rifleman", "referenceVariant": "RFL-3N",
+      "sprite": "meks/Rifleman.png", "illustration": "Mek/Rifleman.png", "hip": [42,36,29.4],
+      "silhouette": "Squat anti-air gun platform: very heavy legs with outboard thigh plates and broad splayed feet, a compact vented torso, a small angular cockpit set forward and low between the shoulders, a swept radar blade on a short mast above the torso, and a long weapon pod on each side carrying a stacked pair of barrels. No hands and no forearms on any variant.",
+      "sockets": {"HD":[42,25,37.9],"CT":[42,29.5,38.4],"LT":[36,30,37.9],"RT":[48,30,37.9],"LA":[25,24,40.4],"RA":[59,24,40.4],"LL":[34.5,36,13],"RL":[49.5,36,13]},
+      "rearSockets": {"CT":[42,45,40.4],"LT":[33,45,40.4],"RT":[51,45,40.4]},
+      "protrusion": {"LA":"long","RA":"long","LT":"recessed","RT":"recessed"},
+      "mountAreas": {"LA":{"width":6,"height":10.5},"RA":{"width":6,"height":10.5}},
+      "weaponOverrides": [{"location": "LA", "family": "ballistic", "length": 21, "note": "The arm cannons reach well ahead of the pods, as the sprite's long forward barrels show."},
+                          {"location": "RA", "family": "ballistic", "length": 21},
+                          {"location": "LA", "family": "laser", "length": 18},
+                          {"location": "RA", "family": "laser", "length": 18}],
+      "weaponScale": 0.95
+    },
+    {
+      "name": "BattleMaster", "id": "battlemaster", "referenceVariant": "BLR-1G",
+      "sprite": "meks/BattleMaster.png", "illustration": "Mek/BattleMaster.png", "hip": [42,36,31],
+      "silhouette": "Eighty-five ton assault Mek: very broad angular pauldrons carrying a missile bay on each shoulder, a domed cockpit with a dark curved visor set low and forward between them, twin antennas behind it, long arms held forward ending in fists, and heavy legs with outboard thigh plates, blocked knees and broad splayed feet. The right arm carries the particle cannon, the left the machine guns.",
+      "sockets": {"HD":[42,27,47],"CT":[42,28,40],"LT":[28,28,44],"RT":[56,28,44],"LA":[16.5,20,35.5],"RA":[67.5,20,35.5],"LL":[33,36,13],"RL":[51,36,13]},
+      "armSockets": {"LA":{"elbow":[16.5,37,36.5],"wrist":[16.5,20,35.5],"hand":[16.5,13,35.5]},
+                     "RA":{"elbow":[67.5,37,36.5],"wrist":[67.5,20,35.5],"hand":[67.5,13,35.5]}},
+      "missileSockets": {"LT":[27,30,52],"RT":[57,30,52]},
+      "missileBayHeight": 9, "missileBayColumns": 3, "missileBayWidth": 11, "missileScale": 1.15,
+      "rearSockets": {"HD":[42,46,47],"CT":[42,47,42],"LT":[29,47,44],"RT":[55,47,44]},
+      "protrusion": {"LA":"long","RA":"long","LT":"short","RT":"short"},
+      "mountAreas": {"LT":{"width":12,"height":14},"RT":{"width":12,"height":14},
+                     "LA":{"width":9,"height":10},"RA":{"width":9,"height":10}},
+      "weaponScale": 0.94
     }
   ]
 }

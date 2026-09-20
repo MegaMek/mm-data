@@ -3,7 +3,7 @@
 These are chassis anatomy, not equipment or game rules. The variant assembler adds
 the actual guns and launchers. +Y faces forward; all dimensions are authoring units.
 """
-from unit_model_geometry import Geometry
+from unit_model_geometry import Geometry, sub
 
 
 def section(width, depth, cut=.25):
@@ -52,10 +52,113 @@ def toes(g, x, y, group, width=3, length=8):
         g.prism(ring, 0, 2.3, group, 'paint', .68)
 
 
+def lofted_face(sections, rear=False):
+    """Surface of a torso lofted upward, whose depth changes with height so the face slopes.
+
+    Sections are the (z, width, depth, center x, center y) rows handed to upright().
+    """
+    rows = sorted(sections)
+
+    def face(z, stand):
+        low, high = rows[0], rows[-1]
+        for first, second in zip(rows, rows[1:]):
+            if first[0] <= z <= second[0]:
+                low, high = first, second
+                break
+        ratio = (z - low[0])/((high[0] - low[0]) or 1)
+        depth = low[2] + (high[2] - low[2])*ratio
+        middle = low[4] + (high[4] - low[4])*ratio
+        return middle - depth/2 - stand if rear else middle + depth/2 + stand
+    return face
+
+
+def capped_face(y, rear=False):
+    """Surface of a torso lofted forward, whose front and back are flat caps at a fixed depth."""
+    return lambda z, stand: (y - stand) if rear else (y + stand)
+
+
+def vent(g, face, center_x, half_width, low_z, high_z, rear=False, group='CT'):
+    """A cooling vent lying in the armour: a shaded recess behind three lit fins.
+
+    House rule: at most two on the front and two on the back, the back pair on a torso only. The
+    panels follow the face rather than sitting at one depth, and must stay inside its flat band,
+    since a bevelled section chamfers its corners away.
+    """
+    low_x, high_x = center_x - half_width, center_x + half_width
+
+    def slat(first_z, second_z, stand, material):
+        # Winding reverses on the back so both faces still point outward.
+        near, far = (low_x, high_x) if rear else (high_x, low_x)
+        g.face([(near, face(first_z, stand), first_z), (far, face(first_z, stand), first_z),
+                (far, face(second_z, stand), second_z), (near, face(second_z, stand), second_z)],
+               group, material)
+
+    slat(low_z, high_z, .06, 'dark')
+    span = high_z - low_z
+    for index in range(3):
+        base = low_z + span*(.13 + index*.29)
+        slat(base, base + span*.22, .16, 'edge')
+
+
+def split_torso_locations(body, seam=None):
+    """Give joined torso shells real side locations without changing their visible silhouette.
+
+    Split once per body and no more. The test cannot be "does an LT face exist", because a shoulder
+    or a pod is an LT face and every chassis that has one would skip the split and keep its whole
+    torso skin labelled CT - a side torso would then blow off leaving the armour over it intact.
+    Splitting twice is just as wrong: the plane comes from the CT shell's own width, so a second pass
+    would cut the already-narrowed centre again.
+
+    Pass `seam` to state where the design's own division sits. The 0.38 fallback is a migration
+    measure for bodies authored before locations were separated; a new body function should give its
+    seam, because that is a fact about the design rather than a fraction of whatever the shell
+    happens to measure.
+    """
+    if getattr(body, 'torso_split', False):
+        return
+    shell = [tri for tri, node, _ in body.faces if node == 'CT']
+    if not shell:
+        return
+    body.torso_split = True
+    edge = seam if seam is not None else max(abs(p[0]) for tri in shell for p in tri) * .38
+
+    def clip(points, plane, sign):
+        result = []
+        for index, a in enumerate(points):
+            b = points[(index+1) % len(points)]
+            inside_a, inside_b = sign*(a[0]-plane) >= 0, sign*(b[0]-plane) >= 0
+            if inside_a:
+                result.append(a)
+            if inside_a != inside_b:
+                t = (plane-a[0])/(b[0]-a[0])
+                result.append(tuple(a[axis]+(b[axis]-a[axis])*t for axis in range(3)))
+        return result
+
+    faces = []
+    for tri, node, material in body.faces:
+        if node != 'CT':
+            faces.append((tri, node, material))
+            continue
+        regions = [('LT', clip(tri, -edge, -1)), ('CT', clip(clip(tri, -edge, 1), edge, -1)),
+                   ('RT', clip(tri, edge, 1))]
+        for location, polygon in regions:
+            for index in range(1, len(polygon)-1):
+                tri = (polygon[0], polygon[index], polygon[index+1])
+                a, b = sub(tri[1], tri[0]), sub(tri[2], tri[0])
+                area = sum((a[(i+1)%3]*b[(i+2)%3]-a[(i+2)%3]*b[(i+1)%3])**2 for i in range(3))
+                if area > 1e-12:
+                    faces.append((tri, location, material))
+    body.faces = faces
+
+
 def atlas(g):
     g.box((0, 0, 31), (17, 9, 6), 'pelvis', 'edge')
     g.box((0, 0, 36), (13, 9, 6), 'CT', 'metal')
     upright(g, [(36, 18, 10, 0, 0), (46, 28, 14, 0, 0), (53, 25, 12, 0, 0)], cut=.45)
+    torso = [(36, 18, 10, 0, 0), (46, 28, 14, 0, 0), (53, 25, 12, 0, 0)]
+    for side in (-1, 1):
+        vent(g, lofted_face(torso), side*5, 3, 38, 42)
+        vent(g, lofted_face(torso, rear=True), side*5, 3, 38, 42, rear=True)
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         x = side*8
         g.joint(leg, (x, 0, 30), 'pelvis')
@@ -98,6 +201,10 @@ def locust(g):
     # The entire upper body is a low forward cockpit pod, with no humanoid head.
     forward(g, [(-9, 10, 10, 0, 39), (1, 13, 11, 0, 39),
                 (12, 7, 6, 0, 35.8)], 'CT', cut=.45)
+    for side in (-1, 1):
+        # A twenty tonner has almost no flat frontage, so its vents stay small.
+        vent(g, capped_face(12), side*1.05, .85, 34.5, 37)
+        vent(g, capped_face(-9, rear=True), side*1.4, 1.15, 37, 40, rear=True)
     g.box((0, -1, 31), (9, 9, 6), 'pelvis', 'metal')
     for side in (-1, 1):
         # Angled glazing lies just above the sloped top of the nose.
@@ -127,12 +234,15 @@ def warhammer(g):
     g.box((0, 0, 34), (9, 7, 6), 'CT', 'metal')
     forward(g, [(-6, 22, 12, 0, 43), (3, 23, 14, 0, 43),
                 (7, 18, 9, 0, 41.5)], cut=0)
+    for side in (-1, 1):
+        vent(g, capped_face(7), side*4.5, 3, 38.5, 41.5)
+        vent(g, capped_face(-6, rear=True), side*5, 3.5, 39, 42, rear=True)
     forward(g, [(-3, 7, 6, 0, 49), (4, 8, 5, 0, 48), (6, 6, 3, 0, 46.5)], 'HD', cut=0)
     panel(g, [(-2.6, 6.04, 47.4), (2.6, 6.04, 47.4),
               (2.6, 6.04, 46.1), (-2.6, 6.04, 46.1)], 'HD', 'glass')
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         x = side*7.5
-        g.joint(leg, (x, 0, 29), 'pelvis')
+        g.joint(leg, (x, 0, 29.4), 'pelvis')
         g.joint(leg+'-shin', (side*9, 0, 18), leg)
         g.beam((x, 0, 29), (side*9, 0, 19), 9, 10, leg, 'edge')
         g.box((side*9, 1.5, 18), (7, 8, 4), leg+'-shin', 'metal')
@@ -161,6 +271,9 @@ def mad_cat(g):
     # Four coarse sections form the projecting, rounded cockpit prow.
     forward(g, [(-10, 16, 14, 0, 39), (1, 20, 17, 0, 39),
                 (11, 13, 11, 0, 36), (15, 7, 7, 0, 34.5)], 'CT', cut=.65)
+    for side in (-1, 1):
+        vent(g, capped_face(3), side*3.5, 2.5, 29.5, 32.5)
+        vent(g, capped_face(-10, rear=True), side*1.7, 1.5, 36, 40, rear=True)
     # The cockpit is a faceted bubble canopy wrapped over the top and front of the nose, not skylights:
     # a glass shell standing proud of the hull, with a frame rib down its center.
     forward(g, [(6, 12, 7, 0, 42), (11.5, 11.5, 8, 0, 39.2), (15.6, 6.8, 5.4, 0, 36.2)], 'HD', 'glass', .6)
@@ -191,6 +304,9 @@ def marauder(g):
     g.box((0, -3, 32.5), (11, 9, 5), 'CT', 'edge')
     forward(g, [(-14, 14, 12, 0, 42), (-4, 19, 17, 0, 41.5),
                 (8, 16, 13, 0, 38.5), (18, 7, 6, 0, 35)], 'CT', cut=.55)
+    for side in (-1, 1):
+        vent(g, capped_face(1.5), side*2.7, 2, 31, 34)
+        vent(g, capped_face(-14, rear=True), side*1.8, 1.5, 39, 43, rear=True)
     for side in (-1, 1):
         # Glazing lies just above the sloped top of the nose.
         points = [(side*.5, 9.5, 44.05), (side*3.4, 9.5, 44.05),
@@ -227,6 +343,11 @@ def archer(g):
     g.box((0, 0, 35), (12, 9, 5), 'CT', 'metal')
     # Barrel chest: the variant's launchers fill the two upper bays under the raised hoods.
     upright(g, [(34, 16, 12, 0, 0), (43, 27, 21, 0, 0), (53, 25, 19, 0, -.5)], cut=.35)
+    torso = [(34, 16, 12, 0, 0), (43, 27, 21, 0, 0), (53, 25, 19, 0, -.5)]
+    for side in (-1, 1):
+        # The cockpit wedge owns the middle of the front, so its vents sit outboard of it.
+        vent(g, lofted_face(torso), side*7, 1.3, 38.5, 41.5)
+        vent(g, lofted_face(torso, rear=True), side*4.5, 3, 38, 42, rear=True)
     # No separate head: the centre is one solid mass. Its top slopes from the back down to the
     # cockpit, while its underside runs level from the base of the cockpit straight back into the
     # torso, so the window sits in front of the launchers and below them without drooping.
@@ -266,6 +387,10 @@ def mackie(g):
     g.box((0, 0, 31), (19, 11, 6), 'pelvis', 'edge')
     g.box((0, 0, 35.5), (14, 10, 4), 'CT', 'metal')
     upright(g, [(37, 24, 16, 0, 0), (43, 32, 21, 0, 0), (54, 30, 20, 0, 0)], cut=.2)
+    torso = [(37, 24, 16, 0, 0), (43, 32, 21, 0, 0), (54, 30, 20, 0, 0)]
+    for side in (-1, 1):
+        vent(g, lofted_face(torso), side*6, 4, 38, 41.5)
+        vent(g, lofted_face(torso, rear=True), side*6, 4, 38, 41.5, rear=True)
     # A raised plate marks the center of the chest.
     g.box((0, 10.4, 46), (12, 1.2, 9), 'CT', 'edge')
     # The bubble cockpit sits on a collar at the front of the roof.
@@ -304,6 +429,119 @@ def mackie(g):
         g.box((side*28.5, 10.5, 45), (7, 5, 7), arm+'@hand', 'metal')
     # A round shield disc rings the right arm's gun, which always starts at the elbow.
     g.beam((28.5, 5, 45), (28.5, 7, 45), 17, 17, 'RA@elbow', 'edge', 8)
+
+
+def rifleman(g):
+    # Drawn to the overhead sprite for width and placement, to the miniature for form: wide shoulders
+    # carrying the weapon pods outboard, a broad torso, and the Garret communications array centred on
+    # the head rather than set on one shoulder. No variant has a hand or a lower arm, so each arm is a
+    # pod whose guns leave the armour at its stepped face.
+    g.box((0, -1, 29.4), (16, 11, 6), 'pelvis', 'edge')
+    torso = [(30.4, 18, 13, 0, -1), (36.4, 22, 15, 0, -1), (45.4, 20, 13.5, 0, -1.5)]
+    upright(g, torso, cut=.3)
+    # Give the shell real side locations before any LT/RT accessory is authored, or the side armour
+    # stays labelled CT and a destroyed side torso takes only its shoulder with it. The seam is the
+    # shoulder root at 4.2, where the chest stops and the arm-carrying structure begins.
+    split_torso_locations(g, seam=4.2)
+    for side in (-1, 1):
+        # Vents follow the heat sinks. Across the Rifleman's variants the catalog puts 25 located
+        # sinks in the left torso and 24 in the right against 5 in the centre, so the vents belong
+        # on LT and RT. They sit low, clear of the flush medium laser those locations mount at 37.9.
+        location = 'LT' if side < 0 else 'RT'
+        vent(g, lofted_face(torso), side*5.7, 1.4, 30.9, 33.4, group=location)
+        vent(g, lofted_face(torso, rear=True), side*5.7, 1.4, 34.4, 36.9, rear=True, group=location)
+    # The sprite puts the cockpit just left of the centre line, ahead of the torso and below the pods.
+    # The head runs the full length of the centre torso rather than perching on it, so it lofts
+    # upward like the torso does: the front face has to move with height, which a forward loft cannot
+    # do. Four sections, bottom to top - a narrow chin dropped to 31.5, just above the torso floor at
+    # 30.4; the cockpit standing 4.5 clear of the chest front at y 11; then the crown falling back
+    # behind the chest to y 4.5, which is the slope the line art runs up into the antenna mast.
+    # The cockpit's two sections share a front face so the glass lies flat on it instead of floating.
+    # A deep chamfer keeps the protrusion rounded; the old head was a box and read as one.
+    upright(g, [(31.5, 8, 12, 0, 5), (35.5, 10, 12, 0, 5),
+                (41, 10, 12, 0, 5), (45, 8, 7, 0, 1)], 'HD', cut=.45)
+    # The viewport runs most of the cockpit's standing height, 2.8 across by 8, stopping 1.3 above
+    # the chin so the armour closes under it as a frame rather than running off the bottom edge.
+    panel(g, [(-1.4, 11.05, 40.8), (1.4, 11.05, 40.8), (1.4, 11.05, 32.8), (-1.4, 11.05, 32.8)], 'HD', 'glass')
+    # Search radar: a housing on the right shoulder with two forward prongs, as the sprite draws it.
+    # Garret T11-A communications array: a mast on the centre line carrying a crossbar that runs
+    # across the Mek with its tips swept forward. The miniature sets both the form and the central
+    # mounting; the overhead sprite draws the block off to one side, and the miniature wins.
+    g.box((0, 1, 47.9), (5.5, 5.5, 5), 'CT', 'edge')
+    g.box((0, 1.8, 51), (7, 6, 2.6), 'CT', 'edge', .3)
+    for reach in (-8, 8):
+        g.beam((0, .6, 52.4), (reach, 4.6, 52.4), 2.6, 1.8, 'CT', 'edge')
+    for side, arm, leg, torso_side in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
+        x = side*7.5
+        g.joint(leg, (x, 0, 29), 'pelvis')
+        g.joint(leg+'-shin', (x*1.05, -1, 16.5), leg)
+        # Sixty tons: the legs stay lighter than the seventy-ton designs already in this file.
+        upright(g, [(16.5, 8, 9.5, x*1.05, -1), (29.4, 10, 10.5, x, 0)], leg, cut=.3)
+        g.box((side*11.5, -1, 23.5), (2.8, 9, 9.5), leg, 'edge', .45)
+        g.box((x*1.05, 0, 16.5), (8, 9, 4), leg+'-shin', 'metal')
+        upright(g, [(5, 8.5, 9.5, x*1.1, 0), (14, 9.5, 10, x*1.05, -.5)], leg+'-shin', cut=.35)
+        foot(g, x*1.1, 2.5, 9.5, 13, leg+'-shin')
+        # The shoulder stops where the pod starts, at 12.75, instead of running out underneath it. An arm
+        # flip turns the pod about this joint's left-right axis, which never changes x, so a pod that is
+        # flush with the shoulder at rest stays flush all the way round rather than sweeping through it.
+        # Overall width is unchanged - the pod still ends at 21.25; only the seam between them moves.
+        upright(g, [(33.4, 9, 15, side*8.25, -1.5), (45.9, 9.5, 15.5, side*8, -1.5)], torso_side, cut=.25)
+        if g.modular:
+            g.joint(arm, (side*14, 0, 40.4), 'CT')
+        # The miniature is primary on size and stance: the pods are slim and sit against the side
+        # torso rather than out on the shoulder. Still half again as tall as they are wide.
+        forward(g, [(-7, 7.4, 11.2, side*17, 40.4), (2, 8.5, 12.8, side*17, 40.4),
+                    (10, 7.4, 11.2, side*17, 40.4), (14, 5.6, 8.4, side*17, 40.4)], arm, cut=.15)
+
+
+def battlemaster(g):
+    # Eighty-five ton assault Mek: very broad angular pauldrons, a domed cockpit set low between
+    # them, long arms held forward, and a missile bay riding high on each shoulder. Every variant
+    # keeps both lower arms and most keep both hands, so the arms are full limbs, not pods.
+    g.box((0, -1, 31), (21, 14, 7), 'pelvis', 'edge')
+    torso = [(32, 21, 16, 0, -1), (41, 28, 20, 0, -1), (51, 25, 17, 0, -1.5)]
+    upright(g, torso, cut=.35)
+    # Real side locations before the pauldrons are authored, for the same reason. The seam is 5.3,
+    # where the chest slab ends and the structure carrying the pauldrons begins; it also puts the
+    # side-torso vents wholly outboard of the centre section rather than straddling it.
+    split_torso_locations(g, seam=5.3)
+    for side in (-1, 1):
+        # Same rule: 37 located sinks in the right torso and 23 in the left against 7 in the centre.
+        # Well inboard of the arm mounts at 14 and the shoulder missile bays at 15.
+        location = 'LT' if side < 0 else 'RT'
+        vent(g, lofted_face(torso), side*6.7, 1.3, 33, 36.5, group=location)
+        vent(g, lofted_face(torso, rear=True), side*6.7, 1.3, 37.5, 41, rear=True, group=location)
+    # The cockpit is a compact rounded dome riding high on the chest with a wrapped visor band. It
+    # is barely deeper than it is wide: a forward-projecting snout is the wrong read for this design.
+    forward(g, [(1, 12, 10, 0, 47), (6, 13.5, 11.5, 0, 47), (11, 11, 9, 0, 46.5)], 'HD', cut=.6)
+    panel(g, [(-2.4, 11.05, 50.4), (2.4, 11.05, 50.4), (2.4, 11.05, 43.2), (-2.4, 11.05, 43.2)], 'HD', 'glass')
+    # Twin antennas stand behind the canopy on the back of the chest.
+    for side in (-1, 1):
+        g.beam((side*3, -6, 50.5), (side*4, -8.5, 59), 1.2, 1.2, 'CT', 'metal', taper=.25)
+    for side, arm, leg, torso_side in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
+        x = side*9
+        g.joint(leg, (x, 0, 31), 'pelvis')
+        g.joint(leg+'-shin', (x*1.05, -1, 17.5), leg)
+        # Eighty-five tons: heavier than the seventy-ton designs, short of the Mackie.
+        upright(g, [(17.5, 12, 13.5, x*1.05, -1), (31, 15, 15, x, 0)], leg, cut=.3)
+        g.box((side*15.6, -1, 24.5), (4, 12, 13), leg, 'edge', .45)
+        # The knee is a distinct armoured block, as the artwork draws it.
+        g.box((x*1.05, .5, 17.5), (12, 12.5, 5.5), leg+'-shin', 'metal')
+        upright(g, [(5, 11.5, 12.5, x*1.1, 0), (15, 13, 13.5, x*1.05, -.5)], leg+'-shin', cut=.35)
+        foot(g, x*1.1, 3, 13, 17, leg+'-shin')
+        # Broad angular pauldron over the side torso, carrying the missile bay on its top.
+        upright(g, [(39, 14, 17, side*15, -1), (48, 15, 17, side*15, -1),
+                    (52.5, 12, 14, side*14.5, -1)], torso_side, cut=.3)
+        if g.modular:
+            g.joint(arm, (side*25, 0, 44), 'CT')
+        # Shoulder ball, then an upper arm dropping to the elbow.
+        upright(g, [(35, 11, 12, side*25.5, 0), (45.5, 13.5, 14, side*25, 0)], arm, cut=.5)
+        # The lower arm reaches forward level with the chest; the fist caps it when one is fitted.
+        forward(g, [(-7, 10, 11, side*25.5, 35.5), (6, 11, 12, side*25.5, 35.5),
+                    (20, 9.5, 10.5, side*25.5, 35.5)], arm+'@forearm', cut=.3)
+        g.box((side*25.5, 23.5, 35.5), (8, 6, 8.5), arm+'@hand', 'edge', .3)
+        # Without a lower arm the upper arm ends in a capped elbow that carries the weapon.
+        g.box((side*25.5, -1, 36.5), (10.5, 10.5, 9.5), arm+'@elbow', 'edge', .3)
 
 
 def king_crab(g):
@@ -409,7 +647,9 @@ def build_chassis(recipe, modular=False):
         x, y, z = recipe['sockets'][location]
         g.joint(location, (x-42, 36-y, z), 'CT')
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
-                'marauder': marauder, 'archer': archer, 'mackie': mackie, 'king-crab': king_crab}
+                'marauder': marauder, 'archer': archer, 'mackie': mackie,
+                'king-crab': king_crab, 'rifleman': rifleman,
+                'battlemaster': battlemaster}
     builders[recipe['id']](g)
     if modular:
         # Optional anatomy remains separate; the runtime keeps the parts matching the actual actuators.
