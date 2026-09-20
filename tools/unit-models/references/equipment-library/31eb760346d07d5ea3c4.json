@@ -1,0 +1,75 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "claw",
+  "mesh": "31eb760346d07d5ea3c4.g3dj",
+  "bounds": {
+    "min": [
+      -4.012816733935254,
+      -1.5,
+      -3.393810912512497
+    ],
+    "max": [
+      3.5,
+      9.5,
+      2.666309727797329
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        -2.4,
+        9.5,
+        -2
+      ],
+      "direction": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "role": "contact",
+      "effect": "melee"
+    },
+    {
+      "id": "emitter-1",
+      "node": "mount",
+      "position": [
+        0,
+        9.5,
+        -2
+      ],
+      "direction": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "role": "contact",
+      "effect": "melee"
+    },
+    {
+      "id": "emitter-2",
+      "node": "mount",
+      "position": [
+        2.4,
+        9.5,
+        -2
+      ],
+      "direction": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

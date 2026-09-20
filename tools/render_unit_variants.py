@@ -1,4 +1,4 @@
-"""Render labeled contact sheets directly from the exported game meshes.
+"""Render labeled contact sheets of frozen baked reference meshes; these are not runtime game assets.
 
 blender --background --factory-startup --python-exit-code 1 \
     --python tools/render_unit_variants.py -- --chassis warhammer mad-cat
@@ -16,7 +16,7 @@ from mathutils import Matrix, Vector
 from unit_model_geometry import content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
-MODELS = ROOT / 'data/models/units'
+MODELS = ROOT / 'tools/unit-models/references/legacy/units'
 
 
 def natural(value):

@@ -1,0 +1,55 @@
+{
+  "schema": 2,
+  "kind": "troop",
+  "family": "infantry",
+  "mesh": "rifle-standing.g3dj",
+  "bounds": {
+    "min": [
+      -4.327337194799499,
+      -2.45,
+      0.0
+    ],
+    "max": [
+      4.327337194799499,
+      4.5,
+      21.0
+    ]
+  },
+  "rig": "trooper-v1",
+  "joints": {
+    "root": "root",
+    "hips": "hips",
+    "torso": "torso",
+    "head": "head",
+    "leftArm": "leftArm",
+    "leftForearm": "leftArmForearm",
+    "leftLeg": "leftLeg",
+    "leftShin": "leftLegShin",
+    "leftFoot": "leftLegFoot",
+    "rightArm": "rightArm",
+    "rightForearm": "rightArmForearm",
+    "rightLeg": "rightLeg",
+    "rightShin": "rightLegShin",
+    "rightFoot": "rightLegFoot"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "rightArmForearm",
+      "position": [
+        -2.0,
+        1,
+        -5
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "muzzle",
+      "effect": "bullet"
+    }
+  ]
+}

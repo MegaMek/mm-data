@@ -5,6 +5,7 @@ models use Z up, one hex = 84 x 72 units, and one feature height = 1 unit.
 """
 import bpy
 import json
+import runpy
 from pathlib import Path
 from mathutils import Vector
 
@@ -61,7 +62,7 @@ def tree_texture(name, mat):
     raise ValueError(f'Unknown tree material: {name}: {mat.name}')
 
 
-def export(name, objects, normalize=False, width=None, foliage=False):
+def export(name, objects, normalize=False, foliage=False):
     """Small explicit G3DJ exporter: Blender triangulates, runtime only loads."""
     vertices, shared, parts = [], {}, {}
     bounds = [obj.matrix_world @ Vector(corner) for obj in objects for corner in obj.bound_box]
@@ -90,7 +91,7 @@ def export(name, objects, normalize=False, width=None, foliage=False):
                 pos = obj.matrix_world @ mesh.vertices[index].co
                 if normalize:
                     span = high.z-low.z
-                    horizontal = width/max(high.x-low.x, high.y-low.y) if width else 30/span
+                    horizontal = 30/span
                     pos = Vector(((pos.x-(low.x+high.x)/2)*horizontal,
                                   (pos.y-(low.y+high.y)/2)*horizontal, (pos.z-low.z)/span))
                     # Normals for the exported anisotropic normalization.
@@ -192,9 +193,6 @@ for name, source in [('tree-broad','CommonTree_4'),('tree-slender','CommonTree_2
                      ('birch','BirchTree_2'),('willow','Willow_2'),('pine-tall','PineTree_3')]:
     family, number = source.rsplit('_', 1)
     sources += [(name,source),(name+'-snow',family+'_Snow_'+number)]
-for number in (1,3,6):
-    sources += [('rock-'+str(number),'Rock_'+str(number)),
-                ('rock-'+str(number)+'-snow','Rock_Snow_'+str(number))]
 for name, source in sources:
     path = nature / 'Blends' / (source+'.blend')
     if not path.exists():
@@ -206,7 +204,7 @@ for name, source in sources:
         COLLECTION.objects.link(obj)
     bpy.context.view_layer.update()
     triangles = sum(len(p.vertices)-2 for obj in objects for p in obj.data.polygons)
-    budget = 150 if name.startswith('rock-') else 480
+    budget = 480
     for obj in objects:
         bpy.context.view_layer.objects.active = obj
         obj.select_set(True)
@@ -216,8 +214,7 @@ for name, source in sources:
             bpy.ops.object.modifier_apply(modifier=mod.name)
         obj.select_set(False)
     bpy.context.view_layer.update()
-    export(name,objects,normalize=True,width=12 if name.startswith('rock-') else None,
-           foliage=not name.startswith('rock-'))
+    export(name,objects,normalize=True,foliage=True)
     STATS[name]['source'] = str(path.relative_to(nature)).replace('\\', '/')
 if old_scene:
     bpy.context.window.scene = old_scene
@@ -225,6 +222,7 @@ if old_scene:
 # Terrain, riverbed and rim textures are authored assets. Model rebuilds preserve them.
 
 (OUT/'manifest.json').write_text(json.dumps(STATS,indent=2))
+runpy.run_path(str(ROOT / 'tools/prepare_tree_lods.py'), run_name='__main__')
 # Save only the authored library, never replace the user's open file.
 bpy.data.libraries.write(str(ROOT/'tools/board-assets.blend'), set(SCENE.objects), fake_user=True)
 result = {'directory':str(OUT),'models':len(STATS), 'max_triangles':max(v['triangles'] for v in STATS.values())}

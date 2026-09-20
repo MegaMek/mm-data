@@ -16,9 +16,16 @@ directory with the game's data. Blender is an authoring dependency only.
   outline, vertex and triangle counts. The largest has 499 triangles. Fuel tanks
   and industrial structures use their selected Saxarba artwork too; generic
   cylinder/factory substitutes have been removed.
-- `bridge`, `field`, sixteen foliage and six rock G3DJ
-  files, all at or below 480 triangles. Rocks use 70–150 triangles. Counts and
+- `bridge`, `field`, and sixteen foliage G3DJ
+  files, all at or below 480 triangles. Counts and
   the imported Blender source names are in `manifest.json`.
+- Each tree also has `-lod0`, `-lod1`, and `-lod2` meshes. The near opaque mesh
+  removes only fully enclosed faces and keeps the surviving vertex attributes
+  unchanged (366–480 triangles). The original remains available for close
+  transparent trees. The two distant meshes have 238–240 and 94–96 triangles,
+  retaining the source coordinates, bounds, material roles and shared textures.
+  The manifest records every level; screen-pixel thresholds live in Java's
+  `TreeLod`, so no camera or game state is baked into these assets.
 - `textures/foliage/`: eight shared 64 by 64 detail albedos for broad leaves,
   pine needles, hanging willow leaves, palm fronds, ordinary bark, birch bark,
   ringed palm bark and snow. Source material boundaries keep snow caps separate
@@ -77,17 +84,37 @@ fascia faces unwrap its guardrail strip, including bars and supports. Edit that
 independent image to change the bridge. There is no transverse coping over the
 roadway. Runtime places the deck slightly
 above the riverbank to avoid coplanar depth flicker at zero bridge elevation.
-Rubble rock footprints are at most 12 units wide before instance scaling;
-placement limits their height to 0.16–0.265 of a level. Snow rubble uses the
-pack's snow-covered rock geometry and materials.
+Rubble and rough terrain retain their painted stones and use faceted normal
+maps instead of separate rock meshes. `normals/` mirrors ground image paths
+under `tileset/`, appending `.png` to the complete source name (including its
+original extension and any crop). `normal-manifest.json` records dimensions,
+strength and source pixel hashes. Runtime selects each map through the chosen
+albedo image and composites both in the same order, then packs aligned atlases.
+No height estimation or normal-map generation runs in the game. Missing maps
+for custom art fall back to flat shading until they are prepared.
+
+`tools/prepare_board_normals.py` smooths alpha-weighted image brightness and
+bakes constant normals over alternating 4-pixel triangles. Painted brightness
+is only an approximation to height; baked highlights can also produce relief.
+Rubble/rough use the strongest relief, rocky themes are next, and grass, dirt,
+sand, snow, mud/swamp, tundra, fields and ice use gentler detail. Pavement and
+paved roads receive neutral maps, including their opaque coverage over grass.
+F9 opens Tuning, where the Normal maps checkbox switches this shading live.
+It starts enabled, and Defaults re-enables it; switching needs no atlas,
+geometry or shadow rebuild.
+Animated water keeps its separate rendering. These maps affect ground lighting
+and bank slopes, not silhouettes, picking, movement or cast-shadow geometry.
 
 ## Rebuild
 
-Run from the mm-data root (Python requires Pillow):
+Run from the mm-data root (Python requires Pillow and NumPy):
 
 ```text
 python tools/copy_board_tileset.py
 python tools/prepare_board_textures.py
+python tools/prepare_board_normals.py
+python tools/prepare_board_normals.py --check
+python tools/test_board_normals.py
 python tools/prepare_building_footprints.py
 blender --background tools/board-assets.blend --python tools/build_saxarba_buildings.py
 blender --background tools/board-assets.blend --python tools/build_board_assets.py
@@ -107,12 +134,20 @@ Use Blender's Append command to load their objects. The source scripts create
 their own scenes and do not replace the user's open scene.
 
 The nature pack must be present at
-`TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019/Blends` to rebuild foliage
-and rubble. These sources match the user's Quaternius ZIP;
+`TO_SORT/many_trees/Ultimate Nature Pack - Jun 2019/Blends` to rebuild foliage. These sources match the user's Quaternius ZIP;
 runtime does not need that folder. Export converts Blender's linear colors to
 display-space vertex colors, preserving the green/snow material distinction.
 
-Validation checks all 3,319 model budgets and texture dependencies, structure
+`build_board_assets.py` runs `prepare_tree_lods.py` after exporting the trees.
+To rebuild only the detail levels from the unchanged authored G3DJ files, run
+`blender --background --factory-startup --python tools/prepare_tree_lods.py`.
+Near pruning requires an enclosing component to be closed with consistent winding;
+surface intersections and boundary contacts are retained. Open palm fronds are
+never treated as enclosing solids. Smaller meshes are decimated from the complete
+original, rather than a pruned mesh whose canopy could expose missing faces.
+The script owns a temporary Blender scene and preserves the active scene.
+
+Validation checks all 3,313 base models and 48 tree detail meshes, their budgets and texture dependencies, structure
 roof winding, unchanged opaque roof pixels, facade assignments, small runtime
 texture dimensions, preserved source resolution, and independent copied files.
 Native Java integration tests additionally check transparency, lighting,
@@ -124,10 +159,9 @@ Roof/terrain/water art comes from the existing MegaMek data tileset; its license
 headers and original paths are retained. The repository license remains at
 `../../../LICENSE`.
 
-Trees and rocks are simplified derivatives of Quaternius's **Ultimate Nature
+Trees are simplified derivatives of Quaternius's **Ultimate Nature
 Pack (June 2019)**: `CommonTree_1/2/4`, `PineTree_1/3`, `BirchTree_2`,
-`Willow_2`, their corresponding snow models, `PalmTree_1/2`, and
-`Rock_1/3/6` with their snow models. The supplied CC0 notice is preserved
+`Willow_2`, their corresponding snow models, and `PalmTree_1/2`. The supplied CC0 notice is preserved
 in `QUATERNIUS-LICENSE.txt`.
 
 Bridge and crop models were authored with the Blender script.

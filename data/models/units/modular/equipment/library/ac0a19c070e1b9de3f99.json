@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "shield",
+  "mesh": "ac0a19c070e1b9de3f99.g3dj",
+  "bounds": {
+    "min": [
+      -5.0,
+      -1.1,
+      -7.0
+    ],
+    "max": [
+      5.0,
+      3.3,
+      7.0
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0,
+        3.3,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

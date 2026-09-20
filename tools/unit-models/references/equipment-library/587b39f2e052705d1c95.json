@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "backhoe",
+  "mesh": "587b39f2e052705d1c95.g3dj",
+  "bounds": {
+    "min": [
+      -2.5,
+      -1.5,
+      -3.75
+    ],
+    "max": [
+      2.5,
+      11.75,
+      3.75
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0,
+        11.75,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

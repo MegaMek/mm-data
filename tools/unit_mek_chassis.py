@@ -33,10 +33,18 @@ def panel(g, points, group='CT', material='dark'):
 
 
 def foot(g, x, y, width, length, group):
+    if g.modular:
+        parent = group
+        group = group.removesuffix('-shin')+'-foot'
+        g.joint(group, (x, y-1, 4), parent)
     upright(g, [(0, width, length, x, y), (4, width*.78, length*.68, x, y-1)], group, cut=0)
 
 
 def toes(g, x, y, group, width=3, length=8):
+    if g.modular:
+        parent = group
+        group = group.removesuffix('-shin')+'-foot'
+        g.joint(group, (x, y, 2.3), parent)
     # Two splayed toes create the bird-foot outline with sixteen triangles.
     for side in (-1, 1):
         ring = [(x+side*1.2-width/2, y-1), (x+side*1.2+width/2, y-1),
@@ -57,13 +65,18 @@ def atlas(g):
         upright(g, [(4, 7, 8, x*1.18, 0), (16.3, 10, 10, x*1.12, 0)], leg+'-shin', cut=.45)
         foot(g, x*1.18, 2, 10, 13, leg+'-shin')
         # Rounded shoulder caps, straight upper arms, long gauntlets and closed fists.
+        forearm, hand = arm, arm
+        if g.modular:
+            g.joint(arm, (side*18, 0, 47), 'CT')
+            g.joint(arm+'-forearm', (side*21, 1, 38), arm)
+            forearm, hand = arm+'@forearm', arm+'@hand'
         upright(g, [(46, 10, 11, side*18, 0), (53, 12, 13, side*17, 0),
                     (57, 7, 9, side*16, 0)], arm, cut=.65)
         g.beam((side*18, 0, 47), (side*21, 1, 38), 7, 7, arm, 'metal')
-        upright(g, [(28, 8, 9, side*21, 3), (39, 9, 9, side*21, 1)], arm, cut=0)
-        g.box((side*21, 3.5, 26), (6.5, 7, 4), arm, 'metal')
+        upright(g, [(28, 8, 9, side*21, 3), (39, 9, 9, side*21, 1)], forearm, cut=0)
+        g.box((side*21, 3.5, 26), (6.5, 7, 4), hand, 'metal')
         panel(g, [(side*21-2, 7.03, 27), (side*21+2, 7.03, 27),
-                  (side*21+2, 7.03, 25), (side*21-2, 7.03, 25)], arm, 'edge')
+                  (side*21+2, 7.03, 25), (side*21-2, 7.03, 25)], hand, 'edge')
     # Skull: broad brow, tapered cheeks/jaw, paired sockets and a toothed mouth.
     forward(g, [(-2, 8, 9, 0, 55.5), (3, 10, 10, 0, 55.5),
                 (6.7, 7.8, 8.4, 0, 54.5)], 'HD', cut=.65)
@@ -103,6 +116,8 @@ def locust(g):
         g.box((ankle[0], -1, 2.2), (2.8, 4, 3), leg+'-shin', 'metal')
         toes(g, ankle[0], -1, leg+'-shin', 2.8, 7)
         # High, compact gun stubs flank the cockpit; no forearms or hands.
+        if g.modular:
+            g.joint(arm, (side*5, -1, 39), 'CT')
         g.beam((side*5, -1, 39), (side*12, -1, 39), 3, 3, arm, 'metal')
         forward(g, [(-4, 4.5, 5, side*13, 39.5), (3, 4.5, 4, side*13, 39)], arm, cut=0)
 
@@ -125,13 +140,19 @@ def warhammer(g):
         foot(g, side*9.7, 2, 9, 12, leg+'-shin')
         upright(g, [(43, 11, 10, side*15, 0), (49, 12, 10, side*14, -1)], arm, cut=0)
         g.beam((side*16, 0, 44), (side*20, -1, 34), 5, 5, arm, 'metal')
+        forearm = arm
+        if g.modular:
+            g.joint(arm, (side*15, 0, 44), 'CT')
+            forearm = arm+'-forearm'
+            g.joint(forearm, (side*20, -1, 34), arm)
         # Broad cannon gauntlets, terminating in sockets for the actual variant weapons.
         forward(g, [(-4, 6, 7, side*20, 33), (4, 8, 8, side*20, 32),
-                    (9, 5, 5, side*20, 32)], arm, cut=0)
+                    (9, 5, 5, side*20, 32)], forearm, cut=0)
     # The left searchlight balances the equipment-driven right shoulder launcher.
-    g.box((-12.5, 0, 51.8), (5.5, 5, 4.5), 'LT', 'edge')
-    panel(g, [(-14.7, 2.54, 53.5), (-10.3, 2.54, 53.5),
-              (-10.3, 2.54, 50.2), (-14.7, 2.54, 50.2)], 'LT', 'glass')
+    if not g.modular:
+        g.box((-12.5, 0, 51.8), (5.5, 5, 4.5), 'LT', 'edge')
+        panel(g, [(-14.7, 2.54, 53.5), (-10.3, 2.54, 53.5),
+                  (-10.3, 2.54, 50.2), (-14.7, 2.54, 50.2)], 'LT', 'glass')
 
 
 def mad_cat(g):
@@ -156,6 +177,8 @@ def mad_cat(g):
         g.box((side*12, 0, 2.5), (4, 4, 4), leg+'-shin', 'metal')
         toes(g, side*12, -1, leg+'-shin', 3.8, 9)
         # Tall narrow supports make the launchers float above the cockpit and low arms.
+        if g.modular:
+            g.joint(arm, (side*14, -4, 40), 'CT')
         g.box((side*14, -5, 42), (7, 8, 13), torso, 'edge')
         g.beam((side*14, -4, 40), (side*21, -3, 32), 5, 6, arm, 'metal')
         forward(g, [(-5, 6, 10, side*21, 31), (7, 6, 9, side*21, 31)], arm+'@forearm', cut=.35)
@@ -187,6 +210,8 @@ def marauder(g):
         toes(g, side*12.5, 0, leg+'-shin', 4.6, 12)
         g.beam((side*12.5, -2, 1.3), (side*12.5, -9, 1.3), 4, 2.6, leg+'-shin', 'paint', taper=.6)
         # Armored shoulder housings flank the hump and carry the short upper arms.
+        if g.modular:
+            g.joint(arm, (side*12, -2, 40), 'CT')
         g.box((side*11, -5, 42), (5, 13, 9), torso, 'edge', .3)
         g.beam((side*12, -2, 40), (side*21, 1, 33), 6.5, 6.5, arm, 'metal')
         # Long double-deck forearm pods held low and forward; their muzzles are equipment.
@@ -223,6 +248,8 @@ def archer(g):
         # Tall bay housings rise above the centre and lean back with their launchers; doors shut.
         upright(g, [(43.1, 10, 14, side*9.2, 5.9), (54.9, 10, 14, side*9.2, .6)], torso, cut=.2)
         # Round shoulders, short upper arms, heavy forearms held forward and closed fists.
+        if g.modular:
+            g.joint(arm, (side*17.5, 0, 43), 'CT')
         # Compact shoulders tucked against the bays: a solid machine, not a broad-shouldered one.
         upright(g, [(42, 8, 10, side*17.2, 0), (48.5, 9.5, 11.5, side*17, 0),
                     (52, 6.5, 8, side*16.6, 0)], arm, cut=.6)
@@ -247,8 +274,9 @@ def mackie(g):
     # Twin guns hang from a block under the front of the torso.
     g.box((0, 8, 35), (9, 5, 3.6), 'CT', 'metal')
     # Right shoulder: a box searchlight. Left shoulder: a vented housing.
-    g.box((13, -2, 58.5), (7, 6, 7), 'RT', 'edge', .3)
-    panel(g, [(10.4, 1.03, 61.1), (15.6, 1.03, 61.1), (15.6, 1.03, 55.9), (10.4, 1.03, 55.9)], 'RT', 'lamp')
+    if not g.modular:
+        g.box((13, -2, 58.5), (7, 6, 7), 'RT', 'edge', .3)
+        panel(g, [(10.4, 1.03, 61.1), (15.6, 1.03, 61.1), (15.6, 1.03, 55.9), (10.4, 1.03, 55.9)], 'RT', 'lamp')
     g.box((-13, -3, 57), (11, 8, 5), 'LT', 'edge')
     panel(g, [(-17.6, 1.03, 58.8), (-8.4, 1.03, 58.8), (-8.4, 1.03, 55.4), (-17.6, 1.03, 55.4)], 'LT', 'dark')
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
@@ -262,6 +290,8 @@ def mackie(g):
         upright(g, [(4, 9, 10, x*1.12, 0), (15.5, 11, 11, x*1.08, 0)], leg+'-shin', cut=.35)
         foot(g, x*1.12, 3, 13, 17, leg+'-shin')
         # A shoulder block, then an arm held level at shoulder height. How it ends follows the actuators.
+        if g.modular:
+            g.joint(arm, (side*19.5, 0, 46), 'CT')
         g.box((side*19.5, 0, 46), (8, 11, 11), arm, 'edge', .3)
         for part in ('elbow', 'forearm', 'wrist', 'hand'):
             g.joint(arm+'@'+part, g.pivots[arm], arm)
@@ -276,8 +306,8 @@ def mackie(g):
     g.beam((28.5, 5, 45), (28.5, 7, 45), 17, 17, 'RA@elbow', 'edge', 8)
 
 
-def build_chassis(recipe):
-    g = Geometry()
+def build_chassis(recipe, modular=False):
+    g = Geometry(modular=modular)
     hip = recipe['hip']
     g.joint('pelvis', (hip[0]-42, 36-hip[1], hip[2]))
     g.joint('CT', g.pivots['pelvis'], 'pelvis')
@@ -287,4 +317,15 @@ def build_chassis(recipe):
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
                 'marauder': marauder, 'archer': archer, 'mackie': mackie}
     builders[recipe['id']](g)
+    if modular:
+        # Optional anatomy remains separate; the runtime keeps the parts matching the actual actuators.
+        # All of it follows the articulated arm, including groups formerly folded into baked variants.
+        for arm in ('LA', 'RA'):
+            forearm = arm+'-forearm'
+            if forearm not in g.pivots:
+                socket = recipe.get('armSockets', {}).get(arm, {}).get('elbow', recipe['sockets'][arm])
+                g.joint(forearm, (socket[0]-42, 36-socket[1], socket[2]), arm)
+            for node in list(g.pivots):
+                if node.startswith(arm+'@'):
+                    g.parents[node] = arm if node.endswith('@elbow') else forearm
     return g

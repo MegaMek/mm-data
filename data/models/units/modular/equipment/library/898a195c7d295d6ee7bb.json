@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "laser",
+  "mesh": "898a195c7d295d6ee7bb.g3dj",
+  "bounds": {
+    "min": [
+      -2.414238815542512,
+      -2.0,
+      -0.9192388155425117
+    ],
+    "max": [
+      2.414238815542512,
+      5.63,
+      0.9192388155425119
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        -1.4949999999999999,
+        5.63,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "beam",
+      "effect": "laser"
+    },
+    {
+      "id": "emitter-1",
+      "node": "mount",
+      "position": [
+        1.4949999999999999,
+        5.63,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "beam",
+      "effect": "laser"
+    }
+  ]
+}

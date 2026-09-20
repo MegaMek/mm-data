@@ -1,0 +1,75 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "bomb",
+  "mesh": "4f1b4e2ab078a1e1f909.g3dj",
+  "bounds": {
+    "min": [
+      -4.25,
+      -1.0,
+      -1.8
+    ],
+    "max": [
+      4.25,
+      8,
+      2.5
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        -2.8,
+        4,
+        -1.8
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "launcher",
+      "effect": "bomb"
+    },
+    {
+      "id": "emitter-1",
+      "node": "mount",
+      "position": [
+        0,
+        4,
+        -1.8
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "launcher",
+      "effect": "bomb"
+    },
+    {
+      "id": "emitter-2",
+      "node": "mount",
+      "position": [
+        2.8,
+        4,
+        -1.8
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "launcher",
+      "effect": "bomb"
+    }
+  ]
+}

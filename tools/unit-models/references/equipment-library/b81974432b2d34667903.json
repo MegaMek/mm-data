@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "spot-welder",
+  "mesh": "b81974432b2d34667903.g3dj",
+  "bounds": {
+    "min": [
+      -2.852349756503136,
+      -1.0,
+      -2.0
+    ],
+    "max": [
+      2.852349756503136,
+      10.113501686468028,
+      2.0
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0,
+        10,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

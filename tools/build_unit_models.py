@@ -1,4 +1,4 @@
-"""Build sprite-referenced Mek chassis/variants and compressed infantry formations.
+"""Legacy reference renderer for baked Mek variants and infantry formations; never deploy its output.
 
 Run with Blender: blender --background --factory-startup --python tools/build_unit_models.py -- --preview
 The Java catalog owns equipment/locations. This script owns art, never game rules.
@@ -17,8 +17,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bpy
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
-from unit_model_geometry import Geometry, PALETTE, add, content_digest
+from unit_model_geometry import Geometry, PALETTE, TRIANGLE_LIMIT, TRIANGLE_TARGET, add, content_digest
 from unit_mek_chassis import build_chassis
+from unit_infantry_shapes import person, infantry_vehicle
 import unit_weapon_shapes as weapons
 from unit_mount_layout import MountArea
 
@@ -239,109 +240,6 @@ def fallback(kind):
     return g
 
 
-def person(pose, armored=False, jump=False):
-    g = Geometry()
-    kneel = pose == 'kneeling'
-    advance = pose == 'advancing'
-    torso_z = 10 if kneel else 14
-    spread = 3.2 if armored else 2.1
-    for sign in (-1, 1):
-        hip = (sign*spread/2, 0, torso_z-3)
-        knee = (sign*spread, 3 if kneel and sign == -1 else -1 if kneel else sign*2 if advance else 0, 4 if kneel else 6)
-        foot = (sign*spread, -3 if kneel and sign == 1 else 4 if advance and sign == 1 else 0, 1)
-        width = 3.1 if armored else 1.9
-        g.beam(hip, knee, width, width, 'soldier', 'paint')
-        g.beam(knee, foot, width, width, 'soldier', 'edge')
-        g.box((foot[0], foot[1]+1, 1), (width, 3.5, 2), 'soldier', 'metal')
-    g.box((0, 0, torso_z), (7 if armored else 5, 5 if armored else 3.3, 7 if armored else 6),
-          'soldier', 'paint', .3 if armored else 0, .82)
-    g.box((0, -.8, torso_z+5), (4.5 if armored else 3.3, 4 if armored else 3.3, 4),
-          'soldier', 'paint', .4 if armored else 0, .8)
-    g.face([(-1.5, 1.3, torso_z+5.6), (1.5, 1.3, torso_z+5.6),
-            (1.5, 1.3, torso_z+4.4), (-1.5, 1.3, torso_z+4.4)],
-           'soldier', 'glass' if armored else 'dark')
-    for sign in (-1, 1):
-        shoulder = (sign*(4 if armored else 3), 0, torso_z+2)
-        elbow = (sign*(4.5 if armored else 3.5), 2, torso_z-1)
-        hand = (1.5, 3, torso_z-2) if pose == 'standing' else (sign*3, 4, torso_z-2) if advance else (1.5, 5, torso_z+1)
-        g.beam(shoulder, elbow, 3.5 if armored else 2, group='soldier', material='paint')
-        g.beam(elbow, hand, 3 if armored else 1.7, group='soldier', material='edge')
-    g.box((1.5, 3, torso_z-2) if pose == 'standing' else (1.5, 5, torso_z+.8),
-          (2, 3, 8) if pose == 'standing' else (2, 8, 2), 'soldier', 'metal')
-    if armored:
-        # A compact jump pack / arm cannon follows the generic BA sprite's bulky shoulders.
-        g.box((0, -3, torso_z+2), (7, 3, 7), 'soldier', 'edge')
-        g.beam((4, 2, torso_z), (4, 8, torso_z), 2.4, 2.4, 'soldier', 'metal')
-    if jump:
-        # Eight triangles for a tapered backpack with a downward exhaust. Six jump
-        # troopers still fit the 1,000-triangle budget without changing their poses.
-        lo = [(-2.3, -1.4, torso_z-4), (0, -4.3, torso_z-4), (2.3, -1.4, torso_z-4)]
-        hi = [(x*.8, y, torso_z+2.5) for x, y, _ in lo]
-        g.face(list(reversed(lo)), 'soldier', 'dark')
-        g.face(hi, 'soldier', 'edge')
-        for i in range(3):
-            j = (i+1) % 3
-            g.face([lo[i], lo[j], hi[j], hi[i]], 'soldier', 'edge')
-    return g
-
-
-def infantry_vehicle(kind):
-    """Small sprite-proportioned transports; +Y is forward, as for the troops."""
-    g = Geometry()
-    if kind == 'motorized':
-        g.box((0, 0, 4), (11, 21, 3), 'vehicle', 'paint')
-        g.box((0, 6.7, 6.5), (10, 8, 3), 'vehicle', 'paint', taper=.85)
-        g.box((0, -5, 6), (8, 3, 4), 'vehicle', 'dark')
-        for sign in (-1, 1):
-            for y in (-7, 7):
-                g.beam((sign*6-1.3, y, 3.5), (sign*6+1.3, y, 3.5),
-                       7.2, group='vehicle', material='dark', sides=6)
-            g.beam((sign*4.5, -6, 5), (sign*4.5, -6, 12), 1.2, group='vehicle')
-        g.beam((-4.5, -6, 12), (4.5, -6, 12), 1.2, group='vehicle')
-        windshield = [(-4, 0, 12), (4, 0, 12), (4, 2.5, 8), (-4, 2.5, 8)]
-        g.face(windshield, 'vehicle', 'glass')
-        g.face(list(reversed(windshield)), 'vehicle', 'glass')
-        g.box((0, 11, 4), (12, 1.5, 2), 'vehicle', 'metal')
-        for x in (-3.5, 3.5):
-            g.face([(x-.8, 10.72, 6.5), (x+.8, 10.72, 6.5),
-                    (x+.8, 10.72, 5.5), (x-.8, 10.72, 5.5)], 'vehicle', 'glass')
-        return g
-
-    # Shared enclosed APC hull, visibly different from the open motorized jeep.
-    g.box((0, 0, 8.5), (13, 25, 9), 'vehicle', 'paint', bevel=.35, taper=.78)
-    g.box((0, -1, 13.4), (5, 6, .8), 'vehicle', 'edge')
-    for sign in (-1, 1):
-        g.face([(sign*.4, 10.08, 12), (sign*3, 10.08, 12),
-                (sign*3, 10.68, 10), (sign*.4, 10.68, 10)][::sign], 'vehicle', 'glass')
-        x = sign*4
-        g.face([(x-.65, 11.96, 6), (x+.65, 11.96, 6),
-                (x+.65, 12.2, 5.2), (x-.65, 12.2, 5.2)], 'vehicle', 'glass')
-    g.face([(-3, -12.23, 5), (3, -12.23, 5), (3, -10.4, 11), (-3, -10.4, 11)],
-           'vehicle', 'metal')
-    if kind == 'wheeled':
-        for sign in (-1, 1):
-            for y in (-8, 0, 8):
-                g.beam((sign*6.5-1.3, y, 3.5), (sign*6.5+1.3, y, 3.5),
-                       7.2, group='vehicle', material='dark', sides=6)
-    elif kind == 'tracked':
-        profile = [(-10, 0), (10, 0), (13, 3), (10, 6), (-10, 6), (-13, 3)]
-        for sign in (-1, 1):
-            g.loft([[(x, y, z) for y, z in profile]
-                    for x in (sign*7.2-1.7, sign*7.2+1.7)], 'vehicle', 'dark')
-            x = sign*8.92
-            g.face([(x, -9, 1.5), (x, 9, 1.5), (x, 10.5, 3),
-                    (x, 9, 4.5), (x, -9, 4.5), (x, -10.5, 3)][::sign], 'vehicle', 'metal')
-    elif kind == 'hover':
-        g.box((0, 0, 2), (20, 29, 4), 'vehicle', 'dark', bevel=.5, taper=.9)
-        for x in (-4, 4):
-            g.beam((x, -11, 6.5), (x, -14, 6.5), 4.5, group='vehicle', material='metal', sides=6)
-            g.face([(x-1, -14.02, 5.5), (x+1, -14.02, 5.5),
-                    (x+1, -14.02, 7.5), (x-1, -14.02, 7.5)], 'vehicle', 'dark')
-    else:
-        raise ValueError('Unknown infantry transport '+kind)
-    return g
-
-
 def infantry_slots(count, vehicle=False):
     """Each slot owns its position and heading; the live unit supplies only its count."""
     if not vehicle:
@@ -503,11 +401,15 @@ def build(args):
     if catalog['schema'] != 1 or catalog['failures']:
         raise ValueError('Catalog has unsupported schema or loading failures')
     out = Path(args.output).resolve()
+    if out.is_relative_to((ROOT / 'data').resolve()):
+        raise ValueError('Baked reference assemblies cannot be exported into deployed data; use tools/unit-models/references')
     out.mkdir(parents=True, exist_ok=True)
     units_by_chassis = defaultdict(list)
     for unit in catalog['units']:
         units_by_chassis[unit['chassis']].append(unit)
-    manifest = {'schema': 1, 'budget': 1000, 'catalogSha256': digest(catalog_path),
+    manifest = {'schema': 1, 'triangleTarget': TRIANGLE_TARGET, 'triangleLimit': TRIANGLE_LIMIT,
+                'triangleBudgetScope': 'bare-unit',
+                'catalogSha256': digest(catalog_path),
                 'recipesSha256': digest(recipes_path), 'generatorSha256': digest(Path(__file__)),
                 'geometrySha256': digest(Path(__file__).with_name('unit_model_geometry.py')),
                 'weaponShapesSha256': digest(Path(__file__).with_name('unit_weapon_shapes.py')),
@@ -517,8 +419,8 @@ def build(args):
                 'references': {},
                 'models': {}, 'variants': {}, 'formations': {}, 'needsReview': [], 'coverage': {}}
     examples = []
-    def export(geometry, relative):
-        manifest['models'][relative] = geometry.export(out / relative, relative)
+    def export(geometry, relative, bare_unit=True):
+        manifest['models'][relative] = geometry.export(out / relative, relative, bare_unit=bare_unit)
         return relative
     for recipe in recipes:
         units = units_by_chassis.get(recipe['name'], [])
@@ -538,20 +440,20 @@ def build(args):
         descriptor = {'schema': 1, 'kind': 'mek', 'chassis': recipe['name'], 'fallback': 'body.g3dj',
                       'upperBodyNode': UPPER_BODY, 'variants': {}}
         for unit in units:
-            for detail in weapons.DETAIL_LEVELS:
-                geometry, attachments = assemble(base, recipe, unit, detail)
-                if geometry is None or len(geometry.faces) <= 1000:
-                    break
-            if geometry is None or len(geometry.faces) > 1000:
+            detail = weapons.DETAIL_LEVELS[0]
+            geometry, attachments = assemble(base, recipe, unit, detail)
+            body_triangles = len(fit_arms(base, unit).faces)
+            if geometry is None or body_triangles > TRIANGLE_LIMIT:
                 manifest['needsReview'].append({'name': unit['name'], 'source': unit['source'],
-                                                'reason': attachments if geometry is None else 'triangle-budget'})
+                                                'reason': attachments if geometry is None else 'body-triangle-hard-cap'})
                 continue
             name = 'variants/'+slug(unit['model'])+'.g3dj'
-            export(geometry, folder+name)
+            export(geometry, folder+name, bare_unit=False)
             if unit['variantKey'] in descriptor['variants']:
                 raise ValueError('Duplicate variant name '+unit['name'])
             descriptor['variants'][unit['variantKey']] = name
             manifest['variants'][unit['name']] = {'asset': folder+name, 'chassis': recipe['name'],
+                'bodyTriangles': body_triangles, 'equipmentTriangles': len(geometry.faces)-body_triangles,
                 'sprite': unit['sprite'], 'spriteSha256': digest(SPRITES / unit['sprite']),
                 'source': unit['source'], 'sourceSha256': unit['sourceSha256'], 'variantKey': unit['variantKey'], 'attachments': attachments,
                 'differentSprite': unit['sprite'] != recipe['sprite']}
@@ -658,6 +560,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--catalog', default=str(ROOT / '.work/mek-models/catalog.json'))
     parser.add_argument('--recipes', default=str(ROOT / 'tools/unit-models/chassis.json'))
-    parser.add_argument('--output', default=str(ROOT / 'data/models/units'))
+    parser.add_argument('--output', default=str(ROOT / 'tools/unit-models/references/generated'))
     parser.add_argument('--preview', action='store_true')
     build(parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []))

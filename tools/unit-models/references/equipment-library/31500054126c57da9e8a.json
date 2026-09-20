@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "saw",
+  "mesh": "31500054126c57da9e8a.g3dj",
+  "bounds": {
+    "min": [
+      -3.5,
+      -1.5,
+      -4.195860921872313
+    ],
+    "max": [
+      3.5,
+      14.132143509710112,
+      4.795860921872313
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        -2.8,
+        12.132143509710112,
+        0.7519242083884616
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "contact",
+      "effect": "melee"
+    },
+    {
+      "id": "emitter-1",
+      "node": "mount",
+      "position": [
+        2.8,
+        14.132143509710112,
+        1.3519242083884615
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "infantry-melee",
+  "mesh": "7d867590d18620e54972.g3dj",
+  "bounds": {
+    "min": [
+      -0.7071067811865477,
+      -3.2784271200000004,
+      -3.2784271200000004
+    ],
+    "max": [
+      0.7071067811865476,
+      13.675028820000001,
+      13.675028820000001
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0,
+        13.435028820000001,
+        13.435028820000001
+      ],
+      "direction": [
+        0.0,
+        0.7071067811865475,
+        0.7071067811865475
+      ],
+      "role": "contact",
+      "effect": "melee"
+    }
+  ]
+}

@@ -10,16 +10,27 @@ import json
 from pathlib import Path
 import re
 
-from unit_model_geometry import Geometry, cross, normal
+from unit_model_geometry import Geometry, add, cross, mul, normal, sub
 
 RULES_PATH = Path(__file__).resolve().parent / 'unit-models/weapons.json'
-BOOK = json.loads(RULES_PATH.read_text(encoding='utf-8'))
+
+
+def unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('Duplicate equipment art key: '+key)
+        result[key] = value
+    return result
+
+
+BOOK = json.loads(RULES_PATH.read_text(encoding='utf-8'), object_pairs_hook=unique_object)
 # Above this many rounds the face is a launcher symbol, not one opening per round.
 MAXIMUM_TUBES = 20
 # Sides and the angle of the first vertex. A square sits flat; a diamond is the same square stood on a corner.
 TUBE_SHAPES = {'round': (8, pi/2), 'hex': (6, pi/2), 'square': (4, pi/4), 'diamond': (4, pi/2)}
-# Launcher detail, richest first. A loadout over the triangle budget steps down until it fits: round tubes
-# drawn with six sides still read as round at this size and cost a third less; a panel is the last resort.
+# Launcher detail options, richest first. Large round-tube packs use six-sided ports to stay below 100 triangles;
+# small packs retain eight sides. A panel is the last resort, rather than removing individual launcher exits.
 DETAIL_LEVELS = ('full', 'reduced', 'panel')
 
 
@@ -180,13 +191,20 @@ def _launcher(geometry, mount, rule, position, scale, options):
                 across = ((len(lines)-1)/2-line)*grid['pitch']
                 # A vertical launcher's lines stand upright, the first one on the left, filled from the top.
                 center = (x-across, front, z-along) if grid['vertical'] else (x+along, front, z+across)
-                reduced = options.get('detail') == 'reduced' and grid['shape'] == 'round'
+                reduced = grid['shape'] == 'round' and (options.get('detail') == 'reduced' or sum(grid['lines']) >= 15)
                 _opening(launcher, center, grid['diameter']/2, 'hex' if reduced else grid['shape'], direction,
                          group, 'dark')
+                launcher.emitter(center, (0, direction, 0), group, 'launcher', 'missile')
+    if options.get('detail') == 'panel':
+        launcher.emitter((x, front, z), (0, direction, 0), group, 'launcher', 'cluster')
     if slope:
         origin = options.get('slopeOrigin', z)
         for triangle, node, material in launcher.faces:
             geometry.face([(point_x, point_y-direction*slope*(point_z-origin), point_z) for point_x, point_y, point_z in triangle], node, material)
+        for emitter in launcher.emitters:
+            px, py, pz = emitter['position']
+            geometry.emitter((px, py-direction*slope*(pz-origin), pz), emitter['direction'],
+                             emitter['node'], emitter['role'], emitter['effect'])
 
 
 def _barrel(geometry, mount, rule, position, scale):
@@ -220,6 +238,9 @@ def _barrel(geometry, mount, rule, position, scale):
         corners = [(barrel_x-half, face_y, z+half), (barrel_x+half, face_y, z+half),
                    (barrel_x+half, face_y, z-half), (barrel_x-half, face_y, z-half)]
         geometry.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
+        effect = {'laser': 'laser', 'ppc': 'ppc', 'flamer': 'flame'}.get(mount['family'], 'bullet')
+        geometry.emitter((barrel_x, face_y, z), (0, direction, 0), group,
+                         'beam' if effect == 'laser' else 'muzzle', effect)
 
 
 def _pod(geometry, mount, rule, position, scale):
@@ -233,11 +254,14 @@ def _pod(geometry, mount, rule, position, scale):
         stub_x = x+(stub-(rule['stubs']-1)/2)*width*.42
         geometry.beam((stub_x, front-direction*.3*scale, z), (stub_x, front+direction*1.8*scale, z), .8*scale, .8*scale,
                group, 'metal', 4, .85)
+        geometry.emitter((stub_x, front+direction*1.8*scale, z), (0, direction, 0), group, 'muzzle', 'bullet')
     if not rule.get('stubs'):
         half = width*.3
         face_y = front+direction*.03
         corners = [(x-half, face_y, z+half), (x+half, face_y, z+half), (x+half, face_y, z-half), (x-half, face_y, z-half)]
         geometry.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
+        if mount.get('policy', 'WEAPON') == 'WEAPON':
+            geometry.emitter((x, face_y, z), (0, direction, 0), group, 'beam', 'none')
 
 
 def _lamp(geometry, mount, rule, position, scale):
@@ -252,12 +276,14 @@ def _lamp(geometry, mount, rule, position, scale):
     corners = [(x-half_width, face_y, z+half_height), (x+half_width, face_y, z+half_height),
                (x+half_width, face_y, z-half_height), (x-half_width, face_y, z-half_height)]
     geometry.face(corners if direction == 1 else list(reversed(corners)), group, 'lamp')
+    geometry.emitter((x, face_y, z), (0, direction, 0), group, 'lamp', 'lamp')
 
 
 def _jet(geometry, mount, rule, position, scale):
     x, y, z = position
     half = rule['length']*scale/2
     geometry.beam((x, y, z+half), (x, y, z-half), rule['width']*scale, rule['width']*scale, mount['location'], 'metal', 6)
+    geometry.emitter((x, y, z-half), (0, 0, -1), mount['location'], 'exhaust', 'exhaust')
 
 
 def _gatling(geometry, mount, rule, position, scale):
@@ -284,6 +310,7 @@ def _gatling(geometry, mount, rule, position, scale):
         barrel_x, barrel_z = x+cos(angle)*width*.32, z+sin(angle)*width*.32
         geometry.beam((barrel_x, y, barrel_z), (barrel_x, muzzle, barrel_z), barrel_width, barrel_width, group, 'metal',
                rule.get('barrelSides', 3))
+        geometry.emitter((barrel_x, muzzle, barrel_z), (0, direction, 0), group, 'muzzle', 'bullet')
     if length > 4*scale:
         geometry.beam((x, muzzle-direction*2.2*scale, z), (x, muzzle-direction*1.2*scale, z), width*1.05, width*1.05,
                group, 'edge', drum_sides)
@@ -295,6 +322,7 @@ def _hatchet(geometry, mount, position, scale):
     geometry.beam((x, y, z-7), (x, y, z+8), 2, 2, group, 'metal')
     # The blade faces forward, edge leading, as the Mek would swing it.
     geometry.prism([(x+1, y), (x+3, y+7), (x, y+9), (x-3, y+7), (x-1, y)], z+4, z+10, group, 'edge')
+    geometry.emitter((x, y+9, z+7), (0, 1, 0), group, 'contact', 'melee')
 
 
 def _leaning(position):
@@ -310,6 +338,7 @@ def _blade(geometry, mount, position, scale):
     geometry.beam(along(-4), along(2), 1.8, 1.8, group, 'metal')
     geometry.beam(along(2), along(3), 2, 7, group, 'metal')
     geometry.beam(along(3), along(19), 1.4, 4.8, group, 'edge', 4, .2)
+    geometry.emitter(along(19), (0, 1, 1), group, 'contact', 'melee')
 
 
 def _mace(geometry, mount, position, scale):
@@ -319,6 +348,7 @@ def _mace(geometry, mount, position, scale):
     # The head is a faceted drum that narrows toward its crown.
     geometry.beam(along(10), along(12), 5, 5, group, 'edge', 8, 1.4)
     geometry.beam(along(12), along(16), 7, 7, group, 'edge', 8, .7)
+    geometry.emitter(along(16), (0, 1, 1), group, 'contact', 'melee')
 
 
 def _lance(geometry, mount, position, scale):
@@ -326,13 +356,410 @@ def _lance(geometry, mount, position, scale):
     group = mount['location']
     geometry.beam((x, y-3, z), (x, y+4, z), 3.4, 3.4, group, 'metal', 6)
     geometry.beam((x, y+4, z), (x, y+21, z), 3, 3, group, 'edge', 6, .1)
+    geometry.emitter((x, y+21, z), (0, 1, 0), group, 'contact', 'melee')
 
 
-def _tool(geometry, mount, position, scale):
-    x, y, z = position
-    group = mount['location']
-    geometry.box((x, y+2, z), (5, 7, 5), group, 'edge', .25)
-    geometry.beam((x-.7, y+8, z), (x+.7, y+8, z), 7.5, 7.5, group, 'metal', 8)
+def _side_plate(geometry, outline, x, width, group, material):
+    """A convex Y/Z profile with thickness along X, used by saws and tool jaws."""
+    area = sum(y*outline[(i+1) % len(outline)][1]-outline[(i+1) % len(outline)][0]*z
+               for i, (y, z) in enumerate(outline))
+    if area < 0:
+        outline = list(reversed(outline))
+    geometry.loft([[(x+side*width/2, y, z) for y, z in outline] for side in (-1, 1)], group, material)
+
+
+def _sweep(geometry, points, widths, group, materials, sides=3):
+    """One joined tube: shared bend sections and caps only at the two exposed ends."""
+    rings, side = [], None
+    for i, point in enumerate(points):
+        axis = normal(sub(points[min(i+1, len(points)-1)], points[max(0, i-1)]))
+        if side is None:
+            side = cross(axis, (0, 0, 1) if abs(axis[2]) < .9 else (0, 1, 0))
+        side = normal(sub(side, mul(axis, sum(a*b for a, b in zip(side, axis)))))
+        up = cross(axis, side)
+        rings.append([add(point, add(mul(side, cos(2*pi*j/sides+pi/4)*widths[i]/2),
+                                      mul(up, sin(2*pi*j/sides+pi/4)*widths[i]/2))) for j in range(sides)])
+    geometry.face(list(reversed(rings[0])), group, materials[0])
+    geometry.face(rings[-1], group, materials[-1])
+    for lo, hi, material in zip(rings, rings[1:], materials):
+        for j in range(sides):
+            k = (j+1) % sides
+            geometry.face([lo[j], lo[k], hi[k], hi[j]], group, material)
+
+
+def _chain(geometry, points, group):
+    """Open, interlocking oval links; alternate link planes so a chain reads from either side."""
+    for index, (start, end) in enumerate(zip(points, points[1:])):
+        delta = sub(end, start)
+        axis = normal(delta)
+        center = mul(add(start, end), .5)
+        length = sum(v*v for v in delta)**.5/2+.2
+        side = normal(cross(axis, (0, 0, 1) if abs(axis[2]) < .9 else (0, 1, 0)))
+        if index % 2:
+            side = cross(axis, side)
+        perpendicular = cross(axis, side)
+        rings = []
+        # Alternate oval face-on links with simpler edge-on links; both are closed solid loops.
+        steps = 4 if index % 2 else 6
+        for step in range(steps):
+            angle = 2*pi*step/steps
+            radial = add(mul(axis, cos(angle)), mul(side, sin(angle)))
+            middle = add(center, add(mul(axis, length*cos(angle)), mul(side, 1.1*sin(angle))))
+            rings.append([add(middle, add(mul(radial, .35*cos(2*pi*j/3)),
+                                          mul(perpendicular, .35*sin(2*pi*j/3)))) for j in range(3)])
+        for index, ring in enumerate(rings):
+            following = rings[(index+1) % len(rings)]
+            for j in range(3):
+                k = (j+1) % 3
+                geometry.face([ring[j], following[j], following[k], ring[k]], group, 'metal')
+
+
+def _ball(geometry, center, radius, group):
+    # An icosahedron keeps a round silhouette in twenty triangles.
+    phi = (1+5**.5)/2
+    vertices = [normal(p) for p in ((-1, phi, 0), (1, phi, 0), (-1, -phi, 0), (1, -phi, 0),
+                                  (0, -1, phi), (0, 1, phi), (0, -1, -phi), (0, 1, -phi),
+                                  (phi, 0, -1), (phi, 0, 1), (-phi, 0, -1), (-phi, 0, 1))]
+    for face in ((0,11,5), (0,5,1), (0,1,7), (0,7,10), (0,10,11), (1,5,9), (5,11,4),
+                 (11,10,2), (10,7,6), (7,1,8), (3,9,4), (3,4,2), (3,2,6), (3,6,8),
+                 (3,8,9), (4,9,5), (2,4,11), (6,2,10), (8,6,7), (9,8,1)):
+        geometry.face([add(center, mul(vertices[i], radius)) for i in face], group, 'metal')
+
+
+def _spike(geometry, start, end, width, group, material='edge', sides=3, depth=None):
+    """A real point, avoiding the extra ring and cap of a nearly closed tapered beam."""
+    axis = normal(sub(end, start))
+    side = normal(cross(axis, (0, 0, 1) if abs(axis[2]) < .9 else (0, 1, 0)))
+    up = cross(axis, side)
+    ring = [add(start, add(mul(side, width*.5*cos(2*pi*i/sides)),
+                           mul(up, (depth or width)*.5*sin(2*pi*i/sides)))) for i in range(sides)]
+    geometry.face(list(reversed(ring)), group, material)
+    for i in range(sides):
+        geometry.face([ring[i], ring[(i+1) % sides], end], group, material)
+
+
+def _flexible(geometry, group, rule):
+    look = rule['look']
+    if look == 'wrecking-ball':
+        geometry.box((0, 1, 1), (4, 4, 4), group, 'paint')
+        geometry.beam((0, 1, 1), (0, 5, 10), 2.2, 2.2, group, 'metal', 3)
+        _chain(geometry, [(0, 5, 10), (0, 8, 10), (0, 10, 7.3), (0, 10, 4)], group)
+        _ball(geometry, (0, 10, .5), 3.8, group)
+        contact = (0, 13.8, .5)
+    else:
+        geometry.beam((0, -1, -4), (0, 3, 8), 1.7, 1.7, group, 'metal', 3)
+        if look == 'flail':
+            center = (6.5, 9.5, 4.8)
+            _chain(geometry, [(0, 3, 8), (.5, 5.4, 11), (4, 7.8, 11), (6.5, 9.5, 7.4)], group)
+            _ball(geometry, center, 2.9, group)
+            for direction in ((1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, 0, -1)):
+                _spike(geometry, add(center, mul(direction, 2.1)), add(center, mul(direction, 4.4)), 1.6, group)
+            contact = add(center, (0, 4.4, 0))
+        else:
+            geometry.beam((0, -1, -4), (0, .5, .5), 2.1, 2.1, group, 'dark', 3)
+            _chain(geometry, [(0, 3, 8), (0, 5.5, 11), (3.5, 7.5, 12), (7, 9.5, 10), (8, 10.5, 6)], group)
+            _spike(geometry, (8, 10.5, 6), (7, 11.5, 1), 1.8, group)
+            contact = (7, 11.5, 1)
+    geometry.emitter(contact, (0, 1, 0), group, 'contact', 'melee')
+
+
+def _wood_branch(geometry, start, end, width, taper, group):
+    axis = normal(sub(end, start))
+    side = normal(cross(axis, (1, 0, 0)))
+    up = cross(axis, side)
+    rings = [[add(center, add(mul(side, cos(2*pi*i/7)*width*factor/2),
+                              mul(up, sin(2*pi*i/7)*width*factor/2))) for i in range(7)]
+             for center, factor in ((start, 1), (end, taper))]
+    geometry.face(list(reversed(rings[0])), group, 'wood')
+    geometry.face(rings[1], group, 'wood')
+    for i in range(7):
+        j = (i+1) % 7
+        geometry.face([rings[0][i], rings[0][j], rings[1][j], rings[1][i]], group, 'bark')
+
+
+def _club(geometry, group, rule):
+    look = rule['look']
+    if look == 'tree-club':
+        _wood_branch(geometry, (0, -2, -4), (0, 8, 14), 2.8, 1.9, group)
+        _wood_branch(geometry, (0, 4, 7), (-5, 8, 12), 2.6, .5, group)
+        _wood_branch(geometry, (0, 6, 10), (4.5, 10, 12), 2.2, .45, group)
+        _wood_branch(geometry, (.5, 7, 12), (1, 6, 17), 2, .35, group)
+        contact = (0, 9, 15)
+    elif look == 'limb-club':
+        geometry.beam((0, -2, -4), (0, 2, 4), 2.2, 2.2, group, 'dark', 3)
+        geometry.beam((0, 1, 2), (0, 5, 8), 5, 4.5, group, 'paint', 4, .8)
+        geometry.beam((-3, 6, 10), (3, 6, 10), 4.3, 4.3, group, 'metal', 5)
+        geometry.box((0, 7.4, 10.7), (4, 2.5, 3.5), group, 'edge')
+        geometry.beam((0, 6.5, 11), (0, 10.5, 18), 5.7, 4.5, group, 'paint', 4, .7)
+        geometry.beam((0, 10.5, 17), (0, 12, 19), 2.4, 2.4, group, 'dark', 4)
+        geometry.box((0, 13.5, 19), (6.5, 7, 3.5), group, 'paint', taper=.85)
+        geometry.box((0, 16, 18.7), (6.2, 2.4, 2.1), group, 'metal')
+        contact = (0, 17.2, 19)
+    else:
+        # I-section scrap girder: two flanges joined by a visibly narrower web.
+        along = _leaning((0, 0, 0))
+        across = (0, -.70710678, .70710678)
+        geometry.beam(along(-4), along(19), 1.1, 4.6, group, 'metal', 4)
+        for sign in (-1, 1):
+            offset = mul(across, sign*1.5)
+            geometry.beam(add(along(-4), offset), add(along(19), offset), 5.4, .8, group, 'edge', 4)
+        contact = along(19)
+    geometry.emitter(contact, (0, 1, 1), group, 'contact', 'melee')
+
+
+def _round_saw(geometry, x, radius, teeth, group, thick=.7, center=(8, 0)):
+    cy, cz = center
+    # One closed toothed disk replaces a cylinder with separate overlapping tooth prisms.
+    root_radius = .68 if teeth <= 6 else .8
+    outline = [(cy+radius*(root_radius if i % 2 else 1)*cos(pi*i/teeth),
+                cz+radius*(root_radius if i % 2 else 1)*sin(pi*i/teeth)) for i in range(teeth*2)]
+    rings = [[(x+side*thick/2, y, z) for y, z in outline] for side in (-1, 1)]
+    for side, ring in zip((-1, 1), rings):
+        core = ring[1::2]
+        geometry.face(core if side == 1 else list(reversed(core)), group, 'metal')
+        for i in range(0, len(outline), 2):
+            tooth = [ring[(i-1) % len(outline)], ring[i], ring[(i+1) % len(outline)]]
+            geometry.face(tooth if side == 1 else list(reversed(tooth)), group, 'edge')
+    for i in range(len(outline)):
+        j = (i+1) % len(outline)
+        geometry.face([rings[0][i], rings[0][j], rings[1][j], rings[1][i]], group, 'metal')
+
+
+def _saw(geometry, group, rule):
+    look = rule['look']
+    if look == 'dual-saw':
+        geometry.beam((0, 0, 0), (0, 8, 0), 8, 4, group, 'paint', 3)
+    else:
+        geometry.box((0, 1, 0), (4.5, 5, 4), group, 'paint')
+    if look == 'chainsaw':
+        _side_plate(geometry, [(2, -1.5), (12, -1.5), (14, -.4), (14, .8), (12, 2), (2, 2)],
+                    0, 1.1, group, 'edge')
+        for y in (4, 8, 12):
+            for sign, z in ((-1, -1.5), (1, 2)):
+                _side_plate(geometry, [(y-.5, z), (y+.6, z), (y+.4, z+sign*.9)], 0, 1.4, group, 'metal')
+        _side_plate(geometry, [(13.7, -.4), (15, .2), (13.7, .9)], 0, 1.4, group, 'metal')
+        geometry.emitter((0, 15, .2), (0, 1, 0), group, 'contact', 'melee')
+    else:
+        dual = look == 'dual-saw'
+        radius = 5.1 if look == 'rock-cutter' else 4.2
+        for x in (-2.8, 2.8) if dual else (0,):
+            cy, cz = 8, 0
+            if not dual:
+                geometry.beam((x, 2, 0), (x, cy, cz), 1.5, 1.5, group, 'metal', 3)
+            _round_saw(geometry, x, radius, 6 if dual else 8, group,
+                       1.3 if look == 'rock-cutter' else .65, (cy, cz))
+            geometry.emitter((x, cy+radius, cz), (0, 1, 0), group, 'contact', 'melee')
+
+
+def _industrial(geometry, group, rule):
+    look = rule['look']
+    if look != 'combine':
+        geometry.box((0, 1, 0), (4, 4, 4), group, 'paint')
+    if look == 'backhoe':
+        geometry.beam((0, 1, 0), (0, 6, 5), 2, 2, group, 'edge', 3)
+        geometry.beam((0, 6, 5), (0, 10, 1), 1.8, 1.8, group, 'edge', 3)
+        for x in (-3.2, 3.2):
+            _side_plate(geometry, [(9, 1.5), (12, 1.5), (14, -2.5), (9, -2.5)], x, .5, group, 'paint')
+        geometry.box((0, 9, -.5), (6.5, .8, 4), group, 'metal')
+        geometry.box((0, 11.4, -2.4), (6.5, 5, .6), group, 'edge')
+        for x in (-2.4, -.8, .8, 2.4):
+            _spike(geometry, (x, 13, -2.3), (x, 15, -2.5), .8, group, 'metal')
+        contact = (0, 15, -2.5)
+    elif look == 'combine':
+        geometry.beam((0, 1, 0), (0, 6, 0), 2.5, 2.5, group, 'metal', 3)
+        geometry.box((0, 7, -1.2), (15, 3, 1.7), group, 'paint')
+        for x in (-6, -3, 0, 3, 6):
+            _spike(geometry, (x, 7, -1), (x, 11, -1.5), 1.5, group, depth=.8)
+        for angle in (0, pi):
+            y, z = 7+1.8*cos(angle), 1.5+1.8*sin(angle)
+            geometry.beam((-6.5, y, z), (6.5, y, z), .7, .7, group, 'metal', 3)
+            for x in (-6.5, 6.5):
+                geometry.beam((x, 7, 1.5), (x, y, z), .5, .5, group, 'edge', 3)
+        contact = (0, 11, -1.5)
+    elif look == 'pile-driver':
+        geometry.box((0, 4, 0), (5, 7, 5), group, 'paint')
+        for x in (-1.6, 1.6):
+            geometry.beam((x, 3, 1.6), (x, 8, 1.6), .7, .7, group, 'metal', 4)
+        geometry.beam((0, 7, 0), (0, 12, 0), 2.5, 2.5, group, 'metal', 6)
+        _spike(geometry, (0, 12, 0), (0, 15, 0), 2.5, group)
+        contact = (0, 15, 0)
+    elif look == 'mining-drill':
+        geometry.beam((0, 2, 0), (0, 5, 0), 4, 4, group, 'metal', 4)
+        _spike(geometry, (0, 5, 0), (0, 15, 0), 4.5, group, sides=6)
+        # A raised helical cutting ridge, tapering with the conical bit.
+        points = [(2.3*(1-i/9)*cos(i*pi*3/8), 5+i*1.15, 2.3*(1-i/9)*sin(i*pi*3/8)) for i in range(9)]
+        for start, end in zip(points, points[1:]):
+            geometry.beam(start, end, .65, .65, group, 'metal', 3, .9)
+        contact = (0, 15, 0)
+    else:  # Two copper electrode jaws distinguish the spot welder from a gun barrel.
+        for sign in (-1, 1):
+            geometry.beam((sign*1.5, 2, 0), (sign*2.4, 7, 0), 1.3, 1.3, group, 'metal')
+            geometry.beam((sign*2.4, 7, 0), (sign*.5, 10, 0), 1, 1, group, 'plasma', 4, .6)
+        contact = (0, 10, 0)
+    geometry.emitter(contact, (0, 1, 0), group, 'contact', 'melee')
+
+
+def _curved_claw(geometry, x, group, length=1, z=0):
+    # The hooked outline and two side ridges form one solid blade, without buried segment caps.
+    outline = [(x, 1, z-.5*length), (x, 6.5*length, z+.3*length),
+               (x, 9.5*length, z-2*length), (x, 7.5*length, z+1.5*length),
+               (x, 4*length, z+2.6*length), (x, 1, z+.55*length)]
+    for sign in (-1, 1):
+        ridge = (x+sign*.65*length, 4.5*length, z+2.2*length)
+        for i, point in enumerate(outline):
+            triangle = [point, outline[(i+1) % len(outline)], ridge]
+            geometry.face(triangle if sign == 1 else list(reversed(triangle)), group, 'edge')
+    return (x, 9.5*length, z-2*length)
+
+
+def _physical(geometry, group, rule):
+    look = rule['look']
+    if look == 'shield':
+        width, height = rule['size']
+        outline = [(-width*.38, height/2), (width*.38, height/2), (width/2, height*.3),
+                   (width*.44, -height*.3), (0, -height/2), (-width*.44, -height*.3), (-width/2, height*.3)]
+        rear = [(x, .3, z) for x, z in outline]
+        front = [(x, 1.2, z) for x, z in outline]
+        geometry.face(list(reversed(rear)), group, 'metal')
+        for i in range(len(outline)):
+            j = (i+1) % len(outline)
+            geometry.face([rear[i], rear[j], front[j], front[i]], group, 'edge')
+            inner_i, inner_j = (front[i][0]*.85, 1.4, front[i][2]*.85), (front[j][0]*.85, 1.4, front[j][2]*.85)
+            geometry.face([front[i], front[j], inner_j, inner_i], group, 'edge')
+            geometry.face([inner_i, inner_j, (0, 2.8, 0)], group, 'paint')
+        geometry.beam((0, 2.2, 0), (0, 3.3, 0), 2.5, 2.5, group, 'metal', 6, .5)
+        geometry.box((0, -.6, 0), (3.5, 1, 1), group, 'metal')
+        geometry.emitter((0, 3.3, 0), (0, 1, 0), group, 'contact', 'melee')
+    elif look == 'claw':
+        geometry.box((0, 0, 0), (7, 3, 3), group, 'paint')
+        for x in (-2.4, 0, 2.4):
+            tip = _curved_claw(geometry, x, group)
+            geometry.emitter(tip, (0, 1, -1), group, 'contact', 'melee')
+        geometry.beam((-3.1, 0, -1), (-3.5, 4, -3), 1.8, 1.8, group, 'metal', 3, .6)
+        _spike(geometry, (-3.5, 4, -3), (-1.8, 6, -1.8), 1, group)
+    elif look == 'talons':
+        geometry.box((0, 0, 0), (7, 4, 2.2), group, 'metal')
+        for x in (-2.5, 0, 2.5):
+            tip = _curved_claw(geometry, x, group, .78 if x else 1.05, -.5)
+            geometry.emitter(tip, (0, 1, -1), group, 'contact', 'melee')
+        _spike(geometry, (0, -1, -.5), (0, -4.5, -2), 2.1, group)
+    else:
+        geometry.box((0, 0, 0), (7.5, 1.5, 7.5), group, 'paint', .25)
+        for x, z, reach in ((-2.3, -2.3, 3.8), (-2.3, 2.3, 3.8), (2.3, -2.3, 3.8), (2.3, 2.3, 3.8), (0, 0, 5.7)):
+            _spike(geometry, (x, .5, z), (x*1.2, reach, z*1.2), 2.4, group, 'metal', 4)
+            geometry.emitter((x*1.2, reach, z*1.2), (0, 1, 0), group, 'contact', 'melee')
+
+
+def _support(geometry, group, rule):
+    look = rule['look']
+    if look == 'bomb-rack':
+        geometry.box((0, 1, 1.5), (8.5, 4, 2), group, 'paint')
+        for x in (-2.8, 0, 2.8):
+            geometry.beam((x, 1, -.7), (x, 6, -.7), 2, 2, group, 'metal', 4)
+            _spike(geometry, (x, 6, -.7), (x, 8, -.7), 2, group, sides=4)
+            for dx in (-.7, .7):
+                _spike(geometry, (x, 1, -.7), (x+dx, 0, -1.8), 1.3, group, depth=.35)
+            geometry.emitter((x, 4, -1.8), (0, 0, -1), group, 'launcher', 'bomb')
+    elif look == 'mine-launcher':
+        geometry.box((0, 2, -.8), (6, 5, 2), group, 'paint')
+        _sweep(geometry, [(0, 1, .5), (0, 5, 1.5), (0, 6.3, 1.825)], [4.5, 4.5, 3.6],
+               group, ['metal', 'edge'], 6)
+        axis = normal((0, 1, .25))
+        up = cross(axis, (1, 0, 0))
+        center = add((0, 6.3, 1.825), mul(axis, .01))
+        geometry.face([add(center, add((.65*cos(2*pi*i/6+pi/4), 0, 0),
+                                      mul(up, .65*sin(2*pi*i/6+pi/4)))) for i in range(6)], group, 'dark')
+        geometry.emitter((0, 6.3, 1.83), (0, 1, .25), group, 'launcher', 'mine')
+    elif look == 'screen-launcher':
+        geometry.box((0, 2, 0), (9, 6, 4.5), group, 'paint')
+        for x in (-2.8, 0, 2.8):
+            # Recess markings and the lower sill are surfaces on the housing, not six solid boxes.
+            geometry.face([(x-1, 5.01, -1.55), (x-1, 5.01, 1.55),
+                           (x+1, 5.01, 1.55), (x+1, 5.01, -1.55)], group, 'dark')
+            geometry.face([(x-.8, 5.02, -1.075), (x-.8, 5.02, -.725),
+                           (x+.8, 5.02, -.725), (x+.8, 5.02, -1.075)], group, 'metal')
+            geometry.emitter((x, 5.3, 0), (0, 1, 0), group, 'launcher', 'screen')
+    else:
+        geometry.beam((-2, 1, -3), (-2, 1, 4), 3.2, 3.2, group, 'paint', 6, .85)
+        geometry.beam((-2, 1, 3.8), (-2, 1, 4.7), 1.1, 1.1, group, 'metal', 4)
+        geometry.beam((-3, 1, 4.7), (-1, 1, 4.7), .5, .5, group, 'laser', 3)
+        hose = [(-1.5, 1, 3.5), (1, 1, 4), (2, 3, 2), (1.5, 4, 0)]
+        _sweep(geometry, hose, [.7]*len(hose), group, ['dark']*(len(hose)-1))
+        geometry.beam((1.5, 2, 0), (1.5, 6, 0), 1.3, 1.3, group, 'metal', 4)
+        geometry.beam((1.5, 6, 0), (1.5, 9, 0), 1.4, 1.4, group, 'dark', 5, 1.8)
+        _opening(geometry, (1.5, 9.02, 0), .8, 'square', 1, group, 'metal')
+        geometry.emitter((1.5, 9.05, 0), (0, 1, 0), group, 'muzzle', 'spray')
+
+
+def _infantry_melee(geometry, group, rule):
+    look = rule['variant']
+    length = rule.get('length', 9)
+    along = _leaning((0, 0, 0))
+    if look in ('blade', 'axe', 'spear'):
+        geometry.beam(along(-2.5), along(1.5), .9, .9, group, 'dark', 4)
+        if look == 'axe':
+            geometry.beam(along(1), along(8), 1, 1, group, 'wood', 4)
+            _side_plate(geometry, [(3, 6), (7, 8), (8, 5), (4, 4)], 0, 1.1, group, 'edge')
+        else:
+            geometry.beam(along(1), along(1.5), .8, 3, group, 'metal')
+            geometry.beam(along(1.5), along(length), .6, 2 if look == 'blade' else .8,
+                          group, rule.get('material', 'edge'), 4, .04)
+        contact = along(length)
+    elif look == 'staff':
+        _sweep(geometry, [along(p) for p in (-length/2, -length/2+1.5, length/2-1.5, length/2)],
+               [1.1, .8, .8, 1.1], group, ['edge', 'wood' if rule.get('wood') else 'metal', 'edge'], 6)
+        contact = along(length/2)
+    elif look == 'club':
+        geometry.beam(along(-2), along(length), 1, 1, group, 'wood', 6, 2.5)
+        contact = along(length)
+    elif look == 'claws':
+        geometry.box((0, 0, 0), (3, 2, 1.2), group, 'metal')
+        for x in (-1, 0, 1):
+            _curved_claw(geometry, x, group, .45)
+        contact = (0, 4.3, -.9)
+    elif look == 'star':
+        geometry.beam((0, 1, -.3), (0, 1, .3), 1.8, 1.8, group, 'metal', 4)
+        for i in range(4):
+            a = i*pi/2
+            ring = [(cos(a-.3), 1+sin(a-.3)), (3*cos(a+.15), 1+3*sin(a+.15)),
+                    (cos(a+.9), 1+sin(a+.9))]
+            geometry.prism(ring, -.2, .2, group, 'edge')
+        contact = (0, 4, 0)
+    else:
+        geometry.beam((0, 0, -2), (0, 1, 3), .8, .8, group, 'dark', 3)
+        points = [(0, 1, 3), (0, 3, 6), (1, 6, 8), (3, 8, 7), (4, 9, 4), (4, 9, 0), (3, 9, -3)]
+        _sweep(geometry, points, [.55-i*.07 for i in range(len(points))], group, ['metal']*(len(points)-1))
+        contact = points[-1]
+    geometry.emitter(contact, (0, 1, 0), group, 'contact', 'melee')
+
+
+def _detailed(geometry, mount, rule, position, scale):
+    """Author small equipment at one local origin; transform mesh and contacts together."""
+    shape, group, look = Geometry(), mount['location'], rule['look']
+    if look in ('flail', 'chain-whip', 'wrecking-ball'):
+        _flexible(shape, group, rule)
+    elif look in ('tree-club', 'limb-club', 'girder-club'):
+        _club(shape, group, rule)
+    elif look in ('chainsaw', 'buzzsaw', 'dual-saw', 'rock-cutter'):
+        _saw(shape, group, rule)
+    elif look in ('backhoe', 'combine', 'pile-driver', 'mining-drill', 'spot-welder'):
+        _industrial(shape, group, rule)
+    elif look in ('shield', 'claw', 'talons', 'spikes'):
+        _physical(shape, group, rule)
+    elif look == 'infantry-melee':
+        _infantry_melee(shape, group, rule)
+    elif look in ('bomb-rack', 'mine-launcher', 'screen-launcher', 'extinguisher'):
+        _support(shape, group, rule)
+    else:
+        raise ValueError('Unknown equipment look: '+look)
+    facing = -1 if mount['rear'] else 1
+    def orient(point):
+        return point[0]*facing, point[1]*facing, point[2]
+    for triangle, node, material in shape.faces:
+        geometry.face([add(position, mul(orient(point), scale)) for point in triangle], node, material)
+    for emitter in shape.emitters:
+        geometry.emitter(add(position, mul(orient(emitter['position']), scale)), orient(emitter['direction']),
+                         emitter['node'], emitter['role'], emitter['effect'])
 
 
 def draw(geometry, mount, rule, position, scale, options=None):
@@ -354,6 +781,11 @@ def draw(geometry, mount, rule, position, scale, options=None):
     for triangle, node, material in ahead.faces:
         geometry.face([tuple(position[i]+right[i]*point_x+forward[i]*point_y+up[i]*point_z for i in range(3))
                 for point_x, point_y, point_z in triangle], node, material)
+    for emitter in ahead.emitters:
+        def rotate(point):
+            return tuple(right[i]*point[0]+forward[i]*point[1]+up[i]*point[2] for i in range(3))
+        geometry.emitter(add(position, rotate(emitter['position'])), rotate(emitter['direction']),
+                         emitter['node'], emitter['role'], emitter['effect'])
 
 
 def _draw_ahead(geometry, mount, rule, position, scale, options):
@@ -370,6 +802,8 @@ def _draw_ahead(geometry, mount, rule, position, scale, options):
         _jet(geometry, mount, rule, position, scale)
     elif look == 'lamp':
         _lamp(geometry, mount, rule, position, scale)
-    else:
-        {'hatchet': _hatchet, 'blade': _blade, 'mace': _mace, 'lance': _lance, 'tool': _tool}[look](
+    elif look in ('hatchet', 'blade', 'mace', 'lance'):
+        {'hatchet': _hatchet, 'blade': _blade, 'mace': _mace, 'lance': _lance}[look](
             geometry, mount, position, scale)
+    else:
+        _detailed(geometry, mount, rule, position, scale)

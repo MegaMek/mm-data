@@ -1,4 +1,4 @@
-"""Validate generated geometry, source provenance, budgets and complete variant mount coverage. Stdlib only."""
+"""Validate geometry, provenance and mount coverage; report advisory triangle counts. Stdlib only."""
 import argparse
 import json
 import math
@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from unit_model_geometry import content_digest
+from unit_model_geometry import TRIANGLE_LIMIT, TRIANGLE_TARGET, content_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -72,6 +72,8 @@ def validate(out, catalog_path):
         if 'illustration' in reference:
             require(sha(ROOT / 'data/images/fluff' / reference['illustration']) == reference['illustrationSha256'], name+': reference illustration changed')
     maximum = 0
+    triangle_target = manifest.get('triangleTarget', manifest.get('budget', TRIANGLE_TARGET))
+    above_target = []
     for relative, expected in manifest['models'].items():
         path = (out / relative).resolve()
         require(path.is_relative_to(out), 'Model escapes asset directory: '+relative)
@@ -98,7 +100,12 @@ def validate(out, catalog_path):
                     require(sum(v*v for v in normal) > 1e-15, relative+': degenerate triangle')
                     stored = vertices[indices[i]*10+3:indices[i]*10+6]
                     require(sum(normal[k]*stored[k] for k in range(3)) > 0, relative+': inverted normal')
-        require(triangles == expected['triangles'] and triangles <= manifest['budget'], relative+': triangle budget')
+        require(triangles == expected['triangles'], relative+': triangle count does not match manifest')
+        # Older manifests predate bareUnit; their variant meshes are complete baked loadouts.
+        if expected.get('bareUnit', '/variants/' not in relative):
+            require(triangles <= TRIANGLE_LIMIT, relative+': bare unit exceeds triangle hard cap')
+            if triangles >= triangle_target:
+                above_target.append({'model': relative, 'bodyTriangles': triangles})
         require(triangles > 0 or relative.endswith('/squad-0.g3dj'), relative+': unexpectedly empty model')
         referenced, nodes = set(), set()
         materials = {m['id'] for m in model['materials']}
@@ -152,6 +159,12 @@ def validate(out, catalog_path):
     by_source = {u['source']: u for u in catalog['units']}
     for name, entry in manifest['variants'].items():
         unit = by_source[entry['source']]
+        if 'bodyTriangles' in entry:
+            require(entry['bodyTriangles'] <= TRIANGLE_LIMIT, name+': bare body exceeds triangle hard cap')
+            require(entry['bodyTriangles'] + entry['equipmentTriangles']
+                    == manifest['models'][entry['asset']]['triangles'], name+': body/equipment counts do not add up')
+            if entry['bodyTriangles'] >= triangle_target:
+                above_target.append({'model': entry['asset'], 'bodyTriangles': entry['bodyTriangles']})
         require(sha(ROOT / 'data' / unit['source']) == entry['sourceSha256'], name+': unit source changed')
         require(sha(ROOT / 'data/images/units' / unit['sprite']) == entry['spriteSha256'], name+': sprite changed')
         expected = {(m['index'], m['internalName'], m['location'], m['rear'], m['rackSize'])
@@ -159,7 +172,8 @@ def validate(out, catalog_path):
         actual = [(a['equipmentIndex'], a['equipment'], a['location'], a['rear'], a['rackSize']) for a in entry['attachments']]
         require(expected == set(actual) and len(actual) == len(expected), name+': equipment assembly mismatch')
     print(json.dumps({'models': len(manifest['models']), 'variants': len(manifest['variants']),
-                      'maximumTriangles': maximum, 'needsReview': len(manifest['needsReview'])}))
+                      'maximumTriangles': maximum, 'triangleTarget': triangle_target, 'triangleLimit': TRIANGLE_LIMIT,
+                      'aboveTriangleTarget': above_target, 'needsReview': len(manifest['needsReview'])}))
 
 
 if __name__ == '__main__':

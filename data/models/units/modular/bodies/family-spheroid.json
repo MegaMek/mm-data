@@ -1,0 +1,1477 @@
+{
+  "schema": 2,
+  "kind": "body",
+  "family": "aircraft",
+  "mesh": "family-spheroid.g3dj",
+  "bounds": {
+    "min": [
+      -33.0,
+      -33.0,
+      0.0
+    ],
+    "max": [
+      33.0,
+      33.0,
+      64
+    ]
+  },
+  "rig": "aircraft-v1",
+  "joints": {
+    "root": "root",
+    "hull": "hull",
+    "gear0.79": "gear0.79",
+    "gear0.79Shaft": "gear0.79Shaft",
+    "gear0.79Foot": "gear0.79Foot",
+    "gear2.36": "gear2.36",
+    "gear2.36Shaft": "gear2.36Shaft",
+    "gear2.36Foot": "gear2.36Foot",
+    "gear3.93": "gear3.93",
+    "gear3.93Shaft": "gear3.93Shaft",
+    "gear3.93Foot": "gear3.93Foot",
+    "gear5.5": "gear5.5",
+    "gear5.5Shaft": "gear5.5Shaft",
+    "gear5.5Foot": "gear5.5Foot"
+  },
+  "locations": {},
+  "hardpoints": [
+    {
+      "id": "BD-front",
+      "location": "BD",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        19.8,
+        -1.1999999999999993
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "BD-rear",
+      "location": "BD",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        19.8,
+        -1.1999999999999993
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FR-front",
+      "location": "FR",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        33.0,
+        -7.600000000000001
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FR-rear",
+      "location": "FR",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        33.0,
+        -7.600000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "NOS-front",
+      "location": "NOS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        33.0,
+        -7.600000000000001
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "NOS-rear",
+      "location": "NOS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        33.0,
+        -7.600000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LS-front",
+      "location": "LS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LS-rear",
+      "location": "LS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RS-front",
+      "location": "RS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RS-rear",
+      "location": "RS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LWG-front",
+      "location": "LWG",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LWG-rear",
+      "location": "LWG",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RWG-front",
+      "location": "RWG",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RWG-rear",
+      "location": "RWG",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RR-front",
+      "location": "RR",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        -33.0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RR-rear",
+      "location": "RR",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        -33.0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "AFT-front",
+      "location": "AFT",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        -33.0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "AFT-rear",
+      "location": "AFT",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        -33.0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FLS-front",
+      "location": "FLS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FLS-rear",
+      "location": "FLS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRS-front",
+      "location": "FRS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRS-rear",
+      "location": "FRS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "ALS-front",
+      "location": "ALS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "ALS-rear",
+      "location": "ALS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "ARS-front",
+      "location": "ARS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "ARS-rear",
+      "location": "ARS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRLS-front",
+      "location": "FRLS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRLS-rear",
+      "location": "FRLS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRRS-front",
+      "location": "FRRS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FRRS-rear",
+      "location": "FRRS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        21.45,
+        18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RRLS-front",
+      "location": "RRLS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RRLS-rear",
+      "location": "RRLS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RRRS-front",
+      "location": "RRRS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RRRS-rear",
+      "location": "RRRS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        21.45,
+        -18.150000000000002,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LBS-front",
+      "location": "LBS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LBS-rear",
+      "location": "LBS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        -26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RBS-front",
+      "location": "RBS",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865476
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RBS-rear",
+      "location": "RBS",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        26.400000000000002,
+        0,
+        -4.399999999999999
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "HULL-front",
+      "location": "HULL",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        0,
+        34
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "HULL-rear",
+      "location": "HULL",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        0,
+        34
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FSLG-front",
+      "location": "FSLG",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        0,
+        34
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "FSLG-rear",
+      "location": "FSLG",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        0,
+        34
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "*-front",
+      "location": "*",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        0,
+        11.549999999999999,
+        11.600000000000001
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "*-rear",
+      "location": "*",
+      "side": "rear",
+      "node": "hull",
+      "position": [
+        0,
+        11.549999999999999,
+        11.600000000000001
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        18,
+        12,
+        18
+      ],
+      "minScale": 0.25,
+      "maxScale": 2,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "external-searchlight",
+      "location": "HULL",
+      "side": "front",
+      "node": "hull",
+      "position": [
+        9.9,
+        6.6000000000000005,
+        24.4
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "size": [
+        8,
+        8,
+        8
+      ],
+      "minScale": 0.4,
+      "maxScale": 2,
+      "roles": [
+        "misc"
+      ]
+    }
+  ],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "hull",
+      "position": [
+        9.927779207859128,
+        9.927779207859128,
+        -24.2
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "exhaust",
+      "effect": "exhaust"
+    },
+    {
+      "id": "emitter-1",
+      "node": "hull",
+      "position": [
+        -9.927779207859126,
+        9.927779207859128,
+        -24.2
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "exhaust",
+      "effect": "exhaust"
+    },
+    {
+      "id": "emitter-2",
+      "node": "hull",
+      "position": [
+        -9.92777920785913,
+        -9.927779207859126,
+        -24.2
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "exhaust",
+      "effect": "exhaust"
+    },
+    {
+      "id": "emitter-3",
+      "node": "hull",
+      "position": [
+        9.927779207859125,
+        -9.92777920785913,
+        -24.2
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "role": "exhaust",
+      "effect": "exhaust"
+    }
+  ],
+  "landingSupports": [
+    {
+      "id": "gear0.79",
+      "node": "gear0.79",
+      "shaft": "gear0.79Shaft",
+      "foot": "gear0.79Foot",
+      "length": 8.0,
+      "contact": [
+        0,
+        0,
+        -2.0
+      ],
+      "stowedOffset": [
+        -6.682159082212874,
+        -6.682159082212874,
+        23
+      ]
+    },
+    {
+      "id": "gear2.36",
+      "node": "gear2.36",
+      "shaft": "gear2.36Shaft",
+      "foot": "gear2.36Foot",
+      "length": 8.0,
+      "contact": [
+        0,
+        0,
+        -2.0
+      ],
+      "stowedOffset": [
+        6.682159082212873,
+        -6.682159082212874,
+        23
+      ]
+    },
+    {
+      "id": "gear3.93",
+      "node": "gear3.93",
+      "shaft": "gear3.93Shaft",
+      "foot": "gear3.93Foot",
+      "length": 8.0,
+      "contact": [
+        0,
+        0,
+        -2.0
+      ],
+      "stowedOffset": [
+        6.682159082212875,
+        6.682159082212873,
+        23
+      ]
+    },
+    {
+      "id": "gear5.5",
+      "node": "gear5.5",
+      "shaft": "gear5.5Shaft",
+      "foot": "gear5.5Foot",
+      "length": 8.0,
+      "contact": [
+        0,
+        0,
+        -2.0
+      ],
+      "stowedOffset": [
+        -6.682159082212872,
+        6.682159082212875,
+        23
+      ]
+    }
+  ]
+}
