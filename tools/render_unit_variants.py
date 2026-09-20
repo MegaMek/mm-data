@@ -37,8 +37,8 @@ def material(rgb, cache):
     return cache[key]
 
 
-def import_model(path, expected, colors, turn=0, upper_body='CT'):
-    """The generated G3DJ subset: indexed colors and translated rigid nodes, Z / 54.
+def import_model(path, expected, colors, turn=0, upper_body='CT', z_scale=54):
+    """Import indexed colors and translated rigid nodes; use z_scale=1 for modular assets.
 
     A non-zero turn shows the upper body turned that many degrees to its right, as the game shows a torso twist.
     """
@@ -48,10 +48,12 @@ def import_model(path, expected, colors, turn=0, upper_body='CT'):
     data = json.loads(raw)
     parts = {}
     for mesh in data['meshes']:
-        if mesh['attributes'] != ['POSITION', 'NORMAL', 'COLOR']:
+        if mesh['attributes'] not in (['POSITION', 'NORMAL', 'COLOR'],
+                                       ['POSITION', 'NORMAL', 'COLOR', 'TEXCOORD0']):
             raise ValueError('Unsupported review vertex format')
+        stride = 12 if 'TEXCOORD0' in mesh['attributes'] else 10
         for part in mesh['parts']:
-            parts[part['id']] = (mesh['vertices'], part['indices'])
+            parts[part['id']] = (mesh['vertices'], part['indices'], stride)
     vertices, faces, face_colors = [], [], []
 
     def visit(node, parent, pivot=None):
@@ -61,17 +63,17 @@ def import_model(path, expected, colors, turn=0, upper_body='CT'):
         if node['id'] == upper_body:
             pivot = offset
         for part in node.get('parts', []):
-            source, indices = parts[part['meshpartid']]
+            source, indices, stride = parts[part['meshpartid']]
             for j in range(0, len(indices), 3):
                 start = len(vertices)
                 for index in indices[j:j+3]:
-                    v = source[index*10:index*10+10]
+                    v = source[index*stride:index*stride+10]
                     p = Vector(v[:3])+offset
                     if pivot is not None and turn:
                         p = Matrix.Rotation(radians(-turn), 3, 'Z') @ (p-pivot)+pivot
-                    vertices.append((p.x, p.y, p.z*54))
+                    vertices.append((p.x, p.y, p.z*z_scale))
                 faces.append((start, start+1, start+2))
-                face_colors.append(tuple(source[indices[j]*10+6:indices[j]*10+9]))
+                face_colors.append(tuple(source[indices[j]*stride+6:indices[j]*stride+9]))
         for child in node.get('children', []):
             visit(child, offset, pivot)
 
