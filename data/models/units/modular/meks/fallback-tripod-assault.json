@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "kind": "mek",
-  "body": "units/modular/bodies/fallback-airmek.json",
+  "body": "units/modular/bodies/fallback-tripod-assault.json",
   "equipment": "units/modular/equipment.json",
   "mounts": [
     {
@@ -131,6 +131,27 @@
       "scale": 0.9
     },
     {
+      "hardpoint": "CL-front",
+      "family": "",
+      "form": "",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "CL-rear",
+      "family": "",
+      "form": "",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "CL-exhaust",
+      "family": "jump-jet",
+      "form": "",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
       "hardpoint": "LA-front",
       "family": "",
       "form": "",
@@ -222,12 +243,5 @@
       "scale": 0.9
     }
   ],
-  "configuration": "biped",
-  "sizeScales": [
-    0.72,
-    0.86,
-    1,
-    1.14
-  ],
-  "superHeavyScale": 1.4
+  "configuration": "tripod"
 }

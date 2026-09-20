@@ -1,60 +1,56 @@
 {
   "schema": 2,
   "kind": "body",
-  "family": "mek-biped",
-  "mesh": "fallback-airmek.g3dj",
+  "family": "mek-quad",
+  "mesh": "fallback-quad-assault.g3dj",
   "bounds": {
     "min": [
-      -32,
-      -27,
+      -25.986,
+      -18.166863118103084,
       0.0
     ],
     "max": [
-      32,
-      10.85,
-      49.0
+      25.986,
+      23.4,
+      55.66
     ]
   },
-  "rig": "biped-v1",
+  "rig": "quad-v1",
   "joints": {
     "root": "root",
     "hips": "pelvis",
     "torso": "CT",
     "head": "HD",
-    "leftArm": "LA",
-    "rightArm": "RA",
-    "leftForearm": "LA-forearm",
-    "rightForearm": "RA-forearm",
-    "leftLeg": "LL",
-    "rightLeg": "RL",
-    "leftShin": "LL-shin",
-    "rightShin": "RL-shin",
-    "leftFoot": "LL-foot",
-    "rightFoot": "RL-foot"
+    "FLL": "FLL",
+    "FLLShin": "FLL-shin",
+    "FLLFoot": "FLL-foot",
+    "FRL": "FRL",
+    "FRLShin": "FRL-shin",
+    "FRLFoot": "FRL-foot",
+    "RLL": "RLL",
+    "RLLShin": "RLL-shin",
+    "RLLFoot": "RLL-foot",
+    "RRL": "RRL",
+    "RRLShin": "RRL-shin",
+    "RRLFoot": "RRL-foot"
   },
   "locations": {
     "CT": "CT",
     "LT": "LT",
     "RT": "RT",
     "HD": "HD",
-    "LL": "LL",
-    "LL-shin": "LL",
-    "LL-foot": "LL",
-    "RL": "RL",
-    "RL-shin": "RL",
-    "RL-foot": "RL",
-    "LA": "LA",
-    "LA-forearm": "LA",
-    "LA@forearm": "LA",
-    "LA@wrist": "LA",
-    "LA@hand": "LA",
-    "LA@elbow": "LA",
-    "RA": "RA",
-    "RA-forearm": "RA",
-    "RA@forearm": "RA",
-    "RA@wrist": "RA",
-    "RA@hand": "RA",
-    "RA@elbow": "RA"
+    "FLL": "FLL",
+    "FLL-shin": "FLL",
+    "FLL-foot": "FLL",
+    "FRL": "FRL",
+    "FRL-shin": "FRL",
+    "FRL-foot": "FRL",
+    "RLL": "RLL",
+    "RLL-shin": "RLL",
+    "RLL-foot": "RLL",
+    "RRL": "RRL",
+    "RRL-shin": "RRL",
+    "RRL-foot": "RRL"
   },
   "hardpoints": [
     {
@@ -63,9 +59,9 @@
       "side": "front",
       "node": "HD",
       "position": [
-        0,
-        5,
-        0
+        0.0,
+        6.0,
+        0.0
       ],
       "rotation": [
         0.0,
@@ -74,9 +70,9 @@
         1.0
       ],
       "size": [
+        7.32,
         6,
-        6,
-        6
+        7.199999999999999
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -92,9 +88,9 @@
       "side": "rear",
       "node": "HD",
       "position": [
-        0,
-        -4,
-        0
+        0.0,
+        -4.799999999999999,
+        0.0
       ],
       "rotation": [
         0,
@@ -103,9 +99,9 @@
         0
       ],
       "size": [
+        7.32,
         6,
-        6,
-        6
+        7.199999999999999
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -121,9 +117,9 @@
       "side": "front",
       "node": "HD",
       "position": [
-        0,
-        -4,
-        -16
+        0.0,
+        -4.799999999999999,
+        -18.6
       ],
       "rotation": [
         0.0,
@@ -132,9 +128,9 @@
         1.0
       ],
       "size": [
+        7.32,
         6,
-        6,
-        6
+        7.199999999999999
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -150,9 +146,9 @@
       "side": "front",
       "node": "CT",
       "position": [
-        0,
-        9,
-        8
+        0.0,
+        10.799999999999999,
+        9.600000000000001
       ],
       "rotation": [
         0.0,
@@ -161,9 +157,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -179,9 +175,9 @@
       "side": "rear",
       "node": "CT",
       "position": [
-        0,
-        0,
-        8
+        0.0,
+        0.0,
+        9.600000000000001
       ],
       "rotation": [
         0,
@@ -190,9 +186,9 @@
         0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -208,9 +204,9 @@
       "side": "front",
       "node": "CT",
       "position": [
-        0,
-        0,
-        0
+        0.0,
+        0.0,
+        0.0
       ],
       "rotation": [
         0.0,
@@ -219,9 +215,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -237,9 +233,9 @@
       "side": "front",
       "node": "LT",
       "position": [
-        0,
-        8,
-        0
+        0.0,
+        9.6,
+        0.0
       ],
       "rotation": [
         0.0,
@@ -248,9 +244,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -266,9 +262,9 @@
       "side": "rear",
       "node": "LT",
       "position": [
-        0,
-        -1,
-        0
+        0.0,
+        -1.2,
+        0.0
       ],
       "rotation": [
         0,
@@ -277,9 +273,9 @@
         0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -295,9 +291,9 @@
       "side": "front",
       "node": "LT",
       "position": [
-        0,
-        -1,
-        -8
+        0.0,
+        -1.2,
+        -9.600000000000001
       ],
       "rotation": [
         0.0,
@@ -306,9 +302,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -324,9 +320,9 @@
       "side": "front",
       "node": "RT",
       "position": [
-        0,
-        8,
-        0
+        0.0,
+        9.6,
+        0.0
       ],
       "rotation": [
         0.0,
@@ -335,9 +331,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -353,9 +349,9 @@
       "side": "rear",
       "node": "RT",
       "position": [
-        0,
-        -1,
-        0
+        0.0,
+        -1.2,
+        0.0
       ],
       "rotation": [
         0,
@@ -364,9 +360,9 @@
         0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -382,9 +378,9 @@
       "side": "front",
       "node": "RT",
       "position": [
-        0,
-        -1,
-        -8
+        0.0,
+        -1.2,
+        -9.600000000000001
       ],
       "rotation": [
         0.0,
@@ -393,9 +389,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -406,14 +402,14 @@
       ]
     },
     {
-      "id": "LL-front",
-      "location": "LL",
+      "id": "FLL-front",
+      "location": "FLL",
       "side": "front",
-      "node": "LL",
+      "node": "FLL",
       "position": [
-        0,
-        5,
-        -5
+        0.0,
+        6.0,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -422,9 +418,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -435,14 +431,14 @@
       ]
     },
     {
-      "id": "LL-rear",
-      "location": "LL",
+      "id": "FLL-rear",
+      "location": "FLL",
       "side": "rear",
-      "node": "LL",
+      "node": "FLL",
       "position": [
-        0,
-        -4,
-        -5
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0,
@@ -451,9 +447,9 @@
         0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -464,14 +460,14 @@
       ]
     },
     {
-      "id": "LL-exhaust",
-      "location": "LL",
+      "id": "FLL-exhaust",
+      "location": "FLL",
       "side": "front",
-      "node": "LL",
+      "node": "FLL",
       "position": [
-        0,
-        -4,
-        -5
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -480,9 +476,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -493,14 +489,14 @@
       ]
     },
     {
-      "id": "RL-front",
-      "location": "RL",
+      "id": "FRL-front",
+      "location": "FRL",
       "side": "front",
-      "node": "RL",
+      "node": "FRL",
       "position": [
-        0,
-        5,
-        -5
+        0.0,
+        6.0,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -509,9 +505,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -522,14 +518,14 @@
       ]
     },
     {
-      "id": "RL-rear",
-      "location": "RL",
+      "id": "FRL-rear",
+      "location": "FRL",
       "side": "rear",
-      "node": "RL",
+      "node": "FRL",
       "position": [
-        0,
-        -4,
-        -5
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0,
@@ -538,9 +534,9 @@
         0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -551,14 +547,14 @@
       ]
     },
     {
-      "id": "RL-exhaust",
-      "location": "RL",
+      "id": "FRL-exhaust",
+      "location": "FRL",
       "side": "front",
-      "node": "RL",
+      "node": "FRL",
       "position": [
-        0,
-        -4,
-        -5
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -567,9 +563,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -580,14 +576,14 @@
       ]
     },
     {
-      "id": "LA-front",
-      "location": "LA",
+      "id": "RLL-front",
+      "location": "RLL",
       "side": "front",
-      "node": "LA-forearm",
+      "node": "RLL",
       "position": [
-        0,
-        7,
-        -3
+        0.0,
+        6.0,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -596,9 +592,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -609,14 +605,14 @@
       ]
     },
     {
-      "id": "LA-rear",
-      "location": "LA",
+      "id": "RLL-rear",
+      "location": "RLL",
       "side": "rear",
-      "node": "LA-forearm",
+      "node": "RLL",
       "position": [
-        0,
-        -2,
-        -3
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0,
@@ -625,9 +621,9 @@
         0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -638,14 +634,14 @@
       ]
     },
     {
-      "id": "LA-exhaust",
-      "location": "LA",
+      "id": "RLL-exhaust",
+      "location": "RLL",
       "side": "front",
-      "node": "LA-forearm",
+      "node": "RLL",
       "position": [
-        0,
-        -2,
-        -3
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -654,9 +650,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -667,14 +663,14 @@
       ]
     },
     {
-      "id": "RA-front",
-      "location": "RA",
+      "id": "RRL-front",
+      "location": "RRL",
       "side": "front",
-      "node": "RA-forearm",
+      "node": "RRL",
       "position": [
-        0,
-        7,
-        -3
+        0.0,
+        6.0,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -683,9 +679,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -696,14 +692,14 @@
       ]
     },
     {
-      "id": "RA-rear",
-      "location": "RA",
+      "id": "RRL-rear",
+      "location": "RRL",
       "side": "rear",
-      "node": "RA-forearm",
+      "node": "RRL",
       "position": [
-        0,
-        -2,
-        -3
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0,
@@ -712,9 +708,9 @@
         0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -725,14 +721,14 @@
       ]
     },
     {
-      "id": "RA-exhaust",
-      "location": "RA",
+      "id": "RRL-exhaust",
+      "location": "RRL",
       "side": "front",
-      "node": "RA-forearm",
+      "node": "RRL",
       "position": [
-        0,
-        -2,
-        -3
+        0.0,
+        -4.800000000000001,
+        -5.699999999999996
       ],
       "rotation": [
         0.0,
@@ -741,183 +737,9 @@
         1.0
       ],
       "size": [
-        10,
+        12.2,
         6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "LA-hand",
-      "location": "LA",
-      "side": "front",
-      "node": "LA-forearm",
-      "position": [
-        0,
-        7,
-        -3
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "LA-wrist",
-      "location": "LA",
-      "side": "front",
-      "node": "LA-forearm",
-      "position": [
-        0,
-        7,
-        -3
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "LA-elbow",
-      "location": "LA",
-      "side": "front",
-      "node": "LA",
-      "position": [
-        -3,
-        4,
-        -9
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "RA-hand",
-      "location": "RA",
-      "side": "front",
-      "node": "RA-forearm",
-      "position": [
-        0,
-        7,
-        -3
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "RA-wrist",
-      "location": "RA",
-      "side": "front",
-      "node": "RA-forearm",
-      "position": [
-        0,
-        7,
-        -3
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
-      ],
-      "minScale": 0.4,
-      "maxScale": 1.5,
-      "roles": [
-        "weapon",
-        "physical",
-        "misc"
-      ]
-    },
-    {
-      "id": "RA-elbow",
-      "location": "RA",
-      "side": "front",
-      "node": "RA",
-      "position": [
-        3,
-        4,
-        -9
-      ],
-      "rotation": [
-        0.0,
-        0,
-        -0.0,
-        1.0
-      ],
-      "size": [
-        10,
-        6,
-        10
+        12.0
       ],
       "minScale": 0.4,
       "maxScale": 1.5,
@@ -933,9 +755,9 @@
       "side": "front",
       "node": "LT",
       "position": [
-        0,
-        8,
-        9
+        0.0,
+        9.6,
+        10.0
       ],
       "rotation": [
         0.0,
@@ -944,9 +766,9 @@
         1.0
       ],
       "size": [
-        12,
+        14.64,
         6,
-        14
+        16.8
       ],
       "minScale": 0.4,
       "maxScale": 2,
@@ -955,38 +777,5 @@
       ]
     }
   ],
-  "emitters": [
-    {
-      "id": "emitter-0",
-      "node": "CT",
-      "position": [
-        -9,
-        -11,
-        -7.5
-      ],
-      "direction": [
-        0.0,
-        0.0,
-        -1.0
-      ],
-      "role": "exhaust",
-      "effect": "exhaust"
-    },
-    {
-      "id": "emitter-1",
-      "node": "CT",
-      "position": [
-        9,
-        -11,
-        -7.5
-      ],
-      "direction": [
-        0.0,
-        0.0,
-        -1.0
-      ],
-      "role": "exhaust",
-      "effect": "exhaust"
-    }
-  ]
+  "emitters": []
 }

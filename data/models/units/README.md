@@ -6,7 +6,7 @@ The game uses reusable assets under `modular/` and assembles each visible unit f
 
 ## Geometry budget
 
-The bare unit before loadout targets **under 1,000 triangles**. Conventional infantry and Battle Armor always qualify for an exception because multiple figure/transport meshes form one game unit. Other families need art review to exceed the target. The **1,500-triangle bare-unit hard cap** applies to all families. Equipment is additional; report body, equipment and total costs separately. Preserve the full-detail 214-triangle BA figure (six suits: 1,284). Distance LoD is deferred.
+The bare unit before loadout targets **under 1,000 triangles**. Conventional infantry and Battle Armor always qualify for an exception because multiple figure/transport meshes form one game unit. Other families need art review to exceed the target. The **1,500-triangle bare-unit hard cap** applies to all families. Equipment is additional; report body, equipment and total costs separately. Preserve the full-detail 214-triangle BA figure (six suits: 1,284). Distance LoD hides small attached equipment; body meshes remain unchanged.
 
 Each equipment module has a separate target of **under 100 triangles** and a strict maximum of **149**.
 The exporter and runtime validator check this independently of the bare body and assembled totals.
@@ -14,7 +14,7 @@ The exporter and runtime validator check this independently of the bare body and
 ## Runtime assets
 
 - `modular/meks/<chassis>.json`: a body, mounting preferences and the global equipment catalog. The seven authored chassis are Atlas, Locust, Warhammer, Mad Cat, Marauder, Archer and Mackie.
-- `modular/meks/fallback-{biped,quad,tripod}.json`: generic articulated bodies with live equipment. Each supplies four Alpha Strike size profiles and a larger superheavy profile; profiles share geometry.
+- `modular/meks/fallback-<layout>-<weightClass>.json`: separately authored light/medium/heavy/assault/superheavy bodies for biped, tripod, quad and hybrid air-Mek layouts. Mek weight class and `isSuperHeavy()` select the asset; there is no runtime size-profile scaling.
 - `modular/bodies/`: bare bodies, location ownership, rigid joints and hardpoint areas.
 - `modular/equipment.json`: canonical equipment ID to reusable module, optional placement styles and weapon-family fallbacks.
 - `modular/equipment/library/`: independently shared weapon/misc meshes with emitter/contact metadata.
@@ -26,7 +26,7 @@ Mekset paths are relative to `data/models`:
 
 ```text
 chassis "Atlas" "meks/Atlas.png" "units/modular/meks/atlas.json"
-exact "default_medium" "defaults/default_medium.png" "units/modular/meks/fallback-biped.json"
+exact "default_medium" "defaults/default_medium.png" "units/modular/meks/fallback-biped-{weightClass}.json"
 exact "default_infantry" "defaults/default_infantry_platoon.png" "units/modular/infantry.json"
 ```
 
@@ -37,7 +37,7 @@ Structure changes replace that unit's assembly tree. Mesh buffers are shared; ma
 Conventional infantry and Battle Armor retain their approved figure meshes. Dynamic equipment attachment for
 these families is deliberately deferred until the end; passenger equipment must not be attached to transports.
 
-The normal unit scale defaults to `0.6`. Whole multi-hex models use the separate
+The normal unit scale defaults to `0.7` (`BoardGeometry.DEFAULTS`). Whole multi-hex models use the separate
 `BoardGeometry.DEFAULT_MULTI_HEX_UNIT_SCALE = 0.85f` default and the dedicated **Multi-hex unit scale** slider
 in **TUNING** (F9). Changing either slider does not change the other; Defaults restores both values.
 
@@ -47,7 +47,14 @@ grayscale texture. Confirmed blown-off Mek locations hide their anatomy and equi
 on the ground reuse the canonical `Limb Club` equipment mesh and the actual terrain counts; classic markers
 remain the fallback when models are disabled or unavailable. See `tools/unit-models/MODULAR_MODELS_C5.md`.
 
+Intermediate damage uses seven authored 128x128 RGBA overlays. Mek locations show worn armor, exposed structure
+and battered structure before the existing destroyed material; whole-body families have four damage stages.
+Infantry/BA use survivor counts instead. `UnitDamageDisplay` owns the configurable thresholds.
+
 ## Authoring and verification
+
+The primary specification for all families is [MODELLING_GUIDE.md](../../../tools/unit-models/MODELLING_GUIDE.md).
+It covers proportions, weight classes, parts/joints, effects, damage, supports and reproducible authoring/review.
 
 Run `python tools/build_modular_unit_models.py` in mm-data after exporting the equipment catalog described in `tools/unit-models/MODULAR_MODELS_C1.md`. This creates finite reusable components, not variant/headcount combinations. Add a global canonical-ID mapping in `tools/unit-models/weapons.json` to reuse or replace an equipment mesh everywhere; optional object mappings may also specify `bankFamily`.
 

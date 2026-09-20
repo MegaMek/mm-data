@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "kind": "mek",
-  "body": "units/modular/bodies/fallback-quad.json",
+  "body": "units/modular/bodies/fallback-airmek-light.json",
   "equipment": "units/modular/equipment.json",
   "mounts": [
     {
@@ -89,86 +89,128 @@
       "scale": 0.9
     },
     {
-      "hardpoint": "FLL-front",
+      "hardpoint": "LL-front",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "FLL-rear",
+      "hardpoint": "LL-rear",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "FLL-exhaust",
+      "hardpoint": "LL-exhaust",
       "family": "jump-jet",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "FRL-front",
+      "hardpoint": "RL-front",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "FRL-rear",
+      "hardpoint": "RL-rear",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "FRL-exhaust",
+      "hardpoint": "RL-exhaust",
       "family": "jump-jet",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RLL-front",
+      "hardpoint": "LA-front",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RLL-rear",
+      "hardpoint": "LA-rear",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RLL-exhaust",
+      "hardpoint": "LA-exhaust",
       "family": "jump-jet",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RRL-front",
+      "hardpoint": "RA-front",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RRL-rear",
+      "hardpoint": "RA-rear",
       "family": "",
       "form": "",
       "bay": false,
       "scale": 0.9
     },
     {
-      "hardpoint": "RRL-exhaust",
+      "hardpoint": "RA-exhaust",
       "family": "jump-jet",
       "form": "",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "LA-hand",
+      "family": "",
+      "form": "hand",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "LA-wrist",
+      "family": "",
+      "form": "wrist",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "LA-elbow",
+      "family": "",
+      "form": "elbow",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "RA-hand",
+      "family": "",
+      "form": "hand",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "RA-wrist",
+      "family": "",
+      "form": "wrist",
+      "bay": false,
+      "scale": 0.9
+    },
+    {
+      "hardpoint": "RA-elbow",
+      "family": "",
+      "form": "elbow",
       "bay": false,
       "scale": 0.9
     },
@@ -180,12 +222,5 @@
       "scale": 0.9
     }
   ],
-  "configuration": "quad",
-  "sizeScales": [
-    0.72,
-    0.86,
-    1,
-    1.14
-  ],
-  "superHeavyScale": 1.4
+  "configuration": "biped"
 }

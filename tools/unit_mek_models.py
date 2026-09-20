@@ -4,22 +4,96 @@ There is deliberately no loadout selection or packing here; Java owns both for p
 """
 from math import sqrt
 
-from unit_mek_chassis import build_chassis
+from unit_mek_chassis import build_chassis, forward, panel, upright
 from unit_model_geometry import Geometry, sub
 
+# Authored proportions, baked into each body's vertices, joints and sockets; never runtime size multipliers.
+# Width, depth, leg height, torso height. The head keeps a more consistent size across the weight classes.
+FALLBACK_PROPORTIONS = {
+    'light': (.95, .95, 1.04, 1.12),
+    'medium': (1.05, 1.04, 1.07, 1.04),
+    'heavy': (1.13, 1.12, 1.10, 1.16),
+    'assault': (1.22, 1.20, 1.14, 1.20),
+    'superheavy': (1.52, 1.48, 1.45, 1.60),
+}
 
-def fallback_body(topology):
+
+def fallback_point(p, weight):
+    width, depth, legs, torso = FALLBACK_PROPORTIONS[weight]
+    x, y, z = p
+    height = z*legs if z <= 29 else 29*legs + min(z-29, 13)*torso + max(0, z-42)
+    return x*width, y*depth, height
+
+
+def author_fallback(body, weight):
+    """Five silhouettes: a slim scout, balanced medium, broad heavy, armored assault and massive superheavy."""
+    if weight in ('assault', 'superheavy'):
+        # Additional breastplate/shoulder armor contributes bulk, not baked equipment.
+        body.box((0, 9, 38), (13, 3, 9), 'CT', 'edge', .3)
+        for side, torso in ((-1, 'LT'), (1, 'RT')):
+            body.box((side*10, 0, 43), (10, 15, 4), torso, 'paint', .4)
+    body.faces = [(tuple(fallback_point(p, weight) for p in tri), node, material) for tri, node, material in body.faces]
+    body.pivots = {node: fallback_point(p, weight) for node, p in body.pivots.items()}
+    for emitter in body.emitters:
+        emitter['position'] = fallback_point(emitter['position'], weight)
+    return body
+
+
+def fallback_hull(g, style):
+    """Distinct bare anatomy; the approved assault shell remains the default."""
+    if style == 'light':
+        # Locust-like scout proportions: a forward cockpit pod, not a humanoid head.
+        forward(g, [(-9, 10, 10, 0, 37.5), (0, 16, 13, 0, 37.5),
+                    (12, 8, 7, 0, 35.5)], 'CT', cut=.45)
+        for side, torso in ((-1, 'LT'), (1, 'RT')):
+            forward(g, [(-8, 5, 10, side*8, 37), (5, 4, 7, side*8, 36)], torso, 'edge', .4)
+        g.pivots['HD'] = (0, 5, 41)
+        forward(g, [(1, 9, 5, 0, 41.5), (10, 6, 4, 0, 38.5),
+                    (13, 3, 2, 0, 37)], 'HD', cut=.4)
+        for side in (-1, 1):
+            points = [(side*.4, 2, 43.9), (side*3.3, 2, 43.9),
+                      (side*2, 9.5, 40.8), (side*.4, 9.5, 40.8)]
+            panel(g, list(reversed(points)) if side == -1 else points, 'HD', 'glass')
+    elif style == 'medium':
+        # Upright, angular general-purpose frame with a separate helmet and tapered waist.
+        upright(g, [(29, 12, 12, 0, 0), (38, 18, 15, 0, 0),
+                    (45, 16, 12, 0, 0)], 'CT', cut=.45)
+        for side, torso in ((-1, 'LT'), (1, 'RT')):
+            upright(g, [(31, 6, 10, side*9, 0), (43, 8, 14, side*9, 0),
+                        (45, 6, 12, side*9, 0)], torso, 'edge', .4)
+        g.pivots['HD'] = (0, 3, 46)
+        upright(g, [(43, 9, 8, 0, 3), (47, 9, 8, 0, 3),
+                    (49, 6, 6, 0, 2)], 'HD', cut=.5)
+        panel(g, [(-3, 7.05, 47), (3, 7.05, 47), (2.5, 7.05, 45), (-2.5, 7.05, 45)], 'HD', 'glass')
+        panel(g, [(-3, 7.54, 38), (3, 7.54, 38), (0, 6.85, 34.8)], 'CT', 'metal')
+    elif style == 'heavy':
+        # Broad Warhammer/Archer-like shoulders around a low inset cockpit, with a sloped breastplate.
+        forward(g, [(-10, 19, 13, 0, 37), (7, 19, 14, 0, 38),
+                    (12, 14, 12, 0, 36.5)], 'CT', cut=.25)
+        for side, torso in ((-1, 'LT'), (1, 'RT')):
+            upright(g, [(31, 7, 14, side*10, -1), (44.5, 11, 19, side*10, -1),
+                        (47, 9, 15, side*10, -1)], torso, 'paint', .25)
+        g.pivots['HD'] = (0, 7, 44.5)
+        g.box((0, 7, 44.5), (9, 8, 8), 'HD', 'edge', .4, .75)
+        panel(g, [(-3, 11.05, 45.8), (3, 11.05, 45.8), (3, 11.05, 43.5),
+                  (-3, 11.05, 43.5)], 'HD', 'glass')
+    else:
+        g.box((0, 0, 37), (16, 17, 15), 'CT', 'paint', .4, .85)
+        for side, torso in ((-1, 'LT'), (1, 'RT')):
+            g.box((side*9, 0, 37), (8, 15, 13), torso, 'edge', .3)
+        g.box((0, 6, 45), (9, 9, 8), 'HD', 'paint', .4, .75)
+        g.box((0, 10.6, 45), (6, .5, 2.6), 'HD', 'glass')
+
+
+def fallback_body(topology, style=None):
     g = Geometry(modular=True)
     g.joint('pelvis', (0, 0, 29))
     g.joint('CT', (0, 0, 29), 'pelvis')
     g.box((0, 0, 28), (16, 10, 6), 'pelvis', 'metal')
-    g.box((0, 0, 37), (16, 17, 15), 'CT', 'paint', .4, .85)
     for side, torso in ((-1, 'LT'), (1, 'RT')):
         g.joint(torso, (side*9, 0, 37), 'CT')
-        g.box((side*9, 0, 37), (8, 15, 13), torso, 'edge', .3)
     g.joint('HD', (0, 6, 45), 'CT')
-    g.box((0, 6, 45), (9, 9, 8), 'HD', 'paint', .4, .75)
-    g.box((0, 10.6, 45), (6, .5, 2.6), 'HD', 'glass')
+    fallback_hull(g, style)
     legs = {'LL': (-9, 0), 'RL': (9, 0)}
     if topology == 'tripod':
         legs = {'LL': (-12, -7), 'RL': (12, -7), 'CL': (0, 11)}
@@ -27,20 +101,32 @@ def fallback_body(topology):
         legs = {'FLL': (-14, 10), 'FRL': (14, 10), 'RLL': (-14, -10), 'RRL': (14, -10)}
     for leg, (x, y) in legs.items():
         g.joint(leg, (x, y, 29), 'pelvis')
-        g.joint(leg+'-shin', (x*1.12, y-2, 16), leg)
+        knee_y = y-8 if style == 'light' else y-2
+        thigh, shin, sole = (5.4, 4.5, 7) if style == 'light' else (7, 7, 9)
+        g.joint(leg+'-shin', (x*1.12, knee_y, 16), leg)
         g.joint(leg+'-foot', (x*1.2, y, 3), leg+'-shin')
-        g.beam((x, y, 29), (x*1.12, y-2, 17), 7, 8, leg, 'edge')
-        g.beam((x*1.12, y-2, 16), (x*1.2, y, 4), 7, 9, leg+'-shin', 'paint', taper=.75)
-        g.box((x*1.2, y+3, 2), (9, 13, 4), leg+'-foot', 'paint', .25)
+        g.beam((x, y, 29), (x*1.12, knee_y, 17), thigh, thigh+1, leg, 'edge')
+        g.beam((x*1.12, knee_y, 16), (x*1.2, y, 4), shin, shin+2, leg+'-shin', 'paint', taper=.75)
+        g.box((x*1.2, y+3, 2), (sole, 13, 4), leg+'-foot', 'paint', .25)
     if topology != 'quad':
         for side, arm in ((-1, 'LA'), (1, 'RA')):
             g.joint(arm, (side*17, 0, 40), 'CT')
             g.joint(arm+'-forearm', (side*20, 1, 31), arm)
-            g.box((side*17, 0, 40), (9, 10, 9), arm, 'paint', .35)
+            if style == 'light':
+                forward(g, [(-4, 7, 6, side*17, 40), (4, 6, 4, side*17, 39)], arm, cut=.4)
+            elif style in ('medium', 'heavy'):
+                depth = 16 if style == 'heavy' else 10
+                upright(g, [(36, 8, depth-2, side*17, 0), (44, 10, depth, side*17, 0),
+                            (46 if style == 'heavy' else 45, 8, depth-2, side*17, 0)], arm, cut=.4)
+            else:
+                g.box((side*17, 0, 40), (9, 10, 9), arm, 'paint', .35)
             g.beam((side*17, 0, 38), (side*20, 1, 31), 5, 6, arm, 'metal')
             for part in ('forearm', 'wrist', 'hand', 'elbow'):
                 g.joint(arm+'@'+part, (side*20, 1, 31), arm if part == 'elbow' else arm+'-forearm')
-            g.box((side*20, 4, 28), (7, 10, 8), arm+'@forearm', 'paint', .25)
+            if style == 'light':
+                forward(g, [(-1, 5, 7, side*20, 28), (8, 5, 5, side*20, 28)], arm+'@forearm', cut=.4)
+            else:
+                g.box((side*20, 4, 28), (7, 10, 8), arm+'@forearm', 'paint', .25)
             g.box((side*20, 8, 28), (6, 4, 5), arm+'@hand', 'metal')
             g.box((side*20, 1, 31), (7, 6, 6), arm+'@elbow', 'edge')
     return g, legs
@@ -59,8 +145,69 @@ def fallback_recipes():
                 arms[arm] = {'hand': sockets[arm], 'wrist': sockets[arm], 'elbow': [42+side*20, 32, 31]}
         recipes.append({'id': 'fallback-'+topology, 'topology': topology, 'sockets': sockets,
                         'armSockets': arms, 'hip': [42, 36, 29], 'weaponScale': .9})
-    recipes.append({**recipes[0], 'id': 'fallback-airmek', 'form': 'airmek'})
-    return recipes
+    hybrid = {**recipes[0], 'id': 'fallback-airmek', 'form': 'airmek', 'sockets': dict(recipes[0]['sockets'])}
+    hybrid['sockets'].update({'HD': [42, 12, 42], 'CT': [42, 2, 32],
+                              'LT': [30, 38, 36], 'RT': [54, 38, 36]})
+    recipes.append(hybrid)
+    authored = []
+    for recipe in recipes:
+        for weight in FALLBACK_PROPORTIONS:
+            variant = {**recipe, 'id': recipe['id']+'-'+weight, 'weightProfile': weight,
+                       'sockets': dict(recipe['sockets'])}
+            if recipe.get('form') != 'airmek' and weight in ('light', 'medium', 'heavy'):
+                # Body-local mounting surfaces follow the new hull, not the old box silhouette.
+                if weight == 'light':
+                    front = {'HD': [42, 23, 37.5], 'CT': [42, 24, 34],
+                             'LT': [34, 31, 36], 'RT': [50, 31, 36]}
+                    rear_y = {'HD': 1, 'CT': -9, 'LT': -8, 'RT': -8}
+                    lamp = [34, 35, 41]
+                    for location, pixel in variant['sockets'].items():
+                        if location in ('LL', 'RL', 'CL', 'FLL', 'FRL', 'RLL', 'RRL'):
+                            variant['sockets'][location] = [pixel[0], pixel[1]+4, pixel[2]]
+                elif weight == 'medium':
+                    front = {'HD': [42, 28.8, 46], 'CT': [42, 28.4, 38],
+                             'LT': [33, 29.6, 38], 'RT': [51, 29.6, 38]}
+                    rear_y = {'HD': -1, 'CT': -8, 'LT': -7, 'RT': -7}
+                    lamp = [33, 36, 45]
+                else:
+                    front = {'HD': [42, 24.8, 44.5], 'CT': [42, 24, 36.5],
+                             'LT': [32, 28, 39], 'RT': [52, 28, 39]}
+                    rear_y = {'HD': 3, 'CT': -10, 'LT': -10, 'RT': -10}
+                    lamp = [32, 37, 47]
+                variant['sockets'].update(front)
+                variant['rearSockets'] = {location: [pixel[0], 36-rear_y[location], pixel[2]]
+                                          for location, pixel in front.items()}
+                variant['searchlightSocket'] = {'location': 'LT', 'position': lamp}
+            authored.append(variant)
+    return authored
+
+
+def air_mek_body():
+    """Reusable fighter fuselage with articulated arms and digitigrade legs; no baked loadout."""
+    g = fallback_body('biped')[0]
+    g.faces = [(tri, node, material) for tri, node, material in g.faces if node not in ('CT', 'LT', 'RT', 'HD')]
+    g.pivots['HD'] = (0, 23, 40)
+    forward(g, [(-30, 15, 10, 0, 36), (-10, 25, 13, 0, 36),
+                (14, 21, 13, 0, 35), (41, 3, 4, 0, 29)], 'CT', cut=.45)
+    forward(g, [(12, 11, 5, 0, 42), (24, 8, 5, 0, 39), (29, 3, 2, 0, 35)], 'HD', 'glass', .4)
+    for side, torso in ((-1, 'LT'), (1, 'RT')):
+        g.box((side*12, -17, 35), (11, 26, 13), torso, 'edge', .4)
+        wing = 'wing'+str(side)
+        g.joint(wing, (side*11, -6, 38), 'CT')
+        g.prism([(side*10, 3), (side*44, -17), (side*41, -30), (side*10, -20)], 37, 40, wing, 'paint')
+        g.beam((side*12, -23, 35), (side*12, -31, 35), 9, 9, torso, 'metal', 6)
+        g.beam((side*12, -30, 35), (side*12, -31.1, 35), 6, 6, torso, 'dark', 6)
+        g.emitter((side*12, -31.2, 35), (0, -1, 0), torso, 'exhaust', 'exhaust')
+    g.box((0, -22, 47), (2, 17, 17), 'CT', 'edge', .6)
+    # Sweep the knees backwards while keeping the feet underneath the hull.
+    def leg_point(p):
+        x, y, z = p
+        offset = -16 * max(0, 1-abs(z-16)/16)
+        return x, y+offset, z
+    g.faces = [(tuple(leg_point(p) for p in tri) if node.startswith(('LL', 'RL')) else tri, node, material)
+               for tri, node, material in g.faces]
+    g.pivots = {node: leg_point(p) if node.startswith(('LL', 'RL')) else p for node, p in g.pivots.items()}
+    return g
 
 
 def point(pixel):
@@ -77,17 +224,57 @@ def aim_rotation(aim):
     return [z/scale, 0, -x/scale, scale/2]
 
 
+def split_torso_locations(body):
+    """Give joined torso shells real side locations without changing their visible silhouette."""
+    if all(any(node == location for _, node, _ in body.faces) for location in ('LT', 'RT')):
+        return
+    shell = [tri for tri, node, _ in body.faces if node == 'CT']
+    if not shell:
+        return
+    edge = max(abs(p[0]) for tri in shell for p in tri) * .38
+
+    def clip(points, plane, sign):
+        result = []
+        for index, a in enumerate(points):
+            b = points[(index+1) % len(points)]
+            inside_a, inside_b = sign*(a[0]-plane) >= 0, sign*(b[0]-plane) >= 0
+            if inside_a:
+                result.append(a)
+            if inside_a != inside_b:
+                t = (plane-a[0])/(b[0]-a[0])
+                result.append(tuple(a[axis]+(b[axis]-a[axis])*t for axis in range(3)))
+        return result
+
+    faces = []
+    for tri, node, material in body.faces:
+        if node != 'CT':
+            faces.append((tri, node, material))
+            continue
+        regions = [('LT', clip(tri, -edge, -1)), ('CT', clip(clip(tri, -edge, 1), edge, -1)),
+                   ('RT', clip(tri, edge, 1))]
+        for location, polygon in regions:
+            for index in range(1, len(polygon)-1):
+                tri = (polygon[0], polygon[index], polygon[index+1])
+                a, b = sub(tri[1], tri[0]), sub(tri[2], tri[0])
+                area = sum((a[(i+1)%3]*b[(i+2)%3]-a[(i+2)%3]*b[(i+1)%3])**2 for i in range(3))
+                if area > 1e-12:
+                    faces.append((tri, location, material))
+    body.faces = faces
+
+
 def build_meks(recipes, output, export_asset, write_json):
     assets = {}
     for recipe in recipes:
-        body = fallback_body(recipe['topology'])[0] if 'topology' in recipe else build_chassis(recipe, modular=True)
+        weight = recipe.get('weightProfile')
+        body = fallback_body(recipe['topology'], weight)[0] if 'topology' in recipe else build_chassis(recipe, modular=True)
         if recipe.get('form') == 'airmek':
-            for side in (-1, 1):
-                node = 'wing'+str(side)
-                body.joint(node, (side*8, -7, 37), 'CT')
-                body.prism([(side*8, -5), (side*32, -19), (side*30, -27), (side*8, -16)], 34, 37, node, 'edge')
-                body.beam((side*9, -10, 32), (side*9, -11, 22), 8, 8, 'CT', 'metal', 6)
-                body.emitter((side*9, -11, 21.5), (0, 0, -1), 'CT', 'exhaust', 'exhaust')
+            body = air_mek_body()
+        if weight:
+            body = author_fallback(body, weight)
+        split_torso_locations(body)
+        for location in ('HD', 'CT', 'LT', 'RT'):
+            if not any(node == location for _, node, _ in body.faces):
+                raise ValueError(recipe['id']+': no drawable '+location+' surface')
         hardpoints, mounts = [], []
 
         def mount(identifier, location, pixel, *, rear=False, family='', form='', bay=False, node=None):
@@ -101,8 +288,12 @@ def build_meks(recipes, output, export_asset, write_json):
             if bay:
                 height = recipe.get('missileBayHeight', height)
                 width = recipe.get('missileBayWidth', 12)
+            if weight:
+                width *= FALLBACK_PROPORTIONS[weight][0]
+                height *= FALLBACK_PROPORTIONS[weight][3]
+            position = fallback_point(point(pixel), weight) if weight else point(pixel)
             hardpoints.append({'id': identifier, 'location': location, 'side': 'rear' if rear else 'front',
-                               'node': node, 'position': sub(point(pixel), body.pivots[node]),
+                               'node': node, 'position': sub(position, body.pivots[node]),
                                'rotation': aim_rotation(aim), 'size': [width, 6, height],
                                'minScale': .4, 'maxScale': 2 if family == 'lamp' else 1.5,
                                'roles': ['misc'] if family == 'lamp' else ['weapon', 'physical', 'misc']})
@@ -140,6 +331,7 @@ def build_meks(recipes, output, export_asset, write_json):
             # A refit without lower-arm actuators must attach at the remaining elbow, not a removed hand.
             # Keep stock hand/family-bank placement unchanged when no special hand socket was authored.
             forms.setdefault('wrist', recipe['sockets'][location])
+            # Explicit fallback arm sockets already include the elbow; avoid scaling a transformed pivot twice.
             elbow = body.pivots[location+'-forearm']
             forms.setdefault('elbow', [42+elbow[0], 36-elbow[1], elbow[2]])
             for form, pixel in forms.items():
@@ -179,6 +371,7 @@ def build_meks(recipes, output, export_asset, write_json):
                   'leftLeg': 'LL', 'rightLeg': 'RL', 'leftShin': 'LL-shin', 'rightShin': 'RL-shin',
                   'leftFoot': 'LL-foot', 'rightFoot': 'RL-foot'}
         joints = {role: node for role, node in joints.items() if node in body.pivots}
+        joints.update({node: node for node in body.pivots if node.startswith('wing')})
         for location in ('CL', 'FLL', 'FRL', 'RLL', 'RRL'):
             if location in body.pivots:
                 joints[location] = location
@@ -193,8 +386,5 @@ def build_meks(recipes, output, export_asset, write_json):
             'equipment': 'units/modular/equipment.json', 'mounts': mounts,
             'configuration': topology,
         }
-        if 'topology' in recipe:
-            descriptor['sizeScales'] = [.72, .86, 1, 1.14]
-            descriptor['superHeavyScale'] = 1.4
         write_json(output / ('meks/'+recipe['id']+'.json'), descriptor)
     return assets

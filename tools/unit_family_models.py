@@ -207,9 +207,10 @@ def proto(quad=False):
         leg = 'leg'+str(i)
         g.joint(leg, (x, y, 18), 'hull')
         g.joint(leg+'Shin', (x*1.1, y-3, 10), leg)
+        g.joint(leg+'Foot', (x*1.2, y+1, 3), leg+'Shin')
         g.beam((x, y, 18), (x*1.1, y-3, 10), 5, 6, leg, 'metal')
         g.beam((x*1.1, y-3, 10), (x*1.2, y+1, 3), 6, 6, leg+'Shin', 'paint')
-        g.box((x*1.2, y+3, 2), (7, 10, 4), leg+'Shin', 'edge')
+        g.box((x*1.2, y+3, 2), (7, 10, 4), leg+'Foot', 'edge')
     for side in (-1, 1):
         arm = 'arm'+str(side)
         g.joint(arm, (side*11, 0, 26), 'hull')
