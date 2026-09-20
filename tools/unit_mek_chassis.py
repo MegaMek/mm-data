@@ -229,7 +229,7 @@ def warhammer(g):
               (2.6, 6.04, 46.1), (-2.6, 6.04, 46.1)], 'HD', 'glass')
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         x = side*7.5
-        g.joint(leg, (x, 0, 29), 'pelvis')
+        g.joint(leg, (x, 0, 29.4), 'pelvis')
         g.joint(leg+'-shin', (side*9, 0, 18), leg)
         g.beam((x, 0, 29), (side*9, 0, 19), 9, 10, leg, 'edge')
         g.box((side*9, 1.5, 18), (7, 8, 4), leg+'-shin', 'metal')
@@ -423,45 +423,45 @@ def rifleman(g):
     # a broad torso, and the search radar as a pronged housing on the right shoulder rather than a
     # blade on the centre line. No variant has a hand or a lower arm, so each arm is a pod whose guns
     # leave the armour at its stepped face.
-    g.box((0, -1, 29), (16, 11, 6), 'pelvis', 'edge')
-    torso = [(30, 18, 13, 0, -1), (36, 22, 15, 0, -1), (45, 20, 13.5, 0, -1.5)]
+    g.box((0, -1, 29.4), (16, 11, 6), 'pelvis', 'edge')
+    torso = [(30.4, 18, 13, 0, -1), (36.4, 22, 15, 0, -1), (45.4, 20, 13.5, 0, -1.5)]
     upright(g, torso, cut=.3)
     # Give the shell real side locations before any LT/RT accessory is authored, or the side armour
     # stays labelled CT and a destroyed side torso takes only its shoulder with it.
     split_torso_locations(g)
     for side in (-1, 1):
         # Two vents on the front, two on the back, inside the flat part of the torso skin.
-        vent(g, lofted_face(torso), side*4.5, 2.6, 30.5, 33)
-        vent(g, lofted_face(torso, rear=True), side*4.5, 2.6, 34, 36.5, rear=True)
+        vent(g, lofted_face(torso), side*4.5, 2.6, 30.9, 33.4)
+        vent(g, lofted_face(torso, rear=True), side*4.5, 2.6, 34.4, 36.9, rear=True)
     # The sprite puts the cockpit just left of the centre line, ahead of the torso and below the pods.
-    forward(g, [(3, 10, 9, -1, 37.5), (10, 9, 8, -1, 37.2), (15, 7, 5.6, -1, 36.7)], 'HD', cut=.3)
-    panel(g, [(-3.9, 15.05, 38.2), (1.9, 15.05, 38.2), (1.9, 15.05, 35.3), (-3.9, 15.05, 35.3)], 'HD', 'glass')
+    forward(g, [(3, 10, 9, -1, 37.9), (10, 9, 8, -1, 37.6), (15, 7, 5.6, -1, 37.1)], 'HD', cut=.3)
+    panel(g, [(-3.9, 15.05, 38.6), (1.9, 15.05, 38.6), (1.9, 15.05, 35.7), (-3.9, 15.05, 35.7)], 'HD', 'glass')
     # Search radar: a housing on the right shoulder with two forward prongs, as the sprite draws it.
     # Garret T11-A communications array: a mast on the right shoulder carrying a crossbar that runs
     # across the Mek with its tips swept forward. The miniature gives the form, and the two forward
     # points the overhead sprite draws at the front of this housing are those swept tips.
-    g.box((9.5, 1, 47.5), (5.5, 5.5, 5), 'CT', 'edge')
-    g.box((9.5, 1.8, 50.6), (7, 6, 2.6), 'CT', 'edge', .3)
+    g.box((9.5, 1, 47.9), (5.5, 5.5, 5), 'CT', 'edge')
+    g.box((9.5, 1.8, 51), (7, 6, 2.6), 'CT', 'edge', .3)
     for reach in (-8, 8):
-        g.beam((9.5, .6, 52), (9.5 + reach, 4.6, 52), 2.6, 1.8, 'CT', 'edge')
+        g.beam((9.5, .6, 52.4), (9.5 + reach, 4.6, 52.4), 2.6, 1.8, 'CT', 'edge')
     for side, arm, leg, torso_side in ((-1, 'LA', 'LL', 'LT'), (1, 'RA', 'RL', 'RT')):
         x = side*7.5
         g.joint(leg, (x, 0, 29), 'pelvis')
         g.joint(leg+'-shin', (x*1.05, -1, 16.5), leg)
         # Sixty tons: the legs stay lighter than the seventy-ton designs already in this file.
-        upright(g, [(16.5, 8, 9.5, x*1.05, -1), (29, 10, 10.5, x, 0)], leg, cut=.3)
+        upright(g, [(16.5, 8, 9.5, x*1.05, -1), (29.4, 10, 10.5, x, 0)], leg, cut=.3)
         g.box((side*11.5, -1, 23.5), (2.8, 9, 9.5), leg, 'edge', .45)
         g.box((x*1.05, 0, 16.5), (8, 9, 4), leg+'-shin', 'metal')
         upright(g, [(5, 8.5, 9.5, x*1.1, 0), (14, 9.5, 10, x*1.05, -.5)], leg+'-shin', cut=.35)
         foot(g, x*1.1, 2.5, 9.5, 13, leg+'-shin')
         # A long shoulder reaching out to the pod, deep enough to sit under all of it.
-        upright(g, [(33, 14, 15, side*11, -1.5), (45.5, 15, 15.5, side*11, -1.5)], torso_side, cut=.25)
+        upright(g, [(33.4, 14, 15, side*11, -1.5), (45.9, 15, 15.5, side*11, -1.5)], torso_side, cut=.25)
         if g.modular:
-            g.joint(arm, (side*14, 0, 40), 'CT')
+            g.joint(arm, (side*14, 0, 40.4), 'CT')
         # The miniature is primary on size and stance: the pods are slim and sit against the side
         # torso rather than out on the shoulder. Still half again as tall as they are wide.
-        forward(g, [(-7, 7.4, 11.2, side*17, 40), (2, 8.5, 12.8, side*17, 40),
-                    (10, 7.4, 11.2, side*17, 40), (14, 5.6, 8.4, side*17, 40)], arm, cut=.15)
+        forward(g, [(-7, 7.4, 11.2, side*17, 40.4), (2, 8.5, 12.8, side*17, 40.4),
+                    (10, 7.4, 11.2, side*17, 40.4), (14, 5.6, 8.4, side*17, 40.4)], arm, cut=.15)
 
 
 def battlemaster(g):
