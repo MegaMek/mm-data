@@ -309,52 +309,63 @@ def mackie(g):
 def king_crab(g):
     # A broad low carapace, slit cockpit and open pincers: the guns inside them are live equipment.
     g.box((0, -2, 29), (24, 13, 7), 'pelvis', 'metal', .35)
-    g.box((0, -2, 34), (17, 11, 5), 'CT', 'edge', .3)
+    g.box((0, -2, 36), (17, 11, 12), 'CT', 'edge', .3)
 
-    def shell_ring(x, rear, front, low, high):
-        depth = high-low
-        return [(x, rear+3, low+depth*.35), (x, front-4, low), (x, front, low+7),
-                (x, front-2, high-3), (x, front-9, high), (x, rear+4, high),
-                (x, rear, high-4), (x, rear, low+depth*.55)]
+    def shell_ring(x, rear, front, low, high, nose):
+        # Long sloping roof, knife-edged prow and an undercut belly; no rounded forehead on top.
+        return [(x, rear+4, low+4), (x, front-8, min(low+4, nose-4)), (x, front-2.3, nose-4),
+                (x, front-2.3, nose+.5), (x, front-9, nose+2), (x, rear+6, high),
+                (x, rear, high-2.5), (x, rear, low+9)]
 
-    # Three individually closed shells share their cut edges; damage never uses empty side-torso nodes.
-    inner = (-30, 16, 36, 56)
-    mid = (-28, 12, 37, 55)
-    outer = (-22, 6, 40, 50)
-    g.loft([shell_ring(-7, *inner), shell_ring(7, *inner)], 'CT')
+    # Three actual armor shells own the roof and flanks. The complete visor band is a fourth, detachable HD mesh.
+    inner = (-30, 26, 38, 56, 49)
+    mid = (-28, 20, 39, 55, 48)
+    outer = (-22, 7, 40, 52, 46.5)
+    g.loft([shell_ring(-7, *inner), shell_ring(0, -30, 29, 38, 57, 50), shell_ring(7, *inner)], 'CT')
     for side, torso in ((-1, 'LT'), (1, 'RT')):
-        rings = [shell_ring(side*7, *inner), shell_ring(side*18, *mid), shell_ring(side*24, *outer)]
+        rings = [shell_ring(side*7, *inner), shell_ring(side*18, *mid), shell_ring(side*25, *outer)]
         g.loft(rings if side == 1 else list(reversed(rings)), torso)
         # Back heat-exchanger recesses stay part of the hull, not optional searchlights or weapon barrels.
         g.box((side*13, -29, 50), (8, 3, 7), torso, 'metal')
         # Raised rear mounting shoulders support forward-firing weapons; these are not rear-firing ports.
         g.box((side*16, -21, 55.5), (9, 12, 3), torso, 'edge', .3)
+        # Short armor pad seats small dorsal guns without covering their forward muzzle.
+        g.box((side*18, -7, 53.25), (7, 4, 1.5), torso, 'edge')
 
-    # A shallow pointed prow, with a wraparound visor tucked under its roof rather than a separate head box.
-    outline = [(-17, 5), (17, 5), (21, 12), (14, 21), (6, 24), (-6, 24), (-14, 21), (-21, 12)]
-    roof = lambda y: 55-(y-5)*.24
-    g.loft([[(x, y, roof(y)-4.2) for x, y in outline],
-            [(x, y, roof(y)-1.4) for x, y in outline],
-            [(x*.94, y-.5, roof(y)) for x, y in outline]], 'HD')
-    for index in range(2, 7):
-        a, b = outline[index], outline[(index+1) % len(outline)]
-        dx, dy = b[0]-a[0], b[1]-a[1]
-        length = (dx*dx+dy*dy)**.5
+    brow = [(-25, 7, 46.5), (-18, 20, 48), (-7, 26, 49), (0, 29, 50),
+            (7, 26, 49), (18, 20, 48), (25, 7, 46.5)]
+    def lip_ring(p):
+        x, y, z = p
+        # The outer lip must clear the shell's closed side cap instead of sharing its plane.
+        if abs(x) == 25:
+            x *= 25.2/25
+        return [(x, y-3, z-.4), (x, y+.25, z-.8), (x, y+.25, z), (x, y-3, z+.7)]
+    for owner, points in (('LT', brow[:3]), ('CT', brow[2:5]), ('RT', brow[4:])):
+        g.loft([lip_ring(p) for p in points], owner)
 
-        def window(t, above, offset):
-            x, y = a[0]+dx*t, a[1]+dy*t
-            return (x+dy/length*offset, y-dx/length*offset, roof(y)-4.2+above)
-
-        panel(g, [window(.03, .3, .04), window(.97, .3, .04),
-                  window(.97, 2.55, .04), window(.03, 2.55, .04)], 'HD')
-        panel(g, [window(.14, .65, .07), window(.86, .65, .07),
-                  window(.86, 2.2, .07), window(.14, 2.2, .07)], 'HD', 'glass')
-    forward(g, [(10, 11, 6, 0, 40), (16, 8, 4, 0, 39)], 'CT', 'edge', .25)
-    panel(g, [(-3.2, 16.03, 40.3), (3.2, 16.03, 40.3),
-              (3.2, 16.03, 38), (-3.2, 16.03, 38)], 'CT', 'metal')
-    for z in (38.45, 39.2, 39.95):
-        panel(g, [(-2.7, 16.06, z+.14), (2.7, 16.06, z+.14),
-                  (2.7, 16.06, z-.14), (-2.7, 16.06, z-.14)], 'CT', 'edge')
+    # HD is the whole thin front band, including every window and its frame. The hull is recessed behind it.
+    g.joint('HD', (0, 23, 46), 'CT')
+    rings = [[(x, y-1.8, z-4), (x, y+.15, z-4), (x, y+.15, z-1), (x, y-1.8, z-1)]
+             for x, y, z in brow]
+    g.face(list(reversed(rings[0])), 'HD', 'edge')
+    g.face(rings[-1], 'HD', 'edge')
+    for a, b, lo, hi in zip(brow, brow[1:], rings, rings[1:]):
+        for index in (0, 2, 3):  # Bottom, top and back. The window/frame tessellation supplies the front face.
+            other = (index+1) % 4
+            g.face([lo[index], lo[other], hi[other], hi[index]], 'HD', 'edge')
+        def window(t, below):
+            return (a[0]+(b[0]-a[0])*t, a[1]+(b[1]-a[1])*t+.15, a[2]+(b[2]-a[2])*t-below)
+        # Adjacent pieces, not glass layered over a nearly coplanar backing (which causes depth stripes).
+        for start, end, top, bottom, material in ((0, .12, 1, 4, 'dark'), (.88, 1, 1, 4, 'dark'),
+                (.12, .88, 1, 1.55, 'dark'), (.12, .88, 3.45, 4, 'dark'), (.12, .88, 1.55, 3.45, 'glass')):
+            panel(g, [window(end, bottom), window(start, bottom), window(start, top), window(end, top)], 'HD', material)
+    # Compact recessed CT grille; no broad hanging jaw underneath the visor.
+    forward(g, [(14, 10, 5, 0, 41.5), (18.5, 7.5, 3.5, 0, 41.5)], 'CT', 'edge', .25)
+    panel(g, [(-2.7, 18.53, 42.4), (2.7, 18.53, 42.4),
+              (2.7, 18.53, 40.6), (-2.7, 18.53, 40.6)], 'CT', 'metal')
+    for z in (40.85, 41.5, 42.15):
+        panel(g, [(-2.3, 18.59, z+.1), (2.3, 18.59, z+.1),
+                  (2.3, 18.59, z-.1), (-2.3, 18.59, z-.1)], 'CT', 'edge')
 
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         hip, knee, ankle = (side*10.5, -2, 29), (side*14, -10, 18.5), (side*15, -1, 5)
@@ -375,7 +386,8 @@ def king_crab(g):
         shoulder, elbow = (side*22, -1, 44), (side*30, 0, 34)
         g.joint(arm, shoulder, 'CT')
         g.joint(arm+'-forearm', elbow, arm)
-        g.beam((side*20, -1, 44), (side*25, -1, 44), 10, 10, arm, 'edge', 6)
+        # Keep the shoulder end cap outside the x=+/-25 shell wall, not coplanar with it.
+        g.beam((side*20, -1, 44), (side*25.4, -1, 44), 10, 10, arm, 'edge', 6)
         g.beam(shoulder, elbow, 7, 8, arm, 'metal')
         for form in ('forearm', 'hand', 'wrist', 'elbow'):
             g.joint(arm+'@'+form, elbow, arm if form == 'elbow' else arm+'-forearm')

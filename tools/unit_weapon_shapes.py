@@ -733,6 +733,25 @@ def _infantry_melee(geometry, group, rule):
     geometry.emitter(contact, (0, 1, 0), group, 'contact', 'melee')
 
 
+def _partial_wing(geometry, group):
+    """Paired swept lifting surfaces with raised tips; +Y is forward, so the whole module lies behind its root."""
+    geometry.box((0, -2, 0), (12, 4, 4), group, 'metal')
+    wing = Geometry()
+    sections = [(4, -1, -7, 1), (13, -1.5, -10, 3), (24, -4, -11, 5), (30, -5, -9, 10)]
+    rings = [[(x, front, z+.6), (x, back, z+.6), (x, back, z-.6), (x, front, z-.6)]
+             for x, front, back, z in sections]
+    wing.loft(rings, group, 'paint')
+    # A continuous darker leading edge emphasizes the bent, aerodynamic silhouette at board scale.
+    for a, b in zip(sections, sections[1:]):
+        wing.face([(a[0], a[1], a[3]+.62), (a[0], a[1]-1.2, a[3]+.62),
+                   (b[0], b[1]-1.2, b[3]+.62), (b[0], b[1], b[3]+.62)], group, 'edge')
+    for side in (-1, 1):
+        geometry.beam((side*5, -.5, 1), (side*5, -6, 1), 4, 4, group, 'metal', sides=3)
+        for triangle, _, material in wing.faces:
+            points = [(side*x, y, z) for x, y, z in triangle]
+            geometry.face(list(reversed(points)) if side < 0 else points, group, material)
+
+
 def _detailed(geometry, mount, rule, position, scale):
     """Author small equipment at one local origin; transform mesh and contacts together."""
     shape, group, look = Geometry(), mount['location'], rule['look']
@@ -750,6 +769,8 @@ def _detailed(geometry, mount, rule, position, scale):
         _infantry_melee(shape, group, rule)
     elif look in ('bomb-rack', 'mine-launcher', 'screen-launcher', 'extinguisher'):
         _support(shape, group, rule)
+    elif look == 'partial-wing':
+        _partial_wing(shape, group)
     else:
         raise ValueError('Unknown equipment look: '+look)
     facing = -1 if mount['rear'] else 1

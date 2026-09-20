@@ -34,6 +34,13 @@ Exact model overrides precede chassis entries, then the normal family fallback. 
 
 Structure changes replace that unit's assembly tree. Mesh buffers are shared; material state, damage and joint transforms remain per instance. Required weapons without authored mappings use weapon-family fallbacks. Armor, structure, ammo and logical weapon containers allocate no modules. Optional misc needs an explicit mapping and has no generic fallback.
 
+Inner Sphere and Clan Mek Partial Wing share one 96-triangle deployed paired-wing module. The renderer uses
+the existing rear-torso mounting height, seats the root on the actual back with the shared surface picker, and
+derives the span from the bare body's width. Named chassis and all fallback layouts use this placement without
+individual wing sockets. The pair follows torso animation, inherits
+paint/camouflage and equipment damage, and does not occupy weapon or jump-jet mounting space. Critical slots
+spread across the torsos still produce one assembly. ProtoMek and Battle Armor wing art is not mapped by this Mek recipe.
+
 Conventional infantry and Battle Armor retain their approved figure meshes. Dynamic equipment attachment for
 these families is deliberately deferred until the end; passenger equipment must not be attached to transports.
 
@@ -59,6 +66,11 @@ It covers proportions, weight classes, parts/joints, effects, damage, supports a
 Run `python tools/build_modular_unit_models.py` in mm-data after exporting the equipment catalog described in `tools/unit-models/MODULAR_MODELS_C1.md`. This creates finite reusable components, not variant/headcount combinations. Add a global canonical-ID mapping in `tools/unit-models/weapons.json` to reuse or replace an equipment mesh everywhere; optional object mappings may also specify `bankFamily`.
 
 In MegaMek, the `UnitModelDescriptorTest` validates these assets through the actual loader contract. The native `GpuModularUnitModelsSmokeTest` assembles real stock units and a custom refit, validates bindings and writes top/isometric review images. Run the focused tests and `:megamek:gpuBoardSmoke --tests '*GpuModularUnitModelsSmokeTest'`, then `:megamek:stageDataFiles` to update local game data.
+
+`GpuPartialWingSmokeTest` reviews every current Mek body with both wing types and each torso as the primary
+critical location. It also writes `partial-wing-{locust,atlas,marauder}-{isometric,top}.png` to MegaMek's
+`build/gpu-board-review/`, using real stock loadouts with the wing added. Each image shows the front at left
+and the rear at right. Run `:megamek:gpuBoardSmoke --tests '*GpuPartialWingSmokeTest'` to reproduce the renders.
 
 Full baked loadouts and old formation files live in **`tools/unit-models/references/legacy/units`**, outside deployed data. Historical verification copies are in `tools/unit-models/references/verification`. They remain visual targets; no game mapping points to them. `build_unit_models.py` is a legacy reference tool and refuses output beneath `data/`.
 
