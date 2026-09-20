@@ -19,6 +19,8 @@ Existing full-loadout meshes under `references/legacy/units/` are visual referen
 3. **Author a bare component and its recipe.** Use the source/helper listed in section 4. Separate rigid moving
    parts and damage locations while constructing the geometry. Do not generate stock/custom loadout combinations,
    casualty combinations, terrain-specific leg lengths, or preassembled troop groups.
+   **Mek prerequisite: physically split HD, CT, LT and RT into their correct drawable regions, even when the
+   reference has one continuous carapace.** A joined shell assigned to one location cannot pass review.
 4. **Export schema-2 components.** `build_modular_unit_models.py` runs in ordinary Python. Blender is optional for
    authoring or inspection; neither Blender, MCP nor Python runs when a map loads. Java assembles the captured unit
    using the same code for game rendering and native reviews.
@@ -178,11 +180,24 @@ vehicles. Infantry/BA keep embedded rifle/cannon details; additional dynamic equ
 
 ### Required Mek anatomy and damage ownership
 
-Every bare Mek requires actual drawable `HD`, `CT`, `LT`, `RT` surfaces, plus its appropriate arms and legs.
-**An empty LT/RT node or a socket named LT/RT is not a torso mesh.** Each armor surface must belong to the correct
-location so damage, detachment and attachments work independently. Do not label an entire joined torso as CT.
-The migration helper `split_torso_locations()` partitions joined shells without changing their silhouette; new
-body functions should label torso regions explicitly along their actual seams.
+**Mandatory prerequisite for every authored Mek, including fallbacks:** physically partition the body into
+actual drawable `HD`, `CT`, `LT`, `RT` regions, plus its appropriate arms and legs. This applies even when the
+reference shows one continuous carapace. The split may be visually seamless, but the exported triangles must
+belong to separate location nodes so the native damage renderer can affect each region independently.
+
+**Empty nodes, sockets, token triangles or cosmetic color divisions do not satisfy this requirement.** Every
+visible surface must have the correct damage owner. Do not assign the whole joined shell to CT or HD. Keep
+attachment parents and location tags consistent, and cap the cuts exposed by detachable parts.
+
+For the **King Crab**, `HD` is the **entire visor/front band**, including all its glass and framing. It is part
+of the carapace, not a hanging chin. The roof and hull behind/above it are split into central `CT`, left `LT` and
+right `RT` shells; side-shell hardpoints belong to their corresponding torso. Losing HD removes the complete
+visor without taking the three torso shells with it. Damaging one torso must not stain either of the others.
+
+The migration helper `split_torso_locations()` can partition old joined shells, but its presence is not proof
+of correct ownership. New body functions must label their regions explicitly. Before acceptance, inspect a
+color-coded ownership render and native previews damaging HD/CT/LT/RT **one at a time**, plus an HD-only removal.
+Named nodes passing descriptor validation do not replace this visual check.
 
 - Root → pelvis → CT at the waist. Head, side torsos and shoulder joints follow CT; hips/legs follow pelvis.
   Keep upper/lower-body separation clean through ±60° torso twist.
@@ -204,7 +219,7 @@ limits and accepted roles. Rear ports must actually clear the rear armor; inspec
 | Mek recipe field | Current modular meaning |
 |---|---|
 | `hip` | Sprite-coordinate waist reference; keep on the centerline under the torso. |
-| `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
+| `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab and Locust. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
 | `sockets`, `rearSockets` | Front/rear placement for each real location. Without explicit rear placement the legacy nine-unit offset is used; author rear sockets where that would bury a barrel. |
 | `exhaustSockets` | Optional jump-jet positions by location, independent of rear weapon ports. Keep the nozzle attached to the hull/leg, especially on a long overhanging torso; its exhaust points down. |
 | `armSockets` | Hand/wrist/elbow locations matching the optional actuator geometry. |
@@ -264,6 +279,8 @@ Keys are upper-leg **roles**, not node names: `leftLeg`, `rightLeg`, `CL` for bi
 validates the direction, roles and joint chain before loading. Missing metadata preserves existing forward-bend
 behavior; do not infer anatomy from chassis names, weight or equipment. It is presentation data, not a new Entity
 game rule or a second unit catalog.
+An authored reverse-knee rest shape alone is insufficient: without `legBends`, the animator can bend it forward
+once movement starts. Locust keeps its existing 358-triangle geometry and declares both reverse legs in its recipe.
 
 The shared distance-driven foot path and cadence serve both bend directions; the rig chooses the knee branch of
 the same two-segment solve. Crouch/jump and recovery also respect the declared bend. Do not add a second gait,
@@ -395,7 +412,7 @@ outputs must pass its actual native screenshot folder to the gallery packager. T
 
 For a named Mek, add its bare geometry function and `build_chassis` mapping in `unit_mek_chassis.py`, then a
 `chassis.json` entry with `name/id/referenceVariant/sprite/illustration/hip/sockets/weaponScale` and useful optional
-fields from section 5. Add explicit LT/CT/RT ownership and the existing limb roles. Follow the chosen class's
+fields from section 5. Add the mandatory HD/CT/LT/RT geometry split and existing limb roles. Follow the chosen class's
 fallback lineup for scale while preserving the reference silhouette. Do not copy another chassis's dimensions
 and simply rename it.
 
@@ -424,8 +441,9 @@ an incompatible custom refit must fall back safely. Custom assets must not share
 - [ ] Bare mesh, reproducible source recipe, descriptor and manifest agree; no loadout/group combinations in data.
 - [ ] Same-family lineup at shared board/family tuning; correct weight/size proportions and no double scaling.
 - [ ] Report bare/equipment/assembled triangle counts; all hard caps respected.
-- [ ] Required surfaces contain triangles, including all three Mek torso locations; independent location damage
-      and detached limbs leave no floating attachments. All rig controls/ports resolve to real nodes.
+- [ ] **Mek acceptance gate:** HD/CT/LT/RT are the correct physical regions, including continuous carapaces.
+      Inspect color-coded ownership, separate native damage previews for each region and HD-only removal.
+      Empty/token nodes fail. Detached limbs leave no floating attachments; rig controls/ports resolve to real nodes.
 - [ ] Stock/custom loadout and hand/wrist/elbow/rear mounting checks; no baked searchlights or generic hidden guns.
 - [ ] Camouflage and every applicable damage stage in the native shader; intact areas stay readable.
 - [ ] Walk/run/jump/attack/idle/death as applicable, foot contact and correct facing; pause/skip/restored state.
