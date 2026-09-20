@@ -96,11 +96,10 @@ def build(output, catalog):
         joints.update({side+'Arm': side+'Arm', side+'Forearm': side+'ArmForearm', side+'Leg': side+'Leg',
                        side+'Shin': side+'LegShin', side+'Foot': side+'LegFoot'})
     for kind, armored, jump in (('rifle', False, False), ('jump', False, True), ('battle-armor', True, False)):
-        for pose in ('standing', 'advancing', 'kneeling'):
-            key = 'troops/'+kind+'-'+pose
-            troop = bake_height(person(pose, armored=armored, jump=jump, modular=True), armored=armored)
-            assets[key] = export_asset(troop, output, key, 'troop', 'battle-armor' if armored else 'infantry',
-                                       'trooper-v1', joints)
+        key = 'troops/'+kind+'-standing'
+        troop = bake_height(person('standing', armored=armored, jump=jump, modular=True), armored=armored)
+        assets[key] = export_asset(troop, output, key, 'troop', 'battle-armor' if armored else 'infantry',
+                                   'trooper-v1', joints)
     for kind in ('motorized', 'tracked', 'wheeled', 'hover'):
         key = 'transports/'+kind
         transport = bake_height(infantry_vehicle(kind, modular=True))
@@ -127,11 +126,9 @@ def build(output, catalog):
                                          'note': 'Reusable components; the Java renderer assembles formations/loadouts.'})
     for family, prefix in (('infantry', 'rifle'), ('battle-armor', 'battle-armor')):
         descriptor = {'schema': 2, 'kind': 'formation', 'family': family,
-                      'poses': ['units/modular/troops/'+prefix+'-'+pose+'.json'
-                                for pose in ('standing', 'advancing', 'kneeling')]}
+                      'trooper': 'units/modular/troops/'+prefix+'-standing.json'}
         if family == 'infantry':
-            descriptor['jumpPoses'] = ['units/modular/troops/jump-'+pose+'.json'
-                                       for pose in ('standing', 'advancing', 'kneeling')]
+            descriptor['jumpTrooper'] = 'units/modular/troops/jump-standing.json'
             descriptor['vehicles'] = {mode: 'units/modular/transports/'+kind+'.json' for mode, kind in
                                       (('INF_MOTORIZED', 'motorized'), ('TRACKED', 'tracked'),
                                        ('WHEELED', 'wheeled'), ('HOVER', 'hover'))}

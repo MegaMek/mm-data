@@ -22,6 +22,12 @@ The exporter and runtime validator check this independently of the bare body and
 - `modular/families/`: shared vehicle, aircraft, naval, ProtoMek, static and squadron fallback descriptors, verified at C4.
 - `modular/manifest.json`: the current reusable asset inventory, bounds and triangle counts.
 
+Troop recipes use one `trooper` asset and, for conventional jump infantry, an optional
+`jumpTrooper` asset. The three `troops/*-standing` meshes are the base rigs; kneeling,
+watching, walking and jumping are runtime joint animations. Advancing and kneeling
+mesh variants are no longer shipped or exported. Jump packs remain equipment-specific
+geometry with emitters attached to the animated torso.
+
 Mekset paths are relative to `data/models`:
 
 ```text
