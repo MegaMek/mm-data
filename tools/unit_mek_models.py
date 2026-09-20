@@ -4,7 +4,7 @@ There is deliberately no loadout selection or packing here; Java owns both for p
 """
 from math import sqrt
 
-from unit_mek_chassis import build_chassis, forward, panel, upright
+from unit_mek_chassis import build_chassis, forward, panel, split_torso_locations, upright
 from unit_model_geometry import Geometry, sub
 
 # Authored proportions, baked into each body's vertices, joints and sockets; never runtime size multipliers.
@@ -222,44 +222,6 @@ def aim_rotation(aim):
         return [0, 0, 1, 0]
     scale = sqrt(2*(1+y))
     return [z/scale, 0, -x/scale, scale/2]
-
-
-def split_torso_locations(body):
-    """Give joined torso shells real side locations without changing their visible silhouette."""
-    if all(any(node == location for _, node, _ in body.faces) for location in ('LT', 'RT')):
-        return
-    shell = [tri for tri, node, _ in body.faces if node == 'CT']
-    if not shell:
-        return
-    edge = max(abs(p[0]) for tri in shell for p in tri) * .38
-
-    def clip(points, plane, sign):
-        result = []
-        for index, a in enumerate(points):
-            b = points[(index+1) % len(points)]
-            inside_a, inside_b = sign*(a[0]-plane) >= 0, sign*(b[0]-plane) >= 0
-            if inside_a:
-                result.append(a)
-            if inside_a != inside_b:
-                t = (plane-a[0])/(b[0]-a[0])
-                result.append(tuple(a[axis]+(b[axis]-a[axis])*t for axis in range(3)))
-        return result
-
-    faces = []
-    for tri, node, material in body.faces:
-        if node != 'CT':
-            faces.append((tri, node, material))
-            continue
-        regions = [('LT', clip(tri, -edge, -1)), ('CT', clip(clip(tri, -edge, 1), edge, -1)),
-                   ('RT', clip(tri, edge, 1))]
-        for location, polygon in regions:
-            for index in range(1, len(polygon)-1):
-                tri = (polygon[0], polygon[index], polygon[index+1])
-                a, b = sub(tri[1], tri[0]), sub(tri[2], tri[0])
-                area = sum((a[(i+1)%3]*b[(i+2)%3]-a[(i+2)%3]*b[(i+1)%3])**2 for i in range(3))
-                if area > 1e-12:
-                    faces.append((tri, location, material))
-    body.faces = faces
 
 
 def build_meks(recipes, output, export_asset, write_json):
