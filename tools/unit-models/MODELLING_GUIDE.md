@@ -35,6 +35,9 @@ The current infantry export bakes +10% height into conventional troops/transport
 `UnitFamilyScale.java` is the single runtime fine-tuning table: each family's `UNIT_SCALE` and `HEIGHT_SCALE`
 start at `1.0f` and multiply the board-wide settings. `UNIT_SCALE` affects every axis; `HEIGHT_SCALE` adds a
 vertical-only multiplier. Multi-hex models use their dedicated board scale before the family multipliers.
+Infantry layout accounts for the final scale and each member's footprint. Reposition to fit where possible;
+crowded formations may extend beyond the hex. Preserve requested mesh sizes instead of capping them or
+overlapping vehicles. Troops must finish unloading into positions clear of parked transports.
 
 ## 1. The steps
 
