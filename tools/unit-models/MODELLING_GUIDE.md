@@ -219,7 +219,7 @@ limits and accepted roles. Rear ports must actually clear the rear armor; inspec
 | Mek recipe field | Current modular meaning |
 |---|---|
 | `hip` | Sprite-coordinate waist reference; keep on the centerline under the torso. |
-| `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
+| `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab and Locust. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
 | `sockets`, `rearSockets` | Front/rear placement for each real location. Without explicit rear placement the legacy nine-unit offset is used; author rear sockets where that would bury a barrel. |
 | `exhaustSockets` | Optional jump-jet positions by location, independent of rear weapon ports. Keep the nozzle attached to the hull/leg, especially on a long overhanging torso; its exhaust points down. |
 | `armSockets` | Hand/wrist/elbow locations matching the optional actuator geometry. |
@@ -279,6 +279,8 @@ Keys are upper-leg **roles**, not node names: `leftLeg`, `rightLeg`, `CL` for bi
 validates the direction, roles and joint chain before loading. Missing metadata preserves existing forward-bend
 behavior; do not infer anatomy from chassis names, weight or equipment. It is presentation data, not a new Entity
 game rule or a second unit catalog.
+An authored reverse-knee rest shape alone is insufficient: without `legBends`, the animator can bend it forward
+once movement starts. Locust keeps its existing 358-triangle geometry and declares both reverse legs in its recipe.
 
 The shared distance-driven foot path and cadence serve both bend directions; the rig chooses the knee branch of
 the same two-segment solve. Crouch/jump and recovery also respect the declared bend. Do not add a second gait,
