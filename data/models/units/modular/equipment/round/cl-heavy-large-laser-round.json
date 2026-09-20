@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "laser",
+  "mesh": "cl-heavy-large-laser-round.g3dj",
+  "bounds": {
+    "min": [
+      -1.874999979176021,
+      -2.0,
+      -1.874999979176021
+    ],
+    "max": [
+      1.874999979176021,
+      3.23,
+      1.874999979176021
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0.0,
+        3.23,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "beam",
+      "effect": "laser"
+    }
+  ]
+}
