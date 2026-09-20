@@ -27,6 +27,21 @@ Existing full-loadout meshes under `references/legacy/units/` are visual referen
 6. **Register and validate.** Add the modular model to mekset, run section 8's checks, then stage the reviewed assets
    into MegaMek. Keep the source recipe, generated descriptor/mesh, manifest and review evidence together.
 
+### Work on related chassis together
+
+Prefer a missing chassis with many variants so one bare model covers many live loadouts. Before authoring, search
+the actual unit definitions and mekset for its related **chassis names**, including numbered successors, IIC, LAM
+and LAM Mk I designs. Review and author those relatives in the same batch; reuse appropriate geometry helpers but
+export **separate body/assembly files and mekset mappings for each chassis**. Do not select by fuzzy name matching
+or assume every relative is just a reskin: weight, proportions, topology and LAM conversion still follow its own
+unit/reference. For example, Hunchback and Hunchback IIC are separate bodies; Wasp, Wasp LAM and Wasp LAM Mk I need
+their own files and conversion review where applicable.
+
+Distinguish a numbered **model/variant** such as King Crab KGC-001 from a numbered **chassis**. Ordinary loadout
+variants share the chassis body and assemble equipment from the live Entity. Only an actual structural/art
+exception needs an exact modular override. Record the related-chassis search and any such exceptions alongside
+the reference brief; never manufacture a nonexistent relative or pre-generate its weapon combinations.
+
 Asset ownership: `Geometry`/Python owns authored shape; `MekTileset` selects a model; `UnitModelState` captures visible
 Entity data; `GpuUnitModels` and the existing family assemblers own shared mesh buffers; each displayed instance
 owns its pose/materials. `UnitAnimator`/`UnitPlayback` own one presentation timeline for both cameras. Do not add a
@@ -84,8 +99,10 @@ five-class lineup after a recipe change; never patch only a deployed mesh or its
 cockpit or armor panels also requires moving its front/rear hardpoints and optional searchlight socket.
 
 Verified reference units in `data/mekfiles/meks/`: Locust LCT-1V is 20t/light; Warhammer WHM-6R and Archer ARC-2R
-are 70t/heavy; Marauder MAD-3R and Mad Cat Prime are 75t/heavy; Atlas AS7-D and Mackie MSK-6S are 100t/assault.
-There is no named medium in the current seven-chassis set. Do not label one of the heavy examples as medium to
+are 70t/heavy; Marauder MAD-3R and Mad Cat Prime are 75t/heavy; Atlas AS7-D, Mackie MSK-6S and King Crab KGC-000
+are 100t/assault. The King Crab review uses one shared classic-style shell for all 14 current refits, with rear
+carapace launcher mounts and equipment inside the claws; see [its reference brief](references/king-crab/README.md).
+There is no named medium in the current authored set. Do not label one of the heavy examples as medium to
 fill that gap. Use a deliberate intermediate design and compare its body volume with both neighboring classes.
 
 ### Board/family fine-tuning
@@ -187,9 +204,12 @@ limits and accepted roles. Rear ports must actually clear the rear armor; inspec
 | Mek recipe field | Current modular meaning |
 |---|---|
 | `hip` | Sprite-coordinate waist reference; keep on the centerline under the torso. |
+| `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
 | `sockets`, `rearSockets` | Front/rear placement for each real location. Without explicit rear placement the legacy nine-unit offset is used; author rear sockets where that would bury a barrel. |
+| `exhaustSockets` | Optional jump-jet positions by location, independent of rear weapon ports. Keep the nozzle attached to the hull/leg, especially on a long overhanging torso; its exhaust points down. |
 | `armSockets` | Hand/wrist/elbow locations matching the optional actuator geometry. |
 | `socketAim` | +Y-forward replacement direction, by location or `LOC:family`; an arm gun must follow its forearm. |
+| `socketNodes` | Optional parent override by `LOC:family`, e.g. `"LL:jump-jet":"LL-shin"`. Use when equipment moves with a different segment of the same location; positions still use the common authoring coordinates. |
 | `socketBanks` | Authored positions for a weapon family, including actuator-specific keys such as `LA@wrist:ppc`. |
 | `mountAreas` | Available width/height for packing each location. Java performs live packing, not Python. |
 | `missileSockets`, `missileBayHeight/Width/Columns`, `missileSlope` | Location-specific launcher placement and available bay shape. Tubes remain weapon geometry. |
@@ -225,6 +245,31 @@ jump/idle/shoot/death and the family's actual conversion. Infantry members remai
 Mek punch/kick: walk into reach, plant feet, strike, recover and run back. Push raises arms during the run-in;
 overhead weapons raise on approach and strike at contact; lance/spear can thrust. Center tripod legs never kick.
 Review at half/normal/double/Instant speed, including skip, pause and final rest pose.
+
+### Leg anatomy and reusable gait
+
+Author each leg as a **hip → knee → ankle/foot** node chain, with pivots at the actual joints and the sole at Z=0.
+In +Y-forward coordinates, a reverse knee sits **behind** the hip-to-ankle line: the upper segment slopes back and
+the lower segment returns forward. Keep the foot independent so it stays level during support. Move leg-mounted
+equipment/exhaust sockets with the anatomy; check that exhaust clears the knee throughout the jump tuck.
+
+Declare the bend in the chassis recipe, which exports it unchanged into the bare body descriptor:
+
+```json
+"legBends": {"leftLeg": "reverse", "rightLeg": "reverse"}
+```
+
+Keys are upper-leg **roles**, not node names: `leftLeg`, `rightLeg`, `CL` for bipeds/tripods; `FLL`, `FRL`, `RLL`,
+`RRL` for quads; `leg0`–`leg3` for rigs using numbered legs. This allows mixed front/rear anatomy. The descriptor
+validates the direction, roles and joint chain before loading. Missing metadata preserves existing forward-bend
+behavior; do not infer anatomy from chassis names, weight or equipment. It is presentation data, not a new Entity
+game rule or a second unit catalog.
+
+The shared distance-driven foot path and cadence serve both bend directions; the rig chooses the knee branch of
+the same two-segment solve. Crouch/jump and recovery also respect the declared bend. Do not add a second gait,
+chassis-specific animator, or reverse the movement direction to reverse a knee. Review front and side views of
+walk/run, backwards/lateral movement, acceleration/deceleration, jump/tuck and crouch/recovery. Measure actual
+planted-foot drift against ground travel, and check the knee never flips across the hip-to-ankle line.
 
 Forced Mek falls use the engine's stored `FallSide` and final facing, fall inside the occupied hex, then get up
 through bracing/kneeling. Voluntary prone is a controlled crouch. Infantry poses are cosmetic and do not use

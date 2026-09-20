@@ -1,4 +1,4 @@
-"""Four deliberately simple silhouettes, authored against the repository's Mek illustrations.
+"""Recognizable bare silhouettes, authored against the repository's sprites and Mek illustrations.
 
 These are chassis anatomy, not equipment or game rules. The variant assembler adds
 the actual guns and launchers. +Y faces forward; all dimensions are authoring units.
@@ -306,6 +306,96 @@ def mackie(g):
     g.beam((28.5, 5, 45), (28.5, 7, 45), 17, 17, 'RA@elbow', 'edge', 8)
 
 
+def king_crab(g):
+    # A broad low carapace, slit cockpit and open pincers: the guns inside them are live equipment.
+    g.box((0, -2, 29), (24, 13, 7), 'pelvis', 'metal', .35)
+    g.box((0, -2, 34), (17, 11, 5), 'CT', 'edge', .3)
+
+    def shell_ring(x, rear, front, low, high):
+        depth = high-low
+        return [(x, rear+3, low+depth*.35), (x, front-4, low), (x, front, low+7),
+                (x, front-2, high-3), (x, front-9, high), (x, rear+4, high),
+                (x, rear, high-4), (x, rear, low+depth*.55)]
+
+    # Three individually closed shells share their cut edges; damage never uses empty side-torso nodes.
+    inner = (-30, 16, 36, 56)
+    mid = (-28, 12, 37, 55)
+    outer = (-22, 6, 40, 50)
+    g.loft([shell_ring(-7, *inner), shell_ring(7, *inner)], 'CT')
+    for side, torso in ((-1, 'LT'), (1, 'RT')):
+        rings = [shell_ring(side*7, *inner), shell_ring(side*18, *mid), shell_ring(side*24, *outer)]
+        g.loft(rings if side == 1 else list(reversed(rings)), torso)
+        # Back heat-exchanger recesses stay part of the hull, not optional searchlights or weapon barrels.
+        g.box((side*13, -29, 50), (8, 3, 7), torso, 'metal')
+        # Raised rear mounting shoulders support forward-firing weapons; these are not rear-firing ports.
+        g.box((side*16, -21, 55.5), (9, 12, 3), torso, 'edge', .3)
+
+    # A shallow pointed prow, with a wraparound visor tucked under its roof rather than a separate head box.
+    outline = [(-17, 5), (17, 5), (21, 12), (14, 21), (6, 24), (-6, 24), (-14, 21), (-21, 12)]
+    roof = lambda y: 55-(y-5)*.24
+    g.loft([[(x, y, roof(y)-4.2) for x, y in outline],
+            [(x, y, roof(y)-1.4) for x, y in outline],
+            [(x*.94, y-.5, roof(y)) for x, y in outline]], 'HD')
+    for index in range(2, 7):
+        a, b = outline[index], outline[(index+1) % len(outline)]
+        dx, dy = b[0]-a[0], b[1]-a[1]
+        length = (dx*dx+dy*dy)**.5
+
+        def window(t, above, offset):
+            x, y = a[0]+dx*t, a[1]+dy*t
+            return (x+dy/length*offset, y-dx/length*offset, roof(y)-4.2+above)
+
+        panel(g, [window(.03, .3, .04), window(.97, .3, .04),
+                  window(.97, 2.55, .04), window(.03, 2.55, .04)], 'HD')
+        panel(g, [window(.14, .65, .07), window(.86, .65, .07),
+                  window(.86, 2.2, .07), window(.14, 2.2, .07)], 'HD', 'glass')
+    forward(g, [(10, 11, 6, 0, 40), (16, 8, 4, 0, 39)], 'CT', 'edge', .25)
+    panel(g, [(-3.2, 16.03, 40.3), (3.2, 16.03, 40.3),
+              (3.2, 16.03, 38), (-3.2, 16.03, 38)], 'CT', 'metal')
+    for z in (38.45, 39.2, 39.95):
+        panel(g, [(-2.7, 16.06, z+.14), (2.7, 16.06, z+.14),
+                  (2.7, 16.06, z-.14), (-2.7, 16.06, z-.14)], 'CT', 'edge')
+
+    for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
+        hip, knee, ankle = (side*10.5, -2, 29), (side*14, -10, 18.5), (side*15, -1, 5)
+        g.joint(leg, hip, 'pelvis')
+        g.joint(leg+'-shin', knee, leg)
+        g.beam((side*8, -2, 29), (side*14, -2, 29), 10, 10, leg, 'edge', 6)
+        g.beam(hip, knee, 10, 11, leg, 'paint', 4, .85)
+        # The knee sits behind both hip and ankle; the shin slopes forward to the planted foot.
+        g.box((knee[0], knee[1], 19), (10, 10, 5), leg+'-shin', 'edge', .45)
+        upright(g, [(5, 9, 9, ankle[0], -1), (13, 12, 13, side*15, -5.5),
+                    (18, 9, 9, knee[0], -9.5)], leg+'-shin', cut=.5)
+        # Broad multi-toed armored feet, not the thin bird toes used by lighter reverse-knee Meks.
+        g.joint(leg+'-foot', ankle, leg+'-shin')
+        upright(g, [(0, 15, 18, ankle[0], 3), (4, 12, 14, ankle[0], 1)], leg+'-foot', cut=.65)
+        for offset in (-4.3, 4.3):
+            g.box((ankle[0]+offset, 10.7, 1.1), (3, 2.5, 2.2), leg+'-foot', 'metal')
+
+        shoulder, elbow = (side*22, -1, 44), (side*30, 0, 34)
+        g.joint(arm, shoulder, 'CT')
+        g.joint(arm+'-forearm', elbow, arm)
+        g.beam((side*20, -1, 44), (side*25, -1, 44), 10, 10, arm, 'edge', 6)
+        g.beam(shoulder, elbow, 7, 8, arm, 'metal')
+        for form in ('forearm', 'hand', 'wrist', 'elbow'):
+            g.joint(arm+'@'+form, elbow, arm if form == 'elbow' else arm+'-forearm')
+        # With lower-arm actuators, a short armored cuff ends behind the open claw.
+        forward(g, [(-4, 11, 12, side*30, 34), (3, 13, 13, side*30, 34),
+                    (8, 10, 10, side*30, 34)], arm+'@forearm', cut=.4)
+        # The alternate no-hand/no-lower-arm housings remain open at the gun end.
+        for form, start in (('elbow', -3), ('wrist', 7)):
+            for vertical in (-1, 1):
+                forward(g, [(start, 11, 3, side*30, 34+vertical*5.2),
+                            (16, 9, 2.5, side*30, 34+vertical*4.5)], arm+'@'+form, 'paint', 0)
+            g.box((side*35, (start+13)/2, 34), (2, 13-start, 9), arm+'@'+form, 'edge')
+        # Upper/lower pincer fingers frame a real equipment aperture, with a visible gap when bare.
+        for vertical in (-1, 1):
+            forward(g, [(6, 12, 4, side*30, 34+vertical*6),
+                        (13, 13, 4, side*30, 34+vertical*7),
+                        (20, 9, 3, side*30, 34+vertical*4.5)], arm+'@hand', 'paint', .3)
+        g.box((side*35, 10, 34), (2.5, 6, 11), arm+'@hand', 'edge')
+
+
 def build_chassis(recipe, modular=False):
     g = Geometry(modular=modular)
     hip = recipe['hip']
@@ -315,7 +405,7 @@ def build_chassis(recipe, modular=False):
         x, y, z = recipe['sockets'][location]
         g.joint(location, (x-42, 36-y, z), 'CT')
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
-                'marauder': marauder, 'archer': archer, 'mackie': mackie}
+                'marauder': marauder, 'archer': archer, 'mackie': mackie, 'king-crab': king_crab}
     builders[recipe['id']](g)
     if modular:
         # Optional anatomy remains separate; the runtime keeps the parts matching the actual actuators.

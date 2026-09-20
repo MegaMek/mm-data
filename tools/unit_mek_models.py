@@ -280,6 +280,7 @@ def build_meks(recipes, output, export_asset, write_json):
         def mount(identifier, location, pixel, *, rear=False, family='', form='', bay=False, node=None):
             if node is None:
                 node = location+'-forearm' if location in ('LA', 'RA') and form != 'elbow' else location
+                node = recipe.get('socketNodes', {}).get(location+':'+family, node)
             aim = (0, -1, 0) if rear else recipe.get('socketAim', {}).get(location+':'+family,
                                                recipe.get('socketAim', {}).get(location, (0, 1, 0)))
             size = recipe.get('mountAreas', {}).get(location, {})
@@ -321,7 +322,8 @@ def build_meks(recipes, output, export_asset, write_json):
             rear = recipe.get('rearSockets', {}).get(location, [pixel[0], pixel[1]+9, pixel[2]])
             mount(location+'-rear', location, rear, rear=True)
             # Exhaust is a separate rear mounting preference, never a front-facing gun socket.
-            mount(location+'-exhaust', location, [rear[0], rear[1], min(rear[2], 29)], family='jump-jet')
+            exhaust = recipe.get('exhaustSockets', {}).get(location, [rear[0], rear[1], min(rear[2], 29)])
+            mount(location+'-exhaust', location, exhaust, family='jump-jet')
             if recipe.get('barrelLength'):
                 mount(location+'-ppc', location, pixel, family='ppc')
         for location in ('LA', 'RA'):
@@ -380,7 +382,8 @@ def build_meks(recipes, output, export_asset, write_json):
                     joints[location+'Foot'] = location+'-foot'
         key = 'bodies/'+recipe['id']
         topology = recipe.get('topology', 'biped')
-        assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints)
+        assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints,
+                                   leg_bends=recipe.get('legBends'))
         descriptor = {
             'schema': 2, 'kind': 'mek', 'body': 'units/modular/'+key+'.json',
             'equipment': 'units/modular/equipment.json', 'mounts': mounts,

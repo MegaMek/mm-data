@@ -63,7 +63,7 @@ def archive_superseded_modules(output, assets):
     print(f'Archived {count} superseded generated equipment files')
 
 
-def export_asset(geometry, output, key, kind, family, rig, joints, hardpoints=()):
+def export_asset(geometry, output, key, kind, family, rig, joints, hardpoints=(), *, leg_bends=None):
     if kind == 'equipment' and len(geometry.faces) > EQUIPMENT_TRIANGLE_LIMIT:
         raise ValueError(f'{key}: equipment has {len(geometry.faces)} triangles; maximum {EQUIPMENT_TRIANGLE_LIMIT}')
     descriptor = output / (key+'.json')
@@ -79,6 +79,7 @@ def export_asset(geometry, output, key, kind, family, rig, joints, hardpoints=()
         'bounds': {'min': [axis[0] for axis in stats['bounds']], 'max': [axis[1] for axis in stats['bounds']]},
         'rig': rig, 'joints': joints, 'locations': locations,
         'hardpoints': list(hardpoints), 'emitters': emitters,
+        **({'legBends': leg_bends} if leg_bends else {}),
         **({'landingSupports': geometry.landing_supports} if geometry.landing_supports else {}),
     })
     return stats
