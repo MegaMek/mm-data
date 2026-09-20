@@ -30,6 +30,12 @@ Dynamic equipment attachments for conventional infantry and Battle Armor are def
 Keep their approved figure meshes, including their current rifle/cannon details; equipment-library entries do not
 imply that those items should be attached to figures or their transports now.
 
+Permanent proportion changes belong in the mesh generator, including the matching rig pivots and emitters.
+The current infantry export bakes +10% height into conventional troops/transports and +50% into Battle Armor.
+`UnitFamilyScale.java` is the single runtime fine-tuning table: each family's `UNIT_SCALE` and `HEIGHT_SCALE`
+start at `1.0f` and multiply the board-wide settings. `UNIT_SCALE` affects every axis; `HEIGHT_SCALE` adds a
+vertical-only multiplier. Multi-hex models use their dedicated board scale before the family multipliers.
+
 ## 1. The steps
 
 1. **Pick the Mek and gather references.** Three are used:
