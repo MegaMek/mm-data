@@ -202,6 +202,75 @@ def render(body_id, mesh, views, out, columns=3, title=None):
     return Path(scene.render.filepath)
 
 
+def lineup(entries, out, name='lineup'):
+    """One shared camera over several grounded bodies, so relative proportion reads directly.
+
+    Unlike the six-view sheet, nothing is centred on its own bounds: every body stands on the same
+    ground line at the same scale, because the comparison is the point.
+    """
+    scene = bpy.data.scenes.new(name + ' lineup')
+    scene.render.engine = 'CYCLES'
+    scene.cycles.samples = 24
+    scene.render.image_settings.file_format = 'PNG'
+    scene.view_settings.view_transform = 'Standard'
+    scene.world = bpy.data.worlds.new(name + ' world')
+    scene.world.use_nodes = True
+    scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.22, .28, .35, 1)
+
+    ink = bpy.data.materials.new('Lineup labels')
+    ink.use_nodes = True
+    ink.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value = (1, 1, 1, 1)
+
+    posed = [posed_bounds(mesh, (0, 0, 180)) for _, _, mesh in entries]
+    tallest = max(high.z for _, high in posed)
+    gap = tallest * .12
+    widths = [high.x - low.x for low, high in posed]
+    span = sum(widths) + gap * (len(entries) + 1)
+    front = -tallest * 3
+
+    cursor = -span / 2 + gap
+    for (body_id, caption, mesh), (low, high), width in zip(entries, posed, widths):
+        obj = bpy.data.objects.new(body_id + ' lineup', mesh)
+        obj.rotation_euler = (0, 0, radians(180))
+        # Feet on the shared ground line, not centred: height difference is what is being read.
+        obj.location = (cursor - low.x, 0, -low.z)
+        scene.collection.objects.link(obj)
+        middle = cursor + width / 2
+        label(scene, caption, (middle, front, -tallest * .09), tallest * .046, ink)
+        label(scene, '%.1f' % (high.z - low.z), (middle, front, -tallest * .155), tallest * .038, ink)
+        cursor += width + gap
+
+    # A ground line makes the shared baseline explicit.
+    ground = bpy.data.meshes.new('ground')
+    ground.from_pydata([(-span / 2, front, 0), (span / 2, front, 0),
+                        (span / 2, front, -tallest * .006), (-span / 2, front, -tallest * .006)],
+                       [], [(0, 1, 2, 3)])
+    ground.materials.append(ink)
+    scene.collection.objects.link(bpy.data.objects.new('ground', ground))
+
+    camera_data = bpy.data.cameras.new(name + ' camera')
+    camera_data.type = 'ORTHO'
+    camera_data.ortho_scale = span
+    camera = bpy.data.objects.new(name + ' camera', camera_data)
+    camera.location = (0, -tallest * 6, tallest * .42)
+    camera.rotation_euler = (radians(90), 0, 0)
+    scene.collection.objects.link(camera)
+    scene.camera = camera
+
+    for energy, angles in ((3.2, (58, 0, -35)), (1.1, (72, 0, 130)), (.9, (0, 0, 0))):
+        lamp = bpy.data.lights.new(name + str(energy), 'SUN')
+        lamp.energy = energy
+        lamp_object = bpy.data.objects.new(name + str(energy), lamp)
+        lamp_object.rotation_euler = tuple(radians(a) for a in angles)
+        scene.collection.objects.link(lamp_object)
+
+    scene.render.resolution_x = 460 * len(entries)
+    scene.render.resolution_y = round(scene.render.resolution_x * (tallest * 1.28) / span)
+    scene.render.filepath = str(out / (name + '-lineup.png'))
+    bpy.ops.render.render(write_still=True, scene=scene.name)
+    return Path(scene.render.filepath)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--body', action='append', default=[],
@@ -209,6 +278,10 @@ def main():
     parser.add_argument('--turn', type=float, default=0,
                         help='degrees of upper-body twist, for the waist clearance check')
     parser.add_argument('--output', type=Path, default=ROOT / '.work/body-review')
+    parser.add_argument('--lineup', metavar='NAME',
+                        help='render the named bodies side by side on one ground line instead of sheets')
+    parser.add_argument('--tons', action='append', default=[],
+                        help='tonnage shown beside each --body in a lineup; repeat in the same order')
     args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else [])
     if not args.body:
         parser.error('name at least one --body')
@@ -219,14 +292,18 @@ def main():
               json.loads(RECIPES.read_text(encoding='utf-8'))['chassis']} if RECIPES.exists() else {}
     args.output.mkdir(parents=True, exist_ok=True)
     colors = {}
+    entries = []
     for body_id in args.body:
         path = BODIES / (body_id + '.g3dj')
         if not path.exists():
             raise SystemExit('No such body: ' + str(path))
         expected = manifest.get('bodies/' + body_id)
         mesh = load_body(path, expected, colors)
+        entries.append((body_id, titles.get(body_id, body_id), mesh))
+        if args.lineup:
+            continue
         print('Wrote', render(body_id, mesh, list(VIEWS), args.output, title=titles.get(body_id, body_id)))
-        if args.turn:
+        if args.turn and not args.lineup:
             # The twisted copy is separate geometry; the untwisted views must stay untouched.
             turned = load_body(path, expected, colors, turn=args.turn)
             print('Wrote', render(body_id + '-turn', turned,
@@ -235,6 +312,12 @@ def main():
                                    ('Right %g' % args.turn, (0, 0, -90)),
                                    ('Above %g' % args.turn, (90, 0, 0))],
                                   args.output, columns=4))
+
+    if args.lineup:
+        labelled = [(body_id, '%s  %st' % (title, tons) if tons else title, mesh)
+                    for (body_id, title, mesh), tons
+                    in zip(entries, list(args.tons) + [None] * len(entries))]
+        print('Wrote', lineup(labelled, args.output, args.lineup))
 
 
 main()

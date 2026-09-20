@@ -334,6 +334,10 @@ chassis list at the end of `verify`.
 - [ ] `GpuModularUnitModelsSmokeTest` passes, and the assembled render is reviewed with at least two
       loadouts that differ in weapon family, so a PPC and an autocannon are both seen in the same mount.
 - [ ] Variant sheet rendered and reviewed.
+- [ ] **Same-family lineup** rendered against two neighbours of similar tonnage
+      (`render_modular_body.py --lineup`) and read for width, depth and limb mass rather than height.
+- [ ] Height checked against the weight-class band using the tallest **structural** part. A wire
+      antenna does not count toward it; a mast, housing or sensor array does.
 - [ ] Vents present: at most two front, at most two back, back on torso locations only.
 - [ ] Registered in `mekset.txt` and confirmed present in staged game data.
 - [ ] Nothing committed.

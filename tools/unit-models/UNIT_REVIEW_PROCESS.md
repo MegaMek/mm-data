@@ -48,6 +48,7 @@ variant layout.
 | **the chassis** | bare body, six angles, no loadout | `render_modular_body.py` |
 | **the chassis with weapons** | one variant assembled, six angles | `renderFullReview` |
 | **the variant sheet** | every variant of the chassis in a grid, one angle each, with triangle counts | `GpuVariantSheetReview` |
+| **the lineup** | several bodies of the same family side by side, one camera, feet on one ground line | `render_modular_body.py --lineup` |
 
 The variant sheet is the comparison view: it shows the shared body under every loadout the game will
 hang on it, so a specific variant can be picked out for a closer render. It writes
@@ -64,6 +65,37 @@ A **full render** means all six of those angles on one sheet. Two renderers prod
 Give every test unit a full render, not just the chassis it was authored from. Each variant hangs a
 different loadout on the same body, which is the only way to see whether a pod suits a PPC as well as
 an autocannon.
+
+A **lineup** answers a different question from a sheet: whether a body reads at the right weight
+beside its neighbours. Nothing is centred on its own bounds - every body stands on the same ground
+line at the same scale, because the comparison is the point.
+
+```bash
+blender --background --factory-startup --python tools/render_modular_body.py --     --lineup heavy-lineup --body warhammer --tons 70 --body rifleman --tons 60 --body archer --tons 70
+```
+
+Run one for every new chassis against two neighbours of similar tonnage, and read it for **width,
+depth and limb mass**, not height. The guide is explicit that mass is carried by silhouette rather
+than by making light units small, and the measured heights mislead on their own: the Rifleman at 53.0
+reads plainly lighter than the Warhammer at 52.0, and correctly so.
+
+### Height is measured to the body, not to a wire
+
+The weight-standard rule that "antennas must not be used to inflate a bare body's apparent weight
+class" means **wire-style antennas** - the thin whips on the Archer's head - not a structural sensor
+or communications assembly. A mast carrying a housing and a crossbar is body; a wire is not.
+
+This matters because it changes who is passing honestly:
+
+| Chassis | Measured | Actual body | Difference |
+|---|---:|---:|---|
+| Archer | 61.5 | 55.0 | 6.5 of wire antenna |
+| Rifleman | 53.0 | 53.0 | none; the crossbar is structural |
+| Warhammer | 52.0 | 52.0 | none |
+
+So the Archer is the one whose number is flattered, and the Warhammer is genuinely under its band at
+70 tons. Measure the tallest `paint`/`edge` part, not the overall bounds, before deciding a body
+misses its band.
 
 `--turn <deg>` adds a second sheet for the waist-twist gate: the upper body rotates about the recipe's
 hip point while hips and legs stay put. Nothing above the waist may cut through the hips or legs, and no
@@ -102,6 +134,7 @@ Direction is given in plain words. This maps them to the control that actually c
 
 | You say | Control | Value |
 |---|---|---|
+| lineup | several same-family bodies side by side at one scale | `render_modular_body.py --lineup` |
 | full render | all six angles of one unit on one sheet | bare body: `render_modular_body.py`; assembled: `renderFullReview` |
 | the chassis | the bare body, no loadout | `render_modular_body.py` |
 | the chassis with weapons | one variant assembled | `renderFullReview` |
