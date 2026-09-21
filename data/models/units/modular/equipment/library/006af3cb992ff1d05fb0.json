@@ -1,0 +1,59 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "missile",
+  "mesh": "006af3cb992ff1d05fb0.g3dj",
+  "bounds": {
+    "min": [
+      -1.375,
+      -5.3,
+      -2.25
+    ],
+    "max": [
+      1.375,
+      0.76,
+      2.25
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0.0,
+        0.76,
+        0.875
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "launcher",
+      "effect": "missile"
+    },
+    {
+      "id": "emitter-1",
+      "node": "mount",
+      "position": [
+        0.0,
+        0.76,
+        -0.875
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "launcher",
+      "effect": "missile"
+    }
+  ]
+}

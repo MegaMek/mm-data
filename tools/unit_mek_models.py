@@ -6,6 +6,7 @@ from math import sqrt
 
 from unit_mek_chassis import build_chassis, forward, panel, split_torso_locations, upright
 from unit_model_geometry import Geometry, sub
+from unit_mek_vents import finish_vents
 
 # Authored proportions, baked into each body's vertices, joints and sockets; never runtime size multipliers.
 # Width, depth, leg height, torso height. The head keeps a more consistent size across the weight classes.
@@ -234,6 +235,7 @@ def build_meks(recipes, output, export_asset, write_json):
         if weight:
             body = author_fallback(body, weight)
         split_torso_locations(body)
+        vents = finish_vents(body) if 'topology' not in recipe and recipe.get('form') != 'airmek' else []
         for location in ('HD', 'CT', 'LT', 'RT'):
             if not any(node == location for _, node, _ in body.faces):
                 raise ValueError(recipe['id']+': no drawable '+location+' surface')
@@ -340,6 +342,18 @@ def build_meks(recipes, output, export_asset, write_json):
                 if override.get('location') == hardpoint['location'] and 'length' in override:
                     mounts.append({**settings, 'family': override['family'],
                                    'length': override['length']*recipe['weaponScale']})
+        # A chassis rule draws one weapon with another's art at a spot of its own, whichever location carries it.
+        # The runtime tries the rules before any ordinary socket; a rule's placement is never offered to other
+        # weapons, so it stays out of the mount list.
+        rules = []
+        for index, rule in enumerate(recipe.get('equipmentRules', [])):
+            mount('rule-'+str(index), rule['location'], rule['socket'], family=rule['family'], node=rule['node'])
+            hardpoints[-1]['size'] = [rule['size'][0], 6, rule['size'][1]]
+            placement = mounts.pop()
+            placement['profile'] = rule['profile']
+            placement['rule'] = True
+            rules.append({'match': rule['match'], 'exclude': rule.get('exclude', ''), 'drawAs': rule['drawAs'],
+                          'placement': placement})
         lamp_settings = recipe.get('searchlightSocket', {})
         lamp_location = lamp_settings.get('location', 'LT')
         lamp = list(lamp_settings.get('position', recipe['sockets'][lamp_location]))
@@ -368,5 +382,9 @@ def build_meks(recipes, output, export_asset, write_json):
             'equipment': 'units/modular/equipment.json', 'mounts': mounts,
             'configuration': topology,
         }
+        if rules:
+            descriptor['rules'] = rules
+        if vents:
+            descriptor['vents'] = vents
         write_json(output / ('meks/'+recipe['id']+'.json'), descriptor)
     return assets

@@ -260,8 +260,9 @@ Use them sparingly. The limits:
 - **Back vents only on torso locations.**
 - **Put them where the heat sinks are.** The mek catalog records a location for every heat sink that
   takes a critical slot, so placement is a lookup rather than a judgement. Most sinks are engine ones
-  carrying no location at all - ignore those and count only the slotted ones, across every variant,
-  because the body is shared and no single loadout speaks for the chassis.
+  carrying no location at all - ignore those and count only the slotted ones. For the vents the
+  author draws, count across every variant; at runtime each variant then moves its vents to its own
+  heat sinks (see "Weapons first, vents after" below).
 
 | Chassis | Located sinks by location | Vents go |
 |---|---|---|
@@ -270,6 +271,26 @@ Use them sparingly. The limits:
 
   Then keep them clear of that location's hard point: the Rifleman mounts a flush medium laser in
   each side torso at z 37.9, so its vents sit low at 30.9-33.4 and the two never meet.
+
+**Weapons first, vents after.** A weapon drawn over a vent makes no sense, and the body cannot know
+where a variant's weapons go, because every variant shares it. So on a modular body a vent is a spot,
+not armour:
+
+- The vents the author draws are the chassis's first choice. `unit_mek_vents.finish_vents` adds up to
+  three spare spots on the flat of each torso face, sized like the authored vents (smaller where a
+  location is narrow). A spare on the left torso is always the right torso's spare mirrored.
+- At runtime the variant's weapons are placed first. Then the vents go in the torsos holding that
+  variant's slotted heat sinks, read from its unit file: the two torsos with the most, or both vents in
+  one when only one holds any. A variant with no slotted torso sinks keeps the author's vents where the
+  author put them.
+- Each vent takes the first spot in its torso that no weapon covers and no other vent has taken. If
+  every spot is covered, the vent is left off. Unused spots are removed.
+- Each decision is logged at debug level ("Vent kept at...", "covered by a weapon", "left off").
+
+**Chassis equipment rules.** A recipe's `equipmentRules` draws one weapon with another weapon's art at
+a spot of its own: which weapon (`match`, `exclude`), which art (`drawAs`), which profile, and where
+(`socket`, `node`, `size`). The weapon keeps its own location for damage. The Atlas draws every LRM 20
+as an LRM 5 rack stood on end at the right of its waist block, seen from the front.
 
 Two things to get right, both learned the hard way on the Rifleman:
 

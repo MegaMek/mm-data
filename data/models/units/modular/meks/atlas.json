@@ -232,5 +232,231 @@
       "scale": 0.83
     }
   ],
-  "configuration": "biped"
+  "configuration": "biped",
+  "rules": [
+    {
+      "match": "LRM.?20",
+      "exclude": "Streak",
+      "drawAs": "LRM 5",
+      "placement": {
+        "hardpoint": "rule-0",
+        "family": "missile",
+        "form": "",
+        "bay": false,
+        "scale": 0.83,
+        "profile": "vertical",
+        "rule": true
+      }
+    }
+  ],
+  "vents": [
+    {
+      "node": "CT#vent-front-0",
+      "location": "CT",
+      "side": "front",
+      "authored": true,
+      "min": [
+        -4,
+        8.09,
+        7.65
+      ],
+      "max": [
+        4,
+        8.934,
+        11.65
+      ]
+    },
+    {
+      "node": "CT#vent-rear-1",
+      "location": "CT",
+      "side": "rear",
+      "authored": true,
+      "min": [
+        -4,
+        -8.934,
+        7.65
+      ],
+      "max": [
+        4,
+        -8.09,
+        11.65
+      ]
+    },
+    {
+      "node": "CT#vent-front-2",
+      "location": "CT",
+      "side": "front",
+      "authored": true,
+      "min": [
+        -4,
+        9.09,
+        12.65
+      ],
+      "max": [
+        4,
+        9.63,
+        16.65
+      ]
+    },
+    {
+      "node": "CT#vent-rear-3",
+      "location": "CT",
+      "side": "rear",
+      "authored": true,
+      "min": [
+        -4,
+        -9.63,
+        12.65
+      ],
+      "max": [
+        4,
+        -9.09,
+        16.65
+      ]
+    },
+    {
+      "node": "RT#vent-front-4",
+      "location": "RT",
+      "side": "front",
+      "authored": false,
+      "min": [
+        -3.3,
+        1.16,
+        -2.1
+      ],
+      "max": [
+        0.3,
+        1.855,
+        1.1
+      ]
+    },
+    {
+      "node": "RT#vent-front-5",
+      "location": "RT",
+      "side": "front",
+      "authored": false,
+      "min": [
+        -3.3,
+        0.36,
+        -6.1
+      ],
+      "max": [
+        0.3,
+        1.055,
+        -2.9
+      ]
+    },
+    {
+      "node": "LT#vent-front-6",
+      "location": "LT",
+      "side": "front",
+      "authored": false,
+      "min": [
+        -0.3,
+        1.16,
+        -2.1
+      ],
+      "max": [
+        3.3,
+        1.855,
+        1.1
+      ]
+    },
+    {
+      "node": "LT#vent-front-7",
+      "location": "LT",
+      "side": "front",
+      "authored": false,
+      "min": [
+        -0.3,
+        0.36,
+        -6.1
+      ],
+      "max": [
+        3.3,
+        1.055,
+        -2.9
+      ]
+    },
+    {
+      "node": "CT#vent-rear-8",
+      "location": "CT",
+      "side": "rear",
+      "authored": false,
+      "min": [
+        -4.0,
+        -9.229,
+        17.5
+      ],
+      "max": [
+        4.0,
+        -8.631,
+        21.5
+      ]
+    },
+    {
+      "node": "RT#vent-rear-9",
+      "location": "RT",
+      "side": "rear",
+      "authored": false,
+      "min": [
+        -3.3,
+        -16.855,
+        -2.1
+      ],
+      "max": [
+        0.3,
+        -16.16,
+        1.1
+      ]
+    },
+    {
+      "node": "RT#vent-rear-10",
+      "location": "RT",
+      "side": "rear",
+      "authored": false,
+      "min": [
+        -3.3,
+        -16.055,
+        -6.1
+      ],
+      "max": [
+        0.3,
+        -15.36,
+        -2.9
+      ]
+    },
+    {
+      "node": "LT#vent-rear-11",
+      "location": "LT",
+      "side": "rear",
+      "authored": false,
+      "min": [
+        -0.3,
+        -16.855,
+        -2.1
+      ],
+      "max": [
+        3.3,
+        -16.16,
+        1.1
+      ]
+    },
+    {
+      "node": "LT#vent-rear-12",
+      "location": "LT",
+      "side": "rear",
+      "authored": false,
+      "min": [
+        -0.3,
+        -16.055,
+        -6.1
+      ],
+      "max": [
+        3.3,
+        -15.36,
+        -2.9
+      ]
+    }
+  ]
 }

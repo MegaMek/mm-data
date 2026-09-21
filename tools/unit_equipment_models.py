@@ -79,6 +79,8 @@ def build_equipment(catalog, output, export_asset):
             profiles['columns-4'] = module(item, rule, options={'maximumColumns': 4})
             profiles['vertical-slope'] = module(item, rule, options={'maximumColumns': 4,
                                              'orientation': 'vertical', 'slope': .45, 'slopeOrigin': 0})
+            # Stood on end against an upright face, with no lean.
+            profiles['vertical'] = module(item, rule, options={'maximumColumns': 4, 'orientation': 'vertical'})
         if not missing and held_for(dict(item, location='mount', rear=False), rule):
             # A gun gripped in the fist; used only where a recipe asks for it at a hand.
             profiles['held'] = module(item, rule, options={'held': True})

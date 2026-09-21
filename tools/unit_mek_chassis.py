@@ -77,14 +77,24 @@ def capped_face(y, rear=False):
     return lambda z, stand: (y - stand) if rear else (y + stand)
 
 
-def vent(g, face, center_x, half_width, low_z, high_z, rear=False, group='CT'):
+def vent(g, face, center_x, half_width, low_z, high_z, rear=False, group='CT', authored=True):
     """A cooling vent lying in the armour: a shaded recess behind three lit fins.
 
     House rule: at most two on the front and two on the back, the back pair on a torso only. The
     panels follow the face rather than sitting at one depth, and must stay inside its flat band,
     since a bevelled section chamfers its corners away.
+
+    On a modular body each vent is a spot of its own, not part of the armour: weapons are placed first and
+    the runtime then keeps the vents that fit around them (see unit_mek_vents). The authored vents are the
+    chassis's first choice.
     """
     low_x, high_x = center_x - half_width, center_x + half_width
+    if g.modular:
+        if not hasattr(g, 'vents'):
+            g.vents = []
+        node = 'vent-%d' % len(g.vents)
+        g.vents.append({'node': node, 'group': group, 'rear': rear, 'authored': authored})
+        group = node
 
     def slat(first_z, second_z, stand, material):
         # Winding reverses on the back so both faces still point outward.
@@ -189,49 +199,79 @@ def split_torso_locations(body, seam=None):
 
 
 def atlas(g):
-    g.box((0, 0, 31), (17, 9, 6), 'pelvis', 'edge')
-    g.box((0, 0, 36), (13, 9, 6), 'CT', 'metal')
-    upright(g, [(36, 18, 10, 0, 0), (46, 28, 14, 0, 0), (53, 25, 12, 0, 0)], cut=.45)
-    torso = [(36, 18, 10, 0, 0), (46, 28, 14, 0, 0), (53, 25, 12, 0, 0)]
-    for side in (-1, 1):
-        vent(g, lofted_face(torso), side*5, 3, 38, 42)
-        vent(g, lofted_face(torso, rear=True), side*5, 3, 38, 42, rear=True)
+    # One hundred tons, the heaviest biped in the set, so it has to carry the most mass: a deep torso, the
+    # thickest legs and the heaviest arms of any humanoid here. It was once the thinnest in the set - a
+    # torso only 10 to 14 deep and thighs lighter than a sixty-ton Rifleman's - which read as spindly beside
+    # much lighter designs. Every detail and its place is unchanged; only the mass has grown.
+    # Squared up rather than barrel-chested: the chest is narrower across than its depth suggests, so the
+    # shoulders sit close in beside the head and the legs stand close under the body, as the miniature has it.
+    # The lower torso drops nearly straight from the armpits rather than tapering in, and the waist block is
+    # widened to sit under it, so the flank runs in one line from the shoulder down into the legs.
+    g.box((0, 0, 31), (23, 13, 7), 'pelvis', 'edge')
+    g.box((0, 0, 36), (19, 12, 6), 'CT', 'metal')
+    torso = [(36, 24, 15, 0, 0), (46, 26, 19, 0, 0), (53, 24, 17, 0, 0)]
+    upright(g, torso, cut=.45)
+    # Two vents stacked on the centre line, the pair centred between the bottom of the chin (50.3) and the
+    # bottom of the torso (36).
+    for low, high in ((38.65, 42.65), (43.65, 47.65)):
+        vent(g, lofted_face(torso), 0, 4, low, high)
+        vent(g, lofted_face(torso, rear=True), 0, 4, low, high, rear=True)
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
         x = side*8
         g.joint(leg, (x, 0, 30), 'pelvis')
         g.joint(leg+'-shin', (x*1.12, 0, 18), leg)
-        upright(g, [(19, 6.7, 8, x*1.12, 0), (30, 9, 9, x, 0)], leg, cut=0)
-        g.box((x*1.12, 1, 18), (7, 8, 4), leg+'-shin', 'metal')
-        upright(g, [(4, 7, 8, x*1.18, 0), (16.3, 10, 10, x*1.12, 0)], leg+'-shin', cut=.45)
-        foot(g, x*1.18, 2, 10, 13, leg+'-shin')
+        # Legs at the weight of the other hundred-tonners: wider than any lighter Mek's.
+        # The top of the thigh tapers in so its outer edge meets the corner of the waist block.
+        upright(g, [(19, 10, 11, x*1.12, 0), (24, 13, 13, x, 0), (27.5, 9.5, 12, side*6.8, 0),
+                    (30, 9.5, 12, side*6.8, 0)], leg, cut=0)
+        g.box((x*1.12, 1, 18), (10, 11, 5), leg+'-shin', 'metal')
+        upright(g, [(4, 10.5, 11, x*1.18, 0), (16.3, 13, 13, x*1.12, 0)], leg+'-shin', cut=.45)
+        # The foot is as wide as the shin above it, so it stands under the leg instead of spilling out past it.
+        foot(g, x*1.18, 2, 11, 17, leg+'-shin')
         # Rounded shoulder caps, straight upper arms, long gauntlets and closed fists.
         forearm, hand = arm, arm
         if g.modular:
-            g.joint(arm, (side*18, 0, 47), 'CT')
-            g.joint(arm+'-forearm', (side*21, 1, 38), arm)
+            g.joint(arm, (side*16.5, 0, 47), 'CT')
+            g.joint(arm+'-forearm', (side*19.5, 1, 38), arm)
             forearm, hand = arm+'@forearm', arm+'@hand'
-        upright(g, [(46, 10, 11, side*18, 0), (53, 12, 13, side*17, 0),
-                    (57, 7, 9, side*16, 0)], arm, cut=.65)
-        g.beam((side*18, 0, 47), (side*21, 1, 38), 7, 7, arm, 'metal')
-        upright(g, [(28, 8, 9, side*21, 3), (39, 9, 9, side*21, 1)], forearm, cut=0)
-        g.box((side*21, 3.5, 26), (6.5, 7, 4), hand, 'metal')
-        panel(g, [(side*21-2, 7.03, 27), (side*21+2, 7.03, 27),
-                  (side*21+2, 7.03, 25), (side*21-2, 7.03, 25)], hand, 'edge')
-    # Skull: broad brow, tapered cheeks/jaw, paired sockets and a toothed mouth.
-    forward(g, [(-2, 8, 9, 0, 55.5), (3, 10, 10, 0, 55.5),
-                (6.7, 7.8, 8.4, 0, 54.5)], 'HD', cut=.65)
+        upright(g, [(45, 13, 14, side*16.5, 0), (53, 15, 16, side*15.5, 0),
+                    (57.5, 9, 11, side*14.5, 0)], arm, cut=.65)
+        g.beam((side*16.5, 0, 47), (side*19.5, 1, 38), 9, 9, arm, 'metal')
+        upright(g, [(27, 11, 12, side*19.5, 3), (39, 12, 12, side*19.5, 1)], forearm, cut=0)
+        g.box((side*19.5, 3.5, 25.3), (9, 9, 5.5), hand, 'metal')
+        panel(g, [(side*19.5-2.8, 8.03, 26.4), (side*19.5+2.8, 8.03, 26.4),
+                  (side*19.5+2.8, 8.03, 24.2), (side*19.5-2.8, 8.03, 24.2)], hand, 'edge')
+    # Skull: broad brow, tapered cheeks/jaw, paired sockets and a toothed mouth. Set 2.5 further forward than
+    # it was, so the face still stands proud of the deeper chest instead of sinking into it.
+    ahead = 2.5
+    forward(g, [(-2+ahead, 8, 9, 0, 55.5), (3+ahead, 10, 10, 0, 55.5),
+                (6.7+ahead, 7.8, 8.4, 0, 54.5)], 'HD', cut=.65)
     for side in (-1, 1):
         x = side*2.15
-        panel(g, [(x-1.5, 6.73, 56.8), (x+1.5, 6.73, 56.8),
-                  (x+1.2, 6.73, 54.8), (x-1.1, 6.73, 54.8)], 'HD')
-        panel(g, [(x-.7, 6.76, 56.2), (x+.7, 6.76, 56.2),
-                  (x+.7, 6.76, 55.6), (x-.7, 6.76, 55.6)], 'HD', 'glass')
-    panel(g, [(-.7, 6.76, 53.8), (0, 6.76, 54.9), (.7, 6.76, 53.8)], 'HD')
-    panel(g, [(-2.4, 6.73, 53.1), (2.4, 6.73, 53.1),
-              (1.8, 6.73, 51.6), (-1.8, 6.73, 51.6)], 'HD')
+        panel(g, [(x-1.5, 6.73+ahead, 56.8), (x+1.5, 6.73+ahead, 56.8),
+                  (x+1.2, 6.73+ahead, 54.8), (x-1.1, 6.73+ahead, 54.8)], 'HD')
+        panel(g, [(x-.7, 6.76+ahead, 56.2), (x+.7, 6.76+ahead, 56.2),
+                  (x+.7, 6.76+ahead, 55.6), (x-.7, 6.76+ahead, 55.6)], 'HD', 'glass')
+    # The nose: a triangle at its base, and a thin bridge rising from it between the eyes to their top edge.
+    panel(g, [(-.9, 6.76+ahead, 53.6), (0, 6.76+ahead, 54.7), (.9, 6.76+ahead, 53.6)], 'HD')
+    panel(g, [(-.18, 6.76+ahead, 56.8), (.18, 6.76+ahead, 56.8),
+              (.18, 6.76+ahead, 54.4), (-.18, 6.76+ahead, 54.4)], 'HD')
+    panel(g, [(-2.4, 6.73+ahead, 53.1), (2.4, 6.73+ahead, 53.1),
+              (1.8, 6.73+ahead, 51.6), (-1.8, 6.73+ahead, 51.6)], 'HD')
     for x in (-1.45, 0, 1.45):
-        panel(g, [(x-.38, 6.77, 53), (x+.38, 6.77, 53),
-                  (x+.38, 6.77, 51.75), (x-.38, 6.77, 51.75)], 'HD', 'paint')
+        panel(g, [(x-.38, 6.77+ahead, 53), (x+.38, 6.77+ahead, 53),
+                  (x+.38, 6.77+ahead, 51.75), (x-.38, 6.77+ahead, 51.75)], 'HD', 'paint')
+    # A gorget: a thin sheet of armour on each side of the lower face. Each plate starts at the cheekbone, level
+    # with the bottom of the eye sockets, drops almost straight down beside the cheek, then turns in at about
+    # 45 degrees to run parallel with the jawline down to the collarbone. Nothing crosses under the chin.
+    for side in (-1, 1):
+        upright(g, [(49.5, .8, 5, side*2.8, 6.8), (51.9, .8, 5.5, side*5.2, 6.5),
+                    (54.2, .8, 5, side*5.8, 6.5)], 'HD', 'edge', cut=0)
+    # The satellite dish on the head's right, facing forward: a short stalk off the crown meets the back of the
+    # dish, and a smaller dish of the same shape sits inside it as the receiver.
+    g.beam((4.2, 1.6, 58), (6.6, 2, 59.4), 1, 1, 'HD', 'metal', 4)
+    forward(g, [(2.4, 3.8, 3.8, 6.6, 59.4), (3.3, 4.2, 4.2, 6.6, 59.4)], 'HD', 'edge', cut=.3)
+    forward(g, [(3.2, 1.7, 1.7, 6.6, 59.4), (3.8, 2, 2, 6.6, 59.4)], 'HD', 'metal', cut=.3)
 
 
 def locust(g):
@@ -713,6 +753,23 @@ def king_crab(g):
         g.box((side*35, 10, 34), (2.5, 6, 11), arm+'@hand', 'edge')
 
 
+def narrow(g, scale, socketed):
+    """Scales the body across its width about the centre line, leaving height and depth alone. The sockets in the
+    recipe are already given at the narrowed width, so joints placed from them are left as they are."""
+    if scale == 1:
+        return
+    def across(point):
+        return (point[0]*scale,) + tuple(point[1:])
+    g.faces = [(tuple(across(point) for point in tri), group, material) for tri, group, material in g.faces]
+    for emitter in g.emitters:
+        emitter['position'] = across(emitter['position'])
+    for name, pivot in g.pivots.items():
+        if socketed.get(name) != pivot:
+            g.pivots[name] = across(pivot)
+    for arm, front in getattr(g, 'held_fronts', {}).items():
+        g.held_fronts[arm] = across(front)
+
+
 def build_chassis(recipe, modular=False):
     g = Geometry(modular=modular)
     hip = recipe['hip']
@@ -725,10 +782,13 @@ def build_chassis(recipe, modular=False):
                 'marauder': marauder, 'archer': archer, 'mackie': mackie,
                 'king-crab': king_crab, 'rifleman': rifleman,
                 'battlemaster': battlemaster}
+    socketed = dict(g.pivots)
     builders[recipe['id']](g)
     if modular:
         for arm in recipe.get('heldWeapons', []):
             held_housing(g, arm)
+    narrow(g, recipe.get('widthScale', 1), socketed)
+    if modular:
         # Optional anatomy remains separate; the runtime keeps the parts matching the actual actuators.
         # All of it follows the articulated arm, including groups formerly folded into baked variants.
         for arm in ('LA', 'RA'):

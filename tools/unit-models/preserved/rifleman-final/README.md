@@ -54,4 +54,4 @@ pod still ends at 21.25; only the seam between the two moved.
 The exported files here are a cross-check, not an install target: the exporter rewrites them from the
 Python source, so restoring the source is what matters.
 
-The earlier accepted body is kept alongside this one in `../rifleman-mk1/`.
+The earlier accepted body is kept in `../../archive/a1.zip`.
