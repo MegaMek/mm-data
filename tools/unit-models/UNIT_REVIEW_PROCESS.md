@@ -166,6 +166,39 @@ authored 2/3 width-to-height proportion.
 
 ## 4. How weapons are placed
 
+### Deciding where a socket goes
+
+Four steps, in order. Skipping straight to "what looks right in the render" is what produces a mount
+that is plausible from one angle and wrong from every other.
+
+1. **The MTF owns the location.** Read the unit file and put the weapon on the location it names.
+   A location is a gameplay fact, not a composition choice: it decides what is destroyed when that
+   part is destroyed. Never move a weapon to a neighbouring location because the artwork reads
+   better there - move the socket *within* its own location instead. The BattleMaster's rear medium
+   lasers are one in each side torso, not a pair in the centre torso, however much they look like a
+   centred pair in the artwork.
+2. **Start at the centre of that location's own facing.** Not the centre of the unit, and not the
+   centre of a bounding box - the area-weighted centre of the faces that point the way the weapon
+   fires. Measure it; do not estimate it from a render. A location's front facing and its rear
+   facing have different centres.
+3. **Then read the count and the size.** Two mediums on one facing need different spacing from one
+   large. Space them so they neither overlap nor drift off the panel, and so the group stays centred
+   on the facing. `mountAreas` decides how a group arranges itself: a tall narrow area stacks
+   over-under, a wide one sets them abreast.
+4. **Only then follow reference artwork**, if any exists, and only within the location the MTF gave.
+
+### Flush means the model sits on the surface
+
+**A flush mount puts the bottom of the equipment model on top of the armour it mounts to.** Not
+sunk into it, not hovering above it. A launcher bay whose lower row of tubes disappears into the
+shoulder is wrong, and so is one floating a unit clear of it. Work it from the geometry: measure the
+surface the thing sits on, measure the model's own height, and place the socket so the two meet.
+
+Guessing a number, rendering, and nudging is the slow way round and it has repeatedly taken three
+attempts when one measurement would have done.
+
+### The mechanism
+
 A hard point names where a weapon leaves the armour, and `mountAreas` gives the facing it is laid out
 on. The runtime fitter then places the location's weapons on that facing.
 
@@ -176,6 +209,39 @@ socket and the rest were pushed clear of it, so a pair hung below the middle of 
 A single weapon still sits exactly on its hard point, which is already the centre of its facing. Bay
 launchers arrange their own rows and are left alone. A weapon that cannot fit is shrunk through fixed
 steps, and only then moved.
+
+**Left and right mirror; they never copy.** When a crowded weapon has to step aside, it steps toward
+the Mek's centre line, worked out for each face in its own frame. Any rule with a direction - an offset,
+a scan order, a preferred side - is stated relative to the centre line, never as a fixed +x or -x, and is
+checked by measuring both sides against the centre line. The BattleMaster's side-torso lasers once sat
+12.9 px further out on one side because the packer always stepped to local -x.
+
+### Guns held in the hand
+
+A Mek whose recipe lists an arm in `heldWeapons` holds its large weapons in that fist as a gun instead
+of growing them out of the forearm. The design is modular: nothing about it is authored per chassis.
+
+- **Which weapons.** Mek-mountable PPCs, autocannons (including LB-X, Ultra, rotary and hypervelocity),
+  Gauss rifles and large lasers, listed under `held` in `weapons.json`. Machine guns, small and medium
+  lasers, flamers and launchers keep their ordinary shape. Infantry and battle armour weapons are
+  excluded by requiring `F_MEK_WEAPON`, since name matching alone catches gauss pistols and support PPCs.
+- **The chassis supplies the gun body.** The exporter measures that chassis's own forearm end and hand
+  and generates `<arm>@held`: flush on the forearm end and the same size as it, long enough to cover
+  where the hand was, with a raised deck and a grip. It is optional anatomy like the hand.
+- **The weapon supplies the barrel.** Each qualifying weapon gets a `held` profile: a collar, a barrel
+  and one feature per family - coils on a PPC, twin rails on a Gauss rifle, a thick muzzle ring on an
+  autocannon, a lens housing on a large laser. Sizes come from the weapon, so a Heavy PPC carries a
+  bigger barrel than a Light PPC. It is built at its finished size; barrel length overrides do not
+  stretch it.
+- **In game,** an arm holding a gun shows the gun body and loses its hand; any other arm keeps its hand.
+  Every weapon in that hand leaves from the gun body's front face. Two held weapons in one hand stack
+  over-under like a double-barrelled gun, the larger on top.
+- **An arm with no hand keeps its ordinary barrel.** Only a hand can hold a gun.
+
+To give another chassis held guns, add `"heldWeapons": ["LA", "RA"]` to its recipe. Its arms need
+`@forearm` and `@hand` parts; the export stops with an error if an arm lists held weapons without them.
+Review the result with `render_modular_body.py --equipment <name> --profile held` for one barrel, or
+`--held-all <sheet> --angle 120` for every distinct held barrel side-on.
 
 Review images are named for the unit they show, not the body they were authored from:
 `runtime-new-Rifleman RFL-3N-full.png`. Every sheet also carries the chassis and model **in the top

@@ -27,6 +27,9 @@ RECIPES = ROOT / 'tools/unit-models/chassis.json'
 # facing. Above tips the model onto its back, which puts its nose up the page like the game sprite.
 VIEWS = [('Front', (0, 0, 180)), ('Back', (0, 0, 0)), ('Left', (0, 0, 90)),
          ('Right', (0, 0, -90)), ('Above', (90, 0, 0)), ('Three-quarter', (0, 0, 215))]
+# A warm ground against a cool model, on every sheet. A blue-grey ground sat in the same hue family as the
+# joint and shin armour, so those parts separated from it only by brightness and read as background.
+GROUND = (.21, .13, .10, 1)
 
 
 def material(rgb, cache):
@@ -136,7 +139,7 @@ def render(body_id, mesh, views, out, columns=3, title=None):
     scene.view_settings.view_transform = 'Standard'
     scene.world = bpy.data.worlds.new(body_id + ' world')
     scene.world.use_nodes = True
-    scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.22, .28, .35, 1)
+    scene.world.node_tree.nodes['Background'].inputs[0].default_value = GROUND
 
     ink = bpy.data.materials.new('Sheet labels')
     ink.use_nodes = True
@@ -215,7 +218,7 @@ def lineup(entries, out, name='lineup'):
     scene.view_settings.view_transform = 'Standard'
     scene.world = bpy.data.worlds.new(name + ' world')
     scene.world.use_nodes = True
-    scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.22, .28, .35, 1)
+    scene.world.node_tree.nodes['Background'].inputs[0].default_value = GROUND
 
     ink = bpy.data.materials.new('Lineup labels')
     ink.use_nodes = True
@@ -271,6 +274,93 @@ def lineup(entries, out, name='lineup'):
     return Path(scene.render.filepath)
 
 
+def gallery(entries, out, name, title, columns=6, rotation=(0, 0, 215)):
+    """Many models in a grid, one view each, all at one scale.
+
+    For comparing a family of shapes: each model is centred in its own cell, but nothing is resized to fill it,
+    so a larger weapon reads as larger.
+    """
+    scene = bpy.data.scenes.new(name + ' gallery')
+    scene.render.engine = 'CYCLES'
+    scene.cycles.samples = 24
+    scene.render.image_settings.file_format = 'PNG'
+    scene.view_settings.view_transform = 'Standard'
+    scene.world = bpy.data.worlds.new(name + ' world')
+    scene.world.use_nodes = True
+    scene.world.node_tree.nodes['Background'].inputs[0].default_value = GROUND
+    ink = bpy.data.materials.new('Gallery labels')
+    ink.use_nodes = True
+    ink.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value = (1, 1, 1, 1)
+
+    posed = [posed_bounds(mesh, rotation) for _, _, mesh in entries]
+    reach = max(max(high.x - low.x, high.z - low.z) for low, high in posed)
+    columns = min(columns, len(entries))
+    rows = ceil(len(entries) / columns)
+    cell, pitch = reach * 1.3, reach * 1.6
+    span, tall = cell * columns, pitch * rows
+    front = -reach * 3
+    for index, ((model_id, caption, mesh), (low, high)) in enumerate(zip(entries, posed)):
+        middle = (low + high) / 2
+        cell_x = (index % columns) * cell - span / 2 + cell / 2
+        cell_z = -(index // columns) * pitch
+        obj = bpy.data.objects.new(model_id + ' gallery', mesh)
+        obj.rotation_euler = tuple(radians(angle) for angle in rotation)
+        obj.location = (cell_x - middle.x, 0, cell_z - middle.z + pitch * .06)
+        scene.collection.objects.link(obj)
+        for line, text in enumerate(caption.split('\n')):
+            label(scene, text, (cell_x, front, cell_z - pitch * (.36 + .075 * line)), reach * .062, ink)
+    label(scene, title, (span / 2 - cell * .06, front, pitch * .42), reach * .085, ink, 'RIGHT')
+
+    camera_data = bpy.data.cameras.new(name + ' camera')
+    camera_data.type = 'ORTHO'
+    camera_data.ortho_scale = span
+    camera = bpy.data.objects.new(name + ' camera', camera_data)
+    camera.location = (0, -reach * 6, -(rows - 1) * pitch / 2)
+    camera.rotation_euler = (radians(90), 0, 0)
+    scene.collection.objects.link(camera)
+    scene.camera = camera
+    for energy, angles in ((3.2, (58, 0, -35)), (1.1, (72, 0, 130)), (.9, (0, 0, 0))):
+        lamp = bpy.data.lights.new(name + str(energy), 'SUN')
+        lamp.energy = energy
+        lamp_object = bpy.data.objects.new(name + str(energy), lamp)
+        lamp_object.rotation_euler = tuple(radians(a) for a in angles)
+        scene.collection.objects.link(lamp_object)
+
+    scene.render.resolution_x = 360 * columns
+    scene.render.resolution_y = round(scene.render.resolution_x * tall / span)
+    scene.render.filepath = str(out / (name + '-gallery.png'))
+    bpy.ops.render.render(write_still=True, scene=scene.name)
+    return Path(scene.render.filepath)
+
+
+def held_guns(manifest):
+    """Every distinct held gun, captioned with the weapons that share it, grouped by family."""
+    catalog = json.loads((BODIES.parent / 'equipment.json').read_text(encoding='utf-8'))
+    catalog = catalog.get('equipment', catalog)
+    names = {}
+    units = ROOT / '.work/mek-models/catalog.json'
+    if units.exists():
+        for unit in json.loads(units.read_text(encoding='utf-8'))['units']:
+            for mount in unit['equipment']:
+                names.setdefault(mount['internalName'], mount['name'])
+    shapes = {}
+    for key, entry in catalog.items():
+        asset = isinstance(entry, dict) and entry.get('profiles', {}).get('held')
+        if asset:
+            shapes.setdefault(asset, (entry['family'], []))[1].append(names.get(key, key))
+    order = {'ppc': 0, 'ballistic': 1, 'laser': 2}
+    result = []
+    for asset, (family, weapons) in sorted(shapes.items(), key=lambda item: (order.get(item[1][0], 9),
+                                                                              -len(set(item[1][1])))):
+        # Head the group with its plainest name: no brackets or prototypes, then the shortest, then alphabetical.
+        weapons = sorted(set(weapons), key=lambda weapon: ('(' in weapon or 'Prototype' in weapon
+                                                          or 'Primitive' in weapon, len(weapon), weapon))
+        caption = weapons[0] + ('\n+%d more' % (len(weapons) - 1) if len(weapons) > 1 else '')
+        key = asset.removeprefix('units/modular/').removesuffix('.json')
+        result.append((key.split('/')[-1], caption, BODIES.parent / (key + '.g3dj'), manifest.get(key)))
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--body', action='append', default=[],
@@ -282,22 +372,50 @@ def main():
                         help='render the named bodies side by side on one ground line instead of sheets')
     parser.add_argument('--tons', action='append', default=[],
                         help='tonnage shown beside each --body in a lineup; repeat in the same order')
+    parser.add_argument('--equipment', action='append', default=[],
+                        help='equipment canonical name from equipment.json, rendered on its own; repeatable')
+    parser.add_argument('--profile', default='',
+                        help='equipment profile to render instead of the standard shape, such as held')
+    parser.add_argument('--held-all', metavar='NAME',
+                        help='render every distinct held gun on one sheet, captioned with its weapons')
+    parser.add_argument('--angle', type=float, default=215,
+                        help='turn applied to every model on a --held-all sheet; 215 is three-quarter, 120 side-on')
     args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else [])
-    if not args.body:
-        parser.error('name at least one --body')
-
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))['assets'] if MANIFEST.exists() else {}
+    if args.held_all:
+        args.output.mkdir(parents=True, exist_ok=True)
+        colors = {}
+        entries = [(model_id, caption, load_body(path, expected, colors))
+                   for model_id, caption, path, expected in held_guns(manifest)]
+        print('Wrote', gallery(entries, args.output, args.held_all,
+                               'Held weapons  -  %d shapes' % len(entries), rotation=(0, 0, args.angle)))
+        return
+    if not args.body and not args.equipment:
+        parser.error('name at least one --body or --equipment')
     # A sheet is headed with the chassis as players know it, not the body's file id.
     titles = {entry['id']: entry['name'] for entry in
               json.loads(RECIPES.read_text(encoding='utf-8'))['chassis']} if RECIPES.exists() else {}
     args.output.mkdir(parents=True, exist_ok=True)
     colors = {}
     entries = []
-    for body_id in args.body:
-        path = BODIES / (body_id + '.g3dj')
+    sources = [(body_id, BODIES / (body_id + '.g3dj'), manifest.get('bodies/' + body_id)) for body_id in args.body]
+    if args.equipment:
+        catalog = json.loads((BODIES.parent / 'equipment.json').read_text(encoding='utf-8'))
+        catalog = catalog.get('equipment', catalog)
+        for name in args.equipment:
+            entry = catalog.get(name)
+            if entry is None:
+                raise SystemExit('No such equipment: ' + name)
+            asset = entry.get('profiles', {}).get(args.profile) if args.profile else None
+            if args.profile and asset is None:
+                raise SystemExit('%s has no %s profile' % (name, args.profile))
+            key = (asset or entry['model']).removeprefix('units/modular/').removesuffix('.json')
+            title = '%s (%s)' % (name, args.profile) if args.profile else name
+            titles[title] = title
+            sources.append((title, BODIES.parent / (key + '.g3dj'), manifest.get(key)))
+    for body_id, path, expected in sources:
         if not path.exists():
-            raise SystemExit('No such body: ' + str(path))
-        expected = manifest.get('bodies/' + body_id)
+            raise SystemExit('No such model: ' + str(path))
         mesh = load_body(path, expected, colors)
         entries.append((body_id, titles.get(body_id, body_id), mesh))
         if args.lineup:

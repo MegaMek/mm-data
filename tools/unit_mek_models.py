@@ -310,6 +310,13 @@ def build_meks(recipes, output, export_asset, write_json):
             forms.setdefault('elbow', [42+elbow[0], 36-elbow[1], elbow[2]])
             for form, pixel in forms.items():
                 mount(location+'-'+form, location, pixel, form=form)
+                # Only a hand can hold a gun. A weapon with no held shape of its own keeps its usual one.
+                if form == 'hand' and location in recipe.get('heldWeapons', []):
+                    mounts[-1]['profile'] = 'held'
+                    # A held weapon's barrel fits the front face of the gun body the chassis generated for this
+                    # arm, not the centre of the fist: this is the step from the hand socket to that face.
+                    hand, face = point(pixel), body.held_fronts[location]
+                    mounts[-1]['heldOffset'] = [round(face[i]-hand[i], 3) for i in range(3)]
         for location, pixel in recipe.get('missileSockets', {}).items():
             mount(location+'-launcher', location, pixel, family='missile', bay=True)
         for key, bank in recipe.get('socketBanks', {}).items():

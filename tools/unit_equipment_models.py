@@ -7,7 +7,7 @@ import hashlib
 import json
 
 from unit_model_geometry import Geometry
-from unit_weapon_shapes import BOOK, draw, rule_for
+from unit_weapon_shapes import BOOK, draw, held_for, rule_for
 
 
 def fallback_rule(item, low_detail=False):
@@ -79,6 +79,9 @@ def build_equipment(catalog, output, export_asset):
             profiles['columns-4'] = module(item, rule, options={'maximumColumns': 4})
             profiles['vertical-slope'] = module(item, rule, options={'maximumColumns': 4,
                                              'orientation': 'vertical', 'slope': .45, 'slopeOrigin': 0})
+        if not missing and held_for(dict(item, location='mount', rear=False), rule):
+            # A gun gripped in the fist; used only where a recipe asks for it at a hand.
+            profiles['held'] = module(item, rule, options={'held': True})
         entry = {'model': model, 'styles': choices, 'profiles': profiles, 'family': item['family'],
                  'bankFamily': 'lamp' if rule['look'] == 'lamp' else rule.get('bankFamily', item['family']),
                  'policy': policy, 'fallback': missing}

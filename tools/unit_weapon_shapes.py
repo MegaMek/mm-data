@@ -73,6 +73,17 @@ def rule_for(mount, recipe=None):
     return rule
 
 
+def held_for(mount, rule):
+    """Whether this weapon may be drawn as a gun gripped in the fist, as well as its usual barrel.
+
+    Only a weapon a Mek can mount qualifies. Name matching alone also catches infantry and battle armor weapons
+    such as gauss pistols and support PPCs, which share the words but are not the large weapons meant here.
+    """
+    return rule is not None and rule['look'] in ('barrel', 'gatling') and \
+        'F_MEK_WEAPON' in mount.get('flags', ()) and \
+        any(_matches(entry, mount) for entry in BOOK.get('held', []))
+
+
 def default_protrusion(mount, rule, recipe=None):
     """How far a barrel stands out of the armor when neither the recipe nor an override says."""
     chosen = (recipe or {}).get('protrusion', {})
@@ -241,6 +252,54 @@ def _barrel(geometry, mount, rule, position, scale):
         effect = {'laser': 'laser', 'ppc': 'ppc', 'flamer': 'flame'}.get(mount['family'], 'bullet')
         geometry.emitter((barrel_x, face_y, z), (0, direction, 0), group,
                          'beam' if effect == 'laser' else 'muzzle', effect)
+
+
+def _held(geometry, mount, rule, position, scale):
+    """The weapon's half of a gun held in the fist: its barrel and the feature that marks its family.
+
+    The other half, the gun body, belongs to the chassis. It is generated to fit that chassis's own forearm, so
+    one set of weapon shapes suits every Mek that holds guns. The origin is the centre of the body's front face,
+    on the bore, and the barrel runs forward from there. Every size comes from the weapon's own barrel length and
+    width, so a Heavy PPC carries a bigger barrel than a Light PPC. The model is built at its finished size: a
+    recipe's barrel length override does not stretch it.
+    """
+    x, y, bore = position
+    group = mount['location']
+    length = rule['length']*scale
+    width = rule['width']*scale
+    # A collar where the barrel leaves the gun body, then the barrel.
+    geometry.beam((x, y, bore), (x, y+length*.12, bore), width, width, group, 'edge', 6, 1)
+    muzzle = y+length*.9
+    geometry.beam((x, y+length*.1, bore), (x, muzzle, bore), width*.75, width*.75, group, 'metal', 6, 1)
+    # One feature per family, so the families read apart at a glance while sharing every other part.
+    # Six-sided rings and barrels keep every shape inside the equipment triangle budget.
+    family = mount['family']
+    if family == 'ppc':
+        # Field coils ringing the barrel; the forward coil is also the muzzle ring.
+        geometry.beam((x, muzzle-length*.35, bore), (x, muzzle-length*.27, bore), width, width, group, 'edge', 6, 1)
+        sleeve = width
+        geometry.beam((x, muzzle-length*.1, bore), (x, muzzle, bore), sleeve, sleeve, group, 'edge', 6, 1)
+    elif family == 'ballistic' and re.search('Gauss', mount['name'], re.IGNORECASE):
+        # Twin magnetic rails along either side of the barrel.
+        for side in (-1, 1):
+            geometry.box((x+side*width*.45, muzzle-length*.35, bore), (width*.2, length*.55, width*.28), group,
+                         'edge')
+        sleeve = width*.9
+        geometry.beam((x, muzzle-length*.06, bore), (x, muzzle, bore), sleeve, sleeve, group, 'metal', 6, 1)
+    elif family == 'laser':
+        # A broad lens housing at the muzzle.
+        sleeve = width*1.2
+        geometry.beam((x, muzzle-length*.15, bore), (x, muzzle, bore), sleeve, sleeve, group, 'edge', 6, 1)
+    else:
+        # An autocannon: a plain heavy barrel ending in a thick muzzle ring.
+        sleeve = width*1.1
+        geometry.beam((x, muzzle-length*.2, bore), (x, muzzle, bore), sleeve, sleeve, group, 'metal', 6, 1)
+    half = sleeve*.3
+    face_y = muzzle+.03
+    geometry.face([(x-half, face_y, bore+half), (x+half, face_y, bore+half),
+                   (x+half, face_y, bore-half), (x-half, face_y, bore-half)], group, rule.get('tip', 'dark'))
+    effect = {'laser': 'laser', 'ppc': 'ppc'}.get(mount['family'], 'bullet')
+    geometry.emitter((x, face_y, bore), (0, 1, 0), group, 'beam' if effect == 'laser' else 'muzzle', effect)
 
 
 def _pod(geometry, mount, rule, position, scale):
@@ -811,7 +870,9 @@ def draw(geometry, mount, rule, position, scale, options=None):
 
 def _draw_ahead(geometry, mount, rule, position, scale, options):
     look = rule['look']
-    if look == 'launcher':
+    if options.get('held') and look in ('barrel', 'gatling'):
+        _held(geometry, mount, rule, position, scale)
+    elif look == 'launcher':
         _launcher(geometry, mount, rule, position, scale, options)
     elif look == 'barrel':
         _barrel(geometry, mount, rule, position, scale)
