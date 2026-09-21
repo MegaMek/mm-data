@@ -100,6 +100,43 @@ def vent(g, face, center_x, half_width, low_z, high_z, rear=False, group='CT'):
         slat(base, base + span*.22, .16, 'edge')
 
 
+def held_housing(g, arm):
+    """The body of a gun this arm can hold, sized to the arm it is held on.
+
+    Measured from the chassis's own forearm end and hand, never authored per chassis, so any Mek that lists the
+    arm in heldWeapons gets one that fits it. It starts flush on the end of the forearm and runs forward far enough
+    to cover where the hand was, with a raised deck over its rear and a grip hanging below. It is optional
+    anatomy like the hand: the runtime shows it only while that arm holds a gun, and removes the hand instead.
+    The weapon's own barrel is fitted to its front face; that face is recorded for the exporter.
+    """
+    def bounds(node):
+        points = [point for triangle, owner, _ in g.faces if owner == node for point in triangle]
+        if not points:
+            return None
+        return [(min(p[axis] for p in points), max(p[axis] for p in points)) for axis in range(3)]
+
+    forearm, hand = bounds(arm+'@forearm'), bounds(arm+'@hand')
+    if forearm is None or hand is None:
+        raise ValueError(arm+' lists held weapons but has no forearm and hand to hold them')
+    front = forearm[1][1]
+    # The cross-section of the forearm where it ends, which the gun body matches so the two meet flush.
+    end = [point for triangle, owner, _ in g.faces if owner == arm+'@forearm'
+           for point in triangle if point[1] > front - .5]
+    x0, x1 = min(p[0] for p in end), max(p[0] for p in end)
+    z0, z1 = min(p[2] for p in end), max(p[2] for p in end)
+    width, height = (x1 - x0)*.95, (z1 - z0)*.85
+    middle_x, middle_z = (x0 + x1)/2, (z0 + z1)/2
+    depth = max(hand[1][1] - front + .5, height*.65)
+    group = arm+'@held'
+    g.box((middle_x, front + depth/2, middle_z), (width, depth, height), group, 'paint')
+    g.box((middle_x, front + depth*.3, middle_z + height*.59), (width*.7, depth*.55, height*.18), group, 'edge')
+    g.box((middle_x, front + depth*.3, middle_z - height*.72), (width*.4, depth*.4, height*.45), group, 'metal')
+    # Where the weapon's barrel goes: centred on the front face, a little above its middle like a rifle's bore.
+    if not hasattr(g, 'held_fronts'):
+        g.held_fronts = {}
+    g.held_fronts[arm] = (middle_x, front + depth, middle_z + height*.15)
+
+
 def split_torso_locations(body, seam=None):
     """Give joined torso shells real side locations without changing their visible silhouette.
 
@@ -690,6 +727,8 @@ def build_chassis(recipe, modular=False):
                 'battlemaster': battlemaster}
     builders[recipe['id']](g)
     if modular:
+        for arm in recipe.get('heldWeapons', []):
+            held_housing(g, arm)
         # Optional anatomy remains separate; the runtime keeps the parts matching the actual actuators.
         # All of it follows the articulated arm, including groups formerly folded into baked variants.
         for arm in ('LA', 'RA'):

@@ -171,5 +171,11 @@
     {"id": "lb-x", "family": "ballistic", "name": "^LB |LB \\d", "addSegments": [{"from": 2, "to": -0.05, "width": 1, "taper": 1.35}]},
     {"id": "light-autocannon", "family": "ballistic", "name": "^Light AC", "scale": {"length": 0.8}},
     {"id": "hyper-velocity", "family": "ballistic", "name": "HVAC", "scale": {"length": 1.2}}
+  ],
+  "held": [
+    {"id": "held-ppc", "family": "ppc",
+     "note": "Weapons that may be drawn as a gun gripped in the fist, when a recipe's heldWeapons names that arm and the arm has a hand. Single large weapons only: machine guns, small and medium lasers, flamers and launchers stay as they are drawn anywhere else."},
+    {"id": "held-autocannon-gauss", "family": "ballistic", "name": "^(?!.*(AP Gauss|Magshot)).*(AC|Autocannon|Gauss)"},
+    {"id": "held-large-laser", "family": "laser", "name": "Large"}
   ]
 }
