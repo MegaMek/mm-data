@@ -62,6 +62,10 @@ def sources(tileset):
                         result[image] = max(result.get(image, 0), amount)
 
     scan('saxarba.tileset')
+    # Cliff-top material layers use the same south-edge artwork rotated onto every exposed edge.
+    # Keep its alpha mask and use restrained relief: painted shading is only an approximation to height.
+    for path in sorted((tileset / 'High_Incline').glob('*/*08.png')):
+        result[path.relative_to(tileset).as_posix()] = 3.0
     return dict(sorted(result.items()))
 
 
