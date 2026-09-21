@@ -64,6 +64,10 @@ directory with the game's data. Blender is an authoring dependency only.
   `tileset/High_Incline/`, oriented per edge. Edit these to change cliff-top
   detail without affecting 2D. The renderer avoids mixing their baked lighting
   with the brighter north-facing variants and leaves road approaches open.
+  `normals/High_Incline/` supplies their matching normal maps. Runtime rotates
+  these directions with the edge, combines color and normals with the ground
+  before lighting, and caches the resulting paired atlas material. The source
+  images remain separate. Riverbanks keep the undecorated ground artwork.
 
 Edit roof art under `tileset/`, then rebuild the derived roof texture and mesh.
 Opaque source roof pixels and their UV locations are unchanged by the export;
@@ -99,6 +103,11 @@ is only an approximation to height; baked highlights can also produce relief.
 Rubble/rough use the strongest relief, rocky themes are next, and grass, dirt,
 sand, snow, mud/swamp, tundra, fields and ice use gentler detail. Pavement and
 paved roads receive neutral maps, including their opaque coverage over grass.
+South-edge cliff-top patches use restrained relief at strength 3. Their alpha
+masks control both color and normal coverage; reoriented normal mapping retains
+the base relief under the rim. These derived maps retain the same limitation as
+other painted sources: authored height/normal maps would give more accurate
+relief. Missing custom rim normals preserve the base normal map.
 F9 opens Tuning, where the Normal maps checkbox switches this shading live.
 It starts enabled, and Defaults re-enables it; switching needs no atlas,
 geometry or shadow rebuild.
