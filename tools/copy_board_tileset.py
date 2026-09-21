@@ -48,5 +48,11 @@ def scan(name):
 scan('saxarba.tileset')
 for depth in range(5):
     copy(f'saxarba/anim_water_{depth}.gif')
+    for theme in ('mars', 'volcano'):
+        copy(f'saxarba/theme_{theme}/water_anim_{theme}_{depth}.gif')
+for elevation in range(-3, 11):
+    copy(f'saxarba/base/base_magma_anim_{elevation}.gif')
+for flow in ('rapids', 'torrent'):
+    copy(f'saxarba/water/{flow}_anim.gif')
 (DEST/'sources.json').write_text(json.dumps({'source':'data/images/hexes','files':sorted(copied)},indent=2))
 print(json.dumps({'files':len(copied),'bytes':sum((DEST/name).stat().st_size for name in copied)}))

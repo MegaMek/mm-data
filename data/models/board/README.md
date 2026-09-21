@@ -8,7 +8,7 @@ directory with the game's data. Blender is an authoring dependency only.
 
 - `tileset/saxarba.tileset`: the forced 3D tileset, with all recursive includes
   and referenced images, including references outside the Saxarba subdirectory.
-  The 7,269 files are independent copies. Edit these without affecting 2D.
+  The 7,295 files are independent copies. Edit these without affecting 2D.
 - `buildings/`: 3,295 structure models with roofs derived from the exact selected
   tile image. Simplified outlines retain diagonal walls, curves, disconnected
   parts and courtyards; no runtime pixel extrusion or generic substitutions.
@@ -55,7 +55,20 @@ directory with the game's data. Blender is an authoring dependency only.
   Saxarba ground artwork, preserving each theme's palette. An irregular mesh
   edge fades into the geology; fixed world-scale UVs crop the texture on short
   walls instead of stretching it to fit. Model rebuilds preserve these maps.
-- Animated water comes from this directory's own `tileset/saxarba/anim_water_N.gif`.
+- Liquid artwork comes from this directory's own `tileset/saxarba/anim_water_N.gif`,
+  `theme_mars/water_anim_mars_N.gif`, `theme_volcano/water_anim_volcano_N.gif`,
+  `base/base_magma_anim_N.gif`, and `water/rapids_anim.gif` / `water/torrent_anim.gif`.
+  The latter paths are relative to `tileset/saxarba/`. All are independent copies
+  of the original 32-frame, 3.2-second animations. `tools/copy_board_tileset.py`
+  includes these runtime-selected images even when the static tileset omits them.
+  `GpuWaterShader.USE_PROCEDURAL_WATER` selects shader-generated water patterns
+  and palettes matched to this artwork, using the renderer's shared noise field.
+  Set it to `false` and rebuild for the authored water GIFs. Both paths share
+  wave/rain normals, lighting, reflection, downstream currents and waterfall foam/spray.
+  Magma retains its original artwork. `GpuLiquidShader.USE_SHADER_ANIMATION`
+  interpolates the original GIF frames; set it to `false` for discrete frame timing.
+  In the GIF path, transparent foam is composed onto the water image. Hazardous
+  liquid shares the water material with a green tint in both paths.
   The renderer constructs curved banks and actual depth; the static
   `Structured_Water` art is a shoreline reference, not a baked replacement.
   Two nonadjacent water openings form a continuous channel. Elevation drops
