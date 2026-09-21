@@ -166,6 +166,39 @@ authored 2/3 width-to-height proportion.
 
 ## 4. How weapons are placed
 
+### Deciding where a socket goes
+
+Four steps, in order. Skipping straight to "what looks right in the render" is what produces a mount
+that is plausible from one angle and wrong from every other.
+
+1. **The MTF owns the location.** Read the unit file and put the weapon on the location it names.
+   A location is a gameplay fact, not a composition choice: it decides what is destroyed when that
+   part is destroyed. Never move a weapon to a neighbouring location because the artwork reads
+   better there - move the socket *within* its own location instead. The BattleMaster's rear medium
+   lasers are one in each side torso, not a pair in the centre torso, however much they look like a
+   centred pair in the artwork.
+2. **Start at the centre of that location's own facing.** Not the centre of the unit, and not the
+   centre of a bounding box - the area-weighted centre of the faces that point the way the weapon
+   fires. Measure it; do not estimate it from a render. A location's front facing and its rear
+   facing have different centres.
+3. **Then read the count and the size.** Two mediums on one facing need different spacing from one
+   large. Space them so they neither overlap nor drift off the panel, and so the group stays centred
+   on the facing. `mountAreas` decides how a group arranges itself: a tall narrow area stacks
+   over-under, a wide one sets them abreast.
+4. **Only then follow reference artwork**, if any exists, and only within the location the MTF gave.
+
+### Flush means the model sits on the surface
+
+**A flush mount puts the bottom of the equipment model on top of the armour it mounts to.** Not
+sunk into it, not hovering above it. A launcher bay whose lower row of tubes disappears into the
+shoulder is wrong, and so is one floating a unit clear of it. Work it from the geometry: measure the
+surface the thing sits on, measure the model's own height, and place the socket so the two meet.
+
+Guessing a number, rendering, and nudging is the slow way round and it has repeatedly taken three
+attempts when one measurement would have done.
+
+### The mechanism
+
 A hard point names where a weapon leaves the armour, and `mountAreas` gives the facing it is laid out
 on. The runtime fitter then places the location's weapons on that facing.
 

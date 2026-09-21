@@ -511,10 +511,26 @@ def battlemaster(g):
         location = 'LT' if side < 0 else 'RT'
         vent(g, lofted_face(torso), side*6.7, 1.3, 33, 36.5, group=location)
         vent(g, lofted_face(torso, rear=True), side*6.7, 1.3, 37.5, 41, rear=True, group=location)
-    # The cockpit is a compact rounded dome riding high on the chest with a wrapped visor band. It
-    # is barely deeper than it is wide: a forward-projecting snout is the wrong read for this design.
-    forward(g, [(1, 12, 10, 0, 47), (6, 13.5, 11.5, 0, 47), (11, 11, 9, 0, 46.5)], 'HD', cut=.6)
-    panel(g, [(-2.4, 11.05, 50.4), (2.4, 11.05, 50.4), (2.4, 11.05, 43.2), (-2.4, 11.05, 43.2)], 'HD', 'glass')
+    # A glass blister, not a pane set into a frame. The whole bulb is lofted in glass and runs from
+    # low at the front straight back and up to a narrow ridge at the top, which is the triangle the
+    # artwork shows there. The old head was a hexagonal housing with a flat rectangle inside it -
+    # the frame read as the head and the glass as a window, which is the wrong way round.
+    forward(g, [(-3, 4, 3.5, 0, 52.5), (2, 9.5, 8, 0, 50.5), (7, 11.5, 10, 0, 47.5),
+                (10.5, 10.5, 9, 0, 47)], 'HD', 'glass', cut=.5)
+    # Two frames banding the glass, as drawn. Each is a short loft of the canopy's own section a
+    # third of a unit larger, so it wraps the bulb as a rib. A box will not do it: a box is a filled
+    # slab, and at this size its flat face shows around the glass as a plate rather than a frame.
+    for station, width, height, middle in ((3.5, 10.45, 8.95, 49.6), (8.2, 11.2, 9.75, 47.2)):
+        forward(g, [(station - .3, width, height, 0, middle),
+                    (station + .3, width, height, 0, middle)], 'HD', 'edge', cut=.5)
+    # A supporting frame under the cockpit rather than a block it sits in: narrower than the glass
+    # and set back a unit behind its face, so it reads as carrying the bulb. Keeping it low also lets
+    # the bulb's lower chamfer show, which is what makes the bottom of the glass mirror its top.
+    g.box((0, 3.5, 41.6), (9.5, 12, 3.2), 'HD', 'edge', .3)
+    # A grey cowl closing the back of the canopy, where the artwork puts an angular housing rather
+    # than letting the glass simply stop. It laps over the bulb's rear ridge and carries the antennas
+    # out of its own back face instead of out of the chest behind it.
+    forward(g, [(-6.5, 5.5, 5, 0, 52), (-2.5, 6.5, 5.5, 0, 52.8)], 'HD', 'edge', cut=.3)
     # Twin antennas stand behind the canopy on the back of the chest.
     for side in (-1, 1):
         g.beam((side*3, -6, 50.5), (side*4, -8.5, 59), 1.2, 1.2, 'CT', 'metal', taper=.25)
@@ -522,26 +538,40 @@ def battlemaster(g):
         x = side*9
         g.joint(leg, (x, 0, 31), 'pelvis')
         g.joint(leg+'-shin', (x*1.05, -1, 17.5), leg)
-        # Eighty-five tons: heavier than the seventy-ton designs, short of the Mackie.
-        upright(g, [(17.5, 12, 13.5, x*1.05, -1), (31, 15, 15, x, 0)], leg, cut=.3)
-        g.box((side*15.6, -1, 24.5), (4, 12, 13), leg, 'edge', .45)
+        # Eighty-five tons: heavier than the seventy-ton designs, short of the Mackie. The thigh itself
+        # is narrower than it was; the hip pad below carries the outer line instead of the leg's own
+        # mass, which is what made the legs read as over-wide.
+        # No hip plate: the thigh carries its own line. It is widest at 28 and draws back in above
+        # that, so the top outer corner slopes away under the pelvis instead of squaring off against
+        # it - the cut the artwork puts there.
+        upright(g, [(17.5, 11, 13.5, x*1.05, -1), (28, 13, 15, x, 0),
+                    (33, 9, 12, x*.9, 0)], leg, cut=.3)
         # The knee is a distinct armoured block, as the artwork draws it.
         g.box((x*1.05, .5, 17.5), (12, 12.5, 5.5), leg+'-shin', 'metal')
         upright(g, [(5, 11.5, 12.5, x*1.1, 0), (15, 13, 13.5, x*1.05, -.5)], leg+'-shin', cut=.35)
         foot(g, x*1.1, 3, 13, 17, leg+'-shin')
-        # Broad angular pauldron over the side torso, carrying the missile bay on its top.
-        upright(g, [(39, 14, 17, side*15, -1), (48, 15, 17, side*15, -1),
-                    (52.5, 12, 14, side*14.5, -1)], torso_side, cut=.3)
+        # Broad angular pauldron over the side torso, carrying the missile bay on its top. It stops at
+        # 18.25, where the arm begins, rather than running out under it: an arm flip turns about this
+        # joint's left-right axis, which never changes x, so an arm flush with the pauldron at rest
+        # stays flush all the way round. Each section keeps its width and moves inboard, so the
+        # pauldron keeps its mass and the unit keeps its width - the arm still ends at 31.75.
+        # A shoulder pad, not a slab beside the arm: a broad shell capping the shoulder, widest where
+        # its lower lip drapes out over the arm at 40, drawing back in as it rises toward the neck.
+        # The arm hangs underneath it, narrower, so the pad overhangs it on both sides.
+        upright(g, [(41, 15, 15, side*19.5, -1), (45, 16, 16, side*19, -1),
+                    (48, 14, 14, side*16, -1), (50.5, 9, 10, side*11.5, -1)], torso_side, cut=.35)
         if g.modular:
-            g.joint(arm, (side*25, 0, 44), 'CT')
-        # Shoulder ball, then an upper arm dropping to the elbow.
-        upright(g, [(35, 11, 12, side*25.5, 0), (45.5, 13.5, 14, side*25, 0)], arm, cut=.5)
+            # Hung from the top of the shoulder, up inside the pad, rather than socketed into its side.
+            g.joint(arm, (side*19.5, 0, 44), 'CT')
+        # The upper arm hangs from that point and is narrower than the pad above it, so the pad's lip
+        # covers its top rather than meeting it edge to edge.
+        upright(g, [(30, 10, 11, side*19.5, 0), (44, 12, 13, side*19.5, 0)], arm, cut=.45)
         # The lower arm reaches forward level with the chest; the fist caps it when one is fitted.
-        forward(g, [(-7, 10, 11, side*25.5, 35.5), (6, 11, 12, side*25.5, 35.5),
-                    (20, 9.5, 10.5, side*25.5, 35.5)], arm+'@forearm', cut=.3)
-        g.box((side*25.5, 23.5, 35.5), (8, 6, 8.5), arm+'@hand', 'edge', .3)
+        forward(g, [(-7, 10, 11, side*19.5, 31), (6, 11, 12, side*19.5, 31),
+                    (20, 9.5, 10.5, side*19.5, 31)], arm+'@forearm', cut=.3)
+        g.box((side*19.5, 23.5, 31), (8, 6, 8.5), arm+'@hand', 'edge', .3)
         # Without a lower arm the upper arm ends in a capped elbow that carries the weapon.
-        g.box((side*25.5, -1, 36.5), (10.5, 10.5, 9.5), arm+'@elbow', 'edge', .3)
+        g.box((side*19.5, -1, 32), (10.5, 10.5, 9.5), arm+'@elbow', 'edge', .3)
 
 
 def king_crab(g):

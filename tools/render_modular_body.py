@@ -136,7 +136,9 @@ def render(body_id, mesh, views, out, columns=3, title=None):
     scene.view_settings.view_transform = 'Standard'
     scene.world = bpy.data.worlds.new(body_id + ' world')
     scene.world.use_nodes = True
-    scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.22, .28, .35, 1)
+    # A warm ground against a cool model. The old blue-grey sat in the same hue family as the joint
+    # and shin armour, so those parts separated from it only by brightness and read as background.
+    scene.world.node_tree.nodes['Background'].inputs[0].default_value = (.21, .13, .10, 1)
 
     ink = bpy.data.materials.new('Sheet labels')
     ink.use_nodes = True
