@@ -74,6 +74,10 @@ and then ask. Many questions are answered by the pictures, and the rest are shar
 
 ## 5. Finishing a unit
 
+- **Final review includes a close look at the head.** Send an enlarged front and three-quarter crop
+  of the head beside the reference art: its outline, eyes or visor, ears and fins, and how it sits in
+  the collar. The head is what makes a Mek read as itself, and at sheet scale it is only a few pixels
+  across (the Panther's snout, ears and collar each took a round to get right).
 - Zip the old version into `archive/` under a plain numbered name, with its README inside.
 - Update `UNIT_REVIEW_PROCESS.md` with any new rule the unit taught us.
 - Commit and push with two-word code-name messages.
