@@ -3,7 +3,7 @@
   "notes": "Silhouettes are authored against both the north-facing sprites and repository chassis illustrations in unit_mek_chassis.py. Sockets use the sprite-centered coordinate system: x-42, 36-y, z. Large forms take priority over surface detail; body dimensions are stylized, not physical measurements.",
   "chassis": [
     {
-      "name": "Atlas", "id": "atlas", "bodyScale": 0.87, "referenceVariant": "AS7-D",
+      "name": "Atlas", "id": "atlas", "bodyScale": 0.892, "referenceVariant": "AS7-D",
       "sprite": "meks/Atlas.png", "illustration": "Mek/Atlas.png", "hip": [42,36,31],
       "equipmentRules": [{"match": "LRM.?20", "exclude": "Streak", "drawAs": "LRM 5", "location": "LT", "family": "missile", "profile": "vertical", "node": "pelvis", "socket": [33.5, 29.5, 31], "size": [5, 7], "note": "Every Atlas LRM 20 is drawn as a five-tube rack stood on end at the right of the waist block as seen from the front, the Atlas's own left side."}],
       "sockets": {"HD":[42,26.8,54.5],"CT":[42,27.9,42],"LT":[33.7,28.5,43.6],"RT":[50.3,28.5,43.6],"LA":[22.5,28,33.1],"RA":[61.5,28,33.1],"LL":[32.9,30.4,12],"RL":[51.1,30.4,12]},
@@ -19,11 +19,11 @@
       "sprite": "meks/Locust.png", "illustration": "Mek/Locust.png", "hip": [42,37,20.5],
       "silhouette": "A big wedge-shaped pod, six-sided in section with a drooping nose and a spine along the roof, gun pods hard against its upper flanks, a short antenna, round hip discs and short splayed reverse-jointed legs on three-toed feet with a rear spur.",
       "sockets": {"HD":[42,22.2,20.1],"CT":[42,22.2,20.1],"LT":[37.8,28.8,29.4],"RT":[46.2,28.8,29.4],"LA":[34.35,32.35,30.15],"RA":[49.65,32.35,30.15],"LL":[32.8,36.4,15.5],"RL":[51.2,36.4,15.5]},
-      "rearSockets": {"HD":[42,45.5,30.2],"CT":[42,44,25.5],"LT":[39,44,25.5],"RT":[45,44,25.5],"LA":[34.35,39.55,30.15],"RA":[49.65,39.55,30.15]}, "mountAreas": {"HD":{"width":3.4,"height":2.4},"CT":{"width":3.4,"height":2.4},"LT":{"width":2.7,"height":3.6},"RT":{"width":2.7,"height":3.6},"LA":{"width":3.6,"height":4.05},"RA":{"width":3.6,"height":4.05}}, "protrusion": {"CT": "long"}, "stackRows": ["LA", "RA", "CT"], "sharedFaces": {"HD": "CT"}, "bodyScale": 1.259, "searchlightSocket": {"location":"LT","position":[37.8,28.8,31.2]},
+      "rearSockets": {"HD":[42,45.5,30.2],"CT":[42,44,25.5],"LT":[39,44,25.5],"RT":[45,44,25.5],"LA":[34.35,39.55,30.15],"RA":[49.65,39.55,30.15]}, "mountAreas": {"HD":{"width":3.4,"height":2.4},"CT":{"width":3.4,"height":2.4},"LT":{"width":2.7,"height":3.6},"RT":{"width":2.7,"height":3.6},"LA":{"width":3.6,"height":4.05},"RA":{"width":3.6,"height":4.05}}, "protrusion": {"CT": "long"}, "stackRows": ["LA", "RA", "CT"], "sharedFaces": {"HD": "CT"}, "bodyScale": 1.285, "searchlightSocket": {"location":"LT","position":[37.8,28.8,31.2]},
       "slotSpacing": 2.5, "weaponScale": 0.80
     },
     {
-      "name": "Warhammer", "id": "warhammer", "bodyScale": 0.95, "referenceVariant": "WHM-6R",
+      "name": "Warhammer", "id": "warhammer", "bodyScale": 0.96, "referenceVariant": "WHM-6R",
       "searchlightSocket": {"location": "LT", "position": [29.5, 37.2, 51.8], "scale": 1.25},
       "sprite": "meks/Warhammer.png", "illustration": "Mek/Warhammer.png", "hip": [42,36,29],
       "silhouette": "Low inset head, slab shoulders, wide cannon gauntlets and long PPC barrels; shoulder launcher opposite a searchlight.",
@@ -34,7 +34,7 @@
       "slotSpacing": 2.6, "weaponScale": 0.92, "barrelLength": 14, "missileBayHeight": 7
     },
     {
-      "name": "Mad Cat (Timber Wolf)", "id": "mad-cat", "bodyScale": 1.019, "referenceVariant": "Prime",
+      "name": "Mad Cat (Timber Wolf)", "id": "mad-cat", "bodyScale": 1.029, "referenceVariant": "Prime",
       "sprite": "meks/MadCat.png", "illustration": "Mek/Mad Cat (Timber Wolf).png", "hip": [42,38,28],
       "silhouette": "Tall twin missile towers, rounded forward canopy, low paired gun pods, narrow reverse knees and broad shin armor over split feet.",
       "sockets": {"HD":[42,21,36],"CT":[45,22,33],"LT":[36,25,34],"RT":[48,25,34],"LA":[21,29,33],"RA":[63,29,33],"LL":[31,39,12],"RL":[53,39,12]},
@@ -47,7 +47,7 @@
       "slotSpacing": 3, "weaponScale": 0.95
     },
     {
-      "name": "Marauder", "id": "marauder", "bodyScale": 0.932, "referenceVariant": "MAD-3R",
+      "name": "Marauder", "id": "marauder", "bodyScale": 0.951, "referenceVariant": "MAD-3R",
       "sprite": "meks/Marauder.png", "illustration": "Mek/Marauder.png", "hip": [42,39,29],
       "silhouette": "Hunched pod body falling to a low pointed nose, long dorsal autocannon over the right shoulder, double-deck forearm pods held low and forward, reverse knees and splayed toes.",
       "sockets": {"HD":[42,20,37],"CT":[42,26,33],"LT":[35,27,38],"RT":[49,27,38],"LA":[20.5,20,30.5],"RA":[63.5,20,30.5],"LL":[31,38,16],"RL":[53,38,16]},
@@ -65,7 +65,7 @@
       "weaponOverrides": [{"location": "RT", "family": "ballistic", "length": 32, "note": "The dorsal autocannon runs the length of the body and past the nose."}]
     },
     {
-      "name": "Archer", "id": "archer", "bodyScale": 0.898, "referenceVariant": "ARC-2R",
+      "name": "Archer", "id": "archer", "bodyScale": 0.914, "referenceVariant": "ARC-2R",
       "sprite": "meks/Archer.png", "illustration": "Mek/Archer.png", "hip": [42,36,30],
       "silhouette": "Compact, solid build with modest shoulders tucked against the bays; a tall missile bay in each side torso leaning back, each showing a full four-by-five face of tubes from top to bottom; no separate head - the centre is one solid mass whose top slopes from the back down to the cockpit while its underside runs level from the base of the cockpit straight back into the torso; twin antennas directly behind the cockpit, heavy forearms held forward with closed fists, thick straight legs.",
       "sockets": {"HD":[42,16,37.6],"CT":[42,29.5,35],"LT":[33.5,25.8,40.5],"RT":[50.5,25.8,40.5],"LA":[21,27,38.6],"RA":[63,27,38.6],"LL":[33,33,14],"RL":[51,33,14]},
@@ -78,7 +78,7 @@
       "missileBayHeight": 11, "missileBayColumns": 2, "missileBayWidth": 9.4
     },
     {
-      "name": "King Crab", "id": "king-crab", "bodyScale": 0.924, "referenceVariant": "KGC-000",
+      "name": "King Crab", "id": "king-crab", "bodyScale": 0.915, "referenceVariant": "KGC-000",
       "legBends": {"leftLeg":"reverse", "rightLeg":"reverse"},
       "sprite": "meks/KingCrab.png", "illustration": "Mek/King Crab.png", "hip": [42,38,29],
       "silhouette": "Classic wedge-shaped carapace prolonged behind the shoulders, angular sloping roof and a slightly pointed forward brow. HD is the entire visor/front band; the carapace behind and above it is explicitly split into CT, LT and RT for independent damage. Side-torso barrels sit on the upper side shell, launchers on raised rear shoulders. No broad hanging jaw. Open pincers frame live arm guns; heavy reverse-knee legs and broad feet. One body for all refits.",
@@ -97,7 +97,7 @@
       "slotSpacing": 3, "weaponScale": 0.95
     },
     {
-      "name": "Mackie", "id": "mackie", "bodyScale": 0.81, "referenceVariant": "MSK-6S",
+      "name": "Mackie", "id": "mackie", "bodyScale": 0.818, "referenceVariant": "MSK-6S",
       "searchlightSocket": {"location": "RT", "position": [55, 40, 58.5], "scale": 1.75},
       "sprite": "meks/Mackie.png", "illustration": "Mek/Mackie.png", "hip": [42,36,31],
       "silhouette": "Squat, very wide boxy torso under a glass bubble cockpit; both arms are guns held level at shoulder height, the right one ringed by a round shield disc; box searchlight on the right shoulder, vented housing on the left; twin guns slung under the front of the torso; heavy legs with raised thigh plates and broad feet.",
@@ -112,7 +112,7 @@
       "slotSpacing": 3, "weaponScale": 0.95
     },
     {
-      "name": "Rifleman", "id": "rifleman", "bodyScale": 0.932, "referenceVariant": "RFL-3N",
+      "name": "Rifleman", "id": "rifleman", "bodyScale": 0.931, "referenceVariant": "RFL-3N",
       "sprite": "meks/Rifleman.png", "illustration": "Mek/Rifleman.png", "hip": [42,36,29.4],
       "silhouette": "Squat anti-air gun platform: very heavy legs with outboard thigh plates and broad splayed feet, a compact vented torso, a small angular cockpit set forward and low between the shoulders, a swept radar blade on a short mast above the torso, and a long weapon pod on each side carrying a stacked pair of barrels. No hands and no forearms on any variant.",
       "sockets": {"HD":[42,25,37.9],"CT":[42,29.5,38.4],"LT":[36,30,37.9],"RT":[48,30,37.9],"LA":[25,24,40.4],"RA":[59,24,40.4],"LL":[34.5,36,13],"RL":[49.5,36,13]},
@@ -126,7 +126,7 @@
       "weaponScale": 0.95
     },
     {
-      "name": "BattleMaster", "id": "battlemaster", "bodyScale": 0.948, "referenceVariant": "BLR-1G",
+      "name": "BattleMaster", "id": "battlemaster", "bodyScale": 0.954, "referenceVariant": "BLR-1G",
       "sprite": "meks/BattleMaster.png", "illustration": "Mek/BattleMaster.png", "hip": [42,36,31],
       "silhouette": "Eighty-five ton assault Mek: very broad angular pauldrons carrying a missile bay on each shoulder, a domed cockpit with a dark curved visor set low and forward between them, twin antennas behind it, long arms held forward ending in fists, and heavy legs with outboard thigh plates, blocked knees and broad splayed feet. The right arm carries the particle cannon, the left the machine guns.",
       "sockets": {"HD":[42,27,47],"CT":[42,28,40],"LT":[33.9,28,46],"RT":[50.1,28,46],"LA":[24.45,16,31],"RA":[59.55,16,31],"LL":[33.9,36,13],"RL":[50.1,36,13]},
@@ -148,6 +148,23 @@
                           {"location": "RA", "family": "laser", "length": 3.5}],
       "widthScale": 0.9, "heldWeapons": ["LA", "RA"],
       "weaponScale": 0.94
+    },
+    {
+      "name": "Panther", "id": "panther", "bodyScale": 0.839, "referenceVariant": "PNT-9R",
+      "sprite": "meks/Panther.png", "illustration": "Mek/Panther.png", "hip": [42,36,27],
+      "silhouette": "Thirty-five ton light Mek named for its head: a broad cat's skull with two ears, slanted visor eyes and a short snout. A big faceted chest over a narrow waist and hip skirt, high blocky shoulders, straight blocky legs on clawed feet. The right forearm is the particle cannon itself, held forward with no hand; the left arm ends in a hand.",
+      "sockets": {"HD":[42,31.2,44.4],"CT":[39.5,29.95,37],"LT":[37.5,29.95,40.5],"RT":[46.5,29.95,40.5],"LA":[30.9,32.8,29.8],"RA":[58.2,39,33],"LL":[35.2,32.5,13],"RL":[48.8,32.5,13]},
+      "armSockets": {"LA":{"elbow":[30.9,35.5,33],"wrist":[30.9,32.8,29.8],"hand":[30.9,33.4,24.2]},
+                     "RA":{"elbow":[53.1,35.5,33],"wrist":[58.2,39,33],"hand":[58.2,39,33]}},
+      "rearSockets": {"HD":[42,39,47.4],"CT":[42,41.45,40],"LT":[37.6,41.45,40],"RT":[46.4,41.45,40],"LA":[30.9,38.3,29.8],"RA":[53.1,39.5,33]},
+      "protrusion": {"LA":"short","RA":"long"},
+      "mountAreas": {"HD":{"width":3,"height":2.4},"CT":{"width":5,"height":4.5},"LT":{"width":3.5,"height":5},"RT":{"width":3.5,"height":5},
+                     "LA":{"width":4.4,"height":4},"RA":{"width":7,"height":7}},
+      "ventDefaultSides": ["rear"], "ventSpares": 1,
+      "socketBanks": {"LL:jump-jet":[[34.05,39.45,8.1]], "RL:jump-jet":[[49.95,39.45,8.1]]},
+      "socketNodes": {"LL:jump-jet":"LL-shin", "RL:jump-jet":"RL-shin"}, "locationScale": {"RA": 2},
+      "exhaustSockets": {"LL":[34.4,39.55,12.4],"RL":[49.6,39.55,12.4],"CT":[42,41,35.5],"LT":[37.6,41,35.5],"RT":[46.4,41,35.5]},
+      "weaponScale": 0.8
     }
   ]
 }

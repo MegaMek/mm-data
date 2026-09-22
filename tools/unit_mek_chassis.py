@@ -793,6 +793,90 @@ def king_crab(g):
         g.box((side*35, 10, 34), (2.5, 6, 11), arm+'@hand', 'edge')
 
 
+def panther(g):
+    # Thirty-five tons, named for its head: a broad cat's skull with two ears, slanted visor eyes and a short
+    # snout pushing forward below them. A big faceted chest over a narrow waist and a hip skirt, high blocky
+    # shoulders, straight blocky legs on clawed feet. The right forearm is the particle cannon itself, a heavy
+    # housing and barrel held forward with no hand; the variant's actual gun fits its muzzle. The left arm ends
+    # in a hand. Drawn from the ilClan line drawing, with the colour render and the miniature for the front.
+    # The chest is squared off at the top: full width straight up to the shoulders, tapering only below.
+    # The lower chest is a vertical plate, so launchers stacked on it all sit flush on one flat face.
+    torso = [(34, 12, 11.5, 0, .3), (40, 16, 11.5, 0, .3), (43.2, 16, 10.8, 0, .2)]
+    upright(g, torso, cut=.2)
+    # The chest top is dropped so the head sits in a recess. A collar cradles it: each side rises high toward the
+    # shoulder, near eye level, and slopes down and in to a flat ledge under the chin.
+    for side in (-1, 1):
+        if side == 1:
+            ring = [(3.2, 43.8), (7.6, 47.2), (7.6, 43.2), (2.8, 43.2)]
+        else:
+            ring = [(-7.6, 47.2), (-3.2, 43.8), (-2.8, 43.2), (-7.6, 43.2)]
+        g.loft([[(x, y, z) for x, z in ring] for y in (-4.5, 4.6)], 'CT')
+    g.box((0, 0, 32.4), (8, 7.5, 3.6), 'CT', 'metal')
+    upright(g, [(24.2, 9, 7.5, 0, 0), (30.6, 10.5, 8.5, 0, 0)], 'pelvis', cut=.3)
+    for side in (-1, 1):
+        vent(g, lofted_face(torso), side*4.4, .8, 35.4, 37.8)
+        vent(g, lofted_face(torso, rear=True), side*4.4, .9, 38.5, 41.5, rear=True)
+    # The panther's head: one compact flat-topped block, no snout, a wide slanted visor in a dark surround, a small
+    # chin plate, a round actuator at each cheek, and ears laid flat back along the top like an angry cat's.
+    g.box((0, .5, 43.9), (4.5, 4.5, 1.6), 'HD', 'metal')
+    forward(g, [(-3, 8.4, 5.4, 0, 47.4), (4.6, 8.2, 5, 0, 47.1)], 'HD', cut=.35)
+    g.box((0, 3.9, 44.4), (4.2, 1.8, 1.1), 'HD', 'edge')
+    for side in (-1, 1):
+        for lift, inset, material in ((.03, 0, 'dark'), (.06, .2, 'glass')):
+            eye = [(side*(3.5-inset), 4.6+lift, 48.6-inset), (side*(.25+inset), 4.6+lift, 47.7-inset),
+                   (side*(.25+inset), 4.6+lift, 46.5+inset), (side*(3.3-inset), 4.6+lift, 47.2+inset)]
+            panel(g, eye if side == -1 else list(reversed(eye)), 'HD', material)
+        g.beam((side*4.2, .3, 47.2), (side*4.8, .3, 47.2), 2.2, 2.2, 'HD', 'metal', 6)
+        # The ears lie flat along the top edges of the head, running straight back past it.
+        g.beam((side*3.1, 1.2, 50.15), (side*3.2, -5.6, 50.9), 2.4, .7, 'HD', 'paint', 4, taper=.6)
+    for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
+        x = side*6.5
+        g.joint(leg, (x, 0, 27), 'pelvis')
+        g.joint(leg+'-shin', (x*1.12, 0, 15.5), leg)
+        # The thigh tapers in at the top to tuck under the corner of the hip skirt, then widens as it comes down.
+        upright(g, [(16.5, 6, 7, x*1.1, 0), (22, 6.8, 7.6, x, 0), (26.5, 4.2, 6.2, side*3.9, 0)], leg, cut=.3)
+        g.box((x*1.12, 0, 15.5), (5, 5.6, 3), leg+'-shin', 'metal')
+        g.box((x*1.13, 3.9, 16.2), (5, 1.8, 5.5), leg+'-shin', 'paint')
+        upright(g, [(6, 6, 6.8, x*1.25, 0), (14.5, 6.4, 7.2, x*1.14, 0)], leg+'-shin', cut=.3)
+        # The foot: a faceted block bevelled along its top edges and tapering in toward the front, a dark ankle dome
+        # a heel block, and two wide dark claws sloping down from the front face.
+        fx, feet = x*1.3, leg+'-shin'
+        if g.modular:
+            feet = leg+'-foot'
+            g.joint(feet, (fx, .2, 4), leg+'-shin')
+        forward(g, [(-4, 6.6, 3.6, fx, 1.8), (5.4, 6, 3, fx, 1.5)], feet, cut=.35)
+        g.beam((fx, .4, 3.4), (fx, .4, 5.8), 4.6, 4.6, feet, 'metal', 6, taper=.8)
+        g.box((fx, -4.6, 1.2), (4, 1.6, 2.4), feet, 'paint')
+        for dx in (-1.25, 1.25):
+            forward(g, [(5.2, 1.8, 2.4, fx+dx, 1.6), (7.9, 1.5, 1.4, fx+dx, .7)], feet, 'metal', cut=0)
+        # High blocky shoulders set against the chest, over a short upper arm hung close beside it.
+        forearm, hand = arm, arm
+        if g.modular:
+            g.joint(arm, (side*8.6, 0, 44), 'CT')
+            g.joint(arm+'-forearm', (side*11.1, .5, 33), arm)
+            forearm, hand = arm+'@forearm', arm+'@hand'
+        # Layered shoulder: a boxy lower block under a wider, flat top plate that overhangs outward and forward.
+        upright(g, [(38.5, 6.4, 8, side*9.9, 0), (44.2, 6.8, 8.4, side*10.1, 0)], arm, cut=.2)
+        upright(g, [(44.2, 8, 9.2, side*10.6, .3), (46.6, 8, 9.2, side*10.6, .3)], arm, cut=0)
+        # An armoured upper arm under the shoulder rather than a bare rod.
+        upright(g, [(33.5, 4.6, 5, side*11.0, .4), (39.2, 5, 5.4, side*10.6, .1)], arm, cut=0)
+        if side == 1:
+            # The gun forearm, held forward: a blocky housing ending in a plain closed fist. The gun
+            # itself is the variant's weapon, bolted along the forearm's outer side and reaching past the fist.
+            forward(g, [(-3.5, 5.6, 6, 11.1, 33), (2.8, 6.2, 6.6, 11.1, 33)], forearm, cut=.3)
+            g.box((11.1, 4.6, 33), (5.4, 3.6, 5.8), forearm, 'paint')
+        else:
+            upright(g, [(26.5, 4.8, 5.2, -11.1, .5), (33, 5.2, 5.6, -11.1, .5)], forearm, cut=.3)
+            # A hand in armour colour: the palm, a row of fingers curled under with dark seams between them, and a
+            # thumb on the inner side.
+            g.box((-11.1, .6, 25), (4.4, 4, 3), hand, 'paint')
+            g.box((-11.1, 1.5, 22.6), (4, 2.6, 1.9), hand, 'paint')
+            for dx in (-1, 0, 1):
+                panel(g, [(-11.1+dx-.1, 2.82, 23.5), (-11.1+dx+.1, 2.82, 23.5), (-11.1+dx+.1, 2.82, 21.7),
+                          (-11.1+dx-.1, 2.82, 21.7)], hand, 'dark')
+            g.box((-8.7, 1.4, 24), (1.2, 2, 2.4), hand, 'paint')
+
+
 def narrow(g, scale, socketed):
     """Scales the body across its width about the centre line, leaving height and depth alone. The sockets in the
     recipe are already given at the narrowed width, so joints placed from them are left as they are."""
@@ -839,7 +923,7 @@ def build_chassis(recipe, modular=False):
     builders = {'atlas': atlas, 'locust': locust, 'warhammer': warhammer, 'mad-cat': mad_cat,
                 'marauder': marauder, 'archer': archer, 'mackie': mackie,
                 'king-crab': king_crab, 'rifleman': rifleman,
-                'battlemaster': battlemaster}
+                'battlemaster': battlemaster, 'panther': panther}
     socketed = dict(g.pivots)
     builders[recipe['id']](g)
     if modular:

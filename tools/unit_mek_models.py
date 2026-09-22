@@ -235,7 +235,7 @@ def build_meks(recipes, output, export_asset, write_json):
         if weight:
             body = author_fallback(body, weight)
         split_torso_locations(body)
-        vents = finish_vents(body) if 'topology' not in recipe and recipe.get('form') != 'airmek' else []
+        vents = finish_vents(body, recipe.get('ventSpares', 3)) if 'topology' not in recipe and recipe.get('form') != 'airmek' else []
         for location in ('HD', 'CT', 'LT', 'RT'):
             if not any(node == location for _, node, _ in body.faces):
                 raise ValueError(recipe['id']+': no drawable '+location+' surface')
@@ -278,6 +278,8 @@ def build_meks(recipes, output, export_asset, write_json):
                                'roles': ['misc'] if family == 'lamp' else ['weapon', 'physical', 'misc']})
             settings = {'hardpoint': identifier, 'family': family, 'form': form, 'bay': bay,
                         'scale': recipe['weaponScale']*grown*(recipe.get('missileScale', 1) if bay else 1)}
+            # A location can carry its weapons larger than the chassis's norm, as the Panther's right-arm cannon is.
+            settings['scale'] *= recipe.get('locationScale', {}).get(location, 1)
             style = recipe.get('protrusion', {}).get(location+':'+family, recipe.get('protrusion', {}).get(location))
             if style:
                 settings['style'] = style
@@ -402,5 +404,8 @@ def build_meks(recipes, output, export_asset, write_json):
             descriptor['rules'] = rules
         if vents:
             descriptor['vents'] = vents
+            if 'ventDefaultSides' in recipe:
+                # The faces that keep the author's vents on a variant with no slotted heat sinks in its torso.
+                descriptor['ventDefaultSides'] = recipe['ventDefaultSides']
         write_json(output / ('meks/'+recipe['id']+'.json'), descriptor)
     return assets

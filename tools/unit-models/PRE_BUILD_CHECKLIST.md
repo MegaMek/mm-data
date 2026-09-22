@@ -18,6 +18,9 @@ The working loop and review conventions live in `UNIT_REVIEW_PROCESS.md`; this i
 
 ## 2. Questions for you
 
+**Only once the art has arrived.** Share the facts from section 1, ask for the references, look at them,
+and then ask. Many questions are answered by the pictures, and the rest are sharper for them.
+
 **The art**
 1. Which picture is the authority when they disagree: the miniature, the line drawing, or a record sheet?
 2. Is there a front view? A side view? If not, which angle should I trust for proportions?

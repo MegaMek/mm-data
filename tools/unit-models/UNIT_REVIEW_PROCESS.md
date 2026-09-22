@@ -371,12 +371,17 @@ it looks in isolation.
 per model unit, so 1.0 is 54 units. Measure to the top of the armour, ignoring antennas, whips and
 dishes. Keep every Mek of a class inside its band so the class reads as one size:
 
-| Class | Scale | Model units | Set so far |
+| Class | Scale | Model units | Set so far (scale) |
 |---|---|---|---|
-| Light | 0.75-0.80 | 40.5-43.2 | Locust 41.9 |
+| Light | 0.75-0.80 | 40.5-43.2 | Locust 0.791, Panther 0.793 |
 | Medium | 0.82-0.87 | 44.3-47.0 | |
-| Heavy | 0.89-0.94 | 48.1-50.8 | Rifleman, Archer, Warhammer, Mad Cat, Marauder 49.4 |
-| Assault | 0.95-1.00 | 51.3-54.0 | BattleMaster, King Crab, Mackie 52.7; Atlas 52.2 |
+| Heavy | 0.89-0.94 | 48.1-50.8 | Rifleman 0.914, Warhammer 0.924, Mad Cat 0.924, Archer 0.931, Marauder 0.933 |
+| Assault | 0.95-1.00 | 51.3-54.0 | King Crab 0.966, BattleMaster 0.981, Mackie 0.985, Atlas 0.991 |
+
+**Within a band, order by the official miniature.** `BTMmm.xlsx` in the mm-data root lists 206 official
+minis with their height in mm. A chassis takes the point in its band that its mini's height holds in the
+spread of minis of the same class: the tallest heavy mini lands near 0.94, the shortest near 0.89. A
+chassis with no mini in the sheet is placed by eye (the Mackie sits just under the Atlas).
 
 Fix a body's height with the recipe's `bodyScale`, never by re-authoring it. The whole body scales
 evenly after every joint is placed, and the exporter scales the recipe's sockets, mount areas, weapon

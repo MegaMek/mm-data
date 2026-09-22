@@ -95,7 +95,7 @@ def _rectangle(body, node):
             max(p[2] for p in points))
 
 
-def _spares(body, surface, location, width, height, taken):
+def _spares(body, surface, location, width, height, taken, limit=SPARES):
     """Up to SPARES flat spots of this location, nearest its middle first, clear of each other and of taken."""
     faces = [bounds for _, node, _, bounds in surface.faces if node == location]
     if not faces:
@@ -117,7 +117,7 @@ def _spares(body, surface, location, width, height, taken):
                + ((item[0][2]+item[0][3])/2-middle[1])**2)
     chosen = []
     for rectangle, plane in found:
-        if len(chosen) == SPARES:
+        if len(chosen) == limit:
             break
         if any(_overlap(rectangle, other) for other in taken + [c[0] for c in chosen]):
             continue
@@ -125,12 +125,13 @@ def _spares(body, surface, location, width, height, taken):
     return chosen
 
 
-def finish_vents(body):
+def finish_vents(body, spares=SPARES):
     """Moves every vent to a node of its own under its torso location, adds spare spots, and lists them all.
 
     Call after the torso is split into its locations. Returns the list the Mek descriptor carries.
     """
     authored = getattr(body, 'vents', [])
+    spares_wanted = spares
     if not authored:
         return []
     surfaces = {rear: _Surface(body, rear) for rear in (False, True)}
@@ -161,7 +162,7 @@ def finish_vents(body):
                         spares.append((mirrored, plane))
             # A narrow location may still take a smaller vent.
             for across, up in ((1, 1), (.7, .8), (.45, .8)):
-                spares = spares or _spares(body, surfaces[rear], location, width*across, height*up, taken)
+                spares = spares or _spares(body, surfaces[rear], location, width*across, height*up, taken, spares_wanted)
             if location == 'RT':
                 right = spares
             for (x0, x1, z0, z1), ((nx, ny, nz), d) in spares:
