@@ -5006,7 +5006,7 @@
             </model>
             <model name='(Tracked PAC2 Advanced)'>
                 <roles>anti_aircraft,field gun,fire_support</roles>
-                <availability>CLAN.IS!Second Line:1,RD:0,CGS!Keshik:1,</availability>
+                <availability>CLAN.IS!Second Line:1,RD:0,CGS!Keshik:1</availability>
             </model>
             <model name='(Tracked PAC4 Advanced)'>
                 <roles>anti_aircraft,field gun,fire_support</roles>
@@ -6408,6 +6408,7 @@
                 <availability>CP:3+,MERC:2+,MERC.KH:2,MERC.WD:2,CLAN.IS:3+,RD:3+,CHH:2+,CJF:2,RA!Keshik:5!Front Line:2,CW:4+,CWE:4+</availability>
             </model>
             <model name='F'>
+                <roles>anti_infantry,recon</roles>
                 <availability>CP:2,MERC:2,CLAN.IS:3,CGB.FRR:5+,CGB:3,RD:3,CHH:5-,CJF:6-,RA:2,CW:4,CWE:4,BAN:3+</availability>
             </model>
             <model name='G'>
@@ -6423,7 +6424,7 @@
                 <availability>CGB!Keshik:3</availability>
             </model>
             <model name='K'>
-                <roles>recon</roles>
+                <roles>anti_infantry,recon</roles>
                 <availability>CP:2,MERC:2,CLAN.IS:5-,CGB.FRR:8-,CGB:4-,RD:4-,CHH:4-,CJF:3-,RA:4-,CW:7-,CWE:7-,BAN:4</availability>
             </model>
             <model name='M'>
@@ -6436,7 +6437,7 @@
                 <availability>MERC:6,CP:7,CLAN.IS:6,CGB.FRR:7,CGB:6,RD:6,CHH:4,CNC:7-,CDS:6-,RA:4,CWIE:7-,CW:3,CWE:3,BAN:3</availability>
             </model>
             <model name='R'>
-                <roles>recon</roles>
+                <roles>ew_support,recon</roles>
                 <availability>CP:4,MERC:8,RD:1+,CJF:3+,CNC:2+,CDS:4+,RA:2+,CWIE:1+,CW!Second Line:3!Solahma:1,CWE!Second Line:3!Solahma:1,BAN:1+</availability>
             </model>
             <model name='T'>
@@ -14040,7 +14041,7 @@
                 <availability>IS:6,CP:3,MERC.WD:6,CLAN.IS:4-,RD:4-,CGS:2,CNC:3,CDS:3,RA:3,CWIE:5-,CWE:4-,Periphery:1,BAN:3</availability>
             </model>
             <model name='L'>
-                <roles>recon</roles>
+                <roles>anti_infantry,recon</roles>
                 <availability>IS:1+,CP:3+,MERC.WD:3+,CLAN.IS:4-,RD:4-,CGS:2+,CHH:1+,CDS:3+,RA:1+,CW!Second Line:1,CWE!Second Line:1</availability>
             </model>
             <model name='M'>
@@ -20015,10 +20016,10 @@
             </model>
             <model name='J'>
                 <roles>anti_infantry</roles>
-                <availability>IS:2,CP:2,CLAN.IS:2+,RD:2+,CGS:2+,CHH:5+,CDS!Keshik:4!Front Line:2,RA:2+,CWE:2+</availability>
+                <availability>IS:2+,CP:2+,CLAN.IS:2+,RD:2+,CGS:2+,CHH:5+,CDS!Keshik:4!Front Line:2,RA:2+,CWE:2+</availability>
             </model>
             <model name='K'>
-                <availability>IS:5,CP:5,CLAN.IS:2+,RD:1+,CGS:2+,CHH:1+,CJF:1+,RA:1+,CWIE:1+,CWE:2+</availability>
+                <availability>IS:1+,ROS:2+,CP:2+,CLAN.IS:2+,RD:1+,CGS:2+,CHH:1+,CJF:1+,RA:1+,CWIE:1+,CWE:2+</availability>
             </model>
             <model name='Prime'>
                 <availability>IS:8,CP:6,CLAN.IS:5+,CGB.FRR:6+,CGB:7+,RD:7+,CGS:5+,CJF:6+,RA:5+,CWIE:4+,CW:6+,CWE:6+,BAN:3+</availability>
@@ -20027,6 +20028,7 @@
                 <availability>IS:6,CP:6,CLAN.IS:4-,CGB.FRR:5-,RD:4-,CGS:4-,RA:4-,CWE:4-,BAN:4+</availability>
             </model>
             <model name='T'>
+                <roles>fire_support</roles>
                 <availability>IS:1+:3144,ROS:1+:3143,CP:1+:3143,CLAN.IS:1+:3143,RD:1+:3144,CDS!Keshik:2,RA:1+:3144,CW!Keshik:3,CWE:1+</availability>
             </model>
         </chassis>
@@ -25422,7 +25424,7 @@
                 <availability>IS:2,CGS:1+</availability>
             </model>
             <model name='V'>
-                <roles>missile_artillery</roles>
+                <roles>mixed_artillery</roles>
                 <availability>IS:6,CP:6,CGB:5-,RD:5,CGS:5-,CHH:7-,CJF:5-,RA:5-,CWIE:3</availability>
             </model>
         </chassis>
@@ -25498,7 +25500,7 @@
             </model>
         </chassis>
         <chassis name='Warhammer IIC' unitType='Mek'>
-            <availability>IS:4,CP:4+,CLAN.IS!Second Line:3!Solahma:2!Provisional Garrison:1,CGB!Second Line:1!Solahma:2!Provisional Garrison:2,RD!Second Line:1!Solahma:2!Provisional Garrison:2,CJF!Solahma:1!Provisional Garrison:1,CNC!Second Line:2!Solahma:1!Provisional Garrison:1,CDS!Front Line:1!Second Line:3!Solahma:3!Provisional Garrison:1,RA!Keshik:1!Front Line:2!Second Line:3!Solahma:2!Provisional Garrison:1,CWIE!Front Line:1!Second Line:3!Solahma:2!Provisional Garrison:1,CW:2-,CWE:2-,RA.OA:2+,TC:3,MOC:3,BAN:5+</availability>
+            <availability>IS:4,CP:4+,CLAN.IS!Second Line:3!Solahma:2!Provisional Garrison:1,CGB!Second Line:1!Solahma:2!Provisional Garrison:2,RD!Second Line:1!Solahma:2!Provisional Garrison:2,CJF!Solahma:1!Provisional Garrison:1,CNC!Second Line:2!Solahma:1!Provisional Garrison:1,CDS!Front Line:1!Second Line:3!Solahma:3!Provisional Garrison:1,RA!Keshik:1!Front Line:2!Second Line:3!Solahma:2!Provisional Garrison:1,CWIE!Front Line:1!Second Line:3!Solahma:2!Provisional Garrison:1,CW:2-,CWE:2-,RA.OA:2+,TC:3,MOC:3,BAN!Keshik:5!Front Line:4!Second Line:2!Solahma:1</availability>
             <model name=''>
                 <availability>IS:3,CLAN.IS:2-,CGB.FRR:0,CGB:4-,RD:3-,CJF:3-,CNC:3-,CDS:1-,RA:2-,CW:2-,CWE:2-,RA.OA:4,BAN:5</availability>
             </model>
