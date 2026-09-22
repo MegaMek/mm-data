@@ -3,6 +3,8 @@
 These are chassis anatomy, not equipment or game rules. The variant assembler adds
 the actual guns and launchers. +Y faces forward; all dimensions are authoring units.
 """
+from math import pi, sin, cos
+
 from unit_model_geometry import Geometry, sub
 
 
@@ -274,36 +276,74 @@ def atlas(g):
     forward(g, [(3.2, 1.7, 1.7, 6.6, 59.4), (3.8, 2, 2, 6.6, 59.4)], 'HD', 'metal', cut=.3)
 
 
+def claw_foot(g, x, y, group, width=1.4, length=6):
+    """Three toes splayed forward and a spur behind, the bird foot of a reverse-jointed Mek."""
+    if g.modular:
+        parent = group
+        group = group.removesuffix('-shin')+'-foot'
+        g.joint(group, (x, y, 2), parent)
+    for angle, reach in ((-.6, length), (0, length*1.1), (.6, length), (pi, length*.55)):
+        dx, dy = sin(angle), cos(angle)
+        ring = [(x-dy*width/2, y+dx*width/2), (x+dy*width/2, y-dx*width/2), (x+dx*reach, y+dy*reach)]
+        g.prism(ring, 0, 1.8, group, 'paint', .6)
+
+
 def locust(g):
-    # The entire upper body is a low forward cockpit pod, with no humanoid head.
-    forward(g, [(-9, 10, 10, 0, 39), (1, 13, 11, 0, 39),
-                (12, 7, 6, 0, 35.8)], 'CT', cut=.45)
+    # Twenty tons and the smallest Mek in the set: a pod on two short, splayed, reverse-jointed legs. The pod is
+    # most of the Mek, as on the miniature, and is built in three pieces as QA drew it from the front: a wide deck
+    # squared off across the top and reaching out to the gun pods, a six-sided cockpit hull below it that narrows
+    # under the deck, flares out at the lower window and tapers to a keel, and a rounded chin turret under the keel
+    # that carries the centre weapons. A spine runs along the deck with a short antenna standing from it, and big
+    # round actuator discs cover the hips.
+    forward(g, [(-9.5, 11, 3.4, 0, 30.2), (-7, 11.6, 3.8, 0, 30.3), (4.5, 11.6, 3.8, 0, 30.3),
+                (7.2, 10, 2.2, 0, 29.4)], 'CT', cut=.2)
+
+    def hull(y, top, middle, bottom, top_half, middle_half, bottom_half):
+        return [(-top_half, y, top), (top_half, y, top), (middle_half, y, middle),
+                (bottom_half, y, bottom), (-bottom_half, y, bottom), (-middle_half, y, middle)]
+    # The nose reaches well out past the deck, narrowing toward its tip, as the drawing has it.
+    g.loft([hull(-8, 28.2, 23.6, 21.2, 3.4, 5.1, 2.5), hull(-4, 28.4, 23.2, 20.6, 3.8, 5.7, 2.8),
+            hull(7, 28.4, 23.2, 20.6, 3.8, 5.7, 2.8), hull(10.5, 28.3, 23.2, 20.7, 3.7, 5.5, 2.7),
+            hull(13.2, 25.6, 23.2, 21.6, 3.2, 4.8, 2.3)], 'CT')
+    # The chin turret, rounded beneath and standing just proud of the nose, which the centre weapons fire from.
+    forward(g, [(9.4, 3.8, 2.8, 0, 20.1), (13.8, 3.8, 2.8, 0, 20.1)], 'CT', 'edge', cut=.6)
+    g.box((0, -2, 32.7), (2.4, 9, 1.1), 'CT', 'edge')
     for side in (-1, 1):
-        # A twenty tonner has almost no flat frontage, so its vents stay small.
-        vent(g, capped_face(12), side*1.05, .85, 34.5, 37)
-        vent(g, capped_face(-9, rear=True), side*1.4, 1.15, 37, 40, rear=True)
-    g.box((0, -1, 31), (9, 9, 6), 'pelvis', 'metal')
-    for side in (-1, 1):
-        # Angled glazing lies just above the sloped top of the nose.
-        points = [(side*.5, 2, 44.12), (side*3.4, 2, 44.12),
-                  (side*2, 10.8, 39.48), (side*.5, 10.8, 39.48)]
-        panel(g, list(reversed(points)) if side == -1 else points, 'HD', 'glass')
-    g.beam((0, -3, 44), (0, -6, 53), .7, .7, 'HD', 'metal', taper=.2)
+        # No flat frontage to spare on the nose, so the vents sit on the back of the deck.
+        vent(g, capped_face(-9.5, rear=True), side*2.7, .8, 29.3, 31.1, rear=True)
+    g.box((0, -1, 21.2), (8, 7, 3.6), 'pelvis', 'metal')
+    # The cockpit is the front of the hull: a framed pane on the steep facet under the deck and a framed window
+    # across the face below it, both set in a darker surround.
+    def facet(y, lift):
+        return 28.3 - (y-10.5)*2.7/2.7 + lift
+    for lift, inset, material in ((.02, 0, 'edge'), (.05, .3, 'glass')):
+        front = 13.2 + lift
+        panel(g, [(-2.2+inset, front, 24.9-inset), (2.2-inset, front, 24.9-inset),
+                  (2.2-inset, front, 22.7+inset), (-2.2+inset, front, 22.7+inset)], 'HD', material)
+        near, far = 10.7+inset*.5, 13-inset*.5
+        panel(g, [(-2.4+inset, near+lift, facet(near, lift)), (2.4-inset, near+lift, facet(near, lift)),
+                  (2.2-inset, far+lift, facet(far, lift)), (-2.2+inset, far+lift, facet(far, lift))], 'HD', material)
+    g.beam((0, -5, 33.2), (0, -5, 34.4), 1.8, 1.8, 'HD', 'metal', 8)
+    g.beam((0, -5, 34.4), (0, -5.9, 40.5), .63, .63, 'HD', 'metal', taper=.3)
     for side, arm, leg in ((-1, 'LA', 'LL'), (1, 'RA', 'RL')):
-        hip, knee, ankle = (side*8, -1, 31.5), (side*11, -9, 20), (side*12, -1, 3)
+        # A shallow backward knee, so the leg stands nearly straight rather than crouched.
+        hip, knee, ankle = (side*8, -1, 20.5), (side*10, -2.5, 11.8), (side*11.5, 0, 3.2)
         g.joint(leg, hip, 'pelvis')
         g.joint(leg+'-shin', knee, leg)
-        g.beam((side*6, -1, 32), (side*10, -1, 32), 10, 10, leg, 'edge', 6)
-        g.beam(hip, knee, 5, 7, leg, 'paint', taper=.7)
-        g.beam((side*9.8, -9, 20), (side*12, -9, 20), 4.8, 4.8, leg+'-shin', 'metal')
-        g.beam(knee, ankle, 3, 4, leg+'-shin', 'edge', taper=.8)
-        g.box((ankle[0], -1, 2.2), (2.8, 4, 3), leg+'-shin', 'metal')
-        toes(g, ankle[0], -1, leg+'-shin', 2.8, 7)
-        # High, compact gun stubs flank the cockpit; no forearms or hands.
+        # The hip axle runs out of the pelvis into the disc, so the leg hangs from the body rather than beside it.
+        g.beam((side*3.5, -1, 20.5), (side*6.8, -1, 20.5), 4.4, 4.4, 'pelvis', 'metal', 8)
+        # The round hip actuator, a broad armoured disc on the outside of the hip with a hub at its centre.
+        g.beam((side*6.5, -1, 20.5), (side*9.3, -1, 20.5), 9, 9, leg, 'paint', 8)
+        g.beam((side*9.3, -1, 20.5), (side*9.8, -1, 20.5), 4, 4, leg, 'metal', 8)
+        g.beam(hip, knee, 4.5, 6, leg, 'paint', taper=.75)
+        g.beam((side*8.6, -2.5, 11.8), (side*11.4, -2.5, 11.8), 4, 4, leg+'-shin', 'metal', 8)
+        g.beam(knee, ankle, 3.2, 4, leg+'-shin', 'edge', taper=.8)
+        g.box((ankle[0], 0, 2.6), (2.6, 3.4, 2.4), leg+'-shin', 'metal')
+        claw_foot(g, ankle[0], 0, leg+'-shin')
+        # Gun pods hard against the ends of the deck: no forearms or hands.
         if g.modular:
-            g.joint(arm, (side*5, -1, 39), 'CT')
-        g.beam((side*5, -1, 39), (side*12, -1, 39), 3, 3, arm, 'metal')
-        forward(g, [(-4, 4.5, 5, side*13, 39.5), (3, 4.5, 4, side*13, 39)], arm, cut=0)
+            g.joint(arm, (side*5.85, .05, 30.15), 'CT')
+        forward(g, [(-3.55, 3.6, 4.05, side*7.65, 30.15), (3.65, 3.6, 3.6, side*7.65, 30.15)], arm, cut=.2)
 
 
 def warhammer(g):
@@ -770,6 +810,24 @@ def narrow(g, scale, socketed):
         g.held_fronts[arm] = across(front)
 
 
+def grow(g, scale):
+    """Scales the whole body evenly about the ground under its centre, keeping every proportion.
+
+    The recipe's sockets stay in the unscaled units the body was authored in; the exporter scales them by the same
+    amount, so a body can be resized to its class's height without re-measuring a single socket.
+    """
+    if scale == 1:
+        return
+    def larger(point):
+        return tuple(value*scale for value in point)
+    g.faces = [(tuple(larger(point) for point in tri), group, material) for tri, group, material in g.faces]
+    for emitter in g.emitters:
+        emitter['position'] = larger(emitter['position'])
+    g.pivots = {name: larger(pivot) for name, pivot in g.pivots.items()}
+    for arm, front in getattr(g, 'held_fronts', {}).items():
+        g.held_fronts[arm] = larger(front)
+
+
 def build_chassis(recipe, modular=False):
     g = Geometry(modular=modular)
     hip = recipe['hip']
@@ -799,4 +857,7 @@ def build_chassis(recipe, modular=False):
             for node in list(g.pivots):
                 if node.startswith(arm+'@'):
                     g.parents[node] = arm if node.endswith('@elbow') else forearm
+    # Last, so a joint added above from a recipe socket, such as a forearm for an arm that has none, is resized with
+    # everything else. Resizing earlier left those joints at the unscaled height.
+    grow(g, recipe.get('bodyScale', 1))
     return g

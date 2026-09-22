@@ -51,13 +51,23 @@ def material(rgb, cache):
     return cache[key]
 
 
-def load_body(path, expected, colors, turn=0, upper_body='CT'):
+def spare_vents(body_id):
+    """The vent spots a bare body does not show: the spares the game picks from once weapons are placed."""
+    descriptor = BODIES.parent / 'meks' / (body_id + '.json')
+    if not descriptor.exists():
+        return set()
+    vents = json.loads(descriptor.read_text(encoding='utf-8')).get('vents', [])
+    return {vent['node'] for vent in vents if not vent['authored']}
+
+
+def load_body(path, expected, colors, turn=0, upper_body='CT', hidden=()):
     """Schema-2 bodies keep vertices local to their node and stack rigid translations.
 
     Unlike the legacy bake these carry a paint UV and unnormalized Z, so the stride is read
-    from the attribute list rather than assumed.
+    from the attribute list rather than assumed. Nodes named in hidden are left out, with their children.
     """
     data = json.loads(path.read_text(encoding='utf-8'))
+    skipped = [0]
     parts, strides = {}, {'POSITION': 3, 'NORMAL': 3, 'COLOR': 4, 'TEXCOORD0': 2}
     for mesh in data['meshes']:
         attributes = mesh['attributes']
@@ -74,6 +84,9 @@ def load_body(path, expected, colors, turn=0, upper_body='CT'):
         if 'rotation' in node or 'scale' in node:
             raise ValueError('The review importer only supports the generated translated nodes')
         offset = parent + Vector(node.get('translation', (0, 0, 0)))
+        if node['id'] in hidden:
+            skipped[0] += sum(len(parts[part['meshpartid']][1])//3 for part in node.get('parts', []))
+            return
         if node['id'] == upper_body:
             pivot = offset
         for part in node.get('parts', []):
@@ -93,7 +106,7 @@ def load_body(path, expected, colors, turn=0, upper_body='CT'):
 
     for node in data['nodes']:
         visit(node, Vector((0, 0, 0)))
-    if expected and len(faces) != expected['triangles']:
+    if expected and len(faces) + skipped[0] != expected['triangles']:
         raise ValueError('Triangle mismatch for %s: rendered %d, manifest %d'
                          % (path.name, len(faces), expected['triangles']))
     mesh = bpy.data.meshes.new(data['id'])
@@ -416,14 +429,15 @@ def main():
     for body_id, path, expected in sources:
         if not path.exists():
             raise SystemExit('No such model: ' + str(path))
-        mesh = load_body(path, expected, colors)
+        hidden = spare_vents(body_id)
+        mesh = load_body(path, expected, colors, hidden=hidden)
         entries.append((body_id, titles.get(body_id, body_id), mesh))
         if args.lineup:
             continue
         print('Wrote', render(body_id, mesh, list(VIEWS), args.output, title=titles.get(body_id, body_id)))
         if args.turn and not args.lineup:
             # The twisted copy is separate geometry; the untwisted views must stay untouched.
-            turned = load_body(path, expected, colors, turn=args.turn)
+            turned = load_body(path, expected, colors, turn=args.turn, hidden=hidden)
             print('Wrote', render(body_id + '-turn', turned,
                                   [('Front %g' % args.turn, (0, 0, 180)),
                                    ('Left %g' % args.turn, (0, 0, 90)),

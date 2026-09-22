@@ -266,23 +266,37 @@ def build_meks(recipes, output, export_asset, write_json):
             if weight:
                 width *= FALLBACK_PROPORTIONS[weight][0]
                 height *= FALLBACK_PROPORTIONS[weight][3]
-            position = fallback_point(point(pixel), weight) if weight else point(pixel)
+            # A body grown to its class's height keeps its recipe in the units it was authored in.
+            grown = recipe.get('bodyScale', 1)
+            position = fallback_point(point(pixel), weight) if weight else tuple(v*grown for v in point(pixel))
+            width *= grown
+            height *= grown
             hardpoints.append({'id': identifier, 'location': location, 'side': 'rear' if rear else 'front',
                                'node': node, 'position': sub(position, body.pivots[node]),
                                'rotation': aim_rotation(aim), 'size': [width, 6, height],
                                'minScale': .4, 'maxScale': 2 if family == 'lamp' else 1.5,
                                'roles': ['misc'] if family == 'lamp' else ['weapon', 'physical', 'misc']})
             settings = {'hardpoint': identifier, 'family': family, 'form': form, 'bay': bay,
-                        'scale': recipe['weaponScale']*(recipe.get('missileScale', 1) if bay else 1)}
+                        'scale': recipe['weaponScale']*grown*(recipe.get('missileScale', 1) if bay else 1)}
             style = recipe.get('protrusion', {}).get(location+':'+family, recipe.get('protrusion', {}).get(location))
             if style:
                 settings['style'] = style
+            if location in recipe.get('hangingMounts', []) and not rear and not family:
+                # The socket marks an underside the weapon hangs from, like a Locust's guns under its gun pods.
+                # A socket kept for one family of weapon sits where the recipe puts it and does not hang.
+                settings['hang'] = True
+            if location in recipe.get('sharedFaces', {}):
+                # This location's weapons pack onto another location's face, beside that location's own.
+                settings['area'] = recipe['sharedFaces'][location]
+            if location in recipe.get('stackRows', []):
+                # Weapons sharing this socket sit side by side in rows, centred on the face, not one above another.
+                settings['stack'] = 'rows'
             if family == 'ppc' and recipe.get('barrelLength'):
-                settings['length'] = recipe['barrelLength']
+                settings['length'] = recipe['barrelLength']*recipe.get('bodyScale', 1)
             for override in recipe.get('weaponOverrides', []):
                 if override.get('location', location) == location and override.get('family') == family:
                     if 'length' in override:
-                        settings['length'] = override['length']*recipe['weaponScale']
+                        settings['length'] = override['length']*recipe['weaponScale']*recipe.get('bodyScale', 1)
             if bay:
                 settings['profile'] = 'vertical-slope' if recipe.get('missileSlope') else 'columns-4'
                 settings['bayColumns'] = recipe.get('missileBayColumns', 1)
@@ -309,7 +323,9 @@ def build_meks(recipes, output, export_asset, write_json):
             forms.setdefault('wrist', recipe['sockets'][location])
             # Explicit fallback arm sockets already include the elbow; avoid scaling a transformed pivot twice.
             elbow = body.pivots[location+'-forearm']
-            forms.setdefault('elbow', [42+elbow[0], 36-elbow[1], elbow[2]])
+            # The pivot is already in the grown body; a socket is written in the recipe's own units.
+            grown = recipe.get('bodyScale', 1)
+            forms.setdefault('elbow', [42+elbow[0]/grown, 36-elbow[1]/grown, elbow[2]/grown])
             for form, pixel in forms.items():
                 mount(location+'-'+form, location, pixel, form=form)
                 # Only a hand can hold a gun. A weapon with no held shape of its own keeps its usual one.
@@ -317,7 +333,7 @@ def build_meks(recipes, output, export_asset, write_json):
                     mounts[-1]['profile'] = 'held'
                     # A held weapon's barrel fits the front face of the gun body the chassis generated for this
                     # arm, not the centre of the fist: this is the step from the hand socket to that face.
-                    hand, face = point(pixel), body.held_fronts[location]
+                    hand, face = tuple(v*recipe.get('bodyScale', 1) for v in point(pixel)), body.held_fronts[location]
                     mounts[-1]['heldOffset'] = [round(face[i]-hand[i], 3) for i in range(3)]
         for location, pixel in recipe.get('missileSockets', {}).items():
             mount(location+'-launcher', location, pixel, family='missile', bay=True)
@@ -337,11 +353,11 @@ def build_meks(recipes, output, export_asset, write_json):
                 continue
             hardpoint = next(h for h in hardpoints if h['id'] == settings['hardpoint'])
             if recipe.get('barrelLength'):
-                mounts.append({**settings, 'family': 'ppc', 'length': recipe['barrelLength']})
+                mounts.append({**settings, 'family': 'ppc', 'length': recipe['barrelLength']*recipe.get('bodyScale', 1)})
             for override in recipe.get('weaponOverrides', []):
                 if override.get('location') == hardpoint['location'] and 'length' in override:
                     mounts.append({**settings, 'family': override['family'],
-                                   'length': override['length']*recipe['weaponScale']})
+                                   'length': override['length']*recipe['weaponScale']*recipe.get('bodyScale', 1)})
         # A chassis rule draws one weapon with another's art at a spot of its own, whichever location carries it.
         # The runtime tries the rules before any ordinary socket; a rule's placement is never offered to other
         # weapons, so it stays out of the mount list.

@@ -367,6 +367,30 @@ Legs are the easiest thing to overbuild. Check a new chassis against what is alr
 A sixty-tonner with a wider stance and a bigger foot than either seventy-tonner is wrong, however good
 it looks in isolation.
 
+**Height by weight class.** Scale 1.0 is exactly two board levels. The board draws a Mek at 1/27 level
+per model unit, so 1.0 is 54 units. Measure to the top of the armour, ignoring antennas, whips and
+dishes. Keep every Mek of a class inside its band so the class reads as one size:
+
+| Class | Scale | Model units | Set so far |
+|---|---|---|---|
+| Light | 0.75-0.80 | 40.5-43.2 | Locust 41.9 |
+| Medium | 0.82-0.87 | 44.3-47.0 | |
+| Heavy | 0.89-0.94 | 48.1-50.8 | Rifleman, Archer, Warhammer, Mad Cat, Marauder 49.4 |
+| Assault | 0.95-1.00 | 51.3-54.0 | BattleMaster, King Crab, Mackie 52.7; Atlas 52.2 |
+
+Fix a body's height with the recipe's `bodyScale`, never by re-authoring it. The whole body scales
+evenly after every joint is placed, and the exporter scales the recipe's sockets, mount areas, weapon
+sizes and barrel lengths by the same amount, so nothing is re-measured. The board's own runtime scale
+stays at a neutral 1.0 for later fine-tuning.
+
+**Mount settings a recipe can use.**
+- `hangingMounts`: the socket marks an underside, and the weapon hangs from it with its top against it.
+- `stackRows`: weapons sharing a socket sit side by side, centred, a new row below when the face is
+  full; the left side mirrors the right. Without it they stack over-under.
+- `sharedFaces`: one location's weapons pack onto another location's face beside its own, as the
+  Locust's head and centre torso share the chin turret.
+- `equipmentRules`: one weapon drawn with another's art at a spot of its own (the Atlas LRM 20).
+
 ## 10. Per-chassis decisions
 
 ### Rifleman (60 t, `rifleman`)
