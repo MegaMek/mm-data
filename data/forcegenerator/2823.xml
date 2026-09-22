@@ -889,9 +889,9 @@
             </model>
         </chassis>
         <chassis name='BattleMech Recovery Vehicle' unitType='Tank'>
-            <availability>CLAN:6,PP:3,IS:6,Periphery:6,Periphery.Deep:0</availability>
+            <availability>CLAN:8,PP:3,IS:6,Periphery:6,Periphery.Deep:0</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>CLAN:8,PP:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -1056,15 +1056,15 @@
         <chassis name='Büffel Engineering Support Vehicle VII' unitType='Tank'>
             <availability>CLAN:3,PP:3,IS:4,LA:5,Periphery:4,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>CLAN:6,PP:8,IS:8,Periphery:8,PIR:3</availability>
             </model>
             <model name='(Cargo)'>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>CLAN:8,PP:6,IS:4,Periphery:4,PIR:8</availability>
             </model>
             <model name='(Reverse)'>
-                <roles>support,engineer</roles>
+                <roles>support,engineer,recovery</roles>
                 <availability>PP:2,IS:2,Periphery:2,PIR:2</availability>
             </model>
         </chassis>
@@ -2773,7 +2773,7 @@
                 <availability>IS:8</availability>
             </model>
             <model name='Salvage Bed'>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <deployedWith>req:HMRV (Hazardous Materials Recovery Vehicle) &apos;Oppie&apos; O-65</deployedWith>
                 <availability>IS:4</availability>
             </model>
@@ -2870,9 +2870,9 @@
             </model>
         </chassis>
         <chassis name='Heavy BattleMech Recovery Vehicle' unitType='Tank'>
-            <availability>CLAN:3,PP:2+,IS:4,Periphery:3,Periphery.Deep:0,PIR:2</availability>
+            <availability>CLAN:6,PP:2+,IS:4,Periphery:3,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>CLAN:8,PP:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -4850,7 +4850,7 @@
         <chassis name='Paramour Mobile Repair Vehicle' unitType='Tank'>
             <availability>FWL:4+</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FWL:8</availability>
             </model>
         </chassis>
@@ -5400,7 +5400,7 @@
             </model>
         </chassis>
         <chassis name='Sherpa Armored Truck' unitType='Tank'>
-            <availability>IS:6,CS:5,Periphery:8</availability>
+            <availability>IS:6,CS:5,Periphery:8,CLAN:3</availability>
             <model name=''>
                 <roles>cargo,support</roles>
                 <availability>IS:8,CS:0,Periphery:8</availability>
@@ -5411,7 +5411,7 @@
             </model>
             <model name='(Mobile Canteen)'>
                 <roles>support</roles>
-                <availability>IS:6,Periphery:6,PIR:5+</availability>
+                <availability>IS:6,Periphery:6,PIR:5+,CLAN:6</availability>
             </model>
         </chassis>
         <chassis name='Shilone' unitType='AeroSpaceFighter'>
@@ -6219,7 +6219,7 @@
         <chassis name='Wayland Mobile Base' unitType='Tank'>
             <availability>CLAN:3,IS:1+,CS:3+</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>CLAN:8,IS:8</availability>
             </model>
         </chassis>

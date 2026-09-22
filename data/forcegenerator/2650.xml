@@ -537,7 +537,7 @@
         <chassis name='BattleMech Recovery Vehicle' unitType='Tank'>
             <availability>SL:8,IS:6,Periphery:6,Periphery.Deep:0</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>SL:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -634,15 +634,15 @@
         <chassis name='Büffel Engineering Support Vehicle VII' unitType='Tank'>
             <availability>SL:5,IS:5,Periphery:4,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>SL:8,IS:8,Periphery:8,PIR:3</availability>
             </model>
             <model name='(Cargo)'>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>SL:4,IS:4,Periphery:4,PIR:8</availability>
             </model>
             <model name='(Reverse)'>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>SL:2,IS:2,Periphery:2,PIR:2</availability>
             </model>
         </chassis>
@@ -1746,7 +1746,7 @@
         <chassis name='Heavy BattleMech Recovery Vehicle' unitType='Tank'>
             <availability>SL:5,IS:4,Periphery:3,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>SL:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -3275,7 +3275,7 @@
         <chassis name='Paramour Mobile Repair Vehicle' unitType='Tank'>
             <availability>FWL:5+</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>FWL:8</availability>
             </model>
         </chassis>
@@ -4111,7 +4111,7 @@
         <chassis name='Wayland Mobile Base' unitType='Tank'>
             <availability>SL:4+,SL.R:6,TH:4+</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>SL:8,TH:8</availability>
             </model>
         </chassis>

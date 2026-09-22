@@ -2767,9 +2767,9 @@
             </model>
         </chassis>
         <chassis name='BattleMech Recovery Vehicle' unitType='Tank'>
-            <availability>CLAN:6,BAN:6,IS:7,Periphery:7,HL:4+,Periphery.Deep:0</availability>
+            <availability>CLAN:8,BAN:6,IS:7,Periphery:7,HL:4+,Periphery.Deep:0</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>CLAN:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -3538,22 +3538,22 @@
         <chassis name='Büffel Engineering Support Vehicle VIII' unitType='Tank'>
             <availability>LA:5</availability>
             <model name=''>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>LA:8</availability>
             </model>
         </chassis>
         <chassis name='Büffel Engineering Support Vehicle VII' unitType='Tank'>
             <availability>CLAN:3,BAN:0,IS:4,LA:3,Periphery:4,HL:2+,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>CLAN:6,IS:8,Periphery:8,PIR:3</availability>
             </model>
             <model name='(Cargo)'>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>CLAN:8,IS:4,Periphery:4,PIR:8</availability>
             </model>
             <model name='(Reverse)'>
-                <roles>support,engineer,minesweeper</roles>
+                <roles>support,engineer,minesweeper,recovery</roles>
                 <availability>IS:2,Periphery:2,PIR:2</availability>
             </model>
         </chassis>
@@ -9966,7 +9966,7 @@
                 <availability>WOB:8</availability>
             </model>
             <model name='Salvage Bed'>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <deployedWith>req:HMRV (Hazardous Materials Recovery Vehicle) &apos;Oppie&apos; O-66</deployedWith>
                 <availability>WOB:2</availability>
             </model>
@@ -10328,9 +10328,9 @@
             </model>
         </chassis>
         <chassis name='Heavy BattleMech Recovery Vehicle' unitType='Tank'>
-            <availability>CLAN:3,BAN:0,IS:4,Periphery:3,HL:2+,Periphery.Deep:0,PIR:2</availability>
+            <availability>CLAN:6,BAN:0,IS:4,Periphery:3,HL:2+,Periphery.Deep:0,PIR:2</availability>
             <model name=''>
-                <roles>cargo,support</roles>
+                <roles>cargo,support,recovery</roles>
                 <availability>CLAN:8,IS:8,Periphery:8</availability>
             </model>
         </chassis>
@@ -11844,23 +11844,23 @@
         <chassis name='Jifty Transportable Field Repair Unit' unitType='Tank'>
             <availability>FS:4,CC:3,TC:3,Periphery.HR:2</availability>
             <model name='JI-50'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FS:8,CC:8,TC:8,Periphery.HR:8</availability>
             </model>
             <model name='JI-50 (Hoist)'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FS:4,CC:4,TC:4,Periphery.HR:4</availability>
             </model>
             <model name='JI-50 (MG)'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FS:4,CC:4,TC:4,Periphery.HR:4</availability>
             </model>
             <model name='JI-50 (ML)'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FS:4,CC:4,TC:4,Periphery.HR:4</availability>
             </model>
             <model name='JI-50 (Q-Vehicle)'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>TC:2</availability>
             </model>
         </chassis>
@@ -16541,7 +16541,7 @@
         <chassis name='Nifty Transportable Field Repair Unit' unitType='Tank'>
             <availability>CLAN.IS:2,IS:4,FS:0,TC:3</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>CLAN.IS:8,IS:8,TC:8</availability>
             </model>
         </chassis>
@@ -17341,11 +17341,11 @@
         <chassis name='Paramour Mobile Repair Vehicle' unitType='Tank'>
             <availability>FWL:4+</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FWL:8</availability>
             </model>
             <model name='(MFB)'>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>FWL:5</availability>
             </model>
         </chassis>
@@ -19940,7 +19940,7 @@
             </model>
         </chassis>
         <chassis name='Sherpa Armored Truck' unitType='Tank'>
-            <availability>IS:6-,WOB:0,Periphery:8</availability>
+            <availability>IS:6-,WOB:0,Periphery:8,CLAN:3</availability>
             <model name=''>
                 <roles>cargo,support</roles>
                 <availability>IS:8,FS:8,LA:8,FWL:8,Periphery:8</availability>
@@ -19951,7 +19951,7 @@
             </model>
             <model name='(Mobile Canteen)'>
                 <roles>support</roles>
-                <availability>IS:6,Periphery:6,PIR:5+</availability>
+                <availability>IS:6,Periphery:6,PIR:5+,CLAN:6</availability>
             </model>
         </chassis>
         <chassis name='Shilone' unitType='AeroSpaceFighter'>
@@ -21616,7 +21616,7 @@
         <chassis name='Tonbo Superheavy Transport' unitType='VTOL'>
             <availability>DC:6+</availability>
             <model name=''>
-                <roles>apc,support</roles>
+                <roles>apc,support,recovery</roles>
                 <availability>DC:8</availability>
             </model>
         </chassis>
@@ -22999,7 +22999,7 @@
         <chassis name='Wayland Mobile Base' unitType='Tank'>
             <availability>CLAN.IS:3,BAN:2+,WOB:4+</availability>
             <model name=''>
-                <roles>support</roles>
+                <roles>support,recovery</roles>
                 <availability>CLAN.IS:8,BAN:8,WOB:8</availability>
             </model>
         </chassis>
