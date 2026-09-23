@@ -140,8 +140,9 @@ def finish_vents(body, spares=SPARES):
         rectangle = _rectangle(body, entry['node'])
         hit = surfaces[entry['rear']].hit((rectangle[0]+rectangle[1])/2, (rectangle[2]+rectangle[3])/2)
         location = hit[0] if hit and hit[0] in TORSO else entry['group']
-        spots.append({'node': entry['node'], 'location': location, 'rear': entry['rear'], 'authored': True,
-                      'rectangle': rectangle})
+        # A vent on a limb part, such as a shin ('LL-shin'), belongs to that limb's location and rides on the part.
+        spots.append({'node': entry['node'], 'location': location.split('-')[0], 'parent': location,
+                      'rear': entry['rear'], 'authored': True, 'rectangle': rectangle})
     # Spare spots take the size the author gave this chassis's vents on that face.
     for rear in (False, True):
         drawn = [spot['rectangle'] for spot in spots if spot['rear'] == rear]
@@ -181,7 +182,8 @@ def finish_vents(body, spares=SPARES):
         body.faces = [(tri, name if node == spot['node'] else node, material) for tri, node, material in body.faces]
         body.pivots.pop(spot['node'], None)
         body.parents.pop(spot['node'], None)
-        parent = spot['location'] if spot['location'] in body.pivots else 'CT'
+        parent = spot.get('parent', spot['location'])
+        parent = parent if parent in body.pivots else 'CT'
         body.joint(name, body.pivots[parent], parent)
         points = [p for tri, node, _ in body.faces if node == name for p in tri]
         low = [min(p[axis] for p in points) for axis in range(3)]

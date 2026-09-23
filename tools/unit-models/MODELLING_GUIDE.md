@@ -221,7 +221,9 @@ limits and accepted roles. Rear ports must actually clear the rear armor; inspec
 | `hip` | Sprite-coordinate waist reference; keep on the centerline under the torso. |
 | `legBends` | Optional per-leg bend direction, keyed by upper-leg rig role: `"leftLeg":"reverse"`, `"rightLeg":"reverse"` for King Crab and Locust. Values are `forward` or `reverse`; omitted legs retain the conventional forward bend. Geometry must match the declared direction. |
 | `sockets`, `rearSockets` | Front/rear placement for each real location. Without explicit rear placement the legacy nine-unit offset is used; author rear sockets where that would bury a barrel. |
-| `exhaustSockets` | Optional jump-jet positions by location, independent of rear weapon ports. Keep the nozzle attached to the hull/leg, especially on a long overhanging torso; its exhaust points down. |
+| `exhaustSockets` | Optional jump-jet positions by location, independent of rear weapon ports. Keep the nozzle attached to the hull/leg, especially on a long overhanging torso; its exhaust points down. **One jump jet graphic per location:** it shows that the location has jump jets, not how many; the others share its nozzle and exhaust (MegaMek's `UnitEquipmentAssembly`). `jumpJetScale` draws a chassis's jets smaller than its weapons. |
+| `missileStyle`, `missileBayStand` | Launchers at `missileSockets` as the usual box or a round drum (`drum-short/-medium/-long`), for the whole Mek or per location; `missileBayStand` stands the bay's launchers on the socket so any size rests on the surface there. |
+| `stackRows` | Locations (`"LT"`) or location families (`"LT:jump-jet"`) whose shared-socket items sit side by side in rows. |
 | `armSockets` | Hand/wrist/elbow locations matching the optional actuator geometry. |
 | `socketAim` | +Y-forward replacement direction, by location or `LOC:family`; an arm gun must follow its forearm. |
 | `socketNodes` | Optional parent override by `LOC:family`, e.g. `"LL:jump-jet":"LL-shin"`. Use when equipment moves with a different segment of the same location; positions still use the common authoring coordinates. |

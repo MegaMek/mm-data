@@ -81,6 +81,11 @@ def build_equipment(catalog, output, export_asset):
                                              'orientation': 'vertical', 'slope': .45, 'slopeOrigin': 0})
             # Stood on end against an upright face, with no lean.
             profiles['vertical'] = module(item, rule, options={'maximumColumns': 4, 'orientation': 'vertical'})
+            if rule['look'] == 'launcher':
+                # A round drum with the tubes packed on its face, for a chassis whose recipe sets missileStyle, in
+                # three lengths by how far it stands out of the armour.
+                for length in ('short', 'medium', 'long'):
+                    profiles['drum-'+length] = module(item, rule, options={'style': 'drum', 'drumLength': length})
         if not missing and held_for(dict(item, location='mount', rear=False), rule):
             # A gun gripped in the fist; used only where a recipe asks for it at a hand.
             profiles['held'] = module(item, rule, options={'held': True})

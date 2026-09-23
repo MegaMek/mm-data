@@ -106,7 +106,9 @@ What to take from it:
   forearm and no fist; the arm *is* the gun housing.
 - **How many weapons per arm** decides the mount area shape. Two per arm wants a tall narrow area so
   they stack over-under, or a wide one so they sit abreast.
-- **Jump jets** ride in the calves automatically; you do not author them.
+- **Jump jets** ride in the calves automatically; you do not author them. Give torso jets an
+  `exhaustSockets` spot on the back of each torso location. **One jump jet graphic per location**, however
+  many the unit file lists: it shows the location has jets, not how many (UNIT_REVIEW_PROCESS section 5a).
 - **Rear mounts** need `rearSockets` that actually clear the hull. If none exist, still author them for
   custom refits, but do not spend review time on them.
 
@@ -339,6 +341,8 @@ chassis list at the end of `verify`.
 - [ ] Height checked against the weight-class band using the tallest **structural** part. A wire
       antenna does not count toward it; a mast, housing or sensor array does.
 - [ ] Vents present: at most two front, at most two back, back on torso locations only.
+- [ ] Jump jets: one graphic per location that has any, on the back of the torso or calf, not hanging
+      below the torso or running down the thigh.
 - [ ] Registered in `mekset.txt` and confirmed present in staged game data.
 - [ ] Nothing committed.
 

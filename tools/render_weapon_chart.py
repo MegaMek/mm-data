@@ -42,6 +42,11 @@ EXAMPLES = [
     ('missile', 'LRM 15', 15, {'orientation': 'horizontal'}), ('missile', 'LRM 15', 15, {'orientation': 'vertical'}),
     ('missile', 'SRM 6', 6, {'orientation': 'horizontal'}), ('missile', 'SRM 6', 6, {'orientation': 'vertical'}),
     ('missile', 'MML 7', 7, {'orientation': 'horizontal'}), ('missile', 'MML 7', 7, {'orientation': 'vertical'}),
+    ('missile', 'LRM 5', 5, {'style': 'drum'}), ('missile', 'LRM 10', 10, {'style': 'drum'}),
+    ('missile', 'LRM 15', 15, {'style': 'drum'}), ('missile', 'LRM 20', 20, {'style': 'drum'}),
+    ('missile', 'SRM 6', 6, {'style': 'drum'}), ('missile', 'MML 7', 7, {'style': 'drum'}),
+    ('missile', 'LRM 10', 10, {'style': 'drum', 'drumLength': 'short'}),
+    ('missile', 'LRM 10', 10, {'style': 'drum', 'drumLength': 'long'}),
 ]
 for _weapon in (('laser', 'Medium Laser', 0), ('ballistic', 'AC/2', 2), ('ballistic', 'AC/5', 5),
                 ('ballistic', 'AC/10', 10), ('ballistic', 'AC/20', 20), ('ppc', 'PPC', 0)):
@@ -57,12 +62,21 @@ def build(family, name, rack, settings=None):
     rule = weapons.rule_for(mount)
     if rule is None:
         raise ValueError('No standard look for '+name)
-    rule.update(settings or {})
+    settings = dict(settings or {})
+    # A drum is a drawing option, not part of the weapon's rule.
+    style = settings.pop('style', None)
+    drum_length = settings.pop('drumLength', None)
+    rule.update(settings)
     geometry = Geometry()
     # A forearm-sized block shows where the weapon leaves the armor.
     # Slightly off the common launcher widths, so no launcher side lies exactly in the block's side.
     geometry.box((0, -4.2, 0), (8.3, 8, 9.3), 'RA', 'paint')
-    weapons.draw(geometry, mount, rule, (0, 0, 0), 1, {'orientation': weapons.orientation_for(mount, rule)})
+    options = {'orientation': weapons.orientation_for(mount, rule)}
+    if style:
+        options['style'] = style
+    if drum_length:
+        options['drumLength'] = drum_length
+    weapons.draw(geometry, mount, rule, (0, 0, 0), 1, options)
     return geometry, rule
 
 

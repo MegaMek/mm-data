@@ -286,6 +286,11 @@ not armour:
 - Each vent takes the first spot in its torso that no weapon covers and no other vent has taken. If
   every spot is covered, the vent is left off. Unused spots are removed.
 - Each decision is logged at debug level ("Vent kept at...", "covered by a weapon", "left off").
+- **Legs, front only.** A chassis may also draw vents on the front of its shins (`vent(..., group='LL-shin')`);
+  a variant with heat sinks slotted in its legs then gets them there (the Griffin GRF-1S). Legs never take
+  back vents, and a chassis with no leg spots behaves as before.
+- **No slotted sinks, no vents.** A recipe's `"ventDefaultSides": []` leaves a variant whose sinks all sit in
+  the engine bare, so the vents shown always match the unit file (the Griffin).
 
 **Chassis equipment rules.** A recipe's `equipmentRules` draws one weapon with another weapon's art at
 a spot of its own: which weapon (`match`, `exclude`), which art (`drawAs`), which profile, and where
@@ -300,6 +305,20 @@ Two things to get right, both learned the hard way on the Rifleman:
   is narrower than the section width: a `cut` of 0.3 on a 17-wide, 13.7-deep section leaves only about
   +/-6.4 flat. Geometry outside that band hangs off the chamfer and reads as stuck on.
 - Winding reverses on the back so the panels still face outward.
+
+## 5a. Jump jets
+
+**One jump jet graphic per location.** The graphic says a location has jump jets; it does not count them.
+A location whose unit file lists three jump jets shows one nozzle, not three. The first jet in each location
+is drawn at that location's `exhaustSockets` spot; the others are bound to it with no mesh of their own, so
+every working jet still fires its exhaust from the shared nozzle when the unit jumps, and a destroyed extra
+jet never shows the drawn one as wrecked. MegaMek applies this to every chassis
+(`UnitEquipmentAssembly.shareJumpJets`); a chassis does nothing to opt in.
+
+Put `exhaustSockets` on the back of each torso location and the back of the calves, clear of the back vents
+(jets are placed before vents, so a vent a jet covers is left off). Before this rule, the Griffin GRF-4R's four
+right-torso jets ran in a column from the shoulder to the thigh. `jumpJetScale` draws a chassis's jets smaller
+than its weapons where the nozzle crowds the back.
 
 ## 6. Torso locations must be real
 

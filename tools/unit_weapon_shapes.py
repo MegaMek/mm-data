@@ -116,6 +116,9 @@ def footprint(rule, mount, scale, options=None):
     Jump jets sit on the back of the body and hand weapons in the fist, so neither competes for face space.
     """
     look = rule['look']
+    if look == 'launcher' and (options or {}).get('style') == 'drum':
+        side = 2*drum_layout(rule, mount, scale)['lip']
+        return side, side
     if look == 'launcher':
         options = options or {}
         grid = launcher_grid(rule, mount, scale, options.get('maximumColumns', 0),
@@ -140,6 +143,18 @@ def footprint(rule, mount, scale, options=None):
 def bank_family(mount, rule):
     """Melee weapons share the hatchet's hand socket rather than needing a bank per weapon."""
     return rule.get('bankFamily', mount['family'])
+
+
+def missile_style_for(location, recipe=None):
+    """Whether launchers at this location are drawn as the usual box or as a round drum, and how long a drum.
+
+    A recipe sets missileStyle for the whole Mek ("drum-long") or per location ({"RT": "drum-long",
+    "default": "box"}). A drum is drum-short, drum-medium or drum-long; plain "drum" is drum-medium.
+    """
+    chosen = (recipe or {}).get('missileStyle', 'box')
+    if not isinstance(chosen, str):
+        chosen = chosen.get(location, chosen.get('default', 'box'))
+    return 'drum-medium' if chosen == 'drum' else chosen
 
 
 def orientation_for(mount, rule, recipe=None):
@@ -181,7 +196,90 @@ def _opening(geometry, center, radius, shape, direction, group, material):
     geometry.face(list(reversed(points)) if direction == 1 else points, group, material)
 
 
+# A drum launcher at scale 1: a long drum centred on its mount, lying front to back along the top of a shoulder like
+# the Griffin's TRO launcher, the last .6 of it a lip slightly wider than the drum. The lengths are the whole drum's;
+# at the Griffin's scale the medium drum overhangs its shoulder a little at the front and back.
+# Eight sides keep an LRM 20 under the equipment triangle limit.
+DRUM_LIP = .6
+DRUM_LENGTHS = {'short': 12, 'medium': 15.5, 'long': 19}
+DRUM_SIDES = 8
+# Space between the outer ring of tubes and the drum's side, and how much wider the lip is than the drum.
+DRUM_MARGIN, DRUM_FLARE = .7, 1.08
+
+
+def drum_layout(rule, mount, scale):
+    """Tube centres on a round face, as (across, up) offsets, and the drum's radius and lip radius.
+
+    Up to six tubes form one ring; seven are one in the middle and six round it; more are an inner ring holding about
+    three in ten of them inside an outer ring; past fourteen a single tube also sits in the middle.
+    """
+    tubes = BOOK['tubes'][rule['tubes']]
+    visible = min(MAXIMUM_TUBES, rule.get('tubeCount', max(1, mount['rackSize'])))
+    tube_scale = scale*rule.get('tubeScale', 1)
+    pitch, diameter = tubes['pitch']*tube_scale, tubes['diameter']*tube_scale
+    if visible <= 6:
+        rings = [visible]
+    elif visible == 7:
+        rings = [1, 6]
+    elif visible <= 14:
+        inner = max(2, round(visible*.3))
+        rings = [inner, visible-inner]
+    else:
+        middle = round((visible-1)*.35)
+        rings = [1, middle, visible-1-middle]
+    centres, radius = [], 0
+    for index, count in enumerate(rings):
+        if count == 1:
+            ring_radius = 0
+        else:
+            # Neighbours on a ring are a pitch apart, and each ring clears the one inside it by a pitch.
+            ring_radius = max(pitch/(2*sin(pi/count)), radius + pitch if index else 0)
+        turn = pi/2 + (pi/count if index % 2 else 0)
+        centres.extend((ring_radius*cos(turn + 2*pi*i/count), ring_radius*sin(turn + 2*pi*i/count))
+                       for i in range(count))
+        radius = ring_radius
+    drum = radius + diameter/2 + DRUM_MARGIN*scale
+    return {'centres': centres, 'diameter': diameter, 'shape': tubes['shape'], 'radius': drum,
+            'lip': drum*DRUM_FLARE}
+
+
+def _drum_launcher(geometry, mount, rule, position, scale, options):
+    """A launcher drawn as a short drum lying front to back, its round face packed with tubes, on a small saddle."""
+    x, y, z = position
+    group = mount['location']
+    direction = -1 if mount['rear'] else 1
+    layout = drum_layout(rule, mount, scale)
+    half = DRUM_LENGTHS[options.get('drumLength', 'medium')]/2
+
+    def ring(along, radius):
+        # Wound so the loft's front cap faces the way the launcher points.
+        return [(x + radius*cos(pi/DRUM_SIDES - direction*2*pi*i/DRUM_SIDES), y + direction*along,
+                 z + radius*sin(pi/DRUM_SIDES - direction*2*pi*i/DRUM_SIDES)) for i in range(DRUM_SIDES)]
+    geometry.loft([ring(-half*scale, layout['radius']), ring((half-DRUM_LIP)*scale, layout['radius']),
+                   ring(half*scale, layout['lip'])], group, 'paint')
+    # The saddle it rests on runs most of its length.
+    geometry.box((x, y, z - layout['radius']*.8), (layout['radius']*1.1, 1.2*half*scale, layout['radius']*.5),
+                 group, 'metal')
+    front = y + direction*(half + .02)*scale
+    if options.get('detail') == 'panel':
+        # The last resort: the whole face is one dark disc.
+        corners = [(x + layout['radius']*.8*cos(pi/DRUM_SIDES + 2*pi*i/DRUM_SIDES), front,
+                    z + layout['radius']*.8*sin(pi/DRUM_SIDES + 2*pi*i/DRUM_SIDES)) for i in range(DRUM_SIDES)]
+        geometry.face(list(reversed(corners)) if direction == 1 else corners, group, 'dark')
+        geometry.emitter((x, front, z), (0, direction, 0), group, 'launcher', 'cluster')
+        return
+    reduced = layout['shape'] == 'round' and (options.get('detail') == 'reduced' or len(layout['centres']) >= 15)
+    for across, up in layout['centres']:
+        centre = (x + across, front, z + up)
+        _opening(geometry, centre, layout['diameter']/2, 'hex' if reduced else layout['shape'], direction, group,
+                 'dark')
+        geometry.emitter(centre, (0, direction, 0), group, 'launcher', 'missile')
+
+
 def _launcher(geometry, mount, rule, position, scale, options):
+    if options.get('style') == 'drum':
+        _drum_launcher(geometry, mount, rule, position, scale, options)
+        return
     x, y, z = position
     group = mount['location']
     direction = -1 if mount['rear'] else 1
@@ -467,13 +565,40 @@ def _gatling(geometry, mount, rule, position, scale):
                group, 'edge', drum_sides)
 
 
+def _slab(geometry, x, half_thickness, outline, group, material):
+    """A flat plate standing on edge, its convex outline given as (y, z) points and its thickness across x."""
+    near = [(x+half_thickness, y, z) for y, z in outline]
+    far = [(x-half_thickness, y, z) for y, z in outline]
+    faces = [near, list(reversed(far))]
+    for i in range(len(outline)):
+        j = (i+1) % len(outline)
+        faces.append([far[i], far[j], near[j], near[i]])
+    middle = [sum(p[axis] for p in near+far)/(2*len(outline)) for axis in range(3)]
+    for points in faces:
+        # Wind each face outward from the plate's middle, whichever way the outline was given.
+        centre = [sum(p[axis] for p in points)/len(points) for axis in range(3)]
+        if sum(a*b for a, b in zip(cross(sub(points[1], points[0]), sub(points[2], points[0])),
+                                    sub(centre, middle))) < 0:
+            points = list(reversed(points))
+        geometry.face(points, group, material)
+
+
+# A hatchet at scale 1, in (forward, up) from its mount: a long handle standing just in front of the fist, and a thin
+# axe head at its top front - a narrow neck that flares into a broad blade with a curved edge, leading forward as the
+# Mek would swing it.
+HATCHET_HANDLE = 2.3
+HATCHET_NECK = ((0, 5.2), (2.5, 4.6), (2.5, 9.2), (0, 8.6))
+HATCHET_BLADE = ((2.5, 4.6), (4.9, 2.6), (6.0, 4.4), (6.3, 6.8), (6.0, 9.2), (4.9, 11.0), (2.5, 9.2))
+
+
 def _hatchet(geometry, mount, position, scale):
     x, y, z = position
     group = mount['location']
-    geometry.beam((x, y, z-7), (x, y, z+8), 2, 2, group, 'metal')
-    # The blade faces forward, edge leading, as the Mek would swing it.
-    geometry.prism([(x+1, y), (x+3, y+7), (x, y+9), (x-3, y+7), (x-1, y)], z+4, z+10, group, 'edge')
-    geometry.emitter((x, y+9, z+7), (0, 1, 0), group, 'contact', 'melee')
+    handle = y + HATCHET_HANDLE
+    geometry.beam((x, handle, z-7), (x, handle, z+9.6), 1.3, 1.3, group, 'metal', 6)
+    _slab(geometry, x, .6, [(handle+forward, z+up) for forward, up in HATCHET_NECK], group, 'metal')
+    _slab(geometry, x, .35, [(handle+forward, z+up) for forward, up in HATCHET_BLADE], group, 'edge')
+    geometry.emitter((x, handle+6.3, z+6.8), (0, 1, 0), group, 'contact', 'melee')
 
 
 def _leaning(position):

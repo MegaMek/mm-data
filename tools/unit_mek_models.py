@@ -7,6 +7,7 @@ from math import sqrt
 from unit_mek_chassis import build_chassis, forward, panel, split_torso_locations, upright
 from unit_model_geometry import Geometry, sub
 from unit_mek_vents import finish_vents
+from unit_weapon_shapes import missile_style_for
 
 # Authored proportions, baked into each body's vertices, joints and sockets; never runtime size multipliers.
 # Width, depth, leg height, torso height. The head keeps a more consistent size across the weight classes.
@@ -290,8 +291,12 @@ def build_meks(recipes, output, export_asset, write_json):
             if location in recipe.get('sharedFaces', {}):
                 # This location's weapons pack onto another location's face, beside that location's own.
                 settings['area'] = recipe['sharedFaces'][location]
-            if location in recipe.get('stackRows', []):
+            if family == 'jump-jet':
+                # Jump jets can be drawn smaller than the chassis's weapons, so several fit one torso back.
+                settings['scale'] *= recipe.get('jumpJetScale', 1)
+            if location in recipe.get('stackRows', []) or location+':'+family in recipe.get('stackRows', []):
                 # Weapons sharing this socket sit side by side in rows, centred on the face, not one above another.
+                # An entry names a whole location ("LT") or one family of weapon at it ("LT:jump-jet").
                 settings['stack'] = 'rows'
             if family == 'ppc' and recipe.get('barrelLength'):
                 settings['length'] = recipe['barrelLength']*recipe.get('bodyScale', 1)
@@ -299,8 +304,14 @@ def build_meks(recipes, output, export_asset, write_json):
                 if override.get('location', location) == location and override.get('family') == family:
                     if 'length' in override:
                         settings['length'] = override['length']*recipe['weaponScale']*recipe.get('bodyScale', 1)
-            if bay:
+            if bay and missile_style_for(location, recipe).startswith('drum-'):
+                # The drum profiles are named for their length: drum-short, drum-medium, drum-long.
+                settings['profile'] = missile_style_for(location, recipe)
+            elif bay:
                 settings['profile'] = 'vertical-slope' if recipe.get('missileSlope') else 'columns-4'
+            if bay and recipe.get('missileBayStand'):
+                # The launchers stand on the socket instead of being centred on it, so each rests on the surface.
+                settings['stand'] = True
                 settings['bayColumns'] = recipe.get('missileBayColumns', 1)
             mounts.append(settings)
 
