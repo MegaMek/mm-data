@@ -1040,15 +1040,13 @@ def urbanmech(g):
     # axis, which never changes x, so a pod flush with its stub at rest stays flush all the way round.
     for side, location in ((-1, 'LT'), (1, 'RT')):
         g.beam((side*7.2, -.1, 32.7), (side*9, -.1, 32.7), 3.4, 3.4, location, 'edge', 8)
-    # The right arm is the art's cannon: a drum housing hung on the shoulder and a long barrel reaching forward,
-    # capped with a thicker muzzle ring. Whatever a variant carries in this arm leaves from that muzzle, so an
-    # AC/10, a PPC or a large laser all read as the same big gun.
+    # The right arm is the art's cannon housing: a drum hung on the shoulder. The barrel is not body art - three
+    # variants carry only launchers here - so each gun brings its own, drawn long by the recipe's weapon overrides
+    # so an AC/10, a PPC or a large laser still reads as the big gun, and a launcher sits on the housing's face.
     # The housing was made a quarter taller at review, 8 high instead of 6.4. It grows evenly above and below
     # the barrel's line, so the barrel and every weapon leaving it stay centred on the housing.
     forward(g, [(-6.5, 4.2, 7, 11.3, 32.7), (-4.5, 4.6, 8, 11.3, 32.7), (2, 4.6, 8, 11.3, 32.7),
                 (3.5, 4, 6.75, 11.3, 32.7)], 'RA', cut=.35)
-    g.beam((11.3, 3.4, 32.7), (11.3, 9.6, 32.7), 3.2, 3.2, 'RA', 'paint', 8)
-    g.beam((11.3, 9.2, 32.7), (11.3, 10.6, 32.7), 3.8, 3.8, 'RA', 'edge', 8)
     # The left arm is the art's square pod: slimmer than the cannon, half again as tall as it is wide, with the
     # weapons stacked over-under on its front face.
     forward(g, [(-5.5, 3.2, 6.8, -10.7, 33.2), (3.5, 3.4, 7.2, -10.7, 33.2), (5.6, 3, 6.4, -10.7, 33.2)], 'LA', cut=.2)
