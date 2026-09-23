@@ -1,0 +1,1072 @@
+{
+  "schema": 2,
+  "kind": "body",
+  "family": "mek-biped",
+  "mesh": "griffin.g3dj",
+  "bounds": {
+    "min": [
+      -15.15,
+      -6.79,
+      0
+    ],
+    "max": [
+      15.18,
+      14.48,
+      47.29503238151591
+    ]
+  },
+  "rig": "biped-v1",
+  "joints": {
+    "root": "root",
+    "hips": "pelvis",
+    "torso": "CT",
+    "head": "HD",
+    "leftArm": "LA",
+    "rightArm": "RA",
+    "leftForearm": "LA-forearm",
+    "rightForearm": "RA-forearm",
+    "leftLeg": "LL",
+    "rightLeg": "RL",
+    "leftShin": "LL-shin",
+    "rightShin": "RL-shin",
+    "leftFoot": "LL-foot",
+    "rightFoot": "RL-foot"
+  },
+  "locations": {
+    "CT": "CT",
+    "LT": "LT",
+    "RT": "RT",
+    "HD": "HD",
+    "LA": "LA",
+    "RA": "RA",
+    "LL": "LL",
+    "LL-shin": "LL",
+    "RL": "RL",
+    "RL-shin": "RL",
+    "LL-foot": "LL",
+    "RL-foot": "RL",
+    "LA-forearm": "LA",
+    "RA-forearm": "RA",
+    "LA@forearm": "LA",
+    "LA@hand": "LA",
+    "RA@forearm": "RA",
+    "RA@hand": "RA",
+    "RA@wrist": "RA"
+  },
+  "hardpoints": [
+    {
+      "id": "HD-front",
+      "location": "HD",
+      "side": "front",
+      "node": "HD",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        3.8,
+        6,
+        3.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "HD-rear",
+      "location": "HD",
+      "side": "rear",
+      "node": "HD",
+      "position": [
+        0.0,
+        -4.5,
+        0.7999999999999972
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        3.8,
+        6,
+        3.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "HD-exhaust",
+      "location": "HD",
+      "side": "front",
+      "node": "HD",
+      "position": [
+        0.0,
+        -4.5,
+        -9.600000000000001
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        3.8,
+        6,
+        3.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "CT-front",
+      "location": "CT",
+      "side": "front",
+      "node": "CT",
+      "position": [
+        0.0,
+        6.550000000000001,
+        9.59
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.1,
+        6,
+        6.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "CT-rear",
+      "location": "CT",
+      "side": "rear",
+      "node": "CT",
+      "position": [
+        0.0,
+        -6.729999999999997,
+        13.669999999999998
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        7.1,
+        6,
+        6.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "CT-exhaust",
+      "location": "CT",
+      "side": "front",
+      "node": "CT",
+      "position": [
+        0.0,
+        -5.049999999999997,
+        8.59
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.1,
+        6,
+        6.0
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LT-front",
+      "location": "LT",
+      "side": "front",
+      "node": "LT",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LT-rear",
+      "location": "LT",
+      "side": "rear",
+      "node": "LT",
+      "position": [
+        -0.12000000000000455,
+        -11.080000000000002,
+        3.8599999999999994
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LT-exhaust",
+      "location": "LT",
+      "side": "front",
+      "node": "LT",
+      "position": [
+        0.7800000000000011,
+        -10.23,
+        -2.990000000000002
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RT-front",
+      "location": "RT",
+      "side": "front",
+      "node": "RT",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RT-rear",
+      "location": "RT",
+      "side": "rear",
+      "node": "RT",
+      "position": [
+        0.12000000000000455,
+        -11.080000000000002,
+        3.8599999999999994
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RT-exhaust",
+      "location": "RT",
+      "side": "front",
+      "node": "RT",
+      "position": [
+        -0.7800000000000011,
+        -10.23,
+        -2.990000000000002
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-front",
+      "location": "LA",
+      "side": "front",
+      "node": "LA-forearm",
+      "position": [
+        -0.08999999999999986,
+        8.329999999999998,
+        -0.75
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-rear",
+      "location": "LA",
+      "side": "rear",
+      "node": "LA-forearm",
+      "position": [
+        -0.08999999999999986,
+        -0.6700000000000046,
+        -0.75
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-exhaust",
+      "location": "LA",
+      "side": "front",
+      "node": "LA-forearm",
+      "position": [
+        -0.08999999999999986,
+        -0.6700000000000046,
+        -1.129999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-front",
+      "location": "RA",
+      "side": "front",
+      "node": "RA-forearm",
+      "position": [
+        0.21000000000000085,
+        9.0,
+        -0.7199999999999989
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-rear",
+      "location": "RA",
+      "side": "rear",
+      "node": "RA-forearm",
+      "position": [
+        0.21000000000000085,
+        -2.886579864025407e-15,
+        -0.7199999999999989
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-exhaust",
+      "location": "RA",
+      "side": "front",
+      "node": "RA-forearm",
+      "position": [
+        0.21000000000000085,
+        -2.886579864025407e-15,
+        -1.129999999999999
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LL-front",
+      "location": "LL",
+      "side": "front",
+      "node": "LL",
+      "position": [
+        -0.20999999999999908,
+        6.329999999999998,
+        -5.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LL-rear",
+      "location": "LL",
+      "side": "rear",
+      "node": "LL",
+      "position": [
+        -0.20999999999999908,
+        -2.6700000000000017,
+        -5.0
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LL-exhaust",
+      "location": "LL",
+      "side": "front",
+      "node": "LL",
+      "position": [
+        -0.4900000000000002,
+        -1.7999999999999972,
+        -11.41
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RL-front",
+      "location": "RL",
+      "side": "front",
+      "node": "RL",
+      "position": [
+        0.20999999999999908,
+        6.329999999999998,
+        -5.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RL-rear",
+      "location": "RL",
+      "side": "rear",
+      "node": "RL",
+      "position": [
+        0.20999999999999908,
+        -2.6700000000000017,
+        -5.0
+      ],
+      "rotation": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RL-exhaust",
+      "location": "RL",
+      "side": "front",
+      "node": "RL",
+      "position": [
+        0.4900000000000002,
+        -1.7999999999999972,
+        -11.41
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        10,
+        6,
+        10
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-elbow",
+      "location": "LA",
+      "side": "front",
+      "node": "LA",
+      "position": [
+        -1.2700000000000014,
+        -0.2500000000000029,
+        -8.979999999999997
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-wrist",
+      "location": "LA",
+      "side": "front",
+      "node": "LA-forearm",
+      "position": [
+        -0.08999999999999986,
+        8.329999999999998,
+        -0.75
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA-hand",
+      "location": "LA",
+      "side": "front",
+      "node": "LA-forearm",
+      "position": [
+        -0.08999999999999986,
+        8.329999999999998,
+        -0.75
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-elbow",
+      "location": "RA",
+      "side": "front",
+      "node": "RA",
+      "position": [
+        0.9000000000000039,
+        -0.3600000000000023,
+        -8.529999999999998
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-wrist",
+      "location": "RA",
+      "side": "front",
+      "node": "RA-forearm",
+      "position": [
+        0.21000000000000085,
+        9.0,
+        -0.7199999999999989
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA-hand",
+      "location": "RA",
+      "side": "front",
+      "node": "RA-forearm",
+      "position": [
+        0.21000000000000085,
+        8.329999999999998,
+        -0.7199999999999989
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LT-launcher",
+      "location": "LT",
+      "side": "front",
+      "node": "LT",
+      "position": [
+        -0.12000000000000455,
+        -6.949999999999999,
+        3.8599999999999994
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        8,
+        6,
+        8
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RT-launcher",
+      "location": "RT",
+      "side": "front",
+      "node": "RT",
+      "position": [
+        0.12000000000000455,
+        -6.949999999999999,
+        3.8599999999999994
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        8,
+        6,
+        8
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "LA@hand:hatchet-0",
+      "location": "LA",
+      "side": "front",
+      "node": "LA-forearm",
+      "position": [
+        -0.16000000000000014,
+        12.099999999999998,
+        -0.7300000000000004
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.0,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "RA@hand:hatchet-0",
+      "location": "RA",
+      "side": "front",
+      "node": "RA-forearm",
+      "position": [
+        0.1600000000000037,
+        12.099999999999998,
+        -0.7300000000000004
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        4.4,
+        6,
+        7.2
+      ],
+      "minScale": 0.4,
+      "maxScale": 1.5,
+      "roles": [
+        "weapon",
+        "physical",
+        "misc"
+      ]
+    },
+    {
+      "id": "external-searchlight",
+      "location": "LT",
+      "side": "front",
+      "node": "LT",
+      "position": [
+        0.0,
+        0.0,
+        9.0
+      ],
+      "rotation": [
+        0.0,
+        0,
+        -0.0,
+        1.0
+      ],
+      "size": [
+        7.2,
+        6,
+        6.9
+      ],
+      "minScale": 0.4,
+      "maxScale": 2,
+      "roles": [
+        "misc"
+      ]
+    }
+  ],
+  "emitters": []
+}

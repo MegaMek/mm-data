@@ -177,6 +177,22 @@
       "stackRows": ["CT", "LT", "RT"], "protrusion": {"RA": "short"}, "sharedFaces": {"HD": "CT"},
       "exhaustSockets": {"CT":[42.0,43.33,35.64],"LT":[37.1,44.25,35.74],"RT":[46.9,44.25,35.74]},
       "weaponScale": 0.8
+    },
+    {
+      "name": "Griffin", "id": "griffin", "referenceVariant": "GRF-1A",
+      "sprite": "meks/Griffin.png", "illustration": "Mek/Griffin.png", "hip": [42.0,36.0,22.41],
+      "silhouette": "Version 1, generated from the Griffin draft v1: one lofted shape per body segment, fitted to measurements of the HBS model. To be refined against the reference art.",
+      "sockets": {"HD":[42.0,33.7,38.6],"CT":[42.0,29.45,32.0],"LT":[34.92,29.77,36.99],"RT":[49.08,29.77,36.99],"LA":[29.37,28.87,29.38],"RA":[54.75,28.2,29.41],"LL":[34.78,29.67,13.98],"RL":[49.22,29.67,13.98]},
+      "armSockets": {"LA":{"elbow":[29.54,37.45,28.78],"wrist":[29.37,28.87,29.38],"hand":[29.37,28.87,29.38]},"RA":{"elbow":[54.09,37.56,29.23],"wrist":[54.75,28.2,29.41],"hand":[54.75,28.87,29.41]}},
+      "rearSockets": {"HD":[42.0,38.2,39.4],"CT":[42.0,42.73,36.08],"LT":[34.8,40.85,40.85],"RT":[49.2,40.85,40.85]},
+      "mountAreas": {"HD":{"width":3.8,"height":3.0},"CT":{"width":7.1,"height":6.0},"LT":{"width":7.2,"height":6.9},"RT":{"width":7.2,"height":6.9},"LA":{"width":4.0,"height":7.2},"RA":{"width":4.4,"height":7.2}},
+      "missileSockets": {"LT":[34.8,36.72,40.85],"RT":[49.2,36.72,40.85]}, "missileBayStand": true,
+      "exhaustSockets": {"CT":[42.0,41.05,31.0],"LT":[35.7,40.0,34.0],"RT":[48.3,40.0,34.0],"LL":[34.5,37.8,11.0],"RL":[49.5,37.8,11.0]},
+      "ventDefaultSides": [], "ventSpares": 0,
+      "stackRows": ["LT:jump-jet", "RT:jump-jet", "CT:jump-jet"], "jumpJetScale": 0.7,
+      "socketBanks": {"LA@hand:hatchet":[[29.3,25.1,29.4]],"RA@hand:hatchet":[[54.7,25.1,29.4]]},
+      "missileStyle": "drum-medium", "missileScale": 0.72, "missileBayWidth": 8, "missileBayHeight": 8, "missileBayColumns": 1,
+      "weaponScale": 0.85
     }
   ]
 }
