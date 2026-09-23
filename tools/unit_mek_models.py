@@ -332,6 +332,12 @@ def build_meks(recipes, output, export_asset, write_json):
                                                               recipe.get('lightProtrusion', {}).get(location))
             if light_style:
                 settings['lightStyle'] = light_style
+            # Room between weapons sharing this mount, when the chassis packs a small pod tighter than the standard .4.
+            if location in recipe.get('stackGap', {}):
+                settings['stackGap'] = recipe['stackGap'][location]*recipe.get('bodyScale', 1)
+            # How wide one row of weapons may run here, when the chassis shapes a group narrower than the face.
+            if location in recipe.get('rowWidth', {}):
+                settings['rowWidth'] = recipe['rowWidth'][location]*recipe.get('bodyScale', 1)
             if location in recipe.get('hangingMounts', []) and not rear and not family:
                 # The socket marks an underside the weapon hangs from, like a Locust's guns under its gun pods.
                 # A socket kept for one family of weapon sits where the recipe puts it and does not hang.

@@ -1442,6 +1442,46 @@ def blackjack(g):
 # --- end of MiniMek draft blackjack ---
 
 
+def blackjack_omni(g):
+    # The Blackjack OmniMech (BJ2-O): the Blackjack's pelvis, legs and feet with its own upper body, drawn from the
+    # OmniMech line art. The art shows the torso turned 45 degrees to face the camera, so its upper body reads as the
+    # front view: a flat box cockpit whose top is level with the shoulders, one square flat-topped block per side
+    # torso, a wide rounded band across the chest over a boxier waist, and big square arm pods as tall as the
+    # shoulders, set straight against them.
+    blackjack(g)
+    upper = ('CT', 'LT', 'RT', 'HD', 'LA', 'RA')
+    g.faces = [(triangle, group, material) for triangle, group, material in g.faces
+               if group not in upper and not group.startswith('vent-')]
+    g.vents = []
+    g.torso_split = False
+    # A boxier waist, then the wide rounded band wrapping across the chest under the cockpit.
+    upright(g, [(27.8, 10, 8.6, 0, -.5), (31.6, 11, 9.2, 0, -.5)], 'CT', cut=.2)
+    upright(g, [(31.6, 13.4, 9.6, 0, 0), (32.8, 14.6, 10.6, 0, 0), (35.2, 14.6, 10.6, 0, 0), (36.4, 13.4, 9.6, 0, 0)],
+            'CT', cut=.4)
+    # The spine behind the cockpit carries the upper back.
+    upright(g, [(36.2, 6.6, 9, 0, -1.8), (44.2, 6.2, 8.4, 0, -1.8)], 'CT', cut=.2)
+    # The waist and band are one shell, split into real side torsos at 3.4 before the shoulders go on.
+    split_torso_locations(g, seam=3.4)
+    for side, location in ((-1, 'LT'), (1, 'RT')):
+        # One square flat-topped shoulder block per side torso, beside the cockpit out to the arm, with a small
+        # round port on top as the art draws them.
+        upright(g, [(36.2, 7.1, 9.2, side*6.85, -1.9), (44.6, 7.1, 9.4, side*6.85, -1.8)], location, cut=.15)
+        g.beam((side*8.2, -1.2, 44.6), (side*8.2, -1.2, 45), 2.6, 2.6, location, 'edge', 8)
+        shoulder = [(36.2, 7.1, 9.2, side*6.85, -1.9), (44.6, 7.1, 9.4, side*6.85, -1.8)]
+        vent(g, lofted_face(shoulder, rear=True), side*6.85, 1.4, 37.2, 39.6, rear=True, group=location)
+    # The cockpit: a squat flat box between the shoulders, its top level with theirs, a viewport band across its
+    # flat face. It is the whole HD region.
+    upright(g, [(38, 5.2, 6.2, 0, 2.1), (44.8, 5.2, 6.2, 0, 2.1)], 'HD', cut=.25)
+    panel(g, [(-1.8, 5.23, 43.8), (1.8, 5.23, 43.8), (1.8, 5.23, 42.8), (-1.8, 5.23, 42.8)], 'HD', 'glass')
+    # Big square arm pods, as tall as the shoulders, set straight against their outer faces at 10.4: an arm flip turns
+    # about the shoulder's left-right axis, which never changes x, so a pod flush with the block stays clear of it.
+    for side, arm in ((-1, 'LA'), (1, 'RA')):
+        if g.modular:
+            g.pivots[arm] = (side*10.4, -1.8, 39.2)
+        forward(g, [(-5.5, 5.2, 8.4, side*13, 39.2), (4.5, 5.2, 8.4, side*13, 39.2), (5.5, 4.6, 7.6, side*13, 39.2)],
+                arm, cut=.15)
+
+
 def build_chassis(recipe, modular=False):
     g = Geometry(modular=modular)
     hip = recipe['hip']
@@ -1456,7 +1496,8 @@ def build_chassis(recipe, modular=False):
                 'battlemaster': battlemaster, 'panther': panther,
                 'urbanmech': urbanmech,
                 'griffin': griffin,
-                'blackjack': blackjack}
+                'blackjack': blackjack,
+                'blackjack-omni': blackjack_omni}
     socketed = dict(g.pivots)
     builders[recipe['id']](g)
     if modular:

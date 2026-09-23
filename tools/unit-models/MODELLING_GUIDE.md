@@ -232,6 +232,9 @@ limits and accepted roles. Rear ports must actually clear the rear armor; inspec
 | `missileSockets`, `missileBayHeight/Width/Columns`, `missileSlope` | Location-specific launcher placement and available bay shape. Tubes remain weapon geometry. |
 | `weaponScale`, `missileScale`, `barrelLength`, `protrusion` | Art fitting preferences; inspect both stock and crowded custom refits. |
 | `weaponOverrides` | Modular exporter supports location/family/length adjustments. Do not depend on unimplemented legacy name filters. |
+| `lightProtrusion` | A `protrusion` for light weapons only (small and medium lasers, marked `light` in `weapons.json`), per location or `LOC:family`. The Blackjack draws its large arm lasers long and its medium ones short from one socket. |
+| `stackGap` | Room between weapons sharing a hard point, per location, instead of the standard .4. Negative nests rounded weapons into each other's bounding boxes: the Blackjack OmniMech packs its arm lasers at -.5 so they nearly touch. |
+| `rowWidth` | With `stackRows`, how wide one row may run before the next starts, per location, without narrowing the face every weapon is fitted to. Shapes a group, such as a large laser alone over a pair. |
 | `searchlightSocket` | Optional physical lamp placement only; having a socket never proves the unit carries a lamp. |
 
 `weapons.json` and `unit_weapon_shapes.py` own reusable weapon looks. Use thin square laser barrels, heavier PPC

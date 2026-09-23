@@ -211,6 +211,22 @@
       "weaponOverrides": [{"location": "LA", "family": "ballistic", "length": 16, "note": "The arm guns reach well ahead of the pods, as the miniature and line art show; small and medium lasers in the arms stay short (lightProtrusion)."},
         {"location": "RA", "family": "ballistic", "length": 16}, {"location": "LA", "family": "ppc", "length": 14}, {"location": "RA", "family": "ppc", "length": 14}],
       "weaponScale": 0.85
+    },
+    {
+      "name": "Blackjack OmniMech", "id": "blackjack-omni", "referenceVariant": "BJ2-O",
+      "sprite": "meks/BlackjackO.png", "illustration": "Mek/Blackjack.png", "hip": [42.0,36.0,23.93],
+      "silhouette": "The Blackjack's legs under the OmniMech's own upper body: a flat box cockpit level with square flat-topped shoulder blocks, a wide rounded chest band over a boxy waist, and big square arm pods set straight against the shoulders.",
+      "sockets": {"HD":[42.0,30.8,40.5],"CT":[42.0,30.7,34.0],"LT":[35.15,33.1,40.4],"RT":[48.85,33.1,40.4],"LA":[29.0,30.5,39.2],"RA":[55.0,30.5,39.2],"LL":[35.71,31.11,16.55],"RL":[48.29,31.11,16.55]},
+      "armSockets": {"LA":{"elbow":[29.0,30.5,39.2]},"RA":{"elbow":[55.0,30.5,39.2]}},
+      "rearSockets": {"HD":[42.0,41.5,43.0],"CT":[42.0,41.3,34.0],"LT":[35.15,42.5,39.0],"RT":[48.85,42.5,39.0]},
+      "mountAreas": {"HD":{"width":3.6,"height":2.4},"CT":{"width":8,"height":3.6},"LT":{"width":5.6,"height":6.5},"RT":{"width":5.6,"height":6.5},"LA":{"width":5.0,"height":7.6},"RA":{"width":5.0,"height":7.6}},
+      "stackRows": ["CT", "LT", "RT", "LA", "RA"], "stackGap": {"LA": -0.5, "RA": -0.5}, "rowWidth": {"LA": 4.0, "RA": 4.0}, "locationScale": {"LA": 0.72, "RA": 0.72},
+      "socketBanks": {"LT:missile":[[35.15,33.35,41.6],[35.15,33.35,39.2]],"RT:missile":[[48.85,33.35,41.6],[48.85,33.35,39.2]]},
+      "exhaustSockets": {"LT":[35.15,42.6,43.0],"RT":[48.85,42.6,43.0]},
+      "protrusion": {"LA": "long", "RA": "long", "CT": "recessed", "LT": "recessed", "RT": "recessed"}, "lightProtrusion": {"LA": "short", "RA": "short"},
+      "weaponOverrides": [{"location": "LA", "family": "ballistic", "length": 16, "note": "Arm guns long as on the Blackjack; small and medium lasers in the arms stay short (lightProtrusion)."},
+        {"location": "RA", "family": "ballistic", "length": 16}, {"location": "LA", "family": "ppc", "length": 14}, {"location": "RA", "family": "ppc", "length": 14}],
+      "weaponScale": 0.85
     }
   ]
 }
