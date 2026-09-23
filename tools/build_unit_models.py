@@ -88,7 +88,8 @@ def assemble(base, recipe, unit, detail='full'):
     for loc, socket in recipe.get('missileSockets', {}).items():
         if loc+':missile' in recipe.get('socketBanks', {}):
             continue
-        launchers = [m for m in mounts if m['location'] == loc and m['family'] == 'missile' and not m['rear']]
+        launchers = [m for m in mounts if m['location'] == loc and m['family'] == 'missile' and not m['rear']
+                     and rules[m['index']]['look'] == 'launcher']
         if len(launchers) < 2:
             continue
         scale = recipe['weaponScale']*recipe.get('missileScale', 1)

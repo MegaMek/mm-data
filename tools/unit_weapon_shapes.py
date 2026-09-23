@@ -38,6 +38,8 @@ def _matches(entry, mount):
     families = entry['family'] if isinstance(entry['family'], list) else [entry['family']]
     if mount['family'] not in families:
         return False
+    if 'internalName' in entry and re.search(entry['internalName'], mount.get('internalName', '')) is None:
+        return False
     return 'name' not in entry or re.search(entry['name'], mount['name'], re.IGNORECASE) is not None
 
 
@@ -119,6 +121,9 @@ def footprint(rule, mount, scale, options=None):
         grid = launcher_grid(rule, mount, scale, options.get('maximumColumns', 0),
                              options.get('orientation', 'horizontal'))
         return grid['width'], grid['height']
+    if look == 'artillery-launcher':
+        side = ARTILLERY_WIDTH*scale*rule.get('artilleryScale', 1)
+        return side, side
     if look == 'barrel':
         widest = rule['width']*max([1]+[segment['width']*segment.get('taper', 1)
                                         for segment in rule.get('segments', [])])*scale
@@ -216,6 +221,93 @@ def _launcher(geometry, mount, rule, position, scale, options):
             px, py, pz = emitter['position']
             geometry.emitter((px, py-direction*slope*(pz-origin), pz), emitter['direction'],
                              emitter['node'], emitter['role'], emitter['effect'])
+
+
+# An artillery launcher at scale 1: an 11 wide, 11 tall block about 9 deep (the Inner Sphere Arrow IV, 15 tons).
+ARTILLERY_WIDTH = 11
+# The block's front sits flush on the mount, so only the tube rims stand proud of the armor; it is .05 forward so it
+# covers a limb end in the same plane instead of flickering with it. It is set low by the cylinders' height above
+# it, so the whole launcher, cylinders included, is centered on the mount.
+ARTILLERY_BODY = {'center': (0, -4.45, -.69), 'size': (11, 9, 9.4)}
+# Five tubes in a dice-five pattern: two over one over two, each a short raised rim around a dark bore.
+ARTILLERY_TUBES = ((-2.9, 2.6), (2.9, 2.6), (0, 0), (-2.9, -2.6), (2.9, -2.6))
+ARTILLERY_RIM, ARTILLERY_BORE = 1.5, 1.1
+ARTILLERY_FACE, ARTILLERY_LIP = .05, .65
+
+
+def _artillery_launcher(geometry, mount, rule, position, scale, options):
+    """A large artillery launcher such as the Arrow IV, drawn from its artwork rather than a tube grid.
+
+    It is built facing forward and horizontal, with the two cylinders along the top. The vertical profile turns
+    the whole launcher on its side, so the cylinders run down the outer face; the slope then leans it back.
+    """
+    x, y, z = position
+    group = mount['location']
+    direction = -1 if mount['rear'] else 1
+    size = scale*rule.get('artilleryScale', 1)
+    vertical = options.get('orientation', 'horizontal') == 'vertical'
+    slope = options.get('slope', 0)
+    origin = options.get('slopeOrigin', z)
+    local = Geometry()
+    body_x, body_y, body_z = ARTILLERY_BODY['center']
+    width, depth, height = ARTILLERY_BODY['size']
+    local.box(ARTILLERY_BODY['center'], ARTILLERY_BODY['size'], group, 'paint')
+    face_z = body_z
+    if options.get('detail') == 'panel':
+        half_width, half_height = width/2-1, height/2-1
+        front = ARTILLERY_FACE+.06
+        local.face([(-half_width, front, face_z-half_height), (half_width, front, face_z-half_height),
+                    (half_width, front, face_z+half_height), (-half_width, front, face_z+half_height)][::-1],
+                   group, 'dark')
+        local.emitter((0, front, face_z), (0, 1, 0), group, 'launcher', 'missile')
+    else:
+        sides, turn = TUBE_SHAPES['hex']
+        for across, up in ARTILLERY_TUBES:
+            center_z = face_z+up
+
+            def ring(radius, front):
+                return [(across+radius*cos(turn+2*pi*i/sides), front, center_z+radius*sin(turn+2*pi*i/sides))
+                        for i in range(sides)]
+            back, lip = ring(ARTILLERY_RIM, ARTILLERY_FACE), ring(ARTILLERY_RIM, ARTILLERY_LIP)
+            for i in range(sides):
+                j = (i+1) % sides
+                local.face([lip[i], lip[j], back[j], back[i]], group, 'paint')
+            local.face(lip[::-1], group, 'paint')
+            local.face(ring(ARTILLERY_BORE, ARTILLERY_LIP+.03)[::-1], group, 'dark')
+            local.emitter((across, ARTILLERY_LIP+.03, face_z+up), (0, 1, 0), group, 'launcher', 'missile')
+        # Two cylinders half sunk into the top, front to back. Only the upper half is drawn: three faces and
+        # a half-hexagon cap at each end.
+        top = body_z+height/2
+        for across in (-2.6, 2.6):
+            arc = [(across+1.6*cos(pi*i/3), top+1.6*sin(pi*i/3)) for i in range(4)]
+            rear_end, front_end = body_y-depth/2+.3, ARTILLERY_FACE+.3
+            for i in range(3):
+                local.face([(arc[i][0], front_end, arc[i][1]), (arc[i+1][0], front_end, arc[i+1][1]),
+                            (arc[i+1][0], rear_end, arc[i+1][1]), (arc[i][0], rear_end, arc[i][1])], group, 'paint')
+            local.face([(point_x, front_end, point_z) for point_x, point_z in arc][::-1], group, 'paint')
+            local.face([(point_x, rear_end, point_z) for point_x, point_z in arc], group, 'paint')
+        # A slotted vent on the left side: a dark recess behind three lit fins.
+        side = body_x-width/2
+        vent = [(-6, -3), (-1.5, -3), (-1.5, 1.5), (-6, 1.5)]
+        local.face([(side-.06, vent_y, body_z+vent_z) for vent_y, vent_z in vent][::-1], group, 'dark')
+        for fin in (-4.6, -3.75, -2.9):
+            local.face([(side-.16, fin, body_z+1.5), (side-.16, fin+.35, body_z+1.5),
+                        (side-.16, fin+.35, body_z-3), (side-.16, fin, body_z-3)], group, 'edge')
+
+    def place(point):
+        point_x, point_y, point_z = point
+        if vertical:
+            point_x, point_z = point_z, -point_x
+        placed_y = y+direction*point_y*size
+        placed_z = z+point_z*size
+        return x+point_x*size, placed_y-direction*slope*(placed_z-origin), placed_z
+
+    for triangle, node, material in local.faces:
+        points = [place(point) for point in triangle]
+        geometry.face(points if direction == 1 else points[::-1], node, material)
+    for emitter in local.emitters:
+        geometry.emitter(place(emitter['position']), (0, direction, 0), emitter['node'], emitter['role'],
+                         emitter['effect'])
 
 
 def _barrel(geometry, mount, rule, position, scale):
@@ -874,6 +966,8 @@ def _draw_ahead(geometry, mount, rule, position, scale, options):
         _held(geometry, mount, rule, position, scale)
     elif look == 'launcher':
         _launcher(geometry, mount, rule, position, scale, options)
+    elif look == 'artillery-launcher':
+        _artillery_launcher(geometry, mount, rule, position, scale, options)
     elif look == 'barrel':
         _barrel(geometry, mount, rule, position, scale)
     elif look == 'gatling':

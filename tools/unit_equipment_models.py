@@ -75,7 +75,7 @@ def build_equipment(catalog, output, export_asset):
                 choices[style] = module(item, rule, style)
         model = module(item, rule)
         profiles = {}
-        if rule['look'] == 'launcher':
+        if rule['look'] in ('launcher', 'artillery-launcher'):
             profiles['columns-4'] = module(item, rule, options={'maximumColumns': 4})
             profiles['vertical-slope'] = module(item, rule, options={'maximumColumns': 4,
                                              'orientation': 'vertical', 'slope': .45, 'slopeOrigin': 0})
@@ -88,7 +88,9 @@ def build_equipment(catalog, output, export_asset):
                  'bankFamily': 'lamp' if rule['look'] == 'lamp' else rule.get('bankFamily', item['family']),
                  'policy': policy, 'fallback': missing}
         if policy == 'WEAPON':
-            entry['lowDetail'] = module(item, fallback_rule(item, True), low_detail=True)
+            # An artillery launcher keeps its own size at a distance; everything else shares the fallback shape.
+            distant = rule if rule['look'] == 'artillery-launcher' else fallback_rule(item, True)
+            entry['lowDetail'] = module(item, distant, low_detail=True)
         mappings[item['internalName']] = entry
 
     # These assets also cover a weapon type added to the game after this art catalog was exported.
