@@ -165,6 +165,18 @@
       "socketNodes": {"LL:jump-jet":"LL-shin", "RL:jump-jet":"RL-shin"}, "locationScale": {"RA": 2},
       "exhaustSockets": {"LL":[34.4,39.55,12.4],"RL":[49.6,39.55,12.4],"CT":[42,41,35.5],"LT":[37.6,41,35.5],"RT":[46.4,41,35.5]},
       "weaponScale": 0.8
+    },
+    {
+      "name": "UrbanMech", "id": "urbanmech", "referenceVariant": "UM-R60",
+      "sprite": "meks/Urbanmech.png", "illustration": "Mek/UrbanMech.png", "hip": [42.0,36.0,19.41],
+      "silhouette": "A round barrel body with a low dome, a flat armour plate across its lower front and the head as a flush band across the front of the dome carrying the viewport slit. The right arm is a cannon barrel every RA weapon fires from; the left arm is a square pod. Drawn from the HBS model's proportions, with the line art as tiebreak.",
+      "sockets": {"HD":[42.0,29.4,36.14],"CT":[42.0,28.0,29.94],"LT":[36.1,31.32,30.14],"RT":[47.9,31.32,30.14],"LA":[31.3,30.4,31.34],"RA":[53.3,25.4,30.84],"LL":[35.22,32.24,16.56],"RL":[48.78,32.24,16.56]},
+      "armSockets": {"LA":{"elbow":[31.3,30.4,31.34]},"RA":{"elbow":[53.3,25.4,30.84]}},
+      "rearSockets": {"HD":[42.0,41.86,38.14],"CT":[42.0,43.9,29.14],"LT":[36.5,41.48,29.14],"RT":[47.5,41.48,29.14]},
+      "mountAreas": {"HD":{"width":7.4,"height":1.4},"CT":{"width":7.4,"height":6.6},"LT":{"width":2.8,"height":6.5},"RT":{"width":2.8,"height":6.5},"LA":{"width":2.8,"height":6.2},"RA":{"width":3.8,"height":3.8}},
+      "stackRows": ["CT", "LT", "RT"], "protrusion": {"RA": "short"}, "sharedFaces": {"HD": "CT"},
+      "exhaustSockets": {"CT":[42.0,43.33,35.64],"LT":[37.1,44.25,35.74],"RT":[46.9,44.25,35.74]},
+      "weaponScale": 0.8
     }
   ]
 }
