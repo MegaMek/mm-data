@@ -16,7 +16,10 @@ TORSO = ('CT', 'LT', 'RT')
 # Spare spots found per torso location and face, beyond the authored vents.
 SPARES = 3
 STEP = .5
-GAP = .5
+# Room between two vent spots. MegaMek pads every vent by .3 on each side before checking for overlap
+# (VENT_MARGIN in UnitEquipmentAssembly), so spots closer than .6 read as taken and a variant that needs both
+# vents in one torso gets only one. .7 clears that with room to spare.
+GAP = .7
 
 
 def _normal(tri):

@@ -226,6 +226,49 @@ def aim_rotation(aim):
     return [z/scale, 0, -x/scale, scale/2]
 
 
+def calf_exhaust(body, leg):
+    """The default jump-jet spot for a leg: on the back of the calf just under the knee, centred across the calf.
+
+    Measured from the body itself: a fifth of the way from the knee down to the ankle, at the middle of the shin's
+    width there, on the shin's rear surface. Returns None when the leg has no shin to measure, so the caller keeps
+    its older default.
+    """
+    shin = leg+'-shin'
+    if shin not in body.pivots:
+        return None
+    triangles = [tri for tri, node, _ in body.faces if node == shin]
+    if not triangles:
+        return None
+    knee = body.pivots[shin]
+    ankle_height = body.pivots[leg+'-foot'][2] if leg+'-foot' in body.pivots else knee[2]*.2
+    height = knee[2] - (knee[2] - ankle_height)*.2
+
+    def depths_at(x):
+        # Where a line running front to back at this x and height crosses the shin's surface.
+        depths = []
+        for (x0, y0, z0), (x1, y1, z1), (x2, y2, z2) in triangles:
+            determinant = (x1-x0)*(z2-z0) - (x2-x0)*(z1-z0)
+            if abs(determinant) < 1e-9:
+                continue
+            u = ((x-x0)*(z2-z0) - (x2-x0)*(height-z0))/determinant
+            v = ((x1-x0)*(height-z0) - (x-x0)*(z1-z0))/determinant
+            if u >= -1e-9 and v >= -1e-9 and u + v <= 1 + 1e-9:
+                depths.append(y0 + u*(y1-y0) + v*(y2-y0))
+        return depths
+
+    low = min(p[0] for tri in triangles for p in tri)
+    high = max(p[0] for tri in triangles for p in tri)
+    steps = [low + (high - low)*index/40 for index in range(41)]
+    covered = [x for x in steps if depths_at(x)]
+    if not covered:
+        return None
+    centre = (min(covered) + max(covered))/2
+    depths = depths_at(centre)
+    if not depths:
+        return None
+    return (centre, min(depths), height)
+
+
 def build_meks(recipes, output, export_asset, write_json):
     assets = {}
     for recipe in recipes:
@@ -284,6 +327,11 @@ def build_meks(recipes, output, export_asset, write_json):
             style = recipe.get('protrusion', {}).get(location+':'+family, recipe.get('protrusion', {}).get(location))
             if style:
                 settings['style'] = style
+            # Light weapons (small and medium lasers) can stand out differently from the rest at the same mount.
+            light_style = recipe.get('lightProtrusion', {}).get(location+':'+family,
+                                                              recipe.get('lightProtrusion', {}).get(location))
+            if light_style:
+                settings['lightStyle'] = light_style
             if location in recipe.get('hangingMounts', []) and not rear and not family:
                 # The socket marks an underside the weapon hangs from, like a Locust's guns under its gun pods.
                 # A socket kept for one family of weapon sits where the recipe puts it and does not hang.
@@ -324,7 +372,17 @@ def build_meks(recipes, output, export_asset, write_json):
             mount(location+'-rear', location, rear, rear=True)
             # Exhaust is a separate rear mounting preference, never a front-facing gun socket.
             exhaust = recipe.get('exhaustSockets', {}).get(location, [rear[0], rear[1], min(rear[2], 29)])
-            mount(location+'-exhaust', location, exhaust, family='jump-jet')
+            calf = None if weight or location in recipe.get('exhaustSockets', {}) or location not in ('LL', 'RL') \
+                else calf_exhaust(body, location)
+            if calf is None:
+                mount(location+'-exhaust', location, exhaust, family='jump-jet')
+            else:
+                # A leg with no authored exhaust carries its jets on the back of the calf just under the knee,
+                # moving with the shin, rather than at the leg weapon socket up on the thigh.
+                grown = recipe.get('bodyScale', 1)
+                measured = [42 + calf[0]/grown, 36 - calf[1]/grown, calf[2]/grown]
+                node = recipe.get('socketNodes', {}).get(location+':jump-jet', location+'-shin')
+                mount(location+'-exhaust', location, measured, family='jump-jet', node=node)
             if recipe.get('barrelLength'):
                 mount(location+'-ppc', location, pixel, family='ppc')
         for location in ('LA', 'RA'):

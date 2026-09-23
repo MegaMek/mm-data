@@ -106,7 +106,8 @@ What to take from it:
   forearm and no fist; the arm *is* the gun housing.
 - **How many weapons per arm** decides the mount area shape. Two per arm wants a tall narrow area so
   they stack over-under, or a wide one so they sit abreast.
-- **Jump jets** ride in the calves automatically; you do not author them. Give torso jets an
+- **Jump jets** in the legs ride on the back of the calves, centred, just under the knee, and move with the
+  shin: the exporter measures the spot from the body, so you do not author them. Give torso jets an
   `exhaustSockets` spot on the back of each torso location. **One jump jet graphic per location**, however
   many the unit file lists: it shows the location has jets, not how many (UNIT_REVIEW_PROCESS section 5a).
 - **Rear mounts** need `rearSockets` that actually clear the hull. If none exist, still author them for

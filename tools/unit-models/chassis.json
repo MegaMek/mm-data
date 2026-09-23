@@ -195,6 +195,22 @@
       "socketBanks": {"LA@hand:hatchet":[[29.3,25.1,29.4]],"RA@hand:hatchet":[[54.7,25.1,29.4]]},
       "missileStyle": "drum-medium", "missileScale": 0.72, "missileBayWidth": 8, "missileBayHeight": 8, "missileBayColumns": 1,
       "weaponScale": 0.85
+    },
+    {
+      "name": "Blackjack", "id": "blackjack", "referenceVariant": "BJ-1",
+      "sprite": "meks/Blackjack.png", "illustration": "Mek/Blackjack.png", "hip": [42.0,36.0,23.93],
+      "silhouette": "Drawn to the miniature, sized from the HBS model: a rounded belly, a narrow spine, big square shoulder blocks and a tall narrow head standing proud of the chest.",
+      "sockets": {"HD":[42.0,30.12,39.5],"CT":[42.0,31.15,31.5],"LT":[33.65,33.15,39.5],"RT":[50.35,33.15,39.5],"LA":[29.15,31.5,38.7],"RA":[54.85,31.5,38.7],"LL":[35.71,31.11,16.55],"RL":[48.29,31.11,16.55]},
+      "armSockets": {"LA":{"elbow":[29.15,31.5,38.7]},"RA":{"elbow":[54.85,31.5,38.7]}},
+      "rearSockets": {"HD":[42.0,41.5,43.0],"CT":[42.0,42.2,40.0],"LT":[33.65,42.5,38.5],"RT":[50.35,42.5,38.5]},
+      "mountAreas": {"HD":{"width":2.4,"height":3},"CT":{"width":6,"height":5},"LT":{"width":3.0,"height":7.0},"RT":{"width":3.0,"height":7.0},"LA":{"width":3.8,"height":5.6},"RA":{"width":3.8,"height":5.6}},
+      "stackRows": ["CT", "LT", "RT"],
+      "socketBanks": {"LT:missile":[[33.65,33.4,40.7],[33.65,33.4,38.3]],"RT:missile":[[50.35,33.4,40.7],[50.35,33.4,38.3]]},
+      "exhaustSockets": {"LT":[37.15,42.7,40.5],"RT":[46.85,42.7,40.5]},
+      "protrusion": {"LA": "long", "RA": "long", "CT": "recessed", "LT": "recessed", "RT": "recessed"}, "lightProtrusion": {"LA": "short", "RA": "short"},
+      "weaponOverrides": [{"location": "LA", "family": "ballistic", "length": 16, "note": "The arm guns reach well ahead of the pods, as the miniature and line art show; small and medium lasers in the arms stay short (lightProtrusion)."},
+        {"location": "RA", "family": "ballistic", "length": 16}, {"location": "LA", "family": "ppc", "length": 14}, {"location": "RA", "family": "ppc", "length": 14}],
+      "weaponScale": 0.85
     }
   ]
 }

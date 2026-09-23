@@ -92,6 +92,10 @@ def build_equipment(catalog, output, export_asset):
         entry = {'model': model, 'styles': choices, 'profiles': profiles, 'family': item['family'],
                  'bankFamily': 'lamp' if rule['look'] == 'lamp' else rule.get('bankFamily', item['family']),
                  'policy': policy, 'fallback': missing}
+        if rule.get('light'):
+            # Small and medium lasers: a recipe can give these their own style at a mount (lightProtrusion), so one
+            # arm draws its heavy lasers long and its light ones short.
+            entry['light'] = True
         if policy == 'WEAPON':
             # An artillery launcher keeps its own size at a distance; everything else shares the fallback shape.
             distant = rule if rule['look'] == 'artillery-launcher' else fallback_rule(item, True)
