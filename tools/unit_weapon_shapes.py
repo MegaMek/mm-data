@@ -135,6 +135,8 @@ def footprint(rule, mount, scale, options=None):
         if 'housing' in rule:
             return rule['housing'][0]*scale, rule['housing'][2]*scale
         return rule['width']*1.15*scale, rule['width']*1.15*scale
+    if look == 'ecm':
+        return 2.3*rule['radius']*scale, 2.3*rule['radius']*scale
     if look in ('pod', 'lamp'):
         return rule['size'][0]*scale, rule['size'][2]*scale
     return None
@@ -511,6 +513,28 @@ def _pod(geometry, mount, rule, position, scale):
         geometry.face(corners if direction == 1 else list(reversed(corners)), group, rule.get('tip', 'dark'))
         if mount.get('policy', 'WEAPON') == 'WEAPON':
             geometry.emitter((x, face_y, z), (0, direction, 0), group, 'beam', 'none')
+
+
+def _ecm(geometry, mount, rule, position, scale):
+    """An ECM suite as the TRO draws it: a drum lying front to back, its dome facing out of the armour, a ribbed
+    collar round its foot against the armour and a small junction box on its side. It has no dark face, so it
+    never reads as a gun port."""
+    x, y, z = position
+    group = mount['location']
+    direction = -1 if mount['rear'] else 1
+    r = rule['radius']
+    # Drawn standing up with its foot at height 0, then tipped so its axis points out of the face.
+    drum = Geometry()
+
+    def ring(height, radius):
+        return [(radius*cos(pi/8 + 2*pi*i/8), radius*sin(pi/8 + 2*pi*i/8), height) for i in range(8)]
+    drum.loft([ring(-.4, 1.12*r), ring(.6, 1.12*r)], group, 'metal')
+    drum.loft([ring(.6, r), ring(2.8, r), ring(3.5, .75*r), ring(3.95, .35*r)], group, 'edge')
+    drum.box((.9*r, 0, 1.6), (.7, 1.0, .7), group, 'metal')
+    for triangle, node, material in drum.faces:
+        # Turning about x keeps the winding: forward (+1) takes up to +y, rearward (-1) to -y.
+        geometry.face([(x + px*scale, y + direction*pz*scale, z - direction*py*scale) for px, py, pz in triangle],
+                      node, material)
 
 
 def _lamp(geometry, mount, rule, position, scale):
@@ -1097,6 +1121,8 @@ def _draw_ahead(geometry, mount, rule, position, scale, options):
         _barrel(geometry, mount, rule, position, scale)
     elif look == 'gatling':
         _gatling(geometry, mount, rule, position, scale)
+    elif look == 'ecm':
+        _ecm(geometry, mount, rule, position, scale)
     elif look == 'pod':
         _pod(geometry, mount, rule, position, scale)
     elif look == 'jet':
