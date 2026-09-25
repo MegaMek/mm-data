@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "kind": "equipment",
+  "family": "ballistic",
+  "mesh": "2d20ae4bf0331806ffe4.g3dj",
+  "bounds": {
+    "min": [
+      -3.0250000000000004,
+      0.0,
+      -7.7
+    ],
+    "max": [
+      3.0250000000000004,
+      18.23,
+      4.5375
+    ]
+  },
+  "rig": "module-v1",
+  "joints": {
+    "root": "root",
+    "aim": "mount"
+  },
+  "locations": {},
+  "hardpoints": [],
+  "emitters": [
+    {
+      "id": "emitter-0",
+      "node": "mount",
+      "position": [
+        0,
+        18.23,
+        0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "role": "muzzle",
+      "effect": "bullet"
+    }
+  ]
+}

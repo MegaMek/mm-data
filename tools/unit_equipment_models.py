@@ -7,7 +7,7 @@ import hashlib
 import json
 
 from unit_model_geometry import Geometry
-from unit_weapon_shapes import BOOK, draw, held_for, rule_for
+from unit_weapon_shapes import BOOK, draw, held_for, housing_layout, rule_for
 
 
 def fallback_rule(item, low_detail=False):
@@ -86,6 +86,19 @@ def build_equipment(catalog, output, export_asset):
                 # three lengths by how far it stands out of the armour.
                 for length in ('short', 'medium', 'long'):
                     profiles['drum-'+length] = module(item, rule, options={'style': 'drum', 'drumLength': length})
+                if ('SRM' in item['internalName'].upper()
+                        and housing_layout(rule, dict(item, location='mount', rear=False), 1) is not None):
+                    # The SRM family's triangular housing, for a chassis whose mount asks for it. A Streak is always
+                    # guided, so it carries the targeting dome; any other launcher gets the dome only when the game
+                    # finds it linked to Artemis, which picks the -guided profile.
+                    # A housing hung on the side of a turret or body takes the profile with its grey arm reaching
+                    # toward it: housing-arm-left when the body is on the housing's left.
+                    streak = 'STREAK' in item['internalName'].upper()
+                    for arm in ('', 'left', 'right'):
+                        name = 'housing' + ('-arm-' + arm if arm else '')
+                        profiles[name] = module(item, rule, options={'style': 'housing', 'dome': streak, 'arm': arm})
+                        profiles[name+'-guided'] = module(item, rule, options={'style': 'housing', 'dome': True,
+                                                                              'arm': arm})
         if not missing and held_for(dict(item, location='mount', rear=False), rule):
             # A gun gripped in the fist; used only where a recipe asks for it at a hand.
             profiles['held'] = module(item, rule, options={'held': True})

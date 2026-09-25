@@ -119,6 +119,10 @@ def footprint(rule, mount, scale, options=None):
     if look == 'launcher' and (options or {}).get('style') == 'drum':
         side = 2*drum_layout(rule, mount, scale)['lip']
         return side, side
+    if look == 'launcher' and (options or {}).get('style') == 'housing':
+        layout = housing_layout(rule, mount, scale)
+        arm = HOUSING_ARM*scale if (options or {}).get('arm') else 0
+        return layout['width'] + arm, layout['height']
     if look == 'launcher':
         options = options or {}
         grid = launcher_grid(rule, mount, scale, options.get('maximumColumns', 0),
@@ -278,9 +282,98 @@ def _drum_launcher(geometry, mount, rule, position, scale, options):
         geometry.emitter(centre, (0, direction, 0), group, 'launcher', 'missile')
 
 
+# The SRM family's triangular housing at scale 1, from the TRO art: a block wide across the top that narrows to a
+# blunt point underneath, its bevelled face holding the tubes three over two over one. An SRM 4 keeps the same
+# housing with its tubes two over two, an SRM 2 only the middle pair. A guided launcher (Streak, or one linked to
+# Artemis) carries a round targeting dome on top.
+HOUSING_ROWS = {6: ((-1, 0, 1), (-.5, .5), (0,)), 4: ((-.5, .5), (-.5, .5)), 2: ((-.5, .5),)}
+# How far the housing reaches back from its face, and the armour left between the outer tubes and its edges.
+HOUSING_DEPTH, HOUSING_MARGIN = 5, .55
+# How much of each triangle corner is cut off, as a share of the edges that meet there.
+HOUSING_CHAMFER = .16
+HOUSING_DOME_SIDES = 8
+# A housing hung on the side of a turret or body carries a grey arm reaching sideways into it, this long past the
+# housing's edge at scale 1.
+HOUSING_ARM = 1.2
+
+
+def housing_layout(rule, mount, scale):
+    """Tube centres on the housing's face as (across, up) offsets and the face's outline, both centred on the mount;
+    None for a rack size the housing does not carry."""
+    rack = rule.get('tubeCount', max(1, mount['rackSize']))
+    if rack not in HOUSING_ROWS:
+        return None
+    tubes = BOOK['tubes'][rule['tubes']]
+    tube_scale = scale*rule.get('tubeScale', 1)
+    pitch, diameter = tubes['pitch']*tube_scale, tubes['diameter']*tube_scale
+    rise = pitch*.87
+    # The rows sit where an SRM 6's would, so every rack shares one housing: an SRM 4 fills the top two rows and an
+    # SRM 2 the middle one.
+    heights = {6: (rise, 0, -rise), 4: (rise, 0), 2: (0,)}[rack]
+    clear = diameter/2 + HOUSING_MARGIN*scale
+    half_top, top, bottom = pitch + clear*1.6, rise + clear, -rise - clear*2.1
+    # Centred on the mount: the face spans top to bottom, so everything moves down by half their sum.
+    shift = -(top + bottom)/2
+    corners = [(-half_top, top + shift), (half_top, top + shift), (0, bottom + shift)]
+    outline = []
+    for index, (corner_x, corner_z) in enumerate(corners):
+        for neighbour in (corners[index - 1], corners[(index + 1) % 3]):
+            outline.append((corner_x + HOUSING_CHAMFER*(neighbour[0]-corner_x),
+                            corner_z + HOUSING_CHAMFER*(neighbour[1]-corner_z)))
+    centres = [(across*pitch, up + shift) for row, up in zip(HOUSING_ROWS[rack], heights) for across in row]
+    return {'centres': centres, 'diameter': diameter, 'shape': tubes['shape'], 'outline': outline,
+            'width': 2*half_top, 'height': top - bottom, 'top': top + shift, 'halfTop': half_top}
+
+
+def _housing_launcher(geometry, mount, rule, position, scale, options):
+    """An SRM-family launcher in the triangular housing, with the targeting dome on top when it is guided."""
+    x, y, z = position
+    group = mount['location']
+    direction = -1 if mount['rear'] else 1
+    layout = housing_layout(rule, mount, scale)
+
+    def ring(along, shrink):
+        # Wound clockwise seen from in front, so the loft's front cap faces the way the launcher points.
+        points = [(x + across*shrink, y + direction*along, z + up*shrink) for across, up in layout['outline']]
+        return points if direction == 1 else list(reversed(points))
+    front = .76*scale
+    geometry.loft([ring(-(HOUSING_DEPTH - .76)*scale, 1), ring(front - .35*scale, 1), ring(front, .9)], group,
+                  'paint')
+    face = y + direction*(front + .02*scale)
+    arm = options.get('arm')
+    if arm in ('left', 'right'):
+        # The connector: a grey block from inside the housing's upper half out to the body beside it.
+        side = -1 if arm == 'left' else 1
+        inner, outer = .5*layout['halfTop'], layout['halfTop'] + HOUSING_ARM*scale
+        geometry.box((x + side*(inner + outer)/2, y - direction*2.3*scale, z + layout['top'] - 1.5*scale),
+                     (outer - inner, 3*scale, 1.8*scale), group, 'metal')
+    if options.get('dome'):
+        radius, base = .55*layout['halfTop'], z + layout['top'] - .1*scale
+        middle = y - direction*1.8*scale
+        geometry.loft([[(x + width*cos(pi/HOUSING_DOME_SIDES + 2*pi*i/HOUSING_DOME_SIDES),
+                         middle + width*sin(pi/HOUSING_DOME_SIDES + 2*pi*i/HOUSING_DOME_SIDES), height)
+                        for i in range(HOUSING_DOME_SIDES)]
+                       for height, width in ((base, radius), (base + .45*scale, radius),
+                                             (base + .85*scale, .72*radius), (base + 1.05*scale, .3*radius))],
+                      group, 'edge')
+    if options.get('detail') == 'panel':
+        # The last resort: the face is one dark panel.
+        panel = [(x + across*.75, face, z + up*.75) for across, up in layout['outline']]
+        geometry.face(panel if direction == 1 else list(reversed(panel)), group, 'dark')
+        geometry.emitter((x, face, z), (0, direction, 0), group, 'launcher', 'cluster')
+        return
+    for across, up in layout['centres']:
+        centre = (x + across, face, z + up)
+        _opening(geometry, centre, layout['diameter']/2, layout['shape'], direction, group, 'dark')
+        geometry.emitter(centre, (0, direction, 0), group, 'launcher', 'missile')
+
+
 def _launcher(geometry, mount, rule, position, scale, options):
     if options.get('style') == 'drum':
         _drum_launcher(geometry, mount, rule, position, scale, options)
+        return
+    if options.get('style') == 'housing':
+        _housing_launcher(geometry, mount, rule, position, scale, options)
         return
     x, y, z = position
     group = mount['location']
