@@ -2,7 +2,7 @@
   "schema": 2,
   "kind": "family",
   "family": "vehicle",
-  "body": "units/modular/bodies/manticore.json",
+  "body": "units/modular/bodies/manticore-ii.json",
   "equipment": "units/modular/equipment.json",
   "mounts": [
     {
@@ -248,27 +248,31 @@
       "family": "ppc",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
       "hardpoint": "TU-turret-laser",
       "family": "laser",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
       "hardpoint": "TU-turret-ballistic",
       "family": "ballistic",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
-      "hardpoint": "TU-turret-missile",
+      "hardpoint": "TU-turret-missile-0",
       "family": "missile",
-      "scale": 1.0,
-      "profile": "housing-arm-left"
+      "scale": 0.8
+    },
+    {
+      "hardpoint": "TU-turret-missile-1",
+      "family": "missile",
+      "scale": 0.8
     },
     {
       "hardpoint": "RT-turret",
@@ -279,112 +283,36 @@
       "family": "ppc",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
       "hardpoint": "RT-turret-laser",
       "family": "laser",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
       "hardpoint": "RT-turret-ballistic",
       "family": "ballistic",
       "scale": 0.8,
       "style": "long",
-      "length": 14
+      "length": 20
     },
     {
-      "hardpoint": "RT-turret-missile",
+      "hardpoint": "RT-turret-missile-0",
       "family": "missile",
-      "scale": 1.0,
-      "profile": "housing-arm-left"
+      "scale": 0.8
+    },
+    {
+      "hardpoint": "RT-turret-missile-1",
+      "family": "missile",
+      "scale": 0.8
     },
     {
       "hardpoint": "external-searchlight",
       "family": "lamp",
       "scale": 0.8
-    }
-  ],
-  "rules": [
-    {
-      "match": "^LRM\\ 10$",
-      "exclude": "",
-      "drawAs": "LRM 10",
-      "placement": {
-        "hardpoint": "turret-rule-0",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 1.52,
-        "rule": true
-      }
-    },
-    {
-      "match": "^Enhanced\\ LRM\\ 10$",
-      "exclude": "",
-      "drawAs": "Enhanced LRM 10",
-      "placement": {
-        "hardpoint": "turret-rule-0",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 1.52,
-        "rule": true
-      }
-    },
-    {
-      "match": "^Improved\\ LRM\\ 10$",
-      "exclude": "",
-      "drawAs": "Improved LRM 10",
-      "placement": {
-        "hardpoint": "turret-rule-0",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 1.52,
-        "rule": true
-      }
-    },
-    {
-      "match": "^Extended\\ LRM\\ 10$",
-      "exclude": "",
-      "drawAs": "Extended LRM 10",
-      "placement": {
-        "hardpoint": "turret-rule-0",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 1.52,
-        "rule": true
-      }
-    },
-    {
-      "match": "^ISMML7$",
-      "exclude": "",
-      "drawAs": "ISMML7",
-      "placement": {
-        "hardpoint": "turret-rule-0",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 1.52,
-        "rule": true
-      }
-    },
-    {
-      "match": "^ISAntiMissileSystem$",
-      "exclude": "",
-      "drawAs": "ISAntiMissileSystem",
-      "placement": {
-        "hardpoint": "turret-rule-1",
-        "family": "",
-        "form": "",
-        "bay": false,
-        "scale": 0.8,
-        "rule": true
-      }
     }
   ]
 }
