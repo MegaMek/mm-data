@@ -3,6 +3,8 @@
 There is deliberately no loadout selection or packing here; Java owns both for play and review.
 """
 from math import sqrt
+import json
+import re
 
 from unit_mek_chassis import build_chassis, forward, panel, split_torso_locations, upright
 from unit_model_geometry import Geometry, sub
@@ -269,30 +271,69 @@ def calf_exhaust(body, leg):
     return (centre, min(depths), height)
 
 
+# Recipe keys that shape the body itself. A variant shares its chassis's body, so it cannot change these.
+BODY_KEYS = {'id', 'hip', 'heldWeapons', 'widthScale', 'bodyScale', 'topology', 'form', 'weightProfile',
+             'ventSpares', 'legBends', 'variants'}
+
+
+def with_variants(recipes):
+    """Each recipe, followed by one recipe per variant that places its equipment its own way.
+
+    A chassis's `variants` maps a model to the recipe keys that differ for it, on the same body: the Thunderbolt
+    TDR-60-RLA's crowded side torsos go in rows while every other Thunderbolt stacks. A key holding a dict
+    changes only the entries named (`"sockets": {"LT": [...]}` moves the LT spot alone) and `null` removes an
+    entry or a whole key; any other key is replaced whole.
+    """
+    for recipe in recipes:
+        yield recipe
+        for model, changes in recipe.get('variants', {}).items():
+            fixed = sorted(BODY_KEYS.intersection(changes))
+            if fixed:
+                raise ValueError(recipe['id']+' '+model+': a variant shares the body and cannot change '
+                                 + ', '.join(fixed))
+            variant = {key: value for key, value in recipe.items() if key != 'variants'}
+            for key, value in changes.items():
+                if isinstance(value, dict) and isinstance(recipe.get(key), dict):
+                    value = {entry: setting for entry, setting in {**recipe[key], **value}.items()
+                             if setting is not None}
+                if value is None:
+                    variant.pop(key, None)
+                else:
+                    variant[key] = value
+            variant['id'] = variant_descriptor_id(recipe['id'], model)
+            variant['variantOf'] = recipe['id']
+            yield variant
+
+
 def build_meks(recipes, output, export_asset, write_json):
     assets = {}
-    for recipe in recipes:
+    built = {}
+    for recipe in with_variants(recipes):
         weight = recipe.get('weightProfile')
-        body = fallback_body(recipe['topology'], weight)[0] if 'topology' in recipe else build_chassis(recipe, modular=True)
-        if recipe.get('form') == 'airmek':
-            body = air_mek_body()
-        if weight:
-            body = author_fallback(body, weight)
-        split_torso_locations(body)
-        vents = finish_vents(body, recipe.get('ventSpares', 3)) if 'topology' not in recipe and recipe.get('form') != 'airmek' else []
-        for location in ('HD', 'CT', 'LT', 'RT'):
-            if not any(node == location for _, node, _ in body.faces):
-                raise ValueError(recipe['id']+': no drawable '+location+' surface')
-        # Existing is not enough. A chassis can carry an LT shoulder pod while its whole torso skin
-        # stays labelled CT, which is the joined torso the guide forbids: the side blows off and the
-        # armour over it remains. Catch it by reach - a centre section may not span the torso's width.
-        torso = [tri for tri, node, _ in body.faces if node in ('CT', 'LT', 'RT')]
-        half_width = max(abs(point[0]) for tri in torso for point in tri)
-        centre = [tri for tri, node, _ in body.faces if node == 'CT']
-        reach = max(abs(point[0]) for tri in centre for point in tri)
-        if reach > half_width*.75:
-            raise ValueError('%s: centre torso reaches %.1f of a %.1f half-width; the torso is joined'
-                             % (recipe['id'], reach, half_width))
+        shared = recipe.get('variantOf')
+        if shared:
+            body, vents, chassis_hardpoints = built[shared]
+        else:
+            body = fallback_body(recipe['topology'], weight)[0] if 'topology' in recipe else build_chassis(recipe, modular=True)
+            if recipe.get('form') == 'airmek':
+                body = air_mek_body()
+            if weight:
+                body = author_fallback(body, weight)
+            split_torso_locations(body)
+            vents = finish_vents(body, recipe.get('ventSpares', 3)) if 'topology' not in recipe and recipe.get('form') != 'airmek' else []
+            for location in ('HD', 'CT', 'LT', 'RT'):
+                if not any(node == location for _, node, _ in body.faces):
+                    raise ValueError(recipe['id']+': no drawable '+location+' surface')
+            # Existing is not enough. A chassis can carry an LT shoulder pod while its whole torso skin
+            # stays labelled CT, which is the joined torso the guide forbids: the side blows off and the
+            # armour over it remains. Catch it by reach - a centre section may not span the torso's width.
+            torso = [tri for tri, node, _ in body.faces if node in ('CT', 'LT', 'RT')]
+            half_width = max(abs(point[0]) for tri in torso for point in tri)
+            centre = [tri for tri, node, _ in body.faces if node == 'CT']
+            reach = max(abs(point[0]) for tri in centre for point in tri)
+            if reach > half_width*.75:
+                raise ValueError('%s: centre torso reaches %.1f of a %.1f half-width; the torso is joined'
+                                 % (recipe['id'], reach, half_width))
         hardpoints, mounts = [], []
 
         def mount(identifier, location, pixel, *, rear=False, family='', form='', bay=False, node=None):
@@ -468,8 +509,18 @@ def build_meks(recipes, output, export_asset, write_json):
                     joints[location+'Foot'] = location+'-foot'
         key = 'bodies/'+recipe['id']
         topology = recipe.get('topology', 'biped')
-        assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints,
-                                   leg_bends=recipe.get('legBends'))
+        if not shared:
+            assets[key] = export_asset(body, output, key, 'body', 'mek-'+topology, topology+'-v1', joints, hardpoints,
+                                       leg_bends=recipe.get('legBends'))
+            built[recipe['id']] = body, vents, hardpoints
+        elif hardpoints == chassis_hardpoints:
+            # The variant puts nothing in a new spot, so it uses the chassis's body as it is.
+            key = 'bodies/'+shared
+        else:
+            # Spots live on the body, so a variant with new ones gets a body file of its own that draws the
+            # chassis's mesh: the same shape, with its own hardpoints.
+            chassis_body = json.loads((output / ('bodies/'+shared+'.json')).read_text(encoding='utf-8'))
+            write_json(output / (key+'.json'), dict(chassis_body, hardpoints=hardpoints))
         descriptor = {
             'schema': 2, 'kind': 'mek', 'body': 'units/modular/'+key+'.json',
             'equipment': 'units/modular/equipment.json', 'mounts': mounts,
@@ -484,3 +535,9 @@ def build_meks(recipes, output, export_asset, write_json):
                 descriptor['ventDefaultSides'] = recipe['ventDefaultSides']
         write_json(output / ('meks/'+recipe['id']+'.json'), descriptor)
     return assets
+
+
+def variant_descriptor_id(chassis_id, model):
+    """The file name of one variant's own descriptor (and body, when it has one): 'thunderbolt' and
+    'TDR-60-RLA' give 'thunderbolt--tdr-60-rla'."""
+    return chassis_id + '--' + re.sub(r'[^a-z0-9]+', '-', model.lower()).strip('-')

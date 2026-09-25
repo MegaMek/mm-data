@@ -244,6 +244,40 @@
         "LA@hand:hatchet":[[32.4,23.3,28.7]],"RA@hand:hatchet":[[51.6,23.3,28.7]],"LA@hand:blade":[[32.4,23.3,28.7]],"RA@hand:blade":[[51.6,23.3,28.7]],"HD:laser":[[45.0,31.14,43.96]]},
       "ventDefaultSides": [], "ventSpares": 0,
       "weaponScale": 0.85
+    },
+    {
+      "name": "Thunderbolt", "id": "thunderbolt", "referenceVariant": "TDR-5S",
+      "sprite": "meks/Thunderbolt.png", "illustration": "Mek/Thunderbolt.png", "hip": [42.0,36.0,27.17],
+      "silhouette": "Shaped from the TDR-5S line art and the A Game of Armored Combat miniature, as drawn: hooded head sunk in the right chest, the LRM drum over the left shoulder (the unit files put it in the right torso), big angular shoulder pads.",
+      "sockets": {"HD":[46.9,25.38,44.6],"CT":[42.0,25.6,37.6],"LT":[33.78,27.0,39.2],"RT":[50.22,27.0,37.0],"LA":[23.1,33.1,25.0],"RA":[61.0,28.0,32.6],"LL":[33.4,28.41,17.61],"RL":[50.6,28.41,17.61]},
+      "armSockets": {"LA":{"elbow":[26.5,33.0,36.0],"wrist":[26.4,33.1,22.6],"hand":[23.1,33.1,25.0]},"RA":{"elbow":[57.5,33.0,36.0],"wrist":[57.6,22.0,32.6],"hand":[61.0,28.0,32.6]}},
+      "rearSockets": {"HD":[46.9,34.8,46.8],"CT":[42.0,44.9,38.0],"LT":[33.78,44.5,39.4],"RT":[50.22,44.5,39.4],"LA":[26.4,36.9,29.0],"RA":[57.6,37.6,32.6]},
+      "exhaustSockets": {"HD":[46.9,34.8,45.5],"CT":[42.0,44.9,36.5],"LT":[33.78,44.5,36.5],"RT":[50.22,44.5,36.5]},
+      "searchlightSocket": {"location":"LT","position":[31.8,27.0,43.6]},
+      "equipmentRules": [
+        {"match": "^LRM 15$", "exclude": "", "drawAs": "LRM 15", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 52.14], "size": [10, 10], "note": "Round shoulder drums on the left-shoulder cradle, each standing on it at its own size: every LRM, both MMLs and the SRM 6s. SRM 2s, Streak SRM 2s and the Thunderbolt 5 use their torso front."},
+        {"match": "^LRM 10$", "exclude": "", "drawAs": "LRM 10", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 51.44], "size": [10, 10]},
+        {"match": "^CLLRM15$", "exclude": "", "drawAs": "CLLRM15", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 52.14], "size": [10, 10]},
+        {"match": "^CLLRM10$", "exclude": "", "drawAs": "CLLRM10", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 51.44], "size": [10, 10]},
+        {"match": "^CLStreakLRM15$", "exclude": "", "drawAs": "CLStreakLRM15", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 52.14], "size": [10, 10]},
+        {"match": "^SRM 6$", "exclude": "", "drawAs": "SRM 6", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 50.79], "size": [10, 10]},
+        {"match": "^CLSRM6$", "exclude": "", "drawAs": "CLSRM6", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 50.79], "size": [10, 10]},
+        {"match": "^ISStreakSRM6$", "exclude": "", "drawAs": "ISStreakSRM6", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 50.79], "size": [10, 10]},
+        {"match": "^CLStreakSRM6$", "exclude": "", "drawAs": "CLStreakSRM6", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 50.79], "size": [10, 10]},
+        {"match": "^ISMML5$", "exclude": "", "drawAs": "ISMML5", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 50.74], "size": [10, 10]},
+        {"match": "^ISMML7$", "exclude": "", "drawAs": "ISMML7", "location": "LT", "family": "missile", "profile": "drum-short", "node": "LT", "socket": [33.7, 37.8, 51.03], "size": [10, 10]},
+        {"match": "^ISAntiMissileSystem$", "exclude": "", "drawAs": "ISAntiMissileSystem", "location": "RT", "family": "ballistic", "profile": "", "node": "RT", "socket": [50.2, 40.0, 46.6], "size": [4, 4], "note": "AMS on top of the right chest block, behind the head."},
+        {"match": "^CLAntiMissileSystem$", "exclude": "", "drawAs": "CLAntiMissileSystem", "location": "RT", "family": "ballistic", "profile": "", "node": "RT", "socket": [50.2, 40.0, 46.6], "size": [4, 4]},
+        {"match": "^ISGuardianECMSuite$", "exclude": "", "drawAs": "ISGuardianECMSuite", "location": "CT", "family": "ecm", "profile": "", "node": "CT", "socket": [39.6, 38.0, 46.9], "size": [4, 4], "note": "Guardian ECM on top of the centre chest, between the head and the drum cradle, dome up."}
+      ],
+      "mountAreas": {"HD":{"width":7.1,"height":4.7},"CT":{"width":8.0,"height":10.9},"LT":{"width":9.6,"height":9.3},"RT":{"width":9.6,"height":9.3},"LA":{"width":2.0,"height":5.4},"RA":{"width":4.9,"height":5.8}},
+      "weaponOverrides": [{"location":"RA","family":"laser","length":10},{"location":"RA","family":"ppc","length":10},{"location":"RA","family":"ballistic","length":10}],
+      "ventDefaultSides": [], "ventSpares": 0,
+      "socketAim": {"LA":[0,0,-1],"CT:ecm":[0,0,1]},
+      "socketBanks": {"RA@hand:hatchet":[[57.6,21.2,32.4]]},
+      "stackGap": {"LA":0.2},
+      "variants": {"TDR-60-RLA": {"stackRows": ["LT","RT"], "rowWidth": {"LT":5.4,"RT":5.4}, "stackGap": {"LT":0.2,"RT":0.2}}},
+      "weaponScale": 0.9
     }
   ]
 }
