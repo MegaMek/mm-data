@@ -1820,6 +1820,39 @@
         </subforces>
     </force>
 
+    <!-- VTOL and conventional fighter formations, organized as Clan armor: "An armor Trinary also
+         consists of thirty combat vehicles." Two per Point (the Point rule pairs them), five Points per
+         Star, so a Star is 10, a Binary 20 and a Trinary 30. No weight distributions: the generator
+         ignores weight class for both types. -->
+    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="VTOL|Conventional Fighter">
+        <name ifRole="command">Trinary Command</name>
+        <name>Trinary {ordinal:distinct}</name>
+        <co>%STAR_CAPTAIN%</co>
+
+        <subforces>
+            <subforce num="3">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <force echelon="%BINARY%" eschName="Binary" ifUnitType="VTOL|Conventional Fighter">
+        <name ifRole="command">Binary [Command]</name>
+        <name>Binary {ordinal:distinct}</name>
+        <co>%STAR_CAPTAIN%</co>
+
+        <subforces>
+            <subforce num="2">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <force echelon="%STAR%" eschName="Star" ifUnitType="VTOL|Conventional Fighter">
+        <name>{phonetic} Star</name>
+        <co>%STAR_CMDR%</co>
+
+        <subforces>
+            <subforce num="5">%POINT%</subforce>
+        </subforces>
+    </force>
+
     <force echelon="%STAR%" eschName="Star" ifUnitType="AeroSpaceFighter">
         <name>{phonetic} Fighter Star</name>
         <co>%STAR_CMDR%</co>
@@ -1993,12 +2026,13 @@
         </ruleGroup>
 
         <!-- A Point of fighters flew as a matched pair so both pilots shared one profile,
-        so the two resolve to a single model. Vehicle Points keep generating independently. -->
-        <subforces generate="model" ifUnitType="AeroSpaceFighter">
+        so the two resolve to a single model. VTOL Points are matched pairs too. Tank Points keep
+        generating independently. -->
+        <subforces generate="model" ifUnitType="AeroSpaceFighter|Conventional Fighter|VTOL">
             <subforce num="2">%ELEMENT%</subforce>
         </subforces>
 
-        <subforces generate="group" ifUnitType="Tank|VTOL">
+        <subforces generate="group" ifUnitType="Tank">
             <subforce num="2">%ELEMENT%</subforce>
         </subforces>
 

@@ -78,6 +78,16 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             <subforce unitType="Infantry">%BRIGADE%</subforce>
             <subforce unitType="AeroSpaceFighter" num="2">%WING%</subforce>
         </subforces>
+
+        <!-- Ground engineer support for the combat team. It used to ride in on the aerospace wings. -->
+        <attachedForces>
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
+        </attachedForces>
     </force>
 
     <!-- LCTs include 2-3 H/A battalions and 2-3 cavalry battalions, which I've organized as
@@ -202,6 +212,14 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             <subforce unitType="Infantry"
                       name="Infantry {echelon}">%REGIMENT%
             </subforce>
+            <!-- Optional ground engineer support, attached at the regiment's ground level rather than under
+                 the aerospace wing, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
 
         <attachedForces ifUnitType="Tank" ifDateBetween=",2510">
@@ -218,6 +236,12 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             <subforce unitType="Infantry"
                       name="Infantry {echelon}">%REGIMENT%
             </subforce>
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 
@@ -742,7 +766,8 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
                 <option unitType="Infantry" role="field_gun" name="Battery Company"
                         ifDateBetween="3050," weight="2">%COMPANY%
                 </option>
-                <option weight="3" ifWeightClass="H" />
+                <!-- Likely rather than guaranteed at Assault (as IS.xml). -->
+                <option weight="3" />
             </subforceOption>
         </attachedForces>
     </force>
@@ -891,14 +916,5 @@ a regimental combat team. Average unit weight tends to be lighter than other fac
             </subforceOption>
             <subforce ifUnitType="Conventional Fighter" num="3">%SQUADRON%</subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 </ruleset>

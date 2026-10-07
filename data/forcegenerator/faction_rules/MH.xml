@@ -94,6 +94,14 @@ support wing (cohort). -->
                 <option weight="2" unitType="AeroSpaceFighter">%BATTALION%</option>
                 <option />
             </subforceOption>
+            <!-- Optional ground engineer support, attached at the legion's ground level rather than under
+                 the aerospace wing, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 
@@ -210,15 +218,6 @@ support wing (cohort). -->
             </subforceOption>
             <subforce ifUnitType="Conventional Fighter" num="3">%SQUADRON%</subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <!-- Most primary cohorts are Mek, though some are combined arms. Auxiliaries

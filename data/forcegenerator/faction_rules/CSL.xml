@@ -1769,7 +1769,12 @@
             </motive>
         </ruleGroup>
 
-        <subforces generate="group">
+        <!-- VTOL Points are matched pairs (one model); tank Points generate independently. -->
+        <subforces generate="model" ifUnitType="VTOL">
+            <subforce num="2">%ELEMENT%</subforce>
+        </subforces>
+
+        <subforces generate="group" ifUnitType="Tank">
             <subforce num="2">%ELEMENT%</subforce>
         </subforces>
     </force>

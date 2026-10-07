@@ -116,6 +116,14 @@ types of support units attached to Mek regiments can vary widely. -->
                 </option>
                 <option weight="3" />
             </subforceOption>
+            <!-- Optional ground engineer support, attached at the regiment's ground level rather than under
+                 the aerospace wing, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 
@@ -416,15 +424,6 @@ types of support units attached to Mek regiments can vary widely. -->
                       num="2">%SQUADRON%
             </subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <force echelon="%SQUADRON%" eschName="Flight" ifUnitType="AeroSpaceFighter|Conventional Fighter">

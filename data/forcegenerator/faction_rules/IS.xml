@@ -85,8 +85,11 @@
     <!-- Planetary Militia: a combined-arms garrison, and the fallback organization for any MILITIA faction.
          Because <force> rule lookup walks parent factions, a militia whose own ruleset defines no garrison rule
          resolves this one. Infantry-heavy with armor support and a small Mek contingent, approximating the
-         Random Garrisons Table; each contingent delegates to the standard regiment/battalion rules. -->
-    <force echelon="%BRIGADE%" eschName="Planetary Militia">
+         Random Garrisons Table; each contingent delegates to the standard regiment/battalion rules.
+
+         ifUnitType="" limits it to a combined-arms force. %BRIGADE% and the aerospace %AIR_REGIMENT% are both 7,
+         and rule lookup takes the first match, so without it this rule caught fighters at the top air size. -->
+    <force echelon="%BRIGADE%" eschName="Planetary Militia" ifUnitType="">
         <co>%COLONEL%</co>
 
         <subforces>
@@ -794,15 +797,18 @@
             </subforceOption>
         </subforces>
 
+        <!-- Fire support for a heavy or assault infantry battalion. Conventional infantry only: a battle armor
+             battalion does not take a foot artillery company. The "nothing attached" option applies at Assault
+             as well as Heavy, so the support is likely rather than guaranteed. -->
         <attachedForces>
-            <subforceOption ifWeightClass="A|H">
+            <subforceOption ifWeightClass="A|H" ifUnitType="Infantry">
                 <option unitType="Infantry" role="artillery"
                         ifDateBetween="3050," weight="1" name="Artillery Company">%COMPANY%
                 </option>
                 <option unitType="Infantry" role="field_gun"
                         ifDateBetween="3050," weight="2" name="Battery Company">%COMPANY%
                 </option>
-                <option weight="3" ifWeightClass="H" />
+                <option weight="3" />
             </subforceOption>
         </attachedForces>
     </force>

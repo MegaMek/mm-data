@@ -977,15 +977,16 @@ use of augmented 4 Vee/2 inf lances in independent armor regiments. -->
             </subforceOption>
         </subforces>
 
+        <!-- Conventional infantry only, and likely rather than guaranteed at Assault (as IS.xml). -->
         <attachedForces>
-            <subforceOption ifWeightClass="A|H">
+            <subforceOption ifWeightClass="A|H" ifUnitType="Infantry">
                 <option unitType="Infantry" role="artillery" name="Artillery Company"
                         ifDateBetween="3050," weight="1">%COMPANY%
                 </option>
                 <option unitType="Infantry" role="field_gun" name="Battery Company"
                         ifDateBetween="3050," weight="2">%COMPANY%
                 </option>
-                <option weight="3" ifWeightClass="H" />
+                <option weight="3" />
             </subforceOption>
         </attachedForces>
     </force>
@@ -1080,15 +1081,6 @@ use of augmented 4 Vee/2 inf lances in independent armor regiments. -->
             </subforceOption>
             <subforce ifUnitType="Conventional Fighter" num="2" augmented="0">%SQUADRON%</subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <force echelon="%SQUADRON%" eschName="Squadron" ifAugmented="0" ifUnitType="AeroSpaceFighter|Conventional Fighter">
