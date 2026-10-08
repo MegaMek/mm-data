@@ -37,8 +37,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
-            <option ifUnitType="Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Jumpship|Dropship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -97,7 +97,8 @@
         </attachedForces>
     </force>
 
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+    <!-- Canon names this the Naval Reserve, not a Fleet: FM: Crusader Clans roster, pdf p.167: "Naval Reserve (The Wolf Chariots)". -->
+    <force echelon="%CLUSTER%" eschName="Naval Reserve" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 

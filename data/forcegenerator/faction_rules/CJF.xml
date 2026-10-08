@@ -45,8 +45,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
-            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Dropship|Jumpship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -147,7 +147,8 @@
          Cameron flagship, the Texas, and the Black Lion Aeries) and a support star of frigates,
          destroyers, and transports. JumpShips pad the formation so a date-thinned star never
          collapses into a stray hull. -->
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+    <!-- Canon names this the Naval Reserve, not a Fleet: FM: Crusader Clans roster, pdf p.163: "Naval Reserve". -->
+    <force echelon="%CLUSTER%" eschName="Naval Reserve" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
