@@ -951,6 +951,14 @@
         </changeEschelon>
 
         <ruleGroup>
+            <!-- The Stars below are chosen by weight class, so the Trinary has to roll one; without it a
+                 Random-weight Trinary matched no Star and came out as a single squad. Same odds as CLAN.xml. -->
+            <weightClass>
+                <option weight="1">A</option>
+                <option weight="2">H</option>
+                <option weight="4">M</option>
+                <option weight="3">L</option>
+            </weightClass>
             <unitType ifUnitType="BattleArmor" ifDateBetween=",2870">
                 <option>Infantry</option>
             </unitType>
