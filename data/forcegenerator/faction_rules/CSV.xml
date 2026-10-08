@@ -522,7 +522,9 @@
         </subforces>
     </force>
 
-    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="Mek">
+    <!-- Plain Trinaries only. A Supernova Trinary (augmented) goes to its own rule below; matching it here listed
+         it as a second "Trinary" in the Mek sizes. -->
+    <force echelon="%TRINARY%" eschName="Trinary" ifAugmented="0" ifUnitType="Mek">
         <name ifRole="training">Newt Trinary</name>
         <name>Trinary {phonetic}</name>
         <co>%STAR_CAPTAIN%</co>

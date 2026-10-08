@@ -666,7 +666,9 @@
         </changeEschelon>
     </force>
 
-    <force echelon="%STAR%" eschName="Star" ifUnitType="Mek|ProtoMek">
+    <!-- Plain Stars only. A Nova (augmented) goes to the Nova rule below; matching it here listed it as a second
+         "Star" in the Mek sizes. Same fix as Jade Falcon's Binary. -->
+    <force echelon="%STAR%" eschName="Star" ifAugmented="0" ifUnitType="Mek|ProtoMek">
         <name>{ordinal} {name:parent}</name>
         <co>%STAR_CMDR%</co>
 
