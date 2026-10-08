@@ -1502,7 +1502,9 @@
         </subforces>
     </force>
 
-    <force echelon="%BINARY%" eschName="Binary" ifUnitType="Mek">
+    <!-- Plain Binaries only. A Supernova Binary (augmented) falls through to CLAN.xml's "Supernova Binary" rule,
+         as Clan Wolf's does; matching it here built two Novas but listed and named it "Binary". -->
+    <force echelon="%BINARY%" eschName="Binary" ifAugmented="0" ifUnitType="Mek">
         <name ifRole="command">Binary Command</name>
         <name>Binary {phonetic}</name>
         <co>%STAR_CAPTAIN%</co>

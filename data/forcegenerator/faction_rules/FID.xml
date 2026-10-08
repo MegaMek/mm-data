@@ -54,7 +54,8 @@
             <option ifUnitType="">%TOUMAN%,%TRINARY%</option>
             <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
-            <option>%TRINARY%,%STAR%,%COMPANY%,%LANCE%</option>
+            <!-- %LANCE% and %STAR% are both 3, so listing both showed "Star" twice. -->
+            <option>%TRINARY%,%STAR%,%COMPANY%</option>
         </echelon>
 
         <rating>
