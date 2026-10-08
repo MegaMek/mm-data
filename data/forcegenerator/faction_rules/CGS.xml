@@ -40,7 +40,7 @@
         </unitType>
 
         <echelon>
-            <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
+            <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%,%TRINARY%</option>
             <option ifUnitType="Warship|Dropship|Jumpship">%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -56,7 +56,7 @@
 
         <flags>
             <option ifEschelon="%CLUSTER%">cateran:Cateran Cluster,cuirassier:Cuirassier Cluster,dragoon:Dragoon Cluster,grenadier:Grenadier Cluster,hussar:Hussar Cluster,uhlan:Uhlan Cluster,seeker:Seeker Cluster</option>
-            <option ifEschelon="%TRINARY%">assault:Assault Trinary,battle:Battle Trinary,guard:Guard Trinary,striker:Striker Trinary,specialist:Specialist Trinary,stinger:Stinger (Command) Trinary</option>
+            <option ifEschelon="%TRINARY%" ifUnitType="">assault:Assault Trinary,battle:Battle Trinary,guard:Guard Trinary,striker:Striker Trinary,specialist:Specialist Trinary,stinger:Stinger (Command) Trinary</option>
         </flags>
     </toc>
 
@@ -315,7 +315,7 @@
         </changeEschelon>
     </force>
 
-    <force echelon="%TRINARY%" eschName="Trinary" ifRole="command">
+    <force echelon="%TRINARY%" eschName="Trinary" ifRole="command" ifUnitType="">
         <name>[Command] Trinary</name>
         <co>%STAR_CAPTAIN%</co>
 
@@ -784,9 +784,12 @@
         </subforces>
     </force>
 
-    <!-- If Trinary is top-level, assign trinary type. -->
+    <!-- If Trinary is top-level, assign trinary type. The Imperio's mixed Trinaries are its combined-arms
+         organization, so they apply only when no unit type is asked for. A specific type - Mek, Tank, ProtoMek -
+         falls through to the standard Clan formations of that type in CLAN.xml. Without the condition a Tank
+         Trinary came out as a mixed Trinary whose Stars took the Tank type and could not be filled. -->
 
-    <force echelon="%TRINARY%" eschName="Trinary">
+    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="">
         <co>%STAR_CAPTAIN%</co>
 
         <changeEschelon ifRating="FL|Keshik">
