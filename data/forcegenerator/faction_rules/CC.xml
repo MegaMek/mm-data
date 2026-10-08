@@ -52,7 +52,10 @@ use of augmented 4 Vee/2 inf lances in independent armor regiments. -->
             <option ifUnitType="Mek|Tank|VTOL">%REGIMENT%,%BATTALION%,%COMPANY%,%LANCE%</option>
             <option ifUnitType="Infantry">%REGIMENT%,%BATTALION%,%COMPANY%</option>
             <option ifUnitType="BattleArmor">%BATTALION%,%COMPANY%,%PLATOON%</option>
-            <option ifUnitType="AeroSpaceFighter|Conventional Fighter">%REGIMENT%,%WING%+,%WING%,%SQUADRON%^,%SQUADRON%,%FLIGHT%^,%FLIGHT%</option>
+            <!-- Fleet Regiments are aerospace fighters tied to the navy (FM: Capellan Confederation p.33); nothing gives conventional fighters one.
+                 Its top size had no conventional fighter rule, so it showed as "6" and built one craft. -->
+            <option ifUnitType="Conventional Fighter">%WING%+,%WING%,%SQUADRON%^,%SQUADRON%,%FLIGHT%^,%FLIGHT%</option>
+            <option ifUnitType="AeroSpaceFighter">%REGIMENT%,%WING%+,%WING%,%SQUADRON%^,%SQUADRON%,%FLIGHT%^,%FLIGHT%</option>
         </echelon>
 
         <rating>
