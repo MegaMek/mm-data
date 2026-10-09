@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<!-- The Circinus Federation "follows the standard Star League organization and rank structure. Majors command
+     battalions, captains command companies" (Field Manual: Periphery p.102). IS.xml is that Star League baseline, so
+     this ruleset takes its rules and menus, conventional fighters included: half of the McIntyre Wings fly heavier
+     conventional fighters (Field Manual: Periphery p.104).
+
+     Before this file the Federation fell through its fallback factions to the Word of Blake Protectorate Militia
+     rules, so it offered only Demi-Company and Lance, and "Choir" for fighters. The fallback factions still decide
+     which units it draws.
+
+     Its two forces are sub-factions that use these rules: the Black Warriors (CIR.BW, 2785-3067) and the McIntyre
+     House Guard (CIR.MHG, from 3041). -->
+
+<ruleset faction="CIR" parent="IS" ratingSystem="IS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <defaults>
+        <unitType>Mek</unitType>
+        <echelon>%BATTALION%</echelon>
+        <rankSystem>%RANK_SL%</rankSystem>
+        <rating>C</rating>
+    </defaults>
+
+</ruleset>
