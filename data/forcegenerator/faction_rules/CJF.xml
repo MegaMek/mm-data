@@ -45,8 +45,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
-            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Dropship|Jumpship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -147,7 +147,8 @@
          Cameron flagship, the Texas, and the Black Lion Aeries) and a support star of frigates,
          destroyers, and transports. JumpShips pad the formation so a date-thinned star never
          collapses into a stray hull. -->
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+    <!-- Canon names this the Naval Reserve, not a Fleet: FM: Crusader Clans roster, pdf p.163: "Naval Reserve". -->
+    <force echelon="%CLUSTER%" eschName="Naval Reserve" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
@@ -1249,6 +1250,14 @@
         <!--Phase in BA in SL and Sol units between 2870 and 2950.-->
 
         <ruleGroup>
+            <!-- The Stars below are chosen by weight class, so the Trinary has to roll one; without it a
+                 Random-weight Trinary matched no Star and came out as a single squad. Same odds as CLAN.xml. -->
+            <weightClass>
+                <option weight="1">A</option>
+                <option weight="2">H</option>
+                <option weight="4">M</option>
+                <option weight="3">L</option>
+            </weightClass>
             <unitType ifUnitType="BattleArmor">
                 <option ifDateBetween=",2950"
                         ifRating="SL">Infantry
@@ -1314,7 +1323,8 @@
                 </option>
             </subforceOption>
             <!--The remaining two stars are BA -->
-            <subforceOption ifWeightClass="H">
+            <!-- Assault goes with Heavy, as in the first Star above; with "H" alone an Assault Trinary got one Star. -->
+            <subforceOption ifWeightClass="H|A">
                 <option weightClass="H,H" weight="2">%STAR%</option>
                 <option weightClass="H,M" weight="3">%STAR%</option>
             </subforceOption>
@@ -1333,7 +1343,7 @@
         <!--Conventional infantry may contain a star of infantry
         fighting vehicles.-->
         <subforces ifUnitType="Infantry">
-            <subforceOption ifWeightClass="H">
+            <subforceOption ifWeightClass="H|A">
                 <option weightClass="H,H" weight="2">%STAR%</option>
                 <option weightClass="H,M" weight="3">%STAR%</option>
             </subforceOption>
@@ -1493,7 +1503,9 @@
         </subforces>
     </force>
 
-    <force echelon="%BINARY%" eschName="Binary" ifUnitType="Mek">
+    <!-- Plain Binaries only. A Supernova Binary (augmented) falls through to CLAN.xml's "Supernova Binary" rule,
+         as Clan Wolf's does; matching it here built two Novas but listed and named it "Binary". -->
+    <force echelon="%BINARY%" eschName="Binary" ifAugmented="0" ifUnitType="Mek">
         <name ifRole="command">Binary Command</name>
         <name>Binary {phonetic}</name>
         <co>%STAR_CAPTAIN%</co>

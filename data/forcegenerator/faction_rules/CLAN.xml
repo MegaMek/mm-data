@@ -34,7 +34,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship|Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Warship|Jumpship|Dropship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -1991,6 +1991,28 @@
 
         <subforces generate="group">
             <subforce num="5">%POINT%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Clan naval units use the same ladder as the rest of the touman: a Star of 5-6 vessels, a Binary of 10-12
+         and a Trinary of 15-18, JumpShip and WarShip Stars often adding a command vessel (FM: Crusader Clans p.9). -->
+    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="Warship|Dropship|Jumpship">
+        <name>Naval Trinary</name>
+        <co ifUnitType="Warship">%GALAXY_CMDR%</co>
+        <co>%STAR_COL%</co>
+
+        <subforces>
+            <subforce num="3">%STAR%</subforce>
+        </subforces>
+    </force>
+
+    <force echelon="%BINARY%" eschName="Binary" ifUnitType="Warship|Dropship|Jumpship">
+        <name>Naval Binary</name>
+        <co ifUnitType="Warship">%GALAXY_CMDR%</co>
+        <co>%STAR_COL%</co>
+
+        <subforces>
+            <subforce num="2">%STAR%</subforce>
         </subforces>
     </force>
 

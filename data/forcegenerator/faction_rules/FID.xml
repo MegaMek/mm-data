@@ -38,8 +38,9 @@
     The force is a %TOUMAN% (the whole single Century) so the WarShip attaches the proven way (cf. CB).
     -->
 
+    <!-- No default unit type: a blank (combined-arms) request has to stay blank to reach the Battle Group, and every
+         Fidelis formation is combined arms. A Mek default turned a Battle Group or Century into Clan Mek Trinaries. -->
     <defaults>
-        <unitType>Mek</unitType>
         <echelon>%TOUMAN%</echelon>
         <rankSystem>%RANK_CUSTOM%</rankSystem>
         <rating>A</rating>
@@ -47,14 +48,21 @@
 
     <toc>
         <unitType>
-            <option>null,Mek,Tank,VTOL,Infantry,BattleArmor,Warship,Dropship,Jumpship</option>
+            <!-- The Fidelis' only WarShip was the Flatus, in Republic service 3083-3149, so WarShip is offered only while
+                 it served (inside the faction's 3135+ years). -->
+            <option ifDateBetween="3135,3149">null,Mek,Tank,VTOL,Infantry,BattleArmor,Warship,Dropship,Jumpship</option>
+            <option>null,Mek,Tank,VTOL,Infantry,BattleArmor,Dropship,Jumpship</option>
         </unitType>
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%TRINARY%</option>
-            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
+            <!-- The Naval Detachment is the Flatus. A WarShip Star would build five WarShips the Fidelis never had. -->
+            <option ifUnitType="Warship">%CLUSTER%</option>
             <option ifUnitType="Dropship|Jumpship">%STAR%</option>
-            <option>%TRINARY%,%STAR%,%COMPANY%,%LANCE%</option>
+            <!-- %LANCE% and %STAR% are both 3, so listing both showed "Star" twice. -->
+            <!-- The Battle Group is combined arms (three Umbras of Meks, armor and infantry), so a single unit type tops
+                 out below it. -->
+            <option>%COMPANY%,%STAR%</option>
         </echelon>
 
         <rating>
@@ -81,7 +89,7 @@
     <!-- Battle Group: three combined-arms Umbras with armor and infantry support. Equipment is
          Goliath Scorpion isorla (,3081, as Clan stars) then Republic of the Sphere (3135+, as IS
          lances/companies at Stone's Brigade rating). -->
-    <force echelon="%TRINARY%" eschName="Battle Group">
+    <force echelon="%TRINARY%" eschName="Battle Group" ifUnitType="">
         <name>{ordinal} Battle Group</name>
         <co>%STAR_COL%</co>
 

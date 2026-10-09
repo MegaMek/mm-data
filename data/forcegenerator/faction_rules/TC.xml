@@ -317,10 +317,13 @@ types of support units attached to Mek regiments can vary widely. -->
         </attachedForces>
     </force>
 
+    <!-- A Maniple is two vehicles (FM: Periphery p.52), generated as a matched pair of one model, the way Clan
+         fighter and VTOL Points are. Canon does not say the pair must match; this is a design choice. -->
     <force echelon="%POINT%" eschName="Maniple" ifUnitType="Tank|VTOL">
+        <name>Maniple {cardinal}</name>
         <co>%SGT%</co>
 
-        <subforces generate="group">
+        <subforces generate="model">
             <subforce num="2">%ELEMENT%</subforce>
         </subforces>
     </force>

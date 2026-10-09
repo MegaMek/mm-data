@@ -25,6 +25,16 @@ support wing (cohort). -->
 
 <ruleset faction="MH" parent="Periphery" ratingSystem="IS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
 
+    <!-- ORGANIZATION SOURCE. The Marian Hegemony Armed Forces use one ladder for every arm, from the official
+         answer on the BattleTech rules forum ("Marian Hegemony Battle Armor", Joel BC for Catalyst, 10 Feb 2014):
+         https://www.battletech.com/forums/index.php/topic,36976.msg856722.html#msg856722
+           Contubernium (squad):  1 infantry squad (10 troopers), 1 BA squad (5), 1 Mek, 1 tank, 1 aerospace fighter
+           Century (lance):       4-10 infantry squads, 5 BA squads, 5 Meks, 5 tanks, 5 aerospace fighters
+           Maniple (company):     2 Centuries - 8-20 infantry squads, 10 BA squads, 10 Meks, 10 tanks, 10 fighters
+           Cohort (battalion):    3 Maniples - 24-60 infantry squads, 30 BA squads, 30 Meks, 30 tanks, 30 fighters
+           Legion (regiment):     3-5 Cohorts - 72-300 infantry squads, 90-150 BA squads, Meks, tanks or fighters
+         Conventional infantry often differs from the five-Contubernium Century. -->
+
     <defaults>
         <echelon>%REGIMENT%</echelon>
         <rankSystem>%RANK_MH%</rankSystem>
@@ -189,7 +199,9 @@ support wing (cohort). -->
         </attachedForces>
     </force>
 
-    <force echelon="%WING%" eschName="Wing" ifUnitType="AeroSpaceFighter|Conventional Fighter">
+    <!-- Marian aerospace uses the same ladder as the other arms: Century 5, Maniple 10, Cohort 30.
+         See the organization note at the top of this file. "Ala" (Wing) is the unit's name, as in Ala Alba; the size is a Cohort. -->
+    <force echelon="%WING%" eschName="Cohort" ifUnitType="AeroSpaceFighter|Conventional Fighter">
         <name>{latin:distinct} Ala</name>
         <co>%MAJOR%</co>
 
@@ -353,7 +365,9 @@ support wing (cohort). -->
         </subforces>
     </force>
 
-    <force echelon="%COMPANY%" eschName="Company" ifUnitType="Infantry|BattleArmor">
+    <!-- A Maniple, as in every other arm: 2 Centuries of battle armor (10 squads), or 8-20 infantry squads,
+         which three platoons fall within. See the organization note at the top of this file. -->
+    <force echelon="%COMPANY%" eschName="Maniple" ifUnitType="Infantry|BattleArmor">
         <name>{latin} Manipulus</name>
         <co>%CAPTAIN%</co>
 
@@ -402,7 +416,7 @@ support wing (cohort). -->
         </subforces>
 
         <subforces ifUnitType="BattleArmor">
-            <subforce num="4">%PLATOON%</subforce>
+            <subforce num="2">%PLATOON%</subforce>
         </subforces>
     </force>
 
@@ -666,7 +680,7 @@ support wing (cohort). -->
         </subforces>
     </force>
 
-    <force echelon="%COMPANY%" eschName="Century" ifUnitType="Infantry" ifRole="engineer">
+    <force echelon="%COMPANY%" eschName="Maniple" ifUnitType="Infantry" ifRole="engineer">
         <name>{latin} Manipulus Mechanicus</name>
         <co>%CAPTAIN%</co>
 
@@ -678,7 +692,7 @@ support wing (cohort). -->
         </subforces>
     </force>
 
-    <force echelon="%COMPANY%" eschName="Century" ifUnitType="Infantry" ifRole="field_gun">
+    <force echelon="%COMPANY%" eschName="Maniple" ifUnitType="Infantry" ifRole="field_gun">
         <co>%CAPTAIN%</co>
 
         <subforces generate="group">
@@ -686,7 +700,7 @@ support wing (cohort). -->
         </subforces>
     </force>
 
-    <force echelon="%COMPANY%" eschName="Century" ifUnitType="Infantry"
+    <force echelon="%COMPANY%" eschName="Maniple" ifUnitType="Infantry"
            ifRole="artillery|missile_artillery">
         <co>%CAPTAIN%</co>
 

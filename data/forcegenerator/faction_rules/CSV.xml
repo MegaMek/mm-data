@@ -33,8 +33,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
-            <option ifUnitType="Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Jumpship|Dropship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -522,7 +522,9 @@
         </subforces>
     </force>
 
-    <force echelon="%TRINARY%" eschName="Trinary" ifUnitType="Mek">
+    <!-- Plain Trinaries only. A Supernova Trinary (augmented) goes to its own rule below; matching it here listed
+         it as a second "Trinary" in the Mek sizes. -->
+    <force echelon="%TRINARY%" eschName="Trinary" ifAugmented="0" ifUnitType="Mek">
         <name ifRole="training">Newt Trinary</name>
         <name>Trinary {phonetic}</name>
         <co>%STAR_CAPTAIN%</co>
