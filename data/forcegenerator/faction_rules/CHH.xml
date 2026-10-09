@@ -35,8 +35,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
-            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Dropship|Jumpship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option ifUnitType="Tank">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option ifUnitType="BattleArmor|Infantry">%STAR%</option>
@@ -2315,7 +2315,12 @@
             </motive>
         </ruleGroup>
 
-        <subforces generate="group">
+        <!-- VTOL Points are matched pairs (one model); tank Points generate independently. -->
+        <subforces generate="model" ifUnitType="VTOL">
+            <subforce num="2">%ELEMENT%</subforce>
+        </subforces>
+
+        <subforces generate="group" ifUnitType="Tank">
             <subforce num="2">%ELEMENT%</subforce>
         </subforces>
     </force>

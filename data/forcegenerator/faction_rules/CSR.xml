@@ -34,7 +34,7 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%,%TRINARY%</option>
-            <option ifUnitType="Warship">%STAR%</option>
+            <option ifUnitType="Warship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option ifUnitType="AeroSpaceFighter">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
@@ -666,7 +666,9 @@
         </changeEschelon>
     </force>
 
-    <force echelon="%STAR%" eschName="Star" ifUnitType="Mek|ProtoMek">
+    <!-- Plain Stars only. A Nova (augmented) goes to the Nova rule below; matching it here listed it as a second
+         "Star" in the Mek sizes. Same fix as Jade Falcon's Binary. -->
+    <force echelon="%STAR%" eschName="Star" ifAugmented="0" ifUnitType="Mek|ProtoMek">
         <name>{ordinal} {name:parent}</name>
         <co>%STAR_CMDR%</co>
 

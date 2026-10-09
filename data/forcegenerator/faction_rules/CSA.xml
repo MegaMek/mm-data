@@ -34,8 +34,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%,%STAR%</option>
-            <option ifUnitType="Dropship|Jumpship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Dropship|Jumpship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek" ifDateBetween="2870,">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -168,7 +168,8 @@
          are date-gated out (Nygaard/Exodus Ranger/Divine Conquest gone 3075; most destroyers/cruisers
          gone 3072). The Beta Naval Reserve and Transport star empty out by 3072, so their attaches are
          gated ,3072 to drop rather than collapse into a stray hull; JumpShips pad the remainder. -->
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+    <!-- Canon names this the Naval Reserve, not a Fleet: FM: Crusader Clans p.124 (pdf): "the two Naval Reserve Stars". -->
+    <force echelon="%CLUSTER%" eschName="Naval Reserve" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 

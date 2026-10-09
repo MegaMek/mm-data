@@ -74,6 +74,16 @@ each Mek regiment. -->
             <subforce unitType="Infantry">%BRIGADE%</subforce>
             <subforce unitType="AeroSpaceFighter" num="2">%WING%</subforce>
         </subforces>
+
+        <!-- Ground engineer support for the combat team. It used to ride in on the aerospace wings. -->
+        <attachedForces>
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
+        </attachedForces>
     </force>
 
     <!-- FM:LA shows only about 1 in 25 regiments as reinforced, none of them
@@ -148,6 +158,14 @@ each Mek regiment. -->
             <subforce unitType="Infantry"
                       name="Infantry {echelon}">%REGIMENT%
             </subforce>
+            <!-- Optional ground engineer support, attached at the regiment's ground level rather than under
+                 the aerospace wing, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
 
         <attachedForces ifUnitType="Tank" ifDateBetween=",2510">
@@ -164,6 +182,12 @@ each Mek regiment. -->
             <subforce unitType="Infantry"
                       name="Infantry {echelon}">%REGIMENT%
             </subforce>
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 
@@ -679,7 +703,8 @@ each Mek regiment. -->
                 <option unitType="Infantry" role="field_gun" name="Battery Company"
                         ifDateBetween="3050," weight="3">%COMPANY%
                 </option>
-                <option weight="1" ifWeightClass="H" />
+                <!-- Likely rather than guaranteed at Assault (as IS.xml). -->
+                <option weight="1" />
             </subforceOption>
         </attachedForces>
     </force>
@@ -835,14 +860,5 @@ each Mek regiment. -->
             </subforceOption>
             <subforce ifUnitType="Conventional Fighter" num="3">%SQUADRON%</subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 </ruleset>

@@ -37,8 +37,8 @@
 
         <echelon>
             <option ifUnitType="">%TOUMAN%,%GALAXY%,%CLUSTER%</option>
-            <option ifUnitType="Warship">%CLUSTER%</option>
-            <option ifUnitType="Jumpship|Dropship">%STAR%</option>
+            <option ifUnitType="Warship">%CLUSTER%,%TRINARY%,%BINARY%,%STAR%</option>
+            <option ifUnitType="Jumpship|Dropship">%TRINARY%,%BINARY%,%STAR%</option>
             <option ifUnitType="Mek">%TRINARY%^,%TRINARY%,%BINARY%^,%BINARY%,%STAR%^,%STAR%</option>
             <option>%TRINARY%,%BINARY%,%STAR%</option>
         </echelon>
@@ -97,7 +97,8 @@
         </attachedForces>
     </force>
 
-    <force echelon="%CLUSTER%" eschName="Fleet" ifUnitType="Warship">
+    <!-- Canon names this the Naval Reserve, not a Fleet: FM: Crusader Clans roster, pdf p.167: "Naval Reserve (The Wolf Chariots)". -->
+    <force echelon="%CLUSTER%" eschName="Naval Reserve" ifUnitType="Warship">
         <name>Naval Reserve</name>
         <co>%GALAXY_CMDR%</co>
 
@@ -938,6 +939,14 @@
         </changeEschelon>
 
         <ruleGroup>
+            <!-- The Stars below are chosen by weight class, so the Trinary has to roll one; without it a
+                 Random-weight Trinary matched no Star and came out as a single squad. Same odds as CLAN.xml. -->
+            <weightClass>
+                <option weight="1">A</option>
+                <option weight="2">H</option>
+                <option weight="4">M</option>
+                <option weight="3">L</option>
+            </weightClass>
             <unitType ifUnitType="BattleArmor" ifDateBetween=",2870">
                 <option>Infantry</option>
             </unitType>

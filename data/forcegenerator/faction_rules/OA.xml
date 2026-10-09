@@ -135,15 +135,6 @@ units attached to Mek regiments. 2840+ follows AMC organization. -->
             </subforceOption>
             <subforce ifUnitType="Conventional Fighter" num="3">%SQUADRON%</subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
-                        role="engineer">%COMPANY%
-                </option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <force echelon="%SQUADRON%" eschName="Squadron" ifUnitType="AeroSpaceFighter|Conventional Fighter">
@@ -279,6 +270,14 @@ units attached to Mek regiments. 2840+ follows AMC organization. -->
 
         <attachedForces>
             <subforce unitType="AeroSpaceFighter">%GROUP%</subforce>
+            <!-- Optional ground engineer support, attached at the division's ground level rather than under
+                 the aerospace regiments, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" name="Engineering {echelon}"
+                        role="engineer">%COMPANY%
+                </option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 

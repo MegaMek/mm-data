@@ -39,7 +39,9 @@
             <option ifUnitType="Mek|Tank|VTOL">%REGIMENT%,%BATTALION%,%COMPANY%,%LANCE%</option>
             <option ifUnitType="Infantry">%REGIMENT%,%BATTALION%,%COMPANY%</option>
             <option ifUnitType="BattleArmor">%BATTALION%,%COMPANY%,%PLATOON%</option>
-            <option ifUnitType="AeroSpaceFighter|Conventional Fighter">%REGIMENT%,%WING%,%SQUADRON%,%FLIGHT%</option>
+            <!-- No size above the 18-fighter level: the Republic Aerospace Forces field Air Wings under a Major, one per brigade,
+                 and nothing larger (FM 3145 roster, pdf p.147). %REGIMENT% had no fighter rule, so it showed as "6" and built one craft. -->
+            <option ifUnitType="AeroSpaceFighter|Conventional Fighter">%WING%,%SQUADRON%,%FLIGHT%</option>
         </echelon>
 
         <rating>

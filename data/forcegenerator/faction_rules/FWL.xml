@@ -38,7 +38,10 @@
             <option ifUnitType="Mek|Tank|VTOL">%REGIMENT%,%BATTALION%,%COMPANY%,%LANCE%</option>
             <option ifUnitType="Infantry">%REGIMENT%,%BATTALION%,%COMPANY%</option>
             <option ifUnitType="BattleArmor">%BATTALION%,%COMPANY%,%PLATOON%</option>
-            <option ifUnitType="AeroSpaceFighter|Conventional Fighter">%GROUP%,%WING%+,%WING%,%SQUADRON%,%FLIGHT%</option>
+            <!-- The FWLM aerospace Regiment of three Wings (FM: Free Worlds League p.19) has no conventional fighter equivalent in canon.
+                 Its top size had no conventional fighter rule, so it showed as "6" and built one craft. -->
+            <option ifUnitType="Conventional Fighter">%WING%+,%WING%,%SQUADRON%,%FLIGHT%</option>
+            <option ifUnitType="AeroSpaceFighter">%GROUP%,%WING%+,%WING%,%SQUADRON%,%FLIGHT%</option>
         </echelon>
 
         <rating>

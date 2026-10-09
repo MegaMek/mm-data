@@ -90,6 +90,12 @@
             <subforce unitType="Infantry"
                       name="Infantry {echelon}">%REGIMENT%
             </subforce>
+            <!-- Optional ground engineer support, attached at the regiment's ground level rather than under
+                 the aerospace wing, where it does not belong (same move as IS.xml). -->
+            <subforceOption>
+                <option weight="2" unitType="Infantry" role="engineer">%COMPANY%</option>
+                <option weight="1" />
+            </subforceOption>
         </attachedForces>
     </force>
 
@@ -225,13 +231,6 @@
                       num="3">%SQUADRON%
             </subforce>
         </subforces>
-
-        <attachedForces>
-            <subforceOption>
-                <option weight="2" unitType="Infantry" role="engineer">%COMPANY%</option>
-                <option weight="1" />
-            </subforceOption>
-        </attachedForces>
     </force>
 
     <force echelon="%SQUADRON%" eschName="Company" ifAugmented="1"
