@@ -49,6 +49,11 @@ Infantry are poorly trained and equipped. -->
         <rating>
             <option>A,B,C,D,F</option>
         </rating>
+        <!-- Beast-mounted infantry: narrows the Beast infantry class to one kind of animal. Only read when
+             the Infantry Class is Beast; with none picked, any animal will do. -->
+        <flags>
+            <option ifUnitType="Infantry">beastLand:Beast (Land),beastFlying:Beast (Flying),beastSwimming:Beast (Swimming)</option>
+        </flags>
     </toc>
 
     <!-- Periphery formation designation. Periphery states organise along Inner Sphere lines, so this
