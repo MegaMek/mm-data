@@ -66,7 +66,7 @@
         <co>%COLONEL%</co>
 
         <subforces>
-            <subforce unitType="Mek" role="command" name="McIntyre Command Company">%COMPANY%</subforce>
+            <subforce unitType="Mek" role="command" weightClass="H" name="McIntyre Command Company">%COMPANY%</subforce>
             <subforce unitType="Mek" name="McIntyre &quot;A&quot; Battalion">%BATTALION%</subforce>
             <subforce unitType="Mek" weightClass="H" name="McIntyre &quot;B&quot; Battalion">%BATTALION%</subforce>
             <subforce name="McIntyre Wings">%GROUP%</subforce>
@@ -124,8 +124,8 @@
         <co>%CAPTAIN%</co>
 
         <subforces>
-            <subforce num="5" weightClass="M">%ELEMENT%</subforce>
-            <subforce num="4" weightClass="L">%ELEMENT%</subforce>
+            <subforce weightClass="M,M,M,M,M">%ELEMENT%</subforce>
+            <subforce weightClass="L,L,L,L">%ELEMENT%</subforce>
         </subforces>
     </force>
 
@@ -134,8 +134,8 @@
         <co>%CAPTAIN%</co>
 
         <subforces>
-            <subforce num="5" weightClass="H">%ELEMENT%</subforce>
-            <subforce num="4" weightClass="M">%ELEMENT%</subforce>
+            <subforce weightClass="H,H,H,H,H">%ELEMENT%</subforce>
+            <subforce weightClass="M,M,M,M">%ELEMENT%</subforce>
         </subforces>
     </force>
 
@@ -146,7 +146,7 @@
         <subforces>
             <subforce weightClass="H">%COMPANY%</subforce>
             <subforce weightClass="M">%COMPANY%</subforce>
-            <subforce motive="Hover" weightClass="L" num="2">%LANCE%</subforce>
+            <subforce motive="Hover" weightClass="L,L">%LANCE%</subforce>
         </subforces>
     </force>
 
@@ -155,12 +155,47 @@
         <co>%MAJOR%</co>
 
         <subforces>
-            <subforce num="4">%COMPANY%</subforce>
+            <subforce num="4" name="McIntyre Militia Company">%COMPANY%</subforce>
         </subforces>
 
         <attachedForces>
             <subforce unitType="Tank" role="artillery" name="McIntyre Militia Artillery">%COMPANY%</subforce>
         </attachedForces>
+    </force>
+
+    <!-- A Militia company: the IS.xml infantry company without its battle armor roll, which turned about one company
+         in ten into battle armor. Canon calls the platoons mechanized and urban specialists (Field Manual: Periphery
+         p.104), but limiting them to wheeled, tracked or hover movement drew mostly field-gun and field-artillery
+         infantry from the Federation's tables, doubling up with the Militia's own artillery company. So the platoons
+         are ordinary infantry. -->
+    <force echelon="%COMPANY%" eschName="Company" ifUnitType="Infantry" ifName="McIntyre Militia Company">
+        <co>%CAPTAIN%</co>
+
+        <weightClass>
+            <option weight="1">A</option>
+            <option weight="2">H</option>
+            <option weight="4">M</option>
+            <option weight="3">L</option>
+        </weightClass>
+
+        <ruleGroup>
+            <role>
+                <option weight="2">anti_mek</option>
+                <option />
+                <option ifWeightClass="H" weight="3" />
+                <option ifWeightClass="M|L" weight="17" />
+            </role>
+
+            <variant ifWeightClass="H|A">
+                <option weight="2">(Laser),(SRM)</option>
+                <option />
+            </variant>
+
+        </ruleGroup>
+
+        <subforces generate="group">
+            <subforce num="3">%PLATOON%</subforce>
+        </subforces>
     </force>
 
 </ruleset>
