@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# MegaMek Data (C) 2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+-->
+<!-- The McIntyre House Guard, the Circinus Federation's defensive force. Everything but its combined-arms order of
+     battle comes from the Federation's Star League rules (CIR.xml, then IS.xml).
+
+     Order of battle, from the unit profile in Field Manual: Periphery p.104:
+       - a separate command company under Colonel Lawrence
+       - McIntyre "A" Battalion, 'Meks
+       - McIntyre "B" Battalion, mostly heavy and assault 'Meks
+       - McIntyre Wings: half light and medium aerospace fighters for space interdiction, half heavier conventional
+         fighters for air interdiction. Sized as an 18-fighter Group, nine of each.
+       - McIntyre Armored Cavalry, a battalion of mostly medium and heavy tanks, wheeled and tracked, plus two lances
+         of fast hovercraft. The Guard does not mix its tanks into 'Mek companies.
+       - McIntyre Militia, a reinforced battalion of mechanized infantry, plus a full company of artillery
+     The Guard fought as this force from its defence of Circinus in 3058 until the Federation fell in 3081. -->
+
+<ruleset faction="CIR.MHG" parent="CIR" ratingSystem="IS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
+
+    <!-- No default unit type: a combined-arms request has to stay blank to reach the House Guard rule below. -->
+    <defaults>
+        <echelon>%BATTALION%</echelon>
+        <rankSystem>%RANK_SL%</rankSystem>
+        <rating>C</rating>
+    </defaults>
+
+    <!-- The Star League baseline menus (IS.xml), plus the whole House Guard as a combined-arms formation. -->
+    <toc>
+        <unitType>
+            <option ifDateBetween="3058,">null,Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter</option>
+            <option ifDateBetween="3051,">Mek,Tank,VTOL,Infantry,BattleArmor,AeroSpaceFighter,Conventional Fighter</option>
+            <option>Mek,Tank,VTOL,Infantry,AeroSpaceFighter,Conventional Fighter</option>
+        </unitType>
+
+        <echelon>
+            <option ifUnitType="">%BRIGADE%</option>
+            <option ifUnitType="Mek|Tank|VTOL">%REGIMENT%,%BATTALION%,%COMPANY%,%LANCE%</option>
+            <option ifUnitType="Infantry">%REGIMENT%,%BATTALION%,%COMPANY%</option>
+            <option ifUnitType="BattleArmor">%BATTALION%,%COMPANY%,%PLATOON%</option>
+            <option ifUnitType="AeroSpaceFighter|Conventional Fighter">%AIR_REGIMENT%,%WING%,%SQUADRON%,%FLIGHT%</option>
+        </echelon>
+
+        <rating>
+            <option>A,B,C,D,F</option>
+        </rating>
+    </toc>
+
+    <force echelon="%BRIGADE%" eschName="House Guard" ifUnitType="" ifDateBetween="3058,">
+        <name>McIntyre House Guard</name>
+        <co>%COLONEL%</co>
+
+        <subforces>
+            <subforce unitType="Mek" role="command" name="McIntyre Command Company">%COMPANY%</subforce>
+            <subforce unitType="Mek" name="McIntyre &quot;A&quot; Battalion">%BATTALION%</subforce>
+            <subforce unitType="Mek" weightClass="H" name="McIntyre &quot;B&quot; Battalion">%BATTALION%</subforce>
+            <subforce name="McIntyre Wings">%GROUP%</subforce>
+            <subforce unitType="Tank" name="McIntyre Armored Cavalry">%BATTALION%</subforce>
+            <subforce unitType="Infantry" name="McIntyre Militia">%BATTALION%</subforce>
+        </subforces>
+    </force>
+
+    <!-- The IS.xml 'Mek battalion, rolled heavier: "In keeping with its defensive duties, the Guard fields mostly heavy
+         and assault 'Meks" (Field Manual: Periphery p.104). Like the base rules it attaches nothing to its companies:
+         the Guard keeps its support units out of company command (p.102). -->
+    <force echelon="%BATTALION%" eschName="Battalion" ifUnitType="Mek">
+        <name>{ordinal} Battalion</name>
+        <co>%MAJOR%</co>
+
+        <weightClass>
+            <option weight="6">A</option>
+            <option weight="9">H</option>
+            <option weight="4">M</option>
+            <option weight="1">L</option>
+        </weightClass>
+
+        <subforces>
+            <subforceOption ifWeightClass="A">
+                <option weightClass="A,A,A">%COMPANY%</option>
+                <option weightClass="A,A,H">%COMPANY%</option>
+                <option weightClass="A,H,H">%COMPANY%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="H">
+                <option weightClass="A,H,H">%COMPANY%</option>
+                <option weightClass="H,H,H">%COMPANY%</option>
+                <option weightClass="H,H,M">%COMPANY%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="M">
+                <option weightClass="H,M,M">%COMPANY%</option>
+                <option weightClass="M,M,M">%COMPANY%</option>
+            </subforceOption>
+            <subforceOption ifWeightClass="L">
+                <option weightClass="M,M,L">%COMPANY%</option>
+            </subforceOption>
+        </subforces>
+    </force>
+
+    <force echelon="%GROUP%" eschName="Wing" ifUnitType="" ifName="McIntyre Wings">
+        <co>%MAJOR%</co>
+
+        <subforces>
+            <subforce unitType="AeroSpaceFighter" name="Space Interdiction">%SQUADRON%</subforce>
+            <subforce unitType="Conventional Fighter" name="Air Interdiction">%SQUADRON%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Half the Wings: nine light and medium aerospace fighters. -->
+    <force echelon="%SQUADRON%" eschName="Squadron" ifUnitType="AeroSpaceFighter" ifName="Space Interdiction">
+        <co>%CAPTAIN%</co>
+
+        <subforces>
+            <subforce num="5" weightClass="M">%ELEMENT%</subforce>
+            <subforce num="4" weightClass="L">%ELEMENT%</subforce>
+        </subforces>
+    </force>
+
+    <!-- The other half: nine heavier conventional fighters. -->
+    <force echelon="%SQUADRON%" eschName="Squadron" ifUnitType="Conventional Fighter" ifName="Air Interdiction">
+        <co>%CAPTAIN%</co>
+
+        <subforces>
+            <subforce num="5" weightClass="H">%ELEMENT%</subforce>
+            <subforce num="4" weightClass="M">%ELEMENT%</subforce>
+        </subforces>
+    </force>
+
+    <!-- Mostly medium and heavy tanks, plus two lances of fast hovercraft. -->
+    <force echelon="%BATTALION%" eschName="Battalion" ifUnitType="Tank" ifName="McIntyre Armored Cavalry">
+        <co>%MAJOR%</co>
+
+        <subforces>
+            <subforce weightClass="H">%COMPANY%</subforce>
+            <subforce weightClass="M">%COMPANY%</subforce>
+            <subforce motive="Hover" weightClass="L" num="2">%LANCE%</subforce>
+        </subforces>
+    </force>
+
+    <!-- A reinforced battalion of mechanized infantry, with a full company of artillery. -->
+    <force echelon="%BATTALION%" eschName="Reinforced Battalion" ifUnitType="Infantry" ifName="McIntyre Militia">
+        <co>%MAJOR%</co>
+
+        <subforces>
+            <subforce num="4">%COMPANY%</subforce>
+        </subforces>
+
+        <attachedForces>
+            <subforce unitType="Tank" role="artillery" name="McIntyre Militia Artillery">%COMPANY%</subforce>
+        </attachedForces>
+    </force>
+
+</ruleset>

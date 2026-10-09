@@ -31,8 +31,8 @@
 
 <ruleset faction="CIR" parent="IS" ratingSystem="IS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="formationRulesetSchema.xsd">
 
+    <!-- No default unit type, so the McIntyre House Guard's combined-arms requests (CIR.MHG.xml) stay blank. -->
     <defaults>
-        <unitType>Mek</unitType>
         <echelon>%BATTALION%</echelon>
         <rankSystem>%RANK_SL%</rankSystem>
         <rating>C</rating>
