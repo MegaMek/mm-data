@@ -50,6 +50,9 @@
 
         <flags>
             <option ifUnitType="null|Mek|BattleArmor" ifEschelon="%TRINARY%|%BINARY%">mixedMekBA:Combined Mek/BA unit</option>
+            <!-- Beast-mounted infantry: narrows the Beast infantry class to one kind of animal. Only read when
+             the Infantry Class is Beast; with none picked, any animal will do. -->
+            <option ifUnitType="Infantry">beastLand:Beast (Land),beastFlying:Beast (Flying),beastSwimming:Beast (Swimming)</option>
         </flags>
     </toc>
 
