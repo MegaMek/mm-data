@@ -35,6 +35,7 @@ yearsActive:
   # reference an inactive faction. The Third Star League has its own code (SL3).
   - start: 3058
     end: 3067
+icon: logo_star_league.png
 # NOTE: TH (Terran Hegemony) is intentionally NOT listed here. TH.fallBackFactions
 # already contains SL, so adding TH here would create a SL <-> TH cycle that crashes
 # RATGenerator.findModelAvailabilityRecord with StackOverflowError. The bidirectional
@@ -60,7 +61,6 @@ color:
   red: 176
   green: 196
   blue: 222
-logo: Inner Sphere/Star League.png
 background: Inner Sphere/Star League.png
 camos: Star League Defense Force
 eraMods:
