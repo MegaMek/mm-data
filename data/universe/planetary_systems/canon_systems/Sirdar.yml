@@ -107,7 +107,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2652-07-25'
@@ -147,14 +147,11 @@ planet:
         population: 294125562.0
       - date: '2750-12-31'
         administration:
-          - Sian Commonality
-          - Region 11
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sian Commonality
+            - Region 11
       - date: '2760-01-01'
         population: 298937810.0
       - date: '2770-01-01'
@@ -186,15 +183,12 @@ planet:
             - FS
       - date: '2864-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2870-01-01'
         population: 292031564.0
       - date: '2880-01-01'
@@ -235,9 +229,12 @@ planet:
         population: 263107877.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Sirdar PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Sirdar PDZ
       - date: '3030-01-01'
         population: 263384954.0
       - date: '3031-01-01'
@@ -247,12 +244,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3047-01-01'
@@ -275,12 +266,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -307,15 +292,28 @@ planet:
         population: 294099065.0
       - date: '3145-12-31'
         administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - Sirdar PDZ
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - Sirdar PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3151-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Sirdar PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Sirdar PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
   - name: Piena Mate
     type: GIANT_TERRESTRIAL
     orbitalDist: 4.48

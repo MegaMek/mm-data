@@ -110,12 +110,6 @@ planet:
             - IND
         population: 50345.0
         socioIndustrial: D-D-C-D-D
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 226653.0
       - date: '2286-01-01'
@@ -133,7 +127,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -145,7 +139,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
       - date: '2350-01-01'
@@ -155,7 +149,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -208,13 +202,10 @@ planet:
         population: 1789371650.0
       - date: '2571-12-31'
         administration:
-          - Terra Firma Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2580-01-01'
         population: 1819548524.0
       - date: '2590-01-01'
@@ -265,11 +256,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1893658260.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-12-22'
         faction:
           source: canon
@@ -278,22 +279,21 @@ planet:
       - date: '2780-01-01'
         population: 1880310775.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2786-07-20'
         faction:
           source: canon
           value:
             - FWL
       - date: '2786-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2790-01-01'
         population: 1871647106.0
       - date: '2800-01-01'
@@ -353,12 +353,6 @@ planet:
             - TFR
       - date: '3030-01-01'
         population: 1654065686.0
-      - date: '3030-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TFR
       - date: '3032-11-11'
         faction:
           source: canon
@@ -370,15 +364,12 @@ planet:
         population: 1669019468.0
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 2
       - date: '3042-01-01'
         socioIndustrial: B-B-C-B-C
       - date: '3050-01-01'
@@ -389,11 +380,10 @@ planet:
           value:
             - FWL
       - date: '3057-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 1702054940.0
       - date: '3069-02-01'
@@ -403,12 +393,6 @@ planet:
             - WOB
       - date: '3070-01-01'
         population: 1717614328.0
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
       - date: '3076-07-01'
         faction:
           source: canon
@@ -420,12 +404,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1742875454.0
       - date: '3081-05-04'
@@ -435,13 +413,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
       - date: '3090-01-01'
         population: 1757225789.0
       - date: '3100-01-01'
@@ -460,11 +435,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3139-08-30'
         faction:
           source: canon
@@ -475,14 +449,16 @@ planet:
       - date: '3145-01-01'
         population: 1767447312.0
       - date: '3145-12-31'
-        administration:
-          - Augustine Alliance
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Augustine Alliance
       - date: '3149-02-01'
         faction:
           source: canon
@@ -491,7 +467,7 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
   - name: Van Diemen V

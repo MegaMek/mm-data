@@ -66,7 +66,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2273-02-27'
@@ -102,7 +102,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -152,15 +152,17 @@ planet:
       - date: '2570-01-01'
         population: 299522631.0
       - date: '2571-12-31'
-        administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 307757754.0
       - date: '2590-01-01'
@@ -274,9 +276,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Benfled Operational Area
+            - Region 2
       - date: '3048-01-01'
         socioIndustrial: D-C-A-D-C
       - date: '3050-01-01'
@@ -292,6 +297,22 @@ planet:
           source: canon
           value:
             - CJF
+      - date: '3050-09-30'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FC
+      - date: '3051-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CJF
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3057-08-26'
         faction:
           source: canon

@@ -55,7 +55,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2649-07-12'
@@ -95,15 +95,12 @@ planet:
         population: 293918145.0
       - date: '2750-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2760-01-01'
         population: 299830848.0
       - date: '2770-01-01'
@@ -120,9 +117,12 @@ planet:
         population: 24833099.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2830-01-01'
         population: 218871.0
       - date: '2840-01-01'
@@ -136,11 +136,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Tegan
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.6

@@ -74,7 +74,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2602-10-13'
@@ -125,15 +125,12 @@ planet:
         population: 276531185.0
       - date: '2750-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 279856765.0
       - date: '2770-01-01'
@@ -150,9 +147,12 @@ planet:
         population: 246079710.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2830-01-01'
         population: 235532843.0
       - date: '2840-01-01'
@@ -199,9 +199,12 @@ planet:
         population: 172391334.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - New Syrtis PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - New Syrtis PDZ
       - date: '3029-01-01'
         socioIndustrial: D-D-B-D-C
       - date: '3030-01-01'
@@ -213,12 +216,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3042-01-01'
         socioIndustrial: D-C-B-C-C
       - date: '3050-01-01'
@@ -228,12 +225,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -263,25 +254,24 @@ planet:
         population: 198630594.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
+            - Sian Commonality
+            - Region 13
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Labriola
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.0

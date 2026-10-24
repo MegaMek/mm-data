@@ -63,12 +63,6 @@ planet:
         population: 107510.0
       - date: '2270-01-01'
         population: 349264.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 973803.0
       - date: '2290-01-01'
@@ -93,7 +87,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -147,7 +141,7 @@ planet:
       - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2580-01-01'
@@ -270,14 +264,11 @@ planet:
             - LA
       - date: '3068-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
-      - date: '3068-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3070-04-23'
         faction:
           source: canon
@@ -285,11 +276,10 @@ planet:
             - FWL
         population: 693646266.0
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3079-09-01'
         faction:
           source: canon
@@ -297,14 +287,11 @@ planet:
             - LA
       - date: '3079-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
-      - date: '3079-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Dixie Theater
       - date: '3080-01-01'
         population: 701599079.0
       - date: '3090-01-01'
@@ -319,8 +306,11 @@ planet:
         population: 756999148.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3139-01-01'
@@ -334,11 +324,10 @@ planet:
             - CWE
         population: 763079430.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: New North Haven
     type: GAS_GIANT
     orbitalDist: 0.7

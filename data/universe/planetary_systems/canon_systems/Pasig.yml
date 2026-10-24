@@ -62,7 +62,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2408-02-07'
@@ -110,14 +110,11 @@ planet:
         population: 301785113.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2580-01-01'
         population: 319662451.0
       - date: '2590-01-01'
@@ -228,25 +225,28 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Blackjack Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Blackjack Operational Area
+            - Region 2
       - date: '3041-01-01'
         socioIndustrial: C-C-A-D-D
       - date: '3050-01-01'
         population: 225953123.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pasig Operational Area
-          - Region 1
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pasig Operational Area
+            - Region 1
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3057-12-01'
         faction:
           source: canon
@@ -255,14 +255,21 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Coventry Province
-          - Melissia Theater
-          - Arc-Royal Defense Cordon
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
+            - Melissia Theater
+            - Arc-Royal Defense Cordon
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 227790775.0
       - date: '3067-04-24'
@@ -272,7 +279,10 @@ planet:
             - LA
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3069-06-10'
         faction:
           source: canon
@@ -287,11 +297,10 @@ planet:
       - date: '3070-01-01'
         population: 229253311.0
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 230540731.0
       - date: '3090-01-01'
@@ -315,12 +324,6 @@ planet:
       - date: '3151-12-31'
         faction:
           source: canon
-          value:
-            - AML
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - AML
   - name: Sabalones

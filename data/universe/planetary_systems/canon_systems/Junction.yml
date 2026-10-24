@@ -102,12 +102,6 @@ planet:
         population: 59216960.0
       - date: '2270-01-01'
         population: 84297584.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 114724359.0
       - date: '2290-01-01'
@@ -121,12 +115,6 @@ planet:
             - AG
       - date: '2310-01-01'
         population: 238727739.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - AG
       - date: '2319-09-26'
         faction:
           source: canon
@@ -135,7 +123,7 @@ planet:
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AG
       - date: '2320-01-01'
@@ -147,7 +135,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2350-01-01'
@@ -198,8 +186,11 @@ planet:
         population: 1027235116.0
       - date: '2571-12-31'
         administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2580-01-01'
         population: 1047718830.0
       - date: '2590-01-01'
@@ -243,8 +234,22 @@ planet:
         population: 1177622222.0
       - date: '2770-01-01'
         population: 1190153693.0
+      - date: '2772-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kajikazawa Prefecture
       - date: '2780-01-01'
         population: 1201988810.0
+      - date: '2783-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2790-01-01'
         population: 1194126578.0
       - date: '2800-01-01'
@@ -314,14 +319,15 @@ planet:
       - date: '3080-01-01'
         population: 771999495.0
       - date: '3081-12-31'
-        administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3085-12-31'
-        administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3090-01-01'
         population: 784921644.0
       - date: '3100-01-01'

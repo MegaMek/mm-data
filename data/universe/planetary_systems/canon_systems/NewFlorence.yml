@@ -86,7 +86,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-10-22'
@@ -96,12 +96,6 @@ planet:
             - TH
         population: 41550.0
         socioIndustrial: D-D-C-D-D
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 49377.0
       - date: '2330-01-01'
@@ -112,12 +106,6 @@ planet:
         population: 2808688.0
       - date: '2360-01-01'
         population: 7245916.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2370-01-01'
         population: 16039291.0
       - date: '2380-01-01'
@@ -163,7 +151,10 @@ planet:
         population: 1195211879.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 1232229806.0
       - date: '2590-01-01'
@@ -214,11 +205,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1382525203.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-10-13'
         faction:
           source: canon
@@ -227,11 +228,11 @@ planet:
       - date: '2780-01-01'
         population: 1373766527.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lockdale Province
       - date: '2785-08-15'
         faction:
           source: canon
@@ -244,15 +245,12 @@ planet:
             - FS
       - date: '2786-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 1
       - date: '2790-01-01'
         population: 1036570417.0
       - date: '2800-01-01'
@@ -268,14 +266,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Addicks Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Addicks Prefecture
       - date: '2822-09-14'
         faction:
           source: canon
@@ -298,14 +293,11 @@ planet:
             - CC
       - date: '2864-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
       - date: '2870-01-01'
         population: 2250.0
       - date: '2880-01-01'
@@ -321,11 +313,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Skanda
     type: TERRESTRIAL
     orbitalDist: 4.2

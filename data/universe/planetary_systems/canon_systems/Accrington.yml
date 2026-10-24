@@ -87,12 +87,6 @@ planet:
         population: 155748368.0
       - date: '2270-01-01'
         population: 243749734.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 362062084.0
       - date: '2290-01-01'
@@ -108,18 +102,6 @@ planet:
         socioIndustrial: C-C-D-C-F
       - date: '2310-01-01'
         population: 897822197.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 1128392710.0
       - date: '2330-01-01'
@@ -134,7 +116,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -142,14 +124,16 @@ planet:
       - date: '2360-01-01'
         population: 2221231823.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 2526037852.0
       - date: '2380-01-01'
@@ -196,8 +180,11 @@ planet:
         population: 5508027323.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 5543970608.0
       - date: '2590-01-01'
@@ -297,8 +284,11 @@ planet:
         population: 4903957419.0
       - date: '3025-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Virginia Shire
       - date: '3030-01-01'
         population: 4901917079.0
       - date: '3038-01-01'
@@ -312,15 +302,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 1
       - date: '3042-01-01'
         socioIndustrial: B-A-D-A-D
       - date: '3050-01-01'
@@ -330,16 +317,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 5089738068.0
       - date: '3070-01-01'
@@ -348,7 +332,10 @@ planet:
         population: 5218063569.0
       - date: '3081-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3090-01-01'
         population: 5274724071.0
       - date: '3100-01-01'
@@ -363,7 +350,10 @@ planet:
         population: 5287398612.0
       - date: '3130-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
       - date: '3132-08-07'
         hpg: X
       - date: '3140-09-17'
@@ -380,13 +370,10 @@ planet:
         population: 5322410856.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
   - name: Fordham
     type: GAS_GIANT
     orbitalDist: 0.7

@@ -113,7 +113,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2387-11-13'
@@ -169,14 +169,11 @@ planet:
         population: 169941724.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Bjarred Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Bjarred Prefecture
       - date: '2580-01-01'
         population: 176577003.0
       - date: '2590-01-01'
@@ -291,11 +288,10 @@ planet:
           value:
             - CSJ
       - date: '3050-06-30'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CSJ
+          version: 2026.09.01
+          value: []
       - date: '3051-11-01'
         faction:
           source: canon
@@ -304,25 +300,27 @@ planet:
       - date: '3051-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CSJ
       - date: '3052-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CNC
       - date: '3059-03-31'
-        administration:
-          - Pesht Military District
-          - Lonaconing Prefecture
-      - date: '3059-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Lonaconing Prefecture
       - date: '3059-06-02'
         faction:
           source: canon
@@ -332,8 +330,11 @@ planet:
         population: 95895050.0
       - date: '3063-12-31'
         administration:
-          - Pesht Military District
-          - Bjarred Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Bjarred Prefecture
       - date: '3070-01-01'
         population: 97033314.0
       - date: '3080-01-01'

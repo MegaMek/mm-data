@@ -205,12 +205,6 @@ planet:
         population: 29852959.0
       - date: '2270-01-01'
         population: 43255941.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 59832020.0
       - date: '2290-01-01'
@@ -219,12 +213,6 @@ planet:
         population: 104112122.0
       - date: '2310-01-01'
         population: 130666303.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TamP
       - date: '2320-01-01'
         population: 160135500.0
       - date: '2324-01-01'
@@ -241,7 +229,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -249,14 +237,16 @@ planet:
       - date: '2360-01-01'
         population: 282382233.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 313387968.0
       - date: '2380-01-01'
@@ -303,8 +293,11 @@ planet:
         population: 682275466.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 681187260.0
       - date: '2590-01-01'
@@ -373,8 +366,11 @@ planet:
         population: 614313673.0
       - date: '2864-12-31'
         administration:
-          - Tamar Pact
-          - Orkney Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Orkney Shire
       - date: '2870-01-01'
         population: 604557140.0
       - date: '2880-01-01'
@@ -411,8 +407,11 @@ planet:
         population: 518674580.0
       - date: '3025-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '3030-01-01'
         population: 522762248.0
       - date: '3040-01-01'
@@ -424,15 +423,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 3
       - date: '3041-01-01'
         socioIndustrial:
           source: canon
@@ -445,24 +441,24 @@ planet:
         population: 529549565.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 2
       - date: '3057-09-18'
         faction:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
       - date: '3060-01-01'
         population: 533589474.0
       - date: '3062-12-16'
@@ -479,7 +475,7 @@ planet:
       - date: '3063-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3067-01-11'
@@ -495,9 +491,13 @@ planet:
       - date: '3067-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3069-10-04'
         faction:
           source: canon
@@ -505,12 +505,6 @@ planet:
             - CW
       - date: '3070-01-01'
         population: 538251955.0
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
       - date: '3080-01-01'
         population: 544532031.0
       - date: '3090-01-01'
@@ -539,13 +533,10 @@ planet:
         population: 565170111.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
   - name: Ashima
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.0

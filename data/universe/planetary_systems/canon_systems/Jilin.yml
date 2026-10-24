@@ -69,7 +69,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2746-07-01'
@@ -85,14 +85,11 @@ planet:
         population: 115877.0
       - date: '2750-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 1
       - date: '2760-01-01'
         population: 640440.0
       - date: '2770-01-01'
@@ -101,8 +98,11 @@ planet:
         population: 7215527.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 4
       - date: '2790-01-01'
         population: 16737155.0
       - date: '2800-01-01'
@@ -113,8 +113,11 @@ planet:
         population: 83390236.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
       - date: '2830-01-01'
         population: 104039743.0
       - date: '2840-01-01'
@@ -130,11 +133,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Belun
     type: ICE_GIANT
     orbitalDist: 0.8

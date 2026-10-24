@@ -114,12 +114,6 @@ planet:
         socioIndustrial: D-D-D-D-C
       - date: '2270-01-01'
         population: 62878.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-05-27'
         faction:
           source: canon
@@ -135,7 +129,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -151,7 +145,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2369-01-01'
@@ -202,7 +196,10 @@ planet:
         population: 284035064.0
       - date: '2571-12-31'
         administration:
-          - Principality of Regulus
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 286106201.0
       - date: '2590-01-01'
@@ -245,7 +242,10 @@ planet:
         population: 327889486.0
       - date: '2750-12-31'
         administration:
-          - Regulan Free States
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Regulan Free States
       - date: '2760-01-01'
         population: 329510066.0
       - date: '2770-01-01'
@@ -327,7 +327,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -335,9 +335,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-02-01'
         faction:
           source: canon
@@ -348,7 +352,7 @@ planet:
       - date: '3095-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
       - date: '3100-01-01'
@@ -364,7 +368,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RF
       - date: '3132-08-07'
@@ -380,13 +384,10 @@ planet:
             - FWL
       - date: '3151-12-31'
         administration:
-          - Regulan Fiefs
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Regulan Fiefs
   - name: Ayacucho
     type: GIANT_TERRESTRIAL
     orbitalDist: 4.2

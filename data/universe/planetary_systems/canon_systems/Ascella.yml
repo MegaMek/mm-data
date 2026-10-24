@@ -115,12 +115,6 @@ planet:
         population: 107603.0
       - date: '2270-01-01'
         population: 277311.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 631500.0
       - date: '2290-01-01'
@@ -143,7 +137,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -195,15 +189,17 @@ planet:
       - date: '2570-01-01'
         population: 146076709.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2580-01-01'
         population: 148955249.0
       - date: '2590-01-01'
@@ -263,8 +259,11 @@ planet:
         population: 125266508.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 117227329.0
       - date: '2840-01-01'
@@ -311,8 +310,11 @@ planet:
         population: 71640915.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3030-01-01'
         population: 70918405.0
       - date: '3035-01-01'
@@ -346,11 +348,10 @@ planet:
           value:
             - Stone
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 74086253.0
       - date: '3081-10-27'
@@ -360,13 +361,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 75025645.0
       - date: '3095-01-01'
@@ -387,11 +385,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 79984270.0
       - date: '3145-10-18'
@@ -402,14 +399,11 @@ planet:
         population: 80594466.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Dieron Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Dieron Prefecture
   - name: Alcides
     type: TERRESTRIAL
     orbitalDist: 2.1

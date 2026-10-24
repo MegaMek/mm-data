@@ -150,7 +150,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2299-06-21'
@@ -164,18 +164,6 @@ planet:
         population: 49106.0
       - date: '2310-01-01'
         population: 209717.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 726402.0
       - date: '2330-01-01'
@@ -190,7 +178,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -200,14 +188,16 @@ planet:
       - date: '2360-01-01'
         population: 22933569.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-08-16'
         population: 41082862.0
         socioIndustrial: C-D-B-D-C
@@ -255,8 +245,11 @@ planet:
         population: 1038627950.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Virginia Shire
       - date: '2580-01-01'
         population: 1065816620.0
       - date: '2590-01-01'
@@ -360,14 +353,11 @@ planet:
         population: 918141105.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3030-08-29'
         faction:
           source: canon
@@ -376,14 +366,11 @@ planet:
         population: 917096839.0
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Virginia Shire
       - date: '3040-01-01'
         population: 925110389.0
       - date: '3040-01-19'
@@ -393,15 +380,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 2
       - date: '3047-01-01'
         socioIndustrial: A-C-B-C-B
       - date: '3048-03-17'
@@ -411,14 +395,11 @@ planet:
             - DC
       - date: '3049-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3049-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3050-01-01'
         population: 933940816.0
       - date: '3060-01-01'
@@ -434,13 +415,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
       - date: '3090-01-01'
         population: 960748886.0
       - date: '3100-01-01'
@@ -461,11 +439,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 985267394.0
       - date: '3145-11-22'
@@ -476,17 +453,17 @@ planet:
         population: 987042472.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Boraro
     type: TERRESTRIAL
     orbitalDist: 16.0

@@ -39,11 +39,23 @@ planet:
     lifeForm: AMPHIBIAN
     smallMoons: 5
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - UND
       - date: '2750-01-01'
         population: 42045.0
         socioIndustrial: C-D-D-D-F
       - date: '2760-01-01'
         population: 191904.0
+      - date: '2765-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - IND
       - date: '2770-01-01'
         population: 635945.0
       - date: '2780-01-01'
@@ -101,6 +113,12 @@ planet:
       - date: '3030-01-01'
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - ABN
   - name: Bellerophon II
     type: GAS_GIANT
     orbitalDist: 0.6

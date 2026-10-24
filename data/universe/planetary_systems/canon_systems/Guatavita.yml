@@ -72,7 +72,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2409-04-01'
@@ -120,14 +120,11 @@ planet:
         population: 137405957.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2580-01-01'
         population: 145746917.0
       - date: '2590-01-01'
@@ -237,15 +234,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Coventry Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Coventry Operational Area
+            - Region 2
       - date: '3042-01-01'
         socioIndustrial: B-C-B-C-B
       - date: '3050-01-01'
@@ -255,27 +249,27 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
-      - date: '3059-03-31'
         administration:
-          - Coventry Province
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3059-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
       - date: '3060-01-01'
         population: 172174862.0
       - date: '3070-01-01'
@@ -305,11 +299,10 @@ planet:
             - CJF
         population: 187299811.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3151-05-15'
         faction:
           source: canon
@@ -318,18 +311,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
       - date: '3152-12-31'
-        administration:
-          - Coventry Province
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
   - name: Ybarra
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.8

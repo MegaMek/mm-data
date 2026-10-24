@@ -58,12 +58,6 @@ planet:
         socioIndustrial: D-D-A-D-B
       - date: '2270-01-01'
         population: 70075.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 170646.0
       - date: '2290-01-01'
@@ -89,13 +83,10 @@ planet:
         population: 8771079.0
       - date: '2366-12-31'
         administration:
-          - Federation of Skye
-      - date: '2366-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
       - date: '2370-01-01'
         population: 11273168.0
       - date: '2380-01-01'
@@ -147,11 +138,10 @@ planet:
       - date: '2570-01-01'
         population: 54353709.0
       - date: '2571-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2580-01-01'
         population: 55462090.0
       - date: '2590-01-01'
@@ -252,7 +242,10 @@ planet:
         population: 45778786.0
       - date: '3025-12-31'
         administration:
-          - Silver Hawks Coalition
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Silver Hawks Coalition
       - date: '3028-01-01'
         socioIndustrial: C-F-B-D-B
       - date: '3030-01-01'
@@ -275,7 +268,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -283,9 +276,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SHC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3085-06-09'
         faction:
           source: canon
@@ -294,7 +291,7 @@ planet:
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SHC
       - date: '3090-01-01'
@@ -312,7 +309,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MSC
       - date: '3132-08-07'
@@ -325,12 +322,6 @@ planet:
           value:
             - CWE
         population: 53671222.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
       - date: '3151-11-04'
         faction:
           source: canon
@@ -339,18 +330,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Silver Hawks Coalition
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Silver Hawks Coalition
   - name: Berger
     type: TERRESTRIAL
     orbitalDist: 0.9

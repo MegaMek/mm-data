@@ -99,12 +99,6 @@ planet:
         socioIndustrial: F-D-B-D-D
       - date: '2270-01-01'
         population: 81113.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 197407.0
       - date: '2290-01-01'
@@ -127,12 +121,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
       - date: '2596-08-30'
         faction:
           source: canon
@@ -142,14 +130,11 @@ planet:
         socioIndustrial: C-D-B-D-F
       - date: '2596-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2600-01-01'
         population: 133407.0
       - date: '2603-01-01'
@@ -250,8 +235,11 @@ planet:
         population: 38571523.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-02-27'
         population: 38219843.0
         socioIndustrial: C-D-B-C-D
@@ -264,15 +252,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 2
       - date: '3047-01-01'
         socioIndustrial: C-D-B-C-F
       - date: '3050-01-01'
@@ -282,15 +267,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3060-01-01'
         population: 39668397.0
       - date: '3064-07-01'
@@ -301,12 +283,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - LA
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - LA
       - date: '3070-01-01'
@@ -333,7 +309,10 @@ planet:
         population: 42736563.0
       - date: '3145-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
   - name: La Forêt-le-Roi
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.6

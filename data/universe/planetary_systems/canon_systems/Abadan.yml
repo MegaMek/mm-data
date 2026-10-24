@@ -181,7 +181,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
       - date: '2280-01-01'
@@ -195,14 +195,16 @@ planet:
       - date: '2310-01-01'
         population: 15421589.0
       - date: '2317-12-31'
-        administration:
-          - Marik Commonwealth
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2320-01-01'
         population: 17989561.0
       - date: '2330-01-01'
@@ -390,9 +392,13 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 65293840.0
       - date: '3082-07-01'
@@ -402,7 +408,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture VII
       - date: '3090-01-01'
         population: 66506368.0
       - date: '3100-01-01'
@@ -422,6 +431,11 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3135-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3137-08-01'
         faction:
           source: canon
@@ -438,14 +452,10 @@ planet:
         population: 72435586.0
       - date: '3145-12-31'
         administration:
-          - Clan Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
-            - CP
+            - Clan Protectorate
   - name: Mictlancihuatl Belt
     type: ASTEROID_BELT
     orbitalDist: 5.2

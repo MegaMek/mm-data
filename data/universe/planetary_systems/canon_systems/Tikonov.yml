@@ -161,11 +161,10 @@ planet:
       - date: '2270-01-01'
         population: 141693439.0
       - date: '2271-12-31'
-        faction:
+        capitalType:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TGU
+          version: 2026.09.01
+          value: National Capital
       - date: '2280-01-01'
         population: 216299112.0
       - date: '2290-01-01'
@@ -236,15 +235,15 @@ planet:
         population: 4752652502.0
       - date: '2571-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-        capitalType: District Capital
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2580-01-01'
         population: 4835618187.0
       - date: '2590-01-01'
@@ -297,9 +296,11 @@ planet:
         population: 5270947350.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 3
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 3
       - date: '2790-01-01'
         population: 5245757913.0
       - date: '2800-01-01'
@@ -310,9 +311,11 @@ planet:
         population: 5249359640.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 7
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 7
       - date: '2830-01-01'
         population: 5245586464.0
       - date: '2840-01-01'
@@ -369,17 +372,22 @@ planet:
       - date: '3030-01-01'
         population: 5396833151.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Tikonov Operational Area
-          - Region 2
-        capitalType: Region Capital
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Tikonov Operational Area
+            - Region 2
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3032-10-02'
         faction:
           source: canon
@@ -394,15 +402,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3046-01-01'
         socioIndustrial:
           source: canon
@@ -415,9 +424,12 @@ planet:
         population: 5980664265.0
       - date: '3057-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '3060-01-01'
         population: 6230952835.0
       - date: '3063-09-08'
@@ -426,6 +438,12 @@ planet:
           value:
             - FC
             - LA
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FC
       - date: '3067-04-07'
         faction:
           source: canon
@@ -435,11 +453,10 @@ planet:
           source: canon
           value: 6378650000.0
       - date: '3067-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CC
+          version: 2026.09.01
+          value: []
       - date: '3069-02-01'
         faction:
           source: canon
@@ -455,7 +472,7 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
       - date: '3079-12-01'
@@ -463,24 +480,23 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 6460821496.0
       - date: '3081-12-31'
-        administration:
-          - Prefecture IV
-        capitalType: Region Capital
-      - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ROS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture IV
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3085-07-21'
         faction:
           source: canon
@@ -509,15 +525,16 @@ planet:
             - FS
       - date: '3135-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Valexa PDZ
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Valexa PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3140-01-01'
         population: 7034006627.0
       - date: '3145-01-01'
@@ -535,20 +552,22 @@ planet:
             - CC
       - date: '3145-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 7
-        capitalType: District Capital
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 7
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 11
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 11
   - name: Brahma's Stand
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.28

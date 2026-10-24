@@ -67,7 +67,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2310-10-22'
@@ -77,18 +77,6 @@ planet:
             - IND
         population: 54735.0
         socioIndustrial: C-D-C-D-C
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 286340.0
       - date: '2326-06-05'
@@ -103,7 +91,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -157,15 +145,17 @@ planet:
       - date: '2570-01-01'
         population: 2866036515.0
       - date: '2571-12-31'
-        administration:
-          - Galedon Military District
-          - Kaznejoy Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Kaznejoy Prefecture
       - date: '2580-01-01'
         population: 2934449255.0
       - date: '2590-01-01'
@@ -277,14 +267,20 @@ planet:
         population: 3087281868.0
       - date: '3067-12-31'
         administration:
-          - Galedon Military District
-          - Matsuida Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '3070-01-01'
         population: 3109279568.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Matsuida Prefecture
       - date: '3080-01-01'
         population: 3149964079.0
       - date: '3090-01-01'
@@ -305,7 +301,7 @@ planet:
         population: 3404135613.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - DC
@@ -320,16 +316,6 @@ planet:
           value:
             - DC
         population: 3456273720.0
-      - date: '3145-12-31'
-        administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DC
   - name: Bi's Redoubt
     type: ICE_GIANT
     orbitalDist: 0.42

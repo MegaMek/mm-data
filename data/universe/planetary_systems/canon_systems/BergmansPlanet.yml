@@ -306,7 +306,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2288-03-10'
@@ -323,18 +323,6 @@ planet:
       - date: '2310-12-09'
         population: 614583.0
         socioIndustrial: C-C-C-C-D
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1582983.0
       - date: '2330-01-01'
@@ -353,7 +341,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -399,15 +387,17 @@ planet:
       - date: '2570-01-01'
         population: 509557891.0
       - date: '2571-12-31'
-        administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '2580-01-01'
         population: 520754321.0
       - date: '2590-01-01'
@@ -462,16 +452,18 @@ planet:
       - date: '2820-01-01'
         population: 597016136.0
       - date: '2821-12-31'
-        administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 4
-      - date: '2821-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 4
       - date: '2830-01-01'
         population: 575180073.0
       - date: '2840-01-01'
@@ -483,15 +475,17 @@ planet:
       - date: '2860-01-01'
         population: 546062942.0
       - date: '2864-12-31'
-        administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '2864-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '2870-01-01'
         population: 537934653.0
       - date: '2880-01-01'
@@ -532,15 +526,12 @@ planet:
         population: 427381735.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Raman PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Raman PDZ
       - date: '3030-06-11'
         faction:
           source: canon
@@ -549,14 +540,11 @@ planet:
         population: 421402125.0
       - date: '3030-12-31'
         administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '3040-01-01'
         population: 425467066.0
       - date: '3046-01-01'
@@ -569,8 +557,11 @@ planet:
         population: 439302194.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Matsuida Prefecture
       - date: '3080-01-01'
         population: 442388097.0
       - date: '3090-01-01'
@@ -590,11 +581,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Ganesha
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.6

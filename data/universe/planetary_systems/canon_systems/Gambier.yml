@@ -76,7 +76,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2300-04-15'
@@ -88,12 +88,6 @@ planet:
         socioIndustrial: D-D-D-D-F
       - date: '2310-01-01'
         population: 165667.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 441094.0
       - date: '2330-01-01'
@@ -107,7 +101,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -157,16 +151,18 @@ planet:
       - date: '2570-01-01'
         population: 134647855.0
       - date: '2571-12-31'
-        administration:
-          - Crucis March
-          - Minette Operational Area
-          - Tsamma Combat Region
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Crucis March
+            - Minette Operational Area
+            - Tsamma Combat Region
       - date: '2580-01-01'
         population: 137585608.0
       - date: '2584-01-01'
@@ -275,12 +271,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3047-01-01'
         socioIndustrial: D-C-D-D-D
       - date: '3050-01-01'
@@ -290,12 +280,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -326,29 +310,31 @@ planet:
         population: 158287378.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Tancredi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - New Samarkand Military District
+            - Tancredi Prefecture
       - date: '3151-12-31'
         administration:
-          - New Samarkand Military District
-          - New Avalon Prefecture
-      - date: '3152-12-31'
-        administration:
-          - Crucis March
-          - Minette Operational Area
-          - Tsamma Combat Region
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - New Avalon Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Crucis March
+            - Minette Operational Area
+            - Tsamma Combat Region
   - name: Catibog's Belt
     type: ASTEROID_BELT
     orbitalDist: 0.7

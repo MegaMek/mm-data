@@ -58,7 +58,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2302-09-03'
@@ -70,12 +70,6 @@ planet:
         socioIndustrial: D-D-D-D-B
       - date: '2310-01-01'
         population: 205333.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 833503.0
       - date: '2330-01-01'
@@ -91,7 +85,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
       - date: '2367-06-07'
@@ -150,14 +144,11 @@ planet:
             - CC
       - date: '2571-12-31'
         administration:
-          - St. Ives Commonality
-          - Region 6
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - St. Ives Commonality
+            - Region 6
       - date: '2580-01-01'
         population: 2432664586.0
       - date: '2590-01-01'
@@ -228,15 +219,12 @@ planet:
             - FS
       - date: '2864-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2870-01-01'
         population: 2615844519.0
       - date: '2880-01-01'
@@ -275,9 +263,12 @@ planet:
         socioIndustrial: B-C-F-B-C
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 2103134868.0
       - date: '3040-01-01'
@@ -285,12 +276,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3043-01-01'
@@ -302,12 +287,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -338,25 +317,24 @@ planet:
         population: 2506103172.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 12
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Carmacks Prefecture
+            - Sian Commonality
+            - Region 12
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Carmacks Prefecture
   - name: Jeffries
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.14

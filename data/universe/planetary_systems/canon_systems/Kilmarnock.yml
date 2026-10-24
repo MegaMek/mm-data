@@ -95,7 +95,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2305-05-10'
@@ -107,12 +107,6 @@ planet:
         socioIndustrial: D-D-B-F-D
       - date: '2310-01-01'
         population: 124722.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2319-08-18'
         faction:
           source: canon
@@ -121,7 +115,7 @@ planet:
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AG
       - date: '2320-01-01'
@@ -133,7 +127,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2350-01-01'
@@ -184,17 +178,20 @@ planet:
         population: 423574444.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 435186094.0
       - date: '2590-01-01'
         population: 445757581.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 450597214.0
       - date: '2610-01-01'
@@ -234,9 +231,10 @@ planet:
       - date: '2750-01-01'
         population: 464944549.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 461546837.0
       - date: '2770-01-01'

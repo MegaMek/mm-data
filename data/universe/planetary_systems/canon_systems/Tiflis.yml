@@ -138,7 +138,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-07-23'
@@ -148,12 +148,6 @@ planet:
             - IND
         population: 47036.0
         socioIndustrial: F-D-D-D-B
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-03-09'
         faction:
           source: canon
@@ -167,7 +161,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -219,15 +213,17 @@ planet:
       - date: '2570-01-01'
         population: 246212147.0
       - date: '2571-12-31'
-        administration:
-          - Galedon Military District
-          - New Samarkand Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - New Samarkand Prefecture
       - date: '2580-01-01'
         population: 252229767.0
       - date: '2590-01-01'
@@ -349,8 +345,11 @@ planet:
         population: 231693948.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - New Samarkand Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - New Samarkand Prefecture
       - date: '3080-01-01'
         population: 235101494.0
       - date: '3090-01-01'

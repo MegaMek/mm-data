@@ -145,12 +145,6 @@ planet:
         population: 183639.0
       - date: '2270-01-01'
         population: 594037.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1639761.0
       - date: '2290-01-01'
@@ -179,7 +173,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -225,15 +219,17 @@ planet:
       - date: '2570-01-01'
         population: 1103623860.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2580-01-01'
         population: 1131484977.0
       - date: '2590-01-01'
@@ -347,15 +343,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Alcor Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Alcor Operational Area
+            - Region 2
       - date: '3045-01-01'
         socioIndustrial: B-C-A-B-C
       - date: '3050-01-01'
@@ -365,16 +358,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 1102515996.0
       - date: '3070-01-01'
@@ -385,20 +375,13 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-12-25'
         faction:
           source: canon
-          value:
-            - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - Stone
       - date: '3080-01-01'
@@ -410,13 +393,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3090-01-01'
         population: 1132010026.0
       - date: '3100-01-01'
@@ -437,11 +417,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1174913863.0
       - date: '3145-10-13'
@@ -450,12 +429,6 @@ planet:
           value:
             - CWE
         population: 1179622930.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
   - name: Marshall
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.84

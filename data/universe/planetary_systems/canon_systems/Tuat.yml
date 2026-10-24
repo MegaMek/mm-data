@@ -85,7 +85,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2322-01-23'
@@ -99,12 +99,6 @@ planet:
         population: 132793.0
       - date: '2340-01-01'
         population: 418707.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 1116205.0
       - date: '2360-01-01'
@@ -157,23 +151,20 @@ planet:
         population: 283282247.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 293125075.0
       - date: '2590-01-01'
         population: 301858568.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 310398448.0
       - date: '2601-01-01'
@@ -211,9 +202,10 @@ planet:
       - date: '2750-01-01'
         population: 333543800.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 336198225.0
       - date: '2770-01-01'
@@ -255,11 +247,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: 71-4
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

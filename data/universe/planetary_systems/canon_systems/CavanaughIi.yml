@@ -164,7 +164,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2303-01-16'
@@ -176,24 +176,12 @@ planet:
         socioIndustrial: D-D-C-D-D
       - date: '2310-01-01'
         population: 101097.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 316843.0
       - date: '2330-01-01'
         population: 843140.0
       - date: '2340-01-01'
         population: 1946817.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2350-01-01'
         population: 3979076.0
       - date: '2360-01-01'
@@ -205,12 +193,6 @@ planet:
           source: canon
           value:
             - LA
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 12339030.0
       - date: '2380-01-01'
@@ -255,14 +237,11 @@ planet:
         population: 267764744.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Alarion Province
       - date: '2580-01-01'
         population: 275932246.0
       - date: '2590-01-01'
@@ -332,11 +311,10 @@ planet:
           value:
             - FWL
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2830-01-01'
         population: 308457782.0
       - date: '2840-01-01'
@@ -387,20 +365,20 @@ planet:
         population: 271137645.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Alarion Province
       - date: '3030-01-01'
         population: 271772978.0
       - date: '3030-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3034-01-01'
         socioIndustrial: C-C-D-C-D
       - date: '3040-01-01'
@@ -412,15 +390,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Bolan Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Bolan Operational Area
+            - Region 2
       - date: '3046-01-01'
         socioIndustrial:
           source: canon
@@ -432,17 +407,17 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3060-01-01'
         population: 278652944.0
       - date: '3068-09-28'
@@ -451,11 +426,14 @@ planet:
           value:
             - FWL
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3070-01-01'
         population: 280582298.0
       - date: '3079-10-01'
@@ -465,14 +443,11 @@ planet:
             - LA
       - date: '3079-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
-      - date: '3079-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Dixie Theater
       - date: '3080-01-01'
         population: 283402197.0
       - date: '3090-01-01'
@@ -489,9 +464,15 @@ planet:
         population: 297218357.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3140-01-01'
         population: 302374731.0
       - date: '3145-06-17'
@@ -501,14 +482,20 @@ planet:
             - DTA
         population: 304986367.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
   - name: Cavanaugh V
     type: ICE_GIANT
     orbitalDist: 0.28

@@ -125,7 +125,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2673-01-13'
@@ -167,14 +167,11 @@ planet:
         population: 7717238251.0
       - date: '2750-12-31'
         administration:
-          - Pesht Military District
-          - Pusht-i-rud Prefecture
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Pusht-i-rud Prefecture
       - date: '2760-01-01'
         population: 7917756411.0
       - date: '2767-11-08'
@@ -246,9 +243,15 @@ planet:
           value: 2304000000.0
       - date: '3025-12-31'
         administration:
-          - Pesht Military District
-          - Qandahar Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Qandahar Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3028-01-01'
         socioIndustrial: B-B-B-C-D
       - date: '3030-01-01'
@@ -273,12 +276,6 @@ planet:
       - date: '3078-04-15'
         faction:
           source: canon
-          value:
-            - DC
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - DC
       - date: '3080-01-01'

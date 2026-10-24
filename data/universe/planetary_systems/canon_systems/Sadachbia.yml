@@ -125,7 +125,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2272-11-04'
@@ -145,12 +145,6 @@ planet:
         population: 3039742.0
       - date: '2310-01-01'
         population: 8897401.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 22538806.0
       - date: '2330-01-01'
@@ -165,7 +159,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -217,15 +211,17 @@ planet:
       - date: '2570-01-01'
         population: 6314515447.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Ashio Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Ashio Prefecture
       - date: '2580-01-01'
         population: 6408183792.0
       - date: '2590-01-01'
@@ -282,8 +278,11 @@ planet:
         population: 6610342404.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '2830-01-01'
         population: 6513969027.0
       - date: '2840-01-01'
@@ -330,8 +329,11 @@ planet:
         population: 4555010057.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3030-01-01'
         population: 4519419975.0
       - date: '3037-01-01'
@@ -348,8 +350,11 @@ planet:
         population: 4765886965.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '3080-01-01'
         population: 4830179650.0
       - date: '3081-05-15'
@@ -359,13 +364,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 4905140131.0
       - date: '3100-01-01'
@@ -387,22 +389,22 @@ planet:
             - DC
       - date: '3135-12-31'
         administration:
-          - Benjamin Military District
-          - Algedi Prefecture
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Algedi Prefecture
       - date: '3140-01-01'
         population: 5328574007.0
       - date: '3145-01-01'
         population: 5349930989.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
   - name: Kara
     type: ICE_GIANT
     orbitalDist: 0.7

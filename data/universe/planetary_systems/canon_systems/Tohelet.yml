@@ -65,7 +65,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2371-08-05'
@@ -120,13 +120,10 @@ planet:
         population: 140207573.0
       - date: '2571-12-31'
         administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 146633613.0
       - date: '2590-01-01'
@@ -169,7 +166,10 @@ planet:
         population: 182720734.0
       - date: '2750-12-31'
         administration:
-          - Rim Commonality
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
       - date: '2760-01-01'
         population: 181582066.0
       - date: '2770-01-01'
@@ -247,11 +247,10 @@ planet:
           value:
             - RCM
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RCM
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 167029813.0
       - date: '3090-01-01'
@@ -273,14 +272,16 @@ planet:
       - date: '3145-01-01'
         population: 186974514.0
       - date: '3145-12-31'
-        administration:
-          - Rim Commonality
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
   - name: Mellingen
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.8

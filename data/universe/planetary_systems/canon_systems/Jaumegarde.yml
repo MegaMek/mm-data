@@ -68,7 +68,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2273-11-15'
@@ -86,24 +86,12 @@ planet:
         population: 1176870.0
       - date: '2310-01-01'
         population: 2931084.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 6459279.0
       - date: '2330-01-01'
         population: 12810282.0
       - date: '2340-01-01'
         population: 23130658.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2345-09-12'
         faction:
           source: canon
@@ -116,7 +104,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -164,15 +152,17 @@ planet:
       - date: '2570-01-01'
         population: 796496884.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 816605380.0
       - date: '2590-01-01'
@@ -273,8 +263,11 @@ planet:
         population: 607825988.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-05-04'
         population: 610608561.0
         socioIndustrial: D-F-C-D-F
@@ -287,15 +280,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Pherkad Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Pherkad Operational Area
+            - Region 3
       - date: '3042-01-01'
         socioIndustrial: D-D-C-D-D
       - date: '3048-01-01'
@@ -307,15 +297,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3060-01-01'
         population: 625127795.0
       - date: '3070-01-01'
@@ -340,7 +327,10 @@ planet:
         population: 668780631.0
       - date: '3145-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
   - name: 64R1 Belt
     type: ASTEROID_BELT
     orbitalDist: 0.8

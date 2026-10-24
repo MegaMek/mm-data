@@ -53,7 +53,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2544-08-16'
@@ -73,14 +73,11 @@ planet:
         population: 3734538.0
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Trondheim Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Trondheim Prefecture
       - date: '2580-01-01'
         population: 9845679.0
       - date: '2590-01-01'
@@ -180,8 +177,11 @@ planet:
         population: 144956479.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Kirchbach Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Kirchbach Prefecture
       - date: '3028-01-01'
         socioIndustrial: D-D-C-C-D
       - date: '3030-01-01'
@@ -194,14 +194,17 @@ planet:
       - date: '3040-01-01'
         population: 146753301.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
       - date: '3042-01-01'
         socioIndustrial: D-D-C-C-F
       - date: '3050-01-01'
@@ -215,9 +218,13 @@ planet:
       - date: '3050-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CGB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3050-05-27'
         faction:
           source: canon
@@ -246,13 +253,10 @@ planet:
         population: 156015124.0
       - date: '3130-12-31'
         administration:
-          - Region 1
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 1
       - date: '3131-01-01'
         socioIndustrial: C-D-C-C-F
       - date: '3132-08-07'

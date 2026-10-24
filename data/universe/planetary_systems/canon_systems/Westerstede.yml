@@ -52,7 +52,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2314-01-30'
@@ -62,12 +62,6 @@ planet:
             - PD
         population: 52641.0
         socioIndustrial: D-D-A-F-D
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 123302.0
       - date: '2330-01-01'
@@ -82,7 +76,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PD
       - date: '2350-01-01'
@@ -90,14 +84,16 @@ planet:
       - date: '2360-01-01'
         population: 6842209.0
       - date: '2366-12-31'
-        administration:
-          - Protectorate of Donegal
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
       - date: '2370-01-01'
         population: 13344186.0
       - date: '2380-01-01'
@@ -144,8 +140,11 @@ planet:
         population: 511382991.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - District of Donegal
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - District of Donegal
       - date: '2580-01-01'
         population: 518663377.0
       - date: '2590-01-01'
@@ -258,15 +257,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Pherkad Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Pherkad Operational Area
+            - Region 1
       - date: '3042-01-01'
         socioIndustrial: B-C-A-C-C
       - date: '3050-01-01'
@@ -276,15 +272,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
       - date: '3060-01-01'
         population: 383065683.0
       - date: '3070-01-01'
@@ -314,11 +307,10 @@ planet:
             - CJF
         population: 396869087.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3152-06-01'
         faction:
           source: canon
@@ -326,13 +318,10 @@ planet:
             - LA
       - date: '3152-12-31'
         administration:
-          - Donegal Province
-      - date: '3152-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Donegal Province
   - name: Moeflehnersredoute
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.35

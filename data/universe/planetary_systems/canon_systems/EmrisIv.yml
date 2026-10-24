@@ -142,12 +142,6 @@ planet:
         socioIndustrial: D-D-B-D-F
       - date: '2270-01-01'
         population: 111994.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-02-02'
         faction:
           source: canon
@@ -163,7 +157,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -181,7 +175,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -230,7 +224,10 @@ planet:
         population: 1030344668.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 1051237698.0
       - date: '2590-01-01'
@@ -359,13 +356,10 @@ planet:
         population: 988323554.0
       - date: '3025-12-31'
         administration:
-          - The Protectorate
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - The Protectorate
       - date: '3030-01-01'
         population: 990537119.0
       - date: '3040-01-01'
@@ -392,7 +386,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -400,9 +394,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3090-01-01'
         population: 1032199602.0
       - date: '3100-01-01'
@@ -419,12 +417,6 @@ planet:
           value:
             - OP
         population: 1037996135.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -434,14 +426,16 @@ planet:
       - date: '3145-01-01'
         population: 1038203755.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Emris V
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.8

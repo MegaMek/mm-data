@@ -136,12 +136,6 @@ planet:
         population: 460476.0
       - date: '2270-01-01'
         population: 973086.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1857285.0
       - date: '2290-01-01'
@@ -160,12 +154,6 @@ planet:
         population: 16643189.0
       - date: '2340-01-01'
         population: 22303364.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 28838221.0
       - date: '2360-01-01'
@@ -214,7 +202,10 @@ planet:
         population: 124508155.0
       - date: '2571-12-31'
         administration:
-          - Lone Star Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2580-01-01'
         population: 126787608.0
       - date: '2590-01-01'
@@ -264,7 +255,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -276,12 +267,6 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 143150370.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-03-10'
         faction:
           source: canon
@@ -296,20 +281,20 @@ planet:
         population: 124693428.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Lone Star Prefecture
       - date: '2830-01-01'
         population: 119115392.0
       - date: '2830-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
       - date: '2840-01-01'
         population: 114167012.0
       - date: '2847-01-01'
@@ -354,8 +339,11 @@ planet:
         population: 84422404.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3030-01-01'
         population: 83623260.0
       - date: '3040-01-01'
@@ -374,11 +362,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-05-10'
         faction:
           source: canon
@@ -390,12 +377,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 87656144.0
       - date: '3081-02-01'
@@ -405,13 +386,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 88501695.0
       - date: '3100-01-01'
@@ -430,11 +408,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 94975761.0
       - date: '3145-06-15'
@@ -445,14 +422,11 @@ planet:
         population: 95547328.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Al Na'ir Prefecture
   - name: Xango
     type: TERRESTRIAL
     orbitalDist: 1.05

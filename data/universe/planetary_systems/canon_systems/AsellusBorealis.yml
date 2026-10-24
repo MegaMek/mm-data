@@ -75,7 +75,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -91,7 +91,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -138,7 +138,10 @@ planet:
         population: 883655948.0
       - date: '2571-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2580-01-01'
         population: 889071565.0
       - date: '2590-01-01'
@@ -250,6 +253,11 @@ planet:
             - FWL
       - date: '3020-01-01'
         population: 696027982.0
+      - date: '3025-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3028-01-01'
         socioIndustrial: D-F-B-F-D
       - date: '3030-01-01'
@@ -301,14 +309,10 @@ planet:
         population: 769744880.0
       - date: '3145-12-31'
         administration:
-          - Clan Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
-            - CP
+            - Clan Protectorate
   - name: Yellowknife
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.7

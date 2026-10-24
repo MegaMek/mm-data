@@ -103,7 +103,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2350-01-24'
@@ -117,12 +117,6 @@ planet:
         socioIndustrial: C-D-B-C-C
       - date: '2360-01-01'
         population: 254545.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '2370-01-01'
         population: 821713.0
       - date: '2380-01-01'
@@ -168,19 +162,21 @@ planet:
         population: 323865475.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2580-01-01'
         population: 336687174.0
       - date: '2590-01-01'
         population: 349229758.0
       - date: '2596-12-31'
-        administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2600-01-01'
         population: 359118356.0
       - date: '2610-01-01'
@@ -225,9 +221,11 @@ planet:
         population: 350406490.0
       - date: '2783-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
       - date: '2790-01-01'
         population: 347316296.0
       - date: '2800-01-01'
@@ -238,10 +236,12 @@ planet:
         population: 333485967.0
       - date: '2822-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2830-01-01'
         population: 329157127.0
       - date: '2840-01-01'
@@ -288,10 +288,12 @@ planet:
         population: 268797713.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 267513411.0
       - date: '3037-01-01'
@@ -303,12 +305,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3041-01-01'
         socioIndustrial: A-C-B-B-B
       - date: '3050-01-01'
@@ -318,12 +314,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -352,26 +342,32 @@ planet:
         population: 293703190.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
-        capitalType: Region Capital
+            - Sian Commonality
+            - Region 13
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
   - name: Saint-Antoine-de-Tilly
     type: GIANT_TERRESTRIAL
     orbitalDist: 4.48

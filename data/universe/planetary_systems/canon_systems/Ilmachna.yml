@@ -56,7 +56,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2610-03-31'
@@ -103,14 +103,11 @@ planet:
         population: 866073770.0
       - date: '2750-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '2760-01-01'
         population: 868524441.0
       - date: '2770-01-01'
@@ -119,8 +116,11 @@ planet:
         population: 866809531.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 5
       - date: '2790-01-01'
         population: 692948995.0
       - date: '2800-01-01'
@@ -131,8 +131,11 @@ planet:
         population: 13266849.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
       - date: '2830-01-01'
         population: 3153298.0
       - date: '2840-01-01'
@@ -149,11 +152,10 @@ planet:
           value:
             - FWL
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2870-01-01'
         population: 53322.0
       - date: '2880-01-01'
@@ -176,12 +178,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3025-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Alirajpur
     type: GAS_GIANT
     orbitalDist: 0.7

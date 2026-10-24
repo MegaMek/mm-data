@@ -76,7 +76,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2349-01-15'
@@ -92,12 +92,6 @@ planet:
         population: 225419.0
       - date: '2362-01-01'
         socioIndustrial: C-D-A-D-B
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2370-01-01'
         population: 755805.0
       - date: '2380-01-01'
@@ -144,7 +138,10 @@ planet:
         population: 459337310.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 479885446.0
       - date: '2590-01-01'
@@ -245,7 +242,10 @@ planet:
         population: 387692873.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3030-01-01'
         population: 388353942.0
       - date: '3031-01-01'
@@ -268,7 +268,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -276,9 +276,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-03-17'
         faction:
           source: canon
@@ -288,12 +292,6 @@ planet:
         population: 413317947.0
       - date: '3091-01-01'
         socioIndustrial: B-B-A-C-B
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-01'
         population: 416471130.0
       - date: '3110-01-01'
@@ -309,14 +307,16 @@ planet:
       - date: '3145-01-01'
         population: 418140351.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Lukou
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.8

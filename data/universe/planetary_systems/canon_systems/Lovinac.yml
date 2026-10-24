@@ -66,7 +66,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2510-07-19'
@@ -91,14 +91,11 @@ planet:
         population: 62573167.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Trellshire
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Trellshire
       - date: '2580-01-01'
         population: 95530495.0
       - date: '2590-01-01'
@@ -170,14 +167,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Rasalhague Military District
-          - Radstadt Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Radstadt Prefecture
       - date: '2830-01-01'
         population: 311350631.0
       - date: '2840-01-01'
@@ -224,8 +218,11 @@ planet:
         population: 210315239.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Kirchbach Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Kirchbach Prefecture
       - date: '3030-08-31'
         population: 212653260.0
         socioIndustrial: C-C-C-C-C
@@ -237,14 +234,17 @@ planet:
       - date: '3040-01-01'
         population: 214726033.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
       - date: '3048-01-01'
         socioIndustrial: B-B-B-B-B
       - date: '3050-01-01'
@@ -255,11 +255,10 @@ planet:
           value:
             - CW
       - date: '3050-06-30'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 218560519.0
       - date: '3070-01-01'
@@ -267,12 +266,6 @@ planet:
       - date: '3071-04-27'
         faction:
           source: canon
-          value:
-            - CHH
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CHH
       - date: '3080-01-01'

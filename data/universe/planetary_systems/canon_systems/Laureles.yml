@@ -112,7 +112,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
       - date: '2280-01-01'
@@ -124,14 +124,16 @@ planet:
       - date: '2310-01-01'
         population: 12601562.0
       - date: '2317-12-31'
-        administration:
-          - Marik Commonwealth
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2320-01-01'
         population: 19925069.0
       - date: '2330-01-01'
@@ -306,15 +308,19 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 458857271.0
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MSC
       - date: '3090-01-01'
@@ -339,12 +345,6 @@ planet:
           value:
             - CWE
         population: 467098056.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
   - name: Ombues De Lavalle
     type: DWARF_TERRESTRIAL
     orbitalDist: 2.24

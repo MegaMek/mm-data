@@ -98,7 +98,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-09-19'
@@ -108,12 +108,6 @@ planet:
             - IND
         population: 38409.0
         socioIndustrial: D-D-A-D-D
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 44415.0
       - date: '2327-01-01'
@@ -134,7 +128,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -188,14 +182,11 @@ planet:
             - LA
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 346748426.0
       - date: '2590-01-01'
@@ -311,16 +302,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 2
-        capitalType: Region Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 2
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3041-01-01'
         socioIndustrial: C-C-A-C-B
       - date: '3050-01-01'
@@ -331,22 +322,19 @@ planet:
           value:
             - CSV
       - date: '3052-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CSV
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 376518191.0
       - date: '3062-10-30'
         faction:
           source: canon
-          value:
-            - CJF
-      - date: '3063-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CJF
       - date: '3070-01-01'
@@ -374,12 +362,6 @@ planet:
       - date: '3151-11-15'
         faction:
           source: canon
-          value:
-            - CHH
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CHH
   - name: Amaya's Belt A

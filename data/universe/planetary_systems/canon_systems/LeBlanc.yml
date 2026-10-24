@@ -168,12 +168,6 @@ planet:
         population: 10020285.0
       - date: '2270-01-01'
         population: 13676756.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 18045195.0
       - date: '2290-01-01'
@@ -200,7 +194,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -246,16 +240,18 @@ planet:
       - date: '2570-01-01'
         population: 142417268.0
       - date: '2571-12-31'
-        administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 2
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 2
       - date: '2580-01-01'
         population: 142179447.0
       - date: '2590-01-01'
@@ -328,15 +324,12 @@ planet:
         population: 110752446.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 107468187.0
       - date: '2840-01-01'
@@ -347,9 +340,12 @@ planet:
         population: 102512884.0
       - date: '2864-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 2
       - date: '2868-01-01'
         socioIndustrial: D-D-B-F-D
       - date: '2870-01-01'
@@ -388,9 +384,12 @@ planet:
         population: 57920126.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Le Blanc PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Le Blanc PDZ
       - date: '3030-01-01'
         population: 55460685.0
       - date: '3040-01-01'
@@ -398,12 +397,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3042-01-01'
@@ -427,12 +420,6 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 57315689.0
       - date: '3080-01-01'
@@ -449,9 +436,12 @@ planet:
         population: 61730269.0
       - date: '3130-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Kentares PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Kentares PDZ
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -468,25 +458,24 @@ planet:
         population: 62375614.0
       - date: '3145-12-31'
         administration:
-          - Benjamin Military District
-          - Irurzun Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
-      - date: '3151-12-31'
-        administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Kentares PDZ
+            - Benjamin Military District
+            - Irurzun Prefecture
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Kentares PDZ
   - name: Frontière de Brunet
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.08

@@ -109,7 +109,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2694-04-02'
@@ -137,15 +137,12 @@ planet:
         population: 923464008.0
       - date: '2750-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 984549521.0
       - date: '2770-01-01'
@@ -162,13 +159,19 @@ planet:
         population: 34381302.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
       - date: '2822-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 2
       - date: '2830-01-01'
         population: 11229266.0
       - date: '2840-01-01'
@@ -186,14 +189,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2870-01-01'
         population: 222741.0
       - date: '2880-01-01'
@@ -221,11 +221,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Kilanowicz
     type: ICE_GIANT
     orbitalDist: 3.64

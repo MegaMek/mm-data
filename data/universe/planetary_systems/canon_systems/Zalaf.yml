@@ -57,7 +57,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2396-06-30'
@@ -109,14 +109,11 @@ planet:
         population: 159039387.0
       - date: '2571-12-31'
         administration:
-          - Galedon Military District
-          - New Samarkand Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - New Samarkand Prefecture
       - date: '2580-01-01'
         population: 165869525.0
       - date: '2590-01-01'
@@ -231,8 +228,11 @@ planet:
         population: 177005897.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - New Samarkand Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - New Samarkand Prefecture
       - date: '3080-01-01'
         population: 179824801.0
       - date: '3090-01-01'
@@ -258,11 +258,10 @@ planet:
             - RA
         population: 196209516.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: Y1 Belt
     type: ASTEROID_BELT
     orbitalDist: 0.07

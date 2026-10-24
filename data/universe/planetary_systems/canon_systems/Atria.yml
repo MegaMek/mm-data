@@ -194,12 +194,6 @@ planet:
         population: 492916.0
       - date: '2270-01-01'
         population: 1521594.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 4049958.0
       - date: '2290-01-01'
@@ -220,12 +214,6 @@ planet:
         population: 103651303.0
       - date: '2340-01-01'
         population: 156817879.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 223824790.0
       - date: '2360-01-01'
@@ -276,7 +264,10 @@ planet:
         population: 2063888731.0
       - date: '2571-12-31'
         administration:
-          - Lone Star Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2580-01-01'
         population: 2096332651.0
       - date: '2590-01-01'
@@ -327,11 +318,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2398276379.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-11-06'
         faction:
           source: canon
@@ -340,11 +341,11 @@ planet:
       - date: '2780-01-01'
         population: 2365019791.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lone Star Province
       - date: '2790-10-18'
         faction:
           source: canon
@@ -362,20 +363,20 @@ planet:
         population: 2193031764.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Lone Star Prefecture
       - date: '2830-01-01'
         population: 2162621277.0
       - date: '2830-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
       - date: '2840-01-01'
         population: 2128323896.0
       - date: '2841-01-01'
@@ -390,14 +391,11 @@ planet:
         population: 2073297616.0
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '2870-01-01'
         population: 2042186082.0
       - date: '2880-01-01'
@@ -438,14 +436,11 @@ planet:
         population: 1768522375.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3030-10-27'
         faction:
           source: canon
@@ -454,14 +449,11 @@ planet:
         population: 1774992401.0
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '3033-01-01'
         socioIndustrial: B-C-C-C-C
       - date: '3040-01-01'
@@ -473,15 +465,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 3
       - date: '3046-01-01'
         socioIndustrial: A-B-B-B-C
       - date: '3050-01-01'
@@ -500,13 +489,16 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 1811574110.0
       - date: '3062-08-07'
@@ -516,14 +508,11 @@ planet:
             - DC
       - date: '3063-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3070-01-01'
         population: 1828134671.0
       - date: '3080-01-01'
@@ -535,13 +524,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
       - date: '3090-01-01'
         population: 1873289809.0
       - date: '3097-01-01'
@@ -562,11 +548,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1869546974.0
       - date: '3145-09-17'
@@ -577,14 +562,11 @@ planet:
         population: 1871791777.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3149-02-01'
         faction:
           source: canon
@@ -595,15 +577,12 @@ planet:
           source: canon
           value:
             - RD
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - RD
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Duryodhana
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.64

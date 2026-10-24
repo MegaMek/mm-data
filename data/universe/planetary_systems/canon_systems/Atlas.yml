@@ -87,7 +87,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2304-06-22'
@@ -99,12 +99,6 @@ planet:
         socioIndustrial: D-D-C-D-D
       - date: '2310-01-01'
         population: 117795.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 518333.0
       - date: '2330-01-01'
@@ -118,7 +112,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
       - date: '2367-12-18'
@@ -178,14 +172,11 @@ planet:
             - CC
       - date: '2571-12-31'
         administration:
-          - St. Ives Commonality
-          - Region 7
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - St. Ives Commonality
+            - Region 7
       - date: '2580-01-01'
         population: 2469627150.0
       - date: '2590-01-01'
@@ -246,15 +237,12 @@ planet:
             - FS
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 2978653008.0
       - date: '2840-01-01'
@@ -301,9 +289,12 @@ planet:
         population: 2494284781.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Alcyone PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Alcyone PDZ
       - date: '3028-01-01'
         socioIndustrial: B-C-D-B-C
       - date: '3030-01-01'
@@ -315,12 +306,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3047-01-01'
         socioIndustrial: A-B-C-A-C
       - date: '3050-01-01'
@@ -330,12 +315,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -354,9 +333,12 @@ planet:
         population: 2724564071.0
       - date: '3130-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Kittery Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Kittery Prefecture
       - date: '3132-08-07'
         hpg: X
       - date: '3133-01-01'
@@ -371,25 +353,24 @@ planet:
         population: 2744251723.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 12
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Carmacks Prefecture
+            - Sian Commonality
+            - Region 12
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Carmacks Prefecture
   - name: Kronos Belt
     type: ASTEROID_BELT
     orbitalDist: 2.24

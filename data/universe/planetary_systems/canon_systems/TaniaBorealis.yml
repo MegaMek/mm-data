@@ -127,7 +127,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SC
       - date: '2280-01-01'
@@ -145,7 +145,10 @@ planet:
         population: 5808614.0
       - date: '2317-12-31'
         administration:
-          - Stewart Confederation
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stewart Confederation
       - date: '2320-01-01'
         population: 11047601.0
       - date: '2330-01-01'
@@ -301,7 +304,10 @@ planet:
         population: 775684023.0
       - date: '3025-12-31'
         administration:
-          - Stewart Commonality
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stewart Commonality
       - date: '3030-01-01'
         population: 774580208.0
       - date: '3037-01-01'
@@ -323,7 +329,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -331,9 +337,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3082-06-22'
         faction:
           source: canon
@@ -341,7 +351,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture VII
       - date: '3090-01-01'
         population: 813805355.0
       - date: '3100-01-01'
@@ -361,6 +374,11 @@ planet:
           source: canon
           value:
             - IND
+      - date: '3135-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 827923878.0
       - date: '3145-06-15'
@@ -377,19 +395,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Clan Protectorate
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
             - CP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Clan Protectorate
   - name: O'Day's Pride
     type: TERRESTRIAL
     orbitalDist: 2.8

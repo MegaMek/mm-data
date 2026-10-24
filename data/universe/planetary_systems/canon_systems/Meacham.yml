@@ -125,12 +125,6 @@ planet:
         population: 165709251.0
       - date: '2270-01-01'
         population: 262777662.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 394929468.0
       - date: '2290-01-01'
@@ -139,12 +133,6 @@ planet:
         population: 769012159.0
       - date: '2310-01-01'
         population: 1009135258.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TamP
       - date: '2320-01-01'
         population: 1281230034.0
       - date: '2330-01-01'
@@ -159,7 +147,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2345-01-01'
@@ -169,14 +157,16 @@ planet:
       - date: '2360-01-01'
         population: 2574226704.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 2906634064.0
       - date: '2380-01-01'
@@ -221,8 +211,11 @@ planet:
         population: 7038478425.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 7057994416.0
       - date: '2590-01-01'
@@ -291,8 +284,11 @@ planet:
         population: 7223629552.0
       - date: '2864-12-31'
         administration:
-          - Tamar Pact
-          - Orkney Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Orkney Shire
       - date: '2870-01-01'
         population: 7160797746.0
       - date: '2880-01-01'
@@ -329,8 +325,11 @@ planet:
         population: 6432846091.0
       - date: '3025-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '3026-01-01'
         socioIndustrial: B-B-D-B-B
       - date: '3029-01-01'
@@ -346,55 +345,61 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 3
       - date: '3041-01-01'
         socioIndustrial: A-A-D-A-C
       - date: '3050-01-01'
         population: 6593539828.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 2
       - date: '3057-09-18'
         faction:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
       - date: '3060-01-01'
         population: 6667135823.0
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 6743576052.0
       - date: '3075-12-31'
         administration:
-          - Arc-Royal Theater
-          - Arcturus Archonette
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
+            - Arcturus Archonette
       - date: '3080-01-01'
         population: 6807264534.0
       - date: '3081-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3090-01-01'
         population: 6857825135.0
       - date: '3100-01-01'
@@ -412,11 +417,10 @@ planet:
             - CW
         population: 7356544725.0
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-23'
@@ -429,13 +433,10 @@ planet:
         population: 7517174649.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
   - name: Uuôden Belt
     type: ASTEROID_BELT
     orbitalDist: 1.6

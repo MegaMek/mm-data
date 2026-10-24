@@ -53,7 +53,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2302-06-14'
@@ -65,12 +65,6 @@ planet:
         socioIndustrial: D-D-A-D-F
       - date: '2310-01-01'
         population: 186576.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 657654.0
       - date: '2330-01-01'
@@ -81,12 +75,6 @@ planet:
         population: 10789452.0
       - date: '2360-01-01'
         population: 21325351.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2370-01-01'
         population: 38019230.0
       - date: '2380-01-01'
@@ -131,7 +119,10 @@ planet:
         population: 920493298.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 929389561.0
       - date: '2590-01-01'
@@ -219,11 +210,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Kumpula's Planet
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.35

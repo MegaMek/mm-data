@@ -90,7 +90,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2666-04-19'
@@ -128,14 +128,11 @@ planet:
         population: 221974673.0
       - date: '2750-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Alarion Province
       - date: '2760-01-01'
         population: 225556095.0
       - date: '2770-01-01'
@@ -200,8 +197,11 @@ planet:
         population: 185478752.0
       - date: '3030-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3040-01-01'
         population: 187136880.0
       - date: '3040-01-19'
@@ -211,15 +211,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Bolan Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Bolan Operational Area
+            - Region 2
       - date: '3042-01-01'
         socioIndustrial: C-B-C-B-B
       - date: '3050-01-01'
@@ -229,16 +226,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3060-01-01'
         population: 190288307.0
       - date: '3068-10-01'
@@ -247,23 +241,24 @@ planet:
           value:
             - FWL
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 192027834.0
       - date: '3079-12-31'
-        administration:
-          - Bolan Province
-          - Dixie Theater
-      - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Dixie Theater
       - date: '3080-01-01'
         population: 195320213.0
       - date: '3081-02-27'
@@ -284,8 +279,11 @@ planet:
         population: 202763511.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -297,14 +295,16 @@ planet:
             - DTA
         population: 204106176.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Windikouk
     type: GAS_GIANT
     orbitalDist: 4.68

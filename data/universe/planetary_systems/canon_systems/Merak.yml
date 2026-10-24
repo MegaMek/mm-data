@@ -117,7 +117,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SC
       - date: '2280-01-01'
@@ -135,7 +135,10 @@ planet:
         population: 12016240.0
       - date: '2317-12-31'
         administration:
-          - Stewart Confederation
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stewart Confederation
       - date: '2320-01-01'
         population: 23191703.0
       - date: '2330-01-01'
@@ -292,7 +295,10 @@ planet:
         population: 1549577223.0
       - date: '3025-12-31'
         administration:
-          - Stewart Commonality
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stewart Commonality
       - date: '3026-01-01'
         socioIndustrial: C-D-D-D-C
       - date: '3030-01-01'
@@ -317,7 +323,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -325,9 +331,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3082-02-15'
         faction:
           source: canon
@@ -363,19 +373,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Clan Protectorate
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
             - CP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Clan Protectorate
   - name: Krios
     type: ICE_GIANT
     orbitalDist: 3.08

@@ -176,12 +176,6 @@ planet:
         population: 207780.0
       - date: '2270-01-01'
         population: 392841.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 686785.0
       - date: '2290-01-01'
@@ -195,12 +189,6 @@ planet:
       - date: '2315-01-18'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -259,7 +247,10 @@ planet:
         population: 27757282.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 28328983.0
       - date: '2590-06-26'
@@ -312,12 +303,22 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-10-22'
         hpg: X
         population: 28083038.0
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-12-03'
         faction:
           source: canon
@@ -327,11 +328,11 @@ planet:
         hpg: B
         population: 27223812.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lockdale Province
       - date: '2786-05-27'
         faction:
           source: canon
@@ -339,14 +340,11 @@ planet:
             - DC
       - date: '2786-12-31'
         administration:
-          - Benjamin Military District
-          - Ashio Prefecture
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Ashio Prefecture
       - date: '2790-01-01'
         population: 26390876.0
       - date: '2800-01-01'
@@ -357,8 +355,11 @@ planet:
         population: 15440546.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Addicks Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Addicks Prefecture
       - date: '2830-01-01'
         population: 10430053.0
       - date: '2840-01-01'
@@ -371,8 +372,11 @@ planet:
         population: 3394490.0
       - date: '2864-12-31'
         administration:
-          - Dieron Military District
-          - Towne Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Towne Prefecture
       - date: '2870-02-11'
         faction:
           source: canon
@@ -416,15 +420,12 @@ planet:
           value: 200000.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Addicks PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Addicks PDZ
       - date: '3030-07-03'
         population: 555997.0
         socioIndustrial: B-C-B-B-C
@@ -433,12 +434,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3049-01-01'
@@ -452,12 +447,6 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 1540658506.0
       - date: '3072-02-01'
@@ -466,11 +455,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-05-10'
         faction:
           source: canon
@@ -482,12 +470,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1550240261.0
       - date: '3081-04-14'
@@ -497,13 +479,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 1550550340.0
       - date: '3100-01-01'
@@ -523,11 +502,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1642812852.0
       - date: '3145-01-31'
@@ -538,14 +516,11 @@ planet:
         population: 1650057154.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Al Na'ir Prefecture
   - name: Henderson
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.6

@@ -59,7 +59,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2349-12-10'
@@ -73,12 +73,6 @@ planet:
         population: 60971.0
       - date: '2360-01-01'
         population: 252075.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2370-01-01'
         population: 829700.0
       - date: '2380-01-01'
@@ -145,15 +139,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2600-01-01'
         population: 396800272.0
       - date: '2610-01-01'
@@ -210,9 +201,12 @@ planet:
         population: 463587941.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2830-01-01'
         population: 468702071.0
       - date: '2840-01-01'
@@ -259,9 +253,12 @@ planet:
         population: 316060295.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 315168977.0
       - date: '3038-01-01'
@@ -271,12 +268,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3044-01-01'
@@ -290,12 +281,6 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 325189774.0
       - date: '3075-10-01'
@@ -304,11 +289,10 @@ planet:
           value:
             - TC
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 327408600.0
       - date: '3090-01-01'
@@ -330,16 +314,18 @@ planet:
       - date: '3145-01-01'
         population: 343301452.0
       - date: '3152-12-31'
-        administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Washington
     type: GAS_GIANT
     orbitalDist: 0.6

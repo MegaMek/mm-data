@@ -107,7 +107,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2314-06-28'
@@ -117,12 +117,6 @@ planet:
             - PD
         population: 42841.0
         socioIndustrial: D-F-A-D-D
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 103986.0
       - date: '2330-01-01'
@@ -137,7 +131,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PD
       - date: '2350-01-01'
@@ -145,14 +139,16 @@ planet:
       - date: '2360-01-01'
         population: 6856162.0
       - date: '2366-12-31'
-        administration:
-          - Protectorate of Donegal
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
       - date: '2370-01-01'
         population: 13644439.0
       - date: '2380-01-01'
@@ -197,8 +193,11 @@ planet:
         population: 589989081.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2580-01-01'
         population: 607489920.0
       - date: '2590-01-01'
@@ -312,15 +311,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Coventry Operational Area
-          - Region 4
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Coventry Operational Area
+            - Region 4
       - date: '3049-01-01'
         socioIndustrial: C-D-A-D-C
       - date: '3050-01-01'
@@ -330,15 +326,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Coventry Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
       - date: '3060-01-01'
         population: 635438069.0
       - date: '3070-01-01'
@@ -368,11 +361,10 @@ planet:
             - CJF
         population: 700794460.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3152-06-01'
         faction:
           source: canon
@@ -380,13 +372,10 @@ planet:
             - LA
       - date: '3152-12-31'
         administration:
-          - Coventry Province
-      - date: '3152-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Coventry Province
   - name: Reinhardt
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.92

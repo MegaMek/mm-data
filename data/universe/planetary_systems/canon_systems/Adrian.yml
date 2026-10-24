@@ -51,7 +51,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2355-08-18'
@@ -63,12 +63,6 @@ planet:
         socioIndustrial: D-D-B-D-B
       - date: '2360-01-01'
         population: 98088.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 333762.0
       - date: '2380-01-01'
@@ -113,15 +107,12 @@ planet:
         population: 182853078.0
       - date: '2571-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 191562917.0
       - date: '2590-01-01'
@@ -179,9 +170,12 @@ planet:
         population: 222606319.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 221934223.0
       - date: '2840-01-01'
@@ -228,9 +222,12 @@ planet:
         population: 218491718.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Milligan PDZ
       - date: '3030-01-01'
         population: 219133833.0
       - date: '3040-01-01'
@@ -238,12 +235,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3048-01-01'
@@ -255,12 +246,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -281,9 +266,12 @@ planet:
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Draconis March
-          - Milligan Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Milligan Operational Area
+            - Milligan PDZ
       - date: '3140-01-01'
         population: 256026935.0
       - date: '3145-09-22'
@@ -295,25 +283,24 @@ planet:
         socioIndustrial: C-D-B-C-A
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Tancredi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
-      - date: '3152-12-31'
-        administration:
-          - Draconis March
-          - Tancredi Operational Area
-          - Milligan PDZ
+            - New Samarkand Military District
+            - Tancredi Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Tancredi Operational Area
+            - Milligan PDZ
   - name: Jenkins's Belt 1
     type: ASTEROID_BELT
     orbitalDist: 0.21

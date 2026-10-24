@@ -69,7 +69,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2296-06-21'
@@ -83,18 +83,6 @@ planet:
         population: 94505.0
       - date: '2310-01-01'
         population: 336695.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1007940.0
       - date: '2321-04-12'
@@ -109,7 +97,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -162,15 +150,17 @@ planet:
         population: 560159319.0
         socioIndustrial: C-D-B-C-B
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kajikazawa Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kajikazawa Prefecture
       - date: '2580-01-01'
         population: 565243562.0
       - date: '2590-01-01'
@@ -270,8 +260,11 @@ planet:
         population: 511073472.0
       - date: '3025-12-31'
         administration:
-          - Benjamin Military District
-          - Benjamin Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Benjamin Prefecture
       - date: '3030-01-01'
         population: 510787038.0
       - date: '3032-01-01'

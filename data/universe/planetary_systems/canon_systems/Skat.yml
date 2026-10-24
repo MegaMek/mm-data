@@ -162,7 +162,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2299-12-03'
@@ -176,12 +176,6 @@ planet:
         population: 61200.0
       - date: '2310-01-01'
         population: 237166.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 752735.0
       - date: '2330-01-01'
@@ -195,7 +189,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -247,15 +241,17 @@ planet:
       - date: '2570-01-01'
         population: 635245487.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Ashio Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Ashio Prefecture
       - date: '2580-01-01'
         population: 643751366.0
       - date: '2590-01-01'
@@ -314,8 +310,11 @@ planet:
         population: 713572907.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Addicks Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Addicks Prefecture
       - date: '2830-01-01'
         population: 713954138.0
       - date: '2840-01-01'
@@ -328,8 +327,11 @@ planet:
         population: 705990900.0
       - date: '2864-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '2870-01-01'
         population: 700323305.0
       - date: '2880-01-01'
@@ -377,15 +379,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Kentares PDZ
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Draconis March
+            - Robinson Operational Area
+            - Kentares PDZ
       - date: '3049-01-01'
         socioIndustrial: B-C-B-C-B
       - date: '3050-01-01'
@@ -395,12 +394,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -414,13 +407,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 702094813.0
       - date: '3100-01-01'
@@ -437,11 +427,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 733823441.0
       - date: '3144-01-01'
@@ -454,14 +443,11 @@ planet:
         population: 740605768.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Ashio Prefecture
   - name: Thomas
     type: DWARF_TERRESTRIAL
     orbitalDist: 2.08

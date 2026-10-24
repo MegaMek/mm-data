@@ -79,7 +79,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2360-09-14'
@@ -89,12 +89,6 @@ planet:
             - FS
         population: 58645.0
         socioIndustrial: D-D-A-D-F
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 210380.0
       - date: '2380-01-01'
@@ -141,15 +135,12 @@ planet:
         population: 137195788.0
       - date: '2571-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 141816654.0
       - date: '2590-01-01'
@@ -208,9 +199,12 @@ planet:
         population: 147783972.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 145925566.0
       - date: '2840-01-01'
@@ -257,9 +251,12 @@ planet:
         population: 129964558.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Milligan PDZ
       - date: '3026-01-01'
         socioIndustrial: D-F-B-C-D
       - date: '3030-01-01'
@@ -271,12 +268,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3045-01-01'
         socioIndustrial: C-D-A-C-D
       - date: '3050-01-01'
@@ -286,12 +277,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -311,9 +296,12 @@ planet:
         population: 146943888.0
       - date: '3135-12-31'
         administration:
-          - Draconis March
-          - Milligan Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Milligan Operational Area
+            - Milligan PDZ
       - date: '3140-01-01'
         population: 149732564.0
       - date: '3145-10-04'
@@ -324,25 +312,24 @@ planet:
         population: 150935229.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Tancredi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
-      - date: '3152-12-31'
-        administration:
-          - Draconis March
-          - Tancredi Operational Area
-          - Milligan PDZ
+            - New Samarkand Military District
+            - Tancredi Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Tancredi Operational Area
+            - Milligan PDZ
   - name: Nanna
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.7

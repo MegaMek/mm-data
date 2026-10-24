@@ -122,12 +122,6 @@ planet:
         population: 110797.0
       - date: '2270-01-01'
         population: 262612.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2278-01-01'
         socioIndustrial: C-C-B-D-B
       - date: '2280-01-01'
@@ -138,12 +132,6 @@ planet:
         population: 1906171.0
       - date: '2310-01-01'
         population: 3113542.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - PoR
       - date: '2320-01-01'
         population: 4795222.0
       - date: '2330-01-01'
@@ -161,14 +149,16 @@ planet:
       - date: '2340-01-01'
         population: 9800825.0
       - date: '2341-12-31'
-        administration:
-          - Principality of Rasalhague
-      - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Rasalhague
       - date: '2350-01-01'
         population: 13121285.0
       - date: '2354-01-31'
@@ -182,7 +172,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2367-10-31'
@@ -238,14 +228,11 @@ planet:
         population: 94900606.0
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Trondheim Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Trondheim Prefecture
       - date: '2580-01-01'
         population: 96850652.0
       - date: '2590-01-01'
@@ -348,8 +335,11 @@ planet:
         population: 93709242.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Kirchbach Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Kirchbach Prefecture
       - date: '3030-01-01'
         population: 93683533.0
       - date: '3034-03-13'
@@ -360,14 +350,17 @@ planet:
       - date: '3040-01-01'
         population: 94748160.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -390,11 +383,10 @@ planet:
           value:
             - CGB
       - date: '3050-03-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CGB
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 97419113.0
       - date: '3070-01-01'
@@ -454,13 +446,10 @@ planet:
         population: 102916958.0
       - date: '3130-12-31'
         administration:
-          - Region 1
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 1
       - date: '3132-08-07'
         hpg:
           source: canon

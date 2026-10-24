@@ -138,7 +138,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-05-10'
@@ -148,12 +148,6 @@ planet:
             - IND
         population: 46022.0
         socioIndustrial: D-D-A-D-D
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 55326.0
       - date: '2330-01-01'
@@ -167,7 +161,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
       - date: '2367-01-02'
@@ -222,7 +216,10 @@ planet:
         population: 2088309091.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 2122100295.0
       - date: '2590-01-01'
@@ -277,7 +274,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-05-26'
@@ -285,6 +282,16 @@ planet:
           source: canon
           value: X
         population: 2556281265.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-11-29'
         faction:
           source: canon
@@ -296,11 +303,11 @@ planet:
           value: B
         population: 2529563778.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lockdale Province
       - date: '2790-07-29'
         faction:
           source: canon
@@ -315,14 +322,11 @@ planet:
         population: 2199305904.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
       - date: '2830-01-01'
         population: 2118433962.0
       - date: '2840-01-01'
@@ -372,8 +376,11 @@ planet:
           value: 1817000000.0
       - date: '3025-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 6
       - date: '3030-03-14'
         faction:
           source: canon
@@ -381,16 +388,18 @@ planet:
             - FS
         population: 1801672828.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Tikonov Operational Area
-          - Region 2
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Tikonov Operational Area
+            - Region 2
       - date: '3033-01-01'
         socioIndustrial: C-B-C-C-D
       - date: '3037-01-01'
@@ -404,35 +413,29 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 3
       - date: '3046-01-01'
         socioIndustrial: B-A-A-B-C
       - date: '3050-01-01'
         population: 1778639840.0
       - date: '3057-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '3060-01-01'
         population: 1766457398.0
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -443,11 +446,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-05-21'
         faction:
           source: canon
@@ -459,12 +461,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1766184604.0
       - date: '3081-07-09'
@@ -474,13 +470,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IV
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IV
       - date: '3090-01-01'
         population: 1771136851.0
       - date: '3093-01-01'
@@ -503,11 +496,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1796825737.0
       - date: '3145-08-20'
@@ -518,18 +510,18 @@ planet:
         population: 1801143298.0
       - date: '3145-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
   - name: Mongia Port
     type: TERRESTRIAL
     orbitalDist: 2.4

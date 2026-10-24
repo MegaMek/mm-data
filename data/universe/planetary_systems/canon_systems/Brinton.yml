@@ -176,7 +176,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2739-03-23'
@@ -196,13 +196,10 @@ planet:
         population: 283842.0
       - date: '2750-12-31'
         administration:
-          - Brinton Union
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TC
+            - Brinton Union
       - date: '2751-05-14'
         faction:
           source: canon
@@ -211,9 +208,10 @@ planet:
       - date: '2760-01-01'
         population: 921082.0
       - date: '2767-12-31'
-        administration:
-          - Brinton Union
-        capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2770-01-01'
         population: 2348828.0
       - date: '2780-01-01'
@@ -241,9 +239,17 @@ planet:
       - date: '2864-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ABN
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2870-01-01'
         population: 67227235.0
       - date: '2880-01-01'
@@ -287,7 +293,7 @@ planet:
       - date: '3025-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '3030-01-01'

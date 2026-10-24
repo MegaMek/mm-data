@@ -94,7 +94,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2306-02-26'
@@ -106,12 +106,6 @@ planet:
         socioIndustrial: D-D-C-D-F
       - date: '2310-01-01'
         population: 73464.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 202371.0
       - date: '2330-01-01'
@@ -169,12 +163,6 @@ planet:
           source: canon
           value:
             - TC
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2580-01-01'
         population: 81279953.0
       - date: '2585-03-10'
@@ -193,7 +181,7 @@ planet:
       - date: '2596-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '2597-03-21'
@@ -239,7 +227,10 @@ planet:
         population: 98990474.0
       - date: '2750-12-31'
         administration:
-          - Perdition Union
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Perdition Union
       - date: '2760-01-01'
         population: 99768041.0
       - date: '2770-01-01'
@@ -287,25 +278,26 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
       - date: '3130-01-01'
         name: Bastille
         message: Sartu renamed to Bastille
       - date: '3130-12-31'
-        administration:
-          - Periphery March
-          - June Operational Area
-          - Warren PDZ
-      - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Periphery March
+            - June Operational Area
+            - Warren PDZ
   - name: Durante's Planet
     type: TERRESTRIAL
     orbitalDist: 3.92

@@ -74,7 +74,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2633-11-18'
@@ -118,14 +118,11 @@ planet:
         population: 375821183.0
       - date: '2750-12-31'
         administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '2760-01-01'
         population: 380230200.0
       - date: '2770-01-01'
@@ -140,7 +137,7 @@ planet:
       - date: '2786-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2790-01-01'
@@ -206,15 +203,12 @@ planet:
         population: 359148021.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Raman PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Raman PDZ
       - date: '3030-04-19'
         faction:
           source: canon
@@ -223,14 +217,11 @@ planet:
         population: 359888680.0
       - date: '3030-12-31'
         administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '3031-01-01'
         socioIndustrial: B-C-C-D-C
       - date: '3040-01-01'
@@ -245,8 +236,11 @@ planet:
         population: 368446221.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Matsuida Prefecture
       - date: '3080-01-01'
         population: 370441212.0
       - date: '3090-01-01'
@@ -268,7 +262,7 @@ planet:
         population: 372298056.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - DC
@@ -284,16 +278,6 @@ planet:
         population: 374313904.0
       - date: '3145-01-01'
         population: 375739003.0
-      - date: '3145-12-31'
-        administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DC
   - name: Goibniu
     type: TERRESTRIAL
     orbitalDist: 0.9

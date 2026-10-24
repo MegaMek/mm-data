@@ -51,7 +51,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2654-12-15'
@@ -89,14 +89,11 @@ planet:
         population: 242659153.0
       - date: '2750-12-31'
         administration:
-          - Rasalhague Military District
-          - Radstadt Prefecture
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Radstadt Prefecture
       - date: '2760-01-01'
         population: 248848154.0
       - date: '2770-01-01'
@@ -167,14 +164,17 @@ planet:
       - date: '3040-01-01'
         population: 189467379.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
       - date: '3045-01-01'
         socioIndustrial: C-C-A-C-B
       - date: '3050-01-01'
@@ -182,9 +182,13 @@ planet:
       - date: '3050-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CW
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3050-04-01'
         faction:
           source: canon
@@ -218,12 +222,6 @@ planet:
           source: canon
           value:
             - CGB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CGB
       - date: '3080-01-01'
         population: 195139925.0
       - date: '3090-01-01'
@@ -245,13 +243,10 @@ planet:
         population: 199720096.0
       - date: '3130-12-31'
         administration:
-          - Region 1
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 1
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'

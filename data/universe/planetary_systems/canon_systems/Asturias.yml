@@ -153,7 +153,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2392-06-29'
@@ -204,12 +204,6 @@ planet:
       - date: '2571-05-26'
         faction:
           source: canon
-          value:
-            - NC
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - NC
       - date: '2580-01-01'
@@ -278,6 +272,11 @@ planet:
         population: 6840308.0
       - date: '2860-01-01'
         population: 6800237.0
+      - date: '2864-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '2870-01-01'
         population: 6736808.0
       - date: '2880-01-01'
@@ -336,9 +335,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CEI
+            - CGS
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3090-01-01'
         population: 6308874.0
       - date: '3100-01-01'
@@ -355,12 +358,6 @@ planet:
         population: 6373554.0
       - date: '3145-01-01'
         population: 6385036.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - SE
   - name: Shiva
     type: GIANT_TERRESTRIAL
     orbitalDist: 4.68

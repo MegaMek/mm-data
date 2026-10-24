@@ -110,12 +110,6 @@ planet:
         socioIndustrial: D-D-A-D-D
       - date: '2270-01-01'
         population: 57478.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 174605.0
       - date: '2290-01-01'
@@ -141,7 +135,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -188,14 +182,16 @@ planet:
       - date: '2570-01-01'
         population: 203032499.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 205388881.0
       - date: '2590-01-01'
@@ -237,7 +233,10 @@ planet:
         population: 241700006.0
       - date: '2750-12-31'
         administration:
-          - Principality of Gibson
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Gibson
       - date: '2760-01-01'
         population: 240716257.0
       - date: '2770-01-01'
@@ -316,15 +315,19 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PG
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 221092528.0
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PR
       - date: '3086-02-01'
@@ -334,12 +337,6 @@ planet:
             - RF
       - date: '3090-01-01'
         population: 221092528.0
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - RF
       - date: '3100-01-01'
         population: 221446559.0
       - date: '3104-01-01'
@@ -365,13 +362,10 @@ planet:
             - FWL
       - date: '3151-12-31'
         administration:
-          - Regulan Fiefs
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Regulan Fiefs
   - name: Jones
     type: TERRESTRIAL
     orbitalDist: 3.92

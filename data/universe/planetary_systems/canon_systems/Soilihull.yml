@@ -106,12 +106,6 @@ planet:
         socioIndustrial: D-D-C-C-C
       - date: '2270-01-01'
         population: 156583.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 484635.0
       - date: '2290-01-01'
@@ -138,7 +132,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -186,15 +180,17 @@ planet:
       - date: '2570-01-01'
         population: 601893403.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 605026102.0
       - date: '2590-01-01'
@@ -296,8 +292,11 @@ planet:
         population: 571018920.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 573078292.0
       - date: '3038-01-01'
@@ -311,16 +310,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 3
-        capitalType: Region Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3049-01-01'
         socioIndustrial: A-B-C-A-B
       - date: '3050-01-01'
@@ -330,15 +329,16 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 591595038.0
       - date: '3064-07-01'
@@ -349,12 +349,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - LA
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - LA
       - date: '3070-01-01'
@@ -384,11 +378,10 @@ planet:
             - CWE
         population: 676560817.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Gatacre
     type: DWARF_TERRESTRIAL
     orbitalDist: 4.48

@@ -80,12 +80,6 @@ planet:
         population: 293392.0
       - date: '2270-01-01'
         population: 717501.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1559510.0
       - date: '2290-01-01'
@@ -101,7 +95,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -159,14 +153,16 @@ planet:
       - date: '2570-01-01'
         population: 313222207.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 319541480.0
       - date: '2590-01-01'
@@ -209,7 +205,10 @@ planet:
         population: 378510941.0
       - date: '2750-12-31'
         administration:
-          - Regulan Free States
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Regulan Free States
       - date: '2760-01-01'
         population: 381724334.0
       - date: '2770-01-01'
@@ -281,11 +280,10 @@ planet:
       - date: '3020-01-01'
         population: 254728495.0
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 254795495.0
       - date: '3040-12-20'
@@ -302,12 +300,6 @@ planet:
       - date: '3081-11-15'
         faction:
           source: canon
-          value:
-            - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - IND
       - date: '3090-01-01'
@@ -331,7 +323,7 @@ planet:
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ABN
   - name: Izzard

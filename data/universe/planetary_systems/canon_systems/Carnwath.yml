@@ -153,12 +153,6 @@ planet:
         population: 160561264.0
       - date: '2270-01-01'
         population: 254683466.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 382024646.0
       - date: '2290-01-01'
@@ -177,13 +171,13 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2320-01-01'
@@ -200,7 +194,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -208,14 +202,16 @@ planet:
       - date: '2360-01-01'
         population: 2658711431.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 3039142570.0
       - date: '2380-01-01'
@@ -262,8 +258,11 @@ planet:
         population: 7327219266.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Virginia Shire
       - date: '2580-01-01'
         population: 7451548186.0
       - date: '2590-01-01'
@@ -377,15 +376,12 @@ planet:
         socioIndustrial: D-C-D-B-F
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 2
       - date: '3049-01-01'
         socioIndustrial: C-B-D-A-F
       - date: '3050-01-01'
@@ -395,16 +391,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 5650280660.0
       - date: '3070-01-01'
@@ -418,13 +411,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
       - date: '3090-01-01'
         population: 5753481894.0
       - date: '3097-01-01'
@@ -443,11 +433,10 @@ planet:
           value:
             - CJF
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 6211517427.0
       - date: '3145-01-01'
@@ -455,7 +444,7 @@ planet:
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
   - name: Jacobson

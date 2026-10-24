@@ -93,7 +93,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2341-06-29'
@@ -103,12 +103,6 @@ planet:
             - DC
         population: 44634.0
         socioIndustrial: D-D-C-D-C
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 136179.0
       - date: '2360-01-01'
@@ -161,14 +155,11 @@ planet:
         population: 123731621.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Bjarred Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Bjarred Prefecture
       - date: '2580-01-01'
         population: 126218321.0
       - date: '2590-01-01'
@@ -256,24 +247,25 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
       - date: '3130-01-01'
         name: Silence
         message: Ouagadougou renamed to Silence
       - date: '3130-12-31'
-        administration:
-          - Pesht Military District
-          - Bjarred Prefecture
-      - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Bjarred Prefecture
   - name: Philippon
     type: TERRESTRIAL
     orbitalDist: 3.64

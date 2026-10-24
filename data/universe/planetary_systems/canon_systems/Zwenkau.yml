@@ -89,12 +89,6 @@ planet:
             - IND
         population: 45218.0
         socioIndustrial: F-D-C-D-F
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 166393.0
       - date: '2290-01-01'
@@ -122,7 +116,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -168,15 +162,17 @@ planet:
       - date: '2570-01-01'
         population: 594328578.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 605297894.0
       - date: '2590-01-01'
@@ -277,8 +273,11 @@ planet:
         population: 410918776.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 407444822.0
       - date: '3040-01-01'
@@ -290,15 +289,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Bolan Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Bolan Operational Area
+            - Region 1
       - date: '3045-01-01'
         socioIndustrial: C-D-C-B-D
       - date: '3050-01-01'
@@ -308,22 +304,22 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3060-01-01'
         population: 425389626.0
       - date: '3068-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Dixie Theater
       - date: '3070-01-01'
         population: 430783445.0
       - date: '3080-01-01'
@@ -342,8 +338,11 @@ planet:
         population: 450071076.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -355,11 +354,10 @@ planet:
             - CWE
         population: 450521372.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Biedermeier
     type: TERRESTRIAL
     orbitalDist: 1.76

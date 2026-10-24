@@ -54,7 +54,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2650-11-21'
@@ -92,14 +92,11 @@ planet:
         population: 266486586.0
       - date: '2750-12-31'
         administration:
-          - St. Ives Commonality
-          - Region 7
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - St. Ives Commonality
+            - Region 7
       - date: '2760-01-01'
         population: 269468460.0
       - date: '2770-01-01'
@@ -128,8 +125,11 @@ planet:
         population: 139803.0
       - date: '2864-12-31'
         administration:
-          - St. Ives Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - St. Ives Commonality
+            - Region 6
       - date: '2870-01-01'
         population: 45505.0
       - date: '2880-01-01'
@@ -151,11 +151,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Blowatz
     type: ICE_GIANT
     orbitalDist: 0.14

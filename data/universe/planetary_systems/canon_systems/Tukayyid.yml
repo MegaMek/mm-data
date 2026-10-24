@@ -112,7 +112,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2418-04-11'
@@ -170,14 +170,11 @@ planet:
         population: 411656238.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 448492830.0
       - date: '2590-01-01'
@@ -249,14 +246,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Benjamin Military District
-          - Dehgolan Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Dehgolan Prefecture
       - date: '2870-01-01'
         population: 515201192.0
       - date: '2880-01-01'
@@ -293,8 +287,11 @@ planet:
         population: 428109009.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Rubigen Prefecture
       - date: '3030-01-01'
         population: 429015164.0
       - date: '3034-03-13'
@@ -305,14 +302,17 @@ planet:
       - date: '3040-01-01'
         population: 433110229.0
       - date: '3040-12-31'
-        administration:
-          - Skandia Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skandia Province
       - date: '3044-01-01'
         socioIndustrial: A-C-B-B-B
       - date: '3050-01-01'
@@ -335,16 +335,21 @@ planet:
             - CS
       - date: '3052-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3052-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 442478673.0
       - date: '3068-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
       - date: '3070-01-01'
@@ -352,12 +357,6 @@ planet:
       - date: '3072-05-15'
         faction:
           source: canon
-          value:
-            - CGB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CGB
       - date: '3076-05-07'
@@ -375,6 +374,12 @@ planet:
             - CW
             - CHH
             - CDS
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CGB
       - date: '3080-01-01'
         population: 452140181.0
       - date: '3081-01-01'
@@ -384,7 +389,7 @@ planet:
       - date: '3095-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CDS
       - date: '3100-01-01'
@@ -405,7 +410,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CS
       - date: '3132-08-07'
@@ -415,14 +420,16 @@ planet:
       - date: '3145-01-01'
         population: 488525791.0
       - date: '3145-12-31'
-        administration:
-          - Region 3
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RD
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 3
   - name: Bin Muntasir
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

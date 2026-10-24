@@ -122,18 +122,20 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2366-12-31'
-        administration:
-          - Protectorate of Donegal
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
       - date: '2499-05-01'
         faction:
           source: canon
@@ -163,9 +165,15 @@ planet:
         population: 50183936.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Alarion Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 68382410.0
       - date: '2590-01-01'
@@ -278,16 +286,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Alarion Operational Area
-          - Region 1
-        capitalType: District Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Alarion Operational Area
+            - Region 1
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -299,16 +307,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Alarion Province
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alarion Province
       - date: '3060-01-01'
         population: 189995491.0
       - date: '3064-03-01'
@@ -321,20 +325,22 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3070-01-01'
         population: 191924169.0
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ABN
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3080-01-01'
         population: 194357713.0
       - date: '3090-01-01'

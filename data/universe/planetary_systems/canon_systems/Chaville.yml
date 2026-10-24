@@ -60,7 +60,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2515-11-24'
@@ -84,13 +84,10 @@ planet:
         population: 403127929.0
       - date: '2571-12-31'
         administration:
-          - Lone Star Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lone Star Province
       - date: '2580-01-01'
         population: 697305735.0
       - date: '2581-01-01'
@@ -143,11 +140,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2918529675.0
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-05-20'
         faction:
           source: canon
@@ -162,9 +169,14 @@ planet:
       - date: '2783-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2790-01-01'
         population: 2253247944.0
       - date: '2800-01-01'
@@ -174,22 +186,30 @@ planet:
       - date: '2820-01-01'
         population: 45073929.0
       - date: '2821-12-31'
-        administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Lone Star Prefecture
       - date: '2830-01-01'
         population: 10523974.0
       - date: '2830-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2840-01-01'
         population: 2904019.0
         socioIndustrial: B-B-C-B-C
@@ -220,11 +240,14 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
   - name: Audincthun
     type: ICE_GIANT
     orbitalDist: 0.07

@@ -66,18 +66,20 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2596-12-31'
-        administration:
-          - Apollo Province
-      - date: '2596-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RWR
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Apollo Province
       - date: '2657-06-12'
         faction:
           source: canon
@@ -121,11 +123,10 @@ planet:
       - date: '2780-01-01'
         population: 43394046.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '2790-01-01'
         population: 42684407.0
       - date: '2800-01-01'
@@ -166,12 +167,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3025-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Goodlett's World
     type: TERRESTRIAL
     orbitalDist: 2.08

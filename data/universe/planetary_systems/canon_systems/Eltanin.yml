@@ -125,7 +125,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-11-05'
@@ -135,12 +135,6 @@ planet:
             - IND
         population: 56549.0
         socioIndustrial: D-F-C-F-F
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 68932.0
       - date: '2330-01-01'
@@ -158,7 +152,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -206,15 +200,17 @@ planet:
       - date: '2570-01-01'
         population: 7062839065.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 7195673668.0
       - date: '2590-01-01'
@@ -278,14 +274,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 7773812936.0
       - date: '2840-01-01'
@@ -303,14 +296,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Kannon Shire
       - date: '2870-01-01'
         population: 7517219034.0
       - date: '2880-01-01'
@@ -351,14 +341,11 @@ planet:
         population: 6111856764.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Vega Prefecture
       - date: '3028-01-01'
         socioIndustrial: B-C-D-D-D
       - date: '3030-01-01'
@@ -390,11 +377,10 @@ planet:
           value:
             - Stone
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 6433802512.0
       - date: '3081-04-24'
@@ -404,13 +390,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 6498463303.0
       - date: '3100-01-01'
@@ -431,11 +414,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 6813907431.0
       - date: '3145-04-10'
@@ -446,17 +428,17 @@ planet:
         population: 6834379846.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Ghissignies
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.96

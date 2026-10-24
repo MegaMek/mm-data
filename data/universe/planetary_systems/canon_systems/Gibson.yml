@@ -140,12 +140,6 @@ planet:
         population: 938956.0
       - date: '2270-01-01'
         population: 2978029.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 8121202.0
       - date: '2290-01-01'
@@ -171,7 +165,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -220,14 +214,16 @@ planet:
       - date: '2570-01-01'
         population: 4516436926.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 4567119251.0
       - date: '2590-01-01'
@@ -272,7 +268,10 @@ planet:
         population: 4630253812.0
       - date: '2750-12-31'
         administration:
-          - Principality of Gibson
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Gibson
       - date: '2760-01-01'
         population: 4597496130.0
       - date: '2770-01-01'
@@ -366,11 +365,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3079-10-18'
         faction:
           source: canon
@@ -381,12 +379,6 @@ planet:
           value: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Graves
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.6

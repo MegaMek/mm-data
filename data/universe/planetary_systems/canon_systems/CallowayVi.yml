@@ -185,7 +185,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2342-08-23'
@@ -199,12 +199,6 @@ planet:
         population: 168766.0
       - date: '2360-01-01'
         population: 682258.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2370-01-01'
         population: 2196884.0
       - date: '2380-01-01'
@@ -253,7 +247,10 @@ planet:
         population: 1041836858.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 1086170675.0
       - date: '2590-01-01'
@@ -377,7 +374,10 @@ planet:
           value: 1250000000.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3027-01-01'
         socioIndustrial: B-B-D-C-C
       - date: '3030-01-01'
@@ -404,7 +404,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -412,9 +412,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-04-03'
         faction:
           source: canon
@@ -422,12 +426,6 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 654909061.0
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-01'
         population: 667337816.0
       - date: '3110-01-01'
@@ -447,14 +445,16 @@ planet:
       - date: '3145-01-01'
         population: 714581022.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Calloway VII
     type: DWARF_TERRESTRIAL
     orbitalDist: 14.0

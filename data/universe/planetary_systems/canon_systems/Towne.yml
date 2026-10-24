@@ -189,12 +189,6 @@ planet:
         population: 83502712.0
       - date: '2270-01-01'
         population: 123388331.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 174420490.0
       - date: '2290-01-01'
@@ -206,12 +200,6 @@ planet:
       - date: '2317-11-15'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2319-11-08'
@@ -275,7 +263,10 @@ planet:
         population: 2325391611.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 2356773272.0
       - date: '2590-01-01'
@@ -328,11 +319,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2593752182.0
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-12-25'
         faction:
           source: canon
@@ -342,15 +343,12 @@ planet:
         population: 2555591507.0
       - date: '2783-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
-      - date: '2783-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 1
       - date: '2785-12-22'
         faction:
           source: canon
@@ -359,12 +357,6 @@ planet:
       - date: '2786-07-07'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '2786-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '2790-01-01'
@@ -382,14 +374,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Addicks Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Addicks Prefecture
       - date: '2830-01-01'
         population: 2364752311.0
       - date: '2840-01-01'
@@ -402,9 +391,15 @@ planet:
         population: 2247695718.0
       - date: '2864-12-31'
         administration:
-          - Dieron Military District
-          - Towne Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Towne Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2870-01-01'
         population: 2199172784.0
       - date: '2876-07-26'
@@ -451,15 +446,16 @@ planet:
             - FS
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Addicks PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Addicks PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3030-01-01'
         population: 2006343959.0
       - date: '3032-01-01'
@@ -469,12 +465,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3043-01-01'
@@ -499,12 +489,6 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 2065586365.0
       - date: '3072-02-01'
@@ -513,11 +497,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-02-12'
         faction:
           source: canon
@@ -529,12 +512,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 2096384386.0
       - date: '3081-11-19'
@@ -544,13 +521,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 2131048559.0
       - date: '3100-01-01'
@@ -571,11 +545,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 2243448386.0
       - date: '3145-05-25'
@@ -586,14 +559,11 @@ planet:
         population: 2243448386.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Ashio Prefecture
   - name: McCarthy's Run
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.92

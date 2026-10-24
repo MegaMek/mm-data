@@ -174,12 +174,6 @@ planet:
         population: 264756793.0
       - date: '2270-01-01'
         population: 363102954.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 479589455.0
       - date: '2290-01-01'
@@ -194,11 +188,10 @@ planet:
       - date: '2310-01-01'
         population: 942112446.0
       - date: '2317-12-31'
-        faction:
+        capitalType:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
+          version: 2026.09.01
+          value: National Capital
       - date: '2320-01-01'
         population: 1117039083.0
       - date: '2330-01-01'
@@ -213,7 +206,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -221,15 +214,20 @@ planet:
       - date: '2360-01-01'
         population: 1866135455.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-        capitalType: District Capital
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2370-01-01'
         population: 2053308612.0
       - date: '2378-01-01'
@@ -278,9 +276,11 @@ planet:
         population: 4574685036.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2580-01-01'
         population: 4614844774.0
       - date: '2590-01-01'
@@ -395,16 +395,12 @@ planet:
           value: A-A-A-B-B
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Alcor Operational Area
-          - Region 2
-        capitalType: District Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Alcor Operational Area
+            - Region 2
       - date: '3050-01-01'
         population: 4258877823.0
       - date: '3057-09-18'
@@ -412,16 +408,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
       - date: '3060-01-01'
         population: 4307706827.0
       - date: '3067-01-01'
@@ -443,14 +435,14 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-        capitalType: Region Capital
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3090-01-01'
         population: 4413379366.0
       - date: '3097-01-01'
@@ -473,11 +465,14 @@ planet:
           value:
             - CJF
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3140-01-01'
         population: 4732438895.0
       - date: '3145-01-01'
@@ -487,18 +482,16 @@ planet:
           source: canon
           value:
             - CWE
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IoS
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
   - name: Hung
     type: DWARF_TERRESTRIAL
     orbitalDist: 2.24

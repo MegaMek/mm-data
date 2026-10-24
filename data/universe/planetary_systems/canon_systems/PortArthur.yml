@@ -114,7 +114,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2286-02-21'
@@ -130,18 +130,6 @@ planet:
         population: 173892.0
       - date: '2310-01-01'
         population: 446621.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1008654.0
       - date: '2321-06-16'
@@ -156,7 +144,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -210,24 +198,26 @@ planet:
       - date: '2570-01-01'
         population: 171504949.0
       - date: '2571-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 176427414.0
       - date: '2590-01-01'
         population: 180809669.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 185479543.0
       - date: '2610-01-01'
@@ -267,9 +257,10 @@ planet:
       - date: '2750-01-01'
         population: 221950161.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 223861962.0
       - date: '2770-01-01'
@@ -353,21 +344,22 @@ planet:
           value:
             - CSJ
       - date: '3052-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CSJ
-      - date: '3059-03-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3059-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '3059-05-26'
         faction:
           source: canon
@@ -383,8 +375,11 @@ planet:
         population: 162166585.0
       - date: '3063-12-31'
         administration:
-          - Pesht Military District
-          - Irece Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Irece Prefecture
       - date: '3070-01-01'
         population: 163911083.0
       - date: '3080-01-01'
@@ -416,13 +411,10 @@ planet:
             - RD
       - date: '3152-12-31'
         administration:
-          - Region 2
-      - date: '3152-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 2
   - name: Greene's Mistake
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.28

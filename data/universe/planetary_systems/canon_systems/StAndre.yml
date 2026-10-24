@@ -176,12 +176,6 @@ planet:
         population: 35707687.0
       - date: '2270-01-01'
         population: 54819358.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 79755180.0
       - date: '2290-01-01'
@@ -203,7 +197,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CCom
       - date: '2320-01-01'
@@ -219,7 +213,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SSUP
       - date: '2367-07-01'
@@ -271,14 +265,11 @@ planet:
         population: 1160592961.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 1
       - date: '2580-01-01'
         population: 1184179863.0
       - date: '2590-01-01'
@@ -401,26 +392,17 @@ planet:
             - LA
       - date: '3030-12-31'
         administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 1
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Sarna March
+            - Palos Operational Area
+            - Region 1
       - date: '3040-01-01'
         population: 991524531.0
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3041-01-01'
@@ -435,9 +417,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 1008625397.0
       - date: '3062-08-08'
@@ -447,14 +433,11 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 3
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 3
       - date: '3070-01-01'
         population: 1019577586.0
       - date: '3080-01-01'
@@ -466,13 +449,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture V
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 1025713441.0
       - date: '3100-01-01'
@@ -492,22 +472,22 @@ planet:
             - CC
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 1
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 1
       - date: '3140-01-01'
         population: 1022845460.0
       - date: '3145-01-01'
         population: 1021823126.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 1
   - name: Bastien
     type: ICE_GIANT
     orbitalDist: 3.12

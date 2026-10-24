@@ -105,7 +105,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -113,14 +113,16 @@ planet:
       - date: '2360-01-01'
         population: 8239332.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 8834959.0
       - date: '2380-01-01'
@@ -166,8 +168,11 @@ planet:
         population: 16121977.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 16191817.0
       - date: '2590-01-01'
@@ -232,9 +237,15 @@ planet:
         population: 16297149.0
       - date: '2864-12-31'
         administration:
-          - Tamar Pact
-          - Orkney Shire
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Orkney Shire
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2870-01-01'
         population: 16084281.0
       - date: '2880-12-15'
@@ -272,8 +283,15 @@ planet:
         population: 14378359.0
       - date: '3025-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3028-01-01'
         socioIndustrial: B-C-A-C-C
       - date: '3030-01-01'
@@ -287,9 +305,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Benfled Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: B-C-A-C-D
       - date: '3050-01-01'
@@ -300,17 +321,28 @@ planet:
           value:
             - CSV
             - CJF
-      - date: '3052-12-31'
+      - date: '3051-12-31'
         faction:
           source: SUCS
+          version: 2026.09.01
+          value:
+            - FC
+      - date: '3052-12-31'
+        faction:
+          source: curated
           version: 2026.03.02
           value:
             - CJF
             - CSV
+      - date: '3052-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CSV
       - date: '3060-01-01'

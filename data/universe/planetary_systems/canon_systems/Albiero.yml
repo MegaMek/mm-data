@@ -138,7 +138,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2650-02-26'
@@ -184,14 +184,11 @@ planet:
         population: 1340228974.0
       - date: '2750-12-31'
         administration:
-          - Pesht Military District
-          - Coudoux Prefecture
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Coudoux Prefecture
       - date: '2760-01-01'
         population: 1365555736.0
       - date: '2770-01-01'
@@ -256,9 +253,15 @@ planet:
           value: 856000000.0
       - date: '3025-12-31'
         administration:
-          - Pesht Military District
-          - Albiero Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Albiero Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3029-01-01'
         socioIndustrial: C-C-C-D-D
       - date: '3030-01-01'
@@ -277,11 +280,14 @@ planet:
           value:
             - CSJ
       - date: '3050-09-30'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CSJ
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3059-09-15'
         faction:
           source: canon
@@ -296,26 +302,34 @@ planet:
       - date: '3059-09-30'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CSJ
       - date: '3059-12-31'
-        administration:
-          - Pesht Military District
-          - Lonaconing Prefecture
-      - date: '3059-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Lonaconing Prefecture
       - date: '3060-01-01'
         population: 199562349.0
       - date: '3063-12-31'
         administration:
-          - Pesht Military District
-          - Albiero Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Albiero Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3070-01-01'
         population: 144407233.0
       - date: '3080-01-01'

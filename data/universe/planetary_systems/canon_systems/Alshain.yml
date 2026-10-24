@@ -156,7 +156,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2690-10-17'
@@ -189,8 +189,11 @@ planet:
         population: 2949959296.0
       - date: '2750-12-31'
         administration:
-          - Rasalhague Military District
-          - Tinaca Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Tinaca Prefecture
       - date: '2760-01-01'
         population: 3131021873.0
       - date: '2770-01-01'
@@ -255,18 +258,30 @@ planet:
           value: 2759000000.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Alshain Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Alshain Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3030-01-01'
         population: 2779425606.0
       - date: '3040-01-01'
         population: 2796562409.0
       - date: '3040-12-31'
         administration:
-          - Alshain Military District
-          - Rubigen Prefecture
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alshain Military District
+            - Rubigen Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3043-01-01'
         socioIndustrial:
           source: canon
@@ -282,8 +297,33 @@ planet:
           source: canon
           value:
             - CGB
+      - date: '3051-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - DC
+      - date: '3052-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CGB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 2822922509.0
+      - date: '3067-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3070-01-01'
         population: 2844658461.0
       - date: '3079-01-01'
@@ -311,8 +351,14 @@ planet:
         population: 3028425997.0
       - date: '3130-12-31'
         administration:
-          - Region 2
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 2
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3132-08-07'
         hpg:
           source: canon

@@ -167,12 +167,6 @@ planet:
         population: 530494.0
       - date: '2270-01-01'
         population: 1547573.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 3922231.0
       - date: '2290-01-01'
@@ -191,12 +185,6 @@ planet:
         population: 179770688.0
       - date: '2360-01-01'
         population: 240919550.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TGU
       - date: '2367-07-01'
         faction:
           source: canon
@@ -248,14 +236,11 @@ planet:
         population: 1439581967.0
       - date: '2571-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
       - date: '2580-01-01'
         population: 1442808600.0
       - date: '2590-01-01'
@@ -314,8 +299,11 @@ planet:
         population: 1476215672.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 7
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 7
       - date: '2830-01-01'
         population: 1475010160.0
       - date: '2840-01-01'
@@ -369,16 +357,18 @@ planet:
             - FS
         population: 1287739195.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Tikonov Operational Area
-          - Region 2
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Tikonov Operational Area
+            - Region 2
       - date: '3040-01-01'
         population: 1297563297.0
       - date: '3040-01-19'
@@ -388,35 +378,29 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 3
       - date: '3047-01-01'
         socioIndustrial: B-A-C-A-A
       - date: '3050-01-01'
         population: 1306939467.0
       - date: '3057-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '3060-01-01'
         population: 1316383388.0
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3068-10-18'
@@ -433,7 +417,7 @@ planet:
       - date: '3068-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
       - date: '3070-01-01'
@@ -441,9 +425,13 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3079-03-10'
         faction:
           source: canon
@@ -455,12 +443,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1339221023.0
       - date: '3081-06-07'
@@ -470,13 +452,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture V
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 1349437878.0
       - date: '3100-01-01'
@@ -497,12 +476,6 @@ planet:
         population: 1361909990.0
       - date: '3130-01-01'
         population: 1361909990.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ROS
       - date: '3132-08-07'
         hpg: X
       - date: '3135-01-01'
@@ -513,11 +486,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1363545263.0
       - date: '3145-10-31'
@@ -528,18 +500,18 @@ planet:
         population: 1363272581.0
       - date: '3145-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 7
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 7
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 11
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 11
   - name: WHY-5
     type: TERRESTRIAL
     orbitalDist: 3.08

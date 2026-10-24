@@ -114,12 +114,6 @@ planet:
         population: 108673.0
       - date: '2270-01-01'
         population: 369670.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1058856.0
       - date: '2283-01-01'
@@ -147,7 +141,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -197,7 +191,7 @@ planet:
       - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2580-01-01'
@@ -325,15 +319,17 @@ planet:
           value:
             - DTA
       - date: '3079-12-31'
-        administration:
-          - Bolan Province
-          - Dixie Theater
-      - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Dixie Theater
       - date: '3080-01-01'
         population: 722270123.0
       - date: '3090-01-01'
@@ -349,8 +345,11 @@ planet:
         population: 764635463.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -362,14 +361,16 @@ planet:
             - DTA
         population: 778679239.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Mildura Shire
     type: GAS_GIANT
     orbitalDist: 7.8

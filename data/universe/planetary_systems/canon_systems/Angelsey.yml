@@ -102,7 +102,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2638-04-01'
@@ -144,14 +144,11 @@ planet:
         population: 743176179.0
       - date: '2750-12-31'
         administration:
-          - Sarna Commonality
-          - Region 2
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 2
       - date: '2760-01-01'
         population: 745827996.0
       - date: '2770-01-01'
@@ -169,16 +166,18 @@ planet:
       - date: '2830-01-01'
         population: 13172759.0
       - date: '2830-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '2840-01-01'
         population: 1641858.0
       - date: '2847-03-08'
@@ -190,11 +189,10 @@ planet:
         population: 0.0
         socioIndustrial: F-C-D-D-D
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: L.4
     type: TERRESTRIAL
     orbitalDist: 1.76

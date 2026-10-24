@@ -127,18 +127,20 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2366-12-31'
-        administration:
-          - Protectorate of Donegal
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
       - date: '2405-03-05'
         faction:
           source: canon
@@ -184,9 +186,15 @@ planet:
         population: 2816557676.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Coventry Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2574-01-01'
         socioIndustrial: B-B-A-B-B
       - date: '2580-01-01'
@@ -300,16 +308,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Coventry Operational Area
-          - Region 3
-        capitalType: District Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Coventry Operational Area
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -323,12 +331,6 @@ planet:
       - date: '3057-09-18'
         faction:
           source: canon
-          value:
-            - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - LA
       - date: '3058-03-15'
@@ -345,19 +347,32 @@ planet:
       - date: '3058-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
-      - date: '3059-03-31'
         administration:
-          - Coventry Province
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3059-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3060-01-01'
         population: 3767508011.0
       - date: '3062-12-25'
@@ -385,7 +400,7 @@ planet:
       - date: '3063-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3067-01-01'

@@ -156,12 +156,6 @@ planet:
         socioIndustrial: D-F-B-D-D
       - date: '2270-01-01'
         population: 53191.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2276-01-01'
         socioIndustrial: D-D-B-D-D
       - date: '2280-01-01'
@@ -190,7 +184,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -242,7 +236,7 @@ planet:
       - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2580-01-01'
@@ -371,12 +365,6 @@ planet:
           source: canon
           value:
             - DTA
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DTA
       - date: '3080-01-01'
         population: 277099618.0
       - date: '3090-01-01'
@@ -400,14 +388,16 @@ planet:
       - date: '3145-01-01'
         population: 279772584.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Davies
     type: TERRESTRIAL
     orbitalDist: 5.72

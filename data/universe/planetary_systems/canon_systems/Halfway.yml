@@ -101,7 +101,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2456-10-20'
@@ -139,14 +139,11 @@ planet:
         population: 398635690.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 454905191.0
       - date: '2590-01-01'
@@ -249,8 +246,11 @@ planet:
         population: 629615632.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 629685342.0
       - date: '3040-01-01'
@@ -262,15 +262,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Bolan Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Bolan Operational Area
+            - Region 1
       - date: '3048-01-01'
         socioIndustrial:
           source: canon
@@ -282,15 +279,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3060-01-01'
         population: 655842217.0
       - date: '3064-05-11'
@@ -309,12 +303,6 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3070-01-01'
         population: 662168620.0
       - date: '3075-12-05'
@@ -324,16 +312,29 @@ planet:
             - LA
             - CDS
       - date: '3075-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - LA
         administration:
-          - Bolan Province
-          - Halfway Archonette
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Halfway Archonette
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3080-01-01'
         population: 672176017.0
       - date: '3085-12-31'
         administration:
-          - Bolan Province
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3090-01-01'
         population: 684932461.0
       - date: '3098-01-01'
@@ -355,11 +356,14 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
   - name: Bennion
     type: GIANT_TERRESTRIAL
     orbitalDist: 2.1

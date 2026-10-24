@@ -131,12 +131,6 @@ planet:
         socioIndustrial: D-D-B-D-F
       - date: '2270-01-01'
         population: 60755.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TA
       - date: '2280-01-01'
         population: 274424.0
       - date: '2290-01-01'
@@ -148,12 +142,6 @@ planet:
       - date: '2316-05-08'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -215,7 +203,10 @@ planet:
         population: 2116551949.0
       - date: '2571-12-31'
         administration:
-          - Alliance Core
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alliance Core
       - date: '2580-01-01'
         population: 2145771014.0
       - date: '2590-01-01'
@@ -266,7 +257,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -278,12 +269,6 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 2173121334.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-01-13'
         faction:
           source: canon
@@ -298,20 +283,20 @@ planet:
         population: 2100635594.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Lone Star Prefecture
       - date: '2830-01-01'
         population: 2100493640.0
       - date: '2830-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
       - date: '2840-01-01'
         population: 2102481866.0
       - date: '2845-01-01'
@@ -356,8 +341,11 @@ planet:
         population: 1832095523.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3030-07-15'
         faction:
           source: canon
@@ -366,14 +354,11 @@ planet:
         population: 1830995069.0
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '3035-01-01'
         socioIndustrial: B-C-C-B-C
       - date: '3040-01-01'
@@ -385,15 +370,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: A-B-B-A-C
       - date: '3048-01-04'
@@ -403,33 +385,32 @@ planet:
             - DC
       - date: '3049-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
-      - date: '3049-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3050-01-01'
         population: 1860526613.0
       - date: '3060-01-01'
         population: 1879413148.0
       - date: '3063-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3068-06-19'
         faction:
           source: canon
           value:
             - WOB
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 1897542395.0
       - date: '3077-03-12'
@@ -443,12 +424,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1913166213.0
       - date: '3081-11-07'
@@ -458,13 +433,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture X
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture X
       - date: '3090-08-13'
         population: 1932393853.0
         socioIndustrial: A-B-B-A-C
@@ -482,22 +454,33 @@ planet:
         population: 2031063551.0
       - date: '3145-01-01'
         population: 2042877949.0
-      - date: '3151-12-31'
+      - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Dieron Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Dieron Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SL3
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
   - name: Saberi
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.7

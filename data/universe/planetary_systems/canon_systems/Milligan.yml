@@ -82,7 +82,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2632-07-01'
@@ -124,15 +124,12 @@ planet:
         population: 141888983.0
       - date: '2750-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 143294217.0
       - date: '2770-01-01'
@@ -149,13 +146,19 @@ planet:
         population: 126760887.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
       - date: '2822-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 123388678.0
       - date: '2840-01-01'
@@ -202,9 +205,12 @@ planet:
         population: 100190367.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Milligan PDZ
       - date: '3030-01-01'
         population: 100340430.0
       - date: '3040-01-19'
@@ -215,12 +221,6 @@ planet:
       - date: '3040-03-12'
         population: 101166604.0
         socioIndustrial: D-C-B-C-D
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 101989381.0
       - date: '3060-01-01'
@@ -228,12 +228,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -256,30 +250,42 @@ planet:
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Draconis March
-          - Milligan Operational Area
-          - Milligan PDZ
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Milligan Operational Area
+            - Milligan PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3140-01-01'
         population: 110296115.0
       - date: '3145-01-01'
         population: 110274058.0
       - date: '3145-12-31'
         administration:
-          - Draconis March
-          - Tancredi Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Tancredi Operational Area
+            - Milligan PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3152-06-01'
         faction:
           source: canon
           value:
             - RA
       - date: '3152-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: S-1 Belt
     type: ASTEROID_BELT
     orbitalDist: 1.6

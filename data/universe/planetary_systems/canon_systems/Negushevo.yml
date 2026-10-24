@@ -102,7 +102,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2736-10-26'
@@ -120,13 +120,10 @@ planet:
         population: 335671.0
       - date: '2750-12-31'
         administration:
-          - Rim Commonality
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Rim Commonality
       - date: '2760-01-01'
         population: 1002398.0
       - date: '2770-01-01'
@@ -201,11 +198,10 @@ planet:
           value:
             - RCM
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RCM
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 97157041.0
       - date: '3090-01-01'
@@ -227,14 +223,16 @@ planet:
       - date: '3145-01-01'
         population: 107482565.0
       - date: '3145-12-31'
-        administration:
-          - Rim Commonality
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
   - name: Bin Jamal Port
     type: TERRESTRIAL
     orbitalDist: 2.4

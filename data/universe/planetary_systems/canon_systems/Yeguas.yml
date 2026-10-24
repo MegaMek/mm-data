@@ -125,7 +125,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2621-01-23'
@@ -171,14 +171,11 @@ planet:
         population: 1469689523.0
       - date: '2750-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2760-01-01'
         population: 1487091450.0
       - date: '2770-01-01'
@@ -249,15 +246,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Coventry Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Coventry Operational Area
+            - Region 3
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -272,14 +266,17 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Coventry Province
-          - Melissia Theater
-          - Arc-Royal Defense Cordon
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
+            - Melissia Theater
+            - Arc-Royal Defense Cordon
       - date: '3060-01-01'
         population: 1284593362.0
       - date: '3067-01-01'
@@ -293,7 +290,10 @@ planet:
             - LA
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 1292582582.0
       - date: '3080-01-01'
@@ -317,7 +317,7 @@ planet:
         population: 1330882450.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -333,7 +333,7 @@ planet:
             - CJF
       - date: '3135-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -345,18 +345,16 @@ planet:
       - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3152-06-01'
         faction:
           source: canon
-          value:
-            - IND
-      - date: '3152-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - IND
   - name: Cape González

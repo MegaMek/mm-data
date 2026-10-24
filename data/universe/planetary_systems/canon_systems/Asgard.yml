@@ -163,12 +163,6 @@ planet:
         population: 29079690.0
       - date: '2270-01-01'
         population: 41353050.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 56306286.0
       - date: '2290-01-01'
@@ -193,12 +187,6 @@ planet:
           source: canon
           value:
             - AG
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - AG
       - date: '2319-09-20'
         faction:
           source: canon
@@ -207,7 +195,7 @@ planet:
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AG
       - date: '2320-01-01'
@@ -219,7 +207,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2350-01-01'
@@ -270,17 +258,20 @@ planet:
         population: 529585352.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 536776438.0
       - date: '2590-01-01'
         population: 541172020.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 543086292.0
       - date: '2610-01-01'
@@ -320,9 +311,10 @@ planet:
       - date: '2750-01-01'
         population: 596174672.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 593612431.0
       - date: '2770-01-01'
@@ -405,21 +397,22 @@ planet:
           value:
             - CSJ
       - date: '3052-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CSJ
-      - date: '3059-03-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3059-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '3059-05-29'
         faction:
           source: canon
@@ -429,8 +422,11 @@ planet:
         population: 452417720.0
       - date: '3063-12-31'
         administration:
-          - Pesht Military District
-          - Irece Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Pesht Military District
+            - Irece Prefecture
       - date: '3070-01-01'
         population: 455504644.0
       - date: '3080-01-01'
@@ -463,12 +459,6 @@ planet:
         population: 489314735.0
       - date: '3130-01-01'
         population: 498002906.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DC
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -484,13 +474,10 @@ planet:
             - RD
       - date: '3152-12-31'
         administration:
-          - Region 2
-      - date: '3152-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 2
   - name: Laudio
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.4

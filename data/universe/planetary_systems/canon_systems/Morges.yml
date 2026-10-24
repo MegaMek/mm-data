@@ -84,7 +84,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2299-01-02'
@@ -98,12 +98,6 @@ planet:
         population: 50356.0
       - date: '2310-01-01'
         population: 178862.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 531488.0
       - date: '2322-01-01'
@@ -112,12 +106,6 @@ planet:
         population: 1361712.0
       - date: '2340-01-01'
         population: 3053254.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2347-01-01'
         socioIndustrial: C-B-A-D-B
       - date: '2350-01-01'
@@ -132,7 +120,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -180,15 +168,17 @@ planet:
       - date: '2570-01-01'
         population: 313432077.0
       - date: '2571-12-31'
-        administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 319062783.0
       - date: '2590-01-01'
@@ -303,24 +293,24 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 2
       - date: '3045-01-01'
         socioIndustrial: B-B-B-D-A
       - date: '3050-01-01'
         population: 357314317.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 1
       - date: '3057-12-01'
         faction:
           source: canon
@@ -329,14 +319,17 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
-          - Arc-Royal Defense Cordon
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
+            - Arc-Royal Defense Cordon
       - date: '3060-01-01'
         population: 359500596.0
       - date: '3067-04-24'
@@ -346,7 +339,10 @@ planet:
             - LA
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 362424376.0
       - date: '3071-02-08'
@@ -355,11 +351,10 @@ planet:
           value:
             - CJF
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 364313891.0
       - date: '3090-01-01'
@@ -381,7 +376,7 @@ planet:
         population: 377064340.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -395,7 +390,7 @@ planet:
             - CJF
       - date: '3135-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -407,18 +402,12 @@ planet:
       - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
       - date: '3152-06-01'
         faction:
           source: canon
-          value:
-            - IND
-      - date: '3152-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - IND
   - name: Nuit

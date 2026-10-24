@@ -74,12 +74,6 @@ planet:
         population: 63673.0
       - date: '2270-01-01'
         population: 201532.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 549085.0
       - date: '2290-01-01'
@@ -105,7 +99,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -151,15 +145,17 @@ planet:
       - date: '2570-01-01'
         population: 344168389.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 346087719.0
       - date: '2590-01-01'
@@ -260,8 +256,11 @@ planet:
         population: 374028501.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3026-01-01'
         socioIndustrial: C-D-B-F-D
       - date: '3030-01-01'
@@ -275,15 +274,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: B-D-A-D-C
       - date: '3050-01-01'
@@ -293,22 +289,22 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3060-01-01'
         population: 390723594.0
       - date: '3068-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Dixie Theater
       - date: '3070-01-01'
         population: 394768844.0
       - date: '3080-01-01'
@@ -327,8 +323,11 @@ planet:
         population: 434197886.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -340,11 +339,10 @@ planet:
             - CWE
         population: 446170154.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Poklop's Belt
     type: ASTEROID_BELT
     orbitalDist: 1.44

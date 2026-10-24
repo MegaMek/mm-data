@@ -173,12 +173,6 @@ planet:
         population: 314271987.0
       - date: '2270-01-01'
         population: 441655267.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 595548317.0
       - date: '2290-01-01'
@@ -192,18 +186,6 @@ planet:
         population: 972182061.0
       - date: '2310-01-01'
         population: 1198511435.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 1447343627.0
       - date: '2330-01-01'
@@ -218,7 +200,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -226,14 +208,16 @@ planet:
       - date: '2360-01-01'
         population: 2572203617.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 2860494243.0
       - date: '2380-01-01'
@@ -278,8 +262,11 @@ planet:
         population: 6338623075.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 6405948332.0
       - date: '2590-01-01'
@@ -380,8 +367,11 @@ planet:
         population: 5747477388.0
       - date: '3025-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Virginia Shire
       - date: '3026-01-01'
         socioIndustrial: C-B-D-B-F
       - date: '3030-01-01'
@@ -396,15 +386,12 @@ planet:
         socioIndustrial: C-A-D-A-D
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 1
       - date: '3050-01-01'
         population: 5844068486.0
       - date: '3057-09-18'
@@ -412,16 +399,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 5895723236.0
       - date: '3070-01-01'
@@ -435,13 +419,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
       - date: '3090-01-01'
         population: 6085002960.0
       - date: '3100-01-01'
@@ -462,11 +443,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-10'
         faction:
           source: canon
@@ -481,16 +461,16 @@ planet:
         population: 6535358558.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Durham Park
     type: TERRESTRIAL
     orbitalDist: 1.68

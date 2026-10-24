@@ -214,12 +214,6 @@ planet:
         population: 175890186.0
       - date: '2270-01-01'
         population: 261202249.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 370007709.0
       - date: '2290-01-01'
@@ -228,12 +222,6 @@ planet:
         population: 657926845.0
       - date: '2310-01-01'
         population: 836620479.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1029937828.0
       - date: '2330-01-01'
@@ -252,7 +240,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -305,15 +293,17 @@ planet:
       - date: '2570-01-01'
         population: 4885096156.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 4935860006.0
       - date: '2590-01-01'
@@ -377,14 +367,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 4625319958.0
       - date: '2840-01-01'
@@ -402,14 +389,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Kannon Shire
       - date: '2870-01-01'
         population: 3871483521.0
       - date: '2880-01-01'
@@ -454,15 +438,15 @@ planet:
           value: 2284000000.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
-        capitalType: Region Capital
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Vega Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3030-01-01'
         population: 1999892256.0
       - date: '3040-01-01'
@@ -496,9 +480,17 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3080-01-01'
         population: 633098223.0
       - date: '3081-03-24'
@@ -508,14 +500,14 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-        capitalType: Region Capital
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3090-01-01'
         population: 639588871.0
       - date: '3100-01-01'
@@ -556,25 +548,36 @@ planet:
       - date: '3135-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 659330931.0
       - date: '3145-01-01'
         population: 663829660.0
       - date: '3145-12-31'
-        administration:
-          - Region 3
-          - Vega Protectorate
-        capitalType: Region Capital
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RD
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital

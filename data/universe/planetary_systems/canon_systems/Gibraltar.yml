@@ -59,13 +59,13 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2529-02-24'
@@ -89,7 +89,7 @@ planet:
       - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2580-01-01'
@@ -133,14 +133,16 @@ planet:
       - date: '2750-01-01'
         population: 213069331.0
       - date: '2750-12-31'
-        administration:
-          - Abbey District
-      - date: '2750-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Abbey District
       - date: '2760-01-01'
         population: 213568600.0
       - date: '2768-12-03'
@@ -222,11 +224,10 @@ planet:
           value:
             - DTA
       - date: '3079-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - DTA
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 207850430.0
       - date: '3090-01-01'
@@ -245,14 +246,16 @@ planet:
       - date: '3145-01-01'
         population: 214137586.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
       - date: '3147-10-01'
         faction:
           source: canon
@@ -266,18 +269,24 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MH
-      - date: '3152-12-31'
         administration:
-          - Duchy of Tamarind-Abbey
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Andrade's Glory
     type: TERRESTRIAL
     orbitalDist: 0.42

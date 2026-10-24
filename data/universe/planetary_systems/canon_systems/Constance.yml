@@ -103,7 +103,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2454-05-24'
@@ -141,14 +141,11 @@ planet:
         population: 63829405.0
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Trondheim Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Trondheim Prefecture
       - date: '2580-01-01'
         population: 71988805.0
       - date: '2590-01-01'
@@ -256,8 +253,11 @@ planet:
         population: 58922855.0
       - date: '3040-12-31'
         administration:
-          - Alshain Military District
-          - Garstedt Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alshain Military District
+            - Garstedt Prefecture
       - date: '3046-01-01'
         socioIndustrial: C-D-B-C-C
       - date: '3050-01-01'
@@ -265,9 +265,13 @@ planet:
       - date: '3050-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CGB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3050-04-01'
         faction:
           source: canon
@@ -304,13 +308,10 @@ planet:
         population: 66701607.0
       - date: '3130-12-31'
         administration:
-          - Region 1
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 1
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'

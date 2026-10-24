@@ -89,12 +89,6 @@ planet:
         population: 5631837.0
       - date: '2270-01-01'
         population: 7674691.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 10109253.0
       - date: '2290-01-01'
@@ -169,12 +163,6 @@ planet:
           source: canon
           value:
             - OA
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OA
       - date: '2580-01-01'
         population: 93361940.0
       - date: '2583-02-01'
@@ -192,14 +180,11 @@ planet:
         population: 94738329.0
       - date: '2596-12-31'
         administration:
-          - Galedon Military District
-          - New Samarkand Prefecture
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - New Samarkand Prefecture
       - date: '2600-01-01'
         population: 96332400.0
       - date: '2610-01-01'
@@ -296,8 +281,11 @@ planet:
         population: 114225572.0
       - date: '3025-12-31'
         administration:
-          - Galedon Military District
-          - Tabayama Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Tabayama Prefecture
       - date: '3030-05-01'
         population: 114758141.0
         socioIndustrial: C-D-C-D-B
@@ -313,8 +301,11 @@ planet:
         population: 118810145.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Tabayama Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Tabayama Prefecture
       - date: '3080-01-01'
         population: 120028210.0
       - date: '3085-04-05'
@@ -325,7 +316,7 @@ planet:
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '3090-01-01'
@@ -341,9 +332,13 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3132-01-01'
         socioIndustrial: B-C-B-C-A
       - date: '3132-08-07'

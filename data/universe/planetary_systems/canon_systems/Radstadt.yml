@@ -118,7 +118,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2328-11-05'
@@ -132,12 +132,6 @@ planet:
         population: 89840.0
       - date: '2340-01-01'
         population: 420180.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 1544893.0
       - date: '2360-01-01'
@@ -186,15 +180,15 @@ planet:
         population: 1691196938.0
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Radstadt Prefecture
-        capitalType: Region Capital
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Radstadt Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 1725018852.0
       - date: '2590-01-01'
@@ -311,14 +305,15 @@ planet:
         population: 744177195.0
       - date: '3030-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Tamar Domains
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3034-03-13'
         faction:
           source: canon
@@ -327,15 +322,21 @@ planet:
       - date: '3040-01-01'
         population: 565141462.0
       - date: '3040-12-31'
-        administration:
-          - Radstadt Province
-        capitalType: District Capital
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Radstadt Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -354,22 +355,19 @@ planet:
           value:
             - CW
       - date: '3051-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 327591117.0
       - date: '3062-09-27'
         faction:
           source: canon
-          value:
-            - CGB
-      - date: '3063-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CGB
       - date: '3070-01-01'
@@ -384,12 +382,6 @@ planet:
           value: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Zwettl an der Rodl
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.9

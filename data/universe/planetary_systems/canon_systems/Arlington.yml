@@ -76,7 +76,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2275-09-26'
@@ -96,18 +96,6 @@ planet:
         population: 1073399.0
       - date: '2310-01-01'
         population: 2700437.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 5950193.0
       - date: '2326-10-15'
@@ -122,7 +110,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -172,15 +160,17 @@ planet:
       - date: '2570-01-01'
         population: 798432804.0
       - date: '2571-12-31'
-        administration:
-          - Galedon Military District
-          - Matsuida Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Matsuida Prefecture
       - date: '2580-01-01'
         population: 802459456.0
       - date: '2590-01-01'
@@ -294,8 +284,11 @@ planet:
         population: 802236822.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Matsuida Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Matsuida Prefecture
       - date: '3080-01-01'
         population: 809165810.0
       - date: '3090-01-01'

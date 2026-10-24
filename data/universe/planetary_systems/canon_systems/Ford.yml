@@ -110,12 +110,6 @@ planet:
         population: 13591197.0
       - date: '2270-01-01'
         population: 24629391.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 41579431.0
       - date: '2290-01-01'
@@ -129,12 +123,6 @@ planet:
         population: 98492252.0
       - date: '2310-01-01'
         population: 139593461.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 190791824.0
       - date: '2330-01-01'
@@ -149,7 +137,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -157,14 +145,16 @@ planet:
       - date: '2360-01-01'
         population: 457257007.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 531319878.0
       - date: '2380-01-01'
@@ -209,8 +199,11 @@ planet:
         population: 1396306470.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 1405883708.0
       - date: '2590-01-01'
@@ -311,8 +304,11 @@ planet:
         population: 972345273.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 967849862.0
       - date: '3040-01-01'
@@ -324,15 +320,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 3
       - date: '3046-01-01'
         socioIndustrial: C-C-A-C-C
       - date: '3050-01-01'
@@ -342,16 +335,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3060-01-01'
         population: 988982833.0
       - date: '3068-09-01'
@@ -360,11 +350,10 @@ planet:
           value:
             - FWL
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 995730833.0
       - date: '3079-10-05'
@@ -374,14 +363,11 @@ planet:
             - LA
       - date: '3079-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
-      - date: '3079-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Dixie Theater
       - date: '3080-01-01'
         population: 1002123947.0
       - date: '3090-01-01'
@@ -398,8 +384,11 @@ planet:
         population: 1025439903.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -411,11 +400,10 @@ planet:
             - CWE
         population: 1024824824.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Wijnstekers's Belt
     type: ASTEROID_BELT
     orbitalDist: 1.44

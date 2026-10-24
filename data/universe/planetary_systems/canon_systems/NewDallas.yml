@@ -134,7 +134,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2354-03-03'
@@ -146,12 +146,6 @@ planet:
         socioIndustrial: D-F-A-D-B
       - date: '2360-01-01'
         population: 151121.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2370-01-01'
         population: 752426.0
       - date: '2380-01-01'
@@ -198,7 +192,10 @@ planet:
         population: 153808535.0
       - date: '2571-12-31'
         administration:
-          - Tyrfing Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2580-01-01'
         population: 86334459.0
       - date: '2588-01-01'
@@ -264,7 +261,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -274,6 +271,22 @@ planet:
           source: canon
           value:
             - IND
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - AE
+      - date: '2774-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-06-25'
         faction:
           source: canon
@@ -282,26 +295,31 @@ planet:
       - date: '2780-01-01'
         population: 6232.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Tyrfing Province
       - date: '2786-12-30'
         faction:
           source: canon
           value:
             - FWL
       - date: '2786-12-31'
-        administration:
-          - New Dallas Province
-        capitalType: Region Capital
-      - date: '2786-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Dallas Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2787-03-20'
         faction:
           source: canon
@@ -317,14 +335,20 @@ planet:
       - date: '2820-01-01'
         population: 2148.0
       - date: '2821-12-31'
-        administration:
-          - Marik Commonwealth
-      - date: '2821-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2830-01-01'
         population: 1754.0
       - date: '2840-01-01'
@@ -342,11 +366,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: B-3
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.68

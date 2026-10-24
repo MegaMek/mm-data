@@ -130,12 +130,6 @@ planet:
             - TA
         population: 60250.0
         socioIndustrial: D-D-D-D-D
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TA
       - date: '2280-01-01'
         population: 307588.0
       - date: '2290-01-01'
@@ -152,12 +146,6 @@ planet:
       - date: '2317-11-30'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -216,7 +204,10 @@ planet:
         population: 3853549182.0
       - date: '2571-12-31'
         administration:
-          - Alliance Core
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alliance Core
       - date: '2580-01-01'
         population: 3881771885.0
       - date: '2590-01-01'
@@ -267,7 +258,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-06-16'
@@ -285,12 +276,6 @@ planet:
           source: canon
           value: A
         population: 4173593914.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-09-19'
         faction:
           source: canon
@@ -310,14 +295,11 @@ planet:
             - LA
       - date: '2821-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '2830-01-01'
         population: 4054333455.0
       - date: '2840-01-01'
@@ -375,15 +357,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 3
       - date: '3043-01-01'
         socioIndustrial: B-A-D-A-C
       - date: '3050-01-01'
@@ -393,16 +372,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 2998536945.0
       - date: '3070-01-01'
@@ -413,11 +389,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3078-05-20'
         faction:
           source: canon
@@ -437,7 +412,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -449,13 +424,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture X
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture X
       - date: '3090-01-01'
         population: 3061559678.0
       - date: '3100-01-01'
@@ -476,6 +448,11 @@ planet:
         population: 3265211324.0
       - date: '3145-01-01'
         population: 3286175691.0
+      - date: '3145-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3150-12-15'
         faction:
           source: canon
@@ -484,7 +461,7 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SL3
   - name: Sabeena's Roost

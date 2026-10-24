@@ -108,7 +108,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2433-09-06'
@@ -146,12 +146,6 @@ planet:
         population: 60209367.0
       - date: '2570-01-01'
         population: 66131698.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OA
       - date: '2580-01-01'
         population: 71327332.0
       - date: '2590-01-01'
@@ -163,14 +157,11 @@ planet:
             - DC
       - date: '2596-12-31'
         administration:
-          - Galedon Military District
-          - New Samarkand Prefecture
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - New Samarkand Prefecture
       - date: '2600-01-01'
         population: 79365186.0
       - date: '2610-01-01'
@@ -266,8 +257,11 @@ planet:
         population: 108922701.0
       - date: '3025-12-31'
         administration:
-          - Galedon Military District
-          - Tabayama Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Galedon Military District
+            - Tabayama Prefecture
       - date: '3030-01-01'
         population: 109388805.0
       - date: '3040-01-01'
@@ -284,8 +278,11 @@ planet:
         population: 113693764.0
       - date: '3075-12-31'
         administration:
-          - New Samarkand Military District
-          - Tabayama Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - Tabayama Prefecture
       - date: '3080-01-01'
         population: 115089323.0
       - date: '3090-01-01'
@@ -302,8 +299,11 @@ planet:
         population: 125224553.0
       - date: '3130-12-31'
         administration:
-          - New Samarkand Military District
-          - New Samarkand Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - New Samarkand Prefecture
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -315,11 +315,10 @@ planet:
             - RA
         population: 127575526.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: Cardea
     type: GIANT_TERRESTRIAL
     orbitalDist: 3.64

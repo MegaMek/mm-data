@@ -81,12 +81,6 @@ planet:
         population: 124831.0
       - date: '2270-01-01'
         population: 403016.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1110227.0
       - date: '2290-01-01'
@@ -113,7 +107,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -161,15 +155,17 @@ planet:
       - date: '2570-01-01'
         population: 825452681.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 840021067.0
       - date: '2590-01-01'
@@ -232,11 +228,10 @@ planet:
           value:
             - FWL
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2830-01-01'
         population: 797305539.0
       - date: '2840-01-01'
@@ -254,14 +249,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2870-01-01'
         population: 697073185.0
       - date: '2880-01-01'
@@ -298,8 +290,11 @@ planet:
         population: 608445949.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 612009854.0
       - date: '3040-01-01'
@@ -311,15 +306,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Bolan Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Bolan Operational Area
+            - Region 1
       - date: '3044-01-01'
         socioIndustrial:
           source: canon
@@ -331,34 +323,34 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3060-01-01'
         population: 626186584.0
       - date: '3067-12-31'
-        administration:
-          - Bolan Province
-          - Cavanaugh Theater
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3068-09-10'
         faction:
           source: canon
           value:
             - FWL
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3070-01-01'
         population: 631026832.0
       - date: '3075-12-06'
@@ -368,15 +360,15 @@ planet:
             - LA
       - date: '3075-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
-        capitalType: Region Capital
-      - date: '3075-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Dixie Theater
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3080-01-01'
         population: 634443594.0
       - date: '3090-01-01'
@@ -392,8 +384,15 @@ planet:
         population: 639028072.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -407,11 +406,10 @@ planet:
             - CWE
         population: 641589303.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
       - date: '3152-06-01'
         faction:
           source: canon
@@ -419,13 +417,10 @@ planet:
             - LA
       - date: '3152-12-31'
         administration:
-          - Bolan Province
-      - date: '3152-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
   - name: Akka Belt
     type: ASTEROID_BELT
     orbitalDist: 0.07

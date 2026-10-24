@@ -68,12 +68,6 @@ planet:
         population: 304796.0
       - date: '2270-01-01'
         population: 1094923.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TA
       - date: '2280-01-01'
         population: 3301520.0
       - date: '2290-01-01'
@@ -85,12 +79,6 @@ planet:
       - date: '2317-02-06'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -147,7 +135,10 @@ planet:
         population: 2591215453.0
       - date: '2571-12-31'
         administration:
-          - Alliance Core
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alliance Core
       - date: '2579-01-01'
         socioIndustrial: B-C-A-D-F
       - date: '2580-01-01'
@@ -199,7 +190,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -211,27 +202,23 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 372881480.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2784-01-22'
         faction:
           source: canon
           value:
             - IND
       - date: '2786-12-31'
-        administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2786-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2790-10-22'
         faction:
           source: canon
@@ -247,11 +234,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Renaud
     type: GAS_GIANT
     orbitalDist: 0.8

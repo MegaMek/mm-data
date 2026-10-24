@@ -65,7 +65,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2322-12-25'
@@ -79,12 +79,6 @@ planet:
         population: 115566.0
       - date: '2340-01-01'
         population: 336748.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 837392.0
       - date: '2360-01-01'
@@ -135,23 +129,20 @@ planet:
         population: 146199394.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 149808404.0
       - date: '2590-01-01'
         population: 153748859.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 158090320.0
       - date: '2610-01-01'
@@ -191,9 +182,10 @@ planet:
       - date: '2750-01-01'
         population: 184561398.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 186436460.0
       - date: '2770-01-01'
@@ -221,9 +213,13 @@ planet:
       - date: '2864-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ABN
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2870-01-01'
         population: 876902.0
       - date: '2880-01-01'

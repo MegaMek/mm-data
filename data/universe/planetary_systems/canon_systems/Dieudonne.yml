@@ -146,12 +146,6 @@ planet:
         socioIndustrial: D-C-B-D-C
       - date: '2270-01-01'
         population: 8378964.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 17094169.0
       - date: '2290-01-01'
@@ -167,7 +161,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -183,7 +177,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -278,16 +272,28 @@ planet:
           value:
             - RWR
       - date: '2767-12-31'
-        administration:
-          - Tyrfing Province
-      - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2770-01-01'
         population: 2700153619.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-04-10'
         faction:
           source: canon
@@ -295,12 +301,6 @@ planet:
             - FWL
       - date: '2780-01-01'
         population: 2717456208.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2790-01-01'
         population: 2716940406.0
       - date: '2800-01-01'
@@ -326,14 +326,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Rahneshire
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Rahneshire
       - date: '2870-01-01'
         population: 2662807528.0
       - date: '2880-01-01'
@@ -373,11 +370,10 @@ planet:
       - date: '3020-01-01'
         population: 2124755469.0
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 2100652281.0
       - date: '3040-01-01'
@@ -403,12 +399,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3082-06-25'
         faction:
           source: canon
@@ -416,13 +406,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
       - date: '3090-01-01'
         population: 2221867162.0
       - date: '3100-01-01'
@@ -445,11 +432,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 2296871332.0
       - date: '3145-04-23'
@@ -459,14 +445,16 @@ planet:
             - CvW
         population: 2311618449.0
       - date: '3145-12-31'
-        administration:
-          - Covenant Worlds
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Saint-Sever-de-Saintonge
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.5

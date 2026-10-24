@@ -88,7 +88,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2598-09-14'
@@ -138,12 +138,6 @@ planet:
         population: 145219765.0
       - date: '2750-01-01'
         population: 146715562.0
-      - date: '2750-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2760-01-01'
         population: 147399505.0
       - date: '2770-01-01'
@@ -221,12 +215,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 134110099.0
       - date: '3100-11-13'
@@ -242,12 +230,6 @@ planet:
           value:
             - DTA
         population: 138498722.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DTA
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -255,14 +237,16 @@ planet:
       - date: '3145-01-01'
         population: 142118483.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
       - date: '3147-04-01'
         faction:
           source: canon
@@ -276,18 +260,24 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MH
-      - date: '3152-12-31'
         administration:
-          - Duchy of Tamarind-Abbey
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Nandhini Belt 1
     type: ASTEROID_BELT
     orbitalDist: 0.7

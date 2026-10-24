@@ -144,7 +144,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2280-01-01'
@@ -168,13 +168,13 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CCom
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SSUP
       - date: '2320-01-01'
@@ -243,14 +243,11 @@ planet:
             - CC
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 5
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 5
       - date: '2580-01-01'
         population: 3287852379.0
       - date: '2590-01-01'
@@ -362,27 +359,23 @@ planet:
             - FS
         population: 2945301546.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 1
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 1
       - date: '3040-01-01'
         population: 3073809790.0
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3045-01-01'
@@ -399,9 +392,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 3407631397.0
       - date: '3062-11-15'
@@ -411,14 +408,11 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 7
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 7
       - date: '3067-01-01'
         population:
           source: canon
@@ -444,23 +438,29 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3079-01-01'
         population:
           source: canon
           value: 1630000000.0
       - date: '3079-12-31'
-        administration:
-          - Liao Commonality
-          - Region 7
-      - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 7
       - date: '3080-01-01'
         population: 2290605591.0
       - date: '3085-02-11'
@@ -470,13 +470,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture V
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 1604876062.0
       - date: '3100-01-01'
@@ -506,14 +503,11 @@ planet:
             - CC
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 6
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 6
       - date: '3140-01-01'
         population: 403258693.0
       - date: '3145-01-01'
@@ -522,8 +516,11 @@ planet:
           value: 163089000.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 6
   - name: Holm
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.0

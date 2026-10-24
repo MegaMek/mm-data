@@ -62,7 +62,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2478-01-09'
@@ -96,13 +96,10 @@ planet:
         population: 90176358.0
       - date: '2571-12-31'
         administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 110789324.0
       - date: '2590-01-01'
@@ -147,7 +144,10 @@ planet:
         population: 222085812.0
       - date: '2750-12-31'
         administration:
-          - Regulan Free States
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Regulan Free States
       - date: '2760-01-01'
         population: 222652516.0
       - date: '2770-01-01'
@@ -228,7 +228,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -236,9 +236,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-02-01'
         faction:
           source: canon
@@ -249,7 +253,7 @@ planet:
       - date: '3095-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
       - date: '3100-01-01'
@@ -265,7 +269,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RF
       - date: '3132-08-07'
@@ -281,13 +285,10 @@ planet:
             - FWL
       - date: '3151-12-31'
         administration:
-          - Regulan Fiefs
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Regulan Fiefs
   - name: Hoffman's End
     type: ICE_GIANT
     orbitalDist: 0.35

@@ -158,12 +158,6 @@ planet:
         population: 184002844.0
       - date: '2270-01-01'
         population: 282202516.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 409059565.0
       - date: '2290-01-01'
@@ -172,12 +166,6 @@ planet:
         population: 766608197.0
       - date: '2310-01-01'
         population: 996159023.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TamP
       - date: '2320-01-01'
         population: 1260236604.0
       - date: '2330-01-01'
@@ -192,7 +180,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -200,14 +188,16 @@ planet:
       - date: '2360-01-01'
         population: 2473431888.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 2787395086.0
       - date: '2380-01-01'
@@ -254,8 +244,11 @@ planet:
         population: 5998558667.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 6041453320.0
       - date: '2590-12-26'
@@ -329,14 +322,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Benjamin Military District
-          - Dehgolan Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Dehgolan Prefecture
       - date: '2865-08-01'
         faction:
           source: canon
@@ -378,8 +368,11 @@ planet:
         population: 5946948151.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Rubigen Prefecture
       - date: '3030-07-03'
         faction:
           source: canon
@@ -388,14 +381,11 @@ planet:
         population: 5973267769.0
       - date: '3030-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Tamar Domains
       - date: '3034-03-13'
         faction:
           source: canon
@@ -406,20 +396,32 @@ planet:
       - date: '3040-01-01'
         population: 6042356849.0
       - date: '3040-12-31'
-        administration:
-          - Skandia Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skandia Province
       - date: '3047-01-01'
         socioIndustrial:
           source: canon
           value: B-B-C-A-B
       - date: '3050-01-01'
         population: 6124481762.0
+      - date: '3052-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3060-01-01'
         population: 6207102138.0
       - date: '3070-01-01'
@@ -427,12 +429,6 @@ planet:
       - date: '3075-08-20'
         faction:
           source: canon
-          value:
-            - CGB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CGB
       - date: '3079-01-01'
@@ -470,13 +466,14 @@ planet:
         population: 6426911798.0
       - date: '3130-12-31'
         administration:
-          - Region 3
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3132-08-07'
         hpg:
           source: canon

@@ -65,7 +65,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2341-11-15'
@@ -75,12 +75,6 @@ planet:
             - IND
         population: 51816.0
         socioIndustrial: D-C-C-C-D
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2346-08-03'
         faction:
           source: canon
@@ -95,7 +89,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -142,15 +136,17 @@ planet:
       - date: '2570-01-01'
         population: 234044487.0
       - date: '2571-12-31'
-        administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 240237562.0
       - date: '2590-01-01'
@@ -261,24 +257,24 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 2
       - date: '3046-01-01'
         socioIndustrial: C-D-C-D-C
       - date: '3050-01-01'
         population: 206469693.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 1
       - date: '3057-12-01'
         faction:
           source: canon
@@ -287,14 +283,17 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
-          - Arc-Royal Defense Cordon
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
+            - Arc-Royal Defense Cordon
       - date: '3060-01-01'
         population: 209296862.0
       - date: '3067-07-23'
@@ -303,11 +302,10 @@ planet:
           value:
             - CJF
       - date: '3067-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 211675330.0
       - date: '3080-01-01'
@@ -333,12 +331,6 @@ planet:
       - date: '3152-05-13'
         faction:
           source: canon
-          value:
-            - TamP
-      - date: '3152-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TamP
   - name: Mati Syra Zemlya

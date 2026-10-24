@@ -123,7 +123,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2300-04-27'
@@ -135,12 +135,6 @@ planet:
         socioIndustrial: D-D-B-D-F
       - date: '2310-01-01'
         population: 189404.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 579751.0
       - date: '2330-01-01'
@@ -154,7 +148,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -206,15 +200,17 @@ planet:
       - date: '2570-01-01'
         population: 362610814.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2580-01-01'
         population: 366879845.0
       - date: '2590-01-01'
@@ -261,8 +257,22 @@ planet:
         population: 438646417.0
       - date: '2770-01-01'
         population: 442287815.0
+      - date: '2772-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kajikazawa Prefecture
       - date: '2780-01-01'
         population: 446962732.0
+      - date: '2783-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2790-01-01'
         population: 447473733.0
       - date: '2800-01-01'
@@ -335,13 +345,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 416047888.0
       - date: '3093-01-01'
@@ -362,11 +369,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 451782274.0
       - date: '3145-01-16'
@@ -377,14 +383,11 @@ planet:
         population: 456140268.0
       - date: '3145-12-31'
         administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Proserpina Prefecture
   - name: Fellanin III
     type: TERRESTRIAL
     orbitalDist: 1.05

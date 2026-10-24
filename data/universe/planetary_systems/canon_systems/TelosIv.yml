@@ -212,12 +212,6 @@ planet:
         population: 95103606.0
       - date: '2270-01-01'
         population: 139585264.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 194360294.0
       - date: '2290-01-01'
@@ -247,12 +241,6 @@ planet:
           source: canon
           value:
             - AG
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - AG
       - date: '2319-03-09'
         faction:
           source: canon
@@ -261,7 +249,7 @@ planet:
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AG
       - date: '2320-01-01'
@@ -273,12 +261,6 @@ planet:
       - date: '2341-06-23'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2350-01-01'
@@ -331,7 +313,10 @@ planet:
         population: 2582468850.0
       - date: '2571-12-31'
         administration:
-          - Lone Star Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2580-01-01'
         population: 2589299398.0
       - date: '2590-01-01'
@@ -384,11 +369,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2931786532.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-03-09'
         faction:
           source: canon
@@ -398,14 +393,11 @@ planet:
         population: 2922569812.0
       - date: '2783-12-31'
         administration:
-          - Benjamin Military District
-          - Ashio Prefecture
-      - date: '2783-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Ashio Prefecture
       - date: '2790-03-25'
         faction:
           source: canon
@@ -420,8 +412,11 @@ planet:
         population: 2880927566.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '2830-01-01'
         population: 2869690435.0
       - date: '2840-01-01'
@@ -434,8 +429,11 @@ planet:
         population: 2842441048.0
       - date: '2864-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
       - date: '2870-01-01'
         population: 2835388821.0
       - date: '2880-01-01'
@@ -472,8 +470,11 @@ planet:
         population: 2695614678.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3028-01-01'
         socioIndustrial: B-B-C-C-B
       - date: '3030-01-01'
@@ -494,11 +495,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-02-05'
         faction:
           source: canon
@@ -510,12 +510,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 2811809395.0
       - date: '3081-05-26'
@@ -525,13 +519,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 2836662511.0
       - date: '3091-01-01'
@@ -553,22 +544,22 @@ planet:
             - DC
       - date: '3135-12-31'
         administration:
-          - Benjamin Military District
-          - Algedi Prefecture
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Algedi Prefecture
       - date: '3140-01-01'
         population: 2974357915.0
       - date: '3145-01-01'
         population: 2984487943.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
   - name: Telos V
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.68

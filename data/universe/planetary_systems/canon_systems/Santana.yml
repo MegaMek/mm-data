@@ -87,7 +87,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2299-12-14'
@@ -118,7 +118,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -168,15 +168,17 @@ planet:
       - date: '2570-01-01'
         population: 652335835.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Coventry Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2580-01-01'
         population: 660042440.0
       - date: '2590-01-01'
@@ -288,9 +290,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Coventry Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal March
+            - Coventry Operational Area
+            - Region 3
       - date: '3046-01-01'
         socioIndustrial: B-C-C-D-B
       - date: '3050-01-01'
@@ -302,7 +307,10 @@ planet:
             - LA
       - date: '3058-12-31'
         administration:
-          - Coventry Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
       - date: '3060-01-01'
         population: 358315601.0
       - date: '3070-01-01'
@@ -333,6 +341,11 @@ planet:
           value:
             - CJF
         population: 401783813.0
+      - date: '3145-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3151-08-01'
         faction:
           source: canon

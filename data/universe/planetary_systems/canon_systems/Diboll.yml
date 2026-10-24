@@ -59,7 +59,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2545-05-17'
@@ -78,12 +78,6 @@ planet:
       - date: '2570-10-13'
         population: 11368733.0
         socioIndustrial: C-B-B-D-B
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OA
       - date: '2580-01-01'
         population: 39194566.0
       - date: '2590-01-01'
@@ -95,15 +89,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2600-01-01'
         population: 188453592.0
       - date: '2610-01-01'
@@ -204,9 +195,12 @@ planet:
         population: 934918157.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Bryceland PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Bryceland PDZ
       - date: '3030-01-01'
         population: 930573391.0
       - date: '3032-01-01'
@@ -218,12 +212,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3043-01-01'
         socioIndustrial: B-B-A-C-B
       - date: '3050-01-01'
@@ -233,12 +221,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -259,16 +241,22 @@ planet:
         population: 1031532610.0
       - date: '3130-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Milligan PDZ
       - date: '3132-08-07'
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Draconis March
-          - Milligan Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Milligan Operational Area
+            - Milligan PDZ
       - date: '3140-01-01'
         population: 1039817968.0
       - date: '3145-06-24'
@@ -278,11 +266,10 @@ planet:
             - RA
         population: 1041899685.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: Smyth
     type: ICE_GIANT
     orbitalDist: 0.1

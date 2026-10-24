@@ -270,12 +270,6 @@ planet:
         population: 12288817.0
       - date: '2270-01-01'
         population: 17492525.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 23886666.0
       - date: '2290-01-01'
@@ -287,7 +281,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -303,7 +297,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SSUP
       - date: '2367-07-01'
@@ -363,15 +357,12 @@ planet:
         population: 285737819.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 290790524.0
       - date: '2590-01-01'
@@ -435,27 +426,26 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Sarna Commonality
-          - Region 2
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 2
       - date: '2830-01-01'
         population: 314999992.0
       - date: '2830-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '2840-01-01'
         population: 300198499.0
       - date: '2849-01-01'
@@ -505,9 +495,12 @@ planet:
         population: 229098759.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Valexa PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Valexa PDZ
       - date: '3030-01-01'
         population: 228145258.0
       - date: '3040-01-01'
@@ -515,12 +508,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3045-01-01'
@@ -534,12 +521,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -568,9 +549,12 @@ planet:
         population: 270367603.0
       - date: '3145-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Alcyone PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Alcyone PDZ
   - name: CRO10
     type: GIANT_TERRESTRIAL
     orbitalDist: 115.8

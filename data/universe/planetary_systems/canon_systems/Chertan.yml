@@ -100,12 +100,6 @@ planet:
         population: 504540.0
       - date: '2270-01-01'
         population: 1614747.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2279-01-01'
         socioIndustrial: D-C-B-D-D
       - date: '2280-01-01'
@@ -126,12 +120,6 @@ planet:
         population: 114312233.0
       - date: '2340-01-01'
         population: 172147980.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 244756854.0
       - date: '2360-01-01'
@@ -139,7 +127,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -185,14 +173,16 @@ planet:
       - date: '2570-01-01'
         population: 2049561025.0
       - date: '2571-12-31'
-        administration:
-          - Tyrfing Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2580-01-01'
         population: 2083750337.0
       - date: '2590-01-01'
@@ -244,11 +234,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2266492890.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-12-02'
         faction:
           source: canon
@@ -256,12 +256,6 @@ planet:
             - FWL
       - date: '2780-01-01'
         population: 2256406418.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2790-05-28'
         faction:
           source: canon
@@ -337,12 +331,6 @@ planet:
           source: canon
           value:
             - WOB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
       - date: '3078-01-12'
         faction:
           source: canon
@@ -354,12 +342,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1913169850.0
       - date: '3081-01-16'
@@ -369,13 +351,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3090-01-01'
         population: 1920069674.0
       - date: '3093-01-01'
@@ -401,11 +380,10 @@ planet:
           value:
             - RR
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RR
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1935104778.0
       - date: '3145-01-01'
@@ -423,18 +401,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Covenant Worlds
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Czernobog
     type: ICE_GIANT
     orbitalDist: 1.68

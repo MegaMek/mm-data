@@ -70,7 +70,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2289-05-04'
@@ -86,12 +86,6 @@ planet:
         population: 188424.0
       - date: '2310-01-01'
         population: 591135.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 1582184.0
       - date: '2330-01-01'
@@ -106,12 +100,6 @@ planet:
         population: 14502706.0
       - date: '2360-01-01'
         population: 24833183.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 39290238.0
       - date: '2378-01-01'
@@ -158,15 +146,12 @@ planet:
         population: 571537924.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 576830374.0
       - date: '2590-01-01'
@@ -225,9 +210,12 @@ planet:
         population: 693087427.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2830-01-01'
         population: 652216169.0
       - date: '2840-01-01'
@@ -274,9 +262,12 @@ planet:
         population: 403273691.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - New Syrtis PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - New Syrtis PDZ
       - date: '3026-01-01'
         socioIndustrial: B-D-C-C-C
       - date: '3030-01-01'
@@ -288,12 +279,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3044-01-01'
         socioIndustrial: A-C-C-B-B
       - date: '3050-01-01'
@@ -303,12 +288,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -339,25 +318,24 @@ planet:
         population: 441532865.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
+            - Sian Commonality
+            - Region 13
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Croft's Rift
     type: ICE_GIANT
     orbitalDist: 1.44

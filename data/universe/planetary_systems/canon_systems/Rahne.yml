@@ -155,12 +155,6 @@ planet:
         population: 620678.0
       - date: '2270-01-01'
         population: 1912363.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 5087228.0
       - date: '2290-01-01'
@@ -177,7 +171,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -194,7 +188,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -202,14 +196,16 @@ planet:
       - date: '2360-01-01'
         population: 386079519.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 502719244.0
       - date: '2380-01-01'
@@ -258,9 +254,15 @@ planet:
         population: 2793293486.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Rahneshire
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Rahneshire
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 2853786988.0
       - date: '2590-01-01'
@@ -377,15 +379,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 2
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3043-01-01'
         socioIndustrial:
           source: canon
@@ -397,16 +400,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 3038851332.0
       - date: '3067-01-01'
@@ -419,8 +419,11 @@ planet:
         population: 3091880842.0
       - date: '3081-12-31'
         administration:
-          - Bolan Province
-          - Dixie Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Dixie Theater
       - date: '3090-01-01'
         population: 3106757546.0
       - date: '3095-01-01'
@@ -435,8 +438,11 @@ planet:
         population: 3177769681.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -450,11 +456,10 @@ planet:
             - CWE
         population: 3205857459.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Beltaine
     type: GAS_GIANT
     orbitalDist: 4.68

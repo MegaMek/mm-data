@@ -103,7 +103,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2340-05-01'
@@ -113,12 +113,6 @@ planet:
             - DC
         population: 58692.0
         socioIndustrial: D-D-A-C-C
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 254336.0
       - date: '2360-01-01'
@@ -169,14 +163,11 @@ planet:
         population: 626556085.0
       - date: '2571-12-31'
         administration:
-          - Galedon Military District
-          - Kaznejoy Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Galedon Military District
+            - Kaznejoy Prefecture
       - date: '2580-01-01'
         population: 646553159.0
       - date: '2590-01-01'
@@ -232,7 +223,7 @@ planet:
       - date: '2783-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2790-01-01'
@@ -256,7 +247,7 @@ planet:
       - date: '2821-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
       - date: '2822-12-10'
@@ -281,15 +272,12 @@ planet:
             - FS
       - date: '2864-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 3
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 3
       - date: '2870-01-01'
         population: 568350394.0
       - date: '2880-01-01'
@@ -331,9 +319,12 @@ planet:
             - FS
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Dahar PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Dahar PDZ
       - date: '3026-01-01'
         socioIndustrial: D-C-C-C-B
       - date: '3030-01-01'
@@ -348,12 +339,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 572070975.0
       - date: '3060-01-01'
@@ -365,12 +350,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -396,7 +375,7 @@ planet:
         population: 586729013.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - DC
@@ -415,14 +394,11 @@ planet:
         population: 588256494.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Barlow's End Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - New Samarkand Military District
+            - Barlow's End Prefecture
   - name: Herlev
     type: TERRESTRIAL
     orbitalDist: 0.08

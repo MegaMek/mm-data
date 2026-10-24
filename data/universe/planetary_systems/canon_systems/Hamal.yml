@@ -185,11 +185,10 @@ planet:
       - date: '2270-01-01'
         population: 1319597.0
       - date: '2271-12-31'
-        faction:
+        capitalType:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TGU
+          version: 2026.09.01
+          value: District Capital
       - date: '2280-01-01'
         population: 3430760.0
       - date: '2290-01-01'
@@ -270,13 +269,14 @@ planet:
             - TH
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lockdale Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2580-01-01'
         population: 1492945494.0
       - date: '2590-01-01'
@@ -327,12 +327,22 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-04-29'
         hpg: X
         population: 1523172451.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-10-29'
         faction:
           source: canon
@@ -342,11 +352,11 @@ planet:
         hpg: B
         population: 1471299868.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lockdale Province
       - date: '2790-09-01'
         faction:
           source: canon
@@ -361,14 +371,11 @@ planet:
         population: 1223619735.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
       - date: '2830-01-01'
         population: 1181246756.0
       - date: '2840-01-01'
@@ -415,8 +422,11 @@ planet:
         population: 877551898.0
       - date: '3025-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 6
       - date: '3030-02-26'
         faction:
           source: canon
@@ -424,16 +434,18 @@ planet:
             - FS
         population: 886942310.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Tikonov Operational Area
-          - Region 2
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Tikonov Operational Area
+            - Region 2
       - date: '3039-01-01'
         socioIndustrial: D-C-C-F-D
       - date: '3040-01-01'
@@ -445,15 +457,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: D-C-B-F-D
       - date: '3048-01-01'
@@ -462,20 +471,17 @@ planet:
         population: 900797012.0
       - date: '3057-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '3060-01-01'
         population: 909031676.0
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -486,20 +492,13 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-05-21'
         faction:
           source: canon
-          value:
-            - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - Stone
       - date: '3080-01-01'
@@ -511,13 +510,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IV
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IV
       - date: '3090-01-01'
         population: 946981862.0
       - date: '3100-01-01'
@@ -538,11 +534,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1023189451.0
       - date: '3145-11-19'
@@ -553,18 +548,18 @@ planet:
         population: 1031201535.0
       - date: '3145-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
   - name: O'Halloran
     type: TERRESTRIAL
     orbitalDist: 7.0

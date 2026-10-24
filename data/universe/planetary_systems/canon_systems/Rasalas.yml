@@ -66,12 +66,6 @@ planet:
         population: 228816.0
       - date: '2270-01-01'
         population: 698224.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-10-08'
         faction:
           source: canon
@@ -87,7 +81,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -103,7 +97,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -150,7 +144,10 @@ planet:
         population: 851530834.0
       - date: '2571-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2580-01-01'
         population: 862433174.0
       - date: '2590-01-01'
@@ -272,10 +269,15 @@ planet:
             - MCM
       - date: '3079-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - MCM
+      - date: '3079-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 717859132.0
       - date: '3082-01-01'
@@ -305,12 +307,6 @@ planet:
           value:
             - CWE
         population: 759206155.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
   - name: Ranga
     type: TERRESTRIAL
     orbitalDist: 0.49

@@ -62,7 +62,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2276-05-02'
@@ -80,18 +80,6 @@ planet:
         population: 882029.0
       - date: '2310-01-01'
         population: 2194393.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 4800255.0
       - date: '2322-09-09'
@@ -106,7 +94,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -156,16 +144,21 @@ planet:
       - date: '2570-01-01'
         population: 593267656.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Baldur Prefecture
-        capitalType: Region Capital
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Baldur Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 602149911.0
       - date: '2590-01-01'
@@ -265,8 +258,15 @@ planet:
         population: 746564867.0
       - date: '3025-12-31'
         administration:
-          - Benjamin Military District
-          - Buckminster Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Buckminster Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3030-01-01'
         population: 752500035.0
       - date: '3033-01-01'
@@ -275,23 +275,33 @@ planet:
         population: 762193944.0
       - date: '3040-12-31'
         administration:
-          - Benjamin Military District
-          - Baldur Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Baldur Prefecture
       - date: '3043-01-01'
         socioIndustrial: B-C-C-C-A
       - date: '3049-12-31'
-        administration:
-          - Benjamin Military District
-          - Baldur Prefecture
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3050-01-01'
         population: 771241106.0
       - date: '3060-01-01'
         population: 781020223.0
       - date: '3063-12-31'
         administration:
-          - Benjamin Military District
-          - Buckminster Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Buckminster Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3070-01-01'
         population: 791160649.0
       - date: '3080-01-01'

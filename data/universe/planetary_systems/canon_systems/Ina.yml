@@ -75,7 +75,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2303-02-17'
@@ -87,12 +87,6 @@ planet:
         socioIndustrial: D-D-A-D-C
       - date: '2310-01-01'
         population: 93214.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 282563.0
       - date: '2330-01-01'
@@ -106,7 +100,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '2367-05-24'
@@ -168,7 +162,7 @@ planet:
       - date: '2596-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '2597-03-21'
@@ -214,7 +208,10 @@ planet:
         population: 260107996.0
       - date: '2750-12-31'
         administration:
-          - Hyades Union
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Hyades Union
       - date: '2760-01-01'
         population: 260223069.0
       - date: '2770-01-01'
@@ -262,11 +259,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: UG-3
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.7

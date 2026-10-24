@@ -53,7 +53,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2656-01-20'
@@ -93,13 +93,10 @@ planet:
         population: 170212888.0
       - date: '2750-12-31'
         administration:
-          - Timbuktu Province
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RWR
+            - Timbuktu Province
       - date: '2760-01-01'
         population: 171063852.0
       - date: '2770-01-01'
@@ -113,14 +110,11 @@ planet:
         population: 170565370.0
       - date: '2783-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-      - date: '2783-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Alarion Province
       - date: '2790-01-01'
         population: 168907049.0
       - date: '2800-01-01'
@@ -186,15 +180,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Periphery March
-          - Venaria Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Periphery March
+            - Venaria Operational Area
+            - Region 2
       - date: '3046-01-01'
         socioIndustrial: A-B-B-A-A
       - date: '3050-01-01'
@@ -204,30 +195,33 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Alarion Province
-          - Timbuktu Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alarion Province
+            - Timbuktu Theater
       - date: '3060-01-01'
         population: 139925040.0
       - date: '3070-01-01'
         population: 141869390.0
       - date: '3075-12-31'
         administration:
-          - Alarion Province
-          - Timbuktu Theater
-          - Buena Archonette
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alarion Province
+            - Timbuktu Theater
+            - Buena Archonette
       - date: '3080-01-01'
         population: 143438568.0
       - date: '3081-12-31'
         administration:
-          - Timbuktu Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Timbuktu Theater
       - date: '3090-01-01'
         population: 144532854.0
       - date: '3094-01-01'
@@ -248,11 +242,15 @@ planet:
         population: 155852001.0
       - date: '3145-12-31'
         administration:
-          - Florida Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Florida Theater
       - date: '3151-12-31'
-        administration:
-          - Florida Theater
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
   - name: 59-1 Belt
     type: ASTEROID_BELT
     orbitalDist: 0.14

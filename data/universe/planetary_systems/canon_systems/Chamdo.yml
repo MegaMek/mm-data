@@ -72,7 +72,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2280-01-01'
@@ -98,7 +98,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SSUP
       - date: '2367-07-01'
@@ -152,14 +152,11 @@ planet:
         population: 754688843.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 3
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 3
       - date: '2580-01-01'
         population: 759281521.0
       - date: '2590-01-01'
@@ -259,8 +256,11 @@ planet:
         population: 680481438.0
       - date: '3025-12-31'
         administration:
-          - Sarna Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 6
       - date: '3027-01-01'
         socioIndustrial: B-D-C-C-D
       - date: '3030-03-08'
@@ -270,16 +270,18 @@ planet:
             - FS
         population: 681918112.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 2
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 2
       - date: '3032-01-01'
         socioIndustrial: B-D-B-C-D
       - date: '3039-04-05'
@@ -300,12 +302,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3042-01-01'
         socioIndustrial: C-F-B-D-D
       - date: '3050-01-01'
@@ -317,28 +313,31 @@ planet:
             - CC
       - date: '3057-12-31'
         administration:
-          - Capella Commonality
-          - Region 7
-      - date: '3057-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Capella Commonality
+            - Region 7
       - date: '3060-01-01'
         population: 706349092.0
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 8
       - date: '3070-01-01'
         population: 711595463.0
       - date: '3080-01-01'
         population: 719754067.0
       - date: '3085-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 1
       - date: '3090-01-01'
         population: 732680392.0
       - date: '3096-01-01'
@@ -353,22 +352,31 @@ planet:
         population: 789428748.0
       - date: '3130-12-31'
         administration:
-          - Liao Commonality
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 1
       - date: '3132-08-07'
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 4
       - date: '3140-01-01'
         population: 803767123.0
       - date: '3145-01-01'
         population: 811682765.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 4
   - name: Jiezhi
     type: TERRESTRIAL
     orbitalDist: 0.07

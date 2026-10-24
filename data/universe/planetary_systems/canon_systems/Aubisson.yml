@@ -85,12 +85,6 @@ planet:
         population: 108436841.0
       - date: '2270-01-01'
         population: 144969947.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 187269382.0
       - date: '2290-01-01'
@@ -99,12 +93,6 @@ planet:
         population: 286615432.0
       - date: '2310-01-01'
         population: 341952887.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 399366106.0
       - date: '2330-01-01'
@@ -119,7 +107,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -171,15 +159,17 @@ planet:
       - date: '2570-01-01'
         population: 1243668113.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 1248903515.0
       - date: '2590-01-01'
@@ -242,14 +232,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Benjamin Military District
-          - Baldur Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Baldur Prefecture
       - date: '2830-01-01'
         population: 1380202963.0
       - date: '2840-01-01'
@@ -266,14 +253,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Kannon Shire
       - date: '2866-11-15'
         faction:
           source: canon
@@ -317,14 +301,11 @@ planet:
         socioIndustrial: C-B-C-B-C
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Vega Prefecture
       - date: '3030-05-26'
         faction:
           source: canon
@@ -333,14 +314,11 @@ planet:
         population: 1298232987.0
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Virginia Shire
       - date: '3040-01-19'
         faction:
           source: canon
@@ -354,14 +332,11 @@ planet:
         population: 1307483240.0
       - date: '3040-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Vega Prefecture
       - date: '3044-01-01'
         socioIndustrial: B-A-B-A-C
       - date: '3050-01-01'
@@ -372,14 +347,20 @@ planet:
         population: 1347436770.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3080-01-01'
         population: 1367527136.0
       - date: '3081-12-31'
         administration:
-          - Benjamin Military District
-          - Buckminster Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Buckminster Prefecture
       - date: '3090-01-01'
         population: 1381823631.0
       - date: '3100-01-01'
@@ -400,8 +381,11 @@ planet:
         population: 1461121219.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Algedi Prefecture
   - name: Moultrie
     type: GAS_GIANT
     orbitalDist: 1.12

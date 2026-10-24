@@ -109,12 +109,6 @@ planet:
         population: 6135131.0
       - date: '2270-01-01'
         population: 7959938.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 10038896.0
       - date: '2290-01-01'
@@ -128,12 +122,6 @@ planet:
         population: 14885683.0
       - date: '2310-01-01'
         population: 17598625.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 20455165.0
       - date: '2330-01-01'
@@ -148,7 +136,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -156,14 +144,16 @@ planet:
       - date: '2360-01-01'
         population: 32191619.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 34706689.0
       - date: '2380-01-01'
@@ -211,8 +201,11 @@ planet:
         population: 53623228.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Kannon Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-01-01'
         population: 54227289.0
       - date: '2590-01-01'
@@ -313,8 +306,11 @@ planet:
         population: 43363663.0
       - date: '3025-12-31'
         administration:
-          - Federation of Skye
-          - Virginia Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Virginia Shire
       - date: '3027-01-01'
         socioIndustrial: F-D-B-D-C
       - date: '3030-01-01'
@@ -328,15 +324,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 1
       - date: '3046-01-01'
         socioIndustrial: F-F-B-D-C
       - date: '3050-01-01'
@@ -346,16 +339,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 44540026.0
       - date: '3070-01-01'
@@ -364,7 +354,10 @@ planet:
         population: 45389838.0
       - date: '3081-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3090-01-01'
         population: 45535318.0
       - date: '3100-01-01'
@@ -377,7 +370,10 @@ planet:
         population: 45699541.0
       - date: '3130-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
       - date: '3132-08-07'
         hpg: X
       - date: '3133-01-01'
@@ -392,13 +388,10 @@ planet:
         population: 45827679.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
   - name: Medvedevskiy
     type: ICE_GIANT
     orbitalDist: 0.9

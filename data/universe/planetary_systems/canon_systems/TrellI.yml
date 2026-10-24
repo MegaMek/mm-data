@@ -76,7 +76,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2464-05-11'
@@ -112,15 +112,15 @@ planet:
         population: 128496291.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Trellshire
-        capitalType: Region Capital
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Trellshire
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 149432190.0
       - date: '2590-01-01'
@@ -235,15 +235,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Blackjack Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Blackjack Operational Area
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3045-01-01'
         socioIndustrial: D-D-C-D-D
       - date: '3050-01-01'
@@ -251,9 +252,13 @@ planet:
       - date: '3050-03-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3050-04-12'
         faction:
           source: canon
@@ -270,23 +275,11 @@ planet:
           source: canon
           value:
             - CSV
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CSV
       - date: '3060-01-01'
         population: 192573595.0
       - date: '3062-03-27'
         faction:
           source: canon
-          value:
-            - CJF
-      - date: '3063-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CJF
       - date: '3070-01-01'
@@ -299,12 +292,6 @@ planet:
       - date: '3072-05-13'
         faction:
           source: canon
-          value:
-            - CJF
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CJF
       - date: '3080-01-01'
@@ -325,12 +312,6 @@ planet:
           value:
             - CHH
         population: 197152668.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CHH
       - date: '3132-08-07'
         hpg:
           source: canon

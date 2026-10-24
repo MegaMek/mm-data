@@ -150,7 +150,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2301-04-25'
@@ -162,12 +162,6 @@ planet:
         socioIndustrial: D-D-B-F-D
       - date: '2310-01-01'
         population: 148890.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 472403.0
       - date: '2330-01-01'
@@ -185,7 +179,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -235,16 +229,18 @@ planet:
       - date: '2570-01-01'
         population: 392994650.0
       - date: '2571-12-31'
-        administration:
-          - Draconis March
-          - Fairfax Operational Area
-          - Region 1
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Fairfax Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 404887179.0
       - date: '2590-01-01'
@@ -303,9 +299,12 @@ planet:
         population: 496604648.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 4
       - date: '2830-01-01'
         population: 497680732.0
       - date: '2840-01-01'
@@ -318,9 +317,12 @@ planet:
         population: 500226450.0
       - date: '2864-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 3
       - date: '2870-01-01'
         population: 503641009.0
       - date: '2880-01-01'
@@ -357,9 +359,12 @@ planet:
         population: 369796634.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Dahar PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Dahar PDZ
       - date: '3030-01-01'
         population: 363834583.0
       - date: '3040-01-01'
@@ -367,12 +372,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3047-01-01'
@@ -384,12 +383,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -418,14 +411,11 @@ planet:
         population: 389825547.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Barlow's End Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - New Samarkand Military District
+            - Barlow's End Prefecture
   - name: Messmerstein
     type: GAS_GIANT
     orbitalDist: 17.64

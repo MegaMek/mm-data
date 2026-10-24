@@ -105,7 +105,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-05-29'
@@ -115,12 +115,6 @@ planet:
             - TH
         population: 68642.0
         socioIndustrial: D-D-B-D-C
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 82979.0
       - date: '2330-01-01'
@@ -131,12 +125,6 @@ planet:
         population: 6691442.0
       - date: '2360-01-01'
         population: 18630822.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2370-01-01'
         population: 44271673.0
       - date: '2380-01-01'
@@ -182,15 +170,19 @@ planet:
         population: 3564461278.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 3619084303.0
       - date: '2590-01-01'
         population: 3660878926.0
       - date: '2596-12-31'
-        administration:
-          - Lockdale Province
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2600-01-01'
         population: 3684915620.0
       - date: '2610-01-01'
@@ -238,7 +230,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -257,7 +249,7 @@ planet:
       - date: '2783-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
       - date: '2790-01-01'
@@ -269,23 +261,33 @@ planet:
       - date: '2820-01-01'
         population: 3137913929.0
       - date: '2821-12-31'
-        administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Lone Star Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2830-01-01'
         population: 1174831263.0
       - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - ABN
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2840-01-01'
         population: 27447008.0
       - date: '2850-01-01'

@@ -213,12 +213,6 @@ planet:
         population: 11345834.0
       - date: '2270-01-01'
         population: 20559274.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-08-20'
         faction:
           source: canon
@@ -234,7 +228,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -251,7 +245,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -302,7 +296,10 @@ planet:
         population: 1257127610.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 1271314058.0
       - date: '2590-01-01'
@@ -402,6 +399,11 @@ planet:
         population: 935733871.0
       - date: '3020-01-01'
         population: 918579809.0
+      - date: '3025-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 914079087.0
       - date: '3036-01-01'
@@ -423,12 +425,6 @@ planet:
       - date: '3081-07-28'
         faction:
           source: canon
-          value:
-            - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - IND
       - date: '3090-01-01'
@@ -456,14 +452,16 @@ planet:
             - OP
         population: 1085631469.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Lopti
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.0

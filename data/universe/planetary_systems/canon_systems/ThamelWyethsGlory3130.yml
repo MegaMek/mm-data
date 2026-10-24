@@ -98,7 +98,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2735-10-01'
@@ -116,14 +116,11 @@ planet:
         population: 442691.0
       - date: '2750-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sian Commonality
+            - Region 13
       - date: '2760-01-01'
         population: 1389365.0
       - date: '2770-01-01'
@@ -132,8 +129,11 @@ planet:
         population: 7321332.0
       - date: '2786-12-31'
         administration:
-          - Sian Commonality
-          - Region 14
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sian Commonality
+            - Region 14
       - date: '2790-01-01'
         population: 8503665.0
       - date: '2800-01-01'
@@ -167,24 +167,25 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
       - date: '3130-01-01'
         name: Wyeth's Glory
         message: Thamel renamed to Wyeth's Glory
       - date: '3130-12-31'
-        administration:
-          - Victoria Commonality
-          - Region 7
-      - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Victoria Commonality
+            - Region 7
   - name: Valkyrja Belt
     type: ASTEROID_BELT
     orbitalDist: 3.64

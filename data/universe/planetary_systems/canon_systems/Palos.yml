@@ -156,7 +156,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2280-01-01'
@@ -177,12 +177,6 @@ planet:
             - SSUP
       - date: '2310-01-01'
         population: 199760703.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - SSUP
       - date: '2320-01-01'
         population: 301249744.0
       - date: '2330-01-01'
@@ -249,14 +243,11 @@ planet:
             - CC
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 4
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 4
       - date: '2573-01-01'
         socioIndustrial: C-B-D-B-F
       - date: '2580-01-01'
@@ -367,17 +358,22 @@ planet:
         population: 4957622887.0
         socioIndustrial: C-B-D-C-D
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 3
-        capitalType: Region Capital
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3040-01-19'
         faction:
           source: canon
@@ -386,12 +382,6 @@ planet:
       - date: '3040-04-28'
         population: 4997442938.0
         socioIndustrial: C-A-D-B-D
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 5034057753.0
       - date: '3057-11-01'
@@ -402,9 +392,17 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 5091774371.0
       - date: '3062-12-29'
@@ -414,14 +412,11 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 6
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 6
       - date: '3070-01-01'
         population: 5157883749.0
       - date: '3080-01-01'
@@ -433,13 +428,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture V
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 5271560186.0
       - date: '3095-01-01'
@@ -461,22 +453,22 @@ planet:
             - CC
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 5
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 5
       - date: '3140-01-01'
         population: 5603135598.0
       - date: '3145-01-01'
         population: 5640238598.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 5
   - name: Benu
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.96

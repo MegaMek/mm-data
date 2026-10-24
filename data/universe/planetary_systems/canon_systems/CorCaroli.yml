@@ -120,12 +120,6 @@ planet:
         socioIndustrial: F-D-B-D-C
       - date: '2270-01-01'
         population: 65902.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 300758.0
       - date: '2290-01-01'
@@ -142,13 +136,13 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2320-01-01'
@@ -167,7 +161,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -177,14 +171,16 @@ planet:
       - date: '2361-01-01'
         socioIndustrial: C-D-B-C-C
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 262012500.0
       - date: '2380-01-01'
@@ -234,15 +230,17 @@ planet:
       - date: '2570-01-01'
         population: 2125552833.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2580-01-01'
         population: 2135742836.0
       - date: '2590-01-01'
@@ -290,16 +288,28 @@ planet:
           value:
             - RWR
       - date: '2767-12-31'
-        administration:
-          - Tyrfing Province
-      - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2770-01-01'
         population: 2424575619.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-09-12'
         faction:
           source: canon
@@ -314,19 +324,26 @@ planet:
       - date: '2783-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
-      - date: '2786-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2786-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2790-01-01'
         population: 2425777241.0
       - date: '2800-01-01'
@@ -403,15 +420,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Alcor Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Alcor Operational Area
+            - Region 2
       - date: '3048-01-01'
         socioIndustrial: A-B-C-A-B
       - date: '3050-01-01'
@@ -421,16 +435,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 2119015129.0
       - date: '3068-08-01'
@@ -439,11 +450,10 @@ planet:
           value:
             - WOB
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 2140953775.0
       - date: '3077-01-21'
@@ -457,12 +467,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 2165500298.0
       - date: '3081-07-13'
@@ -472,13 +476,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3090-01-01'
         population: 2205273239.0
       - date: '3097-01-01'
@@ -499,11 +500,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 2368013502.0
       - date: '3145-06-21'
@@ -512,12 +512,6 @@ planet:
           value:
             - CWE
         population: 2392769350.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
   - name: Ku
     type: TERRESTRIAL
     orbitalDist: 2.9

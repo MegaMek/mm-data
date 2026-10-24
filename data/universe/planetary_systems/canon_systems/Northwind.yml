@@ -133,12 +133,6 @@ planet:
         population: 5771052.0
       - date: '2270-01-01'
         population: 12734301.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 25312974.0
       - date: '2290-01-01'
@@ -150,12 +144,6 @@ planet:
       - date: '2315-01-05'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2319-12-30'
@@ -219,7 +207,10 @@ planet:
         population: 2331760635.0
       - date: '2571-12-31'
         administration:
-          - Lockdale Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lockdale Province
       - date: '2580-01-01'
         population: 2374872783.0
       - date: '2590-01-01'
@@ -273,7 +264,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -285,12 +276,6 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 2421306584.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-10-13'
         faction:
           source: canon
@@ -310,14 +295,11 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 3
       - date: '2830-01-01'
         population: 2320957764.0
       - date: '2840-01-01'
@@ -340,15 +322,12 @@ planet:
             - FS
       - date: '2864-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 1
       - date: '2870-01-01'
         population: 2159263587.0
       - date: '2880-01-01'
@@ -385,9 +364,12 @@ planet:
         population: 1620716174.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Addicks PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Addicks PDZ
       - date: '3030-01-01'
         population: 1616729559.0
       - date: '3038-01-01'
@@ -397,12 +379,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3047-01-01'
@@ -423,9 +399,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 1648894920.0
       - date: '3067-12-01'
@@ -437,13 +417,13 @@ planet:
       - date: '3067-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '3068-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
       - date: '3070-01-01'
@@ -456,7 +436,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -470,13 +450,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 1688271658.0
       - date: '3100-08-20'
@@ -492,10 +469,15 @@ planet:
         population: 1760337088.0
       - date: '3145-01-01'
         population: 1771639374.0
+      - date: '3145-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
   - name: An

@@ -127,7 +127,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2460-03-28'
@@ -164,12 +164,6 @@ planet:
         population: 209225259.0
       - date: '2570-01-01'
         population: 252645919.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2580-01-01'
         population: 292933586.0
       - date: '2590-01-01'
@@ -218,14 +212,11 @@ planet:
         population: 533741954.0
       - date: '2750-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Camlann Shire
       - date: '2760-01-01'
         population: 537793596.0
       - date: '2770-01-01'
@@ -252,8 +243,11 @@ planet:
         population: 536114635.0
       - date: '2864-12-31'
         administration:
-          - Tamar Pact
-          - Orkney Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Orkney Shire
       - date: '2870-01-01'
         population: 538079957.0
       - date: '2880-01-01'
@@ -289,8 +283,11 @@ planet:
         population: 444034106.0
       - date: '3025-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '3030-01-01'
         population: 442866651.0
       - date: '3037-01-01'
@@ -304,15 +301,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 3
       - date: '3044-01-01'
         socioIndustrial:
           source: canon
@@ -321,24 +315,24 @@ planet:
         population: 448571779.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 2
       - date: '3057-09-18'
         faction:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
       - date: '3060-01-01'
         population: 451271300.0
       - date: '3062-12-07'
@@ -354,7 +348,10 @@ planet:
             - LA
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 454532179.0
       - date: '3070-01-18'
@@ -363,11 +360,10 @@ planet:
           value:
             - CW
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 459743494.0
       - date: '3090-01-01'
@@ -396,13 +392,10 @@ planet:
         population: 513098950.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
   - name: Peters's Planet
     type: TERRESTRIAL
     orbitalDist: 0.9

@@ -92,12 +92,6 @@ planet:
         socioIndustrial: D-D-D-C-F
       - date: '2270-01-01'
         population: 84720.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 442349.0
       - date: '2290-01-01'
@@ -109,7 +103,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2320-01-01'
@@ -182,13 +176,10 @@ planet:
         population: 7878338644.0
       - date: '2571-12-31'
         administration:
-          - Terra Firma Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2580-01-01'
         population: 8043957717.0
       - date: '2590-01-01'
@@ -241,11 +232,28 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 8443755439.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - AE
+            - SL
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-06-26'
         faction:
           source: canon
@@ -254,22 +262,21 @@ planet:
       - date: '2780-01-01'
         population: 8371975302.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2786-09-20'
         faction:
           source: canon
           value:
             - FWL
       - date: '2786-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2790-01-01'
         population: 8362883529.0
       - date: '2800-01-01'
@@ -285,14 +292,11 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 5
       - date: '2830-01-01'
         population: 7996017386.0
       - date: '2832-03-14'
@@ -312,12 +316,6 @@ planet:
           value:
             - CC
         population: 7936662490.0
-      - date: '2864-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CC
       - date: '2870-01-01'
         population: 7745582641.0
       - date: '2880-01-01'
@@ -368,11 +366,10 @@ planet:
       - date: '3020-01-01'
         population: 5643283170.0
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 5661150912.0
       - date: '3032-01-01'
@@ -394,12 +391,6 @@ planet:
           source: canon
           value:
             - WOB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
       - date: '3077-01-10'
         faction:
           source: canon
@@ -411,12 +402,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 5952594726.0
       - date: '3081-03-28'
@@ -426,13 +411,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VI
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 5954976240.0
       - date: '3097-01-01'
@@ -460,9 +442,13 @@ planet:
       - date: '3135-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3139-01-01'
         faction:
           source: canon
@@ -473,14 +459,16 @@ planet:
       - date: '3145-01-01'
         population: 5959742127.0
       - date: '3145-12-31'
-        administration:
-          - Augustine Alliance
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Augustine Alliance
   - name: LS-4
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.28

@@ -148,12 +148,6 @@ planet:
         population: 15663050.0
       - date: '2270-01-01'
         population: 28921738.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-02-09'
         faction:
           source: canon
@@ -171,7 +165,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -187,7 +181,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -236,7 +230,10 @@ planet:
         population: 2230551724.0
       - date: '2571-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2580-01-01'
         population: 2236529100.0
       - date: '2590-01-01'
@@ -303,6 +300,11 @@ planet:
         socioIndustrial: B-B-C-B-D
       - date: '2860-01-01'
         population: 2174781959.0
+      - date: '2864-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2870-01-01'
         population: 2176632307.0
       - date: '2880-01-01'
@@ -385,13 +387,13 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -403,14 +405,14 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VII
-        capitalType: Region Capital
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3090-01-01'
         population: 1830342291.0
       - date: '3100-01-01'
@@ -433,11 +435,14 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3140-01-01'
         population: 1509076333.0
       - date: '3145-05-31'
@@ -448,12 +453,6 @@ planet:
         population:
           source: canon
           value: 1301000000.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
   - name: Kagua Erave
     type: TERRESTRIAL
     orbitalDist: 0.9

@@ -116,7 +116,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2341-07-03'
@@ -126,12 +126,6 @@ planet:
             - DC
         population: 65478.0
         socioIndustrial: D-D-B-D-C
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 208396.0
       - date: '2360-01-01'
@@ -184,23 +178,20 @@ planet:
         population: 190454676.0
       - date: '2571-12-31'
         administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Pesht Military District
+            - Kagoshima Prefecture
       - date: '2580-01-01'
         population: 194735130.0
       - date: '2590-01-01'
         population: 197504976.0
       - date: '2596-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
-        # capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2600-01-01'
         population: 200265734.0
       - date: '2610-01-01'
@@ -238,9 +229,10 @@ planet:
       - date: '2750-01-01'
         population: 203055642.0
       - date: '2750-12-31'
-        administration:
-          - Pesht Military District
-          - Kagoshima Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2760-01-01'
         population: 202527415.0
       - date: '2770-01-01'

@@ -180,9 +180,13 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SC
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '2280-01-01'
         population: 861401.0
       - date: '2290-01-01'
@@ -198,14 +202,14 @@ planet:
         population: 16025803.0
       - date: '2317-12-31'
         administration:
-          - Stewart Confederation
-        capitalType: District Capital
-      - date: '2317-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Stewart Confederation
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2320-01-01'
         population: 33133443.0
       - date: '2330-01-01'
@@ -265,8 +269,10 @@ planet:
       - date: '2590-01-01'
         population: 3268507043.0
       - date: '2596-12-31'
-        administration:
-          - Stewart Confederation
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2598-01-01'
         socioIndustrial: C-B-B-C-B
       - date: '2600-01-01'
@@ -308,9 +314,10 @@ planet:
       - date: '2750-01-01'
         population: 3416722391.0
       - date: '2750-12-31'
-        administration:
-          - Stewart Confederation
-        capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2760-01-01'
         population: 3430930464.0
       - date: '2770-01-01'
@@ -328,9 +335,10 @@ planet:
       - date: '2830-01-01'
         population: 3391335209.0
       - date: '2830-12-31'
-        administration:
-          - Stewart Confederation
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2840-01-01'
         population: 3365380973.0
       - date: '2850-09-27'
@@ -339,8 +347,10 @@ planet:
       - date: '2860-01-01'
         population: 3306655273.0
       - date: '2864-12-31'
-        administration:
-          - Stewart Confederation
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '2870-01-01'
         population: 3277030389.0
       - date: '2880-01-01'
@@ -376,8 +386,14 @@ planet:
         population: 2918416211.0
       - date: '3025-12-31'
         administration:
-          - Stewart Commonality
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stewart Commonality
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3030-01-01'
         population: 2923146952.0
       - date: '3037-01-01'
@@ -404,11 +420,14 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3078-07-12'
         faction:
           source: canon
@@ -428,7 +447,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -440,16 +459,16 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture VII
       - date: '3090-01-01'
         population: 3067186706.0
       - date: '3100-01-01'
@@ -477,9 +496,13 @@ planet:
       - date: '3135-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3138-06-05'
         faction:
           source: canon
@@ -493,12 +516,6 @@ planet:
           value:
             - CWE
         population: 3182798239.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
       - date: '3151-04-16'
         faction:
           source: canon
@@ -507,15 +524,19 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
   - name: Garne
     type: DWARF_TERRESTRIAL
     orbitalDist: 2.24

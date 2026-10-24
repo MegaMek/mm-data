@@ -101,7 +101,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2744-06-11'
@@ -117,15 +117,12 @@ planet:
         population: 169820.0
       - date: '2750-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 659984.0
       - date: '2770-01-01'
@@ -142,9 +139,12 @@ planet:
         population: 989190.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2830-01-01'
         population: 445571.0
       - date: '2840-01-01'
@@ -174,11 +174,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Merck
     type: GIANT_TERRESTRIAL
     orbitalDist: 8.32

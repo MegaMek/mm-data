@@ -205,12 +205,6 @@ planet:
         population: 121537697.0
       - date: '2270-01-01'
         population: 167896483.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 223973334.0
       - date: '2290-01-01'
@@ -235,7 +229,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -287,15 +281,17 @@ planet:
       - date: '2570-01-01'
         population: 1768963085.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2580-01-01'
         population: 1778130869.0
       - date: '2590-01-01'
@@ -400,14 +396,11 @@ planet:
         population: 1315540690.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3030-01-08'
         faction:
           source: canon
@@ -417,14 +410,11 @@ planet:
         socioIndustrial: B-B-D-B-D
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '3040-01-19'
         faction:
           source: canon
@@ -438,14 +428,11 @@ planet:
         population: 1334389654.0
       - date: '3040-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3041-01-01'
         socioIndustrial: A-A-C-A-C
       - date: '3050-01-01'
@@ -463,13 +450,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 1407864474.0
       - date: '3092-01-01'
@@ -490,11 +474,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3137-08-10'
         faction:
           source: canon
@@ -506,17 +489,17 @@ planet:
         population: 1560293585.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Dromini VII
     type: TERRESTRIAL
     orbitalDist: 6.0

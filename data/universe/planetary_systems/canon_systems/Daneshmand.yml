@@ -73,7 +73,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoO
       - date: '2280-01-01'
@@ -85,14 +85,16 @@ planet:
       - date: '2310-01-01'
         population: 20485032.0
       - date: '2317-12-31'
-        administration:
-          - Federation of Oriente
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2320-01-01'
         population: 34256431.0
       - date: '2330-01-01'
@@ -246,7 +248,10 @@ planet:
         population: 892274280.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3030-01-01'
         population: 887989973.0
       - date: '3040-01-01'
@@ -267,7 +272,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -275,9 +280,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-07-28'
         faction:
           source: canon
@@ -285,12 +294,6 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 950473662.0
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-23'
         population: 964645283.0
         socioIndustrial: C-C-B-C-C
@@ -307,14 +310,16 @@ planet:
       - date: '3145-01-01'
         population: 1014306545.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Campbell's World
     type: TERRESTRIAL
     orbitalDist: 0.07

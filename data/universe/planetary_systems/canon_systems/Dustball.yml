@@ -172,7 +172,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2665-04-10'
@@ -210,14 +210,11 @@ planet:
         population: 1299645973.0
       - date: '2750-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Tamar Domains
       - date: '2760-01-01'
         population: 1332463061.0
       - date: '2770-01-01'
@@ -289,15 +286,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Benfled Operational Area
+            - Region 2
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -306,9 +300,12 @@ planet:
         population: 824216833.0
       - date: '3052-12-31'
         administration:
-          - Tamar March
-          - Pandora Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Pandora Operational Area
+            - Region 1
       - date: '3057-12-01'
         faction:
           source: canon
@@ -317,14 +314,17 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
-          - Arc-Royal Defense Cordon
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
+            - Arc-Royal Defense Cordon
       - date: '3060-01-01'
         population: 829259921.0
       - date: '3067-01-01'
@@ -338,7 +338,10 @@ planet:
             - LA
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 834500750.0
       - date: '3080-01-01'
@@ -362,7 +365,7 @@ planet:
         population: 849148126.0
       - date: '3130-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -378,7 +381,7 @@ planet:
             - CJF
       - date: '3135-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - CJF
@@ -390,9 +393,13 @@ planet:
       - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3151-08-13'
         faction:
           source: canon
@@ -401,12 +408,12 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CJF
       - date: '3152-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - MALC

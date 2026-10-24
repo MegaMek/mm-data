@@ -146,7 +146,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2471-05-25'
@@ -178,13 +178,10 @@ planet:
         population: 153758249.0
       - date: '2571-12-31'
         administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Principality of Regulus
       - date: '2573-01-01'
         socioIndustrial: C-C-C-C-C
       - date: '2580-01-01'
@@ -228,6 +225,11 @@ planet:
         population: 374044171.0
       - date: '2750-01-01'
         population: 377258035.0
+      - date: '2750-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2760-01-01'
         population: 381998511.0
       - date: '2770-01-01'
@@ -307,12 +309,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 323634339.0
       - date: '3100-01-01'
@@ -338,14 +334,16 @@ planet:
             - RCM
         population: 328459747.0
       - date: '3145-12-31'
-        administration:
-          - Rim Commonality
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
   - name: Cook
     type: DWARF_TERRESTRIAL
     orbitalDist: 3.64

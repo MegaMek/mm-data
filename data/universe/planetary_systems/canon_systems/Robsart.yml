@@ -64,7 +64,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2332-12-05'
@@ -76,22 +76,10 @@ planet:
         socioIndustrial: D-C-B-D-D
       - date: '2340-01-01'
         population: 153156.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 472286.0
       - date: '2360-01-01'
         population: 1229777.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2370-01-01'
         population: 2772344.0
       - date: '2373-01-01'
@@ -159,15 +147,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2600-01-01'
         population: 236936570.0
       - date: '2610-01-01'
@@ -206,9 +191,12 @@ planet:
         population: 240081147.0
       - date: '2750-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2760-01-01'
         population: 239927634.0
       - date: '2770-01-01'
@@ -229,9 +217,12 @@ planet:
         population: 224938604.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2830-01-01'
         population: 228025624.0
       - date: '2840-01-01'
@@ -278,9 +269,12 @@ planet:
         population: 137193405.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 137234989.0
       - date: '3040-01-01'
@@ -288,12 +282,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3041-01-01'
@@ -307,12 +295,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -329,11 +311,10 @@ planet:
           value:
             - TC
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 145502709.0
       - date: '3080-06-01'
@@ -343,15 +324,12 @@ planet:
             - FS
       - date: '3081-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3090-01-01'
         population: 146965036.0
       - date: '3100-01-01'
@@ -372,14 +350,20 @@ planet:
         population: 155026289.0
       - date: '3145-12-31'
         administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - Altair PDZ
       - date: '3151-12-31'
         administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Melonakos
     type: TERRESTRIAL
     orbitalDist: 0.9

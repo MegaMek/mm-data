@@ -88,7 +88,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2273-07-18'
@@ -108,18 +108,6 @@ planet:
         socioIndustrial: D-D-C-D-D
       - date: '2310-01-01'
         population: 6670832.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 17281453.0
       - date: '2330-01-01'
@@ -138,7 +126,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -194,14 +182,11 @@ planet:
             - DC
       - date: '2571-12-31'
         administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2580-01-01'
         population: 5525694225.0
       - date: '2590-01-01'
@@ -257,8 +242,11 @@ planet:
         population: 6353321540.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 6270773248.0
       - date: '2840-01-01'
@@ -305,8 +293,11 @@ planet:
         population: 4588992410.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Algedi Prefecture
       - date: '3030-01-01'
         population: 4528015036.0
       - date: '3039-01-01'
@@ -323,8 +314,11 @@ planet:
         population: 4766840238.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '3080-01-01'
         population: 4846630211.0
       - date: '3081-11-07'
@@ -334,13 +328,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 4911029832.0
       - date: '3100-01-01'
@@ -361,11 +352,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 5230378579.0
       - date: '3145-12-08'
@@ -376,14 +366,11 @@ planet:
         population: 5271335055.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Algedi Prefecture
   - name: Pérez's World
     type: TERRESTRIAL
     orbitalDist: 1.05

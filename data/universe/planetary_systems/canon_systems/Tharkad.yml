@@ -183,7 +183,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2314-10-02'
@@ -193,12 +193,6 @@ planet:
             - PD
         population: 52863.0
         socioIndustrial: D-D-A-D-B
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 159066.0
       - date: '2330-01-01'
@@ -213,7 +207,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PD
       - date: '2350-01-01'
@@ -221,14 +215,16 @@ planet:
       - date: '2360-01-01'
         population: 27528345.0
       - date: '2366-12-31'
-        administration:
-          - Protectorate of Donegal
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
       - date: '2370-01-01'
         population: 64104198.0
       - date: '2380-01-01'
@@ -277,9 +273,15 @@ planet:
         population: 5529483954.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - District of Donegal
-        capitalType: National Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - District of Donegal
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '2580-01-01'
         population: 5632093478.0
       - date: '2590-01-01'
@@ -391,16 +393,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Pherkad Operational Area
-          - Region 1
-        capitalType: National Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Pherkad Operational Area
+            - Region 1
       - date: '3045-01-01'
         socioIndustrial:
           source: canon
@@ -416,16 +414,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-        capitalType: National Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
       - date: '3060-01-01'
         population: 6962301877.0
       - date: '3067-01-01'
@@ -441,9 +435,17 @@ planet:
       - date: '3067-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3070-01-01'
         population: 6997684280.0
       - date: '3072-01-10'
@@ -453,14 +455,14 @@ planet:
             - LA
       - date: '3075-12-31'
         administration:
-          - Donegal Province
-        capitalType: National Capital
-      - date: '3075-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Donegal Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3079-01-01'
         population:
           source: canon

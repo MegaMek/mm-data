@@ -153,12 +153,6 @@ planet:
         population: 124620.0
       - date: '2270-01-01'
         population: 457374.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 1415305.0
       - date: '2290-01-01'
@@ -184,13 +178,10 @@ planet:
         population: 214038456.0
       - date: '2366-12-31'
         administration:
-          - Federation of Skye
-      - date: '2366-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
       - date: '2370-01-01'
         population: 291852915.0
       - date: '2380-01-01'
@@ -243,11 +234,10 @@ planet:
       - date: '2570-01-01'
         population: 2186450995.0
       - date: '2571-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2580-01-01'
         population: 2240390668.0
       - date: '2590-01-01'
@@ -318,14 +308,11 @@ planet:
             - LA
       - date: '2821-12-31'
         administration:
-          - Federation of Skye
-          - Rahneshire
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Rahneshire
       - date: '2830-01-01'
         population: 2547789588.0
       - date: '2840-02-13'
@@ -376,13 +363,10 @@ planet:
         population: 2402259720.0
       - date: '3025-12-31'
         administration:
-          - Silver Hawks Coalition
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Silver Hawks Coalition
       - date: '3030-01-01'
         population: 2407909398.0
       - date: '3040-01-01'
@@ -407,11 +391,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3078-07-12'
         faction:
           source: canon
@@ -431,7 +414,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -443,16 +426,16 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture VII
       - date: '3090-01-01'
         population: 2596226128.0
       - date: '3099-01-01'
@@ -471,11 +454,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3136-02-01'
         faction:
           source: canon
@@ -489,21 +471,17 @@ planet:
           value:
             - CWE
         population: 2732068191.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
-      - date: '3152-12-31'
-        administration:
-          - Covenant Worlds
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Biame's Station
     type: TERRESTRIAL
     orbitalDist: 5.2

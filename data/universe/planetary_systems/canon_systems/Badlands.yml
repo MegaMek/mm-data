@@ -113,7 +113,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2519-01-23'
@@ -135,12 +135,6 @@ planet:
         population: 9271001.0
       - date: '2570-01-01'
         population: 16825943.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2580-01-01'
         population: 26249833.0
       - date: '2590-01-01'
@@ -153,7 +147,7 @@ planet:
       - date: '2596-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '2597-03-21'
@@ -198,7 +192,10 @@ planet:
         population: 109785345.0
       - date: '2750-12-31'
         administration:
-          - Dumassas Union
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dumassas Union
       - date: '2760-01-01'
         population: 110095983.0
       - date: '2770-01-01'
@@ -231,11 +228,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Emerick's Planet
     type: GAS_GIANT
     orbitalDist: 7.8

@@ -71,7 +71,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2415-12-06'
@@ -115,12 +115,6 @@ planet:
         population: 610112653.0
       - date: '2570-01-01'
         population: 667325665.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OA
       - date: '2580-01-01'
         population: 715053115.0
       - date: '2590-01-01'
@@ -134,15 +128,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2600-01-01'
         population: 795438399.0
       - date: '2610-01-01'
@@ -243,9 +234,12 @@ planet:
         population: 794722500.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Bryceland PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Bryceland PDZ
       - date: '3030-01-01'
         population: 786322176.0
       - date: '3040-01-01'
@@ -253,12 +247,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3043-01-01'
@@ -270,12 +258,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -299,11 +281,10 @@ planet:
       - date: '3130-01-01'
         population: 834444807.0
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'

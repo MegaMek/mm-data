@@ -58,12 +58,6 @@ planet:
             - CH
         population: 59045.0
         socioIndustrial: D-D-B-D-D
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 238104.0
       - date: '2290-01-01'
@@ -78,12 +72,6 @@ planet:
           value:
             - CCom
         population: 5480658.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 11803929.0
       - date: '2330-01-01'
@@ -94,12 +82,6 @@ planet:
         population: 66388668.0
       - date: '2360-01-01'
         population: 101078699.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CCom
       - date: '2367-07-01'
         faction:
           source: canon
@@ -149,14 +131,11 @@ planet:
         population: 1276681304.0
       - date: '2571-12-31'
         administration:
-          - Capella Commonality
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Capella Commonality
+            - Region 1
       - date: '2580-01-01'
         population: 1290277741.0
       - date: '2590-01-01'
@@ -218,13 +197,10 @@ planet:
             - FWL
       - date: '2821-12-31'
         administration:
-          - Duchy of Orloff
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Duchy of Orloff
       - date: '2830-01-01'
         population: 1201202491.0
       - date: '2840-01-01'
@@ -295,7 +271,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -303,13 +279,17 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DoO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
       - date: '3090-01-01'
@@ -319,7 +299,7 @@ planet:
       - date: '3095-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - OP
       - date: '3100-01-01'
@@ -337,14 +317,16 @@ planet:
       - date: '3145-01-01'
         population: 1243923421.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Sykes's Redoubt
     type: ICE_GIANT
     orbitalDist: 0.2

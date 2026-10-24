@@ -55,7 +55,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2745-06-22'
@@ -70,13 +70,10 @@ planet:
         population: 121300.0
       - date: '2750-12-31'
         administration:
-          - Federation of Oriente
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Federation of Oriente
       - date: '2760-01-01'
         population: 630346.0
       - date: '2770-04-20'
@@ -135,7 +132,10 @@ planet:
         population: 379796916.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3030-01-01'
         population: 383439193.0
       - date: '3040-01-01'
@@ -156,7 +156,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -164,9 +164,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-09-03'
         faction:
           source: canon
@@ -174,12 +178,6 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 397390475.0
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-01'
         population: 402993068.0
       - date: '3110-01-01'
@@ -196,14 +194,16 @@ planet:
       - date: '3145-01-01'
         population: 426801639.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Carldwen
     type: TERRESTRIAL
     orbitalDist: 0.3

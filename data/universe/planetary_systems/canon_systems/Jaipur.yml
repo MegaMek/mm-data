@@ -119,7 +119,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2275-11-05'
@@ -137,12 +137,6 @@ planet:
         population: 768284.0
       - date: '2310-01-01'
         population: 1854931.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 3976755.0
       - date: '2330-01-01'
@@ -157,12 +151,6 @@ planet:
         population: 22533139.0
       - date: '2360-01-01'
         population: 34465464.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '2370-01-01'
         population: 49979523.0
       - date: '2380-01-01'
@@ -207,9 +195,12 @@ planet:
         population: 422343375.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 427314658.0
       - date: '2590-01-01'
@@ -317,9 +308,12 @@ planet:
         population: 425551280.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 423120939.0
       - date: '3040-01-01'
@@ -327,12 +321,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3048-01-01'
@@ -344,12 +332,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -382,25 +364,24 @@ planet:
         population: 473644976.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
+            - Sian Commonality
+            - Region 13
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Gadchiroli
     type: TERRESTRIAL
     orbitalDist: 4.48

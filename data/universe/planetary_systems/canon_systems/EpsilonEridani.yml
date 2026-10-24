@@ -154,12 +154,6 @@ planet:
         population: 110002.0
       - date: '2270-01-01'
         population: 439807.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TA
       - date: '2280-01-01'
         population: 1448313.0
       - date: '2290-01-01'
@@ -176,12 +170,6 @@ planet:
       - date: '2317-08-30'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -240,7 +228,10 @@ planet:
         population: 2494203932.0
       - date: '2571-12-31'
         administration:
-          - Alliance Core
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alliance Core
       - date: '2580-01-01'
         population: 2553279585.0
       - date: '2590-01-01'
@@ -289,7 +280,7 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
@@ -301,12 +292,6 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 2680571280.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-04-01'
         faction:
           source: canon
@@ -326,14 +311,11 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 3
       - date: '2830-01-01'
         population: 2372736230.0
       - date: '2840-01-01'
@@ -382,8 +364,11 @@ planet:
         socioIndustrial: C-C-D-C-C
       - date: '3025-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 2
       - date: '3029-12-05'
         faction:
           source: canon
@@ -392,11 +377,10 @@ planet:
       - date: '3030-01-01'
         population: 2189803394.0
       - date: '3030-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TFR
+          version: 2026.09.01
+          value: []
       - date: '3032-01-15'
         faction:
           source: canon
@@ -406,15 +390,12 @@ planet:
         population: 2211811284.0
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 1
       - date: '3041-01-01'
         socioIndustrial: B-B-D-B-B
       - date: '3050-01-01'
@@ -427,9 +408,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 2273252818.0
       - date: '3066-02-01'
@@ -441,7 +426,7 @@ planet:
       - date: '3067-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - WOB
       - date: '3068-08-01'
@@ -462,12 +447,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 2344592857.0
       - date: '3081-01-24'
@@ -477,13 +456,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture X
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture X
       - date: '3090-01-01'
         population: 2386222962.0
       - date: '3100-10-31'
@@ -501,6 +477,11 @@ planet:
         population:
           source: canon
           value: 2453000000.0
+      - date: '3145-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3149-03-01'
         faction:
           source: canon
@@ -508,20 +489,21 @@ planet:
             - CC
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 4
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SL3
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
   - name: Corticeiro de Cima
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.96

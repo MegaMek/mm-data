@@ -85,12 +85,6 @@ planet:
         population: 2346267.0
       - date: '2270-01-01'
         population: 4975620.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 9614051.0
       - date: '2290-01-01'
@@ -104,12 +98,6 @@ planet:
         population: 28442586.0
       - date: '2310-01-01'
         population: 44092001.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FoS
       - date: '2320-01-01'
         population: 64212057.0
       - date: '2330-01-01'
@@ -124,7 +112,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -132,14 +120,16 @@ planet:
       - date: '2360-01-01'
         population: 191790218.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 233294360.0
       - date: '2380-01-01'
@@ -186,8 +176,11 @@ planet:
         population: 822829861.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 825630593.0
       - date: '2590-01-01'
@@ -291,8 +284,11 @@ planet:
         population: 650219691.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-01-01'
         population: 655053990.0
       - date: '3040-01-01'
@@ -304,15 +300,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: C-D-B-D-F
       - date: '3050-01-01'
@@ -322,15 +315,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3060-01-01'
         population: 669156296.0
       - date: '3070-01-01'
@@ -362,11 +352,10 @@ planet:
             - CWE
         population: 701287309.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
+          version: 2026.09.01
+          value: []
   - name: Toms River
     type: TERRESTRIAL
     orbitalDist: 2.08

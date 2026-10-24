@@ -138,7 +138,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2273-06-30'
@@ -158,18 +158,6 @@ planet:
         population: 1607228.0
       - date: '2310-01-01'
         population: 4127711.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 9308398.0
       - date: '2325-01-23'
@@ -184,7 +172,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -234,15 +222,17 @@ planet:
       - date: '2570-01-01'
         population: 1147006352.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2580-01-01'
         population: 1164618378.0
       - date: '2590-01-01'
@@ -299,8 +289,11 @@ planet:
         population: 1269576241.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 1247785066.0
       - date: '2840-01-01'
@@ -347,8 +340,11 @@ planet:
         population: 789473129.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Algedi Prefecture
       - date: '3029-01-01'
         socioIndustrial: C-D-B-F-C
       - date: '3030-01-01'
@@ -365,9 +361,13 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AB
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 825998419.0
       - date: '3081-05-29'
@@ -377,13 +377,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 833132639.0
       - date: '3100-01-01'
@@ -402,11 +399,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 851494346.0
       - date: '3145-02-15'
@@ -418,14 +414,11 @@ planet:
         socioIndustrial: C-C-A-D-B
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Algedi Prefecture
   - name: Abū Z̧aby Jadida
     type: ICE_GIANT
     orbitalDist: 0.8

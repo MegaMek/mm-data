@@ -92,7 +92,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2601-04-19'
@@ -142,15 +142,12 @@ planet:
         population: 148159699.0
       - date: '2750-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 2
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 2
       - date: '2760-01-01'
         population: 150084932.0
       - date: '2770-01-01'
@@ -169,13 +166,19 @@ planet:
         population: 8255369.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
       - date: '2822-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 4
       - date: '2830-01-01'
         population: 2700423.0
       - date: '2840-01-01'
@@ -209,11 +212,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Dylan Eil Ton's Land
     type: ICE_GIANT
     orbitalDist: 4.2

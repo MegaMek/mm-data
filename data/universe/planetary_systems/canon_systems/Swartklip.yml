@@ -68,7 +68,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2634-07-19'
@@ -110,14 +110,11 @@ planet:
         population: 129538067.0
       - date: '2750-12-31'
         administration:
-          - Protectorate of Donegal
-          - Coventry Province
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Coventry Province
       - date: '2760-01-01'
         population: 132283956.0
       - date: '2770-01-01'
@@ -188,15 +185,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Periphery March
-          - Tsarahavana Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Periphery March
+            - Tsarahavana Operational Area
+            - Region 2
       - date: '3045-01-01'
         socioIndustrial: D-D-C-D-F
       - date: '3050-01-01'
@@ -206,16 +200,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Coventry Province
-          - Melissia Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Coventry Province
+            - Melissia Theater
       - date: '3060-01-01'
         population: 83838168.0
       - date: '3070-01-01'
@@ -238,7 +229,10 @@ planet:
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Bucklands Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bucklands Theater
       - date: '3140-01-01'
         population: 91449634.0
       - date: '3145-01-01'
@@ -246,9 +240,13 @@ planet:
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RT
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
   - name: Leabua
     type: TERRESTRIAL
     orbitalDist: 1.0

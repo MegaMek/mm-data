@@ -49,7 +49,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2391-10-20'
@@ -97,12 +97,6 @@ planet:
         population: 66425983.0
       - date: '2570-01-01'
         population: 69835139.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OA
       - date: '2580-01-01'
         population: 72591732.0
       - date: '2590-01-01'
@@ -114,15 +108,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 2
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 2
       - date: '2600-01-01'
         population: 77363533.0
       - date: '2610-01-01'
@@ -178,9 +169,12 @@ planet:
         population: 85577099.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 4
       - date: '2830-01-01'
         population: 86935882.0
       - date: '2840-01-01'
@@ -227,9 +221,12 @@ planet:
         population: 46516207.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Kilbourne PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Kilbourne PDZ
       - date: '3030-01-01'
         population: 45250132.0
       - date: '3032-01-01'
@@ -239,12 +236,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3043-01-01'
@@ -258,19 +249,16 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 46502477.0
       - date: '3079-12-31'
         administration:
-          - Periphery March
-          - Woodbine Operational Area
-          - Kilbourne PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Periphery March
+            - Woodbine Operational Area
+            - Kilbourne PDZ
       - date: '3080-01-01'
         population: 46810409.0
       - date: '3090-01-01'
@@ -296,11 +284,10 @@ planet:
             - RA
         population: 48789035.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: Anderson's Folly
     type: TERRESTRIAL
     orbitalDist: 0.14

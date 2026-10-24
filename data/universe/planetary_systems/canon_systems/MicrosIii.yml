@@ -79,7 +79,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '3035-08-14'
@@ -93,28 +93,37 @@ planet:
         hpg: C
       - date: '3040-01-01'
         population: 1422922.0
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '3050-01-01'
         population: 7009626.0
       - date: '3060-01-01'
         population: 8590358.0
       - date: '3067-12-31'
         administration:
-          - Farseer Union
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Farseer Union
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3070-01-01'
         population: 8865326.0
+      - date: '3075-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3080-01-01'
         population: 8907982.0
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '3090-01-01'
@@ -132,12 +141,6 @@ planet:
             - ABN
         hpg: X
         population: 0.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Micros IV
     type: TERRESTRIAL
     orbitalDist: 2.08

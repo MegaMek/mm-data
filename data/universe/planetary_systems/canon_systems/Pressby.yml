@@ -81,12 +81,6 @@ planet:
         socioIndustrial: C-C-C-D-F
       - date: '2270-01-01'
         population: 66040.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 246052.0
       - date: '2290-01-01'
@@ -112,7 +106,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -158,15 +152,17 @@ planet:
       - date: '2570-01-01'
         population: 941682866.0
       - date: '2571-12-31'
-        administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2580-01-01'
         population: 957412453.0
       - date: '2590-01-01'
@@ -269,8 +265,11 @@ planet:
         population: 4886.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3030-05-11'
         faction:
           source: canon
@@ -280,11 +279,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3030-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Sweet's Delight
     type: ICE_GIANT
     orbitalDist: 0.35

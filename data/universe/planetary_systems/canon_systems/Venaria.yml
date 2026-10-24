@@ -70,7 +70,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2437-06-16'
@@ -110,14 +110,11 @@ planet:
         population: 111124203.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - Alarion Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Alarion Province
       - date: '2579-01-01'
         socioIndustrial: B-C-A-D-F
       - date: '2580-01-01'
@@ -228,16 +225,16 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Periphery March
-          - Venaria Operational Area
-          - Region 2
-        capitalType: Region Capital
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Periphery March
+            - Venaria Operational Area
+            - Region 2
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3041-01-01'
         socioIndustrial: C-C-B-D-D
       - date: '3046-01-01'
@@ -249,28 +246,35 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Alarion Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alarion Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 123138474.0
       - date: '3070-01-01'
         population: 124600115.0
       - date: '3075-12-31'
         administration:
-          - Alarion Province
-          - Buena Archonette
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alarion Province
+            - Buena Archonette
       - date: '3080-01-01'
         population: 125978282.0
       - date: '3081-12-31'
         administration:
-          - Buena Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Buena Province
       - date: '3090-01-01'
         population: 127320754.0
       - date: '3091-01-01'
@@ -291,7 +295,10 @@ planet:
         population: 137099855.0
       - date: '3152-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
   - name: Rojas's Belt
     type: ASTEROID_BELT
     orbitalDist: 4.48

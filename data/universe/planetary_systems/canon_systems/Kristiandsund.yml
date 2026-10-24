@@ -77,7 +77,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2659-03-29'
@@ -114,14 +114,11 @@ planet:
         population: 1026043717.0
       - date: '2750-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 1
       - date: '2760-01-01'
         population: 1040262910.0
       - date: '2770-01-01'
@@ -130,8 +127,11 @@ planet:
         population: 1055028650.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 4
       - date: '2790-01-01'
         population: 832899042.0
       - date: '2800-01-01'
@@ -146,11 +146,10 @@ planet:
           value:
             - FWL
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2830-01-01'
         population: 75676782.0
       - date: '2840-01-01'
@@ -182,12 +181,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '3025-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
   - name: Empousa
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.42

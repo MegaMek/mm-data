@@ -92,7 +92,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoO
       - date: '2280-01-01'
@@ -104,14 +104,16 @@ planet:
       - date: '2310-01-01'
         population: 16529195.0
       - date: '2317-12-31'
-        administration:
-          - Federation of Oriente
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2320-01-01'
         population: 26433801.0
       - date: '2330-01-01'
@@ -267,7 +269,10 @@ planet:
         population: 537916471.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3030-05-25'
         population: 536648920.0
         socioIndustrial: B-C-B-B-C
@@ -289,7 +294,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -297,9 +302,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-12-25'
         faction:
           source: canon
@@ -307,12 +316,6 @@ planet:
             - OP
       - date: '3090-01-01'
         population: 572174549.0
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-01'
         population: 576654961.0
       - date: '3107-01-01'
@@ -330,14 +333,16 @@ planet:
       - date: '3145-01-01'
         population: 615259482.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Johnson
     type: TERRESTRIAL
     orbitalDist: 0.8

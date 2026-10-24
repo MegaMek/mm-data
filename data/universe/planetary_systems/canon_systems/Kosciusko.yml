@@ -102,7 +102,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2608-03-10'
@@ -148,12 +148,6 @@ planet:
         population: 350702759.0
       - date: '2750-01-01'
         population: 351485409.0
-      - date: '2750-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2760-01-01'
         population: 351123632.0
       - date: '2770-01-01'
@@ -213,7 +207,10 @@ planet:
         population: 278006329.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Tamarind
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tamarind
       - date: '3030-01-01'
         population: 278208426.0
       - date: '3040-01-01'
@@ -229,18 +226,16 @@ planet:
       - date: '3075-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DT
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3079-11-22'
         faction:
           source: canon
-          value:
-            - DTA
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - DTA
       - date: '3080-01-01'
@@ -264,14 +259,16 @@ planet:
       - date: '3145-01-01'
         population: 312989789.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Muhamad's World
     type: TERRESTRIAL
     orbitalDist: 3.08

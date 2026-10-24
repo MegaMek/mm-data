@@ -65,12 +65,6 @@ planet:
         socioIndustrial: D-D-A-D-D
       - date: '2270-01-01'
         population: 111130.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 376213.0
       - date: '2290-01-01'
@@ -93,12 +87,6 @@ planet:
         hpg: X
         population: 0.0
         socioIndustrial: X-X-X-X-X
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
       - date: '2596-07-17'
         faction:
           source: canon
@@ -108,14 +96,11 @@ planet:
         socioIndustrial: C-F-A-D-C
       - date: '2596-12-31'
         administration:
-          - Protectorate of Donegal
-          - Furillo Province
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Protectorate of Donegal
+            - Furillo Province
       - date: '2600-01-01'
         population: 237932.0
       - date: '2604-01-01'
@@ -220,8 +205,11 @@ planet:
         population: 1077909934.0
       - date: '3025-12-31'
         administration:
-          - Protectorate of Donegal
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - Bolan Province
       - date: '3027-01-01'
         socioIndustrial: B-B-B-B-D
       - date: '3030-01-01'
@@ -235,15 +223,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamarind March
-          - Soilihull Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamarind March
+            - Soilihull Operational Area
+            - Region 2
       - date: '3041-01-01'
         socioIndustrial: A-A-A-A-C
       - date: '3050-01-01'
@@ -253,15 +238,12 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Bolan Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Bolan Province
       - date: '3060-01-01'
         population: 1113046211.0
       - date: '3064-07-01'
@@ -272,12 +254,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - LA
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - LA
       - date: '3070-01-01'
@@ -302,7 +278,10 @@ planet:
         population: 1198176228.0
       - date: '3145-12-31'
         administration:
-          - Donegal Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
   - name: Toresen's Belt I
     type: ASTEROID_BELT
     orbitalDist: 0.07

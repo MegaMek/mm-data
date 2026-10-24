@@ -58,7 +58,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2673-09-14'
@@ -90,12 +90,6 @@ planet:
         population: 16662276.0
       - date: '2750-01-01'
         population: 17318462.0
-      - date: '2750-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2760-01-01'
         population: 17745200.0
       - date: '2770-01-01'
@@ -180,12 +174,6 @@ planet:
           source: canon
           value:
             - DTA
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - DTA
       - date: '3080-01-01'
         population: 14256668.0
       - date: '3090-01-01'
@@ -206,14 +194,11 @@ planet:
         population: 14345334.0
       - date: '3130-12-31'
         administration:
-          - Bolan Province
-          - Cavanaugh Theater
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Bolan Province
+            - Cavanaugh Theater
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -225,14 +210,16 @@ planet:
             - DTA
         population: 14600047.0
       - date: '3145-12-31'
-        administration:
-          - Duchy of Tamarind-Abbey
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Tammarind-Abbey
   - name: Weddin
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.07

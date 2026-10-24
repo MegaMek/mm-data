@@ -146,12 +146,6 @@ planet:
             - IND
         population: 43272.0
         socioIndustrial: D-D-C-D-D
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-03-04'
         faction:
           source: canon
@@ -167,7 +161,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -183,7 +177,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -232,7 +226,10 @@ planet:
         population: 2229959787.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 2260338827.0
       - date: '2590-01-01'
@@ -356,13 +353,10 @@ planet:
           value: 2110000000.0
       - date: '3025-12-31'
         administration:
-          - The Protectorate
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - The Protectorate
       - date: '3030-01-01'
         population: 2035337396.0
       - date: '3040-01-01'
@@ -389,7 +383,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -397,9 +391,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3090-01-01'
         population: 1781424064.0
       - date: '3100-01-01'
@@ -416,12 +414,6 @@ planet:
           value:
             - OP
         population: 1861184440.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -431,14 +423,16 @@ planet:
       - date: '3145-01-01'
         population: 1904487761.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: H5
     type: GAS_GIANT
     orbitalDist: 4.16

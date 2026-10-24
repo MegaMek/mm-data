@@ -174,12 +174,6 @@ planet:
         population: 42614512.0
       - date: '2270-01-01'
         population: 64277728.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 92430206.0
       - date: '2290-01-01'
@@ -198,12 +192,6 @@ planet:
         population: 449879040.0
       - date: '2360-01-01'
         population: 513885860.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - SSUP
       - date: '2367-07-01'
         faction:
           source: canon
@@ -253,14 +241,11 @@ planet:
         population: 1353915299.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 2
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 2
       - date: '2580-01-01'
         population: 1368782175.0
       - date: '2590-01-01'
@@ -365,16 +350,18 @@ planet:
             - FS
         population: 583196219.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 1
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 1
       - date: '3036-01-01'
         socioIndustrial: C-D-D-D-D
       - date: '3040-01-19'
@@ -385,12 +372,6 @@ planet:
       - date: '3040-04-19'
         population: 590354791.0
         socioIndustrial: C-D-C-D-D
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3046-01-01'
         socioIndustrial: C-D-B-C-D
       - date: '3050-01-01'
@@ -403,9 +384,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 603426170.0
       - date: '3062-03-06'
@@ -415,14 +400,11 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 4
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 4
       - date: '3070-01-01'
         population: 609978492.0
       - date: '3080-01-01'
@@ -434,13 +416,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture V
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 633350320.0
       - date: '3099-01-01'
@@ -462,22 +441,22 @@ planet:
             - CC
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 2
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 2
       - date: '3140-01-01'
         population: 681450556.0
       - date: '3145-01-01'
         population: 684866341.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 2
   - name: Kempsford
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.52

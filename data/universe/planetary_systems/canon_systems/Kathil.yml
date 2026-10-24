@@ -159,12 +159,6 @@ planet:
         population: 74405502.0
       - date: '2270-01-01'
         population: 108839374.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 153139846.0
       - date: '2290-01-01'
@@ -178,7 +172,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2319-02-21'
@@ -189,7 +183,7 @@ planet:
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -205,7 +199,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
       - date: '2370-01-01'
@@ -252,19 +246,21 @@ planet:
         population: 1853698506.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 2
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 2
       - date: '2580-01-01'
         population: 1868254872.0
       - date: '2590-01-01'
         population: 1882263899.0
       - date: '2596-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 2
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2600-01-01'
         population: 1898956237.0
       - date: '2610-01-01'
@@ -365,10 +361,12 @@ planet:
         population: 2102617561.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Kathil PDZ
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Kathil PDZ
       - date: '3030-05-07'
         population: 2085655150.0
         socioIndustrial: B-B-C-C-D
@@ -377,12 +375,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3044-01-01'
@@ -399,6 +391,12 @@ planet:
           value:
             - FC
             - LA
+      - date: '3063-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FC
       - date: '3067-01-01'
         population:
           source: canon
@@ -406,12 +404,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -438,11 +430,10 @@ planet:
       - date: '3145-01-01'
         population: 2343119184.0
       - date: '3145-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Kathil PDZ
-        capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
   - name: New Kochi
     type: TERRESTRIAL
     orbitalDist: 1.4

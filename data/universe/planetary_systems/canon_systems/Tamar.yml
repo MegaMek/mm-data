@@ -146,6 +146,11 @@ planet:
         population: 1329466.0
       - date: '2270-01-01'
         population: 3550316.0
+      - date: '2271-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '2280-01-01'
         population: 8319374.0
       - date: '2290-01-01'
@@ -170,7 +175,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -178,15 +183,20 @@ planet:
       - date: '2360-01-01'
         population: 415261178.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-        capitalType: District Capital
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2370-01-01'
         population: 528257395.0
       - date: '2380-01-01'
@@ -233,9 +243,11 @@ planet:
         population: 2116260592.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 2138321005.0
       - date: '2590-01-01'
@@ -358,10 +370,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Benfled Operational Area
-          - Region 1
-        capitalType: District Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar March
+            - Benfled Operational Area
+            - Region 1
       - date: '3041-01-01'
         socioIndustrial:
           source: canon
@@ -379,16 +393,51 @@ planet:
           source: canon
           value:
             - CW
+      - date: '3051-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FC
+      - date: '3052-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CW
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 2160498504.0
+      - date: '3067-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3070-01-01'
         population: 2182866637.0
+      - date: '3075-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3079-01-01'
         population:
           source: canon
           value: 2194686000.0
       - date: '3080-01-01'
         population: 2196442451.0
+      - date: '3081-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3090-01-01'
         population: 2218073406.0
       - date: '3092-01-01'
@@ -413,6 +462,11 @@ planet:
         population: 2360418618.0
       - date: '3145-01-01'
         population: 2382711164.0
+      - date: '3145-12-31'
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
   - name: Chowdry's Sacrifice
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.44

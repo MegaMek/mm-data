@@ -147,7 +147,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2281-08-11'
@@ -163,18 +163,6 @@ planet:
         population: 1240879.0
       - date: '2310-01-01'
         population: 4519223.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 13592418.0
       - date: '2330-01-01'
@@ -189,7 +177,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -246,14 +234,11 @@ planet:
         population: 8141815873.0
       - date: '2571-12-31'
         administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2580-01-01'
         population: 8380121307.0
       - date: '2590-01-01'
@@ -316,8 +301,11 @@ planet:
         population: 9062962450.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 8945578591.0
       - date: '2840-04-01'
@@ -363,8 +351,11 @@ planet:
         population: 7603317809.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Algedi Prefecture
       - date: '3030-01-01'
         population: 7647733162.0
       - date: '3040-01-01'
@@ -396,11 +387,10 @@ planet:
           value:
             - Stone
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 7946322836.0
       - date: '3081-09-10'
@@ -410,13 +400,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 7941556472.0
       - date: '3100-01-01'
@@ -439,11 +426,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 8040644851.0
       - date: '3145-06-13'
@@ -454,17 +440,17 @@ planet:
         population: 8039036883.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Potter
     type: TERRESTRIAL
     orbitalDist: 2.24

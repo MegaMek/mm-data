@@ -121,7 +121,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-02-07'
@@ -131,12 +131,6 @@ planet:
             - IND
         population: 54028.0
         socioIndustrial: D-D-C-D-B
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 63680.0
       - date: '2330-01-01'
@@ -155,7 +149,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -202,15 +196,17 @@ planet:
       - date: '2570-01-01'
         population: 1154167191.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2577-01-01'
         socioIndustrial: B-B-C-B-B
       - date: '2580-01-01'
@@ -274,14 +270,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2822-07-03'
         faction:
           source: canon
@@ -333,8 +326,11 @@ planet:
         population: 885526533.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Vega Prefecture
       - date: '3026-01-01'
         socioIndustrial: C-C-D-B-B
       - date: '3030-01-01'
@@ -362,8 +358,11 @@ planet:
         population: 916698941.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3080-01-01'
         population: 928136775.0
       - date: '3081-03-20'
@@ -373,13 +372,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 938402639.0
       - date: '3100-01-01'
@@ -398,11 +394,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 995633392.0
       - date: '3145-12-05'
@@ -413,17 +408,17 @@ planet:
         population: 1000824170.0
       - date: '3145-12-31'
         administration:
-          - Region 3
-          - Vega Protectorate
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+            - Vega Protectorate
       - date: '3152-12-31'
         administration:
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 4
   - name: Speth's World
     type: TERRESTRIAL
     orbitalDist: 0.8

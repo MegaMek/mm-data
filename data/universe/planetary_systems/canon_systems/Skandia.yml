@@ -122,12 +122,6 @@ planet:
         population: 307772.0
       - date: '2270-01-01'
         population: 554771.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 929238.0
       - date: '2290-01-01'
@@ -136,12 +130,6 @@ planet:
         population: 2196996.0
       - date: '2310-01-01'
         population: 3115637.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TamP
       - date: '2320-01-01'
         population: 4233341.0
       - date: '2330-01-01'
@@ -156,7 +144,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -164,14 +152,16 @@ planet:
       - date: '2360-01-01'
         population: 10412239.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 12271404.0
       - date: '2380-01-01'
@@ -216,8 +206,11 @@ planet:
         population: 38181596.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Camlann Shire
       - date: '2580-01-01'
         population: 38363516.0
       - date: '2590-01-01'
@@ -288,8 +281,11 @@ planet:
         population: 35911344.0
       - date: '2864-12-31'
         administration:
-          - Tamar Pact
-          - Orkney Shire
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Orkney Shire
       - date: '2870-01-01'
         population: 33894153.0
       - date: '2880-01-01'
@@ -330,14 +326,11 @@ planet:
         population: 17994412.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Rubigen Prefecture
       - date: '3030-01-01'
         population: 17834525.0
       - date: '3032-01-01'
@@ -350,15 +343,21 @@ planet:
       - date: '3040-01-01'
         population: 18058856.0
       - date: '3040-12-31'
-        administration:
-          - Skandia Province
-        capitalType: District Capital
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skandia Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3047-01-01'
         socioIndustrial:
           source: canon
@@ -377,22 +376,19 @@ planet:
           value:
             - CW
       - date: '3052-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 18549377.0
       - date: '3062-02-07'
         faction:
           source: canon
-          value:
-            - CGB
-      - date: '3063-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CGB
       - date: '3070-01-01'
@@ -418,14 +414,14 @@ planet:
         population: 20520742.0
       - date: '3130-12-31'
         administration:
-          - Region 3
-        capitalType: District Capital
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3132-08-07'
         hpg:
           source: canon

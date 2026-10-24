@@ -100,12 +100,6 @@ planet:
         population: 21899675.0
       - date: '2270-01-01'
         population: 41762082.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2278-11-21'
         faction:
           source: canon
@@ -124,12 +118,6 @@ planet:
             - TGU
       - date: '2310-01-01'
         population: 269916126.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TGU
       - date: '2320-01-01'
         population: 375033257.0
       - date: '2330-01-01'
@@ -145,12 +133,6 @@ planet:
         population: 808009077.0
       - date: '2360-01-01'
         population: 982422225.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '2370-01-01'
         population: 1163291571.0
       - date: '2380-01-01'
@@ -202,13 +184,10 @@ planet:
             - CC
       - date: '2571-12-31'
         administration:
-          - Chesterton Commonality
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Chesterton Commonality
       - date: '2580-01-01'
         population: 3439545792.0
       - date: '2590-01-01'
@@ -270,16 +249,18 @@ planet:
       - date: '2830-01-01'
         population: 4188826173.0
       - date: '2830-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '2840-01-01'
         population: 4118419723.0
       - date: '2850-01-01'
@@ -334,9 +315,12 @@ planet:
         socioIndustrial: C-C-F-C-D
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Valexa PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Valexa PDZ
       - date: '3030-01-01'
         population: 3473030886.0
       - date: '3037-01-01'
@@ -349,12 +333,6 @@ planet:
       - date: '3040-08-17'
         population: 4083079117.0
         socioIndustrial: B-A-D-A-D
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 4849080477.0
       - date: '3060-01-01'
@@ -362,12 +340,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -400,13 +372,10 @@ planet:
         population: 6428057799.0
       - date: '3145-12-31'
         administration:
-          - Chesterton Commonality
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Chesterton Commonality
   - name: Elixir
     type: ICE_GIANT
     orbitalDist: 0.7

@@ -133,7 +133,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2297-10-02'
@@ -147,18 +147,6 @@ planet:
         population: 108350.0
       - date: '2310-01-01'
         population: 504861.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1871606.0
       - date: '2321-11-14'
@@ -173,7 +161,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -223,15 +211,17 @@ planet:
       - date: '2570-01-01'
         population: 3046887446.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2577-01-01'
         socioIndustrial: D-D-A-D-D
       - date: '2580-01-01'
@@ -294,8 +284,11 @@ planet:
         population: 2962610198.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 2896867280.0
       - date: '2840-01-01'
@@ -342,8 +335,11 @@ planet:
         population: 2129418955.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3030-01-01'
         population: 2142864766.0
       - date: '3031-01-01'
@@ -364,11 +360,10 @@ planet:
           value:
             - AB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - AB
+          version: 2026.09.01
+          value: []
       - date: '3079-06-27'
         faction:
           source: canon
@@ -377,7 +372,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AB
       - date: '3080-01-01'
@@ -389,13 +384,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 2239255869.0
       - date: '3100-01-01'
@@ -417,22 +409,22 @@ planet:
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Benjamin Military District
-          - Algedi Prefecture
-      - date: '3135-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Algedi Prefecture
       - date: '3140-01-01'
         population: 2259500135.0
       - date: '3145-01-01'
         population: 2259500135.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Dieron Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Dieron Prefecture
   - name: Nowy Huron
     type: TERRESTRIAL
     orbitalDist: 1.12

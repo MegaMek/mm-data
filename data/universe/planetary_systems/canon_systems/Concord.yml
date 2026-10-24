@@ -80,12 +80,6 @@ planet:
         population: 2755787.0
       - date: '2270-01-01'
         population: 5611924.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 10387195.0
       - date: '2290-01-01'
@@ -111,13 +105,10 @@ planet:
         population: 183283012.0
       - date: '2366-12-31'
         administration:
-          - Federation of Skye
-      - date: '2366-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
       - date: '2370-01-01'
         population: 222724353.0
       - date: '2380-01-01'
@@ -168,11 +159,10 @@ planet:
       - date: '2570-01-01'
         population: 882563911.0
       - date: '2571-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2580-01-01'
         population: 901530162.0
       - date: '2585-01-01'
@@ -274,7 +264,10 @@ planet:
         population: 1015831546.0
       - date: '3025-12-31'
         administration:
-          - Silver Hawks Coalition
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Silver Hawks Coalition
       - date: '3029-01-01'
         socioIndustrial: C-C-C-B-F
       - date: '3030-01-01'
@@ -298,7 +291,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -306,9 +299,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SHC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3085-08-11'
         faction:
           source: canon
@@ -317,7 +314,7 @@ planet:
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SHC
       - date: '3090-01-01'
@@ -335,7 +332,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MSC
       - date: '3132-08-07'
@@ -348,12 +345,6 @@ planet:
           value:
             - CWE
         population: 1197935675.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
       - date: '3151-09-13'
         faction:
           source: canon
@@ -362,18 +353,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Silver Hawks Coalition
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Silver Hawks Coalition
   - name: La Sarre
     type: TERRESTRIAL
     orbitalDist: 0.35

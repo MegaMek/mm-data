@@ -103,7 +103,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2278-10-11'
@@ -137,7 +137,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -189,16 +189,21 @@ planet:
       - date: '2570-01-01'
         population: 1494192886.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-        capitalType: Region Capital
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kuzuu Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 1510126350.0
       - date: '2590-01-01'
@@ -255,9 +260,11 @@ planet:
         population: 1529349571.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 1528854824.0
       - date: '2840-01-01'
@@ -303,8 +310,15 @@ planet:
         population: 741598702.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3030-01-01'
         population: 737144462.0
       - date: '3040-01-01'
@@ -319,8 +333,11 @@ planet:
         population: 767227898.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Ashio Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Ashio Prefecture
       - date: '3080-01-01'
         population: 769379146.0
       - date: '3081-09-10'
@@ -330,13 +347,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 774938666.0
       - date: '3093-01-01'
@@ -357,11 +371,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 792334686.0
       - date: '3145-03-19'
@@ -372,14 +385,11 @@ planet:
         population: 794397437.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Dieron Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Dieron Prefecture
   - name: Uryū Gun
     type: GAS_GIANT
     orbitalDist: 0.6

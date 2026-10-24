@@ -71,7 +71,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2606-12-23'
@@ -117,15 +117,12 @@ planet:
         socioIndustrial: B-C-B-B-A
       - date: '2750-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 387898265.0
       - date: '2770-01-01'
@@ -142,9 +139,12 @@ planet:
         population: 13930893.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 4778576.0
       - date: '2840-01-01'
@@ -174,11 +174,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Aïn Defla Belt
     type: ASTEROID_BELT
     orbitalDist: 1.28

@@ -88,7 +88,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2608-03-06'
@@ -134,14 +134,11 @@ planet:
         population: 1245648021.0
       - date: '2750-12-31'
         administration:
-          - Sarna Commonality
-          - Region 2
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 2
       - date: '2760-01-01'
         population: 1253778030.0
       - date: '2770-01-01'
@@ -159,16 +156,18 @@ planet:
       - date: '2830-01-01'
         population: 31336536.0
       - date: '2830-12-31'
-        administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '2840-01-01'
         population: 11041846.0
       - date: '2846-01-01'
@@ -211,11 +210,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Sikes
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.6

@@ -83,12 +83,6 @@ planet:
         socioIndustrial: C-D-A-D-C
       - date: '2270-01-01'
         population: 59059.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 194075.0
       - date: '2290-01-01'
@@ -115,7 +109,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -163,14 +157,16 @@ planet:
       - date: '2570-01-01'
         population: 374679907.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 381866903.0
       - date: '2590-01-01'
@@ -213,7 +209,10 @@ planet:
         population: 385218907.0
       - date: '2750-12-31'
         administration:
-          - Principality of Gibson
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Gibson
       - date: '2760-01-01'
         population: 383732464.0
       - date: '2770-01-01'
@@ -286,11 +285,10 @@ planet:
       - date: '3020-01-01'
         population: 314882036.0
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 316658137.0
       - date: '3040-01-01'
@@ -308,12 +306,6 @@ planet:
       - date: '3081-11-30'
         faction:
           source: canon
-          value:
-            - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - IND
       - date: '3090-01-01'
@@ -338,12 +330,6 @@ planet:
           value:
             - FWL
         population: 339890246.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
   - name: Martínez's Roost
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.28

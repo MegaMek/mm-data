@@ -169,12 +169,6 @@ planet:
         population: 156676875.0
       - date: '2270-01-01'
         population: 258917231.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 404313381.0
       - date: '2290-01-01'
@@ -193,12 +187,6 @@ planet:
         population: 2884437158.0
       - date: '2360-01-01'
         population: 3407240745.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - SSUP
       - date: '2367-07-01'
         faction:
           source: canon
@@ -252,14 +240,11 @@ planet:
         population: 9808302534.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 1
       - date: '2580-01-01'
         population: 9791241806.0
       - date: '2590-01-01'
@@ -369,16 +354,18 @@ planet:
             - FS
         population: 7615680042.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 1
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 1
       - date: '3037-01-01'
         socioIndustrial: B-B-F-B-D
       - date: '3040-01-01'
@@ -386,12 +373,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3042-01-01'
@@ -406,9 +387,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 7857820558.0
       - date: '3062-02-20'
@@ -418,14 +403,11 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 3
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 3
       - date: '3070-01-01'
         population: 7935205768.0
       - date: '3080-01-01'
@@ -437,13 +419,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture V
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 8095507558.0
       - date: '3096-01-01'
@@ -466,23 +445,16 @@ planet:
         population: 8111714774.0
       - date: '3130-01-01'
         population: 8126329010.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ROS
       - date: '3135-10-01'
         faction:
           source: canon
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 8163796232.0
       - date: '3145-08-04'
@@ -493,14 +465,11 @@ planet:
         population: 8183412873.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 1
   - name: Zhang's Wind
     type: TERRESTRIAL
     orbitalDist: 1.76

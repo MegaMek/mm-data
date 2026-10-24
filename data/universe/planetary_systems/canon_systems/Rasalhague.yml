@@ -211,11 +211,10 @@ planet:
       - date: '2270-01-01'
         population: 896105.0
       - date: '2271-12-31'
-        faction:
+        capitalType:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - PoR
+          version: 2026.09.01
+          value: National Capital
       - date: '2280-01-01'
         population: 2933867.0
       - date: '2290-01-01'
@@ -239,15 +238,20 @@ planet:
       - date: '2340-01-01'
         population: 249868825.0
       - date: '2341-12-31'
-        administration:
-          - Principality of Rasalhague
-        capitalType: District Capital
-      - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Rasalhague
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '2349-01-01'
         socioIndustrial: C-C-B-C-D
       - date: '2350-01-01'
@@ -309,15 +313,11 @@ planet:
         population: 5181501361.0
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Radstadt Prefecture
-        capitalType: District Capital
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Radstadt Prefecture
       - date: '2580-01-01'
         population: 5259352211.0
       - date: '2590-01-01'
@@ -433,15 +433,21 @@ planet:
       - date: '3040-01-01'
         population: 5034438816.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-        capitalType: National Capital
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3041-01-01'
         socioIndustrial:
           source: canon
@@ -460,22 +466,19 @@ planet:
           value:
             - CW
       - date: '3050-09-30'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 5239167768.0
       - date: '3065-12-22'
         faction:
           source: canon
-          value:
-            - CGB
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CGB
       - date: '3070-01-01'
@@ -505,14 +508,14 @@ planet:
         population: 5602121610.0
       - date: '3130-12-31'
         administration:
-          - Region 1
-        capitalType: National Capital
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 1
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: National Capital
       - date: '3132-08-07'
         hpg:
           source: canon

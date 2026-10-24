@@ -115,7 +115,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2637-01-22'
@@ -159,13 +159,10 @@ planet:
         population: 101427437.0
       - date: '2750-12-31'
         administration:
-          - Apollo Province
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RWR
+            - Apollo Province
       - date: '2760-01-01'
         population: 102446385.0
       - date: '2770-01-01'
@@ -178,11 +175,10 @@ planet:
       - date: '2780-01-01'
         population: 101938132.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '2790-01-01'
         population: 100980486.0
       - date: '2800-01-01'
@@ -248,12 +244,6 @@ planet:
           source: canon
           value:
             - CJF
-      - date: '3049-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
       - date: '3050-01-01'
         population: 83144987.0
       - date: '3060-01-01'
@@ -270,20 +260,8 @@ planet:
           source: canon
           value:
             - CHH
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CHH
       - date: '3080-01-01'
         population: 85677128.0
-      - date: '3085-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 86330755.0
       - date: '3092-01-01'
@@ -301,12 +279,6 @@ planet:
         population: 86624779.0
       - date: '3130-01-01'
         population: 86815564.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3140-01-01'
         population: 86832928.0
       - date: '3145-01-01'
@@ -314,9 +286,21 @@ planet:
       - date: '2786-01-01'
         name: Von Strang's World
         message: Erin renamed to Von Strang's World
-      - date: '3151-01-01'
+      - date: '3085-12-31'
         faction:
           source: SUCS
+          version: 2026.09.01
+          value:
+            - IND
+      - date: '3130-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - IND
+      - date: '3151-01-01'
+        faction:
+          source: curated
           value:
             - IND
   - name: Batchelor's Belt

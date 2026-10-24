@@ -146,12 +146,6 @@ planet:
         population: 167823279.0
       - date: '2270-01-01'
         population: 258332876.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 380086632.0
       - date: '2290-01-01'
@@ -162,12 +156,6 @@ planet:
         population: 940686654.0
       - date: '2313-01-01'
         socioIndustrial: C-C-C-C-C
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 1194323850.0
       - date: '2330-01-01'
@@ -182,7 +170,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -240,14 +228,11 @@ planet:
             - DC
       - date: '2571-12-31'
         administration:
-          - Rasalhague Military District
-          - Tinaca Prefecture
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Tinaca Prefecture
       - date: '2580-01-01'
         population: 5421900330.0
       - date: '2590-01-01'
@@ -318,14 +303,11 @@ planet:
             - LA
       - date: '2821-12-31'
         administration:
-          - Tamar Pact
-          - Camlann Shire
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Camlann Shire
       - date: '2825-09-06'
         faction:
           source: canon
@@ -336,7 +318,7 @@ planet:
       - date: '2830-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
       - date: '2840-01-01'
@@ -354,14 +336,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Benjamin Military District
-          - Dehgolan Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Dehgolan Prefecture
       - date: '2870-01-01'
         population: 5040352794.0
       - date: '2880-01-01'
@@ -402,9 +381,15 @@ planet:
           value: 2932000000.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Rubigen Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '3030-12-24'
         population: 2366087582.0
         socioIndustrial: B-C-C-C-C
@@ -412,9 +397,11 @@ planet:
         population: 1601015130.0
       - date: '3040-12-31'
         administration:
-          - Alshain Military District
-          - Rubigen Prefecture
-        capitalType: Region Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alshain Military District
+            - Rubigen Prefecture
       - date: '3045-01-01'
         socioIndustrial: A-B-C-B-C
       - date: '3050-01-01'
@@ -431,11 +418,14 @@ planet:
           value:
             - CGB
       - date: '3052-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CGB
+          version: 2026.09.01
+          value: []
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3060-01-01'
         population: 764572526.0
       - date: '3070-01-01'
@@ -459,13 +449,10 @@ planet:
         population: 588565103.0
       - date: '3130-12-31'
         administration:
-          - Region 3
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
       - date: '3132-08-07'
         hpg:
           source: canon

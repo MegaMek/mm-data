@@ -84,7 +84,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2722-05-25'
@@ -106,14 +106,11 @@ planet:
         population: 1572219.0
       - date: '2750-12-31'
         administration:
-          - Sian Commonality
-          - Region 11
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sian Commonality
+            - Region 11
       - date: '2760-01-01'
         population: 3463863.0
       - date: '2770-01-01'
@@ -180,8 +177,11 @@ planet:
         population: 97664539.0
       - date: '3063-12-31'
         administration:
-          - Sian Commonality
-          - Region 10
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sian Commonality
+            - Region 10
       - date: '3070-01-01'
         population: 97978932.0
       - date: '3080-01-01'
@@ -199,11 +199,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Kovin
     type: TERRESTRIAL
     orbitalDist: 1.6

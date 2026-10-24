@@ -91,7 +91,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2360-01-01'
@@ -101,12 +101,6 @@ planet:
             - FS
         population: 43585.0
         socioIndustrial: D-D-A-D-F
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 190447.0
       - date: '2380-01-01'
@@ -152,15 +146,12 @@ planet:
         socioIndustrial: C-C-A-D-F
       - date: '2571-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 350771347.0
       - date: '2590-01-01'
@@ -217,9 +208,12 @@ planet:
         population: 460306556.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 3
       - date: '2830-01-01'
         population: 462215379.0
       - date: '2840-01-01'
@@ -266,9 +260,12 @@ planet:
         population: 382511730.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Milligan PDZ
       - date: '3027-01-01'
         socioIndustrial: D-C-B-D-F
       - date: '3030-01-01'
@@ -278,12 +275,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3048-01-01'
@@ -297,19 +288,16 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 402733497.0
       - date: '3079-12-31'
         administration:
-          - Periphery March
-          - Woodbine Operational Area
-          - Woodbine PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Periphery March
+            - Woodbine Operational Area
+            - Woodbine PDZ
       - date: '3080-01-01'
         population: 405805932.0
       - date: '3090-01-01'
@@ -335,11 +323,10 @@ planet:
             - RA
         population: 412103712.0
       - date: '3145-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RA
+          version: 2026.09.01
+          value: []
   - name: Almudj
     type: DWARF_TERRESTRIAL
     orbitalDist: 4.48

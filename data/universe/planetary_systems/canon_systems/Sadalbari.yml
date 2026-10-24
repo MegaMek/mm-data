@@ -110,7 +110,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2275-11-23'
@@ -128,12 +128,6 @@ planet:
         population: 1155631.0
       - date: '2310-01-01'
         population: 3090368.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 7153093.0
       - date: '2330-01-01'
@@ -149,7 +143,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -201,15 +195,17 @@ planet:
       - date: '2570-01-01'
         population: 1377773876.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2580-01-01'
         population: 1403709328.0
       - date: '2590-01-01'
@@ -254,8 +250,22 @@ planet:
         population: 1517774204.0
       - date: '2770-01-01'
         population: 1514470217.0
+      - date: '2772-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kajikazawa Prefecture
       - date: '2780-01-01'
         population: 1511563863.0
+      - date: '2783-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Proserpina Prefecture
       - date: '2790-01-01'
         population: 1502175634.0
       - date: '2800-01-01'
@@ -331,13 +341,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture III
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture III
       - date: '3090-01-01'
         population: 1366283239.0
       - date: '3098-01-01'
@@ -356,11 +363,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1380014614.0
       - date: '3145-01-21'
@@ -371,14 +377,11 @@ planet:
         population: 1380014614.0
       - date: '3145-12-31'
         administration:
-          - Benjamin Military District
-          - Proserpina Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Proserpina Prefecture
   - name: J2
     type: TERRESTRIAL
     orbitalDist: 0.56

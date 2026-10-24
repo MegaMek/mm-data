@@ -134,7 +134,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2650-02-03'
@@ -175,14 +175,11 @@ planet:
         population: 1439204548.0
       - date: '2750-12-31'
         administration:
-          - Sian Commonality
-          - Region 11
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sian Commonality
+            - Region 11
       - date: '2760-01-01'
         population: 1463252535.0
       - date: '2770-01-01'
@@ -261,13 +258,16 @@ planet:
         population: 1955398974.0
       - date: '3063-12-31'
         administration:
-          - Victoria Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Victoria Commonality
+            - Region 5
       - date: '3067-12-31'
-        administration:
-          - Victoria Commonality
-          - Region 5
-        capitalType: District Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
       - date: '3070-01-01'
         population: 2103148202.0
       - date: '3079-01-01'
@@ -295,15 +295,16 @@ planet:
         population: 2245740623.0
       - date: '3130-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Sirdar PDZ
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Sirdar PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3132-08-07'
         hpg:
           source: canon
@@ -318,15 +319,15 @@ planet:
         population: 2278768957.0
       - date: '3145-12-31'
         administration:
-          - Victoria Commonality
-          - Region 4
-        capitalType: District Capital
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Victoria Commonality
+            - Region 4
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: District Capital
   - name: Cleveland's Den
     type: GAS_GIANT
     orbitalDist: 0.96

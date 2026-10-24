@@ -172,12 +172,6 @@ planet:
         population: 32268758.0
       - date: '2270-01-01'
         population: 47319588.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 66608183.0
       - date: '2290-01-01'
@@ -186,12 +180,6 @@ planet:
         population: 119588116.0
       - date: '2310-01-01'
         population: 152815170.0
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 188052429.0
       - date: '2322-03-09'
@@ -206,7 +194,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -259,16 +247,21 @@ planet:
       - date: '2570-01-01'
         population: 981969373.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kajikazawa Prefecture
-        capitalType: Region Capital
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kajikazawa Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2580-01-01'
         population: 997564531.0
       - date: '2590-01-01'
@@ -373,8 +366,15 @@ planet:
           value: 927000000.0
       - date: '3025-12-31'
         administration:
-          - Benjamin Military District
-          - Benjamin Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Benjamin Prefecture
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3030-01-01'
         population: 949163136.0
       - date: '3032-01-01'

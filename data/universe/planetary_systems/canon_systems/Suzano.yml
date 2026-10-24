@@ -121,7 +121,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2280-01-01'
@@ -147,7 +147,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SSUP
       - date: '2367-07-01'
@@ -201,14 +201,11 @@ planet:
         population: 1998364157.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 1
       - date: '2573-01-01'
         socioIndustrial: B-B-C-B-D
       - date: '2580-01-01'
@@ -277,8 +274,11 @@ planet:
         population: 2315130327.0
       - date: '2864-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
       - date: '2870-01-01'
         population: 2307274781.0
       - date: '2880-01-01'
@@ -334,13 +334,10 @@ planet:
             - FWL
       - date: '3025-12-31'
         administration:
-          - Zion Province
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Zion Province
       - date: '3030-01-01'
         population: 2126853398.0
       - date: '3039-01-01'
@@ -363,7 +360,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -371,9 +368,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - OZP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3085-03-05'
         faction:
           source: canon
@@ -381,13 +382,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VI
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 2266288813.0
       - date: '3100-01-01'
@@ -410,11 +408,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 2380102632.0
       - date: '3145-02-20'
@@ -425,14 +422,11 @@ planet:
         population: 2394426176.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 3
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 3
   - name: Cachoeira dos Índios
     type: DWARF_TERRESTRIAL
     orbitalDist: 4.48

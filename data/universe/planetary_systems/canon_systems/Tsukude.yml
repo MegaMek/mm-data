@@ -133,7 +133,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2319-04-07'
@@ -143,12 +143,6 @@ planet:
             - IND
         population: 51291.0
         socioIndustrial: D-D-C-D-F
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 62762.0
       - date: '2330-01-01'
@@ -167,7 +161,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -215,15 +209,17 @@ planet:
       - date: '2570-01-01'
         population: 7732828723.0
       - date: '2571-12-31'
-        administration:
-          - Federation of Skye
-          - Kannon Shire
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Kannon Shire
       - date: '2580-08-23'
         population: 7969212650.0
         socioIndustrial: B-B-C-B-F
@@ -286,14 +282,11 @@ planet:
             - DC
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 9076249994.0
       - date: '2840-01-01'
@@ -340,8 +333,11 @@ planet:
         population: 7702881939.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Vega Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Vega Prefecture
       - date: '3027-01-01'
         socioIndustrial: B-B-C-B-D
       - date: '3030-01-01'
@@ -357,8 +353,11 @@ planet:
         population: 7943144942.0
       - date: '3075-12-31'
         administration:
-          - Dieron Military District
-          - Kessel Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kessel Prefecture
       - date: '3080-01-01'
         population: 8056742232.0
       - date: '3081-12-18'
@@ -368,13 +367,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture I
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture I
       - date: '3090-01-01'
         population: 8157267807.0
       - date: '3100-09-18'
@@ -394,11 +390,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 8320391303.0
       - date: '3145-01-16'
@@ -409,14 +404,11 @@ planet:
         population: 8338716314.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Algedi Prefecture
   - name: Yamada Sawa
     type: TERRESTRIAL
     orbitalDist: 1.6

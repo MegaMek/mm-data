@@ -92,7 +92,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -100,14 +100,16 @@ planet:
       - date: '2360-01-01'
         population: 167787853.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 209490099.0
       - date: '2380-01-01'
@@ -154,8 +156,11 @@ planet:
         population: 872982676.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Tamar Domains
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
+            - Tamar Domains
       - date: '2580-01-01'
         population: 886998861.0
       - date: '2590-01-01'
@@ -264,8 +269,11 @@ planet:
             - DC
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Rubigen Prefecture
       - date: '3030-01-01'
         population: 533400602.0
       - date: '3034-03-13'
@@ -277,7 +285,10 @@ planet:
         population: 538653625.0
       - date: '3040-12-31'
         administration:
-          - Skandia Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skandia Province
       - date: '3041-01-01'
         socioIndustrial: C-C-B-B-C
       - date: '3050-01-01'
@@ -293,6 +304,22 @@ planet:
           source: canon
           value:
             - CW
+      - date: '3051-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FRR
+      - date: '3052-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CW
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 547834229.0
       - date: '3070-01-01'
@@ -323,7 +350,10 @@ planet:
         population: 596436475.0
       - date: '3145-12-31'
         administration:
-          - Region 3
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Region 3
   - name: Funj Hwang's Hold
     type: ICE_GIANT
     orbitalDist: 0.35

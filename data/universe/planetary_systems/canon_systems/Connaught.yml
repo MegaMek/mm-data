@@ -140,12 +140,6 @@ planet:
         population: 815096.0
       - date: '2270-01-01'
         population: 2943626.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 8936644.0
       - date: '2290-01-01'
@@ -164,12 +158,6 @@ planet:
         population: 335394309.0
       - date: '2340-01-01'
         population: 528827512.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 780897141.0
       - date: '2360-01-01'
@@ -177,7 +165,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2367-01-29'
@@ -237,13 +225,10 @@ planet:
         population: 8081500634.0
       - date: '2571-12-31'
         administration:
-          - Tyrfing Province
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Tyrfing Province
       - date: '2580-01-01'
         population: 8189715449.0
       - date: '2590-01-01'
@@ -296,11 +281,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 8741312990.0
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-08-16'
         faction:
           source: canon
@@ -309,11 +304,11 @@ planet:
       - date: '2780-01-01'
         population: 8701209180.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Tyrfing Province
       - date: '2786-06-18'
         faction:
           source: canon
@@ -321,13 +316,10 @@ planet:
             - FWL
       - date: '2786-12-31'
         administration:
-          - Marik Commonwealth
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Marik Commonwealth
       - date: '2790-01-02'
         faction:
           source: canon
@@ -349,6 +341,11 @@ planet:
       - date: '2860-04-24'
         population: 8077388762.0
         socioIndustrial: B-B-B-C-C
+      - date: '2864-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2870-01-01'
         population: 7994877135.0
       - date: '2880-01-01'
@@ -404,12 +401,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3082-07-28'
         faction:
           source: canon
@@ -417,13 +408,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
       - date: '3090-01-01'
         population: 7440743407.0
       - date: '3100-01-01'
@@ -446,11 +434,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3137-10-01'
         faction:
           source: canon
@@ -461,14 +448,16 @@ planet:
       - date: '3145-01-01'
         population: 7556217726.0
       - date: '3145-12-31'
-        administration:
-          - Covenant Worlds
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Vonhof
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.64

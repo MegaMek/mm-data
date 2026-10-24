@@ -69,7 +69,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2604-04-07'
@@ -119,14 +119,11 @@ planet:
         population: 3659478574.0
       - date: '2750-12-31'
         administration:
-          - Capella Commonality
-          - Region 4
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Capella Commonality
+            - Region 4
       - date: '2760-01-01'
         population: 3696020325.0
       - date: '2770-01-01'
@@ -196,15 +193,12 @@ planet:
             - FS
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Alcyone PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Alcyone PDZ
       - date: '3030-01-01'
         population: 3103313888.0
       - date: '3033-01-01'
@@ -216,12 +210,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3046-01-01'
         socioIndustrial: A-B-D-A-C
       - date: '3050-01-01'
@@ -231,12 +219,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -260,15 +242,17 @@ planet:
       - date: '3145-01-01'
         population: 3332659176.0
       - date: '3151-12-31'
-        administration:
-          - Andro Thumb
-          - Region 1
-      - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Andro Thumb
+            - Region 1
   - name: Swan Belt
     type: ASTEROID_BELT
     orbitalDist: 0.8

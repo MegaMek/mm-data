@@ -73,7 +73,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2342-05-12'
@@ -87,12 +87,6 @@ planet:
         population: 96988.0
       - date: '2360-01-01'
         population: 212368.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2370-01-01'
         population: 415039.0
       - date: '2380-01-01'
@@ -160,15 +154,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2600-01-01'
         population: 18962313.0
       - date: '2610-01-01'
@@ -221,9 +212,12 @@ planet:
         population: 16694968.0
       - date: '2821-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2830-01-01'
         population: 16106442.0
       - date: '2840-01-01'
@@ -270,9 +264,12 @@ planet:
         population: 8042559.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 7795740.0
       - date: '3040-01-19'
@@ -283,12 +280,6 @@ planet:
       - date: '3040-12-22'
         population: 7872514.0
         socioIndustrial: B-C-B-B-F
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 7947659.0
       - date: '3060-01-01'
@@ -296,12 +287,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -312,11 +297,10 @@ planet:
           value:
             - TC
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 8078267.0
       - date: '3080-05-05'
@@ -326,15 +310,12 @@ planet:
             - FS
       - date: '3081-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3090-01-01'
         population: 8097679.0
       - date: '3098-01-01'
@@ -355,14 +336,20 @@ planet:
         population: 8234869.0
       - date: '3145-12-31'
         administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - Altair PDZ
       - date: '3151-12-31'
         administration:
-          - Capellan March
-          - Sirdar Operational Area
-          - New Syrtis PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Sirdar Operational Area
+            - New Syrtis PDZ
   - name: Marchant's Hole
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.9

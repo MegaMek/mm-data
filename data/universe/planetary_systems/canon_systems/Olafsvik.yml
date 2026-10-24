@@ -126,7 +126,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - PR
       - date: '2280-01-01'
@@ -140,14 +140,16 @@ planet:
       - date: '2315-01-01'
         socioIndustrial: D-D-C-C-F
       - date: '2317-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2320-01-01'
         population: 84171840.0
       - date: '2330-01-01'
@@ -244,7 +246,10 @@ planet:
         population: 4149901041.0
       - date: '2750-12-31'
         administration:
-          - Regulan Free States
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Regulan Free States
       - date: '2760-01-01'
         population: 4146235062.0
       - date: '2770-01-01'
@@ -325,7 +330,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -333,9 +338,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-02-01'
         faction:
           source: canon
@@ -348,7 +357,7 @@ planet:
       - date: '3095-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RFS
       - date: '3100-01-01'
@@ -362,7 +371,7 @@ planet:
       - date: '3130-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - RF
       - date: '3140-01-01'
@@ -376,13 +385,10 @@ planet:
             - FWL
       - date: '3151-12-31'
         administration:
-          - Regulan Fiefs
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Regulan Fiefs
   - name: K4
     type: ICE_GIANT
     orbitalDist: 1.44

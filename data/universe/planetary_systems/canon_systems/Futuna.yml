@@ -86,12 +86,6 @@ planet:
         population: 438888.0
       - date: '2270-01-01'
         population: 1219383.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-04-16'
         faction:
           source: canon
@@ -107,7 +101,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -169,14 +163,16 @@ planet:
       - date: '2570-01-01'
         population: 804414014.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 820115823.0
       - date: '2590-01-01'
@@ -272,6 +268,11 @@ planet:
         population: 592937111.0
       - date: '3020-01-01'
         population: 573362058.0
+      - date: '3025-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 566876143.0
       - date: '3033-01-01'
@@ -292,12 +293,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 593324127.0
       - date: '3094-01-01'
@@ -314,12 +309,6 @@ planet:
           value:
             - RF
         population: 616304302.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - RF
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -333,13 +322,10 @@ planet:
             - FWL
       - date: '3151-12-31'
         administration:
-          - Regulan Fiefs
-      - date: '3151-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Regulan Fiefs
   - name: Luganville
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.9

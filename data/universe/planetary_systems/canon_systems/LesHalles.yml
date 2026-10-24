@@ -100,7 +100,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2739-02-21'
@@ -119,14 +119,11 @@ planet:
         population: 505468.0
       - date: '2750-12-31'
         administration:
-          - Capella Commonality
-          - Region 6
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Capella Commonality
+            - Region 6
       - date: '2760-01-01'
         population: 2551835.0
       - date: '2770-01-01'
@@ -156,13 +153,10 @@ planet:
             - FWL
       - date: '2864-12-31'
         administration:
-          - Federation of Oriente
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Federation of Oriente
       - date: '2870-01-01'
         population: 840004310.0
       - date: '2880-01-01'
@@ -203,7 +197,10 @@ planet:
         population: 1265029536.0
       - date: '3025-12-31'
         administration:
-          - Duchy of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Oriente
       - date: '3030-01-01'
         population: 1258130484.0
       - date: '3039-08-06'
@@ -219,12 +216,6 @@ planet:
             - FWL
       - date: '3040-01-01'
         population: 1251961029.0
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '3042-01-01'
         socioIndustrial:
           source: canon
@@ -247,7 +238,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -255,9 +246,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DO
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3086-04-04'
         faction:
           source: canon
@@ -266,12 +261,6 @@ planet:
       - date: '3090-08-22'
         population: 1274486754.0
         socioIndustrial: B-B-C-C-D
-      - date: '3095-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3100-01-01'
         population: 1285237532.0
       - date: '3110-01-01'
@@ -289,14 +278,16 @@ planet:
       - date: '3145-01-01'
         population: 1305183379.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: ND7-3
     type: TERRESTRIAL
     orbitalDist: 1.4

@@ -150,11 +150,10 @@ planet:
           value:
             - THW
       - date: '2271-12-31'
-        faction:
+        capitalType:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - THW
+          version: 2026.09.01
+          value: National Capital
       - date: '2280-01-01'
         population: 1836202.0
       - date: '2290-01-01'
@@ -174,12 +173,6 @@ planet:
             - TC
       - date: '2340-01-01'
         population: 111076448.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2350-01-01'
         population: 165844705.0
       - date: '2360-01-01'
@@ -240,7 +233,7 @@ planet:
       - date: '2596-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TC
       - date: '2597-03-21'
@@ -290,8 +283,10 @@ planet:
         population: 1978302907.0
       - date: '2750-12-31'
         administration:
-          - Hyades Union
-        capitalType: National Capital
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Hyades Union
       - date: '2760-01-01'
         population: 1963559801.0
       - date: '2770-01-01'
@@ -374,6 +369,11 @@ planet:
           value: 4002198000.0
       - date: '3070-01-01'
         population: 4000743832.0
+      - date: '3075-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3079-01-01'
         population:
           source: canon

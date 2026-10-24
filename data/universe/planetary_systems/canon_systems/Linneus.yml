@@ -87,7 +87,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2350-11-07'
@@ -99,12 +99,6 @@ planet:
         socioIndustrial: D-F-C-D-C
       - date: '2360-01-01'
         population: 230834.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2370-01-01'
         population: 666472.0
       - date: '2380-01-01'
@@ -154,15 +148,12 @@ planet:
         population: 154841841.0
       - date: '2571-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 157632362.0
       - date: '2590-01-01'
@@ -219,9 +210,12 @@ planet:
         population: 158737932.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Region 5
       - date: '2830-01-01'
         population: 158170094.0
       - date: '2840-09-27'
@@ -266,9 +260,12 @@ planet:
         population: 148365900.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Mayetta PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Mayetta PDZ
       - date: '3029-01-01'
         socioIndustrial: C-B-D-C-C
       - date: '3030-01-01'
@@ -280,12 +277,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3041-01-01'
         socioIndustrial: B-B-C-B-B
       - date: '3050-01-01'
@@ -295,12 +286,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -321,18 +306,24 @@ planet:
         population: 157568154.0
       - date: '3130-12-31'
         administration:
-          - Draconis March
-          - Woodbine Operational Area
-          - Mayeatta PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Woodbine Operational Area
+            - Mayeatta PDZ
       - date: '3132-08-07'
         hpg: X
       - date: '3133-01-01'
         socioIndustrial: C-B-B-B-B
       - date: '3135-12-31'
         administration:
-          - Draconis March
-          - Milligan Operational Area
-          - Milligan PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Milligan Operational Area
+            - Milligan PDZ
       - date: '3140-01-01'
         population: 157316246.0
       - date: '3145-02-23'
@@ -343,25 +334,24 @@ planet:
         population: 157316246.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Tancredi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
-      - date: '3152-12-31'
-        administration:
-          - Draconis March
-          - Tancredi Operational Area
-          - Mayetta PDZ
+            - New Samarkand Military District
+            - Tancredi Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Tancredi Operational Area
+            - Mayetta PDZ
   - name: Londonderry
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.28

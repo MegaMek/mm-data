@@ -156,12 +156,6 @@ planet:
         population: 312943.0
       - date: '2270-01-01'
         population: 421156.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 547492.0
       - date: '2289-01-01'
@@ -180,13 +174,13 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2319-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2320-01-01'
@@ -203,7 +197,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FoS
       - date: '2350-01-01'
@@ -211,14 +205,16 @@ planet:
       - date: '2360-01-01'
         population: 1860624.0
       - date: '2366-12-31'
-        administration:
-          - Federation of Skye
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
       - date: '2370-01-01'
         population: 2033472.0
       - date: '2380-01-01'
@@ -263,8 +259,11 @@ planet:
         population: 4132888.0
       - date: '2571-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Skye
+            - Isle of Skye
       - date: '2580-01-01'
         population: 4196991.0
       - date: '2590-01-01'
@@ -313,16 +312,28 @@ planet:
           value:
             - RWR
       - date: '2767-12-31'
-        administration:
-          - Lone Star Province
-      - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2770-01-01'
         population: 3949686.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-07-26'
         faction:
           source: canon
@@ -337,9 +348,14 @@ planet:
       - date: '2783-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2785-01-01'
         population: 4000000.0
       - date: '2786-07-05'
@@ -349,14 +365,11 @@ planet:
             - LA
       - date: '2786-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '2790-01-01'
         population: 3511503.0
       - date: '2800-01-01'
@@ -426,15 +439,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Ryde Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Ryde Operational Area
+            - Region 3
       - date: '3044-01-01'
         socioIndustrial: C-C-A-C-C
       - date: '3050-01-01'
@@ -444,16 +454,13 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Skye Province
-          - Freedom Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skye Province
+            - Freedom Theater
       - date: '3060-01-01'
         population: 309292425.0
       - date: '3070-01-01'
@@ -467,13 +474,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture IX
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture IX
       - date: '3090-01-01'
         population: 1342167040.0
       - date: '3094-01-01'
@@ -494,11 +498,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1375593813.0
       - date: '3145-01-09'
@@ -507,16 +510,10 @@ planet:
           value:
             - CJF
         population: 1378072112.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
   - name: Elgar's Run

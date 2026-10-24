@@ -77,7 +77,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2623-08-21'
@@ -122,13 +122,10 @@ planet:
         population: 1979588134.0
       - date: '2750-12-31'
         administration:
-          - Rim Commonality
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Rim Commonality
       - date: '2760-01-01'
         population: 2010248849.0
       - date: '2766-06-13'
@@ -208,11 +205,10 @@ planet:
           value:
             - RCM
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RCM
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 1967659133.0
       - date: '3090-01-01'
@@ -234,14 +230,16 @@ planet:
       - date: '3145-01-01'
         population: 1977917609.0
       - date: '3145-12-31'
-        administration:
-          - Rim Commonality
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
   - name: Hansen
     type: TERRESTRIAL
     orbitalDist: 0.8

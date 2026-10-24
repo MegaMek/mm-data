@@ -129,12 +129,6 @@ planet:
         population: 1336459.0
       - date: '2270-01-01'
         population: 3817352.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 9469828.0
       - date: '2290-01-01'
@@ -156,12 +150,6 @@ planet:
       - date: '2341-06-29'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2350-01-01'
@@ -219,14 +207,16 @@ planet:
             - FWL
         population: 2371500182.0
       - date: '2571-12-31'
-        administration:
-          - Tyrfing Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2580-01-01'
         population: 2374738972.0
       - date: '2590-01-01'
@@ -281,11 +271,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 2395777105.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-01-27'
         faction:
           source: canon
@@ -294,22 +294,21 @@ planet:
       - date: '2780-01-01'
         population: 2381056425.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Tyrfing Province
       - date: '2786-05-16'
         faction:
           source: canon
           value:
             - FWL
       - date: '2786-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2790-01-01'
         population: 2357555015.0
       - date: '2800-01-01'
@@ -335,14 +334,11 @@ planet:
             - LA
       - date: '2864-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '2870-01-01'
         population: 2047142851.0
       - date: '2880-01-01'
@@ -383,13 +379,10 @@ planet:
         population: 1729809698.0
       - date: '3025-12-31'
         administration:
-          - Silver Hawks Coalition
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Silver Hawks Coalition
       - date: '3029-01-01'
         socioIndustrial: B-B-B-B-C
       - date: '3030-05-10'
@@ -400,14 +393,11 @@ planet:
         population: 1730821685.0
       - date: '3030-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '3039-08-02'
         faction:
           source: canon
@@ -439,15 +429,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Skye March
-          - Alcor Operational Area
-          - Region 3
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Skye March
+            - Alcor Operational Area
+            - Region 3
       - date: '3045-01-01'
         socioIndustrial: A-A-A-A-C
       - date: '3050-01-01'
@@ -459,13 +446,10 @@ planet:
             - FWL
       - date: '3057-12-31'
         administration:
-          - Silver Hawks Coalition
-      - date: '3057-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Silver Hawks Coalition
       - date: '3060-01-01'
         population: 1800737419.0
       - date: '3070-01-01'
@@ -476,11 +460,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3078-01-12'
         faction:
           source: canon
@@ -492,12 +475,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1836563676.0
       - date: '3081-05-02'
@@ -507,13 +484,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VIII
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VIII
       - date: '3090-01-01'
         population: 1847246697.0
       - date: '3100-01-01'
@@ -539,11 +513,10 @@ planet:
           value:
             - RR
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - RR
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1966580521.0
       - date: '3145-01-01'
@@ -566,18 +539,20 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CWE
       - date: '3152-12-31'
-        administration:
-          - Covenant Worlds
-      - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Jhelum
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.9

@@ -55,12 +55,6 @@ planet:
         socioIndustrial: D-D-C-D-F
       - date: '2270-01-01'
         population: 115067.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 459445.0
       - date: '2290-01-01'
@@ -73,12 +67,6 @@ planet:
         population: 4165235.0
       - date: '2310-01-01'
         population: 9928046.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2320-01-01'
         population: 20951577.0
       - date: '2330-01-01'
@@ -93,7 +81,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2350-01-01'
@@ -143,14 +131,16 @@ planet:
       - date: '2570-01-01'
         population: 1705136555.0
       - date: '2571-12-31'
-        administration:
-          - Terra Firma Province
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TH
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Terra Firma Province
       - date: '2580-01-01'
         population: 1723944570.0
       - date: '2590-01-01'
@@ -203,11 +193,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1942077813.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-07-23'
         faction:
           source: canon
@@ -215,12 +215,6 @@ planet:
             - FWL
       - date: '2780-01-01'
         population: 1844608024.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
       - date: '2790-11-25'
         faction:
           source: canon
@@ -240,14 +234,11 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 5
       - date: '2830-01-01'
         population: 1516275811.0
       - date: '2840-01-01'
@@ -297,11 +288,10 @@ planet:
       - date: '3020-01-01'
         population: 933524271.0
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3029-10-12'
         faction:
           source: canon
@@ -309,12 +299,6 @@ planet:
             - TFR
       - date: '3030-01-01'
         population: 921431965.0
-      - date: '3030-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TFR
       - date: '3032-10-23'
         faction:
           source: canon
@@ -342,15 +326,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 2
       - date: '3047-01-01'
         socioIndustrial: D-D-C-D-D
       - date: '3050-01-01'
@@ -361,11 +342,10 @@ planet:
           value:
             - FWL
       - date: '3057-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 938918746.0
       - date: '3070-01-01'
@@ -381,12 +361,6 @@ planet:
           source: canon
           value:
             - WOB
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
       - date: '3077-01-10'
         faction:
           source: canon
@@ -398,12 +372,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 962398825.0
       - date: '3081-04-03'
@@ -413,13 +381,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VI
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 976943620.0
       - date: '3100-01-01'
@@ -440,11 +405,10 @@ planet:
           value:
             - SA
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - SA
+          version: 2026.09.01
+          value: []
       - date: '3139-02-15'
         faction:
           source: canon
@@ -455,14 +419,16 @@ planet:
       - date: '3145-01-01'
         population: 999873672.0
       - date: '3145-12-31'
-        administration:
-          - Augustine Alliance
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Augustine Alliance
       - date: '3149-02-01'
         faction:
           source: canon
@@ -471,7 +437,7 @@ planet:
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
   - name: Saskatchewan

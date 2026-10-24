@@ -61,12 +61,6 @@ planet:
         population: 532070.0
       - date: '2270-01-01'
         population: 1485011.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-02-21'
         faction:
           source: canon
@@ -82,7 +76,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -98,7 +92,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -149,7 +143,10 @@ planet:
         population: 1204763092.0
       - date: '2571-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2580-01-01'
         population: 1229612243.0
       - date: '2590-01-01'
@@ -190,6 +187,11 @@ planet:
         population: 1419150226.0
       - date: '2750-01-01'
         population: 1429749591.0
+      - date: '2750-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2760-01-01'
         population: 1445966868.0
       - date: '2770-01-01'
@@ -216,7 +218,10 @@ planet:
         population: 1393893253.0
       - date: '2864-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2870-01-01'
         population: 1390556004.0
       - date: '2880-01-01'
@@ -272,9 +277,13 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 1383823199.0
       - date: '3085-12-31'
@@ -284,13 +293,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
       - date: '3090-01-01'
         population: 1402771752.0
       - date: '3100-01-01'
@@ -318,9 +324,13 @@ planet:
       - date: '3135-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3139-06-15'
         faction:
           source: canon
@@ -331,14 +341,16 @@ planet:
       - date: '3145-01-01'
         population: 1464406590.0
       - date: '3145-12-31'
-        administration:
-          - Augustine Alliance
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Augustine Alliance
   - name: Guysborough
     type: ICE_GIANT
     orbitalDist: 0.49

@@ -63,12 +63,6 @@ planet:
         socioIndustrial: D-D-C-D-C
       - date: '2270-01-01'
         population: 72533.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-10-27'
         faction:
           source: canon
@@ -84,7 +78,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -100,7 +94,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -151,7 +145,10 @@ planet:
         population: 829651829.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 847179640.0
       - date: '2590-01-01'
@@ -272,13 +269,10 @@ planet:
         population: 800636057.0
       - date: '3025-12-31'
         administration:
-          - The Protectorate
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - The Protectorate
       - date: '3030-01-01'
         population: 795148784.0
       - date: '3037-01-01'
@@ -301,7 +295,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -309,9 +303,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3090-01-01'
         population: 851951199.0
       - date: '3092-01-01'
@@ -328,12 +326,6 @@ planet:
         population: 876318183.0
       - date: '3130-01-01'
         population: 880182478.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -345,14 +337,16 @@ planet:
             - OP
         population: 893306054.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Saukville
     type: ICE_GIANT
     orbitalDist: 0.42

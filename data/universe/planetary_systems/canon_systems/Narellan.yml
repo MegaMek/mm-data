@@ -50,7 +50,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2275-04-13'
@@ -68,12 +68,6 @@ planet:
         population: 840203.0
       - date: '2310-01-01'
         population: 2032101.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 4354119.0
       - date: '2330-01-01'
@@ -88,12 +82,6 @@ planet:
         population: 24526246.0
       - date: '2360-01-01'
         population: 37736467.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '2370-01-01'
         population: 54479344.0
       - date: '2380-01-01'
@@ -140,9 +128,12 @@ planet:
         population: 536451633.0
       - date: '2571-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 544440833.0
       - date: '2590-01-01'
@@ -247,9 +238,12 @@ planet:
         population: 301178618.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Altair PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Altair PDZ
       - date: '3030-01-01'
         population: 296400387.0
       - date: '3040-01-19'
@@ -260,12 +254,6 @@ planet:
       - date: '3040-09-07'
         population: 300489015.0
         socioIndustrial: C-D-D-B-F
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3049-01-01'
         socioIndustrial: C-D-C-B-D
       - date: '3050-01-01'
@@ -275,12 +263,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -311,25 +293,24 @@ planet:
         population: 343851954.0
       - date: '3145-12-31'
         administration:
-          - Sian Commonality
-          - Region 12
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
-      - date: '3151-12-31'
-        administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Carmacks Prefecture
+            - Sian Commonality
+            - Region 12
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Carmacks Prefecture
   - name: Oceanus
     type: ICE_GIANT
     orbitalDist: 0.14

@@ -157,12 +157,6 @@ planet:
         socioIndustrial: D-D-C-D-D
       - date: '2270-01-01'
         population: 54333.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 205232.0
       - date: '2290-01-01'
@@ -185,7 +179,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -237,15 +231,17 @@ planet:
       - date: '2570-01-01'
         population: 847291984.0
       - date: '2571-12-31'
-        administration:
-          - Benjamin Military District
-          - Kuzuu Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Benjamin Military District
+            - Kuzuu Prefecture
       - date: '2580-01-01'
         population: 855511192.0
       - date: '2588-01-01'
@@ -304,8 +300,11 @@ planet:
         population: 999745860.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Kuzuu Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Kuzuu Prefecture
       - date: '2830-01-01'
         population: 1008437798.0
       - date: '2840-01-01'
@@ -354,8 +353,11 @@ planet:
         socioIndustrial: B-C-C-C-D
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Algedi Prefecture
       - date: '3030-01-01'
         population: 616007131.0
       - date: '3040-12-12'
@@ -373,11 +375,10 @@ planet:
           value:
             - AB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - AB
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 657706340.0
       - date: '3081-07-28'
@@ -387,13 +388,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 668447955.0
       - date: '3100-01-01'
@@ -414,11 +412,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 696563208.0
       - date: '3145-10-22'
@@ -429,14 +426,11 @@ planet:
         population: 702017646.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Algedi Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Algedi Prefecture
   - name: Mørch
     type: TERRESTRIAL
     orbitalDist: 0.6

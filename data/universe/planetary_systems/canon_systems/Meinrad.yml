@@ -86,7 +86,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2335-03-26'
@@ -98,12 +98,6 @@ planet:
         socioIndustrial: D-D-A-D-B
       - date: '2340-01-01'
         population: 101763.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 317836.0
       - date: '2360-01-01'
@@ -154,15 +148,12 @@ planet:
         population: 142306010.0
       - date: '2571-12-31'
         administration:
-          - Crucis March
-          - Minette Operational Area
-          - Point Barrow Combat Region
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Crucis March
+            - Minette Operational Area
+            - Point Barrow Combat Region
       - date: '2580-01-01'
         population: 145350140.0
       - date: '2590-01-01'
@@ -272,12 +263,6 @@ planet:
           source: canon
           value:
             - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3041-01-01'
         socioIndustrial: C-C-A-C-B
       - date: '3050-01-01'
@@ -287,12 +272,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -318,26 +297,30 @@ planet:
       - date: '3145-01-01'
         population: 154652317.0
       - date: '3151-12-31'
-        administration:
-          - New Samarkand Military District
-          - New Avalon Prefecture
-      - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
-      - date: '3152-12-31'
         administration:
-          - Crucis March
-          - Minette Operational Area
-          - Point Barrow Combat Region
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - New Samarkand Military District
+            - New Avalon Prefecture
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Crucis March
+            - Minette Operational Area
+            - Point Barrow Combat Region
   - name: Lehmann
     type: DWARF_TERRESTRIAL
     orbitalDist: 1.6

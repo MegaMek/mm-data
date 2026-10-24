@@ -57,7 +57,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2327-10-11'
@@ -71,22 +71,10 @@ planet:
         population: 80365.0
       - date: '2340-01-01'
         population: 364641.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 1294290.0
       - date: '2360-01-01'
         population: 3754545.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2370-01-01'
         population: 9239205.0
       - date: '2380-01-01'
@@ -133,7 +121,10 @@ planet:
         population: 972402996.0
       - date: '2571-12-31'
         administration:
-          - Tyrfing Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tyrfing Province
       - date: '2580-01-01'
         population: 994734577.0
       - date: '2590-01-01'
@@ -183,11 +174,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1187518791.0
+      - date: '2773-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-07-29'
         faction:
           source: canon
@@ -196,11 +197,11 @@ planet:
       - date: '2780-01-01'
         population: 1186889828.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Tyrfing Province
       - date: '2785-11-17'
         faction:
           source: canon
@@ -213,14 +214,11 @@ planet:
             - LA
       - date: '2786-12-31'
         administration:
-          - Federation of Skye
-          - Isle of Skye
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Federation of Skye
+            - Isle of Skye
       - date: '2790-01-01'
         population: 1186150297.0
       - date: '2800-01-01'
@@ -246,11 +244,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: E.2
     type: TERRESTRIAL
     orbitalDist: 0.14

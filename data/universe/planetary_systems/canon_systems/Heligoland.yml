@@ -98,12 +98,6 @@ planet:
         population: 26796566.0
       - date: '2270-01-01'
         population: 40475569.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 58303099.0
       - date: '2290-01-01'
@@ -122,12 +116,6 @@ planet:
         population: 291814116.0
       - date: '2360-01-01'
         population: 333456218.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - SSUP
       - date: '2367-07-01'
         faction:
           source: canon
@@ -177,14 +165,11 @@ planet:
         population: 846331779.0
       - date: '2571-12-31'
         administration:
-          - Sarna Commonality
-          - Region 6
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sarna Commonality
+            - Region 6
       - date: '2580-01-01'
         population: 849009057.0
       - date: '2590-01-01'
@@ -285,8 +270,11 @@ planet:
         population: 503895282.0
       - date: '3025-12-31'
         administration:
-          - Sarna Commonality
-          - Region 7
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 7
       - date: '3030-02-22'
         faction:
           source: canon
@@ -294,27 +282,23 @@ planet:
             - FS
         population: 504608212.0
       - date: '3030-12-31'
-        administration:
-          - Sarna March
-          - Palos Operational Area
-          - Region 3
-      - date: '3030-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna March
+            - Palos Operational Area
+            - Region 3
       - date: '3040-01-01'
         population: 508102048.0
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3045-01-01'
@@ -331,9 +315,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 519040705.0
       - date: '3062-01-13'
@@ -343,22 +331,22 @@ planet:
             - CC
       - date: '3063-12-31'
         administration:
-          - Liao Commonality
-          - Region 9
-      - date: '3063-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Liao Commonality
+            - Region 9
       - date: '3070-01-01'
         population: 525674558.0
       - date: '3080-01-01'
         population: 532020653.0
       - date: '3085-12-31'
         administration:
-          - Sarna Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 4
       - date: '3090-01-01'
         population: 538228025.0
       - date: '3100-01-01'
@@ -373,22 +361,31 @@ planet:
         population: 573112659.0
       - date: '3130-12-31'
         administration:
-          - Liao Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 4
       - date: '3132-08-07'
         hpg: X
       - date: '3135-12-31'
         administration:
-          - Liao Commonality
-          - Region 7
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Liao Commonality
+            - Region 7
       - date: '3140-01-01'
         population: 579451699.0
       - date: '3145-01-01'
         population: 582239753.0
       - date: '3145-12-31'
         administration:
-          - Sarna Commonality
-          - Region 7
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sarna Commonality
+            - Region 7
   - name: Birnbaum
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.7

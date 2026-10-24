@@ -86,7 +86,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2310-04-17'
@@ -96,18 +96,6 @@ planet:
             - IND
         population: 49487.0
         socioIndustrial: D-D-C-D-B
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
-      - date: '2319-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 197287.0
       - date: '2327-01-20'
@@ -122,7 +110,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -176,15 +164,17 @@ planet:
       - date: '2570-01-01'
         population: 531119701.0
       - date: '2571-12-31'
-        administration:
-          - Rasalhague Military District
-          - Tinaca Prefecture
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - DC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Tinaca Prefecture
       - date: '2580-01-01'
         population: 538105737.0
       - date: '2590-01-01'
@@ -285,8 +275,11 @@ planet:
         population: 398834941.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Rubigen Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Rubigen Prefecture
       - date: '3030-01-01'
         population: 391227473.0
       - date: '3034-03-13'
@@ -297,14 +290,17 @@ planet:
       - date: '3040-01-01'
         population: 395159374.0
       - date: '3040-12-31'
-        administration:
-          - Skandia Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Skandia Province
       - date: '3042-01-01'
         socioIndustrial: A-B-C-B-B
       - date: '3050-01-01'
@@ -315,11 +311,10 @@ planet:
           value:
             - CGB
       - date: '3052-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CGB
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 401251801.0
       - date: '3070-01-01'
@@ -345,13 +340,10 @@ planet:
         population: 415918432.0
       - date: '3130-12-31'
         administration:
-          - Region 3
-      - date: '3130-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - RD
+            - Region 3
       - date: '3140-01-01'
         population: 418672572.0
       - date: '3145-01-01'

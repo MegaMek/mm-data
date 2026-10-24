@@ -61,7 +61,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2746-07-19'
@@ -77,14 +77,11 @@ planet:
         population: 123584.0
       - date: '2750-12-31'
         administration:
-          - Sian Commonality
-          - Region 13
-      - date: '2750-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Sian Commonality
+            - Region 13
       - date: '2760-01-01'
         population: 513488.0
       - date: '2770-01-01'
@@ -101,8 +98,11 @@ planet:
         population: 30757685.0
       - date: '2821-12-31'
         administration:
-          - Sian Commonality
-          - Region 14
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Sian Commonality
+            - Region 14
       - date: '2822-01-01'
         name: Achtur
         message: Untran renamed to Achtur
@@ -123,11 +123,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2864-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: PEH-2
     type: TERRESTRIAL
     orbitalDist: 0.49

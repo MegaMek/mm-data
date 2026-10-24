@@ -178,7 +178,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2301-10-27'
@@ -190,12 +190,6 @@ planet:
         socioIndustrial: D-D-D-D-B
       - date: '2310-01-01'
         population: 215495.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 750245.0
       - date: '2330-01-01'
@@ -211,12 +205,6 @@ planet:
             - FS
       - date: '2360-01-01'
         population: 22461827.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '2370-01-01'
         population: 39700129.0
       - date: '2380-01-01'
@@ -263,9 +251,12 @@ planet:
         population: 905877933.0
       - date: '2571-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Clovis Combat Region
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Clovis Combat Region
       - date: '2580-01-01'
         population: 916612475.0
       - date: '2590-01-01'
@@ -312,9 +303,12 @@ planet:
         population: 952626308.0
       - date: '2750-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Region 1
       - date: '2760-01-01'
         population: 943777946.0
       - date: '2770-01-01'
@@ -340,11 +334,10 @@ planet:
       - date: '2862-01-01'
         socioIndustrial: B-B-F-C-B
       - date: '2864-12-31'
-        administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 1
-        capitalType: Region Capital
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: Region Capital
       - date: '2870-01-01'
         population: 913723107.0
       - date: '2880-01-01'
@@ -381,9 +374,16 @@ planet:
         population: 911326497.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Kentares PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Kentares PDZ
+        capitalType:
+          source: SUCS
+          version: 2026.09.01
+          value: ''
       - date: '3030-01-01'
         population: 915624736.0
       - date: '3034-01-01'
@@ -393,12 +393,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3044-01-01'
@@ -412,12 +406,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'

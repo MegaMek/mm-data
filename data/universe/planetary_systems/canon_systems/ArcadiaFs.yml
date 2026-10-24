@@ -76,12 +76,6 @@ planet:
         population: 105708.0
       - date: '2270-01-01'
         population: 344077.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 954461.0
       - date: '2290-01-01'
@@ -90,12 +84,6 @@ planet:
         population: 4936822.0
       - date: '2310-01-01'
         population: 9558188.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 17032137.0
       - date: '2330-01-01'
@@ -110,7 +98,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2350-01-01'
@@ -162,16 +150,18 @@ planet:
       - date: '2570-01-01'
         population: 608563369.0
       - date: '2571-12-31'
-        administration:
-          - Crucis March
-          - Markesan Operational Area
-          - Region 3
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Crucis March
+            - Markesan Operational Area
+            - Region 3
       - date: '2580-01-01'
         population: 623914454.0
       - date: '2590-01-01'
@@ -232,11 +222,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: New Thorncreek
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.21

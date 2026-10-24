@@ -112,12 +112,6 @@ planet:
         socioIndustrial: D-D-B-D-F
       - date: '2270-01-01'
         population: 35921506.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 48659963.0
       - date: '2290-01-01'
@@ -126,12 +120,6 @@ planet:
         population: 80289785.0
       - date: '2310-01-01'
         population: 98863764.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2320-01-01'
         population: 118955617.0
       - date: '2330-01-01'
@@ -149,7 +137,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -197,16 +185,18 @@ planet:
       - date: '2570-01-01'
         population: 472656905.0
       - date: '2571-12-31'
-        administration:
-          - Draconis March
-          - Fairfax Operational Area
-          - Region 1
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Fairfax Operational Area
+            - Region 1
       - date: '2580-01-01'
         population: 479874043.0
       - date: '2590-01-01'
@@ -273,15 +263,12 @@ planet:
         population: 483667401.0
       - date: '2821-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Region 3
       - date: '2830-03-01'
         faction:
           source: canon
@@ -289,6 +276,12 @@ planet:
             - FS
             - DC
         population: 485098080.0
+      - date: '2830-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - FS
       - date: '2831-08-17'
         faction:
           source: canon
@@ -309,14 +302,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Benjamin Military District
-          - Irurzun Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Benjamin Military District
+            - Irurzun Prefecture
       - date: '2870-01-01'
         population: 464834203.0
       - date: '2880-01-01'
@@ -358,15 +348,12 @@ planet:
         population: 396006834.0
       - date: '3025-12-31'
         administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Le Blanc PDZ
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Draconis March
+            - Robinson Operational Area
+            - Le Blanc PDZ
       - date: '3030-01-01'
         population: 394514703.0
       - date: '3034-01-01'
@@ -379,12 +366,6 @@ planet:
       - date: '3040-08-04'
         population: 398559346.0
         socioIndustrial: C-D-B-D-D
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3043-01-01'
         socioIndustrial: C-C-A-C-D
       - date: '3050-01-01'
@@ -394,12 +375,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -430,28 +405,27 @@ planet:
         population: 473786316.0
       - date: '3145-12-31'
         administration:
-          - New Samarkand Military District
-          - Barlow's End Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
-      - date: '3151-12-31'
-        administration:
-          - Draconis March
-          - Robinson Operational Area
-          - Le Blanc PDZ
+            - New Samarkand Military District
+            - Barlow's End Prefecture
       - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Draconis March
+            - Robinson Operational Area
+            - Le Blanc PDZ
       - date: '3152-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - DC

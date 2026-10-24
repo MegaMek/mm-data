@@ -38,11 +38,23 @@ planet:
     water: 36
     lifeForm: INSECT
     event:
+      - date: '2271-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - UND
       - date: '2750-01-01'
         population: 48810.0
         socioIndustrial: B-D-C-D-F
       - date: '2760-01-01'
         population: 219504.0
+      - date: '2765-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - IND
       - date: '2770-01-01'
         population: 726036.0
       - date: '2780-01-01'
@@ -100,6 +112,12 @@ planet:
       - date: '3030-01-01'
         population: 0.0
         socioIndustrial: X-X-X-X-X
+      - date: '3030-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - ABN
   - name: Sacromonte II
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.42

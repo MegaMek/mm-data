@@ -90,7 +90,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2320-05-17'
@@ -108,22 +108,10 @@ planet:
         socioIndustrial: C-B-B-C-C
       - date: '2340-01-01'
         population: 889132.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2350-01-01'
         population: 2806591.0
       - date: '2360-01-01'
         population: 7450986.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2370-01-01'
         population: 16973230.0
       - date: '2380-01-01'
@@ -168,7 +156,10 @@ planet:
         population: 1262680538.0
       - date: '2571-12-31'
         administration:
-          - Terra Firma Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Terra Firma Province
       - date: '2580-01-01'
         population: 1282556740.0
       - date: '2590-01-01'
@@ -219,11 +210,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1495622812.0
+      - date: '2774-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-09-24'
         faction:
           source: canon
@@ -232,11 +233,11 @@ planet:
       - date: '2780-01-01'
         population: 1467110702.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2785-05-12'
         faction:
           source: canon
@@ -249,14 +250,11 @@ planet:
             - CC
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '2786-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '2790-01-01'
         population: 1143625495.0
       - date: '2800-01-01'
@@ -267,8 +265,11 @@ planet:
         population: 48203926.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 6
       - date: '2830-01-01'
         population: 10183411.0
       - date: '2840-01-01'
@@ -294,11 +295,10 @@ planet:
         population: 0.0
         socioIndustrial: X-X-X-X-X
       - date: '3025-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - ABN
+          version: 2026.09.01
+          value: []
   - name: Reski
     type: TERRESTRIAL
     orbitalDist: 2.24

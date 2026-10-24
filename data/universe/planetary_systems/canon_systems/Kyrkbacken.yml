@@ -100,12 +100,6 @@ planet:
         population: 27960334.0
       - date: '2270-01-01'
         population: 56311169.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 104174988.0
       - date: '2290-01-01'
@@ -122,7 +116,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -138,7 +132,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CCom
       - date: '2367-07-01'
@@ -192,14 +186,11 @@ planet:
         population: 6061762116.0
       - date: '2571-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '2580-01-01'
         population: 6066949203.0
       - date: '2590-01-01'
@@ -250,8 +241,11 @@ planet:
         population: 6453566940.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 5
       - date: '2790-01-01'
         population: 6456463269.0
       - date: '2800-01-01'
@@ -262,14 +256,20 @@ planet:
         population: 6464933278.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 9
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 9
       - date: '2830-01-01'
         population: 6458030951.0
       - date: '2830-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
       - date: '2832-02-22'
         faction:
           source: canon
@@ -287,12 +287,6 @@ planet:
         population: 6478760071.0
       - date: '2862-01-01'
         socioIndustrial: B-B-D-B-D
-      - date: '2864-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CC
       - date: '2870-01-01'
         population: 6475615024.0
       - date: '2880-01-01'
@@ -348,13 +342,10 @@ planet:
             - FWL
       - date: '3025-12-31'
         administration:
-          - Zion Province
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Zion Province
       - date: '3026-01-01'
         socioIndustrial: B-B-D-B-F
       - date: '3030-01-01'
@@ -377,7 +368,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '3080-01-01'
@@ -385,9 +376,13 @@ planet:
       - date: '3081-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - OZP
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3085-01-26'
         faction:
           source: canon
@@ -395,13 +390,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VI
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 5978843848.0
       - date: '3095-01-01'
@@ -422,11 +414,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 6071630668.0
       - date: '3145-06-03'
@@ -435,12 +426,6 @@ planet:
           value:
             - FWL
         population: 6085002960.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
   - name: Urshult
     type: GIANT_TERRESTRIAL
     orbitalDist: 1.0

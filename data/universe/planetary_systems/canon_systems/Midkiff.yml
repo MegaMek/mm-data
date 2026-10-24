@@ -74,7 +74,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
       - date: '2280-01-01'
@@ -86,14 +86,16 @@ planet:
       - date: '2310-01-01'
         population: 20438021.0
       - date: '2317-12-31'
-        administration:
-          - Marik Commonwealth
-      - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2320-01-01'
         population: 32569178.0
       - date: '2330-01-01'
@@ -269,15 +271,19 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MCM
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3080-01-01'
         population: 559353572.0
       - date: '3085-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - MSC
       - date: '3090-01-01'
@@ -296,12 +302,6 @@ planet:
         population: 581599334.0
       - date: '3130-01-01'
         population: 584748465.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -312,12 +312,6 @@ planet:
           value:
             - CWE
         population: 586153547.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CWE
   - name: Pollard's Belt
     type: ASTEROID_BELT
     orbitalDist: 0.42

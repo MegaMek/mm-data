@@ -132,12 +132,6 @@ planet:
             - CH
         population: 58974.0
         socioIndustrial: D-D-C-C-D
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 245655.0
       - date: '2290-01-01'
@@ -150,12 +144,6 @@ planet:
           value:
             - CCom
         population: 6100998.0
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2320-01-01'
         population: 13357080.0
       - date: '2330-01-01'
@@ -166,12 +154,6 @@ planet:
         population: 76814344.0
       - date: '2360-01-01'
         population: 117648341.0
-      - date: '2366-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CCom
       - date: '2367-07-01'
         faction:
           source: canon
@@ -225,14 +207,11 @@ planet:
         population: 1492597098.0
       - date: '2571-12-31'
         administration:
-          - Capella Commonality
-          - Region 5
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Capella Commonality
+            - Region 5
       - date: '2580-01-01'
         population: 1507007591.0
       - date: '2590-01-01'
@@ -304,15 +283,12 @@ planet:
             - FS
       - date: '2864-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 3
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Region 3
       - date: '2870-01-01'
         population: 1544996449.0
       - date: '2880-01-01'
@@ -353,9 +329,12 @@ planet:
         population: 1167111148.0
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Alcyone PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Kathil Operational Area
+            - Alcyone PDZ
       - date: '3030-01-01'
         population: 1166488341.0
       - date: '3037-01-01'
@@ -368,12 +347,6 @@ planet:
       - date: '3040-09-04'
         population: 1175975267.0
         socioIndustrial: B-A-C-B-C
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FC
       - date: '3050-01-01'
         population: 1182697466.0
       - date: '3060-01-01'
@@ -381,12 +354,6 @@ planet:
       - date: '3067-04-20'
         faction:
           source: canon
-          value:
-            - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FS
       - date: '3070-01-01'
@@ -412,15 +379,17 @@ planet:
       - date: '3145-01-01'
         population: 1272009353.0
       - date: '3151-12-31'
-        administration:
-          - Andro Thumb
-          - Region 1
-      - date: '3151-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Andro Thumb
+            - Region 1
   - name: Macuiltonaleque
     type: TERRESTRIAL
     orbitalDist: 4.2

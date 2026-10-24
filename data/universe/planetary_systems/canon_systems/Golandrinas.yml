@@ -67,7 +67,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2341-04-14'
@@ -77,12 +77,6 @@ planet:
             - RWR
         population: 44465.0
         socioIndustrial: D-D-A-D-C
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - RWR
       - date: '2350-01-01'
         population: 127364.0
       - date: '2360-01-01'
@@ -135,7 +129,10 @@ planet:
         population: 84321860.0
       - date: '2571-12-31'
         administration:
-          - Apollo Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Apollo Province
       - date: '2580-01-01'
         population: 86111344.0
       - date: '2590-01-01'
@@ -189,14 +186,11 @@ planet:
         population: 101014037.0
       - date: '2783-12-31'
         administration:
-          - Tamar Pact
-          - Trellshire
-      - date: '2783-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Trellshire
       - date: '2790-01-01'
         population: 101217402.0
       - date: '2800-01-01'
@@ -262,15 +256,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Tamar March
-          - Blackjack Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Tamar March
+            - Blackjack Operational Area
+            - Region 1
       - date: '3046-01-01'
         socioIndustrial: C-C-A-C-A
       - date: '3050-01-01'
@@ -281,11 +272,10 @@ planet:
           value:
             - CJF
       - date: '3050-06-30'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CJF
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 107640337.0
       - date: '3070-01-01'
@@ -298,12 +288,6 @@ planet:
       - date: '3071-07-03'
         faction:
           source: canon
-          value:
-            - CJF
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CJF
       - date: '3080-01-01'
@@ -329,12 +313,6 @@ planet:
       - date: '3151-11-15'
         faction:
           source: canon
-          value:
-            - CHH
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CHH
   - name: Cook

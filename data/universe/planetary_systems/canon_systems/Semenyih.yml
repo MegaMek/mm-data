@@ -64,12 +64,6 @@ planet:
         socioIndustrial: D-D-D-D-D
       - date: '2270-01-01'
         population: 56574.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-11-06'
         faction:
           source: canon
@@ -85,7 +79,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -101,7 +95,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -150,7 +144,10 @@ planet:
         population: 7311855202.0
       - date: '2571-12-31'
         administration:
-          - Federation of Oriente
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Federation of Oriente
       - date: '2580-01-01'
         population: 7533748736.0
       - date: '2590-01-01'
@@ -191,6 +188,11 @@ planet:
         population: 8809753794.0
       - date: '2750-01-01'
         population: 8797391985.0
+      - date: '2750-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2760-01-01'
         population: 8797396656.0
       - date: '2770-01-01'
@@ -207,7 +209,10 @@ planet:
         population: 8724448422.0
       - date: '2821-12-31'
         administration:
-          - Duchy of Orloff
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Duchy of Orloff
       - date: '2830-01-01'
         population: 8716633466.0
       - date: '2840-01-01'
@@ -253,6 +258,11 @@ planet:
         population: 8651140426.0
       - date: '3025-01-01'
         socioIndustrial: C-B-C-C-C
+      - date: '3025-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3030-01-01'
         population: 8682350795.0
       - date: '3040-10-03'
@@ -271,12 +281,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 9208180935.0
       - date: '3100-01-01'
@@ -293,12 +297,6 @@ planet:
           value:
             - OP
         population: 9607003089.0
-      - date: '3130-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - OP
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-01'
@@ -306,14 +304,16 @@ planet:
       - date: '3145-01-01'
         population: 9820699195.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Sungai Baharu
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.35

@@ -157,12 +157,6 @@ planet:
         population: 9035475.0
       - date: '2270-01-01'
         population: 17478217.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 31002522.0
       - date: '2290-01-01'
@@ -181,12 +175,6 @@ planet:
         population: 214728851.0
       - date: '2340-01-01'
         population: 274755389.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 342200472.0
       - date: '2360-01-01'
@@ -237,7 +225,10 @@ planet:
         population: 1678471324.0
       - date: '2571-12-31'
         administration:
-          - Lone Star Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Lone Star Province
       - date: '2580-01-01'
         population: 1702804732.0
       - date: '2587-01-01'
@@ -292,11 +283,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 1800707254.0
+      - date: '2774-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-07-28'
         faction:
           source: canon
@@ -305,11 +306,11 @@ planet:
       - date: '2780-01-01'
         population: 1800618035.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Lone Star Province
       - date: '2790-11-13'
         faction:
           source: canon
@@ -324,20 +325,20 @@ planet:
         population: 1801064174.0
       - date: '2821-12-31'
         administration:
-          - Dieron Military District
-          - Lone Star Prefecture
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Lone Star Prefecture
       - date: '2830-01-01'
         population: 1798299894.0
       - date: '2830-12-31'
         administration:
-          - Dieron Military District
-          - Chaville Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Chaville Prefecture
       - date: '2840-01-01'
         population: 1792073570.0
       - date: '2850-01-01'
@@ -382,8 +383,11 @@ planet:
         population: 1630417522.0
       - date: '3025-12-31'
         administration:
-          - Dieron Military District
-          - Al Na'ir Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Dieron Military District
+            - Al Na'ir Prefecture
       - date: '3027-01-01'
         socioIndustrial: B-B-B-B-C
       - date: '3030-01-01'
@@ -404,11 +408,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3077-03-06'
         faction:
           source: canon
@@ -420,12 +423,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1723833518.0
       - date: '3081-03-05'
@@ -435,13 +432,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture II
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture II
       - date: '3090-01-01'
         population: 1740462009.0
       - date: '3095-01-01'
@@ -462,11 +456,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1846608291.0
       - date: '3145-05-11'
@@ -477,14 +470,11 @@ planet:
         population: 1853268062.0
       - date: '3145-12-31'
         administration:
-          - Dieron Military District
-          - Dieron Prefecture
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Dieron Military District
+            - Dieron Prefecture
   - name: McKnockiter's Refuge
     type: ICE_GIANT
     orbitalDist: 0.84

@@ -279,7 +279,7 @@ planet:
         population: 116079819.0
       - date: '3151-01-01'
         faction:
-          source: SUCS
+          source: curated
           value:
             - FWL
   - name:
@@ -322,12 +322,6 @@ planet:
         socioIndustrial: D-D-A-D-C
       - date: '2270-01-01'
         population: 45234.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 138305.0
       - date: '2290-01-01'
@@ -353,7 +347,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2370-01-01'
@@ -401,14 +395,16 @@ planet:
       - date: '2570-01-01'
         population: 195074900.0
       - date: '2571-12-31'
-        administration:
-          - Principality of Regulus
-      - date: '2571-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Principality of Regulus
       - date: '2580-01-01'
         population: 197960781.0
       - date: '2590-01-01'
@@ -450,6 +446,11 @@ planet:
       - date: '2750-06-23'
         population: 245724204.0
         socioIndustrial: A-B-A-B-C
+      - date: '2750-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2760-01-01'
         population: 247925899.0
       - date: '2770-01-01'
@@ -529,12 +530,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3090-01-01'
         population: 215363955.0
       - date: '3098-01-01'
@@ -558,14 +553,16 @@ planet:
             - RCM
         population: 225276697.0
       - date: '3145-12-31'
-        administration:
-          - Rim Commonality
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rim Commonality
   - name: D-1 Belt
     type: ASTEROID_BELT
     orbitalDist: 1.28

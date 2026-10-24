@@ -225,12 +225,6 @@ planet:
         population: 1020426.0
       - date: '2270-01-01'
         population: 3444689.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 9853468.0
       - date: '2290-01-01'
@@ -249,12 +243,6 @@ planet:
         population: 312987798.0
       - date: '2340-01-01'
         population: 484009725.0
-      - date: '2341-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2350-01-01'
         population: 700315803.0
       - date: '2360-01-01'
@@ -305,7 +293,10 @@ planet:
         population: 7231300783.0
       - date: '2571-12-31'
         administration:
-          - Terra Firma Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Terra Firma Province
       - date: '2580-01-01'
         population: 7316275261.0
       - date: '2590-01-01'
@@ -356,11 +347,21 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
       - date: '2770-01-01'
         population: 8218100466.0
+      - date: '2772-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - SL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2779-06-11'
         faction:
           source: canon
@@ -369,14 +370,17 @@ planet:
       - date: '2780-01-01'
         population: 8201969030.0
       - date: '2783-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - TH
+            - Terra Firma Province
       - date: '2786-12-31'
         administration:
-          - Brownsville Province
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Brownsville Province
       - date: '2790-11-23'
         faction:
           source: canon
@@ -391,14 +395,11 @@ planet:
         population: 8143338930.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 3
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 3
       - date: '2830-01-01'
         population: 8111771586.0
       - date: '2840-01-01'
@@ -445,8 +446,11 @@ planet:
         population: 8037242801.0
       - date: '3025-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 5
       - date: '3029-09-13'
         faction:
           source: canon
@@ -457,11 +461,10 @@ planet:
         population: 8039234821.0
         socioIndustrial: B-B-D-B-D
       - date: '3030-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TFR
+          version: 2026.09.01
+          value: []
       - date: '3032-11-28'
         faction:
           source: canon
@@ -471,15 +474,12 @@ planet:
         population: 8125716485.0
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 2
       - date: '3043-01-01'
         socioIndustrial: A-A-D-B-D
       - date: '3050-01-01'
@@ -492,9 +492,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3058-02-01'
         faction:
           source: canon
@@ -509,7 +513,7 @@ planet:
       - date: '3058-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '3060-01-01'
@@ -528,7 +532,7 @@ planet:
       - date: '3063-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '3065-12-01'
@@ -538,26 +542,22 @@ planet:
             - FS
       - date: '3067-12-31'
         administration:
-          - Capellan March
-          - Kathil Operational Area
-          - Region 1
-      - date: '3067-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Kathil Operational Area
+            - Region 1
       - date: '3068-08-01'
         faction:
           source: canon
           value:
             - WOB
       - date: '3068-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3070-01-01'
         population: 8441279588.0
       - date: '3078-01-05'
@@ -574,7 +574,7 @@ planet:
       - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - Stone
       - date: '3080-01-01'
@@ -586,13 +586,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture V
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture V
       - date: '3090-01-01'
         population: 8708799115.0
       - date: '3100-01-01'
@@ -611,11 +608,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3136-01-01'
         socioIndustrial: A-A-D-B-D
       - date: '3140-01-01'
@@ -628,18 +624,18 @@ planet:
         population: 9166301759.0
       - date: '3145-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 1
       - date: '3151-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 6
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 6
   - name: Lindsay's Choice
     type: DWARF_TERRESTRIAL
     orbitalDist: 23.28

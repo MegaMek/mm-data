@@ -127,12 +127,6 @@ planet:
         population: 10029742.0
       - date: '2270-01-01'
         population: 13619077.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 17861142.0
       - date: '2290-01-01'
@@ -201,14 +195,11 @@ planet:
         population: 154138237.0
       - date: '2571-12-31'
         administration:
-          - Tamar Pact
-          - Trellshire
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Trellshire
       - date: '2580-01-01'
         population: 156127312.0
       - date: '2590-01-01'
@@ -288,14 +279,11 @@ planet:
             - DC
       - date: '2864-12-31'
         administration:
-          - Rasalhague Military District
-          - Radstadt Prefecture
-      - date: '2864-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - DC
+            - Rasalhague Military District
+            - Radstadt Prefecture
       - date: '2870-01-01'
         population: 155750869.0
       - date: '2880-01-01'
@@ -332,8 +320,11 @@ planet:
         population: 130885335.0
       - date: '3025-12-31'
         administration:
-          - Rasalhague Military District
-          - Kirchbach Prefecture
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Military District
+            - Kirchbach Prefecture
       - date: '3030-10-18'
         faction:
           source: canon
@@ -342,14 +333,11 @@ planet:
         population: 131693367.0
       - date: '3030-12-31'
         administration:
-          - Tamar Pact
-          - Trellshire
-      - date: '3030-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Tamar Pact
+            - Trellshire
       - date: '3034-03-13'
         faction:
           source: canon
@@ -360,14 +348,17 @@ planet:
       - date: '3040-01-01'
         population: 133189942.0
       - date: '3040-12-31'
-        administration:
-          - Rasalhague Province
-      - date: '3040-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FRR
+      - date: '3040-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Rasalhague Province
       - date: '3041-01-01'
         socioIndustrial: D-C-B-C-C
       - date: '3050-01-01'
@@ -378,11 +369,10 @@ planet:
           value:
             - CW
       - date: '3050-03-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 135866970.0
       - date: '3070-01-01'
@@ -396,12 +386,6 @@ planet:
       - date: '3071-02-12'
         faction:
           source: canon
-          value:
-            - CHH
-      - date: '3075-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CHH
       - date: '3080-01-01'

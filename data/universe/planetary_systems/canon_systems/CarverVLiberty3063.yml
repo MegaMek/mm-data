@@ -48,7 +48,6 @@ planet:
       - name: Kawachi-nagano
       - name: Carl's Corner
     event:
-      - date: '2108-12-05'
   - name: Carver II
     type: GIANT_TERRESTRIAL
     orbitalDist: 0.14
@@ -74,7 +73,6 @@ planet:
         size: medium
         icon: rock13
     event:
-      - date: '2108-12-05'
   - name: Carver III
     type: DWARF_TERRESTRIAL
     orbitalDist: 0.2
@@ -95,7 +93,6 @@ planet:
         size: medium
         icon: rock4
     event:
-      - date: '2108-12-05'
   - name: Carver IV
     type: ICE_GIANT
     orbitalDist: 0.32
@@ -119,7 +116,6 @@ planet:
         size: medium
         icon: oddmoon1
     event:
-      - date: '2108-12-05'
   - name:
       source: canon
       value: Carver V
@@ -222,12 +218,6 @@ planet:
         population: 729279.0
       - date: '2270-01-01'
         population: 1392470.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TA
       - date: '2280-01-01'
         population: 2461224.0
       - date: '2290-01-01'
@@ -244,12 +234,6 @@ planet:
       - date: '2317-06-20'
         faction:
           source: canon
-          value:
-            - TH
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - TH
       - date: '2320-01-01'
@@ -311,7 +295,10 @@ planet:
         population: 119875862.0
       - date: '2571-12-31'
         administration:
-          - Alliance Core
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Alliance Core
       - date: '2580-01-01'
         population: 119805235.0
       - date: '2590-01-01'
@@ -365,9 +352,10 @@ planet:
       - date: '2767-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - AE
+            - TH
       - date: '2770-01-01'
         population: 118343408.0
       - date: '2779-11-05'
@@ -377,12 +365,6 @@ planet:
             - TH
       - date: '2780-01-01'
         population: 118726046.0
-      - date: '2783-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TH
       - date: '2790-05-22'
         faction:
           source: canon
@@ -402,14 +384,11 @@ planet:
             - CC
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '2821-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 1
       - date: '2830-01-01'
         population: 120775849.0
       - date: '2840-01-01'
@@ -471,11 +450,10 @@ planet:
       - date: '3030-01-01'
         population: 122906457.0
       - date: '3030-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - TFR
+          version: 2026.09.01
+          value: []
       - date: '3032-10-31'
         faction:
           source: canon
@@ -485,15 +463,12 @@ planet:
         population: 111895492.0
       - date: '3040-12-31'
         administration:
-          - Sarna March
-          - Terra Firma Operational Area
-          - Region 1
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Sarna March
+            - Terra Firma Operational Area
+            - Region 1
       - date: '3043-01-01'
         socioIndustrial:
           source: canon
@@ -512,9 +487,13 @@ planet:
       - date: '3057-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3060-01-01'
         population: 91522634.0
       - date: '3068-08-22'
@@ -526,12 +505,6 @@ planet:
       - date: '3068-08-30'
         faction:
           source: canon
-          value:
-            - WOB
-      - date: '3068-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - WOB
       - date: '3070-01-01'
@@ -553,23 +526,8 @@ planet:
         population:
           source: canon
           value: 85000000.0
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 85068027.0
-      - date: '3081-12-31'
-        administration:
-          - Prefecture X
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - ROS
       - date: '3085-03-11'
         faction:
           source: canon
@@ -605,25 +563,53 @@ planet:
           source: canon
           value:
             - ROS
-      - date: '3151-12-31'
-        administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '3151-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - CC
       - date: '3063-01-01'
         name: Liberty
         message: Carver V renamed to Liberty
+      - date: '3079-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Stone
+      - date: '3081-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - ROS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Prefecture X
+      - date: '3145-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
+      - date: '3151-12-31'
+        faction:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - CC
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 1
       - date: '3152-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SL3
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
   - name: Carver VI
     type: TERRESTRIAL
     orbitalDist: 1.04
@@ -643,7 +629,6 @@ planet:
     landmass:
       - name: Rover
     event:
-      - date: '2108-12-05'
   - name: Carver VII
     type: GAS_GIANT
     orbitalDist: 2.0
@@ -660,7 +645,6 @@ planet:
     ring: yes
     smallMoons: 12
     event:
-      - date: '2108-12-05'
   - name: Carver VIII
     type: ICE_GIANT
     orbitalDist: 3.92
@@ -683,7 +667,6 @@ planet:
         size: large
         icon: rock2
     event:
-      - date: '2108-12-05'
   - name: Carver IX
     type: GAS_GIANT
     orbitalDist: 7.76
@@ -710,7 +693,6 @@ planet:
         size: large
         icon: rock1
     event:
-      - date: '2108-12-05'
   - name: Carver X
     type: GIANT_TERRESTRIAL
     orbitalDist: 15.44
@@ -735,7 +717,6 @@ planet:
         size: giant
         icon: rock9
     event:
-      - date: '2108-12-05'
   - name: Carver XI
     type: GAS_GIANT
     orbitalDist: 30.8
@@ -767,7 +748,6 @@ planet:
         size: large
         icon: rock14
     event:
-      - date: '2108-12-05'
   - name: Mercurius Belt
     type: ASTEROID_BELT
     orbitalDist: 61.52

@@ -79,12 +79,6 @@ planet:
         population: 515533.0
       - date: '2270-01-01'
         population: 1354970.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-06-24'
         faction:
           source: canon
@@ -100,7 +94,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -116,7 +110,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
       - date: '2370-01-01'
@@ -165,7 +159,10 @@ planet:
         population: 906337004.0
       - date: '2571-12-31'
         administration:
-          - Marik Commonwealth
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Marik Commonwealth
       - date: '2580-01-01'
         population: 927805695.0
       - date: '2590-01-01'
@@ -229,6 +226,11 @@ planet:
         socioIndustrial: B-C-C-B-C
       - date: '2860-01-01'
         population: 1219330164.0
+      - date: '2864-12-31'
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '2870-01-01'
         population: 1219447610.0
       - date: '2880-01-01'
@@ -284,12 +286,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3082-08-09'
         faction:
           source: canon
@@ -297,13 +293,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VII
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VII
       - date: '3090-01-01'
         population: 1286942835.0
       - date: '3099-01-01'
@@ -324,11 +317,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3137-10-01'
         faction:
           source: canon
@@ -339,14 +331,16 @@ planet:
       - date: '3145-01-01'
         population: 1302479180.0
       - date: '3145-12-31'
-        administration:
-          - Covenant Worlds
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Covenant Worlds
   - name: Varaha Belt
     type: ASTEROID_BELT
     orbitalDist: 0.07

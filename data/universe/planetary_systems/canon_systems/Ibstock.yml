@@ -71,12 +71,6 @@ planet:
         socioIndustrial: C-D-F-F-F
       - date: '2270-01-01'
         population: 123255.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 553918.0
       - date: '2290-01-01'
@@ -93,7 +87,7 @@ planet:
       - date: '2317-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - IND
       - date: '2320-01-01'
@@ -111,7 +105,7 @@ planet:
       - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - CCom
       - date: '2367-07-01'
@@ -167,14 +161,11 @@ planet:
         population: 5033737445.0
       - date: '2571-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 1
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 1
       - date: '2580-01-01'
         population: 5079434925.0
       - date: '2590-01-01'
@@ -222,8 +213,11 @@ planet:
         population: 5086818359.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 4
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 4
       - date: '2790-01-01'
         population: 5082897869.0
       - date: '2800-01-01'
@@ -238,11 +232,10 @@ planet:
           value:
             - FWL
       - date: '2821-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
+          version: 2026.09.01
+          value: []
       - date: '2830-01-01'
         population: 4983057563.0
       - date: '2840-01-01'
@@ -314,12 +307,6 @@ planet:
           source: canon
           value:
             - IND
-      - date: '3081-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '3082-12-06'
         faction:
           source: canon
@@ -327,13 +314,10 @@ planet:
             - ROS
       - date: '3085-12-31'
         administration:
-          - Prefecture VI
-      - date: '3085-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 5127520365.0
       - date: '3100-01-01'
@@ -353,9 +337,13 @@ planet:
       - date: '3135-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - SA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 5233196007.0
       - date: '3145-06-27'
@@ -365,14 +353,16 @@ planet:
             - OP
         population: 5255221652.0
       - date: '3145-12-31'
-        administration:
-          - Oriente Protectorate
-      - date: '3145-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FWL
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Oriente Protectorate
   - name: Pandora
     type: TERRESTRIAL
     orbitalDist: 0.9
@@ -635,7 +625,7 @@ planet:
         population: 1788314930.0
       - date: '3151-01-01'
         faction:
-          source: SUCS
+          source: curated
           value:
             - FWL
   - name: Ceneus

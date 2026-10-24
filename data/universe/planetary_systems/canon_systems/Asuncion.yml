@@ -122,12 +122,6 @@ planet:
         population: 447659.0
       - date: '2270-01-01'
         population: 1256039.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
       - date: '2280-01-01'
         population: 3079690.0
       - date: '2290-01-01'
@@ -139,12 +133,6 @@ planet:
       - date: '2317-01-10'
         faction:
           source: canon
-          value:
-            - CCom
-      - date: '2317-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - CCom
       - date: '2320-01-01'
@@ -210,14 +198,11 @@ planet:
         population: 1256515952.0
       - date: '2571-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 2
-      - date: '2571-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - CC
+            - Tikonov Commonality
+            - Region 2
       - date: '2580-01-01'
         population: 1283695555.0
       - date: '2590-01-01'
@@ -269,8 +254,11 @@ planet:
         population: 1637384256.0
       - date: '2786-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 5
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 5
       - date: '2790-01-01'
         population: 1634451892.0
       - date: '2800-01-01'
@@ -281,8 +269,11 @@ planet:
         population: 1561804705.0
       - date: '2821-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 8
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 8
       - date: '2830-01-01'
         population: 1531890981.0
       - date: '2840-01-01'
@@ -295,8 +286,11 @@ planet:
         population: 1505626788.0
       - date: '2864-12-31'
         administration:
-          - Tikonov Commonality
-          - Region 9
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tikonov Commonality
+            - Region 9
       - date: '2870-01-01'
         population: 1513908768.0
       - date: '2880-01-01'
@@ -347,13 +341,10 @@ planet:
         population: 1385022525.0
       - date: '3025-12-31'
         administration:
-          - Zion Province
-      - date: '3025-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FWL
+            - Zion Province
       - date: '3030-01-01'
         population: 1383083011.0
       - date: '3040-01-01'
@@ -374,11 +365,10 @@ planet:
           value:
             - WOB
       - date: '3075-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - WOB
+          version: 2026.09.01
+          value: []
       - date: '3078-01-03'
         faction:
           source: canon
@@ -390,12 +380,6 @@ planet:
           source: canon
           value:
             - Stone
-      - date: '3079-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - Stone
       - date: '3080-01-01'
         population: 1453268377.0
       - date: '3081-07-01'
@@ -405,13 +389,10 @@ planet:
             - ROS
       - date: '3081-12-31'
         administration:
-          - Prefecture VI
-      - date: '3081-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - ROS
+            - Prefecture VI
       - date: '3090-01-01'
         population: 1464355294.0
       - date: '3100-01-01'
@@ -432,11 +413,10 @@ planet:
           value:
             - IND
       - date: '3135-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - IND
+          version: 2026.09.01
+          value: []
       - date: '3140-01-01'
         population: 1520159211.0
       - date: '3145-03-07'
@@ -445,12 +425,6 @@ planet:
           value:
             - FWL
         population: 1533902395.0
-      - date: '3145-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FWL
   - name: Valder Belt A
     type: ASTEROID_BELT
     orbitalDist: 3.64

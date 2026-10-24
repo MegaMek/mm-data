@@ -99,12 +99,6 @@ planet:
         population: 51657470.0
       - date: '2270-01-01'
         population: 75298806.0
-      - date: '2271-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - UND
       - date: '2280-01-01'
         population: 105155531.0
       - date: '2290-01-01'
@@ -127,7 +121,7 @@ planet:
       - date: '2341-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - TamP
       - date: '2350-01-01'
@@ -135,14 +129,16 @@ planet:
       - date: '2360-01-01'
         population: 515582035.0
       - date: '2366-12-31'
-        administration:
-          - Tamar Pact
-      - date: '2366-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - LA
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Tamar Pact
       - date: '2370-01-01'
         population: 573418746.0
       - date: '2380-01-01'
@@ -189,8 +185,11 @@ planet:
         population: 1176594943.0
       - date: '2571-12-31'
         administration:
-          - Protectorate of Donegal
-          - District of Donegal
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Protectorate of Donegal
+            - District of Donegal
       - date: '2580-01-01'
         population: 1185532358.0
       - date: '2590-01-01'
@@ -303,15 +302,12 @@ planet:
             - FC
       - date: '3040-12-31'
         administration:
-          - Donegal March
-          - Pherkad Operational Area
-          - Region 2
-      - date: '3040-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FC
+            - Donegal March
+            - Pherkad Operational Area
+            - Region 2
       - date: '3043-01-01'
         socioIndustrial: B-C-A-D-A
       - date: '3050-01-01'
@@ -321,32 +317,38 @@ planet:
           source: canon
           value:
             - LA
-      - date: '3057-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - LA
       - date: '3058-12-31'
         administration:
-          - Donegal Province
-          - Pandora Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Donegal Province
+            - Pandora Theater
       - date: '3060-01-01'
         population: 898156755.0
       - date: '3067-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3070-01-01'
         population: 908726904.0
       - date: '3075-12-31'
         administration:
-          - Arc-Royal Theater
-          - Arcturus Archonette
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
+            - Arcturus Archonette
       - date: '3080-01-01'
         population: 915110308.0
       - date: '3081-12-31'
         administration:
-          - Arc-Royal Theater
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Arc-Royal Theater
       - date: '3090-01-01'
         population: 914195655.0
       - date: '3100-01-01'
@@ -364,11 +366,10 @@ planet:
             - CW
         population: 914744337.0
       - date: '3130-12-31'
-        faction:
+        administration:
           source: SUCS
-          version: 2026.03.02
-          value:
-            - CW
+          version: 2026.09.01
+          value: []
       - date: '3132-08-07'
         hpg: X
       - date: '3140-01-14'
@@ -381,13 +382,10 @@ planet:
         population: 914744337.0
       - date: '3145-12-31'
         administration:
-          - Arc-Royal Theater
-      - date: '3145-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - LA
+            - Arc-Royal Theater
   - name: Robinson's Belt
     type: ASTEROID_BELT
     orbitalDist: 0.7

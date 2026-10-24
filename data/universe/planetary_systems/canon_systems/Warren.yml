@@ -54,7 +54,7 @@ planet:
       - date: '2271-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - UND
       - date: '2503-12-02'
@@ -80,12 +80,6 @@ planet:
         population: 33013758.0
       - date: '2570-01-01'
         population: 50288361.0
-      - date: '2571-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - TC
       - date: '2580-01-01'
         population: 69010833.0
       - date: '2584-09-20'
@@ -108,15 +102,12 @@ planet:
             - FS
       - date: '2596-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Region 2
-      - date: '2596-12-31'
-        faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
-            - FS
+            - Capellan March
+            - Taygeta Operational Area
+            - Region 2
       - date: '2600-01-01'
         population: 105975233.0
       - date: '2610-01-01'
@@ -225,9 +216,12 @@ planet:
         socioIndustrial: C-C-C-D-C
       - date: '3025-12-31'
         administration:
-          - Capellan March
-          - Taygeta Operational Area
-          - Warren PDZ
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Capellan March
+            - Taygeta Operational Area
+            - Warren PDZ
       - date: '3030-01-01'
         population: 157599418.0
       - date: '3038-01-01'
@@ -237,12 +231,6 @@ planet:
       - date: '3040-01-19'
         faction:
           source: canon
-          value:
-            - FC
-      - date: '3040-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
           value:
             - FC
       - date: '3047-01-01'
@@ -256,32 +244,28 @@ planet:
           source: canon
           value:
             - FS
-      - date: '3067-12-31'
-        faction:
-          source: SUCS
-          version: 2026.03.02
-          value:
-            - FS
       - date: '3070-01-01'
         population: 162415276.0
       - date: '3075-12-31'
         faction:
-          source: SUCS
+          source: curated
           version: 2026.03.02
           value:
             - FS
             - TC
       - date: '3079-12-31'
-        administration:
-          - Periphery March
-          - June Operational Area
-          - Warren PDZ
-      - date: '3079-12-31'
         faction:
           source: SUCS
-          version: 2026.03.02
+          version: 2026.09.01
           value:
             - FS
+        administration:
+          source: SUCS
+          version: 2026.09.01
+          value:
+            - Periphery March
+            - June Operational Area
+            - Warren PDZ
       - date: '3080-01-01'
         population: 164507553.0
       - date: '3090-01-01'
