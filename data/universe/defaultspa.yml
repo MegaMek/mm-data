@@ -1,0 +1,2652 @@
+# MegaMek Data (C) 2025-2026 by The MegaMek Team is licensed under CC BY-NC-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# NOTICE: The MegaMek organization is a non-profit group of volunteers
+# creating free software for the BattleTech community.
+#
+# MechWarrior, BattleMech, `Mech and AeroTech are registered trademarks
+# of The Topps Company, Inc. All Rights Reserved.
+#
+# Catalyst Game Labs and the Catalyst Game Labs logo are trademarks of
+# InMediaRes Productions, LLC.
+#
+# MechWarrior Copyright Microsoft Corporation. MegaMek Data was created under
+# Microsoft's "Game Content Usage Rules"
+# <https://www.xbox.com/en-US/developers/rules> and it is not endorsed by or
+# affiliated with Microsoft.
+
+abilities:
+
+  # PILOTING SPA
+
+  - lookupName: wind_walker
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/Aircraft: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/VTOL: Regular
+        Piloting/Aerospace: Regular
+        Piloting/ProtoMek: Regular
+
+  - lookupName: env_specialist
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Piloting/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/Mek: Regular
+        Piloting/VTOL: Regular
+        Piloting/Naval: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Aerospace: Regular
+        Piloting/Aerospace: Regular
+        Gunnery/ProtoMek: Regular
+        Piloting/ProtoMek: Regular
+        Anti-Mek (Climbing): Regular
+        Piloting/Ground Vehicle: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: animal_mimic
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: dodge_maneuver
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: hot_dog
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Piloting/Aerospace: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: hopping_jack
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    invalidAbilities: [jumping_jack]
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: jumping_jack
+    xpCost: 200
+    originOnly: false
+    # the extra weight on this one helps increase its likelihood if hopping jack was already selected
+    weight: 6
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: hvy_lifter
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/Mek: Regular
+
+  - lookupName: maneuvering_ace
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Piloting/Aerospace: Regular
+        Piloting/Naval: Regular
+        Piloting/ProtoMek: Regular
+        Piloting/Ground Vehicle: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/VTOL: Regular
+        Piloting/Aircraft: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: melee_specialist
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: melee_master
+    xpCost: 200
+    originOnly: false
+    weight: 6
+    prereqAbilities: [melee_specialist]
+    invalidAbilities: [zweihander]
+    skillPrereqs:
+      - Piloting/ProtoMek: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: zweihander
+    xpCost: 100
+    originOnly: false
+    weight: 6
+    prereqAbilities: [melee_specialist]
+    invalidAbilities: [melee_master]
+    skillPrereqs:
+      - Piloting/Mek: Regular
+
+  - lookupName: familiarity_emotionally_unavailable
+    displayName: Emotionally Unavailable (Unofficial)
+    desc: |-
+      The character cannot earn Familiarity for any chassis they do not already have some Familiarity with.
+
+      If the character gains Familiarity in a specific chassis (such as through GM intervention) they will progress normally.
+
+      Has no effect if Chassis Familiarity is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [familiarity_free_love]
+    skillPrereqs:
+      - Gunnery/Mek: Ultra-Green
+        Gunnery/Vehicle: Ultra-Green
+        Gunnery/Aerospace: Ultra-Green
+        Gunnery/Aircraft: Ultra-Green
+        Piloting/Mek: Ultra-Green
+        Piloting/Ground Vehicle: Ultra-Green
+        Piloting/Naval: Ultra-Green
+        Piloting/VTOL: Ultra-Green
+        Piloting/Aerospace: Ultra-Green
+        Piloting/Aircraft: Ultra-Green
+
+  - lookupName: familiarity_iron_bond
+    displayName: Iron Bond (Unofficial)
+    desc: |-
+      The character increases all Familiarity gains by 50%.
+
+      Has no effect if Chassis Familiarity is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [familiarity_one_love]
+    skillPrereqs:
+      - Gunnery/Mek: Ultra-Green
+        Gunnery/Vehicle: Ultra-Green
+        Gunnery/Aerospace: Ultra-Green
+        Gunnery/Aircraft: Ultra-Green
+        Piloting/Mek: Ultra-Green
+        Piloting/Ground Vehicle: Ultra-Green
+        Piloting/Naval: Ultra-Green
+        Piloting/VTOL: Ultra-Green
+        Piloting/Aerospace: Ultra-Green
+        Piloting/Aircraft: Ultra-Green
+
+  - lookupName: shaky_stick
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Piloting/Aerospace: Regular
+        Piloting/Ground Vehicle: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/VTOL: Regular
+        Piloting/Aircraft: Regular
+
+  - lookupName: tm_forest_ranger
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Anti-Mek (Climbing): Veteran
+        Piloting/ProtoMek: Veteran
+        Piloting/Ground Vehicle: Veteran
+        Piloting/Mek: Veteran
+
+  - lookupName: tm_frogman
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Piloting/ProtoMek: Veteran
+        Piloting/Mek: Veteran
+
+  - lookupName: tm_mountaineer
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Anti-Mek (Climbing): Veteran
+        Piloting/ProtoMek: Veteran
+        Piloting/Ground Vehicle: Veteran
+        Piloting/Mek: Veteran
+
+  - lookupName: tm_swamp_beast
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Anti-Mek (Climbing): Veteran
+        Piloting/ProtoMek: Veteran
+        Piloting/Ground Vehicle: Veteran
+        Piloting/Mek: Veteran
+
+  - lookupName: tm_nightwalker
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Anti-Mek (Climbing): Veteran
+        Piloting/ProtoMek: Veteran
+        Piloting/Ground Vehicle: Veteran
+        Piloting/Mek: Veteran
+
+  - lookupName: cross_country
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/Ground Vehicle: Regular
+
+  - lookupName: aptitude_piloting
+    xpCost: 300
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Piloting/Aerospace: Veteran
+        Piloting/Naval: Veteran
+        Piloting/Ground Vehicle: Veteran
+        Piloting/Spacecraft: Veteran
+        Piloting/VTOL: Veteran
+        Piloting/Aircraft: Veteran
+        Piloting/Mek: Veteran
+
+  # GUNNERY SPA
+
+  - lookupName: cluster_hitter
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    invalidAbilities: [oblique_attacker, sandblaster]
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: cluster_master
+    xpCost: 100
+    originOnly: false
+    weight: 6
+    prereqAbilities: [cluster_hitter]
+    removeAbilities: [cluster_hitter]
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Gunnery/ProtoMek: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/Spacecraft: Veteran
+        Gunnery/Aerospace: Veteran
+        Gunnery/Vehicle: Veteran
+
+  - lookupName: golden_goose
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Piloting/Aerospace: Veteran
+        Piloting/Spacecraft: Veteran
+        Piloting/VTOL: Veteran
+        Piloting/Aircraft: Veteran
+
+  - lookupName: multi_tasker
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: oblique_attacker
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    invalidAbilities: [cluster_hitter]
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: oblique_artillery
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+        Artillery: Regular
+
+  - lookupName: range_master
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: sniper
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Gunnery/Aerospace: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/Vehicle: Veteran
+        Gunnery/Spacecraft: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/ProtoMek: Veteran
+
+  - lookupName: sandblaster
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    invalidAbilities: [cluster_hitter, cluster_master]
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: specialist
+    xpCost: 100
+    originOnly: false
+    weight: 4
+    invalidAbilities: [weapon_specialist]
+    skillPrereqs:
+      - Gunnery/Mek: Green
+        Gunnery/ProtoMek: Green
+        Gunnery/Aircraft: Green
+        Gunnery/Aerospace: Green
+        Gunnery/Spacecraft: Green
+        Gunnery/BattleArmor: Green
+        Gunnery/Vehicle: Green
+
+  - lookupName: aptitude_gunnery
+    xpCost: 300
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Gunnery/ProtoMek: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/Aerospace: Veteran
+        Gunnery/Spacecraft: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/Vehicle: Veteran
+
+  - lookupName: some_like_it_hot
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/Aerospace: Regular
+
+  - lookupName: weapon_specialist
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [specialist]
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Gunnery/ProtoMek: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/Spacecraft: Veteran
+        Gunnery/Aerospace: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/Vehicle: Veteran
+
+  - lookupName: blood_stalker
+    xpCost: 120
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Vehicle: Regular
+
+  # Misc SPA
+
+  - lookupName: unofficial_transport_negotiator
+    displayName: Transport Negotiator (Unofficial)
+    desc: |-
+      Decreases all transport costs by 5%. Multiple characters with this SPA do not stack their benefits.
+
+      Has no benefit to a character without the Admin profession.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Regular
+
+  - lookupName: unofficial_bargain_hunter
+    displayName: Bargain Hunter (Unofficial)
+    desc: |-
+      Decreases the Target Number for all Appraisal checks by 2.
+
+      This is useful for procurement characters as it increases the chance they will find a bargain (discount) on purchased parts.
+
+      Has limited benefit if the functional appraisal option is not enabled in campaign options.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Appraisal: Regular
+
+  - lookupName: unofficial_shakey_scalpel
+    displayName: Shakey Scalpel (Unofficial)
+    desc: Increases the Target Number for all Surgery/Any checks by 2.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Regular
+
+  - lookupName: unofficial_embezzler
+    displayName: Embezzler (Unofficial)
+    desc: At the end of each month, some money goes missing. Nobody knows where. It's probably fine.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Regular
+
+  - lookupName: unofficial_paper_surgeon
+    displayName: Paper Surgeon (Unofficial)
+    desc: This character is an excellent surgeon, on paper. Increases the Target Number for all Surgery/Any checks by 2.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Regular
+
+  - lookupName: unofficial_loses_paperwork
+    displayName: Constantly Loses Paperwork (Unofficial)
+    desc: Increases the Target Number for all Administration checks by 2.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Regular
+
+  - lookupName: unofficial_patient_educator
+    displayName: Patient Educator (Unofficial)
+    desc: Decreases the Target Number for all Training checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Training: Regular
+
+  - lookupName: unofficial_pathologic_insight
+    displayName: Pathologic Insight (Unofficial)
+    desc: |-
+      Decreases the Target Number for all Surgery/Any checks made to curse diseases by 2.
+
+      This has no effect if Advanced Medical's alternative mode is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Regular
+
+  - lookupName: unofficial_houdini
+    displayName: Houdini (Unofficial)
+    desc: Decreases the Target Number for all Escape Artist checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_master_impersonator
+    displayName: Master Impersonator (Unofficial)
+    desc: Decreases the Target Number for all Disguise checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_counterfeiter
+    displayName: Counterfeiter (Unofficial)
+    desc: Decreases the Target Number for all Forgery checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_pick_pocket
+    displayName: Pick Pocket (Unofficial)
+    desc: Decreases the Target Number for all Sleight of Hand checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_natural_thespian
+    displayName: Natural Thespian (Unofficial)
+    desc: Decreases the Target Number for all Acting checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_in_for_life
+    displayName: In For Life (ATOW)
+    desc: |-
+      -1 Edge, -1 Connections. Cannot change faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+
+  - lookupName: atow_g_tolerance
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: admin_interstellar_negotiator
+    displayName: Interstellar Negotiator (Unofficial)
+    desc: |-
+      No matter who's in charge, this character always has a way of bringing down the price.
+
+      If this character is the senior-most Admin character, the cost of interstellar travel is reduced by 15%
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Veteran
+
+  - lookupName: admin_networker
+    displayName: Networker (Unofficial)
+    desc: |-
+      This character knows people in high places.
+
+      While this character is the senior-most Admin, the contract market rolls one extra offer each month for your force's primary line of work (mercenary work, government orders, or piracy). Being an extra roll, it may still produce no additional offer.
+    xpCost: 400
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Elite
+
+  - lookupName: admin_tetris_master
+    displayName: Tetris Master (Unofficial)
+    desc: |-
+      This character has mastered the subtle art of stacking cargo boxes.
+
+      The campaign's cargo capacity is increased by 5% per character with this SPA.
+
+      This SPA only confers a benefit if the character has either the Admin roles.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Regular
+
+  - lookupName: admin_coordinator
+    displayName: Coordinator (Unofficial)
+    desc: |-
+      This character is exceptionally skilled at liaising with allied forces, ensuring reinforcements arrive where they're needed.
+
+      If this character is the senior Admin character, the reinforcement target number is reduced by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Veteran
+
+  - lookupName: admin_logistician
+    displayName: Logistician (Unofficial)
+    desc: |-
+      This character is an expert at managing interstellar supply lines.
+
+      Parts procured by this character have their delivery time reduced by 10%
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Veteran
+
+  - lookupName: admin_mediator
+    displayName: Mediator (Unofficial)
+    desc: |-
+      Whether with a smoothing word or a calming presence, this character knows how to solve disputes.
+
+      This character's Administration skill is increased by 1 when calculating the campaign's Admin Capacity.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Regular
+
+  - lookupName: admin_scrounge
+    displayName: Scrounge (Unofficial)
+    desc: |-
+      The character is adept at finding resources in places nobody else would think to look.
+
+      They can make one additional procurement attempt per day.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Administration: Elite
+
+  - lookupName: atow_alternate_id
+    displayName: Alternate ID (ATOW)
+    desc: |-
+      A low Fame trait infers a penalty to Reputation. It also applies a penalty to Negotiation, Streetwise, and Protocols skill checks. While ranks in the Bloodmark trait cause the character to be hunted by assassins.
+
+      This SPA reduces the penalty from low Fame by 2 and reduces the chance of an assassination attempt occurring by half. It also decreases the chance of a Dark Secret SPA being revealed.
+
+      While this SPA does exist in ATOW (and that's where you'll find its description), these effects are unique to MekHQ.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: atow_citizenship
+    displayName: Citizenship/Trueborn (ATOW)
+    desc: |-
+      Unlocks additional options during character creation.
+
+      Increases Connections by 1.
+
+      While this SPA does exist in ATOW, the Connections modifier is unique to MekHQ. We use that to abstract the kinds of bonuses this SPA would incur in a tabletop game.
+    xpCost: 200
+    originOnly: true
+    weight: 1
+
+  - lookupName: flaw_animal_antipathy
+    displayName: Animal Antipathy (ATOW)
+    desc: Increases the Target Number for all Animal Handling checks by 2.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_animal_empathy]
+
+  - lookupName: atow_animal_empathy
+    displayName: Animal Empathy (ATOW)
+    desc: Decreases the Target Number for all Animal Handling checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_animal_antipathy]
+
+  - lookupName: atow_ambidextrous
+    displayName: Ambidextrous (ATOW)
+    desc: Removes the penalties from a single missing arm or hand (Advanced Medical only).
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_unattractive
+    displayName: Unattractive (ATOW)
+    desc: Increases the target number of all Charisma-based skills by 2.
+    xpCost: -200
+    originOnly: true
+    weight: 1
+    removeAbilities: [atow_attractive]
+
+  - lookupName: atow_attractive
+    displayName: Attractive (ATOW)
+    desc: Decreases the target number of all Charisma-based skills by 2.
+    xpCost: 200
+    originOnly: true
+    weight: 1
+    removeAbilities: [flaw_unattractive]
+
+  - lookupName: flaw_unfit
+    displayName: Unfit (Unofficial)
+    desc: Doubles all Fatigue gain.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_fit]
+
+  - lookupName: atow_fit
+    displayName: Fit (ATOW)
+    desc: |-
+      Half all Fatigue gained (rounding down).
+
+      Any attempt to heal this character has the target number reduced by 1 (Alternate Advanced Medical only).
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_unfit]
+
+  - lookupName: unofficial_ghost
+    displayName: Ghost (Unofficial)
+    desc: The Target Number of all Stealth checks is decreased by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [unofficial_loud_mouth]
+
+  - lookupName: unofficial_loud_mouth
+    displayName: Loud Mouth (Unofficial)
+    desc: The Target Number of all Stealth checks is increased by 1.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [unofficial_ghost]
+
+  - lookupName: unofficial_ranger
+    displayName: Ranger (Unofficial)
+    desc: The Target Number of all Tracking checks is decreased by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_poor_hearing
+    displayName: Poor Hearing (ATOW)
+    desc: The Target Number of all Perception checks is increased by 1.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_good_hearing]
+
+  - lookupName: atow_good_hearing
+    displayName: Good Hearing (ATOW)
+    desc: The Target Number of all Perception checks is decreased by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_poor_hearing]
+
+  - lookupName: flaw_poor_vision
+    displayName: Poor Vision (ATOW)
+    desc: The Target Number of all Perception checks is increased by 1.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_good_vision]
+
+  - lookupName: atow_good_vision
+    displayName: Good Vision (ATOW)
+    desc: The Target Number of all Perception checks is decreased by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_poor_vision]
+
+  - lookupName: flaw_introvert
+    displayName: Introvert (ATOW)
+    desc: The Target Number of all Acting and Negotiation checks are increased by 1.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_gregarious]
+
+  - lookupName: atow_gregarious
+    displayName: Gregarious (ATOW)
+    desc: The Target Number of all Acting and Negotiation checks are decreased by 1.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_introvert]
+
+  - lookupName: flaw_impatient
+    displayName: Impatient (ATOW)
+    desc: |-
+      The Target Number of any complex skill is increased by 1.
+
+      The following skills are affected: Acting, Appraisal, Art/Any, Computers, Cryptography, Demolitions, Escape Artist, Interest/Any, Interrogation, Investigation, Mechanics, Negotiation, Protocols/Any, Science/Any, Security Systems/Any, Strategy, Streetwise/Any, Surgery/Any, Survival/Any, Tactics/Any, Tech/Any, and Training.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_patient]
+
+  - lookupName: atow_patient
+    displayName: Patient (ATOW:Companion)
+    desc: |-
+      The Target Number of any complex skill is decreased by 1.
+
+      The following skills are affected: Acting, Appraisal, Art/Any, Computers, Cryptography, Demolitions, Escape Artist, Interest/Any, Interrogation, Investigation, Mechanics, Negotiation, Protocols/Any, Science/Any, Security Systems/Any, Strategy, Streetwise/Any, Surgery/Any, Survival/Any, Tactics/Any, Tech/Any, and Training.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_impatient]
+
+  - lookupName: flaw_transit_disorientation_syndrome
+    displayName: Transit Disorientation Syndrome (ATOW)
+    desc: |-
+      Is violently ill following a hyperspace jump, increasing Fatigue (if Fatigue is enabled, default 1).
+
+      Has no mechanical effect if Fatigue is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: mutation_freakish_strength
+    displayName: Mutation - Freakish Strength (ATOW:Companion)
+    desc: |-
+      Increases Strength Attribute by 2 and maximum Strength by 1. Neither increase may take this Attribute above 10.
+
+      Increases the target number of all Charisma-based skills by 2 due to inhumanly shaped bulk.
+    xpCost: 300
+    originOnly: true
+    weight: 1
+    invalidAbilities: [flaw_unattractive]
+
+  - lookupName: mutation_exceptional_immune_system
+    displayName: Mutation - Exceptional Immune System (ATOW:Companion)
+    desc: Recover from injuries at twice the normal rate (Advanced Medical only).
+    xpCost: 200
+    originOnly: true
+    weight: 1
+
+  - lookupName: mutation_exotic_appearance
+    displayName: Mutation - Exotic Yet Pleasing Appearance (ATOW:Companion)
+    desc: Increases Charisma Attribute by 1 (may not take it above 10).
+    xpCost: 100
+    originOnly: true
+    weight: 1
+
+  - lookupName: mutation_facial_hair
+    displayName: Mutation - Extremely Excess Facial Hair (ATOW:Companion)
+    desc: Decreases Charisma Attribute by 1 (may not take it below 1).
+    xpCost: -100
+    originOnly: true
+    weight: 1
+
+    # Didn't mark this as a mutation as it can very easily be recontextualized as a post-injury thing, not necessarily a mutation
+  - lookupName: mutation_serious_disfigurement
+    displayName: Serious Disfigurement (ATOW:Companion)
+    desc: Decreases Charisma Attribute by 3 (may not take it below 1).
+    xpCost: -400
+    originOnly: false
+    weight: 1
+
+  - lookupName: mutation_cat_girl
+    displayName: Mutation - Functional Tail and Mobile Ears (ATOW:Companion)
+    desc: |-
+      Decreases Charisma Attribute by 3 (may not take it below 1).
+
+      The Target Number of all Perception checks decreased by 1 due to improved hearing.
+    xpCost: -300
+    originOnly: true
+    weight: 1
+    invalidAbilities: [mutation_cat_girl_unofficial]
+
+  - lookupName: mutation_cat_girl_unofficial
+    displayName: Mutation - Functional Tail and Mobile Ears (Unofficial)
+    desc: |-
+      Increases Charisma Attribute by 1 (may not take it above 10).
+
+      The Target Number of all Perception checks decreased by 1 due to improved hearing.
+    xpCost: 200
+    originOnly: true
+    weight: 1
+    invalidAbilities: [mutation_cat_girl]
+
+  - lookupName: flaw_gremlins
+    displayName: Gremlins (ATOW)
+    desc: |-
+      The cost of purchasing and improving the Tech/Any, Computers, Communications, or Security Systems/Electronic skills is increased by 10% (rounded normally).
+
+      Furthermore, the Target Number of checks made with such skills is increased by 1.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_tech_empathy]
+
+  - lookupName: atow_tech_empathy
+    displayName: Tech Empathy (ATOW)
+    desc: |-
+      The cost of purchasing and improving the Tech/Any, Computers, Communications, or Security Systems/Electronic skills is decreased by 10% (rounded normally).
+
+      Furthermore, the Target Number of checks made with such skills is decreased by 1.
+    xpCost: 300
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_gremlins]
+
+  - lookupName: atow_poison_resistance
+    displayName: Poison Resistance (ATOW)
+    desc: |-
+      The character cannot be poisoned.
+
+      Mechanically, this offers few benefits; however, the character will be completely immune to the Fatigue gain from the 'Poisoning' Prisoner Event.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: atow_sixth_sense
+    displayName: Sixth Sense (ATOW)
+    desc: The Target Number of all Perception checks are decreased by 3.
+    xpCost: 400
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_glass_jaw
+    displayName: Glass Jaw (ATOW)
+    desc: All injuries suffered and fatigue gained is doubled. Fatigue gain from sustaining injuries is not doubled.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_toughness]
+
+  - lookupName: atow_toughness
+    displayName: Toughness (ATOW)
+    desc: |-
+      All injuries suffered are reduced by 25% and Fatigue gain is halved. Fatigue gain from sustaining injuries is not halved.
+
+      Any attempt to heal this character has the target number reduced by 1 (Alternate Advanced Medical only).
+    xpCost: 300
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_glass_jaw]
+
+  - lookupName: flaw_slow_learner
+    displayName: Slow Learner (ATOW)
+    desc: |-
+      Increases the cost of purchasing and improving Skills by 20% (rounded normally).
+
+      If XP adjustments from a high or low Reasoning are enabled, those adjustments are additive. So a 20% increase from this SPA and a 5% decrease from Reasoning would equal a 15% increase.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_fast_learner]
+
+  - lookupName: atow_fast_learner
+    displayName: Fast Learner (ATOW)
+    desc: |-
+      Decreases the cost of purchasing and improving Skills by 20% (rounded normally).
+
+      If XP adjustments from a high or low Reasoning are enabled, those adjustments are additive. So a 20% decrease from this SPA and a 5% increase from Reasoning would equal a 15% decrease.
+    xpCost: 300
+    originOnly: false
+    weight: 1
+    removeAbilities: [flaw_slow_learner]
+
+  - lookupName: exceptional_attribute_strength
+    displayName: Exceptional Attribute - Strength (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_body
+    displayName: Exceptional Attribute - Body (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_reflexes
+    displayName: Exceptional Attribute - Reflexes (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_dexterity
+    displayName: Exceptional Attribute - Dexterity (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_intelligence
+    displayName: Exceptional Attribute - Intelligence (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_willpower
+    displayName: Exceptional Attribute - Willpower (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_charisma
+    displayName: Exceptional Attribute - Charisma (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: exceptional_attribute_edge
+    displayName: Exceptional Attribute - Edge (ATOW)
+    desc: |-
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases that maximum by 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_beloved_pet
+    displayName: Beloved Pet (Unofficial)
+    desc: |-
+      This character has a beloved pet. Their companionship helps the character through hard times.
+
+      Characters can only increase their Attributes up to a maximum determined by their Phenotype.
+
+      This SPA increases maximum by Edge 1, but does not increase the Attribute itself.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_implant_resistance
+    displayName: Implant Resistance (Unofficial)
+    desc: Exhibits a natural resistance to the negative effects of EI Implants, reducing the Target Number to avoid gaining an annual Flaw by 2
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: eagle_eyes
+    desc: Acts as an active probe or extends range of existing active probe. Also makes avoiding minefields easier. Furthermore, if Advanced Scouting is enabled this SPA applies a +1 modifier to the scouting check.
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Piloting/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/Mek: Regular
+        Piloting/VTOL: Regular
+        Piloting/Naval: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Aerospace: Regular
+        Piloting/Aerospace: Regular
+        Gunnery/ProtoMek: Regular
+        Piloting/ProtoMek: Regular
+        Anti-Mek (Climbing): Regular
+        Piloting/Ground Vehicle: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: forward_observer
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Piloting/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/Mek: Regular
+        Piloting/VTOL: Regular
+        Piloting/Naval: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Aerospace: Regular
+        Piloting/Aerospace: Regular
+        Gunnery/ProtoMek: Regular
+        Piloting/ProtoMek: Regular
+        Anti-Mek (Climbing): Regular
+        Piloting/Ground Vehicle: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: human_tro
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Piloting/Aircraft: Regular
+        Gunnery/Spacecraft: Regular
+        Piloting/Spacecraft: Regular
+        Piloting/Mek: Regular
+        Piloting/VTOL: Regular
+        Piloting/Naval: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Aerospace: Regular
+        Piloting/Aerospace: Regular
+        Gunnery/ProtoMek: Regular
+        Piloting/ProtoMek: Regular
+        Anti-Mek (Climbing): Regular
+        Piloting/Ground Vehicle: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: atow_combat_paralysis
+    desc: |-
+      Force Reputation is decreased by 1 if this character is the campaign commander.
+
+      A pilot who has Combat Paralysis rolls three dice per initiative check, keeping the only the lowest two rolls.
+
+      If individual initiative is enabled, this penalty applies only to the pilot's unit. Otherwise, the penalty is applied only if the pilot's unit is the force commander.
+    xpCost: -400
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_combat_sense]
+
+  - lookupName: atow_combat_sense
+    desc: |-
+      Force Reputation is increased by 1 if this character is the campaign commander.
+
+      A pilot who has Combat Sense rolls three dice per initiative check, keeping the top two rolls.
+
+      If individual initiative is enabled, this bonus applies only to the pilot's unit. Otherwise, the bonus is applied only if the pilot's unit is the force commander.
+    xpCost: 400
+    originOnly: false
+    weight: 1
+    removeAbilities: [atow_combat_paralysis]
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Piloting/Aircraft: Veteran
+        Gunnery/Spacecraft: Veteran
+        Piloting/Spacecraft: Veteran
+        Piloting/Mek: Veteran
+        Piloting/VTOL: Veteran
+        Piloting/Naval: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/Aerospace: Veteran
+        Piloting/Aerospace: Veteran
+        Gunnery/ProtoMek: Veteran
+        Piloting/ProtoMek: Veteran
+        Anti-Mek (Climbing): Veteran
+        Piloting/Ground Vehicle: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/Vehicle: Veteran
+
+  - lookupName: tactical_genius
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Gunnery/Mek: Veteran
+        Piloting/Aircraft: Veteran
+        Gunnery/Spacecraft: Veteran
+        Piloting/Spacecraft: Veteran
+        Piloting/Mek: Veteran
+        Piloting/VTOL: Veteran
+        Piloting/Naval: Veteran
+        Gunnery/BattleArmor: Veteran
+        Gunnery/Aerospace: Veteran
+        Piloting/Aerospace: Veteran
+        Gunnery/ProtoMek: Veteran
+        Piloting/ProtoMek: Veteran
+        Anti-Mek (Climbing): Veteran
+        Piloting/Ground Vehicle: Veteran
+        Gunnery/Aircraft: Veteran
+        Gunnery/Vehicle: Veteran
+
+  - lookupName: allweather
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Piloting/Aerospace: Regular
+        Piloting/Naval: Regular
+        Piloting/Ground Vehicle: Regular
+        Piloting/ProtoMek: Regular
+        Piloting/VTOL: Regular
+        Piloting/Aircraft: Regular
+        Piloting/Mek: Regular
+
+  - lookupName: sensor_geek
+    desc: |-
+      A pilot with this ability gets a -2 bonus on sensor checks. Note that this is really only a bonus, if inclusive sensor ranges are in use.
+
+      Furthermore, the character reduces the target number of all Sensor Operations checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Piloting/Aerospace: Green
+        Piloting/Naval: Green
+        Piloting/Ground Vehicle: Green
+        Piloting/ProtoMek: Green
+        Anti-Mek (Climbing): Green
+        Piloting/VTOL: Green
+        Piloting/Aircraft: Green
+        Piloting/Mek: Green
+
+  - lookupName: weathered
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Spacecraft: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: blind_fighter
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Gunnery/Mek: Regular
+        Gunnery/ProtoMek: Regular
+        Gunnery/Aircraft: Regular
+        Gunnery/BattleArmor: Regular
+        Gunnery/Aerospace: Regular
+        Gunnery/Vehicle: Regular
+
+  - lookupName: iron_man
+    displayName: Iron Man (Unofficial)
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  # Infantry SPA
+
+  - lookupName: foot_cav
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Small Arms: Regular
+
+  - lookupName: urban_guerrilla
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Small Arms: Regular
+        Anti-Mek (Climbing): Regular
+        Gunnery/BattleArmor: Regular
+
+  # Tech SPA
+
+  - lookupName: tech_weapon_specialist
+    displayName: Tech Specialist, Weapon (Unofficial)
+    desc: "-1 to repair and maintenance checks when working with weapons."
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Tech/Vessel: Regular
+        Tech/Aerospace: Regular
+        Tech/Vehicle: Regular
+        Tech/Mek: Regular
+        Tech/BattleArmor: Regular
+
+  - lookupName: tech_armor_specialist
+    displayName: Tech Specialist, Armor (Unofficial)
+    desc: "-1 to repair and maintenance checks when working with armor."
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Tech/Vessel: Regular
+        Tech/Aerospace: Regular
+        Tech/Vehicle: Regular
+        Tech/Mek: Regular
+        Tech/BattleArmor: Regular
+
+  - lookupName: tech_internal_specialist
+    displayName: Tech Specialist, Internal (Unofficial)
+    desc: "-1 to repair and maintenance checks when working with internal systems"
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Tech/Vessel: Regular
+        Tech/Aerospace: Regular
+        Tech/Vehicle: Regular
+        Tech/Mek: Regular
+        Tech/BattleArmor: Regular
+
+  # Tech Specialist SPAs: specialize in one granular Tech/... skill (+1) at the cost of the others (-1). Mutually
+  #         exclusive. Applied as skill modifiers in Skill#getSPAModifiers.
+
+  - lookupName: tech_specialist_electronic
+    displayName: Tech Specialist, Electronic (Unofficial)
+    desc: "+1 to checks made with the Tech/Electronic skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_jets, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Electronic: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_nuclear
+    displayName: Tech Specialist, Nuclear (Unofficial)
+    desc: "+1 to checks made with the Tech/Nuclear skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_jets, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Nuclear: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_aeronautics
+    displayName: Tech Specialist, Aeronautics (Unofficial)
+    desc: "+1 to checks made with the Tech/Aeronautics skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_jets, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Aeronautics: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_mechanical
+    displayName: Tech Specialist, Mechanical (Unofficial)
+    desc: "+1 to checks made with the Tech/Mechanical skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_myomer, tech_specialist_jets, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Mechanical: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_myomer
+    displayName: Tech Specialist, Myomer (Unofficial)
+    desc: "+1 to checks made with the Tech/Myomer skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_jets, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Myomer: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_jets
+    displayName: Tech Specialist, Jets (Unofficial)
+    desc: "+1 to checks made with the Tech/Jets skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_weapons, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Jets: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_weapons
+    displayName: Tech Specialist, Weapons (Unofficial)
+    desc: "+1 to checks made with the Tech/Weapons skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_jets, tech_specialist_cybernetics]
+    skillPrereqs:
+      - Tech/Weapons: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_specialist_cybernetics
+    displayName: Tech Specialist, Cybernetics (Unofficial)
+    desc: "+1 to checks made with the Tech/Cybernetics skill, and -1 to checks made with every other Tech specialist skill."
+    xpCost: 200
+    originOnly: false
+    weight: 2
+    invalidAbilities: [tech_specialist_electronic, tech_specialist_nuclear, tech_specialist_aeronautics, tech_specialist_mechanical, tech_specialist_myomer, tech_specialist_jets, tech_specialist_weapons]
+    skillPrereqs:
+      - Tech/Cybernetics: Veteran
+        Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_engineer
+    displayName: Engineer (Unofficial)
+    desc: "-2 on refit rolls."
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_fixer
+    displayName: Mr/Ms Fix-it (Unofficial)
+    desc: Ignore the first point of penalty for repair and maintenance on low quality equipment.
+    xpCost: 100
+    originOnly: false
+    weight: 2
+    skillPrereqs:
+      - Tech/Vessel: Regular
+        Tech/Aerospace: Regular
+        Tech/Vehicle: Regular
+        Tech/Mek: Regular
+        Tech/BattleArmor: Regular
+
+  - lookupName: unofficial_ill_do_it_myself
+    displayName: I'll Do It Myself (Unofficial)
+    desc: |-
+      Is a one-person team. Requires no astech or medic assistants.
+
+      Has no effect on a character without a Tech/Any (non-vessel) or Doctor profession.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+        Surgery/Any: Veteran
+
+  - lookupName: unofficial_spice_is_right
+    displayName: The Spice is Right (Unofficial)
+    desc: |-
+      Knows how to make the best of every meal.
+
+      Reduces the target number of all Art/Cooking checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [unofficial_kitchen_menace]
+
+  - lookupName: unofficial_kitchen_menace
+    displayName: Kitchen Menace (Unofficial)
+    desc: |-
+      Has no idea how to cook even the most basic of meals.
+
+      Increases the target number of all Art/Cooking checks by 2.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [unofficial_spice_is_right]
+
+  - lookupName: tech_maintainer
+    displayName: Maintainer (Unofficial)
+    desc: The tech is slow and methodical at their work. They take a +1 penalty to their repair rolls, but are better at maintaining units than most, with a -1 bonus.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Tech/Vessel: Regular
+        Tech/Aerospace: Regular
+        Tech/Vehicle: Regular
+        Tech/Mek: Regular
+        Tech/BattleArmor: Regular
+
+  - lookupName: tech_fabricator
+    displayName: Fabricator (Unofficial)
+    desc: Reduces the target number of fabrication checks by 2.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_jury_rigger
+    displayName: Jury-Rigger (Unofficial)
+    desc: Reduces all fabrication costs by 25%.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [tech_wasteful]
+    skillPrereqs:
+      - Tech/Vessel: Veteran
+        Tech/Aerospace: Veteran
+        Tech/Vehicle: Veteran
+        Tech/Mek: Veteran
+        Tech/BattleArmor: Veteran
+
+  - lookupName: tech_macgyver
+    displayName: MacGyver (Unofficial)
+    desc: Treats a part's base Tech Rating as one lower when determining whether it can be fabricated. Stacks with Munitioneer
+    xpCost: 200
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Tech/Vessel: Elite
+        Tech/Aerospace: Elite
+        Tech/Vehicle: Elite
+        Tech/Mek: Elite
+        Tech/BattleArmor: Elite
+
+  - lookupName: tech_munitioneer
+    displayName: Munitioneer (Unofficial)
+    desc: Treats ammunition's base Tech Rating as one lower when determining whether it can be fabricated. Stacks with MacGyver.
+    xpCost: 100
+    originOnly: false
+    weight: 3
+    skillPrereqs:
+      - Tech/Vessel: Elite
+        Tech/Aerospace: Elite
+        Tech/Vehicle: Elite
+        Tech/Mek: Elite
+        Tech/BattleArmor: Elite
+
+  - lookupName: tech_wasteful
+    displayName: Wasteful (Unofficial)
+    desc: Increases the cost of all fabrication and repairs by 25%.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [tech_jury_rigger]
+    skillPrereqs:
+      - Tech/Vessel: Ultra-Green
+        Tech/Aerospace: Ultra-Green
+        Tech/Vehicle: Ultra-Green
+        Tech/Mek: Ultra-Green
+        Tech/BattleArmor: Ultra-Green
+
+  - lookupName: compulsion_unpleasant_personality
+    displayName: Trivial Compulsion - Difficult Personality (ATOW)
+    desc: |-
+      -1 to all Charisma-based Skill Checks.
+
+      This SPA represents ATOW compulsions such as arrogance and pride.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_mild_paranoia
+    displayName: Trivial Compulsion - Mild Paranoia (ATOW)
+    desc: |-
+      -1 Connections.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_racism
+    displayName: Trivial Compulsion - Racism (ATOW)
+    desc: |-
+      -1 Fame.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_religious_fanaticism
+    displayName: Trivial Compulsion - Religious Fanaticism (ATOW)
+    desc: |-
+      +2 to Interest/Theology checks, -1 to all Charisma-based skill checks.
+
+      This SPA reflects the ATOW compulsion 'Religious' and has been renamed so as not to negatively reflect on religious persons.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_traumatic_past
+    displayName: Trivial Compulsion - Traumatic Past (ATOW)
+    desc: |-
+      -1 Edge.
+
+      This SPA reflects the ATOW compulsion 'Trauma'.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_faction_pride
+    displayName: Trivial Compulsion - Overbearing Faction Pride (ATOW)
+    desc: |-
+      Improve Loyalty by 1 if the character's faction matches the campaign faction. Otherwise, reduce Loyalty by 2. Cannot change faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_faction_loyalty]
+
+  - lookupName: compulsion_other_faction_dislike
+    displayName: Trivial Compulsion - Distrusts Other Factions (ATOW)
+    desc: |-
+      Decreases Loyalty by 1 if the campaign faction does not match the character's origin faction. Cannot change faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_other_faction_hate]
+
+  - lookupName: compulsion_parent_faction_dislike
+    displayName: Trivial Compulsion - Distrusts Own Faction Leadership (ATOW)
+    desc: |-
+      Decreases Loyalty by 1 if the campaign faction matches the character's origin faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_parent_faction_hate]
+
+  - lookupName: compulsion_inner_sphere_hate
+    displayName: Significant Compulsion - Hates the Inner Sphere (ATOW)
+    desc: "-2 Loyalty if the campaign faction is an Inner Sphere faction. Cannot change faction to a non-Clan faction."
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_clan_hate
+    displayName: Significant Compulsion - Hates the Clans/Aliens (ATOW)
+    desc: |-
+      -2 Loyalty if the campaign faction is a Clan faction. Cannot change faction to a Clan faction.
+
+      If taken by an Inner Sphere character prior to the Clan Invasion, this SPA represents a fear of a mysterious threat from beyond the Periphery.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_gambling
+    displayName: Trivial Compulsion - Gambling (ATOW)
+    desc: |-
+      Each month the character's Wealth Trait will randomly improve or decrease.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_hatred_authority
+    displayName: Trivial Compulsion - Hatred of Authority (ATOW)
+    desc: |-
+      Decreases Loyalty by 2, unless this character is the campaign commander.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_faction_loyalty
+    displayName: Significant Compulsion - Pathologic Faction Loyalty (ATOW)
+    desc: |-
+      Improve Loyalty by 1 if the character's faction matches the campaign faction. Otherwise, reduce Loyalty by 4. Cannot change faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_faction_pride]
+
+  - lookupName: compulsion_other_faction_hate
+    displayName: Significant Compulsion - Hates Other Factions (ATOW)
+    desc: |-
+      Decreases Loyalty by 2 if the campaign faction does not match the character's origin faction. Cannot change faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_other_faction_dislike]
+
+  - lookupName: compulsion_merc_hate
+    displayName: Significant Compulsion - Hates Mercenaries (ATOW)
+    desc: |-
+      Decreases Loyalty by 2 if the campaign faction is a Mercenary faction. Cannot change faction to a Mercenary faction (can still come from a Mercenary faction).
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_pirate_hate
+    displayName: Significant Compulsion - Hates Pirates (ATOW)
+    desc: |-
+      Decreases Loyalty by 2 if the campaign faction is a Pirate faction. May not change faction to a Pirate faction (can still come from a Pirate faction).
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_parent_faction_hate
+    displayName: Significant Compulsion - Hates Own Faction Leadership (ATOW)
+    desc: |-
+      Decreases Loyalty by 2 if the campaign faction matches the character's origin faction.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_parent_faction_dislike]
+
+  - lookupName: compulsion_bionic_hate
+    displayName: Significant Compulsion - Hates Bionics (ATOW)
+    desc: |-
+      Will refuse any prosthetic more complex than Type 2 (see ATOW for prosthetic type classifications). This has no effect if Advanced Medical's alternative mode is disabled.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_body_mod_addiction]
+
+  - lookupName: unofficial_biological_machinist
+    displayName: Biological Machinist (Unofficial)
+    desc: Decreases the target number of all advanced surgeries by 2 (excludes cosmetic surgery). This only has an effect if Advanced Medical's alternative mode is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_holistic_care
+    displayName: Expert Holistic Care (Unofficial)
+    desc: |-
+      Each day this doctor has a 1-in-20 of reducing a patient's healing time by 2 days, instead of 1. The doctor rolls once per patient per injury.
+
+      This only has an effect if Advanced Medical's alternative mode is enabled.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Veteran
+
+  - lookupName: unofficial_trauma_surgeon
+    displayName: Trauma Surgeon (Unofficial)
+    desc: |-
+      The more badly injured a patient is, the harder they are to heal. This trait decreases the injury penalty by 1.
+
+      Does not affect the healing penalty incurred by permanent modifications, such as prosthetics.
+
+      This only has an effect if Advanced Medical's alternative mode is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Regular
+
+  - lookupName: unofficial_useless_talent
+    displayName: Useless Talent (Unofficial)
+    desc: The character has a talent. It's not very useful. Has no mechanical effect, but they like showing it off at parties.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_radio_hobbyist
+    displayName: Radio Hobbyist (Unofficial)
+    desc: |-
+      Decreases the target number of Communications/Any checks by 2.
+
+      Has limited effects if Advanced Scouting is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_hypochondriac
+    displayName: Hypochondriac (Unofficial)
+    desc: |-
+      The more injured a character is, the harder the Surgery/Any check to heal them. This character increases their healing Target Number by 1.
+
+      This only has an effect if Advanced Medical's alternative mode is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_prothesis_technician
+    displayName: Experienced Prothesis Technician (Unofficial)
+    desc: |-
+      The more locations that have been replaced by prosthetics, or implants, the harder a patient is to heal. This trait decreases the penalty by 1.
+
+      Does not affect the healing penalty incurred by normal injuries.
+
+      This only has an effect if Advanced Medical's alternative mode is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Surgery/Any: Regular
+
+  - lookupName: compulsion_pathologic_racism
+    displayName: Significant Compulsion - Pathologic Racism (ATOW)
+    desc: |-
+      -2 Fame.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_xenophobia
+    displayName: Significant Compulsion - Xenophobia (ATOW)
+    desc: |-
+      -1 Fame, -1 Connections.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_addiction
+    displayName: Significant Compulsion - Narcotic Addiction (ATOW)
+    desc: |-
+      Once per week a Willpower check is made (with a -2 penalty). If failed, the character suffers the Discontinuation Syndrome Injury and gains two Fatigue (if Fatigue is enabled).
+
+      This check can be skipped if the campaign is willing to subsidize the character's addiction. This can be done via the 'Flags' menu in the Personnel tab.
+
+      If Advanced Medical is disabled, the character suffers a single Hit, instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_addiction_painkillers
+    displayName: Significant Compulsion - Drug Reliance (ATOW)
+    desc: |-
+      Once per week, the company will be required to pay a stipend of 42 C-Bills to pay for medicine. If the character has any prosthetics, this stipend is increased +1 per normal prosthetic or implant the character possesses, and +2 per myomer prosthetic.
+
+      The myomer price increase can be reduced to +1 via the Secondary Power Supply implant.
+
+      If the stipend cannot be paid, a Willpower check is made (with a -2 penalty). If failed, the character suffers the Discontinuation Syndrome Injury and gains two Fatigue (if Fatigue is enabled).
+
+      If Advanced Medical is disabled, the character suffers a single Hit, instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: compulsion_body_mod_addiction
+    displayName: Significant Compulsion - Body Modding (ATOW)
+    desc: |-
+      Loyalty is reduced by 2 while this character has no prosthetics.
+
+      This only has an effect if Advanced Medical's alternative mode is enabled.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [compulsion_bionic_hate]
+
+  - lookupName: madness_flashbacks
+    displayName: Minor Psychosis - Flashbacks (ATOW)
+    desc: |-
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If you are unable to pay this fee, the character is required to make a Willpower check (with a -4 penalty) or suffer the 'Crippling Flashbacks' Injury (-1 Piloting, -1 Gunnery).
+
+      If Advanced Medical is disabled, the character suffers a single Hit, instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+
+  - lookupName: madness_confusion
+    displayName: Minor Psychosis - Confusion (ATOW)
+    desc: |-
+      Each week the character must pass a Willpower check (with a -4 penalty) or suffer one random Injury.
+
+      If Advanced Medical is disabled, the character suffers a single Hit instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+
+  - lookupName: madness_clinical_paranoia
+    displayName: Minor Psychosis - Clinical Paranoia (ATOW)
+    desc: |-
+      Inflicts a -2 penalty to all Charisma-based skill checks.
+
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If you fail to pay this fee, the character must pass a Willpower check (with a -4 penalty) or temporarily lose all ranks in the Connections trait for the duration of the week.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+
+  - lookupName: madness_split_personality
+    displayName: Minor Psychosis - Split Personality (ATOW)
+    desc: |-
+      The character gains a number of random personalities.
+
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If the stipend is not paid the character has a chance to switch to one of their personalities.
+
+      While the character's personality has switched, they temporarily lose all levels in the Connections Trait.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+
+  - lookupName: madness_catatonia
+    displayName: Clinical Insanity - Catatonia (ATOW)
+    desc: |-
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If you fail to pay the stipend, the character must pass a Willpower check (with a -10 penalty) or gain the Catatonia Injury (-20 Piloting, -20 Gunnery).
+
+      If Advanced Medical is disabled, the character gains a single Hit, instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -500
+    originOnly: true
+    weight: 1
+
+  - lookupName: madness_regression
+    displayName: Major Psychosis - Regression (ATOW)
+    desc: |-
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If the stipend isn't paid, the character is required to pass a Willpower check (with a -7 penalty) or gain the Childlike Regression Injury (-4 Gunnery, -4 Piloting).
+
+      If Advanced Medical is disabled the character suffers 1 Hit, instead of the Injury.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -400
+    originOnly: true
+    weight: 1
+
+  - lookupName: madness_hysteria
+    displayName: Major Psychosis - Hysteria (ATOW)
+    desc: |-
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If you fail to pay the stipend, the character is required to pass a Willpower check (with a -7 penalty) or become temporarily affected by the Berserker, Confusion, or Clinical Paranoia effects.
+
+      - Berserker: The character flies into a berserker frenzy inflicting 1-2 random Injuries to themselves and up to 6 bystanders. If Advanced Medical is disabled, 1-2 Hits are inflicted, instead of Injuries.
+      - Confusion: The character suffers one random Injury. If Advanced Medical is disabled, the character suffers a single Hit instead of the Injury.
+      - Clinical Paranoia: The character temporarily loses all ranks in the Connections trait for one week.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -400
+    originOnly: true
+    weight: 1
+
+  - lookupName: madness_berserker
+    displayName: Clinical Insanity - Berserker (ATOW)
+    desc: |-
+      Each week you are required to pay a small stipend to cover medical expenses.
+
+      If you fail to pay the stipend, the character must pass a Willpower check (with a -10 penalty) or fly into a berserker frenzy inflicting 1-2 random Injuries to themselves and up to 6 bystanders.
+
+      If Advanced Medical is disabled 1-2 Hits are inflicted, instead of Injuries.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -500
+    originOnly: true
+    weight: 1
+
+  - lookupName: dark_secret_trivial
+    displayName: Dark Secret - Trivial (ATOW)
+    desc: |-
+      Once every three months 2d6 is rolled, on a roll of 10+ the character's Dark Secret is revealed.
+
+      If the character also possesses the Alternate ID SPA, their Dark Secret is only recovered on a roll of 12.
+
+      Once the characters' Dark Secret has been revealed, they permanently reduce their Fame by 1, Connections by 1.
+
+      A trivial Dark Secret represents a personal lapse or dishonorable act that could harm the character's reputation if revealed.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dark_secret_significant, dark_secret_major, dark_secret_severe, dark_secret_extreme]
+
+  - lookupName: dark_secret_significant
+    displayName: Dark Secret - Significant (ATOW)
+    desc: |-
+      Once every three months 2d6 is rolled, on a roll of 10+ the character's Dark Secret is revealed.
+
+      If the character also possesses the Alternate ID SPA, their Dark Secret is only recovered on a roll of 12.
+
+      Once the characters' Dark Secret has been revealed, they permanently reduce their Fame by 2 and Connections by 1.
+
+      A significant Dark Secret represents a concealed wrongdoing that would damage key relationships or the character's career.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dark_secret_trivial, dark_secret_major, dark_secret_severe, dark_secret_extreme]
+
+  - lookupName: dark_secret_major
+    displayName: Dark Secret - Major (ATOW)
+    desc: |-
+      Once every three months 2d6 is rolled, on a roll of 10+ the character's Dark Secret is revealed.
+
+      If the character also possesses the Alternate ID SPA, their Dark Secret is only recovered on a roll of 12.
+
+      Once the characters' Dark Secret has been revealed, they permanently reduce their Fame by 3 and Connections by 2.
+
+      A major Dark Secret represents a serious violation of law, duty, or trust that could lead to legal or social consequences.
+    xpCost: -300
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dark_secret_trivial, dark_secret_significant, dark_secret_severe, dark_secret_extreme]
+
+  - lookupName: dark_secret_severe
+    displayName: Dark Secret - Severe (ATOW)
+    desc: |-
+      Once every three months 2d6 is rolled, on a roll of 10+ the character's Dark Secret is revealed.
+
+      If the character also possesses the Alternate ID SPA, their Dark Secret is only recovered on a roll of 12.
+
+      Once the characters' Dark Secret has been revealed, they permanently reduce their Fame by 4 and Connections by 2.
+
+      A severe Dark Secret represents a morally or ethically damning secret that would provoke outrage or condemnation.
+    xpCost: -400
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dark_secret_trivial, dark_secret_significant, dark_secret_major, dark_secret_extreme]
+
+  - lookupName: dark_secret_extreme
+    displayName: Dark Secret - Extreme (ATOW)
+    desc: |-
+      Once every three months 2d6 is rolled, on a roll of 10+ the character's Dark Secret is revealed.
+
+      If the character also possesses the Alternate ID SPA, their Dark Secret is only recovered on a roll of 12.
+
+      Once the characters' Dark Secret has been revealed, they permanently reduce their Fame by 5 and Connections by 3.
+
+      An extreme Dark Secret represents a grave betrayal or atrocity that should lead to exile, imprisonment, or execution if exposed (not modeled in MekHQ).
+    xpCost: -500
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dark_secret_trivial, dark_secret_significant, dark_secret_major, dark_secret_severe]
+
+  - lookupName: flaw_illiterate
+    displayName: Illiterate (ATOW)
+    desc: |-
+      The character suffers a -4 (untrained) penalty to all Intelligence-based skill checks.
+
+      This penalty is removed once the character acquires level 4 in the Language/Any skill. Literacy status is updated daily, so may lag behind actual skill changes.
+    xpCost: -100
+    originOnly: true
+    weight: 1
+
+  - lookupName: flaw_vaccine_dodger
+    displayName: Vaccine Dodger (Unofficial)
+    desc: |-
+      The character we refuse any and all vaccination attempts.
+
+      This Flaw only has a mechanical effect when using Alternate Advanced Medical.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_super_spreader
+    displayName: Super Spreader (Unofficial)
+    desc: |-
+      If a contagious disease is active in your campaign, the presence of this character triples the chance of it spreading.
+
+      The effects from multiple Super Spreaders do not stack.
+
+      This Flaw only has a mechanical effect when using Alternate Advanced Medical.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: flaw_poor_immune_system
+    displayName: Compromised Immune System (Unofficial)
+    desc: |-
+      If unvaccinated, the chances of this character being infected with a contagious disease triples.
+
+      If a character with the Super Spreader Flaw is present in the campaign, the effects stack, increasing the infection chance to 600%.
+
+      This Flaw only has a mechanical effect when using Alternate Advanced Medical.
+    xpCost: -100
+    originOnly: true
+    weight: 1
+
+  - lookupName: unofficial_adaptive_immunity
+    displayName: Adaptive Immunity (Unofficial)
+    desc: |-
+      This character is immune to contagious diseases.
+
+      This Flaw only has a mechanical effect when using Alternate Advanced Medical.
+    xpCost: 100
+    originOnly: true
+    weight: 1
+
+  - lookupName: unofficial_ageraniums_disease
+    displayName: Ageranium's Disease (Unofficial)
+    desc: This character has decreased mental acuity, reducing their Intelligence Attribute by 2.
+    xpCost: -200
+    originOnly: false
+    weight: 1
+
+  - lookupName: unofficial_dobrowski_depression_a_syndrome
+    displayName: Dobrowski Depression-A Syndrome (Unofficial)
+    desc: |-
+      This character has a genetic predisposition to severe mental depression, reducing their Edge Attribute by 1 and increasing Fatigue by 2.
+
+      This is a hereditary disease that will be passed onto the character's offspring.
+
+      This Flaw has reduced effect if Edge or Fatigue are disabled.
+    xpCost: -200
+    originOnly: true
+    weight: 1
+
+  - lookupName: pain_resistance
+    xpCost: 100
+    originOnly: false
+    weight: 2
+
+  - lookupName: small_pilot
+    xpCost: 100
+    originOnly: true
+    weight: 1
+
+  - lookupName: clan_pilot_training
+    displayName: Trivial Compulsion - Clan Honor (ATOW)
+    desc: |-
+      -1 to melee attack rolls.
+
+      This SPA is also known as 'Clan Pilot Training' in MegaMek.
+
+      While this SPA does exist in ATOW, these effects are unique to MekHQ.
+    xpCost: -100
+    originOnly: true
+    weight: 0
+
+  # Support Edge Triggers - FIXME : Migrate to Isolated MHQ Support Edge Module
+
+  - lookupName: edge_when_heal_crit_fail
+    displayName: Use Edge for healing critical failure.
+    desc: Healing check critical failure will be rerolled with Edge.
+
+  - lookupName: edge_when_advanced_surgery_fail
+    displayName: Use Edge for Advanced Surgery failure.
+    desc: Advanced Surgery failure will be rerolled with Edge.
+
+  - lookupName: edge_when_repair_break_part
+    displayName: Use Edge for tech breaking part.
+    desc: Failed repair check that breaks the part will be rerolled with Edge.
+
+  - lookupName: edge_when_fail_refit_check
+    displayName: Use Edge for refit failure.
+    desc: Failed refit check will be rerolled with Edge.
+
+  - lookupName: edge_when_admin_acquire_fail_other
+    displayName: Use Edge for Acquisition Failure (TN 2–7).
+    desc: Failed acquisition check will be rerolled with Edge (only if the Target Number is between 2 and 7).
+
+  - lookupName: edge_when_admin_acquire_fail_greater_than_eight
+    displayName: Use Edge for Acquisition Failure (TN 8–10).
+    desc: Failed acquisition check will be rerolled with Edge (only if the Target Number is between 8 and 10).
+
+  - lookupName: edge_when_admin_acquire_fail_greater_than_eleven
+    displayName: Use Edge for Acquisition Failure (TN 11–12).
+    desc: Failed acquisition check will be rerolled with Edge (only if the Target Number is 11 or 12).
+
+  - lookupName: edge_when_salvage_accident
+    displayName: Use Edge for Salvage Accidents.
+    desc: Salvage Accidents will be rerolled with Edge.
+
+  - lookupName: edge_when_escape_attempt_fail
+    displayName: Use Edge for Escape Attempt Failure.
+    desc: Failed escape attempts will be rerolled with Edge.
+
+  - lookupName: edge_when_admin_fail_appraisal
+    displayName: Use Edge for Procurement Cost Appraisal Failure.
+    desc: Failed appraisal checks made to reduce procurement costs will be rerolled with Edge.
+
+  - lookupName: edge_when_commander_negotiation_fail
+    displayName: Use Edge for Contract Re-Negotiations.
+    desc: Use Edge to reroll a failed Negotiation check when this character re-negotiates a contract in the contract market.
+
+  - lookupName: edge_when_recon_fail
+    displayName: Use Edge for Scouting failure.
+    desc: Failed scouting checks will be rerolled with Edge.
+
+  - lookupName: edge_when_training_fail
+    displayName: Use Edge for Training Operation Failure.
+    desc: Failed training checks made during training operations will be rerolled with Edge.
+
+  - lookupName: edge_when_random_event_fail
+    displayName: Use Edge for Random Event Failure.
+    desc: Failed skill or attributes checks made when resolving a Random Event will be rerolled with Edge.
+
+  - lookupName: dont_you_know_who_i_am
+    displayName: Don't You Know Who I Am? (Unofficial)
+    desc: |-
+      Increases the effect of this character's Fame on their Chaos Campaign Reputation by 25% (rounded normally).
+
+      This is applied after all other modifiers.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [certified_nobody]
+
+  - lookupName: certified_nobody
+    displayName: Certified Nobody (Unofficial)
+    desc: |-
+      Decreases the effect of this character's Fame on their Chaos Campaign Reputation by 25% (rounded normally).
+
+      This is applied after all other modifiers.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [dont_you_know_who_i_am]
+
+  - lookupName: important_friends
+    displayName: Important Friends (Unofficial)
+    desc: |-
+      Increases the effect of this character's Connections on their Chaos Campaign Reputation by 25% (rounded normally).
+
+      This is applied after all other modifiers.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [forgets_to_reply]
+
+  - lookupName: forgets_to_reply
+    displayName: Forgets to Reply (Unofficial)
+    desc: |-
+      Decreases the effect of this character's Connections on their Chaos Campaign Reputation by 25% (rounded normally).
+
+      This is applied after all other modifiers.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [important_friends]
+
+  - lookupName: big_personality
+    displayName: Big Personality (Unofficial)
+    desc: |-
+      This character counts twice when determining the force's average Experience and Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or reduced effect if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [redacted]
+
+  - lookupName: redacted
+    displayName: Redacted (Unofficial)
+    desc: |-
+      This character is ignored when determining the force's average Experience and Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or reduced effect if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [big_personality]
+
+  - lookupName: loose_lips
+    displayName: Leaves Paper Trail (Unofficial)
+    desc: |-
+      If this character is involved in an act of Piracy, they always gain a point of Criminal Record, even if their detachment was not caught.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [leaves_no_trail]
+
+  - lookupName: leaves_no_trail
+    displayName: Leaves No Trail (Unofficial)
+    desc: |-
+      If this character is caught in an act of Piracy, the Criminal Record they gain is reduced by one.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [loose_lips]
+
+  - lookupName: blameless
+    displayName: Blameless (Unofficial)
+    desc: |-
+      This character's Criminal Record is reduced by 1 when determining their Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [scapegoat]
+
+  - lookupName: scapegoat
+    displayName: Scapegoat (Unofficial)
+    desc: |-
+      This character's Criminal Record is increased by 1 when determining their Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [blameless]
+
+  - lookupName: looks_good_on_paper
+    displayName: Looks Good on Paper (Unofficial)
+    desc: |-
+      This character counts as one Experience Level higher when determining the force's average Experience and Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or reduced effect if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [unassuming]
+
+  - lookupName: unassuming
+    displayName: Unassuming (Unofficial)
+    desc: |-
+      This character counts as one Experience Level lower when determining the force's average Experience and Chaos Campaign Reputation.
+
+      Has no effect if Chaos Campaign Reputation is disabled or reduced effect if Campaign Tracked Chaos Reputation is enabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [looks_good_on_paper]
+
+  - lookupName: silver_tongue
+    displayName: Silver Tongue (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force's Chaos Campaign Reputation debt penalty is halved.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [loan_shark_victim]
+
+  - lookupName: loan_shark_victim
+    displayName: Loan Shark Victim (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force's Chaos Campaign Reputation debt penalty is doubled.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [silver_tongue]
+
+  - lookupName: slippery
+    displayName: Slippery (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force is less likely to be caught committing acts of Piracy.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [conspicuous]
+
+  - lookupName: conspicuous
+    displayName: Conspicuous (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force is more likely to be caught committing acts of Piracy.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [slippery]
+
+  - lookupName: loot_goblin
+    displayName: Loot Goblin (Unofficial)
+    desc: |-
+      While this character is the campaign commander, acts of Piracy yield slightly more loot.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+
+  - lookupName: impressive_leader
+    displayName: Impressive Leader (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force's Chaos Campaign Reputation is increased by 1.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    invalidAbilities: [disappointing_leader]
+
+  - lookupName: disappointing_leader
+    displayName: Disappointing Leader (Unofficial)
+    desc: |-
+      While this character is the campaign commander, the force's Chaos Campaign Reputation is decreased by 1.
+
+      Has no effect if Chaos Campaign Reputation is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [impressive_leader]
+
+  - lookupName: good_reputation
+    displayName: Good Reputation (Unofficial)
+    desc: |-
+      This character's contribution to their force's Chaos Campaign Reputation is increased by 1.
+
+      Has no effect if Chaos Campaign Reputation is disabled or tracked at the campaign level.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [bad_reputation]
+
+  - lookupName: bad_reputation
+    displayName: Bad Reputation (Unofficial)
+    desc: |-
+      This character's contribution to their force's Chaos Campaign Reputation is decreased by 1.
+
+      Has no effect if Chaos Campaign Reputation is disabled or tracked at the campaign level.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [good_reputation]
+
+  - lookupName: relentless_bargainer
+    displayName: Relentless Bargainer (Unofficial)
+    desc: |-
+      This character never takes the first "no" for an answer.
+
+      While acting as your negotiator in the contract market, they may re-negotiate a contract twice instead of once.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: 200
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Negotiation: Veteran
+
+  - lookupName: abrasive
+    displayName: Abrasive (Unofficial)
+    desc: |-
+      This character rubs people the wrong way.
+
+      While acting as your negotiator in the contract market, every re-negotiation goes one margin worse in the employer's favor.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: loophole_finder
+    displayName: Loophole Finder (Unofficial)
+    desc: |-
+      This character can find the give in any contract.
+
+      While acting as your negotiator in the contract market, the "You'll make an exception" re-negotiation goes one margin better in your favor. Freeing more non-negotiable terms, or resisting new locks.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Negotiation: Regular
+
+  - lookupName: fine_print_reader
+    displayName: Fine Print Reader (Unofficial)
+    desc: |-
+      This character reads every clause twice, and finds the leverage in each.
+
+      While acting as your negotiator in the contract market, the "Come on, give me a better offer" re-negotiation goes one margin better in your favor - improving the contract's terms further, or resisting cuts.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    skillPrereqs:
+      - Negotiation: Regular
+
+  - lookupName: blacklisted
+    displayName: Blacklisted (Unofficial)
+    desc: |-
+      Word has gotten around, and employers keep this character on a short leash.
+
+      While acting as your negotiator in the contract market, the "You'll make an exception" re-negotiation goes one margin worse in the employer's favor. Freeing fewer non-negotiable terms, or inviting new locks.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: easily_fooled
+    displayName: Easily Fooled (Unofficial)
+    desc: |-
+      This character takes the other side at their word, and pays for it.
+
+      While acting as your negotiator in the contract market, the "Come on, give me a better offer" re-negotiation goes one margin worse in the employer's favor. Improving the terms less, or inviting cuts.
+
+      Has no effect if Active Negotiators is disabled.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+
+  - lookupName: hard_bargainer
+    displayName: Hard Bargainer (Unofficial)
+    desc: |-
+      This character holds out for every last concession.
+
+      While acting as your negotiator in the contract market, each contract term may be raised one additional step beyond the contract's Scale.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [pushover]
+    skillPrereqs:
+      - Negotiation: Regular
+
+  - lookupName: pushover
+    displayName: Pushover (Unofficial)
+    desc: |-
+      This character folds at the first sign of resistance.
+
+      While acting as your negotiator in the contract market, each contract term may be raised one fewer step than the contract's Scale (minimum one).
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [hard_bargainer]
+
+  - lookupName: shrewd_trader
+    displayName: Shrewd Trader (Unofficial)
+    desc: |-
+      This character has a keen eye for a favorable trade.
+
+      While acting as your negotiator in the contract market, you may sacrifice one more term and two more steps in total (three terms, six steps) to fund improvements elsewhere.
+    xpCost: 100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [inflexible]
+    skillPrereqs:
+      - Negotiation: Regular
+
+  - lookupName: inflexible
+    displayName: Inflexible (Unofficial)
+    desc: |-
+      This character struggles to give ground, even when it would help.
+
+      While acting as your negotiator in the contract market, you may sacrifice one fewer term and two fewer steps in total (one term, two steps) to fund improvements elsewhere.
+    xpCost: -100
+    originOnly: false
+    weight: 1
+    invalidAbilities: [shrewd_trader]
