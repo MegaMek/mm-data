@@ -432,6 +432,10 @@
 		<useRandomPrisonerProcreation>false</useRandomPrisonerProcreation>
 		<randomProcreationRelationshipDiceSize>150</randomProcreationRelationshipDiceSize>
 		<randomProcreationRelationshiplessDiceSize>2000</randomProcreationRelationshiplessDiceSize>
+		<useRandomPaternity>true</useRandomPaternity>
+		<randomPaternityMaximumChildAge>5</randomPaternityMaximumChildAge>
+		<useRandomSameSexAdoption>true</useRandomSameSexAdoption>
+		<randomAdoptionMaximumChildAge>10</randomAdoptionMaximumChildAge>
 		<noInterestInMarriageDiceSize>100</noInterestInMarriageDiceSize>
 		<interestedInBothSexesDiceSize>33</interestedInBothSexesDiceSize>
 		<randomSameSexMarriageDiceSize>14</randomSameSexMarriageDiceSize>
@@ -545,6 +549,12 @@
 		<clanUnitPriceMultiplier>1.0</clanUnitPriceMultiplier>
 		<clanPartPriceMultiplier>1.0</clanPartPriceMultiplier>
 		<mixedTechUnitPriceMultiplier>1.0</mixedTechUnitPriceMultiplier>
+		<clanTechInvasionPriceMultiplier>5.0</clanTechInvasionPriceMultiplier>
+		<clanTechPostInvasionPriceMultiplier>4.0</clanTechPostInvasionPriceMultiplier>
+		<successionWarsAdvancedTechPriceMultiplier>5.0</successionWarsAdvancedTechPriceMultiplier>
+		<techRatingEPriceMultiplier>1.1</techRatingEPriceMultiplier>
+		<techRatingFPriceMultiplier>1.25</techRatingFPriceMultiplier>
+		<applyAcquisitionMultipliersToParts>true</applyAcquisitionMultipliersToParts>
 		<damagedPartsValueMultiplier>0.2</damagedPartsValueMultiplier>
 		<unrepairablePartsValueMultiplier>0.0</unrepairablePartsValueMultiplier>
 		<cancelledOrderRefundMultiplier>0.5</cancelledOrderRefundMultiplier>
@@ -624,7 +634,6 @@
 		<contractSearchRadius>200</contractSearchRadius>
 		<variableContractLength>true</variableContractLength>
 		<useDynamicDifficulty>true</useDynamicDifficulty>
-		<useBolsterContractSkill>true</useBolsterContractSkill>
 		<contractMarketReportRefresh>true</contractMarketReportRefresh>
 		<contractMaxSalvagePercentage>100</contractMaxSalvagePercentage>
 		<dropShipBonusPercentage>5</dropShipBonusPercentage>
